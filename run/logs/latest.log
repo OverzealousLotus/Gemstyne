@@ -1,5 +1,5 @@
-[16:45:06] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.19.4 with Fabric Loader 0.14.18
-[16:45:06] [main/INFO] (FabricLoader) Loading 46 mods:
+[18:10:55] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.19.4 with Fabric Loader 0.14.18
+[18:10:56] [main/INFO] (FabricLoader) Loading 46 mods:
 	- fabric-api 0.76.0+1.19.4
 	- fabric-api-base 0.4.23+9ff28bcef4
 	- fabric-api-lookup-api-v1 1.6.24+49abcf7ef4
@@ -46,13 +46,13 @@
 	- java 17
 	- minecraft 1.19.4
 	- tutorialmod 1.0.0
-[16:45:07] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/karsonparker/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.12.4+mixin.0.8.5/e13b4069fe3555969811d4474f78576c707bbe1c/sponge-mixin-0.12.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[16:45:08] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[16:45:08] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[16:45:08] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[16:45:23] [Datafixer Bootstrap/INFO] (Minecraft) 180 Datafixer optimizations took 460 milliseconds
-[16:45:28] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[16:45:28] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+[18:10:56] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/karsonparker/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.12.4+mixin.0.8.5/e13b4069fe3555969811d4474f78576c707bbe1c/sponge-mixin-0.12.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[18:10:57] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[18:10:57] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[18:10:57] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[18:11:13] [Datafixer Bootstrap/INFO] (Minecraft) 180 Datafixer optimizations took 504 milliseconds
+[18:11:18] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18:11:19] [Render thread/ERROR] (Minecraft) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-3.18.38.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-3.18.38.jar:?]
@@ -70,11 +70,12 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-3.18.38.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-3.18.38.jar:?]
 	... 9 more
-[16:45:28] [Render thread/INFO] (Minecraft) Setting user: Player763
-[16:45:29] [Render thread/INFO] (tutorialmod) Hello Fabric world!
-[16:45:29] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[16:45:30] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
-[16:45:33] [Render thread/WARN] (Minecraft) ERROR : Couldn't load Narrator library
+[18:11:19] [Render thread/INFO] (Minecraft) Setting user: Player738
+[18:11:19] [Render thread/INFO] (tutorialmod) Registering ore for tutorialmod
+[18:11:19] [Render thread/INFO] (tutorialmod) Hello Fabric world!
+[18:11:19] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[18:11:20] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
+[18:11:23] [Render thread/WARN] (Minecraft) ERROR : Couldn't load Narrator library
 java.lang.UnsatisfiedLinkError: libflite.so.1: cannot open shared object file: No such file or directory
 	at com.sun.jna.Native.open(Native Method) ~[jna-5.12.1.jar:5.12.1 (b0)]
 	at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:283) ~[jna-5.12.1.jar:5.12.1 (b0)]
@@ -89,47 +90,77 @@ java.lang.UnsatisfiedLinkError: libflite.so.1: cannot open shared object file: N
 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.14.18.jar:?]
 	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.14.18.jar:?]
 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
-[16:45:33] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, Fabric Mods (Fabric BlockRenderLayer Registration (v1), Fabric Models (v0), Fabric Recipe API (v1), Fabric Item Group API (v1), Fabric Resource Loader (v0), Fabric Client Tags, Fabric Rendering Fluids (v1), Fabric Rendering (v1), Fabric Game Test API (v1), Fabric Entity Events (v1), Fabric Object Builder API (v1), Fabric Game Rule API (v1), Fabric Key Binding API (v1), Fabric Command API (v2), Fabric Networking API (v1), Fabric Crash Report Info (v1), Tutorial Mod, Fabric Item API (v1), Fabric Sound API (v1), Fabric Block API (v1), Fabric Events Interaction (v0), Fabric Rendering Data Attachment (v1), Fabric Message API (v1), Fabric Lifecycle Events (v1), Fabric Resource Conditions API (v1), Fabric Screen Handler API (v1), Fabric Content Registries (v0), Fabric Data Generation API (v1), Fabric Particles (v1), Fabric Screen API (v1), Fabric API, Fabric Dimensions API (v1), Fabric Renderer - Indigo, Fabric Mining Level API (v1), Fabric Loader, Fabric Transitive Access Wideners (v1), Fabric API Base, Fabric Registry Sync (v0), Fabric API Lookup API (v1), Fabric Renderer API (v1), Fabric Transfer API (v1), Fabric Convention Tags, Fabric Loot API (v2), Fabric Biome API (v1))
-[16:45:37] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.brush.brushing
-[16:45:37] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.brush.brush_sand_completed
-[16:45:37] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[16:45:37] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[16:45:37] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:music.overworld.cherry_grove
-[16:45:38] [Render thread/INFO] (Minecraft) OpenAL initialized on device Family 17h/19h HD Audio Controller Analog Stereo
-[16:45:38] [Render thread/INFO] (Minecraft) Sound engine started
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 64x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[16:45:38] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[16:45:39] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[16:45:40] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[16:45:40] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[16:45:40] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[16:47:42] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
-[16:48:19] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, Fabric Mods (Fabric BlockRenderLayer Registration (v1), Fabric Models (v0), Fabric Recipe API (v1), Fabric Item Group API (v1), Fabric Resource Loader (v0), Fabric Client Tags, Fabric Rendering Fluids (v1), Fabric Rendering (v1), Fabric Game Test API (v1), Fabric Entity Events (v1), Fabric Object Builder API (v1), Fabric Game Rule API (v1), Fabric Key Binding API (v1), Fabric Command API (v2), Fabric Networking API (v1), Fabric Crash Report Info (v1), Tutorial Mod, Fabric Item API (v1), Fabric Sound API (v1), Fabric Block API (v1), Fabric Events Interaction (v0), Fabric Rendering Data Attachment (v1), Fabric Message API (v1), Fabric Lifecycle Events (v1), Fabric Resource Conditions API (v1), Fabric Screen Handler API (v1), Fabric Content Registries (v0), Fabric Data Generation API (v1), Fabric Particles (v1), Fabric Screen API (v1), Fabric API, Fabric Dimensions API (v1), Fabric Renderer - Indigo, Fabric Mining Level API (v1), Fabric Loader, Fabric Transitive Access Wideners (v1), Fabric API Base, Fabric Registry Sync (v0), Fabric API Lookup API (v1), Fabric Renderer API (v1), Fabric Transfer API (v1), Fabric Convention Tags, Fabric Loot API (v2), Fabric Biome API (v1))
-[16:48:21] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.brush.brushing
-[16:48:21] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.brush.brush_sand_completed
-[16:48:21] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[16:48:21] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[16:48:21] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:music.overworld.cherry_grove
-[16:48:21] [Render thread/INFO] (Minecraft) OpenAL initialized on device Family 17h/19h HD Audio Controller Analog Stereo
-[16:48:21] [Render thread/INFO] (Minecraft) Sound engine started
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 64x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
-[16:48:21] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[16:48:21] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[16:48:34] [Render thread/INFO] (Minecraft) Stopping!
+[18:11:23] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, Fabric Mods (Fabric Screen Handler API (v1), Fabric Resource Loader (v0), Fabric Sound API (v1), Fabric Transfer API (v1), Fabric Game Rule API (v1), Fabric API, Fabric Object Builder API (v1), Fabric Rendering Data Attachment (v1), Fabric Item API (v1), Fabric Message API (v1), Fabric Command API (v2), Fabric Crash Report Info (v1), Fabric Rendering Fluids (v1), Fabric Dimensions API (v1), Fabric Lifecycle Events (v1), Fabric Screen API (v1), Tutorial Mod, Fabric Key Binding API (v1), Fabric Renderer - Indigo, Fabric Events Interaction (v0), Fabric Renderer API (v1), Fabric BlockRenderLayer Registration (v1), Fabric Data Generation API (v1), Fabric Registry Sync (v0), Fabric Loader, Fabric Game Test API (v1), Fabric Recipe API (v1), Fabric Entity Events (v1), Fabric Networking API (v1), Fabric Rendering (v1), Fabric Particles (v1), Fabric Transitive Access Wideners (v1), Fabric API Lookup API (v1), Fabric Convention Tags, Fabric Biome API (v1), Fabric Mining Level API (v1), Fabric Loot API (v2), Fabric Resource Conditions API (v1), Fabric Client Tags, Fabric API Base, Fabric Content Registries (v0), Fabric Block API (v1), Fabric Item Group API (v1), Fabric Models (v0))
+[18:11:23] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
+[18:11:27] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.brush.brushing
+[18:11:27] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.brush.brush_sand_completed
+[18:11:27] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[18:11:27] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[18:11:27] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:music.overworld.cherry_grove
+[18:11:27] [Render thread/INFO] (Minecraft) OpenAL initialized on device Family 17h/19h HD Audio Controller Analog Stereo
+[18:11:27] [Render thread/INFO] (Minecraft) Sound engine started
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 64x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
+[18:11:27] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18:11:27] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[18:11:28] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[18:11:28] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18:11:28] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18:11:35] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[18:11:36] [Render thread/INFO] (Minecraft) Loaded 1179 advancements
+[18:11:37] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 63 new biomes in 3.804 ms
+[18:11:37] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.19.4
+[18:11:37] [Server thread/INFO] (Minecraft) Generating keypair
+[18:11:40] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:11:49] [Render thread/INFO] (Minecraft) Preparing spawn area: 4%
+[18:11:49] [Render thread/INFO] (Minecraft) Preparing spawn area: 21%
+[18:11:50] [Render thread/INFO] (Minecraft) Preparing spawn area: 42%
+[18:11:50] [Render thread/INFO] (Minecraft) Preparing spawn area: 69%
+[18:11:51] [Render thread/INFO] (Minecraft) Preparing spawn area: 93%
+[18:11:51] [Render thread/INFO] (Minecraft) Time elapsed: 11058 ms
+[18:11:52] [Server thread/INFO] (Minecraft) Changing view distance to 6, from 10
+[18:11:52] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
+[18:11:53] [Server thread/INFO] (Minecraft) Player738[local:E:3469509e] logged in with entity id 110 at (-17.269584478040127, 66.0, -3.9329096300613853)
+[18:11:53] [Server thread/INFO] (Minecraft) Player738 joined the game
+[18:11:55] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[18:12:46] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[18:12:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Underbuild]'/minecraft:overworld
+[18:12:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Underbuild]'/minecraft:the_nether
+[18:12:46] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Underbuild]'/minecraft:the_end
+[18:12:48] [Server thread/INFO] (Minecraft) Player738 lost connection: Disconnected
+[18:12:48] [Server thread/INFO] (Minecraft) Player738 left the game
+[18:12:48] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[18:12:48] [Server thread/INFO] (Minecraft) Stopping server
+[18:12:48] [Server thread/INFO] (Minecraft) Saving players
+[18:12:48] [Server thread/INFO] (Minecraft) Saving worlds
+[18:12:50] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Underbuild]'/minecraft:overworld
+[18:12:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Underbuild]'/minecraft:the_nether
+[18:12:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Underbuild]'/minecraft:the_end
+[18:12:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (Underbuild): All chunks are saved
+[18:12:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18:12:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18:12:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[18:12:54] [Render thread/INFO] (Minecraft) Stopping!

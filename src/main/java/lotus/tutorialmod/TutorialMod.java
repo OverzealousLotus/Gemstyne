@@ -1,5 +1,7 @@
 package lotus.tutorialmod;
 
+import lotus.tutorialmod.item.ModItemGroup;
+import lotus.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -15,7 +17,8 @@ public class TutorialMod implements ModInitializer {
 	// Initialization method.
 	@Override
 	public void onInitialize() {
-
+		ModItemGroup.registerItemGroups();
+		ModItems.registerModItems();
 		// Usage of LOGGER
 		LOGGER.info("Hello Fabric world!");
 	}
