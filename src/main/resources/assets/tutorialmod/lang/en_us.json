@@ -2,5 +2,9 @@
   "item.tutorialmod.mochite": "Mochite",
   "item.tutorialmod.raw_mochite": "Raw Mochite",
 
+  "block.tutorialmod.mochite_block": "Mochite Block",
+  "block.tutorialmod.mochite_ore": "Mochite Ore",
+  "block.tutorialmod.deepslate_mochite_ore": "Deepslate Mochite Ore",
+
   "itemgroup.gemstyne": "Gemstyne"
 }

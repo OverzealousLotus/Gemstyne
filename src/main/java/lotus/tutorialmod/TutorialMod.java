@@ -1,5 +1,6 @@
 package lotus.tutorialmod;
 
+import lotus.tutorialmod.block.ModBlocks;
 import lotus.tutorialmod.item.ModItemGroup;
 import lotus.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -19,6 +20,7 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		// Usage of LOGGER
 		LOGGER.info("Hello Fabric world!");
 	}
