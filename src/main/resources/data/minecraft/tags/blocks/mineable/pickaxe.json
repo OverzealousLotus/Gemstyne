@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:mochite_ore",
+    "tutorialmod:mochite_block",
+    "tutorialmod:deepslate_mochite_ore"
+  ]
+}
