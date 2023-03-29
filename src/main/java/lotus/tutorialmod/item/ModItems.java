@@ -19,16 +19,22 @@ public class ModItems {
     public static final Item RAW_MOCHITE = registerItem("raw_mochite",
             new Item(new FabricItemSettings()));
 
+    // TODO!
+    public static final Item RAW_URANIUM = registerItem("raw_uranium",
+            new Item(new FabricItemSettings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
     }
 
+    // Add items to group(s).
     public static void addItemsToItemGroup() {
         /*addToItemGroup(ItemGroups.INGREDIENTS, MOCHITE);
         addToItemGroup(ItemGroups.INGREDIENTS, RAW_MOCHITE);*/
 
         addToItemGroup(ModItemGroup.GEMSTYNE, MOCHITE);
         addToItemGroup(ModItemGroup.GEMSTYNE, RAW_MOCHITE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, RAW_URANIUM);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
