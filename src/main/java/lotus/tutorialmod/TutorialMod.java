@@ -21,12 +21,15 @@ public class TutorialMod implements ModInitializer {
 	// Initialization method.
 	@Override
 	public void onInitialize() {
+		// Make sure to dataGen each time new items, or ores are added, or if-
+		// -existing items/ores are modified in the files to see change.
 		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
 		ModWorldGeneration.generateModWorldGen();
 
+		// Set what blocks are flammable, or strippable.
 		ModFlammableBlockRegistry.registerFlammableBlocks();
 		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_LOG, ModBlocks.STRIPPED_RED_MAPLE_LOG);
 		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_WOOD, ModBlocks.STRIPPED_RED_MAPLE_WOOD);

@@ -1,4 +1,4 @@
-// 1.19.4	2023-03-28T22:38:27.571040246	Tutorial Mod/Model Definitions
+// 1.19.4	2023-03-28T23:03:18.417395021	Tutorial Mod/Model Definitions
 60341853c9dc4e4a3e52af9a28109b8147b4cd87 assets/tutorialmod/blockstates/red_maple_log.json
 45897c8f3a086e0ebed153cc0cf8923282f29033 assets/tutorialmod/models/block/stripped_red_maple_wood.json
 139491f5045ba6f59dfc1fa73323b6f743aeb64c assets/tutorialmod/models/block/red_maple_sapling.json
@@ -19,8 +19,8 @@ dff21b4294ecfae580bc8bcba5ef896d3dfb9548 assets/tutorialmod/models/block/deepsla
 a8a79945287029f6a1829346ef2de8b9ab4df87c assets/tutorialmod/models/block/red_maple_planks.json
 05ffa751138c6d3d368ae0e9e9aa4e89986284c9 assets/tutorialmod/models/item/red_maple_planks.json
 53cdcac268660c37cba49bd8dd424865d1cb6640 assets/tutorialmod/models/block/red_maple_wood.json
-5c54e130ee76ed7435a8403a337e5cde2a592607 assets/tutorialmod/blockstates/stripped_red_maple_wood.json
 114a8d4581341b84d61a2c3b0a3fad9c21d363ac assets/tutorialmod/models/item/mochite.json
+5c54e130ee76ed7435a8403a337e5cde2a592607 assets/tutorialmod/blockstates/stripped_red_maple_wood.json
 7957fdf3423cbaff1a2660109338629574d9345b assets/tutorialmod/models/item/raw_mochite.json
 3f1c7c6aba7969013cae30b443a417161afed8d6 assets/tutorialmod/models/item/red_maple_leaves.json
 4b744c8d0df739c8d5e441cb8bdc4c3d4939279a assets/tutorialmod/models/block/red_maple_leaves.json

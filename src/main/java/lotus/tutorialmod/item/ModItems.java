@@ -11,6 +11,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    // Registered mod items. Block items are registered differently. Check block/ModBlocks
+    // To configure things, check data/*
     public static final Item MOCHITE = registerItem("mochite",
             new Item(new FabricItemSettings()));
 
