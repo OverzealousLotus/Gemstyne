@@ -1,11 +1,11 @@
-// 1.19.4	2023-03-28T17:16:22.636894301	Tutorial Mod/Recipes
+// 1.19.4	2023-03-28T22:38:27.567821645	Tutorial Mod/Recipes
 3aca857666b19dfe68a3b0d0017d390c7945f696 data/tutorialmod/advancements/recipes/building_blocks/mochite.json
 b11c37b62781a548845adb7469f93e10914f430d data/tutorialmod/recipes/mochite_from_smelting_raw_mochite.json
 78b778c22b7d30c48c8806125c8e42f3dc0c1429 data/tutorialmod/advancements/recipes/misc/raw_mochite.json
 0c695854018bc8b1e7ee935f4701d082b9a30bcb data/tutorialmod/recipes/mochite.json
-21ef29a6c7458efdfa557668b42892d928fc404b data/tutorialmod/advancements/recipes/misc/mochite_from_smelting_raw_mochite.json
 3ec4dd1117dacfcad989c975b31f8024aa48f9a6 data/tutorialmod/recipes/mochite_from_blasting_raw_mochite.json
+21ef29a6c7458efdfa557668b42892d928fc404b data/tutorialmod/advancements/recipes/misc/mochite_from_smelting_raw_mochite.json
 f3dbebd688e56d5f9deb012d20fc187c3f1fc700 data/tutorialmod/recipes/raw_mochite.json
-4b046c490fceafa9ba3f2e4feccd6ebd64e717ba data/tutorialmod/recipes/mochite_block.json
 5c0b725cbe8cd3a58e809768c245883966a28424 data/tutorialmod/advancements/recipes/misc/mochite_from_blasting_raw_mochite.json
+4b046c490fceafa9ba3f2e4feccd6ebd64e717ba data/tutorialmod/recipes/mochite_block.json
 f3c4275fef18cd22eff1c1b033bd4481aaa0868e data/tutorialmod/advancements/recipes/decorations/mochite_block.json
