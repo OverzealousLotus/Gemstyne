@@ -1,0 +1,12 @@
+// 1.19.4	2023-03-28T17:16:22.639415807	Tutorial Mod/Model Definitions
+4529e1f1a2bec2f647ac338f8ede9504ef03c730 assets/tutorialmod/blockstates/deepslate_mochite_ore.json
+eebf2d732f80f570540f812dba63d1c720763cfc assets/tutorialmod/models/item/mochite_ore.json
+381e74c70f738ca65e151f8cfe39c49470a9b0fe assets/tutorialmod/models/block/mochite_ore.json
+0f51f80f03bfbe6d595ee379fef5790073365128 assets/tutorialmod/blockstates/mochite_block.json
+39de39f2c5931e6d49ef9ace23610ed49d9b593d assets/tutorialmod/models/item/deepslate_mochite_ore.json
+114a8d4581341b84d61a2c3b0a3fad9c21d363ac assets/tutorialmod/models/item/mochite.json
+2e2f8dd3772077ee8936b3182150c6a8e6bb033c assets/tutorialmod/models/block/mochite_block.json
+e0903fbfbebd496dc138ec59ed812589c68e078e assets/tutorialmod/blockstates/mochite_ore.json
+7957fdf3423cbaff1a2660109338629574d9345b assets/tutorialmod/models/item/raw_mochite.json
+530adf0f8354008902729b8f632d3775cc3710db assets/tutorialmod/models/item/mochite_block.json
+dff21b4294ecfae580bc8bcba5ef896d3dfb9548 assets/tutorialmod/models/block/deepslate_mochite_ore.json
