@@ -1,0 +1,153 @@
+{
+  "minecraft:recipes/combat/diamond_leggings": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_blasting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_axe": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_copper_block": {
+    "criteria": {
+      "has_raw_copper": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_sword": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jukebox": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "tutorialmod:recipes/misc/uranium_ingot": {
+    "criteria": {
+      "has_uranium_chunk": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_chestplate": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_helmet": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "tutorialmod:recipes/misc/mochite_from_smelting_raw_mochite": {
+    "criteria": {
+      "has_raw_mochite": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_pickaxe": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_axe": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2023-03-29 22:38:36 -0400"
+    },
+    "done": false
+  },
+  "tutorialmod:recipes/misc/mochite_from_blasting_raw_mochite": {
+    "criteria": {
+      "has_raw_mochite": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diamond_block": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "tutorialmod:recipes/decorations/mochite_block": {
+    "criteria": {
+      "has_mochite": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_hoe": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_shovel": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "tutorialmod:recipes/misc/red_maple_planks": {
+    "criteria": {
+      "has_red_maple_log": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_axe": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_smelting_raw_copper": {
+    "criteria": {
+      "has_raw_copper": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_boots": {
+    "criteria": {
+      "has_diamond": "2023-03-29 22:38:34 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 3337
+}

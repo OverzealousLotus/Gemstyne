@@ -15,13 +15,29 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        // Same-sided models
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOCHITE_BLOCK);
+        // =====
+        // <===== Quadrilateral Ores =====>
+        // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOCHITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_MOCHITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_URANIUM_ORE);
 
-        // Differentially-sided models
+
+        // =====
+        // <===== Quadrilateral Decor-Blocks =====>
+        // =====
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOCHITE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.URANIUM_BLOCK);
+
+        // =====
+        // <===== Quadrilateral Wood =====>
+        // =====
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_PLANKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_LEAVES);
+
+        // =====
+        // <===== Unilateral Wood =====>
+        // =====
         blockStateModelGenerator.registerLog(ModBlocks.RED_MAPLE_LOG)
                 .log(ModBlocks.RED_MAPLE_LOG)
                 .wood(ModBlocks.RED_MAPLE_WOOD);
@@ -29,9 +45,9 @@ public class ModModelProvider extends FabricModelProvider {
                 .log(ModBlocks.STRIPPED_RED_MAPLE_LOG)
                 .wood(ModBlocks.STRIPPED_RED_MAPLE_WOOD);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_PLANKS);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_LEAVES);
-
+        // =====
+        // <===== Misc =====>
+        // =====
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RED_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 

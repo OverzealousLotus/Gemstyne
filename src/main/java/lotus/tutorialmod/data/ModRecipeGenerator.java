@@ -27,6 +27,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 ModItems.MOCHITE, 0.5f, 100, "gemstyne");
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 ModItems.MOCHITE, RecipeCategory.DECORATIONS, ModBlocks.MOCHITE_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
+                ModItems.URANIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.URANIUM_BLOCK);
 
 
 
@@ -43,6 +45,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('U', ModItems.URANIUM_CHUNK)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.URANIUM_CHUNK),
                         FabricRecipeProvider.conditionsFromItem(ModItems.URANIUM_CHUNK))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.URANIUM_INGOT)));
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.URANIUM_CHUNK)));
     }
 }

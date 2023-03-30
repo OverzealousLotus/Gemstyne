@@ -16,11 +16,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
+    // =====
     // <===== Ores =====>
-    public static final Block MOCHITE_BLOCK = registerBlock("mochite_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()),
-                ModItemGroup.GEMSTYNE);
-
+    // =====
     public static final Block MOCHITE_ORE = registerBlock("mochite_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f).requiresTool(),
                     UniformIntProvider.create(3, 10)),
@@ -35,7 +33,21 @@ public class ModBlocks {
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(6.0f).requiresTool(),
                     UniformIntProvider.create(5, 15)),
                 ModItemGroup.GEMSTYNE);
+
+    // =====
+    // <==== Blockified Ores =====>
+    // =====
+    public static final Block MOCHITE_BLOCK = registerBlock("mochite_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
+
+    public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(7.0f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
+
+    // =====
     // <===== Trees =====>
+    // =====
     public static final Block RED_MAPLE_LOG = registerBlock("red_maple_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
             ModItemGroup.GEMSTYNE);

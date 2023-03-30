@@ -1,17 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "U": {
-      "item": "tutorialmod:uranium_chunk"
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "tutorialmod:uranium_block"
     }
-  },
-  "pattern": [
-    "UU",
-    "UU"
   ],
   "result": {
+    "count": 9,
     "item": "tutorialmod:uranium_ingot"
-  },
-  "show_notification": true
+  }
 }
