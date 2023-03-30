@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.item.Items;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -20,6 +20,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
+
         offerSmelting(exporter, List.of(ModItems.RAW_MOCHITE), RecipeCategory.MISC,
                 ModItems.MOCHITE, 0.5f, 200, "gemstyne");
         offerBlasting(exporter, List.of(ModItems.RAW_MOCHITE), RecipeCategory.MISC,
@@ -27,17 +28,21 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 ModItems.MOCHITE, RecipeCategory.DECORATIONS, ModBlocks.MOCHITE_BLOCK);
 
-        // Just an example. Not final.
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_MOCHITE)
-                .pattern("SSS")
-                .pattern("SMS")
-                .pattern("SSS")
-                .input('S', Items.STONE)
-                .input('M', ModItems.MOCHITE)
-                .criterion(FabricRecipeProvider.hasItem(Items.STONE),
-                        FabricRecipeProvider.conditionsFromItem(Items.STONE))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.MOCHITE),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.MOCHITE))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RAW_MOCHITE)));
+
+
+        // Red Maple Planks recipe.
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_MAPLE_PLANKS, 4)
+                .input(ModBlocks.RED_MAPLE_LOG)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_MAPLE_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_MAPLE_LOG))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.RED_MAPLE_PLANKS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.URANIUM_INGOT)
+                .pattern("UU")
+                .pattern("UU")
+                .input('U', ModItems.URANIUM_CHUNK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.URANIUM_CHUNK),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.URANIUM_CHUNK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.URANIUM_INGOT)));
     }
 }

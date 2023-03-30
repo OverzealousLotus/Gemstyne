@@ -31,6 +31,10 @@ public class ModBlocks {
                     UniformIntProvider.create(3, 10)),
                 ModItemGroup.GEMSTYNE);
 
+    public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(6.0f).requiresTool(),
+                    UniformIntProvider.create(5, 15)),
+                ModItemGroup.GEMSTYNE);
     // <===== Trees =====>
     public static final Block RED_MAPLE_LOG = registerBlock("red_maple_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),

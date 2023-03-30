@@ -3,6 +3,7 @@
   "values": [
     "tutorialmod:mochite_ore",
     "tutorialmod:mochite_block",
-    "tutorialmod:deepslate_mochite_ore"
+    "tutorialmod:deepslate_mochite_ore",
+    "tutorialmod:deepslate_uranium_ore"
   ]
 }

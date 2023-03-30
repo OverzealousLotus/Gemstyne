@@ -15,10 +15,13 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        // Same-sided models
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOCHITE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOCHITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_MOCHITE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_URANIUM_ORE);
 
+        // Differentially-sided models
         blockStateModelGenerator.registerLog(ModBlocks.RED_MAPLE_LOG)
                 .log(ModBlocks.RED_MAPLE_LOG)
                 .wood(ModBlocks.RED_MAPLE_WOOD);
@@ -36,5 +39,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.MOCHITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MOCHITE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.URANIUM_CHUNK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.URANIUM_INGOT, Models.GENERATED);
     }
 }

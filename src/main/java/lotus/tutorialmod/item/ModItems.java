@@ -3,6 +3,7 @@ package lotus.tutorialmod.item;
 import lotus.tutorialmod.TutorialMod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 // import net.minecraft.item.ItemGroups;
@@ -13,14 +14,18 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     // Registered mod items. Block items are registered differently. Check block/ModBlocks
     // To configure things, check data/*
+    public static final FoodComponent foodie = new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build();
     public static final Item MOCHITE = registerItem("mochite",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().food(foodie)));
 
     public static final Item RAW_MOCHITE = registerItem("raw_mochite",
             new Item(new FabricItemSettings()));
 
     // TODO!
-    public static final Item RAW_URANIUM = registerItem("raw_uranium",
+    public static final Item URANIUM_CHUNK = registerItem("uranium_chunk",
+            new Item(new FabricItemSettings()));
+
+    public static final Item URANIUM_INGOT = registerItem("uranium_ingot",
             new Item(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
@@ -29,12 +34,11 @@ public class ModItems {
 
     // Add items to group(s).
     public static void addItemsToItemGroup() {
-        /*addToItemGroup(ItemGroups.INGREDIENTS, MOCHITE);
-        addToItemGroup(ItemGroups.INGREDIENTS, RAW_MOCHITE);*/
 
         addToItemGroup(ModItemGroup.GEMSTYNE, MOCHITE);
         addToItemGroup(ModItemGroup.GEMSTYNE, RAW_MOCHITE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RAW_URANIUM);
+        addToItemGroup(ModItemGroup.GEMSTYNE, URANIUM_CHUNK);
+        addToItemGroup(ModItemGroup.GEMSTYNE, URANIUM_INGOT);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:mochite_block"
+    "tutorialmod:mochite_block",
+    "tutorialmod:deepslate_uranium_ore"
   ]
 }
