@@ -16,6 +16,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         // For example, first entry drops itself.
         // Second entry drops Raw Mochite from Mochite Ore.
         // Third the same, except from Deepslate variant.
+        addDrop(ModBlocks.RAW_MOCHITE_BLOCK);
         addDrop(ModBlocks.MOCHITE_BLOCK);
         addDrop(ModBlocks.RAW_URANIUM_BLOCK);
         addDrop(ModBlocks.URANIUM_BLOCK);

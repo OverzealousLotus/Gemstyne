@@ -40,7 +40,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80)))); // Ore-gen range
 
         register(context, URANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.URANIUM_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(10,
+                ModOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(-60))));
     }
     public static RegistryKey<PlacedFeature> registerKey(String name) {

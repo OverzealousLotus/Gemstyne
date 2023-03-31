@@ -20,6 +20,7 @@ public class ModModelProvider extends FabricModelProvider {
         // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MOCHITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_MOCHITE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_MOCHITE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_URANIUM_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_URANIUM_BLOCK);
 

@@ -37,6 +37,9 @@ public class ModBlocks {
     // =====
     // <==== Blockified Ores =====>
     // =====
+    public static final Block RAW_MOCHITE_BLOCK = registerBlock("raw_mochite_block",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
     public static final Block MOCHITE_BLOCK = registerBlock("mochite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()),
             ModItemGroup.GEMSTYNE);

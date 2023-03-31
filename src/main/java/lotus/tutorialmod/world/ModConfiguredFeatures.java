@@ -31,10 +31,13 @@ public class ModConfiguredFeatures {
         // =====
         List<OreFeatureConfig.Target> overworldMochiteOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.MOCHITE_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_MOCHITE_ORE.getDefaultState()));
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_MOCHITE_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.RAW_MOCHITE_BLOCK.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.RAW_MOCHITE_BLOCK.getDefaultState()));
 
         List<OreFeatureConfig.Target> overworldUraniumOres =
-                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_URANIUM_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_URANIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.RAW_URANIUM_BLOCK.getDefaultState()));
 
         // =====
         // <===== Tree Configuration & Registration =====>
@@ -50,7 +53,7 @@ public class ModConfiguredFeatures {
         // <===== Ore Configuration & Registration =====>
         // =====
         register(context, MOCHITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMochiteOres, 12)); // Vein size.
-        register(context, URANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldUraniumOres, 8));
+        register(context, URANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldUraniumOres, 10));
     }
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(TutorialMod.MOD_ID, name));

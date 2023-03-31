@@ -21,6 +21,24 @@
           "predicate_type": "minecraft:tag_match",
           "tag": "minecraft:deepslate_ore_replaceables"
         }
+      },
+      {
+        "state": {
+          "Name": "tutorialmod:raw_mochite_block"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:stone_ore_replaceables"
+        }
+      },
+      {
+        "state": {
+          "Name": "tutorialmod:raw_mochite_block"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:deepslate_ore_replaceables"
+        }
       }
     ]
   }

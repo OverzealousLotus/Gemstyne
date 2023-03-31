@@ -1,7 +1,7 @@
-// 1.19.4	2023-03-31T13:54:42.624459858	Tutorial Mod/tutorialmod
-fe8951d0e7ec4e87f3434ad580e058ff727b49b0 data/tutorialmod/worldgen/configured_feature/mochite_ore.json
+// 1.19.4	2023-03-31T19:24:59.581809447	Tutorial Mod/tutorialmod
+70b6b1f97a2626dee5631eac1f48af2b45a7002c data/tutorialmod/worldgen/configured_feature/mochite_ore.json
 4dd4de0060533861b58e660ecf0c2fdd83ed38d2 data/tutorialmod/worldgen/configured_feature/red_maple.json
-f3ed012265f1bab5c9a90110701158b5da6b82fc data/tutorialmod/worldgen/placed_feature/deepslate_uranium_ore.json
-3916a7956ed6a31a418706aeffb8939cdb5429e4 data/tutorialmod/worldgen/configured_feature/deepslate_uranium_ore.json
+2746359e11c5889f4ddbf40a90018dc6e9f5514a data/tutorialmod/worldgen/placed_feature/deepslate_uranium_ore.json
+15f019e1347f1ccd0ae0885ffa9d911b2367b599 data/tutorialmod/worldgen/configured_feature/deepslate_uranium_ore.json
 3aa8fb59187ead4e51bf10b858af3ad21757a19b data/tutorialmod/worldgen/placed_feature/mochite_ore.json
 543e4239fdd38555998deb0c94de7a4703f9d096 data/tutorialmod/worldgen/placed_feature/red_maple.json
