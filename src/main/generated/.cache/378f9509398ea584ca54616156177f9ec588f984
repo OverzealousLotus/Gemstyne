@@ -1,6 +1,6 @@
-// 1.19.4	2023-03-30T01:43:28.477963644	Tutorial Mod/Block Loot Tables
+// 1.19.4	2023-03-30T22:45:30.354998844	Tutorial Mod/Block Loot Tables
+6c01a644a2fe524ee80820a6eff3a6c07a2c950e data/tutorialmod/loot_tables/blocks/deepslate_uranium_ore.json
 1070c733f21b444464c0a319d8f3e3fb073c55c8 data/tutorialmod/loot_tables/blocks/red_maple_wood.json
-f7d600bb879e5a311b6af2e9ad7465c940b5e138 data/tutorialmod/loot_tables/blocks/deepslate_uranium_ore.json
 0340e15b8fabf00450ee0e6380151993a8605311 data/tutorialmod/loot_tables/blocks/red_maple_log.json
 251e1d74dc553426226df7200de3670edf4f7ebe data/tutorialmod/loot_tables/blocks/deepslate_mochite_ore.json
 04f91b85cebf099f73df7eee560f52e679a99861 data/tutorialmod/loot_tables/blocks/stripped_red_maple_log.json

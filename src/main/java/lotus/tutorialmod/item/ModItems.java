@@ -14,14 +14,23 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     // Registered mod items. Block items are registered differently. Check block/ModBlocks
     // To configure things, check data/*
+
+    // ======
+    // <===== Raw Ores =====>
+    // ======
+    public static final Item RAW_MOCHITE = registerItem("raw_mochite",
+            new Item(new FabricItemSettings()));
+
+    public static final Item RAW_URANIUM = registerItem("raw_uranium",
+            new Item(new FabricItemSettings()));
+
+    // =====
+    // <===== Refined Ores =====>
+    // =====
     public static final FoodComponent foodie = new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build();
     public static final Item MOCHITE = registerItem("mochite",
             new Item(new FabricItemSettings().food(foodie)));
 
-    public static final Item RAW_MOCHITE = registerItem("raw_mochite",
-            new Item(new FabricItemSettings()));
-
-    // TODO!
     public static final Item URANIUM_CHUNK = registerItem("uranium_chunk",
             new Item(new FabricItemSettings()));
 
@@ -37,6 +46,7 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.GEMSTYNE, MOCHITE);
         addToItemGroup(ModItemGroup.GEMSTYNE, RAW_MOCHITE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, RAW_URANIUM);
         addToItemGroup(ModItemGroup.GEMSTYNE, URANIUM_CHUNK);
         addToItemGroup(ModItemGroup.GEMSTYNE, URANIUM_INGOT);
     }

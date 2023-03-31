@@ -53,9 +53,19 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.MOCHITE, Models.GENERATED);
+        // =====
+        // <===== Raw Ores =====>
+        // =====
         itemModelGenerator.register(ModItems.RAW_MOCHITE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_URANIUM, Models.GENERATED);
+
+        // =====
+        // <===== Refined Ores =====>
+        // =====
+        itemModelGenerator.register(ModItems.MOCHITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.URANIUM_CHUNK, Models.GENERATED);
         itemModelGenerator.register(ModItems.URANIUM_INGOT, Models.GENERATED);
+
+
     }
 }
