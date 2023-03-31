@@ -41,6 +41,10 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()),
             ModItemGroup.GEMSTYNE);
 
+    public static final Block RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(7.0f).requiresTool(),
+                    UniformIntProvider.create(8, 18)),
+                ModItemGroup.GEMSTYNE);
     public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(7.0f).requiresTool()),
             ModItemGroup.GEMSTYNE);

@@ -20,16 +20,25 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_MAPLE_KEY = registerKey("red_maple");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOCHITE_ORE_KEY = registerKey("mochite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> URANIUM_ORE_KEY = registerKey("deepslate_uranium_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
+        // =====
+        // <===== List of ores to be used. =====>
+        // =====
         List<OreFeatureConfig.Target> overworldMochiteOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.MOCHITE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_MOCHITE_ORE.getDefaultState()));
 
-        // Tree registration ( Configuration )
+        List<OreFeatureConfig.Target> overworldUraniumOres =
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_URANIUM_ORE.getDefaultState()));
+
+        // =====
+        // <===== Tree Configuration & Registration =====>
+        // =====
         register(context, RED_MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.RED_MAPLE_LOG),
                 new StraightTrunkPlacer(5, 6, 3),
@@ -37,8 +46,11 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        // Ore registration ( Configuration )
+        // =====
+        // <===== Ore Configuration & Registration =====>
+        // =====
         register(context, MOCHITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMochiteOres, 12)); // Vein size.
+        register(context, URANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldUraniumOres, 8));
     }
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(TutorialMod.MOD_ID, name));

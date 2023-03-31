@@ -1,6 +1,7 @@
-// 1.19.4	2023-03-30T22:45:30.361722047	Tutorial Mod/Model Definitions
+// 1.19.4	2023-03-31T13:54:42.625277499	Tutorial Mod/Model Definitions
 60341853c9dc4e4a3e52af9a28109b8147b4cd87 assets/tutorialmod/blockstates/red_maple_log.json
 45897c8f3a086e0ebed153cc0cf8923282f29033 assets/tutorialmod/models/block/stripped_red_maple_wood.json
+d3b1718d8fe565bff173012e04dcfce33eb749e8 assets/tutorialmod/models/block/raw_uranium_block.json
 139491f5045ba6f59dfc1fa73323b6f743aeb64c assets/tutorialmod/models/block/red_maple_sapling.json
 381e74c70f738ca65e151f8cfe39c49470a9b0fe assets/tutorialmod/models/block/mochite_ore.json
 72934b4bfdf8952e0dd03107ed75c1d20b5586e9 assets/tutorialmod/blockstates/deepslate_uranium_ore.json
@@ -16,6 +17,7 @@ b423b97d1b8b191085a9059a079db8018ea55d2b assets/tutorialmod/blockstates/uranium_
 4529e1f1a2bec2f647ac338f8ede9504ef03c730 assets/tutorialmod/blockstates/deepslate_mochite_ore.json
 655db87a2901e758e4cd08c77a7d0f4e961ffd37 assets/tutorialmod/models/item/uranium_block.json
 39de39f2c5931e6d49ef9ace23610ed49d9b593d assets/tutorialmod/models/item/deepslate_mochite_ore.json
+ca3099db9f2ec5f5a1acc919700fc98cc0b073ab assets/tutorialmod/blockstates/raw_uranium_block.json
 f716d04176d49057fa0b59043e55438e463ecec0 assets/tutorialmod/models/block/stripped_red_maple_log.json
 82dbf1744efb2d31aecf5eef1d80611539edfb6d assets/tutorialmod/blockstates/red_maple_wood.json
 7ded396168002d82f75a33e60b2cd2d9bed55a3b assets/tutorialmod/models/item/red_maple_wood.json
@@ -24,9 +26,10 @@ dff21b4294ecfae580bc8bcba5ef896d3dfb9548 assets/tutorialmod/models/block/deepsla
 a8a79945287029f6a1829346ef2de8b9ab4df87c assets/tutorialmod/models/block/red_maple_planks.json
 ac32f976f98113eebd48e28f3891d61a2b6642b8 assets/tutorialmod/models/item/deepslate_uranium_ore.json
 05ffa751138c6d3d368ae0e9e9aa4e89986284c9 assets/tutorialmod/models/item/red_maple_planks.json
+a131bc7a4719eee422c3c1df26ce3ee64eb703c1 assets/tutorialmod/models/item/raw_uranium_block.json
 53cdcac268660c37cba49bd8dd424865d1cb6640 assets/tutorialmod/models/block/red_maple_wood.json
-114a8d4581341b84d61a2c3b0a3fad9c21d363ac assets/tutorialmod/models/item/mochite.json
 5c54e130ee76ed7435a8403a337e5cde2a592607 assets/tutorialmod/blockstates/stripped_red_maple_wood.json
+114a8d4581341b84d61a2c3b0a3fad9c21d363ac assets/tutorialmod/models/item/mochite.json
 e3b8270df1f421ec7c518cc85afcbbcf6ba9562c assets/tutorialmod/models/block/uranium_block.json
 7957fdf3423cbaff1a2660109338629574d9345b assets/tutorialmod/models/item/raw_mochite.json
 3f1c7c6aba7969013cae30b443a417161afed8d6 assets/tutorialmod/models/item/red_maple_leaves.json

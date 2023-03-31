@@ -4,7 +4,6 @@ import lotus.tutorialmod.block.ModBlocks;
 import lotus.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.client.Models;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -42,6 +41,8 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 ModItems.MOCHITE, RecipeCategory.DECORATIONS, ModBlocks.MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 ModItems.URANIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.URANIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
+                ModItems.RAW_URANIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_URANIUM_BLOCK);
 
         // =====
         // <===== Shapeless =====>
