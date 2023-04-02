@@ -24,6 +24,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MOCHITE_ORE, ModItems.RAW_MOCHITE));
         addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.RAW_URANIUM));
 
+        addDrop(ModBlocks.HALITE);
+
         // Wood-Related
         addDrop(ModBlocks.RED_MAPLE_LOG);
         addDrop(ModBlocks.RED_MAPLE_WOOD);

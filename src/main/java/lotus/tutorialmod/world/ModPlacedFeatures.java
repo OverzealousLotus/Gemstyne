@@ -19,9 +19,11 @@ public class ModPlacedFeatures {
     // - Register the keys in ModConfiguredFeatures and ModOreGeneration!
     // - Lastly, run Datagen to actually generate the keys being used!
     public static final RegistryKey<PlacedFeature> RED_MAPLE_PLACED_KEY = registerKey("red_maple");
-    public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("mochite_ore");
 
+    public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("mochite_ore");
     public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("deepslate_uranium_ore");
+
+    public static final RegistryKey<PlacedFeature> HALITE_PLACED_KEY = registerKey("halite");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -42,6 +44,13 @@ public class ModPlacedFeatures {
         register(context, URANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.URANIUM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(-60))));
+
+        // =====
+        // <===== Mineral-Related =====>
+        // =====
+        register(context, HALITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.HALITE_KEY),
+                ModOrePlacement.modifiersWithCount(2,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(80))));
     }
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(TutorialMod.MOD_ID, name));

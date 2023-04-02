@@ -24,6 +24,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_URANIUM_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_URANIUM_BLOCK);
 
+        // =====
+        // <===== Quadrilateral Ores =====>
+        // =====
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.HALITE);
 
         // =====
         // <===== Quadrilateral Decor-Blocks =====>

@@ -53,6 +53,13 @@ public class ModBlocks {
             ModItemGroup.GEMSTYNE);
 
     // =====
+    // <===== Minerals =====>
+    // =====
+    public static final Block HALITE = registerBlock("halite",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(0.75f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
+
+    // =====
     // <===== Trees =====>
     // =====
     public static final Block RED_MAPLE_LOG = registerBlock("red_maple_log",
