@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "gemstyne:raw_mochite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "gemstyne:raw_mochite"
+  }
+}

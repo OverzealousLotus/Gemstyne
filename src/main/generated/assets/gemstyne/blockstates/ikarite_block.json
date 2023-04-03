@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gemstyne:block/ikarite_block"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gemstyne:red_maple_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "gemstyne:red_maple_planks"
+  }
+}

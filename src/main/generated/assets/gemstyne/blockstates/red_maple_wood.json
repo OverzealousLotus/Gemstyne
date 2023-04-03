@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "gemstyne:block/red_maple_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "gemstyne:block/red_maple_wood"
+    },
+    "axis=z": {
+      "model": "gemstyne:block/red_maple_wood",
+      "x": 90
+    }
+  }
+}

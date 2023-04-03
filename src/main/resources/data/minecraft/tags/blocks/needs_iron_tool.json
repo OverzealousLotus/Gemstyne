@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:mochite_ore",
-    "tutorialmod:deepslate_mochite_ore"
+    "gemstyne:mochite_ore",
+    "gemstyne:deepslate_mochite_ore",
+    "gemstyne:raw_mochite_block"
   ]
 }

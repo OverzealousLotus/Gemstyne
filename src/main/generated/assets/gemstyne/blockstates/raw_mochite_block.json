@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gemstyne:block/raw_mochite_block"
+    }
+  }
+}

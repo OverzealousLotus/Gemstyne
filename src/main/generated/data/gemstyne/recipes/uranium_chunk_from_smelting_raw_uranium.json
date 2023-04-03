@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 1.0,
+  "group": "gemstyne",
+  "ingredient": {
+    "item": "gemstyne:raw_uranium"
+  },
+  "result": "gemstyne:uranium_chunk"
+}

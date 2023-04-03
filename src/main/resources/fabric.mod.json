@@ -1,32 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "tutorialmod",
+	"id": "gemstyne",
 	"version": "${version}",
-	"name": "Tutorial Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Gemstyne",
+	"description": "A mod primarily to expand upon Minecraft's existing mining system.",
 	"authors": [
-		"Overzealous Lotus"
+		"OverzealousLotus"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "GPLv3",
-	"icon": "assets/tutorialmod/icon.png",
+	"icon": "assets/gemstyne/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"lotus.tutorialmod.TutorialMod"
+			"lotus.gemstyne.Gemstyne"
 		],
 		"client": [
-			"lotus.tutorialmod.TutorialModClient"
+			"lotus.gemstyne.GemstyneClient"
 		],
 		"fabric-datagen": [
-			"lotus.tutorialmod.TutorialModDataGenerator"
+			"lotus.gemstyne.GemstyneDataGenerator"
 		]
 	},
 	"mixins": [
-		"tutorialmod.mixins.json"
+		"gemstyne.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.18",

@@ -1,9 +1,0 @@
-// 1.19.4	2023-04-02T13:50:17.745591724	Tutorial Mod/tutorialmod
-b2c614f357b129c75de732c1c5953b68749892e5 data/tutorialmod/worldgen/configured_feature/halite.json
-70b6b1f97a2626dee5631eac1f48af2b45a7002c data/tutorialmod/worldgen/configured_feature/mochite_ore.json
-4dd4de0060533861b58e660ecf0c2fdd83ed38d2 data/tutorialmod/worldgen/configured_feature/red_maple.json
-2746359e11c5889f4ddbf40a90018dc6e9f5514a data/tutorialmod/worldgen/placed_feature/deepslate_uranium_ore.json
-af4bebe88c8cc4811d5b5195a1b414e7c49fc0f5 data/tutorialmod/worldgen/placed_feature/halite.json
-ca22d548bbf5d5c8c068af99bb79c7cd91bacad7 data/tutorialmod/worldgen/configured_feature/deepslate_uranium_ore.json
-3aa8fb59187ead4e51bf10b858af3ad21757a19b data/tutorialmod/worldgen/placed_feature/mochite_ore.json
-543e4239fdd38555998deb0c94de7a4703f9d096 data/tutorialmod/worldgen/placed_feature/red_maple.json

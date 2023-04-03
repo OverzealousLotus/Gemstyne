@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:mochite_block",
-    "tutorialmod:deepslate_uranium_ore",
-    "tutorialmod:raw_uranium_block"
+    "gemstyne:mochite_block",
+    "gemstyne:deepslate_uranium_ore",
+    "gemstyne:raw_uranium_block"
   ]
 }
