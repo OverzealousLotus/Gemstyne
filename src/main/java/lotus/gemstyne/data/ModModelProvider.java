@@ -54,15 +54,13 @@ public class ModModelProvider extends FabricModelProvider {
                 .wood(ModBlocks.STRIPPED_RED_MAPLE_WOOD);
 
         // =====
-        // <===== Misc =====>
+        // <===== Crosses =====>
         // =====
+        // When Crosses are registered, they must be "cutout" in "GemstyneClient"
+        // This is to tell Minecraft to render them using their transparent pixels.
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RED_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-        // TODO!
-        // Causes item issues, behaviour is correct.
-        // blockStateModelGenerator.registerAmethyst(ModBlocks.IKARITE_CLUSTER);
-        // Causes behaviour issues, resolves above item issue.
-        // blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.IKARITE_CLUSTER, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.IKARITE_CLUSTER);
     }
 
     @Override

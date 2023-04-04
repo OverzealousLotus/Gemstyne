@@ -65,19 +65,19 @@ public class ModConfiguredFeatures {
         register(context, HALITE_KEY, Feature.ORE, new OreFeatureConfig(haliteGeneration, 55));
 
         register(context, IKARITE_KEY, Feature.GEODE,
-                        new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                                BlockStateProvider.of(ModBlocks.IKARITE_BLOCK), // Most-Inner filling.
-                                BlockStateProvider.of(ModBlocks.BUDDING_IKARITE), // Budding Base
-                                BlockStateProvider.of(Blocks.BASALT), // Inner Layer
-                                BlockStateProvider.of(Blocks.OBSIDIAN), // External Layer
-                                List.of(Blocks.AMETHYST_CLUSTER.getDefaultState()), // Actual buds.
-                                BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                                new GeodeLayerThicknessConfig(1.7D, 1.2D, 2.5D, 3.5D),
-                                new GeodeCrackConfig(0.25D, 1.5D, 1),
-                                0.5D, 0.1D,
-                                true, UniformIntProvider.create(3, 8),
-                                UniformIntProvider.create(2, 6), UniformIntProvider.create(1, 2),
-                                -18, 18, 0.075D, 1));
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                        BlockStateProvider.of(ModBlocks.IKARITE_BLOCK), // Most-Inner filling.
+                        BlockStateProvider.of(ModBlocks.BUDDING_IKARITE), // Budding Base
+                        BlockStateProvider.of(Blocks.BASALT), // Inner Layer
+                        BlockStateProvider.of(Blocks.OBSIDIAN), // External Layer
+                        List.of(ModBlocks.IKARITE_CLUSTER.getDefaultState()), // Actual buds.
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerThicknessConfig(1.7D, 1.2D, 2.5D, 3.5D),
+                        new GeodeCrackConfig(0.25D, 1.5D, 1),
+                        0.5D, 0.1D,
+                        true, UniformIntProvider.create(3, 8),
+                        UniformIntProvider.create(2, 6), UniformIntProvider.create(1, 2),
+                        -18, 18, 0.075D, 1));
     }
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(Gemstyne.MOD_ID, name));

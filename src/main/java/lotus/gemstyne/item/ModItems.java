@@ -3,6 +3,9 @@ package lotus.gemstyne.item;
 import lotus.gemstyne.Gemstyne;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -27,9 +30,14 @@ public class ModItems {
     // =====
     // <===== Refined Ores =====>
     // =====
-    public static final FoodComponent foodie = new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build();
+    public static final FoodComponent mochite_nutrients =
+            new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build();
+    public static final FoodComponent ikarite_nutrients =
+            new FoodComponent.Builder().hunger(1).saturationModifier(1.0f).meat()
+                    .statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 100), 100).build();
+
     public static final Item MOCHITE = registerItem("mochite",
-            new Item(new FabricItemSettings().food(foodie)));
+            new Item(new FabricItemSettings().food(mochite_nutrients)));
 
     public static final Item URANIUM_CHUNK = registerItem("uranium_chunk",
             new Item(new FabricItemSettings()));
@@ -38,7 +46,7 @@ public class ModItems {
             new Item(new FabricItemSettings()));
 
     public static final Item RAW_IKARITE = registerItem("raw_ikarite",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().food(ikarite_nutrients)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, name), item);
@@ -53,7 +61,6 @@ public class ModItems {
         addToItemGroup(ModItemGroup.GEMSTYNE, URANIUM_CHUNK);
         addToItemGroup(ModItemGroup.GEMSTYNE, URANIUM_INGOT);
         addToItemGroup(ModItemGroup.GEMSTYNE, RAW_IKARITE);
-        // addToItemGroup(ModItemGroup.GEMSTYNE, IKARITE_CHUNK);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {

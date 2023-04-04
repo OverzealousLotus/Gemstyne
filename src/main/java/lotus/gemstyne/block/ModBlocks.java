@@ -25,7 +25,6 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.STONE).strength(3.0f).requiresTool(),
                     UniformIntProvider.create(3, 10)),
                 ModItemGroup.GEMSTYNE);
-
     public static final Block DEEPSLATE_MOCHITE_ORE = registerBlock("deepslate_mochite_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE)
                     .sounds(BlockSoundGroup.DEEPSLATE).strength(4.0f).requiresTool(),
@@ -39,7 +38,7 @@ public class ModBlocks {
                 ModItemGroup.GEMSTYNE);
 
     // =====
-    // <==== Blockified Ores =====>
+    // <==== Compact Ores =====>
     // =====
     public static final Block RAW_MOCHITE_BLOCK = registerBlock("raw_mochite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST)
@@ -81,17 +80,11 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK).strength(3.0f).requiresTool()),
             ModItemGroup.GEMSTYNE);
 
-    // Strange problem with Ikarite Cluster:
-    // - Block texture's transparent pixels are black instead of clear.
-    // - Item texture doesn't render at all when an amethyst is specifically registered.
-    // - If tin
-    // That's really it. All other behavior works fine.
-    // TODO!
-    /* public static final Block IKARITE_CLUSTER = registerBlock("ikarite_cluster",
+    public static final Block IKARITE_CLUSTER = registerBlock("ikarite_cluster",
             new AmethystClusterBlock(7, 3, FabricBlockSettings.of(Material.AMETHYST)
                     .nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5f)
-                    .luminance(state -> 5)),
-            ModItemGroup.GEMSTYNE); */
+                    .luminance(state -> 5).requiresTool()),
+            ModItemGroup.GEMSTYNE);
 
     // =====
     // <===== Trees =====>

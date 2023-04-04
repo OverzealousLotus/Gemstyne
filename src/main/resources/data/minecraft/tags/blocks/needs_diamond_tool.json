@@ -3,6 +3,9 @@
   "values": [
     "gemstyne:mochite_block",
     "gemstyne:deepslate_uranium_ore",
-    "gemstyne:raw_uranium_block"
+    "gemstyne:raw_uranium_block",
+    "gemstyne:ikarite_cluster",
+    "gemstyne:ikarite_block",
+    "gemstyne:budding_ikarite"
   ]
 }

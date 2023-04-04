@@ -23,7 +23,7 @@
       },
       "inner_placements": [
         {
-          "Name": "minecraft:amethyst_cluster",
+          "Name": "gemstyne:ikarite_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"

@@ -1,7 +1,6 @@
-// 1.19.4	2023-04-03T19:10:50.749594927	Gemstyne/Block Loot Tables
+// 1.19.4	2023-04-03T21:34:57.110469581	Gemstyne/Block Loot Tables
 530c76a993ae8291ab829e11fe60d71f87cd3b2c data/gemstyne/loot_tables/blocks/ikarite_block.json
 505c84424c85614ae91d17d9253f928f9d4c9c54 data/gemstyne/loot_tables/blocks/red_maple_log.json
-2f8d95ba159aea20101dbbcc0dbeb4b9eba9492f data/gemstyne/loot_tables/blocks/budding_ikarite.json
 bb84c4cff247f5680a269726c25013385be037c9 data/gemstyne/loot_tables/blocks/halite.json
 e7784def9f7de4b89a88a81c42e6ab17cd05ff44 data/gemstyne/loot_tables/blocks/raw_mochite_block.json
 3ac286651e8612bc7ed2fac9a5551c4ae6e2eae8 data/gemstyne/loot_tables/blocks/stripped_red_maple_log.json
@@ -9,6 +8,7 @@ b58c4d5c3745efbbc4a9e76ed299095274a1ce48 data/gemstyne/loot_tables/blocks/mochit
 beda4d92052c2dc83ea8a3d536c6be98adf8679c data/gemstyne/loot_tables/blocks/uranium_block.json
 02ffca2fdc84e4a427c9e0ba6a02ad7d7eec1ef1 data/gemstyne/loot_tables/blocks/mochite_block.json
 f80db25e4e6012eb45953172b201f5ad54cd6eca data/gemstyne/loot_tables/blocks/deepslate_mochite_ore.json
+56ff0b72b193ea91894952b5d982f02f3186858c data/gemstyne/loot_tables/blocks/ikarite_cluster.json
 a0300bae4958b8a4d0dac615059ad713322f65bd data/gemstyne/loot_tables/blocks/stripped_red_maple_wood.json
 e7196170c1d31bfc7dfa61c09b9065e4ab34a622 data/gemstyne/loot_tables/blocks/red_maple_wood.json
 50fb01f8ce570b997046093138cc31a6403f66bb data/gemstyne/loot_tables/blocks/raw_uranium_block.json
