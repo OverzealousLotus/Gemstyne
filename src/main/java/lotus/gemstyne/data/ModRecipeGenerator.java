@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -65,5 +66,29 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.URANIUM_CHUNK),
                         FabricRecipeProvider.conditionsFromItem(ModItems.URANIUM_CHUNK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.URANIUM_CHUNK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IMBUED_ROD)
+                .pattern(" Q ")
+                .pattern("QBQ")
+                .pattern(" Q ")
+                .input('Q', Items.QUARTZ)
+                .input('B', Items.BLAZE_ROD)
+                .criterion(FabricRecipeProvider.hasItem(Items.QUARTZ),
+                        FabricRecipeProvider.conditionsFromItem(Items.QUARTZ))
+                .criterion(FabricRecipeProvider.hasItem(Items.BLAZE_ROD),
+                        FabricRecipeProvider.conditionsFromItem(Items.BLAZE_ROD))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.IMBUED_ROD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IMBUED_FEATHER)
+                .pattern(" O ")
+                .pattern("OIO")
+                .pattern("IO ")
+                .input('O', ModItems.RAW_IKARITE)
+                .input('I', ModItems.IMBUED_ROD)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.IMBUED_ROD),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.IMBUED_ROD))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.RAW_IKARITE),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.RAW_IKARITE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.IMBUED_FEATHER)));
     }
 }

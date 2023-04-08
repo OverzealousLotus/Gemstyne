@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "gemstyne:imbued_rod"
+    },
+    "O": {
+      "item": "gemstyne:raw_ikarite"
+    }
+  },
+  "pattern": [
+    " O ",
+    "OIO",
+    "IO "
+  ],
+  "result": {
+    "item": "gemstyne:imbued_feather"
+  },
+  "show_notification": true
+}

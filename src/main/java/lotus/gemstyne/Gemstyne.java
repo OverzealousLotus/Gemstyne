@@ -20,13 +20,12 @@ public class Gemstyne implements ModInitializer {
 	// A simple way to log messages or events.
 	public static final Logger LOGGER = LoggerFactory.getLogger("gemstyne");
 
-	// Initialization method.
+	/** Make sure to dataGen each time new items, or ores are added, or if-
+	 * -existing items/ores are modified in the files to see change.
+	 * Everything must be done sequentially.
+	 * If we try to generate ore that does not exist then mod dies. */
 	@Override
 	public void onInitialize() {
-		// Make sure to dataGen each time new items, or ores are added, or if-
-		// -existing items/ores are modified in the files to see change.
-		// Everything must be done sequentially.
-		// If we try to generate ore that does not exist then mod dies.
 		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
@@ -37,6 +36,7 @@ public class Gemstyne implements ModInitializer {
 		ModFlammableBlockRegistry.registerFlammableBlocks();
 		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_LOG, ModBlocks.STRIPPED_RED_MAPLE_LOG);
 		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_WOOD, ModBlocks.STRIPPED_RED_MAPLE_WOOD);
+
 
 		// Register event handlers.
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [
+    " Q ",
+    "QBQ",
+    " Q "
+  ],
+  "result": {
+    "item": "gemstyne:imbued_rod"
+  },
+  "show_notification": true
+}

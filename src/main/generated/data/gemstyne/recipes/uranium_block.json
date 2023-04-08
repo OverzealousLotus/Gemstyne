@@ -1,18 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
       "item": "gemstyne:uranium_ingot"
     }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
   ],
   "result": {
+    "count": 9,
     "item": "gemstyne:uranium_block"
-  },
-  "show_notification": true
+  }
 }

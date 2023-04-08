@@ -25,9 +25,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_URANIUM_BLOCK);
 
         // =====
-        // <===== Quadrilateral Ores =====>
+        // <===== Quadrilateral Minerals =====>
         // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.HALITE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPACT_DIRT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_GRANITE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_ANDESITE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_DIORITE);
 
         // =====
         // <===== Quadrilateral Decor-Blocks =====>
@@ -78,6 +82,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MOCHITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.URANIUM_CHUNK, Models.GENERATED);
         itemModelGenerator.register(ModItems.URANIUM_INGOT, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.IMBUED_FEATHER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.IMBUED_ROD, Models.GENERATED);
 
 
     }

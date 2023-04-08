@@ -17,42 +17,91 @@ public class ModPlacedFeatures {
     // When creating a newly generated Ore, make sure to also:
     // - Register the keys in ModConfiguredFeatures and ModOreGeneration!
     // - Lastly, run Datagen to actually generate the keys being used!
-    public static final RegistryKey<PlacedFeature> RED_MAPLE_PLACED_KEY = registerKey("red_maple");
 
+
+
+    // =====
+    // ==========
+    // <========== Placement Keys ==========>
+    // ==========
+    // =====
+    // =====
+
+
+    // =====
+    // <===== Ore =====>
+    // =====
     public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("mochite_ore");
-    public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("deepslate_uranium_ore");
+    public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("uranium_ore");
 
+    // =====
+    // <===== Minerals =====>
+    // =====
     public static final RegistryKey<PlacedFeature> HALITE_PLACED_KEY = registerKey("halite");
 
+    public static final RegistryKey<PlacedFeature> COMPACT_DIRT_PLACED_KEY = registerKey("compact_dirt");
+
+    public static final RegistryKey<PlacedFeature> COMPRESSED_GRANITE_PLACED_KEY = registerKey("compressed_granite");
+    public static final RegistryKey<PlacedFeature> COMPRESSED_DIORITE_PLACED_KEY = registerKey("compressed_diorite");
+    public static final RegistryKey<PlacedFeature> COMPRESSED_ANDESITE_PLACED_KEY = registerKey("compressed_andesite");
+
+    // =====
+    // <===== Geodes =====>
+    // =====
     public static final RegistryKey<PlacedFeature> IKARITE_PLACED_KEY = registerKey("ikarite_geode");
+
+    // =====
+    // <===== Trees =====>
+    // =====
+    public static final RegistryKey<PlacedFeature> RED_MAPLE_PLACED_KEY = registerKey("red_maple");
+
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         // =====
-        // <===== Tree-Related =====>
+        // <===== Tree Settings =====>
         // =====
         register(context, RED_MAPLE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RED_MAPLE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2), ModBlocks.RED_MAPLE_SAPLING));
 
         // =====
-        // <===== Ore-Related =====>
+        // <===== Ore Settings =====>
         // =====
+        // Trapezoid ranges generate in a Trapezoid region
+        // Uniform ranges generate in the entire chunk.
         register(context, MOCHITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MOCHITE_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(10, // Veins per chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80)))); // Ore-gen range
 
         register(context, URANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.URANIUM_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(-60))));
+                ModOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
         // =====
-        // <===== Mineral-Related =====>
+        // <===== Mineral Settings =====>
         // =====
         register(context, HALITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.HALITE_KEY),
-                ModOrePlacement.modifiersWithCount(2,
+                ModOrePlacement.modifiersWithRarity(3,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(80))));
 
+        register(context, COMPACT_DIRT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPACT_DIRT_KEY),
+                ModOrePlacement.modifiersWithCount(7,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+
+        register(context, COMPRESSED_GRANITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_GRANITE_KEY),
+                ModOrePlacement.modifiersWithRarity(5,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+        register(context, COMPRESSED_DIORITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_DIORITE_KEY),
+                ModOrePlacement.modifiersWithRarity(5,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+        register(context, COMPRESSED_ANDESITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_ANDESITE_KEY),
+                ModOrePlacement.modifiersWithRarity(5,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+
+        // =====
+        // <===== Geode Settings =====>
+        // =====
         register(context, IKARITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.IKARITE_KEY),
                 RarityFilterPlacementModifier.of(42),
                 SquarePlacementModifier.of(),

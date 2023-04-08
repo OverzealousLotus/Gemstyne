@@ -1,9 +1,6 @@
 package lotus.gemstyne;
 
-import lotus.gemstyne.data.ModLootTableGenerator;
-import lotus.gemstyne.data.ModModelProvider;
-import lotus.gemstyne.data.ModRecipeGenerator;
-import lotus.gemstyne.data.ModWorldGenerator;
+import lotus.gemstyne.data.*;
 import lotus.gemstyne.world.ModConfiguredFeatures;
 import lotus.gemstyne.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -20,6 +17,7 @@ public class GemstyneDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
+		pack.addProvider(ModEnglishLangProvider::new);
 	}
 
 	@Override

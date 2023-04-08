@@ -67,6 +67,26 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.CALCITE).strength(0.75f).requiresTool()),
             ModItemGroup.GEMSTYNE);
 
+    public static final Block COMPACT_DIRT = registerBlock("compact_dirt",
+            new Block(FabricBlockSettings.of(Material.SOIL)
+                    .sounds(BlockSoundGroup.ROOTED_DIRT).strength(4.0f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
+
+    public static final Block COMPRESSED_GRANITE = registerBlock("compressed_granite",
+            new Block(FabricBlockSettings.of(Material.STONE)
+                    .sounds(BlockSoundGroup.DEEPSLATE).strength(4.5f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
+
+    public static final Block COMPRESSED_ANDESITE = registerBlock("compressed_andesite",
+            new Block(FabricBlockSettings.of(Material.STONE)
+                    .sounds(BlockSoundGroup.DEEPSLATE).strength(4.5f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
+
+    public static final Block COMPRESSED_DIORITE = registerBlock("compressed_diorite",
+            new Block(FabricBlockSettings.of(Material.STONE)
+                    .sounds(BlockSoundGroup.DEEPSLATE).strength(4.5f).requiresTool()),
+            ModItemGroup.GEMSTYNE);
+
     // =====
     // <==== Crystalline =====>
     // =====

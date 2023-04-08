@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_imbued_rod": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gemstyne:imbued_rod"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_raw_ikarite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gemstyne:raw_ikarite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:imbued_feather"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_imbued_rod",
+      "has_raw_ikarite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:imbued_feather"
+    ]
+  }
+}

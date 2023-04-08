@@ -6,7 +6,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -20,13 +19,13 @@ public class UraniumBreakHandler implements AttackBlockCallback {
         // Handle irradiation logic.
         if (state.isOf(ModBlocks.DEEPSLATE_URANIUM_ORE)) {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 30, 1));
-            player.sendMessage(Text.literal("You have been slightly irradiated..."));
+            // player.sendMessage(Text.literal("You have been slightly irradiated..."));
         } else if (state.isOf(ModBlocks.RAW_URANIUM_BLOCK)) {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 60, 1));
-            player.sendMessage(Text.literal("You have been moderately irradiated..."));
+            // player.sendMessage(Text.literal("You have been moderately irradiated..."));
         } else if (state.isOf(ModBlocks.URANIUM_BLOCK)) {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 1));
-            player.sendMessage(Text.literal("You have been heavily irradiated..."));
+            // player.sendMessage(Text.literal("You have been heavily irradiated..."));
         }
     }
 

@@ -10,6 +10,9 @@
     "gemstyne:uranium_block",
     "gemstyne:ikarite_cluster",
     "gemstyne:ikarite_block",
-    "gemstyne:budding_ikarite"
+    "gemstyne:budding_ikarite",
+    "gemstyne:compressed_granite",
+    "gemstyne:compressed_diorite",
+    "gemstyne:compressed_andesite"
   ]
 }
