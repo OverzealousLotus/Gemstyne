@@ -33,6 +33,8 @@ public class ModPlacedFeatures {
     // =====
     public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("mochite_ore");
     public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("uranium_ore");
+    public static final RegistryKey<PlacedFeature> MORKITE_ORE_PLACED_KEY = registerKey("morkite_ore");
+    public static final RegistryKey<PlacedFeature> TEST_ORE_PLACED_KEY = registerKey("testing_ore");
 
     // =====
     // <===== Minerals =====>
@@ -77,6 +79,14 @@ public class ModPlacedFeatures {
         register(context, URANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.URANIUM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(4,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
+
+        register(context, MORKITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MORKITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(8,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
+
+        register(context, TEST_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TEST_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(15,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
 
         // =====
         // <===== Mineral Settings =====>

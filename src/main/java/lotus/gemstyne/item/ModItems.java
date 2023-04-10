@@ -38,6 +38,9 @@ public class ModItems {
     public static final Item RAW_IKARITE = registerItem("raw_ikarite",
             new Item(new FabricItemSettings().food(ikarite_nutrients)));
 
+    public static final Item MORKITE_SHARD = registerItem("morkite_shard",
+            new Item(new FabricItemSettings()));
+
     // =====
     // <===== Refined Ores =====>
     // =====
@@ -79,6 +82,7 @@ public class ModItems {
         addToItemGroup(ModItemGroup.GEMSTYNE, RAW_IKARITE);
         addToItemGroup(ModItemGroup.GEMSTYNE, IMBUED_FEATHER);
         addToItemGroup(ModItemGroup.GEMSTYNE, IMBUED_ROD);
+        addToItemGroup(ModItemGroup.GEMSTYNE, MORKITE_SHARD);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {

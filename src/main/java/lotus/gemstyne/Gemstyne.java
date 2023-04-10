@@ -5,6 +5,7 @@ import lotus.gemstyne.block.ModFlammableBlockRegistry;
 import lotus.gemstyne.event.UraniumBreakHandler;
 import lotus.gemstyne.item.ModItemGroup;
 import lotus.gemstyne.item.ModItems;
+import lotus.gemstyne.util.ModRegistries;
 import lotus.gemstyne.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -29,6 +30,7 @@ public class Gemstyne implements ModInitializer {
 		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+        ModRegistries.registerModStuff();
 
 		ModWorldGeneration.generateModWorldGen();
 

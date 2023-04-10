@@ -23,6 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_MOCHITE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_URANIUM_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RAW_URANIUM_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_MORKITE_ORE);
 
         // =====
         // <===== Quadrilateral Minerals =====>
@@ -75,6 +76,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_MOCHITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_URANIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_IKARITE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MORKITE_SHARD, Models.GENERATED);
 
         // =====
         // <===== Refined Ores =====>

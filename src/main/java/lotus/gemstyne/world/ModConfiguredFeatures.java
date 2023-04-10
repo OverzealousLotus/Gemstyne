@@ -2,6 +2,7 @@ package lotus.gemstyne.world;
 
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.ModBlocks;
+import lotus.gemstyne.util.ModBlockTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -38,7 +39,9 @@ public class ModConfiguredFeatures {
     // <===== Ores =====>
     // =====
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOCHITE_ORE_KEY = registerKey("mochite_ore");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> URANIUM_ORE_KEY = registerKey("deepslate_uranium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> URANIUM_ORE_KEY = registerKey("uranium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MORKITE_ORE_KEY = registerKey("morkite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TEST_ORE_KEY = registerKey("testing_ore");
 
     // =====
     // <===== Minerals =====>
@@ -65,6 +68,7 @@ public class ModConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest dirtReplaceables = new TagMatchRuleTest(ModBlockTags.DIRT_ORE_REPLACEABLES);
 
         // =====
         // ==========
@@ -82,6 +86,12 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> overworldUraniumOres =
                 List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_URANIUM_ORE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> overworldMorkiteOres =
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_MORKITE_ORE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> testOverworld =
+                List.of(OreFeatureConfig.createTarget(dirtReplaceables, ModBlocks.IKARITE_BLOCK.getDefaultState()));
 
         // =====
         // <===== Minerals =====>
@@ -123,6 +133,8 @@ public class ModConfiguredFeatures {
         // =====
         register(context, MOCHITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMochiteOres, 12)); // Vein size.
         register(context, URANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldUraniumOres, 6));
+        register(context, MORKITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMorkiteOres, 10));
+        register(context, TEST_ORE_KEY, Feature.ORE, new OreFeatureConfig(testOverworld, 10));
 
         // =====
         // <===== Minerals =====>

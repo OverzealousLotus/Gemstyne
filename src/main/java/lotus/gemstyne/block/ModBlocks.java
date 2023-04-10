@@ -37,6 +37,12 @@ public class ModBlocks {
                     UniformIntProvider.create(5, 15)),
                 ModItemGroup.GEMSTYNE);
 
+    public static final Block DEEPSLATE_MORKITE_ORE = registerBlock("deepslate_morkite_ore",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE)
+                    .sounds(BlockSoundGroup.DEEPSLATE).strength(3.5f).requiresTool(),
+                    UniformIntProvider.create(3, 10)),
+                ModItemGroup.GEMSTYNE);
+
     // =====
     // <==== Compact Ores =====>
     // =====

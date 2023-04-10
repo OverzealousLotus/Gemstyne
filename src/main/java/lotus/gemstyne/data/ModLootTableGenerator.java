@@ -12,10 +12,22 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        // Add drops when breaking FIRST block.
-        // For example, first entry drops itself.
-        // Second entry drops Raw Mochite from Mochite Ore.
-        // Third the same, except from Deepslate variant.
+        /* Add drops when breaking FIRST block.
+        * For example, first entry drops itself.
+        * Second entry drops Raw Mochite from Mochite Ore.
+        * Third the same, except from Deepslate variant. */
+
+        // ======
+        // <===== Ore Drops =====>
+        // ======
+        addDrop(ModBlocks.MOCHITE_ORE, oreDrops(ModBlocks.MOCHITE_ORE, ModItems.RAW_MOCHITE));
+        addDrop(ModBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MOCHITE_ORE, ModItems.RAW_MOCHITE));
+        addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.RAW_URANIUM));
+        addDrop(ModBlocks.DEEPSLATE_MORKITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MORKITE_ORE, ModItems.MORKITE_SHARD));
+
+        // ======
+        // <===== Block Drops =====>
+        // ======
         addDrop(ModBlocks.RAW_MOCHITE_BLOCK);
         addDrop(ModBlocks.MOCHITE_BLOCK);
         addDrop(ModBlocks.RAW_URANIUM_BLOCK);
@@ -25,10 +37,12 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.COMPRESSED_DIORITE);
         addDrop(ModBlocks.COMPRESSED_ANDESITE);
         addDrop(ModBlocks.COMPACT_DIRT);
+
+        // ======
+        // <===== Geode Drops =====>
+        // ======
         addDrop(ModBlocks.IKARITE_CLUSTER, oreDrops(ModBlocks.IKARITE_CLUSTER, ModItems.RAW_IKARITE));
-        addDrop(ModBlocks.MOCHITE_ORE, oreDrops(ModBlocks.MOCHITE_ORE, ModItems.RAW_MOCHITE));
-        addDrop(ModBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MOCHITE_ORE, ModItems.RAW_MOCHITE));
-        addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.RAW_URANIUM));
+
 
         addDrop(ModBlocks.HALITE);
 

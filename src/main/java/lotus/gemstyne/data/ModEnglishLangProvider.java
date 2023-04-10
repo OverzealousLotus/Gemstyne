@@ -25,6 +25,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAW_MOCHITE, "Raw Mochite");
         translationBuilder.add(ModItems.RAW_URANIUM, "Raw Uranium");
         translationBuilder.add(ModItems.RAW_IKARITE, "Ikarite Shard");
+        translationBuilder.add(ModItems.MORKITE_SHARD, "Morkite Shard");
 
         // ======
         // <===== Refined Ores =====>
@@ -48,6 +49,8 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.DEEPSLATE_URANIUM_ORE, "Deepslate Uranium Ore");
         translationBuilder.add(ModBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");
+
+        translationBuilder.add(ModBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
 
         // ======
         // <===== Geodes =====>
