@@ -34,7 +34,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("mochite_ore");
     public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("uranium_ore");
     public static final RegistryKey<PlacedFeature> MORKITE_ORE_PLACED_KEY = registerKey("morkite_ore");
-    public static final RegistryKey<PlacedFeature> TEST_ORE_PLACED_KEY = registerKey("testing_ore");
+    // public static final RegistryKey<PlacedFeature> COMPRESSED_COAL_ORE_PLACED_KEY = registerKey("compressed_coal_ore");
 
     // =====
     // <===== Minerals =====>
@@ -74,19 +74,19 @@ public class ModPlacedFeatures {
         // Uniform ranges generate in the entire chunk.
         register(context, MOCHITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MOCHITE_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(10, // Veins per chunk
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80)))); // Ore-gen range
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80)))); // Ore-gen range
 
         register(context, URANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.URANIUM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(4,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
         register(context, MORKITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MORKITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(8,
+                ModOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
-        register(context, TEST_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TEST_ORE_KEY),
+        /* register(context, COMPRESSED_COAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_COAL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(15,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)))); */
 
         // =====
         // <===== Mineral Settings =====>

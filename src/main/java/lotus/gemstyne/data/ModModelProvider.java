@@ -26,6 +26,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_MORKITE_ORE);
 
         // =====
+        // <===== Quadrilateral Ore Extensions =====>
+        // =====
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_GRANITE_COAL_ORE);
+
+        // =====
         // <===== Quadrilateral Minerals =====>
         // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.HALITE);

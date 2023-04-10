@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-09T01:11:36.731254245	Gemstyne/gemstyne
+// 1.19.4	2023-04-10T01:43:01.856618582	Gemstyne/gemstyne
 f1999231f0e39f120d23414261c1c54ffccdd9d7 data/gemstyne/worldgen/placed_feature/compact_dirt.json
 4d83faa4b6161acdbdb0dc150ad89c34868c727f data/gemstyne/worldgen/placed_feature/ikarite_geode.json
 b919d8a03236ff36b0e5f7367c9a6ca034cdd0ea data/gemstyne/worldgen/placed_feature/mochite_ore.json
@@ -14,10 +14,10 @@ b9c66cc4da5a0771c281b2338442a4f720f38e6e data/gemstyne/worldgen/placed_feature/m
 71072533dd03de3c757ed5fb48c2af99353f5798 data/gemstyne/worldgen/placed_feature/compressed_diorite.json
 dfab2b00a7824097df221bcb19696ec824ffcc8e data/gemstyne/worldgen/configured_feature/compressed_diorite.json
 1f879da68ddb8a6cd51820896fdd6981059fb14c data/gemstyne/worldgen/configured_feature/mochite_ore.json
-924aa691e2272822e7da48bdf7d9b4a368019379 data/gemstyne/worldgen/configured_feature/testing_ore.json
+ed7de9f70c33a5b174f4992bd01f6aae29877e7f data/gemstyne/worldgen/configured_feature/compressed_coal_ore.json
 1a52d649e7e40e3b5562122d9f8ee98d459b19f4 data/gemstyne/worldgen/configured_feature/compact_dirt.json
-9374a8481f284bd19c8445228ccfa022a8015499 data/gemstyne/worldgen/configured_feature/uranium_ore.json
+0474e49590e4b9757cc7239341fee35c315470cf data/gemstyne/worldgen/placed_feature/compressed_coal_ore.json
 53114c9147a83a15ef2c35e4961becbac986fbf3 data/gemstyne/worldgen/configured_feature/halite.json
+9374a8481f284bd19c8445228ccfa022a8015499 data/gemstyne/worldgen/configured_feature/uranium_ore.json
 e6cf394cb0eb7cdb738f11b51696864e49a2bda3 data/gemstyne/worldgen/placed_feature/uranium_ore.json
-063da1f20537676276eb80c089448513ad38ce32 data/gemstyne/worldgen/placed_feature/testing_ore.json
 48bd3b895c1f7d6e3b09978c3b037a49460bb5b8 data/gemstyne/worldgen/configured_feature/compressed_granite.json

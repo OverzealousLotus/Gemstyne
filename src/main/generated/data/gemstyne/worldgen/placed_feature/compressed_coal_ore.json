@@ -1,5 +1,5 @@
 {
-  "feature": "gemstyne:testing_ore",
+  "feature": "gemstyne:compressed_coal_ore",
   "placement": [
     {
       "type": "minecraft:count",
@@ -13,7 +13,7 @@
       "height": {
         "type": "minecraft:trapezoid",
         "max_inclusive": {
-          "absolute": 80
+          "absolute": 0
         },
         "min_inclusive": {
           "absolute": -80

@@ -53,6 +53,11 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
 
         // ======
+        // <===== Ores =====>
+        // ======
+        translationBuilder.add(ModBlocks.COMPRESSED_GRANITE_COAL_ORE, "Compressed Granite Coal Ore");
+
+        // ======
         // <===== Geodes =====>
         // ======
         translationBuilder.add(ModBlocks.IKARITE_BLOCK, "Ikarite Block");

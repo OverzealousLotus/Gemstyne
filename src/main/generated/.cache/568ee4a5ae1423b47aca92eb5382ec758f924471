@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-09T01:11:36.738100865	Gemstyne/Model Definitions
+// 1.19.4	2023-04-10T01:43:01.86227893	Gemstyne/Model Definitions
 e135aed5611e218a748703af80bf1ee6a1f8f524 assets/gemstyne/models/block/deepslate_mochite_ore.json
 4c6e2ef8cc5100a4e87f3fea79e4da102ae35adf assets/gemstyne/models/item/red_maple_wood.json
 224ad6828d63be0a09d8b07743d91ece66cd9a6d assets/gemstyne/models/item/stripped_red_maple_log.json
@@ -13,10 +13,11 @@ efad8c62aeeb6b9841cf5cc1aa4ab3c0237c90d4 assets/gemstyne/models/item/raw_ikarite
 66739e196f039bb258afaceb3eb9736c4d2b6844 assets/gemstyne/models/block/stripped_red_maple_wood.json
 bd72a7697f39ee48b5060371515e6b2c52869fc4 assets/gemstyne/models/block/uranium_block.json
 3c3f121b25cc215c7efc5cea4d2437e608a9eed9 assets/gemstyne/blockstates/deepslate_morkite_ore.json
-11124e634c3ebb4c14cb0c03f75f1125eb5ef02c assets/gemstyne/blockstates/compact_dirt.json
 572e5e3e3979e78cc3206956db35fdc449d13c96 assets/gemstyne/blockstates/raw_mochite_block.json
+11124e634c3ebb4c14cb0c03f75f1125eb5ef02c assets/gemstyne/blockstates/compact_dirt.json
 d3e9599b0c568c54819166a5bd0ed090253a6797 assets/gemstyne/models/block/red_maple_planks.json
 f96cd11ab8cb10534e693da0f4bcb4922a374067 assets/gemstyne/models/block/red_maple_wood.json
+e4f042b8f4eb08b626c0f768bd0ee53a2f4680c4 assets/gemstyne/models/block/compressed_granite_coal_ore.json
 9c48d382ade4fdfe7170379cefbe7a008ca4a108 assets/gemstyne/blockstates/red_maple_leaves.json
 6a0e79c238aba662e28967eaccf21eae2f300d60 assets/gemstyne/models/item/compressed_andesite.json
 373f0a160b98d0410a213e8aaabaf2dec72b3149 assets/gemstyne/models/item/compressed_granite.json
@@ -26,6 +27,7 @@ df070a7855bb351047c1dd5dbab28f9a5cc2e675 assets/gemstyne/models/block/compressed
 9b96a288019451d83f6770b6ff9065792b35a13b assets/gemstyne/models/block/red_maple_sapling.json
 030defbb98b1fad49bd2be5c00f0b0aa6c639077 assets/gemstyne/models/block/mochite_block.json
 3673856918864eb28535cb5676603012c7694466 assets/gemstyne/models/block/stripped_red_maple_log_horizontal.json
+998d4cb034019df409f2eb39872b631b4589cf53 assets/gemstyne/models/item/compressed_granite_coal_ore.json
 89f1235bb7f497935eb2687de96d6ad85d9d1826 assets/gemstyne/models/item/uranium_chunk.json
 a6b2b7fdfb8fb027b4c45b428d68b91bfdf5ea97 assets/gemstyne/models/item/raw_uranium.json
 0ba6a5dedac429d9e463a1e53a027c07921c6ac0 assets/gemstyne/blockstates/mochite_block.json
@@ -57,6 +59,7 @@ c3ed7813c87d3e4955a3a09959e2389de356e014 assets/gemstyne/models/block/halite.jso
 2c88bdfea1ff885a817dd8dcb768e4f8d31aea55 assets/gemstyne/blockstates/budding_ikarite.json
 7c57c6340c6e8404cf4631447abf1c6c4cc18a44 assets/gemstyne/blockstates/compressed_andesite.json
 2c8dcd98dc2d06a72ed22dcdba0338ccaadab0c7 assets/gemstyne/blockstates/mochite_ore.json
+8fe020139a5aa2f4bbc77f4f8fad6bd08850fab5 assets/gemstyne/blockstates/compressed_granite_coal_ore.json
 faa11ef19bddca6e0d185ea0792f018116eb6470 assets/gemstyne/blockstates/red_maple_wood.json
 802eb68484e23a66463d73a13ea0d88e01b9f07b assets/gemstyne/models/item/raw_mochite_block.json
 3ae937e160c0f5ab33b4473124778c8e1a120436 assets/gemstyne/blockstates/deepslate_uranium_ore.json

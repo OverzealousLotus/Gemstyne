@@ -4,6 +4,7 @@ import lotus.gemstyne.block.ModBlocks;
 import lotus.gemstyne.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.item.Items;
 
 public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     public ModLootTableGenerator(FabricDataOutput dataOutput) {
@@ -24,6 +25,11 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MOCHITE_ORE, ModItems.RAW_MOCHITE));
         addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.RAW_URANIUM));
         addDrop(ModBlocks.DEEPSLATE_MORKITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MORKITE_ORE, ModItems.MORKITE_SHARD));
+
+        // ======
+        // <===== Ore Extension Drops =====>
+        // ======
+        addDrop(ModBlocks.COMPRESSED_GRANITE_COAL_ORE, oreDrops(ModBlocks.COMPRESSED_GRANITE_COAL_ORE, Items.COAL));
 
         // ======
         // <===== Block Drops =====>

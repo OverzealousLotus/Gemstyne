@@ -6,11 +6,11 @@
     "targets": [
       {
         "state": {
-          "Name": "gemstyne:ikarite_block"
+          "Name": "gemstyne:compressed_granite_coal_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:dirt_ore_replaceables"
+          "tag": "minecraft:compressed_granite_ore_replaceables"
         }
       }
     ]

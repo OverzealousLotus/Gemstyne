@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-09T01:11:36.735645148	Gemstyne/Recipes
+// 1.19.4	2023-04-10T01:43:01.860660411	Gemstyne/Recipes
 ce7d34c8e49c14badb7f4efd906905b53213f5ec data/gemstyne/recipes/raw_uranium_block.json
 21034d555ab3d0d4885ae237cb9122a86b7e029d data/gemstyne/recipes/imbued_rod.json
 a65a91f684cc2498d48a9fc66eea65e40e59156f data/gemstyne/advancements/recipes/misc/mochite_from_smelting_raw_mochite.json
@@ -10,8 +10,8 @@ a0064fef71ed0d9dfb7fd665c83e0acf3dcfcef0 data/gemstyne/advancements/recipes/misc
 f927b8082e94df42ae122cb9bab1a28a86a9fcee data/gemstyne/recipes/uranium_chunk_from_blasting_raw_uranium.json
 420ab923c39046b76e05e13bf37153030a0752bf data/gemstyne/recipes/uranium_chunk.json
 14bab1e33b8b76d4b9990982324b8db1a13ee11d data/gemstyne/recipes/mochite.json
-2f86e5ed0993d88c76725733aad614e8661e105e data/gemstyne/advancements/recipes/decorations/raw_mochite_block.json
 62bd86c5e69eeddc29271442b18d4f040caa44d5 data/gemstyne/advancements/recipes/building_blocks/uranium_ingot.json
+2f86e5ed0993d88c76725733aad614e8661e105e data/gemstyne/advancements/recipes/decorations/raw_mochite_block.json
 9e9c838f5d3ec503c698c51e16de61dd678fb9e8 data/gemstyne/recipes/mochite_from_blasting_raw_mochite.json
 7e33232746c4ac2e3faed65e6d433d1d8b1d8757 data/gemstyne/recipes/uranium_block.json
 fc46ffd6a1f0176b00e845f49e3dbd144f6b0c47 data/gemstyne/advancements/recipes/decorations/uranium_block.json
