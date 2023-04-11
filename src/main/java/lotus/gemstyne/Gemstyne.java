@@ -1,7 +1,6 @@
 package lotus.gemstyne;
 
 import lotus.gemstyne.block.ModBlocks;
-import lotus.gemstyne.block.ModFlammableBlockRegistry;
 import lotus.gemstyne.event.UraniumBreakHandler;
 import lotus.gemstyne.item.ModItemGroup;
 import lotus.gemstyne.item.ModItems;
@@ -10,7 +9,6 @@ import lotus.gemstyne.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
-import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,15 +32,8 @@ public class Gemstyne implements ModInitializer {
 
 		ModWorldGeneration.generateModWorldGen();
 
-		// Set what blocks are flammable, or strippable.
-		ModFlammableBlockRegistry.registerFlammableBlocks();
-		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_LOG, ModBlocks.STRIPPED_RED_MAPLE_LOG);
-		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_WOOD, ModBlocks.STRIPPED_RED_MAPLE_WOOD);
-
 
 		// Register event handlers.
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());
-		// Usage of LOGGER
-		LOGGER.info("Hello Fabric world!");
 	}
 }

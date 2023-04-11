@@ -1,6 +1,7 @@
 package lotus.gemstyne.data;
 
-import lotus.gemstyne.block.ModBlocks;
+import lotus.gemstyne.block.GemstyneMineralBlocks;
+import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -21,42 +22,35 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         // ======
         // <===== Ore Drops =====>
         // ======
-        addDrop(ModBlocks.MOCHITE_ORE, oreDrops(ModBlocks.MOCHITE_ORE, ModItems.RAW_MOCHITE));
-        addDrop(ModBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MOCHITE_ORE, ModItems.RAW_MOCHITE));
-        addDrop(ModBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_URANIUM_ORE, ModItems.RAW_URANIUM));
-        addDrop(ModBlocks.DEEPSLATE_MORKITE_ORE, oreDrops(ModBlocks.DEEPSLATE_MORKITE_ORE, ModItems.MORKITE_SHARD));
+        addDrop(GemstyneOreBlocks.MOCHITE_ORE, oreDrops(GemstyneOreBlocks.MOCHITE_ORE, ModItems.RAW_MOCHITE));
+        addDrop(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, ModItems.RAW_MOCHITE));
+        addDrop(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, ModItems.RAW_URANIUM));
+        addDrop(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, ModItems.MORKITE_SHARD));
 
         // ======
         // <===== Ore Extension Drops =====>
         // ======
-        addDrop(ModBlocks.COMPRESSED_GRANITE_COAL_ORE, oreDrops(ModBlocks.COMPRESSED_GRANITE_COAL_ORE, Items.COAL));
+        addDrop(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE, oreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE, Items.COAL));
 
         // ======
         // <===== Block Drops =====>
         // ======
-        addDrop(ModBlocks.RAW_MOCHITE_BLOCK);
-        addDrop(ModBlocks.MOCHITE_BLOCK);
-        addDrop(ModBlocks.RAW_URANIUM_BLOCK);
-        addDrop(ModBlocks.URANIUM_BLOCK);
-        addDrop(ModBlocks.IKARITE_BLOCK);
-        addDrop(ModBlocks.COMPRESSED_GRANITE);
-        addDrop(ModBlocks.COMPRESSED_DIORITE);
-        addDrop(ModBlocks.COMPRESSED_ANDESITE);
-        addDrop(ModBlocks.COMPACT_DIRT);
+        addDrop(GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
+        addDrop(GemstyneOreBlocks.MOCHITE_BLOCK);
+        addDrop(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+        addDrop(GemstyneOreBlocks.URANIUM_BLOCK);
+        addDrop(GemstyneOreBlocks.IKARITE_BLOCK);
+        addDrop(GemstyneMineralBlocks.COMPRESSED_GRANITE);
+        addDrop(GemstyneMineralBlocks.COMPRESSED_DIORITE);
+        addDrop(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
+        addDrop(GemstyneMineralBlocks.COMPACT_DIRT);
 
         // ======
         // <===== Geode Drops =====>
         // ======
-        addDrop(ModBlocks.IKARITE_CLUSTER, oreDrops(ModBlocks.IKARITE_CLUSTER, ModItems.RAW_IKARITE));
+        addDrop(GemstyneOreBlocks.IKARITE_CLUSTER, oreDrops(GemstyneOreBlocks.IKARITE_CLUSTER, ModItems.RAW_IKARITE));
 
 
-        addDrop(ModBlocks.HALITE);
-
-        // Wood-Related
-        addDrop(ModBlocks.RED_MAPLE_LOG);
-        addDrop(ModBlocks.RED_MAPLE_WOOD);
-        addDrop(ModBlocks.STRIPPED_RED_MAPLE_LOG);
-        addDrop(ModBlocks.STRIPPED_RED_MAPLE_WOOD);
-        addDrop(ModBlocks.RED_MAPLE_SAPLING);
+        addDrop(GemstyneMineralBlocks.HALITE);
     }
 }

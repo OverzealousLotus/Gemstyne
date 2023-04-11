@@ -8,8 +8,8 @@ import net.minecraft.util.Identifier;
 public class ModBlockTags {
     public static final TagKey<Block> COMPRESSED_GRANITE_ORE_REPLACEABLES =
             ModBlockTags.of("compressed_granite_ore_replaceables");
-    public static final TagKey<Block> DIRT_ORE_REPLACEABLES =
-            ModBlockTags.of("dirt_ore_replaceables");
+    public static final TagKey<Block> COMPRESSED_ANDESITE_ORE_REPLACEABLES =
+            ModBlockTags.of("compressed_andesite_ore_replaceables");
 
 
     private ModBlockTags() {

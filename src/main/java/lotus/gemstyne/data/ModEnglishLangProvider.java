@@ -1,6 +1,7 @@
 package lotus.gemstyne.data;
 
-import lotus.gemstyne.block.ModBlocks;
+import lotus.gemstyne.block.GemstyneMineralBlocks;
+import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.ModItemGroup;
 import lotus.gemstyne.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -33,58 +34,48 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.MOCHITE, "Mochite");
         translationBuilder.add(ModItems.URANIUM_CHUNK, "Uranium Chunk");
         translationBuilder.add(ModItems.URANIUM_INGOT, "Uranium Ingot");
+        translationBuilder.add(ModItems.FIRE_OPAL, "Fire Opal");
 
         // ======
         // <===== Blocks =====>
         // ======
-        translationBuilder.add(ModBlocks.URANIUM_BLOCK, "Uranium Block");
-        translationBuilder.add(ModBlocks.MOCHITE_BLOCK, "Mochite Block");
+        translationBuilder.add(GemstyneOreBlocks.URANIUM_BLOCK, "Uranium Block");
+        translationBuilder.add(GemstyneOreBlocks.MOCHITE_BLOCK, "Mochite Block");
 
         // ======
         // <===== Ores =====>
         // ======
-        translationBuilder.add(ModBlocks.MOCHITE_ORE, "Mochite Ore");
-        translationBuilder.add(ModBlocks.DEEPSLATE_MOCHITE_ORE, "Deepslate Mochite Ore");
-        translationBuilder.add(ModBlocks.RAW_MOCHITE_BLOCK, "Raw Mochite Block");
+        translationBuilder.add(GemstyneOreBlocks.MOCHITE_ORE, "Mochite Ore");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, "Deepslate Mochite Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_MOCHITE_BLOCK, "Raw Mochite Block");
 
-        translationBuilder.add(ModBlocks.DEEPSLATE_URANIUM_ORE, "Deepslate Uranium Ore");
-        translationBuilder.add(ModBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, "Deepslate Uranium Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");
 
-        translationBuilder.add(ModBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
 
         // ======
-        // <===== Ores =====>
+        // <===== Ore Extensions =====>
         // ======
-        translationBuilder.add(ModBlocks.COMPRESSED_GRANITE_COAL_ORE, "Compressed Granite Coal Ore");
+        translationBuilder.add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE, "Compressed Granite Coal Ore");
 
         // ======
         // <===== Geodes =====>
         // ======
-        translationBuilder.add(ModBlocks.IKARITE_BLOCK, "Ikarite Block");
-        translationBuilder.add(ModBlocks.BUDDING_IKARITE, "Budding Ikarite");
-        translationBuilder.add(ModBlocks.IKARITE_CLUSTER, "Ikarite Cluster");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE_BLOCK, "Ikarite Block");
+        translationBuilder.add(GemstyneOreBlocks.BUDDING_IKARITE, "Budding Ikarite");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE_CLUSTER, "Ikarite Cluster");
 
         // ======
         // <===== Minerals =====>
         // ======
-        translationBuilder.add(ModBlocks.HALITE, "Halite");
+        translationBuilder.add(GemstyneMineralBlocks.HALITE, "Halite");
 
-        translationBuilder.add(ModBlocks.COMPACT_DIRT, "Compact Dirt");
+        translationBuilder.add(GemstyneMineralBlocks.COMPACT_DIRT, "Compact Dirt");
 
-        translationBuilder.add(ModBlocks.COMPRESSED_ANDESITE, "Compressed Andesite");
-        translationBuilder.add(ModBlocks.COMPRESSED_DIORITE, "Compressed Diorite");
-        translationBuilder.add(ModBlocks.COMPRESSED_GRANITE, "Compressed Granite");
-
-        // ======
-        // <===== Wood =====>
-        // ======
-        translationBuilder.add(ModBlocks.RED_MAPLE_LOG, "Red Maple Log");
-        translationBuilder.add(ModBlocks.STRIPPED_RED_MAPLE_LOG, "Stripped Red Maple Log");
-        translationBuilder.add(ModBlocks.RED_MAPLE_PLANKS, "Red Maple Plank");
-        translationBuilder.add(ModBlocks.RED_MAPLE_WOOD, "Red Maple Wood");
-        translationBuilder.add(ModBlocks.STRIPPED_RED_MAPLE_WOOD, "Stripped Red Maple Wood");
-        translationBuilder.add(ModBlocks.RED_MAPLE_LEAVES, "Red Maple Leaves");
-        translationBuilder.add(ModBlocks.RED_MAPLE_SAPLING, "Red Maple Sapling");
+        translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_ANDESITE, "Compressed Andesite");
+        translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_DIORITE, "Compressed Diorite");
+        translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_GRANITE, "Compressed Granite");
 
         translationBuilder.add(ModItemGroup.GEMSTYNE, "Gemstyne");
     }

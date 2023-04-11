@@ -14,6 +14,7 @@
     "gemstyne:deepslate_morkite_ore",
     "gemstyne:compressed_granite",
     "gemstyne:compressed_diorite",
-    "gemstyne:compressed_andesite"
+    "gemstyne:compressed_andesite",
+    "gemstyne:compressed_granite_coal_ore"
   ]
 }

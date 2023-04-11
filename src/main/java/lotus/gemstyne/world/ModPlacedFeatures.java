@@ -1,7 +1,6 @@
 package lotus.gemstyne.world;
 
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -52,20 +51,8 @@ public class ModPlacedFeatures {
     // =====
     public static final RegistryKey<PlacedFeature> IKARITE_PLACED_KEY = registerKey("ikarite_geode");
 
-    // =====
-    // <===== Trees =====>
-    // =====
-    public static final RegistryKey<PlacedFeature> RED_MAPLE_PLACED_KEY = registerKey("red_maple");
-
-
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-
-        // =====
-        // <===== Tree Settings =====>
-        // =====
-        register(context, RED_MAPLE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RED_MAPLE_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2), ModBlocks.RED_MAPLE_SAPLING));
 
         // =====
         // <===== Ore Settings =====>

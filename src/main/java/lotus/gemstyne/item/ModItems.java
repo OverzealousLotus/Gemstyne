@@ -52,6 +52,9 @@ public class ModItems {
     public static final Item URANIUM_INGOT = registerItem("uranium_ingot",
             new Item(new FabricItemSettings()));
 
+    public static final Item FIRE_OPAL = registerItem("fire_opal",
+            new Item(new FabricItemSettings()));
+
     // =====
     // <===== Crafting Items =====>
     // =====
@@ -83,6 +86,7 @@ public class ModItems {
         addToItemGroup(ModItemGroup.GEMSTYNE, IMBUED_FEATHER);
         addToItemGroup(ModItemGroup.GEMSTYNE, IMBUED_ROD);
         addToItemGroup(ModItemGroup.GEMSTYNE, MORKITE_SHARD);
+        addToItemGroup(ModItemGroup.GEMSTYNE, FIRE_OPAL);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
@@ -90,7 +94,7 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        Gemstyne.LOGGER.info("Registering ore for " + Gemstyne.MOD_ID);
+        Gemstyne.LOGGER.info("Registering items for " + Gemstyne.MOD_ID);
         addItemsToItemGroup();
     }
 }

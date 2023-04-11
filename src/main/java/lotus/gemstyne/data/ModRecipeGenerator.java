@@ -1,12 +1,11 @@
 package lotus.gemstyne.data;
 
-import lotus.gemstyne.block.ModBlocks;
+import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
@@ -39,22 +38,17 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         // <===== Reversible =====>
         // =====
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                ModItems.MOCHITE, RecipeCategory.DECORATIONS, ModBlocks.MOCHITE_BLOCK);
+                ModItems.MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                ModItems.RAW_MOCHITE, RecipeCategory.DECORATIONS, ModBlocks.RAW_MOCHITE_BLOCK);
+                ModItems.RAW_MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                ModItems.URANIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.URANIUM_BLOCK);
+                ModItems.URANIUM_INGOT, RecipeCategory.DECORATIONS, GemstyneOreBlocks.URANIUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
-                ModItems.RAW_URANIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_URANIUM_BLOCK);
+                ModItems.RAW_URANIUM, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_URANIUM_BLOCK);
 
         // =====
         // <===== Shapeless =====>
         // =====
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_MAPLE_PLANKS, 4)
-                .input(ModBlocks.RED_MAPLE_LOG)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.RED_MAPLE_LOG),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.RED_MAPLE_LOG))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.RED_MAPLE_PLANKS)));
 
         // =====
         // <===== Shaped =====>
