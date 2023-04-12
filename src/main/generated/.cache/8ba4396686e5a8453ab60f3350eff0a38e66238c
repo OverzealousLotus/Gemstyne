@@ -1,5 +1,7 @@
-// 1.19.4	2023-04-11T15:49:23.114006409	Gemstyne/Block Loot Tables
+// 1.19.4	2023-04-12T01:44:52.494895434	Gemstyne/Block Loot Tables
+4a6c9409d27939941e338bf9e27c959a0de6bfe2 data/gemstyne/loot_tables/blocks/compressed_granite_fire_opal_ore.json
 530c76a993ae8291ab829e11fe60d71f87cd3b2c data/gemstyne/loot_tables/blocks/ikarite_block.json
+ca78260e2c33e2e076365730e1fc70094271c7c1 data/gemstyne/loot_tables/blocks/nether_crimonite_ore.json
 40b91849ebb4db5dbf8ec8f669f59da82dc4bbb9 data/gemstyne/loot_tables/blocks/compressed_granite_coal_ore.json
 aceb15cd332563309da89ce3734ffbbc48cfaf48 data/gemstyne/loot_tables/blocks/compressed_granite.json
 ad86b918984601b5c7c22a95009f950b6f9b0dfe data/gemstyne/loot_tables/blocks/deepslate_morkite_ore.json

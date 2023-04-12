@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -52,6 +53,9 @@ public class ModItems {
     public static final Item URANIUM_INGOT = registerItem("uranium_ingot",
             new Item(new FabricItemSettings()));
 
+    public static final Item CRIMONITE_INGOT = registerItem("crimonite_ingot",
+            new Item(new FabricItemSettings()));
+
     public static final Item FIRE_OPAL = registerItem("fire_opal",
             new Item(new FabricItemSettings()));
 
@@ -61,13 +65,23 @@ public class ModItems {
     public static final Item IMBUED_ROD = registerItem("imbued_rod",
             new Item(new FabricItemSettings()));
 
+    // =====
+    // <===== Rendfire Armour =====>
+    // =====
+    public static final Item RENDFIRE_HELMET = registerItem("rendfire_helmet",
+            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item RENDFIRE_CHESTPLATE = registerItem("rendfire_chestplate",
+            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item RENDFIRE_LEGGINGS = registerItem("rendfire_leggings",
+            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item RENDFIRE_BOOTS = registerItem("rendfire_boots",
+            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     // =====
     // <===== Paraphernalia =====>
     // =====
     public static final Item IMBUED_FEATHER = registerItem("imbued_feather",
             new ImbuedFeatherItem(new FabricItemSettings().maxCount(1).maxDamage(20)));
-
 
 
     private static Item registerItem(String name, Item item) {
@@ -87,6 +101,12 @@ public class ModItems {
         addToItemGroup(ModItemGroup.GEMSTYNE, IMBUED_ROD);
         addToItemGroup(ModItemGroup.GEMSTYNE, MORKITE_SHARD);
         addToItemGroup(ModItemGroup.GEMSTYNE, FIRE_OPAL);
+        addToItemGroup(ModItemGroup.GEMSTYNE, CRIMONITE_INGOT);
+
+        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_HELMET);
+        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_CHESTPLATE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_LEGGINGS);
+        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_BOOTS);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {

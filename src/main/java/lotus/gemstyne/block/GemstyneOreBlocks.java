@@ -1,7 +1,8 @@
 package lotus.gemstyne.block;
 
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.custom.UraniumBlock;
+import lotus.gemstyne.block.custom.RadioactiveBlock;
+import lotus.gemstyne.block.custom.RadioactiveOre;
 import lotus.gemstyne.item.ModItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AmethystClusterBlock;
@@ -19,25 +20,38 @@ public class GemstyneOreBlocks {
     // =====
     public static final Block MOCHITE_ORE = registerBlock("mochite_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(3.0f).sounds(BlockSoundGroup.STONE),
+                    .strength(3.0f, 3.0f).sounds(BlockSoundGroup.STONE),
                     UniformIntProvider.create(3, 10)),
             ModItemGroup.GEMSTYNE);
     public static final Block DEEPSLATE_MOCHITE_ORE = registerBlock("deepslate_mochite_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(4.5f).sounds(BlockSoundGroup.DEEPSLATE),
+                    .strength(4.5f, 3.0f).sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 10)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
-            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(6.0f).sounds(BlockSoundGroup.DEEPSLATE),
+            new RadioactiveOre(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(6.0f, 5.0f).sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(5, 15)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block DEEPSLATE_MORKITE_ORE = registerBlock("deepslate_morkite_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(4.5f).sounds(BlockSoundGroup.DEEPSLATE),
+                    .strength(4.5f, 3.0f).sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(3, 10)),
+            ModItemGroup.GEMSTYNE);
+
+    public static final Block NETHER_CRIMONITE_ORE = registerBlock("nether_crimonite_ore",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(3.0f, 3.0f).sounds(BlockSoundGroup.NETHER_ORE),
+                    UniformIntProvider.create(2, 5)),
+            ModItemGroup.GEMSTYNE);
+
+    public static final Block COMPRESSED_GRANITE_FIRE_OPAL_ORE = registerBlock(
+            "compressed_granite_fire_opal_ore",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(4.5f, 3.0f).sounds(BlockSoundGroup.DEEPSLATE),
+                    UniformIntProvider.create(10, 15)),
             ModItemGroup.GEMSTYNE);
 
     // =====
@@ -62,12 +76,11 @@ public class GemstyneOreBlocks {
             ModItemGroup.GEMSTYNE);
 
     public static final Block RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block",
-            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(7.0f).sounds(BlockSoundGroup.DEEPSLATE),
-                    UniformIntProvider.create(8, 18)),
+            new RadioactiveBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(7.0f).sounds(BlockSoundGroup.DEEPSLATE)),
             ModItemGroup.GEMSTYNE);
     public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
-            new UraniumBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
+            new RadioactiveBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
                     .strength(7.0f).sounds(BlockSoundGroup.METAL)),
             ModItemGroup.GEMSTYNE);
 

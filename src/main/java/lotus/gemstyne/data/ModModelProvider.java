@@ -25,6 +25,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.NETHER_CRIMONITE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
 
         // =====
         // <===== Quadrilateral Ore Extensions =====>
@@ -73,11 +75,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MOCHITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.URANIUM_CHUNK, Models.GENERATED);
         itemModelGenerator.register(ModItems.URANIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRIMONITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.FIRE_OPAL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.IMBUED_FEATHER, Models.GENERATED);
         itemModelGenerator.register(ModItems.IMBUED_ROD, Models.GENERATED);
 
 
+        itemModelGenerator.register(ModItems.RENDFIRE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RENDFIRE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RENDFIRE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RENDFIRE_BOOTS, Models.GENERATED);
     }
 }

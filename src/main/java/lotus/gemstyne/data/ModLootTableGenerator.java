@@ -26,6 +26,9 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, ModItems.RAW_MOCHITE));
         addDrop(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, ModItems.RAW_URANIUM));
         addDrop(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, ModItems.MORKITE_SHARD));
+        addDrop(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, oreDrops(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, ModItems.CRIMONITE_INGOT));
+        addDrop(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE,
+                oreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, ModItems.FIRE_OPAL));
 
         // ======
         // <===== Ore Extension Drops =====>

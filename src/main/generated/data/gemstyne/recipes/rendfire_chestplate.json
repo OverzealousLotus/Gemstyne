@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "gemstyne:crimonite_ingot"
+    },
+    "F": {
+      "item": "gemstyne:fire_opal"
+    }
+  },
+  "pattern": [
+    "C C",
+    "CFC",
+    "CCC"
+  ],
+  "result": {
+    "item": "gemstyne:rendfire_chestplate"
+  },
+  "show_notification": true
+}

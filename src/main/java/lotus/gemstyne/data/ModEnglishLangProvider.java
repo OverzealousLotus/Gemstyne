@@ -32,8 +32,12 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         // <===== Refined Ores =====>
         // ======
         translationBuilder.add(ModItems.MOCHITE, "Mochite");
+
         translationBuilder.add(ModItems.URANIUM_CHUNK, "Uranium Chunk");
         translationBuilder.add(ModItems.URANIUM_INGOT, "Uranium Ingot");
+
+        translationBuilder.add(ModItems.CRIMONITE_INGOT, "Crimonite Ingot");
+
         translationBuilder.add(ModItems.FIRE_OPAL, "Fire Opal");
 
         // ======
@@ -53,6 +57,11 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");
 
         translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
+
+        translationBuilder.add(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, "Nether Crimonite Ore");
+
+        translationBuilder.add(
+                GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, "Compressed Granite Fire Opal Ore");
 
         // ======
         // <===== Ore Extensions =====>
@@ -78,5 +87,13 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_GRANITE, "Compressed Granite");
 
         translationBuilder.add(ModItemGroup.GEMSTYNE, "Gemstyne");
+
+        // ======
+        // <===== Minerals =====>
+        // ======
+        translationBuilder.add(ModItems.RENDFIRE_HELMET, "Rendfire Helmet");
+        translationBuilder.add(ModItems.RENDFIRE_CHESTPLATE, "Rendfire Chestplate");
+        translationBuilder.add(ModItems.RENDFIRE_LEGGINGS, "Rendfire Leggings");
+        translationBuilder.add(ModItems.RENDFIRE_BOOTS, "Rendfire Boots");
     }
 }

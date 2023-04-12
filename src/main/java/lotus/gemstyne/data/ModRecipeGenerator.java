@@ -84,5 +84,44 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.RAW_IKARITE),
                         FabricRecipeProvider.conditionsFromItem(ModItems.RAW_IKARITE))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.IMBUED_FEATHER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_HELMET)
+                .pattern("CCC")
+                .pattern("C C")
+                .pattern("   ")
+                .input('C', ModItems.CRIMONITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_HELMET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_CHESTPLATE)
+                .pattern("C C")
+                .pattern("CFC")
+                .pattern("CCC")
+                .input('C', ModItems.CRIMONITE_INGOT)
+                .input('F', ModItems.FIRE_OPAL)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.FIRE_OPAL),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.FIRE_OPAL))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_CHESTPLATE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_LEGGINGS)
+                .pattern("CCC")
+                .pattern("C C")
+                .pattern("C C")
+                .input('C',ModItems.CRIMONITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_LEGGINGS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_BOOTS)
+                .pattern("   ")
+                .pattern("C C")
+                .pattern("C C")
+                .input('C',ModItems.CRIMONITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_BOOTS)));
     }
 }

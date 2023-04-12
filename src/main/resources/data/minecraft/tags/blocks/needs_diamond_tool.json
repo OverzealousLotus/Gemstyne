@@ -7,6 +7,8 @@
     "gemstyne:ikarite_cluster",
     "gemstyne:ikarite_block",
     "gemstyne:budding_ikarite",
-    "gemstyne:deepslate_morkite_ore"
+    "gemstyne:deepslate_morkite_ore",
+    "gemstyne:nether_crimonite_ore",
+    "gemstyne:compressed_granite_fire_opal_ore"
   ]
 }

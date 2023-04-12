@@ -11,8 +11,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class UraniumBlock extends ExperienceDroppingBlock {
-    public UraniumBlock(Settings settings) {
+public class RadioactiveBlock extends ExperienceDroppingBlock {
+    public RadioactiveBlock(Settings settings) {
         super(settings);
     }
     // <===== Used to cause damage when any player starts breaking anything Uranium related. =====>
@@ -29,7 +29,7 @@ public class UraniumBlock extends ExperienceDroppingBlock {
         }
     }
 
-    // <===== If anything other than the player steps on a UraniumBlock, then same logic. =====>
+    // <===== If anything other than the player steps on a RadioactiveBlock, then same logic. =====>
     public void irradiateEntity(LivingEntity entity, BlockState state) {
 
         if (state.isOf(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE)) { // Check to see what block is broken.
