@@ -1,11 +1,13 @@
 package lotus.gemstyne.data;
 
 import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.item.GemstyneOreItems;
 import lotus.gemstyne.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
@@ -23,28 +25,40 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         // =====
         // <===== Smelting/Blasting =====>
         // =====
-        offerSmelting(exporter, List.of(ModItems.RAW_MOCHITE), RecipeCategory.MISC,
-                ModItems.MOCHITE, 0.5f, 200, "gemstyne");
-        offerBlasting(exporter, List.of(ModItems.RAW_MOCHITE), RecipeCategory.MISC,
-                ModItems.MOCHITE, 0.5f, 100, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneOreItems.RAW_MOCHITE), RecipeCategory.MISC,
+                GemstyneOreItems.MOCHITE, 0.5f, 200, "gemstyne");
+        offerBlasting(exporter, List.of(GemstyneOreItems.RAW_MOCHITE), RecipeCategory.MISC,
+                GemstyneOreItems.MOCHITE, 0.5f, 100, "gemstyne");
 
-        offerSmelting(exporter, List.of(ModItems.RAW_URANIUM), RecipeCategory.MISC,
-                ModItems.URANIUM_CHUNK, 1.0f, 300, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneOreItems.RAW_URANIUM), RecipeCategory.MISC,
+                GemstyneOreItems.URANIUM_CHUNK, 1.0f, 300, "gemstyne");
+        offerBlasting(exporter, List.of(GemstyneOreItems.RAW_URANIUM), RecipeCategory.MISC,
+                GemstyneOreItems.URANIUM_CHUNK, 1.0f, 150, "gemstyne");
 
-        offerBlasting(exporter, List.of(ModItems.RAW_URANIUM), RecipeCategory.MISC,
-                ModItems.URANIUM_CHUNK, 1.0f, 150, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneOreItems.RAW_CRIMONITE), RecipeCategory.MISC,
+                GemstyneOreItems.CRIMONITE_CHUNK, 1.0f, 350, "gemstyne");
+        offerBlasting(exporter, List.of(GemstyneOreItems.RAW_CRIMONITE), RecipeCategory.MISC,
+                GemstyneOreItems.CRIMONITE_CHUNK, 1.0f, 175, "gemstyne");
 
         // =====
         // <===== Reversible =====>
         // =====
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                ModItems.MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.MOCHITE_BLOCK);
+                GemstyneOreItems.MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                ModItems.RAW_MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
+                GemstyneOreItems.RAW_MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                ModItems.URANIUM_INGOT, RecipeCategory.DECORATIONS, GemstyneOreBlocks.URANIUM_BLOCK);
+                GemstyneOreBlocks.URANIUM_BLOCK, RecipeCategory.DECORATIONS, GemstyneOreItems.URANIUM_INGOT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
-                ModItems.RAW_URANIUM, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+                GemstyneOreItems.RAW_URANIUM, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+
+        // =====
+        // <===== Ingots =====>
+        // =====
+        offerBasicIngotRecipe(exporter, RecipeCategory.MISC,
+                GemstyneOreItems.URANIUM_CHUNK, GemstyneOreItems.URANIUM_INGOT, GemstyneOreItems.URANIUM_CHUNK);
+        offerBasicIngotRecipe(exporter, RecipeCategory.MISC,
+                GemstyneOreItems.CRIMONITE_CHUNK, GemstyneOreItems.CRIMONITE_INGOT, GemstyneOreItems.CRIMONITE_CHUNK);
 
         // =====
         // <===== Shapeless =====>
@@ -53,13 +67,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         // =====
         // <===== Shaped =====>
         // =====
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.URANIUM_INGOT)
-                .pattern("UU")
-                .pattern("UU")
-                .input('U', ModItems.URANIUM_CHUNK)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.URANIUM_CHUNK),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.URANIUM_CHUNK))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.URANIUM_CHUNK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IMBUED_ROD)
                 .pattern(" Q ")
@@ -77,51 +84,59 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern(" O ")
                 .pattern("OIO")
                 .pattern("IO ")
-                .input('O', ModItems.RAW_IKARITE)
+                .input('O', GemstyneOreItems.IKARITE)
                 .input('I', ModItems.IMBUED_ROD)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.IMBUED_ROD),
                         FabricRecipeProvider.conditionsFromItem(ModItems.IMBUED_ROD))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.RAW_IKARITE),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.RAW_IKARITE))
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.IKARITE),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.IKARITE))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.IMBUED_FEATHER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_HELMET)
                 .pattern("CCC")
                 .pattern("C C")
-                .pattern("   ")
-                .input('C', ModItems.CRIMONITE_INGOT)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .input('C', GemstyneOreItems.CRIMONITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_HELMET)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_CHESTPLATE)
                 .pattern("C C")
                 .pattern("CFC")
                 .pattern("CCC")
-                .input('C', ModItems.CRIMONITE_INGOT)
-                .input('F', ModItems.FIRE_OPAL)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.FIRE_OPAL),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.FIRE_OPAL))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .input('C', GemstyneOreItems.CRIMONITE_INGOT)
+                .input('F', GemstyneOreItems.FIRE_OPAL)
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.FIRE_OPAL),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.FIRE_OPAL))
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_CHESTPLATE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_LEGGINGS)
                 .pattern("CCC")
                 .pattern("C C")
                 .pattern("C C")
-                .input('C',ModItems.CRIMONITE_INGOT)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .input('C', GemstyneOreItems.CRIMONITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_LEGGINGS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RENDFIRE_BOOTS)
-                .pattern("   ")
                 .pattern("C C")
                 .pattern("C C")
-                .input('C',ModItems.CRIMONITE_INGOT)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.CRIMONITE_INGOT),
-                        FabricRecipeProvider.conditionsFromItem(ModItems.CRIMONITE_INGOT))
+                .input('C', GemstyneOreItems.CRIMONITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.CRIMONITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RENDFIRE_BOOTS)));
+    }
+    private static void offerBasicIngotRecipe(
+            Consumer<RecipeJsonProvider> exporter, RecipeCategory category, Item input, Item output, Item name) {
+        ShapedRecipeJsonBuilder.create(category, output)
+                .pattern("CC")
+                .pattern("CC")
+                .input('C', input)
+                .criterion(FabricRecipeProvider.hasItem(input),
+                        FabricRecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(name)));
     }
 }

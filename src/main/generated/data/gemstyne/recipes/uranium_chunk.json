@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "U": {
+    "C": {
       "item": "gemstyne:uranium_chunk"
     }
   },
   "pattern": [
-    "UU",
-    "UU"
+    "CC",
+    "CC"
   ],
   "result": {
     "item": "gemstyne:uranium_ingot"

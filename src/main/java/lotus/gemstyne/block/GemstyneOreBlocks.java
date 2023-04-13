@@ -1,8 +1,10 @@
 package lotus.gemstyne.block;
 
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.custom.RadioactiveBlock;
-import lotus.gemstyne.block.custom.RadioactiveOre;
+import lotus.gemstyne.block.custom.AfflictiveBlock;
+import lotus.gemstyne.block.custom.AfflictiveOre;
+import lotus.gemstyne.block.custom.CrimoniteBlock;
+import lotus.gemstyne.block.custom.CrimoniteOre;
 import lotus.gemstyne.item.ModItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AmethystClusterBlock;
@@ -30,7 +32,7 @@ public class GemstyneOreBlocks {
             ModItemGroup.GEMSTYNE);
 
     public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
-            new RadioactiveOre(FabricBlockSettings.of(Material.STONE).requiresTool()
+            new AfflictiveOre(FabricBlockSettings.of(Material.STONE).requiresTool()
                     .strength(6.0f, 5.0f).sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(5, 15)),
             ModItemGroup.GEMSTYNE);
@@ -42,8 +44,8 @@ public class GemstyneOreBlocks {
             ModItemGroup.GEMSTYNE);
 
     public static final Block NETHER_CRIMONITE_ORE = registerBlock("nether_crimonite_ore",
-            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(3.0f, 3.0f).sounds(BlockSoundGroup.NETHER_ORE),
+            new CrimoniteOre(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(5.0f, 3.0f).sounds(BlockSoundGroup.NETHER_ORE),
                     UniformIntProvider.create(2, 5)),
             ModItemGroup.GEMSTYNE);
 
@@ -72,18 +74,28 @@ public class GemstyneOreBlocks {
             ModItemGroup.GEMSTYNE);
     public static final Block MOCHITE_BLOCK = registerBlock("mochite_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool()
-                    .strength(4.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block",
-            new RadioactiveBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(7.0f).sounds(BlockSoundGroup.DEEPSLATE)),
+            new AfflictiveBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(7.0f, 6.0f).sounds(BlockSoundGroup.DEEPSLATE)),
             ModItemGroup.GEMSTYNE);
     public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
-            new RadioactiveBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
+            new AfflictiveBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
                     .strength(7.0f).sounds(BlockSoundGroup.METAL)),
             ModItemGroup.GEMSTYNE);
 
+    public static final Block MORKITE_BLOCK = registerBlock("morkite_block",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
+                    .strength(5.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+            ModItemGroup.GEMSTYNE);
+
+
+    public static final Block RAW_CRIMONITE_BLOCK = registerBlock("raw_crimonite_block",
+            new CrimoniteBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
+                    .strength(8.0f).sounds(BlockSoundGroup.ANCIENT_DEBRIS)),
+            ModItemGroup.GEMSTYNE);
     // =====
     // <==== Crystalline =====>
     // =====
@@ -103,5 +115,5 @@ public class GemstyneOreBlocks {
                     .luminance(state -> 5).requiresTool()),
             ModItemGroup.GEMSTYNE);
 
-    protected static void registerOreBlocks() { Gemstyne.LOGGER.info("Registering Ores...");}
+    protected static void registerOreBlocks() {Gemstyne.LOGGER.info("Registering Ores...");}
 }

@@ -6,10 +6,10 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
 
-public class RadioactiveOre extends RadioactiveBlock {
+public class AfflictiveOre extends AfflictiveBlock {
     private final IntProvider experiencedDropped;
 
-    public RadioactiveOre(Settings settings, IntProvider experience) {
+    public AfflictiveOre(Settings settings, IntProvider experience) {
         super(settings);
         this.experiencedDropped = experience;
     }

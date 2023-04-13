@@ -38,6 +38,8 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> MOCHITE_ORE_KEY = registerKey("mochite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> URANIUM_ORE_KEY = registerKey("uranium_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MORKITE_ORE_KEY = registerKey("morkite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FIRE_OPAL_ORE_KEY = registerKey("fire_opal_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CRIMONITE_ORE_KEY = registerKey("crimonite_ore_key");
     /* public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_COAL_ORE_KEY =
             registerKey("compressed_coal_ore"); */
 
@@ -61,8 +63,9 @@ public class ModConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-        /* RuleTest compressedGraniteReplaceables =
-                new TagMatchRuleTest(ModBlockTags.COMPRESSED_GRANITE_ORE_REPLACEABLES); */
+        RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+        RuleTest compressedGraniteReplaceables =
+                new TagMatchRuleTest(ModBlockTags.COMPRESSED_GRANITE_ORE_REPLACEABLES);
 
         // =====
         // ==========
@@ -83,6 +86,12 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> overworldMorkiteOres =
                 List.of(OreFeatureConfig.createTarget(deepslateReplaceables, GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> overworldFireOpalOres =
+                List.of(OreFeatureConfig.createTarget(compressedGraniteReplaceables, GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> netherCrimoniteOres =
+                List.of(OreFeatureConfig.createTarget(netherReplaceables, GemstyneOreBlocks.NETHER_CRIMONITE_ORE.getDefaultState()));
 
         /* List<OreFeatureConfig.Target> compressedCoalOres =
                 List.of(OreFeatureConfig.createTarget(
@@ -121,6 +130,8 @@ public class ModConfiguredFeatures {
         register(context, MOCHITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMochiteOres, 12)); // Vein size.
         register(context, URANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldUraniumOres, 6));
         register(context, MORKITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMorkiteOres, 10));
+        register(context, FIRE_OPAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldFireOpalOres, 5));
+        register(context, CRIMONITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherCrimoniteOres, 6));
         // register(context, COMPRESSED_COAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(compressedCoalOres, 10));
 
         // =====
@@ -146,7 +157,7 @@ public class ModConfiguredFeatures {
                         List.of(GemstyneOreBlocks.IKARITE_CLUSTER.getDefaultState()), // Actual buds.
                         BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7D, 1.2D, 2.5D, 3.5D),
-                        new GeodeCrackConfig(0.25D, 1.5D, 1),
+                        new GeodeCrackConfig(0.15D, 1.0D, 1),
                         0.5D, 0.1D,
                         true, UniformIntProvider.create(3, 8),
                         UniformIntProvider.create(2, 6), UniformIntProvider.create(1, 2),

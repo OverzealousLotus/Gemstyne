@@ -33,6 +33,10 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("mochite_ore");
     public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("uranium_ore");
     public static final RegistryKey<PlacedFeature> MORKITE_ORE_PLACED_KEY = registerKey("morkite_ore");
+    public static final RegistryKey<PlacedFeature> CRIMONITE_ORE_PLACED_KEY =
+            registerKey("crimonite_ore_placed_key");
+    public static final RegistryKey<PlacedFeature> FIRE_OPAL_ORE_PLACED_KEY =
+            registerKey("fire_opal_placed_key");
     // public static final RegistryKey<PlacedFeature> COMPRESSED_COAL_ORE_PLACED_KEY = registerKey("compressed_coal_ore");
 
     // =====
@@ -60,7 +64,7 @@ public class ModPlacedFeatures {
         // Trapezoid ranges generate in a Trapezoid region
         // Uniform ranges generate in the entire chunk.
         register(context, MOCHITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MOCHITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(10, // Veins per chunk
+                ModOrePlacement.modifiersWithCount(8, // Veins per chunk
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80)))); // Ore-gen range
 
         register(context, URANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.URANIUM_ORE_KEY),
@@ -70,6 +74,14 @@ public class ModPlacedFeatures {
         register(context, MORKITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MORKITE_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
+
+        register(context, FIRE_OPAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FIRE_OPAL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
+
+        register(context, CRIMONITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CRIMONITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(20), YOffset.fixed(80))));
 
         /* register(context, COMPRESSED_COAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_COAL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(15,
@@ -102,7 +114,7 @@ public class ModPlacedFeatures {
         register(context, IKARITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.IKARITE_KEY),
                 RarityFilterPlacementModifier.of(42),
                 SquarePlacementModifier.of(),
-                HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80)),
+                HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(60)),
                 BiomePlacementModifier.of());
     }
     public static RegistryKey<PlacedFeature> registerKey(String name) {

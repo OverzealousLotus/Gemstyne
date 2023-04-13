@@ -19,7 +19,7 @@ public enum ModArmorMaterials implements StringIdentifiable, ArmorMaterial {
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 10);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0f, 0.2f, () -> Ingredient.ofItems(ModItems.FIRE_OPAL));
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0f, 0.2f, () -> Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL));
 
     public static final StringIdentifiable.Codec<ArmorMaterials> CODEC;
     private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY;

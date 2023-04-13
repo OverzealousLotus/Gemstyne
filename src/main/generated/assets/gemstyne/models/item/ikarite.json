@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "gemstyne:item/morkite_shard"
+    "layer0": "gemstyne:item/ikarite"
   }
 }

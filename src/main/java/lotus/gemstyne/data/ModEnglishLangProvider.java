@@ -2,6 +2,7 @@ package lotus.gemstyne.data;
 
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.item.GemstyneOreItems;
 import lotus.gemstyne.item.ModItemGroup;
 import lotus.gemstyne.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -23,22 +24,24 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         // ======
         // <===== Raw Ores =====>
         // ======
-        translationBuilder.add(ModItems.RAW_MOCHITE, "Raw Mochite");
-        translationBuilder.add(ModItems.RAW_URANIUM, "Raw Uranium");
-        translationBuilder.add(ModItems.RAW_IKARITE, "Ikarite Shard");
-        translationBuilder.add(ModItems.MORKITE_SHARD, "Morkite Shard");
+        translationBuilder.add(GemstyneOreItems.RAW_MOCHITE, "Raw Mochite");
+        translationBuilder.add(GemstyneOreItems.RAW_URANIUM, "Raw Uranium");
+        translationBuilder.add(GemstyneOreItems.RAW_CRIMONITE, "Raw Crimonite");
+        translationBuilder.add(GemstyneOreItems.IKARITE, "Ikarite");
+        translationBuilder.add(GemstyneOreItems.MORKITE, "Morkite");
 
         // ======
         // <===== Refined Ores =====>
         // ======
-        translationBuilder.add(ModItems.MOCHITE, "Mochite");
+        translationBuilder.add(GemstyneOreItems.MOCHITE, "Mochite");
 
-        translationBuilder.add(ModItems.URANIUM_CHUNK, "Uranium Chunk");
-        translationBuilder.add(ModItems.URANIUM_INGOT, "Uranium Ingot");
+        translationBuilder.add(GemstyneOreItems.URANIUM_CHUNK, "Uranium Chunk");
+        translationBuilder.add(GemstyneOreItems.URANIUM_INGOT, "Uranium Ingot");
 
-        translationBuilder.add(ModItems.CRIMONITE_INGOT, "Crimonite Ingot");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE_CHUNK, "Crimonite Chunk");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE_INGOT, "Crimonite Ingot");
 
-        translationBuilder.add(ModItems.FIRE_OPAL, "Fire Opal");
+        translationBuilder.add(GemstyneOreItems.FIRE_OPAL, "Fire Opal");
 
         // ======
         // <===== Blocks =====>
@@ -57,8 +60,10 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");
 
         translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
+        translationBuilder.add(GemstyneOreBlocks.MORKITE_BLOCK, "Morkite Block");
 
         translationBuilder.add(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, "Nether Crimonite Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK, "Raw Crimonite Block");
 
         translationBuilder.add(
                 GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, "Compressed Granite Fire Opal Ore");
@@ -89,11 +94,17 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroup.GEMSTYNE, "Gemstyne");
 
         // ======
-        // <===== Minerals =====>
+        // <===== Armour =====>
         // ======
         translationBuilder.add(ModItems.RENDFIRE_HELMET, "Rendfire Helmet");
         translationBuilder.add(ModItems.RENDFIRE_CHESTPLATE, "Rendfire Chestplate");
         translationBuilder.add(ModItems.RENDFIRE_LEGGINGS, "Rendfire Leggings");
         translationBuilder.add(ModItems.RENDFIRE_BOOTS, "Rendfire Boots");
+
+        translationBuilder.add(ModItems.RENDFIRE_PICKAXE, "Rendfire Pickaxe");
+        translationBuilder.add(ModItems.RENDFIRE_AXE, "Rendfire Axe");
+        translationBuilder.add(ModItems.RENDFIRE_HOE, "Rendfire Hoe");
+        translationBuilder.add(ModItems.RENDFIRE_SWORD, "Rendfire Sword");
+        translationBuilder.add(ModItems.RENDFIRE_SHOVEL, "Rendfire Shovel");
     }
 }

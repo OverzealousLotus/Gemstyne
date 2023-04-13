@@ -11,12 +11,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class RadioactiveBlock extends ExperienceDroppingBlock {
-    public RadioactiveBlock(Settings settings) {
+public class AfflictiveBlock extends ExperienceDroppingBlock {
+    public AfflictiveBlock(Settings settings) {
         super(settings);
     }
     // <===== Used to cause damage when any player starts breaking anything Uranium related. =====>
-    public void irradiatePlayer(PlayerEntity player, BlockState state) {
+    protected void afflictPlayer(PlayerEntity player, BlockState state) {
         if (state.isOf(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE)) { // Check to see what block is broken.
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 30, 1));
             // player.sendMessage(Text.literal("You have been slightly irradiated..."));
@@ -29,8 +29,8 @@ public class RadioactiveBlock extends ExperienceDroppingBlock {
         }
     }
 
-    // <===== If anything other than the player steps on a RadioactiveBlock, then same logic. =====>
-    public void irradiateEntity(LivingEntity entity, BlockState state) {
+    // <===== If anything other than the player steps on a AfflictiveBlock, then same logic. =====>
+    protected void afflictEntity(LivingEntity entity, BlockState state) {
 
         if (state.isOf(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE)) { // Check to see what block is broken.
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 30, 1));
@@ -46,7 +46,7 @@ public class RadioactiveBlock extends ExperienceDroppingBlock {
         super.onBreak(world, pos, state, player);
 
         if (!world.isClient() && !player.isSpectator() && !player.isCreative()) {
-            irradiatePlayer(player, state);
+            afflictPlayer(player, state);
         }
     }
 
@@ -55,7 +55,7 @@ public class RadioactiveBlock extends ExperienceDroppingBlock {
         super.onSteppedOn(world, pos, state, entity);
         if (!world.isClient()) {
             if (entity instanceof LivingEntity livingEntity) {
-                if (!livingEntity.isSpectator()) {irradiateEntity(livingEntity, state);}
+                if (!livingEntity.isSpectator()) {afflictEntity(livingEntity, state);}
             }
         }
 

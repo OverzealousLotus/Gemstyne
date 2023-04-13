@@ -8,8 +8,7 @@
   },
   "pattern": [
     "CCC",
-    "C C",
-    "   "
+    "C C"
   ],
   "result": {
     "item": "gemstyne:rendfire_helmet"

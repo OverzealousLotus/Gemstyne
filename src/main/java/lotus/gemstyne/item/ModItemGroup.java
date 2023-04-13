@@ -14,6 +14,6 @@ public class ModItemGroup {
     public static void registerItemGroups() {
         GEMSTYNE = FabricItemGroup.builder(new Identifier(Gemstyne.MOD_ID, "mochite"))
                 .displayName(Text.translatable("itemgroup.gemstyne"))
-                .icon(() -> new ItemStack(ModItems.MOCHITE)).build();
+                .icon(() -> new ItemStack(GemstyneOreItems.MOCHITE)).build();
     }
 }
