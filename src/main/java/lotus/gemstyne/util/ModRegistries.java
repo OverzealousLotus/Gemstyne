@@ -1,6 +1,7 @@
 package lotus.gemstyne.util;
 
 import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.GemstyneOreItems;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 
@@ -15,5 +16,6 @@ public class ModRegistries {
 
         FuelRegistry registry = FuelRegistry.INSTANCE;
         registry.add(GemstyneOreItems.MORKITE, 2000);
+        registry.add(GemstyneOreBlocks.MORKITE_BLOCK, 20000);
     }
 }

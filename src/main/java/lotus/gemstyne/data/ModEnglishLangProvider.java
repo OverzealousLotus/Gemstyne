@@ -2,6 +2,7 @@ package lotus.gemstyne.data;
 
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.item.GemstyneOreItems;
 import lotus.gemstyne.item.ModItemGroup;
 import lotus.gemstyne.item.ModItems;
@@ -106,5 +107,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RENDFIRE_HOE, "Rendfire Hoe");
         translationBuilder.add(ModItems.RENDFIRE_SWORD, "Rendfire Sword");
         translationBuilder.add(ModItems.RENDFIRE_SHOVEL, "Rendfire Shovel");
+
+        translationBuilder.add(GemstyneEffects.IRRADIATE, "Irradiate");
     }
 }
