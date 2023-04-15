@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-13T18:26:34.664406937	Gemstyne/Model Definitions
+// 1.19.4	2023-04-15T01:15:46.532094162	Gemstyne/Model Definitions
 beb4fac523dc7235af8541a350fa381029b0eb45 assets/gemstyne/blockstates/nether_crimonite_ore.json
 c158981ffa6dae179c33a100f1799acf2e988b12 assets/gemstyne/models/item/morkite.json
 e135aed5611e218a748703af80bf1ee6a1f8f524 assets/gemstyne/models/block/deepslate_mochite_ore.json
@@ -15,8 +15,8 @@ e54a6f8a8462612a4e31a36be9397971102e3bca assets/gemstyne/models/item/rendfire_ch
 9903253c3461051e7d3fcd7b8f76fe3694f148c3 assets/gemstyne/models/item/nether_crimonite_ore.json
 bd72a7697f39ee48b5060371515e6b2c52869fc4 assets/gemstyne/models/block/uranium_block.json
 3c3f121b25cc215c7efc5cea4d2437e608a9eed9 assets/gemstyne/blockstates/deepslate_morkite_ore.json
-11124e634c3ebb4c14cb0c03f75f1125eb5ef02c assets/gemstyne/blockstates/compact_dirt.json
 572e5e3e3979e78cc3206956db35fdc449d13c96 assets/gemstyne/blockstates/raw_mochite_block.json
+11124e634c3ebb4c14cb0c03f75f1125eb5ef02c assets/gemstyne/blockstates/compact_dirt.json
 3d112b25dacb743e3dfc58343ae4d46c9d5703ee assets/gemstyne/models/item/morkite_block.json
 e4f042b8f4eb08b626c0f768bd0ee53a2f4680c4 assets/gemstyne/models/block/compressed_granite_coal_ore.json
 6a0e79c238aba662e28967eaccf21eae2f300d60 assets/gemstyne/models/item/compressed_andesite.json
@@ -27,8 +27,8 @@ df070a7855bb351047c1dd5dbab28f9a5cc2e675 assets/gemstyne/models/block/compressed
 0a5356b3f76e5343e40a6081065d2db480ecc1d2 assets/gemstyne/models/block/compressed_granite_fire_opal_ore.json
 4d8ad2c864b8c85ead8017ec9eee356f9e764067 assets/gemstyne/models/item/compressed_diorite.json
 030defbb98b1fad49bd2be5c00f0b0aa6c639077 assets/gemstyne/models/block/mochite_block.json
-0b98b62acb71fcd27fd9d48d98aa27d33d6527f2 assets/gemstyne/models/item/rendfire_leggings.json
 998d4cb034019df409f2eb39872b631b4589cf53 assets/gemstyne/models/item/compressed_granite_coal_ore.json
+0b98b62acb71fcd27fd9d48d98aa27d33d6527f2 assets/gemstyne/models/item/rendfire_leggings.json
 89f1235bb7f497935eb2687de96d6ad85d9d1826 assets/gemstyne/models/item/uranium_chunk.json
 a6b2b7fdfb8fb027b4c45b428d68b91bfdf5ea97 assets/gemstyne/models/item/raw_uranium.json
 0ba6a5dedac429d9e463a1e53a027c07921c6ac0 assets/gemstyne/blockstates/mochite_block.json
@@ -46,8 +46,8 @@ fd2f61de40d3e2bedebe474727aa88a177949898 assets/gemstyne/blockstates/ikarite_clu
 edcdee7ff559fffad5f7d7768649ab8574d590a8 assets/gemstyne/models/item/ikarite_block.json
 7861d2875551967e8521dfa2ce85bfc58ac8dd2b assets/gemstyne/models/block/deepslate_uranium_ore.json
 77f98e902663e122fdf7784c5fb11139f317d25a assets/gemstyne/models/block/compact_dirt.json
-ddcd0901cf1db22a170de72ea1c59db2f25cbdb3 assets/gemstyne/blockstates/compressed_granite_fire_opal_ore.json
 a487074552ff8bf99b704c67af0c43d14889f6af assets/gemstyne/blockstates/deepslate_mochite_ore.json
+ddcd0901cf1db22a170de72ea1c59db2f25cbdb3 assets/gemstyne/blockstates/compressed_granite_fire_opal_ore.json
 8d6bfbfcb800cfbd7868a780969b18c4898cd507 assets/gemstyne/models/block/nether_crimonite_ore.json
 ad2984412c171cf6be1b03585dcca4fa8721d518 assets/gemstyne/models/item/mochite_block.json
 e0ef85bc4377ef653c744865d1a1543c1e822893 assets/gemstyne/models/item/mochite_ore.json

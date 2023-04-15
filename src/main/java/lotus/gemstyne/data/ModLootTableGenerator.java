@@ -1,5 +1,6 @@
 package lotus.gemstyne.data;
 
+import lotus.gemstyne.block.GemStyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.GemstyneOreItems;
@@ -39,9 +40,9 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         // <===== Block Drops =====>
         // ======
         addDrop(GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
-        addDrop(GemstyneOreBlocks.MOCHITE_BLOCK);
+        addDrop(GemStyneDecorBlocks.MOCHITE_BLOCK);
         addDrop(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
-        addDrop(GemstyneOreBlocks.URANIUM_BLOCK);
+        addDrop(GemStyneDecorBlocks.URANIUM_BLOCK);
         addDrop(GemstyneOreBlocks.IKARITE_BLOCK);
         addDrop(GemstyneOreBlocks.MORKITE_BLOCK);
         addDrop(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);

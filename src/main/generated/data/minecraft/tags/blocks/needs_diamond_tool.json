@@ -2,20 +2,15 @@
   "replace": false,
   "values": [
     "gemstyne:mochite_block",
-
     "gemstyne:deepslate_uranium_ore",
     "gemstyne:raw_uranium_block",
-
     "gemstyne:ikarite_cluster",
     "gemstyne:ikarite_block",
     "gemstyne:budding_ikarite",
-
     "gemstyne:deepslate_morkite_ore",
     "gemstyne:morkite_block",
-
     "gemstyne:nether_crimonite_ore",
     "gemstyne:raw_crimonite_block",
-
     "gemstyne:compressed_granite_fire_opal_ore"
   ]
 }

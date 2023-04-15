@@ -1,5 +1,6 @@
 package lotus.gemstyne.data;
 
+import lotus.gemstyne.block.GemStyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.GemstyneOreItems;
@@ -23,12 +24,18 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.MOCHITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.MORKITE_BLOCK);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.NETHER_CRIMONITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.IKARITE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.BUDDING_IKARITE);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
 
@@ -41,7 +48,9 @@ public class ModModelProvider extends FabricModelProvider {
         // <===== Quadrilateral Minerals =====>
         // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.HALITE);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPACT_DIRT);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPRESSED_GRANITE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPRESSED_DIORITE);
@@ -49,10 +58,13 @@ public class ModModelProvider extends FabricModelProvider {
         // =====
         // <===== Quadrilateral Decor-Blocks =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.MOCHITE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.URANIUM_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.IKARITE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.BUDDING_IKARITE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemStyneDecorBlocks.MOCHITE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemStyneDecorBlocks.URANIUM_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemStyneDecorBlocks.CRIMONITE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemStyneDecorBlocks.ALDUS_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemStyneDecorBlocks.FIRE_OPAL_BLOCK);
+
+
         // =====
         // <===== Crosses =====>
         // =====

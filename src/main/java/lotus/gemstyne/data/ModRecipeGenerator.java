@@ -1,5 +1,6 @@
 package lotus.gemstyne.data;
 
+import lotus.gemstyne.block.GemStyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.GemstyneOreItems;
 import lotus.gemstyne.item.ModItems;
@@ -44,11 +45,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         // <===== Reversible =====>
         // =====
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.MOCHITE_BLOCK);
+                GemstyneOreItems.MOCHITE, RecipeCategory.DECORATIONS, GemStyneDecorBlocks.MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 GemstyneOreItems.RAW_MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreBlocks.URANIUM_BLOCK, RecipeCategory.DECORATIONS, GemstyneOreItems.URANIUM_INGOT);
+                GemStyneDecorBlocks.URANIUM_BLOCK, RecipeCategory.DECORATIONS, GemstyneOreItems.URANIUM_INGOT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
                 GemstyneOreItems.RAW_URANIUM, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_URANIUM_BLOCK);
 
@@ -67,7 +68,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         // =====
         // <===== Shaped =====>
         // =====
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IMBUED_ROD)
                 .pattern(" Q ")
                 .pattern("QBQ")

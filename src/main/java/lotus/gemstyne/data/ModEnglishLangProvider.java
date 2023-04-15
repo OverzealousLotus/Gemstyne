@@ -1,5 +1,6 @@
 package lotus.gemstyne.data;
 
+import lotus.gemstyne.block.GemStyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.effect.GemstyneEffects;
@@ -45,12 +46,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreItems.FIRE_OPAL, "Fire Opal");
 
         // ======
-        // <===== Blocks =====>
-        // ======
-        translationBuilder.add(GemstyneOreBlocks.URANIUM_BLOCK, "Uranium Block");
-        translationBuilder.add(GemstyneOreBlocks.MOCHITE_BLOCK, "Mochite Block");
-
-        // ======
         // <===== Ores =====>
         // ======
         translationBuilder.add(GemstyneOreBlocks.MOCHITE_ORE, "Mochite Ore");
@@ -93,6 +88,15 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_GRANITE, "Compressed Granite");
 
         translationBuilder.add(ModItemGroup.GEMSTYNE, "Gemstyne");
+
+        // ======
+        // <===== Decorations =====>
+        // ======
+        translationBuilder.add(GemStyneDecorBlocks.URANIUM_BLOCK, "Uranium Block");
+        translationBuilder.add(GemStyneDecorBlocks.MOCHITE_BLOCK, "Mochite Block");
+        translationBuilder.add(GemStyneDecorBlocks.CRIMONITE_BLOCK, "Crimonite Block");
+        translationBuilder.add(GemStyneDecorBlocks.ALDUS_BLOCK, "Aldus Block");
+        translationBuilder.add(GemStyneDecorBlocks.FIRE_OPAL_BLOCK, "Fire Opal Block");
 
         // ======
         // <===== Armour =====>

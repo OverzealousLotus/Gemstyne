@@ -1,6 +1,7 @@
 package lotus.gemstyne;
 
 import lotus.gemstyne.data.*;
+import lotus.gemstyne.data.BlockTagGenerator;
 import lotus.gemstyne.world.ModConfiguredFeatures;
 import lotus.gemstyne.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -13,6 +14,7 @@ public class GemstyneDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+		pack.addProvider(BlockTagGenerator::new);
 		pack.addProvider(ModLootTableGenerator::new);
 		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModModelProvider::new);

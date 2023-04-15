@@ -1,0 +1,8 @@
+// 1.19.4	2023-04-15T01:15:46.523171905	Gemstyne/Tags for minecraft:block
+2703953d27220bd81740c002d743bf7034adb822 data/minecraft/tags/blocks/needs_stone_tool.json
+5dc510775c3a7969a16654aefed34176a81a1379 data/minecraft/tags/blocks/mineable/pickaxe.json
+1edcdb9ffb0b04e4c58e0b86c8e5011bbf24d99a data/minecraft/tags/blocks/needs_diamond_tool.json
+ae9cf86a199080f41e955f8c99102baeae7c4b44 data/minecraft/tags/blocks/needs_iron_tool.json
+28de1af9d86acab170613efa7686730f080e90ad data/fabric/tags/blocks/needs_tool_level_4.json
+2be51b6565c0573894a521816a71a9780e0bd4cb data/minecraft/tags/blocks/compressed_andesite_ore_replaceables.json
+a3dc40ca20cdeb2c74391c44e4ec72acbe76ae09 data/minecraft/tags/blocks/mineable/shovel.json

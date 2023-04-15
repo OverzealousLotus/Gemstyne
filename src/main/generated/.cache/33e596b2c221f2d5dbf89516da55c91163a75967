@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-13T18:26:34.662202373	Gemstyne/Recipes
+// 1.19.4	2023-04-15T01:15:46.52991446	Gemstyne/Recipes
 ce7d34c8e49c14badb7f4efd906905b53213f5ec data/gemstyne/recipes/raw_uranium_block.json
 21034d555ab3d0d4885ae237cb9122a86b7e029d data/gemstyne/recipes/imbued_rod.json
 9406601bda6c8bcab83aa2b7886642d75afac802 data/gemstyne/recipes/crimonite_chunk.json
@@ -38,8 +38,8 @@ a7d6d8d3120e260a4359afff625cfc03c7e6eb63 data/gemstyne/advancements/recipes/buil
 0d844f35c1d4c9c231b3c37739d05b2c20608244 data/gemstyne/recipes/rendfire_boots.json
 c6b680a1f38b4a527a2002b0ffbd40ccc96866cb data/gemstyne/recipes/raw_uranium.json
 49cee319e7a499dc5cf584ab56df2ffa5bbe9f06 data/gemstyne/advancements/recipes/decorations/raw_uranium_block.json
-c8baa27a5e59137a8e474d5a5b8418a8356bbc67 data/gemstyne/recipes/rendfire_leggings.json
 9fd308628a23ea08a7b6cc6046d0b39d22e7a24f data/gemstyne/advancements/recipes/misc/rendfire_leggings.json
+c8baa27a5e59137a8e474d5a5b8418a8356bbc67 data/gemstyne/recipes/rendfire_leggings.json
 4041bdc4e5424f492ef8b8be6aa0ee5f16be1a1a data/gemstyne/advancements/recipes/misc/mochite_from_blasting_raw_mochite.json
 8fab7f013c1d7547117aa8754f75f7e054cca19c data/gemstyne/advancements/recipes/misc/rendfire_chestplate.json
 dd7b5de8032d26d74d91b5cc8213bf5821742965 data/gemstyne/advancements/recipes/misc/uranium_chunk.json

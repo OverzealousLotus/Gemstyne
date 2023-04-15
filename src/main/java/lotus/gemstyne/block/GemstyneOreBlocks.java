@@ -49,12 +49,19 @@ public class GemstyneOreBlocks {
                     UniformIntProvider.create(2, 5)),
             ModItemGroup.GEMSTYNE);
 
+    public static final Block NETHER_ALDUS_ORE = registerBlock("nether_aldus_ore",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.LODESTONE),
+                    UniformIntProvider.create(2, 5)),
+            ModItemGroup.GEMSTYNE);
+
     public static final Block COMPRESSED_GRANITE_FIRE_OPAL_ORE = registerBlock(
             "compressed_granite_fire_opal_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
                     .strength(4.5f, 3.0f).sounds(BlockSoundGroup.DEEPSLATE),
                     UniformIntProvider.create(10, 15)),
             ModItemGroup.GEMSTYNE);
+
 
     // =====
     // <===== Ore Extensions =====>
@@ -72,30 +79,28 @@ public class GemstyneOreBlocks {
             new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
                     .strength(4.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             ModItemGroup.GEMSTYNE);
-    public static final Block MOCHITE_BLOCK = registerBlock("mochite_block",
-            new Block(FabricBlockSettings.of(Material.METAL).requiresTool()
-                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
-            ModItemGroup.GEMSTYNE);
 
     public static final Block RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block",
             new AfflictiveBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
                     .strength(7.0f, 6.0f).sounds(BlockSoundGroup.DEEPSLATE)),
             ModItemGroup.GEMSTYNE);
-    public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
-            new AfflictiveBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
-                    .strength(7.0f).sounds(BlockSoundGroup.METAL)),
-            ModItemGroup.GEMSTYNE);
 
     public static final Block MORKITE_BLOCK = registerBlock("morkite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
-                    .strength(5.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+                    .strength(5.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             ModItemGroup.GEMSTYNE);
-
 
     public static final Block RAW_CRIMONITE_BLOCK = registerBlock("raw_crimonite_block",
             new CrimoniteBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
-                    .strength(8.0f).sounds(BlockSoundGroup.ANCIENT_DEBRIS)),
+                    .strength(8.0f, 8.0f).sounds(BlockSoundGroup.ANCIENT_DEBRIS)),
             ModItemGroup.GEMSTYNE);
+
+    public static final Block RAW_ALDUS_BLOCK = registerBlock("raw_aldus_block",
+            new Block(FabricBlockSettings.of(Material.METAL).requiresTool()
+                    .strength(6.0f, 6.0f).sounds(BlockSoundGroup.LODESTONE)),
+            ModItemGroup.GEMSTYNE);
+
+
     // =====
     // <==== Crystalline =====>
     // =====

@@ -11,6 +11,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static lotus.gemstyne.block.GemStyneDecorBlocks.registerDecorBlocks;
 import static lotus.gemstyne.block.GemstyneMineralBlocks.registerMineralBlocks;
 import static lotus.gemstyne.block.GemstyneOreBlocks.registerOreBlocks;
 
@@ -34,6 +35,7 @@ public class ModBlocks {
         Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");
         registerOreBlocks();
         registerMineralBlocks();
+        registerDecorBlocks();
         Gemstyne.LOGGER.info("Successfully registered blocks for " + Gemstyne.MOD_ID + "!");
     }
 }
