@@ -1,6 +1,6 @@
 package lotus.gemstyne.data;
 
-import lotus.gemstyne.block.GemStyneDecorBlocks;
+import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.GemstyneOreItems;
@@ -28,6 +28,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, GemstyneOreItems.RAW_URANIUM));
         addDrop(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.MORKITE));
         addDrop(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, oreDrops(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, GemstyneOreItems.RAW_CRIMONITE));
+        addDrop(GemstyneOreBlocks.NETHER_ALDUS_ORE, oreDrops(GemstyneOreBlocks.NETHER_ALDUS_ORE, GemstyneOreItems.RAW_ALDUS));
         addDrop(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE,
                 oreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, GemstyneOreItems.FIRE_OPAL));
 
@@ -40,15 +41,25 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         // <===== Block Drops =====>
         // ======
         addDrop(GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
-        addDrop(GemStyneDecorBlocks.MOCHITE_BLOCK);
+        addDrop(GemstyneDecorBlocks.MOCHITE_BLOCK);
+
         addDrop(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
-        addDrop(GemStyneDecorBlocks.URANIUM_BLOCK);
+        addDrop(GemstyneDecorBlocks.URANIUM_BLOCK);
+
         addDrop(GemstyneOreBlocks.IKARITE_BLOCK);
+
         addDrop(GemstyneOreBlocks.MORKITE_BLOCK);
+
         addDrop(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
+        addDrop(GemstyneDecorBlocks.CRIMONITE_BLOCK);
+
+        addDrop(GemstyneOreBlocks.RAW_ALDUS_BLOCK);
+        addDrop(GemstyneDecorBlocks.ALDUS_BLOCK);
+
         addDrop(GemstyneMineralBlocks.COMPRESSED_GRANITE);
         addDrop(GemstyneMineralBlocks.COMPRESSED_DIORITE);
         addDrop(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
+
         addDrop(GemstyneMineralBlocks.COMPACT_DIRT);
 
         // ======

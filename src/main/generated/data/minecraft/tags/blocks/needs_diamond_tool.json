@@ -11,6 +11,8 @@
     "gemstyne:morkite_block",
     "gemstyne:nether_crimonite_ore",
     "gemstyne:raw_crimonite_block",
-    "gemstyne:compressed_granite_fire_opal_ore"
+    "gemstyne:crimonite_block",
+    "gemstyne:compressed_granite_fire_opal_ore",
+    "gemstyne:fire_opal_block"
   ]
 }

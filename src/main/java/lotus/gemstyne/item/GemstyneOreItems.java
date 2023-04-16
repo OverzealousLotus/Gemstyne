@@ -37,6 +37,9 @@ public class GemstyneOreItems {
     public static final Item RAW_CRIMONITE = registerItem("raw_crimonite",
             new Item(new FabricItemSettings()));
 
+    public static final Item RAW_ALDUS = registerItem("raw_aldus",
+            new Item(new FabricItemSettings()));
+
     public static final Item FIRE_OPAL = registerItem("fire_opal",
             new Item(new FabricItemSettings()));
 
@@ -54,6 +57,9 @@ public class GemstyneOreItems {
     public static final Item CRIMONITE_CHUNK = registerItem("crimonite_chunk",
             new Item(new FabricItemSettings()));
     public static final Item CRIMONITE_INGOT = registerItem("crimonite_ingot",
+            new Item(new FabricItemSettings()));
+
+    public static final Item ALDUS_INGOT = registerItem("aldus_ingot",
             new Item(new FabricItemSettings()));
 
     protected static void registerOreItems() {

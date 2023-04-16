@@ -15,7 +15,7 @@ public class GemstyneMineralBlocks {
     // =====
     public static final Block HALITE = registerBlock("halite",
             new Block(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(0.75f).sounds(BlockSoundGroup.CALCITE)),
+                    .strength(0.75f, 1.5f).sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block COMPACT_DIRT = registerBlock("compact_dirt",

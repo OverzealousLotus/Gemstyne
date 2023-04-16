@@ -17,12 +17,15 @@ public class ModOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.URANIUM_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.MORKITE_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.FIRE_OPAL_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.CRIMONITE_ORE_PLACED_KEY);
-        /* BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.COMPRESSED_COAL_ORE_PLACED_KEY); */
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ALDUS_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.COMPRESSED_COAL_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.FIRE_OPAL_ORE_PLACED_KEY);
+
 
         // =====
         // <===== Minerals =====>
@@ -39,7 +42,6 @@ public class ModOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.COMPRESSED_DIORITE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.COMPRESSED_ANDESITE_PLACED_KEY);
-
         // =====
         // <===== Geodes =====>
         // =====

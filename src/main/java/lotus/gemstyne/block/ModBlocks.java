@@ -11,7 +11,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static lotus.gemstyne.block.GemStyneDecorBlocks.registerDecorBlocks;
+import static lotus.gemstyne.block.GemstyneDecorBlocks.registerDecorBlocks;
 import static lotus.gemstyne.block.GemstyneMineralBlocks.registerMineralBlocks;
 import static lotus.gemstyne.block.GemstyneOreBlocks.registerOreBlocks;
 

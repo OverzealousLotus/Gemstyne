@@ -17,7 +17,15 @@ public enum ModArmorMaterials implements StringIdentifiable, ArmorMaterial {
             6, // Leggings
             10, // Chestplate
             4 // Helmet
-    }, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f, () -> Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL));
+    }, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f, () -> Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL)),
+    ALDUS("aldus", 25, new int[]{
+            3,
+            5,
+            7,
+            3
+    }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> Ingredient.ofItems(GemstyneOreItems.ALDUS_INGOT));
+
+
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private final String name;

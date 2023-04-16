@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "gemstyne:aldus_ingot"
+    }
+  },
+  "pattern": [
+    "III",
+    "I I",
+    "I I"
+  ],
+  "result": {
+    "item": "gemstyne:aldus_leggings"
+  },
+  "show_notification": true
+}

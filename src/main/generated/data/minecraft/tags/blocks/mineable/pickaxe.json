@@ -15,10 +15,15 @@
     "gemstyne:morkite_block",
     "gemstyne:nether_crimonite_ore",
     "gemstyne:raw_crimonite_block",
+    "gemstyne:crimonite_block",
+    "gemstyne:nether_aldus_ore",
+    "gemstyne:raw_aldus_block",
+    "gemstyne:aldus_block",
     "gemstyne:compressed_andesite",
     "gemstyne:compressed_diorite",
     "gemstyne:compressed_granite",
     "gemstyne:compressed_granite_coal_ore",
-    "gemstyne:compressed_granite_fire_opal_ore"
+    "gemstyne:compressed_granite_fire_opal_ore",
+    "gemstyne:fire_opal_block"
   ]
 }

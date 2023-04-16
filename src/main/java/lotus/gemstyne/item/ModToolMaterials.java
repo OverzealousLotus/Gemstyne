@@ -2,6 +2,7 @@ package lotus.gemstyne.item;
 
 import com.google.common.base.Suppliers;
 // import net.fabricmc.yarn.constants.MiningLevels;
+import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -14,7 +15,12 @@ public enum ModToolMaterials implements ToolMaterial {
             2500,
             9.0f,
             4.5f,
-            20,()->Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL));
+            20,()->Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL)),
+    ALDUS(MiningLevels.DIAMOND,
+            800,
+            7.0f,
+            2.0f,
+            15, () -> Ingredient.ofItems(GemstyneOreItems.ALDUS_INGOT));
 
 
     private final int miningLevel;

@@ -1,5 +1,6 @@
 package lotus.gemstyne.block.custom;
 
+import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
@@ -22,7 +23,7 @@ public class CrimoniteBlock extends AfflictiveBlock {
         } else if (state.isOf(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK)) {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 100, 1));
             // player.sendMessage(Text.literal("You have been moderately irradiated..."));
-        } else if (state.isOf(GemstyneOreBlocks.MORKITE_BLOCK)) {
+        } else if (state.isOf(GemstyneDecorBlocks.CRIMONITE_BLOCK)) {
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 120, 1));
             // player.sendMessage(Text.literal("You have been heavily irradiated..."));
         }
@@ -35,7 +36,7 @@ public class CrimoniteBlock extends AfflictiveBlock {
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 60, 1));
         } else if (state.isOf(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK)) {
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 100, 1));
-        } else if (state.isOf(GemstyneOreBlocks.MORKITE_BLOCK)) {
+        } else if (state.isOf(GemstyneDecorBlocks.CRIMONITE_BLOCK)) {
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 120, 1));
         }
     }

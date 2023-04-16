@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
-    "C": {
+    "I": {
       "item": "gemstyne:crimonite_ingot"
     }
   },
   "pattern": [
-    "C C",
-    "C C"
+    "I I",
+    "I I"
   ],
   "result": {
     "item": "gemstyne:rendfire_boots"

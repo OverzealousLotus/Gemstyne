@@ -9,8 +9,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static lotus.gemstyne.item.GemstyneOreItems.registerOreItems;
-
 public class ModItems {
     /** Registered mod items. Block items are registered differently. Check block/ModBlocks
     * to configure things, check data */
@@ -20,37 +18,6 @@ public class ModItems {
     // =====
     public static final Item IMBUED_ROD = registerItem("imbued_rod",
             new Item(new FabricItemSettings()));
-
-    // =====
-    // <===== Armours =====>
-    // =====
-    public static final Item RENDFIRE_HELMET = registerItem("rendfire_helmet",
-            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.HELMET, new FabricItemSettings()));
-    public static final Item RENDFIRE_CHESTPLATE = registerItem("rendfire_chestplate",
-            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
-    public static final Item RENDFIRE_LEGGINGS = registerItem("rendfire_leggings",
-            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
-    public static final Item RENDFIRE_BOOTS = registerItem("rendfire_boots",
-            new ArmorItem(ModArmorMaterials.RENDFIRE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
-
-    // =====
-    // <===== Tools =====>
-    // =====
-    public static final Item RENDFIRE_PICKAXE = registerItem("rendfire_pickaxe",
-            new PickaxeItem(ModToolMaterials.RENDFIRE, 2, 2.0f,
-                    new FabricItemSettings()));
-    public static final Item RENDFIRE_AXE = registerItem("rendfire_axe",
-            new AxeItem(ModToolMaterials.RENDFIRE, 6, 2.0f,
-                    new FabricItemSettings()));
-    public static final Item RENDFIRE_HOE = registerItem("rendfire_hoe",
-            new HoeItem(ModToolMaterials.RENDFIRE, 0, 1.0f,
-                    new FabricItemSettings()));
-    public static final Item RENDFIRE_SWORD = registerItem("rendfire_sword",
-            new SwordItem(ModToolMaterials.RENDFIRE, 4, 2.0f,
-                    new FabricItemSettings()));
-    public static final Item RENDFIRE_SHOVEL = registerItem("rendfire_shovel",
-            new ShovelItem(ModToolMaterials.RENDFIRE, 2, 1.0f,
-                    new FabricItemSettings()));
 
     // =====
     // <===== Paraphernalia =====>
@@ -78,6 +45,8 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.RAW_CRIMONITE);
 
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.RAW_ALDUS);
+
         addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.FIRE_OPAL);
 
         // =====
@@ -91,22 +60,35 @@ public class ModItems {
         addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.CRIMONITE_CHUNK);
         addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.CRIMONITE_INGOT);
 
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.ALDUS_INGOT);
+
         // =====
         // <===== Armours =====>
         // =====
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_HELMET);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_CHESTPLATE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_LEGGINGS);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_BOOTS);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_HELMET);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_CHESTPLATE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_LEGGINGS);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_BOOTS);
+
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_HELMET);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_CHESTPLATE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_LEGGINGS);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_BOOTS);
 
         // =====
         // <===== Tools =====>
         // =====
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_PICKAXE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_AXE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_SWORD);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_HOE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, RENDFIRE_SHOVEL);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_PICKAXE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_AXE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_SWORD);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_HOE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_SHOVEL);
+
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_PICKAXE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_AXE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_SWORD);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_HOE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_SHOVEL);
 
         // =====
         // <===== Paraphernalia =====>
@@ -121,7 +103,9 @@ public class ModItems {
 
     public static void registerModItems() {
         Gemstyne.LOGGER.info("Registering items for " + Gemstyne.MOD_ID + "!");
-        registerOreItems();
+        GemstyneOreItems.registerOreItems();
+        GemstyneArmorItems.registerArmorItems();
+        GemstyneToolItems.registerToolItems();
         addItemsToItemGroup();
     }
 }

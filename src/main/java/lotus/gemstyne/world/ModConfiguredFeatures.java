@@ -40,8 +40,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> MORKITE_ORE_KEY = registerKey("morkite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FIRE_OPAL_ORE_KEY = registerKey("fire_opal_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CRIMONITE_ORE_KEY = registerKey("crimonite_ore_key");
-    /* public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_COAL_ORE_KEY =
-            registerKey("compressed_coal_ore"); */
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ALDUS_ORE_KEY = registerKey("aldus_ore_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_COAL_ORE_KEY =
+            registerKey("compressed_coal_ore");
 
     // =====
     // <===== Minerals =====>
@@ -93,10 +94,13 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> netherCrimoniteOres =
                 List.of(OreFeatureConfig.createTarget(netherReplaceables, GemstyneOreBlocks.NETHER_CRIMONITE_ORE.getDefaultState()));
 
-        /* List<OreFeatureConfig.Target> compressedCoalOres =
+        List<OreFeatureConfig.Target> netherAldusOres =
+                List.of(OreFeatureConfig.createTarget(netherReplaceables, GemstyneOreBlocks.NETHER_ALDUS_ORE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> compressedCoalOres =
                 List.of(OreFeatureConfig.createTarget(
                         compressedGraniteReplaceables,
-                        ModBlocks.COMPRESSED_GRANITE_COAL_ORE.getDefaultState())); */
+                        GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE.getDefaultState()));
 
         // =====
         // <===== Minerals =====>
@@ -132,7 +136,8 @@ public class ModConfiguredFeatures {
         register(context, MORKITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMorkiteOres, 10));
         register(context, FIRE_OPAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldFireOpalOres, 5));
         register(context, CRIMONITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherCrimoniteOres, 6));
-        // register(context, COMPRESSED_COAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(compressedCoalOres, 10));
+        register(context, ALDUS_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherAldusOres, 13));
+        register(context, COMPRESSED_COAL_ORE_KEY, Feature.ORE, new OreFeatureConfig(compressedCoalOres, 10));
 
         // =====
         // <===== Minerals =====>

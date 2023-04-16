@@ -51,7 +51,7 @@ public class GemstyneOreBlocks {
 
     public static final Block NETHER_ALDUS_ORE = registerBlock("nether_aldus_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.LODESTONE),
+                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.NETHER_ORE),
                     UniformIntProvider.create(2, 5)),
             ModItemGroup.GEMSTYNE);
 
@@ -77,7 +77,7 @@ public class GemstyneOreBlocks {
     // =====
     public static final Block RAW_MOCHITE_BLOCK = registerBlock("raw_mochite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
-                    .strength(4.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block",
@@ -92,12 +92,12 @@ public class GemstyneOreBlocks {
 
     public static final Block RAW_CRIMONITE_BLOCK = registerBlock("raw_crimonite_block",
             new CrimoniteBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
-                    .strength(8.0f, 8.0f).sounds(BlockSoundGroup.ANCIENT_DEBRIS)),
+                    .strength(8.0f, 8.0f).sounds(BlockSoundGroup.LODESTONE)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block RAW_ALDUS_BLOCK = registerBlock("raw_aldus_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool()
-                    .strength(6.0f, 6.0f).sounds(BlockSoundGroup.LODESTONE)),
+                    .strength(6.0f, 6.0f).sounds(BlockSoundGroup.ANCIENT_DEBRIS)),
             ModItemGroup.GEMSTYNE);
 
 
@@ -106,12 +106,12 @@ public class GemstyneOreBlocks {
     // =====
     public static final Block IKARITE_BLOCK = registerBlock("ikarite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
-                    .strength(3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+                    .strength(3.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block BUDDING_IKARITE = registerBlock("budding_ikarite",
             new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
-                    .strength(3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+                    .strength(3.0f, 2.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block IKARITE_CLUSTER = registerBlock("ikarite_cluster",

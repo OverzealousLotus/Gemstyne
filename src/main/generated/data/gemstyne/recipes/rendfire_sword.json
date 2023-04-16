@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "gemstyne:crimonite_ingot"
+    },
+    "O": {
+      "item": "gemstyne:fire_opal"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "I ",
+    "IO",
+    "S "
+  ],
+  "result": {
+    "item": "gemstyne:rendfire_sword"
+  },
+  "show_notification": true
+}

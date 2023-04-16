@@ -30,14 +30,15 @@ public class ModPlacedFeatures {
     // =====
     // <===== Ore =====>
     // =====
-    public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("mochite_ore");
-    public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("uranium_ore");
-    public static final RegistryKey<PlacedFeature> MORKITE_ORE_PLACED_KEY = registerKey("morkite_ore");
-    public static final RegistryKey<PlacedFeature> CRIMONITE_ORE_PLACED_KEY =
-            registerKey("crimonite_ore_placed_key");
+    public static final RegistryKey<PlacedFeature> MOCHITE_ORE_PLACED_KEY = registerKey("ore_mochite");
+    public static final RegistryKey<PlacedFeature> URANIUM_ORE_PLACED_KEY = registerKey("ore_uranium");
+    public static final RegistryKey<PlacedFeature> MORKITE_ORE_PLACED_KEY = registerKey("ore_morkite");
+    public static final RegistryKey<PlacedFeature> CRIMONITE_ORE_PLACED_KEY = registerKey("ore_crimonite");
+    public static final RegistryKey<PlacedFeature> ALDUS_ORE_PLACED_KEY = registerKey("ore_aldus");
     public static final RegistryKey<PlacedFeature> FIRE_OPAL_ORE_PLACED_KEY =
-            registerKey("fire_opal_placed_key");
-    // public static final RegistryKey<PlacedFeature> COMPRESSED_COAL_ORE_PLACED_KEY = registerKey("compressed_coal_ore");
+            registerKey("ore_fire_opal");
+    public static final RegistryKey<PlacedFeature> COMPRESSED_COAL_ORE_PLACED_KEY =
+            registerKey("ore_compressed_coal");
 
     // =====
     // <===== Minerals =====>
@@ -72,7 +73,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
         register(context, MORKITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MORKITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(6,
+                ModOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
         register(context, FIRE_OPAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FIRE_OPAL_ORE_KEY),
@@ -83,9 +84,13 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(4,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(20), YOffset.fixed(80))));
 
-        /* register(context, COMPRESSED_COAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_COAL_ORE_KEY),
+        register(context, ALDUS_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ALDUS_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(10,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(10), YOffset.fixed(90))));
+
+        register(context, COMPRESSED_COAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_COAL_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(15,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)))); */
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
         // =====
         // <===== Mineral Settings =====>
@@ -95,7 +100,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(80))));
 
         register(context, COMPACT_DIRT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPACT_DIRT_KEY),
-                ModOrePlacement.modifiersWithCount(7,
+                ModOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
 
         register(context, COMPRESSED_GRANITE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COMPRESSED_GRANITE_KEY),
