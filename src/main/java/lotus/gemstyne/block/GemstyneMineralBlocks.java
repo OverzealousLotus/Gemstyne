@@ -7,7 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
-import static lotus.gemstyne.block.ModBlocks.registerBlock;
+import static lotus.gemstyne.block.GemstyneBlocks.registerBlock;
 
 public class GemstyneMineralBlocks {
     // =====

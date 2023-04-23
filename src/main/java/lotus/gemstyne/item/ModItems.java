@@ -1,6 +1,7 @@
 package lotus.gemstyne.item;
 
 import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.custom.ImbuedFeatherItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -10,7 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    /** Registered mod items. Block items are registered differently. Check block/ModBlocks
+    /** Registered mod items. Block items are registered differently. Check block/GemstyneBlocks
     * to configure things, check data */
 
     // =====
@@ -26,6 +27,10 @@ public class ModItems {
             new ImbuedFeatherItem(new FabricItemSettings().maxCount(1).maxDamage(20)));
 
 
+    public static final Item LIQUID_MORKITE_BUCKET = registerItem("liquid_morkite_bucket",
+            new BucketItem(GemstyneFluids.STILL_LIQUID_MORKITE,
+                    new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
+
     protected static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, name), item);
     }
@@ -40,6 +45,8 @@ public class ModItems {
         addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.RAW_URANIUM);
 
         addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.IKARITE);
+
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.GARNET);
 
         addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.MORKITE);
 
@@ -95,6 +102,8 @@ public class ModItems {
         // =====
         addToItemGroup(ModItemGroup.GEMSTYNE, IMBUED_FEATHER);
         addToItemGroup(ModItemGroup.GEMSTYNE, IMBUED_ROD);
+
+        addToItemGroup(ModItemGroup.GEMSTYNE, LIQUID_MORKITE_BUCKET);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {

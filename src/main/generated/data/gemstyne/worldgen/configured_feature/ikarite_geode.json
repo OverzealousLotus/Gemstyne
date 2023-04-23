@@ -28,6 +28,27 @@
             "facing": "up",
             "waterlogged": "false"
           }
+        },
+        {
+          "Name": "gemstyne:large_ikarite_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "gemstyne:medium_ikarite_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "gemstyne:small_ikarite_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
         }
       ],
       "invalid_blocks": "#minecraft:geode_invalid_blocks",
@@ -48,9 +69,9 @@
       }
     },
     "crack": {
-      "base_crack_size": 1.0,
+      "base_crack_size": 0.5,
       "crack_point_offset": 1,
-      "generate_crack_chance": 0.15
+      "generate_crack_chance": 0.1
     },
     "distribution_points": {
       "type": "minecraft:uniform",
@@ -61,7 +82,7 @@
     },
     "invalid_blocks_threshold": 1,
     "layers": {
-      "filling": 1.7,
+      "filling": 1.5,
       "inner_layer": 1.2,
       "middle_layer": 2.5,
       "outer_layer": 3.5

@@ -5,7 +5,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
-public class ModBlockTags {
+public final class ModBlockTags {
     // ======
     // <===== Replaceables =====>
     // ======
@@ -14,6 +14,15 @@ public class ModBlockTags {
     public static final TagKey<Block> COMPRESSED_ANDESITE_ORE_REPLACEABLES =
             ModBlockTags.of("compressed_andesite_ore_replaceables");
 
+    // ======
+    // <===== Raw Ore Veins =====>
+    // ======
+    public static final TagKey<Block> MOCHITE_ORE_REPLACEABLES =
+            ModBlockTags.of("mochite_ore_replaceables");
+    public static final TagKey<Block> MORKITE_ORE_REPLACEABLES =
+            ModBlockTags.of("morkite_ore_replaceables");
+    public static final TagKey<Block> URANIUM_ORE_REPLACEABLES =
+            ModBlockTags.of("uranium_ore_replaceables");
     // ======
     // <===== Tool-Type Requirements =====>
     // ======

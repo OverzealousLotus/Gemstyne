@@ -9,9 +9,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
-import static lotus.gemstyne.block.ModBlocks.registerBlock;
+import static lotus.gemstyne.block.GemstyneBlocks.registerBlock;
 
-public class GemstyneDecorBlocks {
+public final class GemstyneDecorBlocks {
     public static final Block MOCHITE_BLOCK = registerBlock("mochite_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool()
                     .strength(4.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),

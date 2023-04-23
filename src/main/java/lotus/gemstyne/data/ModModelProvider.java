@@ -43,6 +43,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.IKARITE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.BUDDING_IKARITE);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.GARNET_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.BUDDING_GARNET);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
 
         // =====
@@ -78,6 +81,14 @@ public class ModModelProvider extends FabricModelProvider {
         // This is to tell Minecraft to render them using their transparent pixels.
 
         blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.IKARITE_CLUSTER);
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.LARGE_IKARITE_BUD);
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.MEDIUM_IKARITE_BUD);
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.SMALL_IKARITE_BUD);
+
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GARNET_CLUSTER);
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.LARGE_GARNET_BUD);
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.MEDIUM_GARNET_BUD);
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.SMALL_GARNET_BUD);
     }
 
     @Override
@@ -88,9 +99,20 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(GemstyneOreItems.RAW_MOCHITE, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.RAW_URANIUM, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.IKARITE, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.GARNET, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.RAW_CRIMONITE, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.RAW_ALDUS, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.MORKITE, Models.GENERATED);
+
+        itemModelGenerator.register(GemstyneOreBlocks.IKARITE_CLUSTER.asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.LARGE_IKARITE_BUD.asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.MEDIUM_IKARITE_BUD.asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.SMALL_IKARITE_BUD.asItem(), Models.GENERATED);
+
+        itemModelGenerator.register(GemstyneOreBlocks.GARNET_CLUSTER.asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.LARGE_GARNET_BUD.asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.MEDIUM_GARNET_BUD.asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.SMALL_GARNET_BUD.asItem(), Models.GENERATED);
 
         // =====
         // <===== Refined Ores =====>
@@ -131,5 +153,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(GemstyneToolItems.ALDUS_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(GemstyneToolItems.ALDUS_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(GemstyneToolItems.ALDUS_SWORD, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.LIQUID_MORKITE_BUCKET, Models.GENERATED);
     }
 }

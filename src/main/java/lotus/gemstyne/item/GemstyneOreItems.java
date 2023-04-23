@@ -31,6 +31,9 @@ public class GemstyneOreItems {
     public static final Item IKARITE = registerItem("ikarite",
             new Item(new FabricItemSettings().food(ikarite_nutrients)));
 
+    public static final Item GARNET = registerItem("garnet",
+            new Item(new FabricItemSettings()));
+
     public static final Item MORKITE = registerItem("morkite",
             new Item(new FabricItemSettings()));
 

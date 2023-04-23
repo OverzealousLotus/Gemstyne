@@ -47,6 +47,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(GemstyneDecorBlocks.URANIUM_BLOCK);
 
         addDrop(GemstyneOreBlocks.IKARITE_BLOCK);
+        addDrop(GemstyneOreBlocks.GARNET_BLOCK);
 
         addDrop(GemstyneOreBlocks.MORKITE_BLOCK);
 
@@ -65,7 +66,11 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         // ======
         // <===== Geode Drops =====>
         // ======
-        addDrop(GemstyneOreBlocks.IKARITE_CLUSTER, oreDrops(GemstyneOreBlocks.IKARITE_CLUSTER, GemstyneOreItems.IKARITE));
+        addDrop(GemstyneOreBlocks.IKARITE_CLUSTER,
+                oreDrops(GemstyneOreBlocks.IKARITE_CLUSTER, GemstyneOreItems.IKARITE));
+
+        addDrop(GemstyneOreBlocks.GARNET_CLUSTER,
+                oreDrops(GemstyneOreBlocks.GARNET_CLUSTER, GemstyneOreItems.GARNET));
 
 
         addDrop(GemstyneMineralBlocks.HALITE);

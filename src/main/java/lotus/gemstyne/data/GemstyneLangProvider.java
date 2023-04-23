@@ -22,6 +22,7 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.IMBUED_FEATHER, "Imbued Feather");
 
         translationBuilder.add(ModItemGroup.GEMSTYNE, "Gemstyne");
+        translationBuilder.add(ModItems.LIQUID_MORKITE_BUCKET, "Liquid Morkite Bucket");
 
         // ======
         // <===== Decorations =====>

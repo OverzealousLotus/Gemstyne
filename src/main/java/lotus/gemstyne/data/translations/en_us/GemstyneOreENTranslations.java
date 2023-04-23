@@ -21,6 +21,7 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreItems.RAW_CRIMONITE, "Raw Crimonite");
         translationBuilder.add(GemstyneOreItems.RAW_ALDUS, "Raw Aldus");
         translationBuilder.add(GemstyneOreItems.IKARITE, "Ikarite");
+        translationBuilder.add(GemstyneOreItems.GARNET, "Garnet");
         translationBuilder.add(GemstyneOreItems.MORKITE, "Morkite");
 
         // ======
@@ -71,6 +72,16 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreBlocks.IKARITE_BLOCK, "Ikarite Block");
         translationBuilder.add(GemstyneOreBlocks.BUDDING_IKARITE, "Budding Ikarite");
         translationBuilder.add(GemstyneOreBlocks.IKARITE_CLUSTER, "Ikarite Cluster");
+        translationBuilder.add(GemstyneOreBlocks.LARGE_IKARITE_BUD, "Large Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.MEDIUM_IKARITE_BUD, "Medium Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.SMALL_IKARITE_BUD, "Small Ikarite Bud");
+
+        translationBuilder.add(GemstyneOreBlocks.GARNET_BLOCK, "Garnet Block");
+        translationBuilder.add(GemstyneOreBlocks.BUDDING_GARNET, "Budding Garnet");
+        translationBuilder.add(GemstyneOreBlocks.GARNET_CLUSTER, "Garnet Cluster");
+        translationBuilder.add(GemstyneOreBlocks.LARGE_GARNET_BUD, "Large Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.MEDIUM_GARNET_BUD, "Medium Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.SMALL_GARNET_BUD, "Small Garnet Bud");
 
         // ======
         // <===== Minerals =====>

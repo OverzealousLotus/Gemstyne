@@ -1,8 +1,9 @@
 package lotus.gemstyne;
 
-import lotus.gemstyne.block.ModBlocks;
+import lotus.gemstyne.block.GemstyneBlocks;
 import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.event.UraniumBreakHandler;
+import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.ModItemGroup;
 import lotus.gemstyne.item.ModItems;
 import lotus.gemstyne.util.ModRegistries;
@@ -26,16 +27,20 @@ public class Gemstyne implements ModInitializer {
 	 * If we try to generate ore that does not exist then mod dies. */
 	@Override
 	public void onInitialize() {
+		// Step I | Dependencies
+		GemstyneFluids.register();
 		ModItemGroup.registerItemGroups();
+
+		// Step II | Essentials
 		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
+		GemstyneBlocks.registerModBlocks();
         ModRegistries.registerModStuff();
 
+		// Step III | World
 		ModWorldGeneration.generateModWorldGen();
-
-
 		GemstyneEffects.RegisterEffects();
-		// Register event handlers.
+
+		// Step IV | Event Handlers
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());
 	}
 }

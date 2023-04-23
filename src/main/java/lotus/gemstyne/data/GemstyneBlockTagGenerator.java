@@ -34,6 +34,16 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.IKARITE_CLUSTER)
                 .add(GemstyneOreBlocks.IKARITE_BLOCK)
                 .add(GemstyneOreBlocks.BUDDING_IKARITE)
+                .add(GemstyneOreBlocks.LARGE_IKARITE_BUD)
+                .add(GemstyneOreBlocks.MEDIUM_IKARITE_BUD)
+                .add(GemstyneOreBlocks.SMALL_IKARITE_BUD)
+
+                .add(GemstyneOreBlocks.GARNET_BLOCK)
+                .add(GemstyneOreBlocks.GARNET_CLUSTER)
+                .add(GemstyneOreBlocks.BUDDING_GARNET)
+                .add(GemstyneOreBlocks.LARGE_GARNET_BUD)
+                .add(GemstyneOreBlocks.MEDIUM_GARNET_BUD)
+                .add(GemstyneOreBlocks.SMALL_GARNET_BUD)
 
                 .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE)
                 .add(GemstyneOreBlocks.MORKITE_BLOCK)
@@ -85,6 +95,9 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.IKARITE_CLUSTER)
                 .add(GemstyneOreBlocks.IKARITE_BLOCK)
                 .add(GemstyneOreBlocks.BUDDING_IKARITE)
+                .add(GemstyneOreBlocks.LARGE_IKARITE_BUD)
+                .add(GemstyneOreBlocks.MEDIUM_IKARITE_BUD)
+                .add(GemstyneOreBlocks.SMALL_IKARITE_BUD)
 
                 .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE)
                 .add(GemstyneOreBlocks.MORKITE_BLOCK)
@@ -109,6 +122,19 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
         getOrCreateTagBuilder(ModBlockTags.COMPRESSED_GRANITE_ORE_REPLACEABLES)
                 .setReplace(false)
                 .add(GemstyneMineralBlocks.COMPRESSED_GRANITE);
+
+        getOrCreateTagBuilder(ModBlockTags.MOCHITE_ORE_REPLACEABLES)
+                .setReplace(false)
+                .add(GemstyneOreBlocks.MOCHITE_ORE)
+                .add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE);
+
+        getOrCreateTagBuilder(ModBlockTags.MORKITE_ORE_REPLACEABLES)
+                .setReplace(false)
+                .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
+
+        getOrCreateTagBuilder(ModBlockTags.URANIUM_ORE_REPLACEABLES)
+                .setReplace(false)
+                .add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE);
     }
 
 }

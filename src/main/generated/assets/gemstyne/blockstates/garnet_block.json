@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gemstyne:block/garnet_block"
+    }
+  }
+}
