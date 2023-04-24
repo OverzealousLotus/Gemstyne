@@ -31,6 +31,17 @@ public final class GemstyneOreBlocks {
                     UniformIntProvider.create(2, 7)),
             ModItemGroup.GEMSTYNE);
 
+    public static final Block TIN_ORE = registerBlock("tin_ore",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(3.0f, 3.0f).sounds(BlockSoundGroup.STONE),
+                    UniformIntProvider.create(2, 5)),
+            ModItemGroup.GEMSTYNE);
+    public static final Block DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore",
+            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(4.5f, 3.0f).sounds(BlockSoundGroup.DEEPSLATE),
+                    UniformIntProvider.create(2, 5)),
+            ModItemGroup.GEMSTYNE);
+
     public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
             new AfflictiveOre(FabricBlockSettings.of(Material.STONE).requiresTool()
                     .strength(6.0f, 5.0f).sounds(BlockSoundGroup.DEEPSLATE),
@@ -78,6 +89,11 @@ public final class GemstyneOreBlocks {
     public static final Block RAW_MOCHITE_BLOCK = registerBlock("raw_mochite_block",
             new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
                     .strength(4.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
+            ModItemGroup.GEMSTYNE);
+
+    public static final Block RAW_TIN_BLOCK = registerBlock("raw_tin_block",
+            new Block(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.DEEPSLATE)),
             ModItemGroup.GEMSTYNE);
 
     public static final Block RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block",

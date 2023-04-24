@@ -15,12 +15,12 @@ public enum ModToolMaterials implements ToolMaterial {
             2500,
             9.0f,
             4.5f,
-            20,()->Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL)),
+            20,()->Ingredient.ofItems(GemstyneOreItems.getFireOpal())),
     ALDUS(MiningLevels.DIAMOND,
             800,
             7.0f,
             2.0f,
-            15, () -> Ingredient.ofItems(GemstyneOreItems.ALDUS_INGOT));
+            15, () -> Ingredient.ofItems(GemstyneOreItems.getAldusIngot()));
 
 
     private final int miningLevel;

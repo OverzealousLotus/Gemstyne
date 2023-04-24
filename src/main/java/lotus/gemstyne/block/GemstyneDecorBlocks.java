@@ -17,6 +17,11 @@ public final class GemstyneDecorBlocks {
                     .strength(4.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
             ModItemGroup.GEMSTYNE);
 
+    public static final Block TIN_BLOCK = registerBlock("tin_block",
+            new Block(FabricBlockSettings.of(Material.METAL).requiresTool()
+                    .strength(4.0f, 3.0f).sounds(BlockSoundGroup.METAL)),
+            ModItemGroup.GEMSTYNE);
+
     public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
             new AfflictiveBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
                     .strength(7.0f, 6.0f).sounds(BlockSoundGroup.METAL)),

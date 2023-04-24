@@ -24,36 +24,36 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
         // <===== Rendfire Armour =====>
         // =====
         offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE_HELMET,
-                GemstyneOreItems.CRIMONITE_INGOT);
+                GemstyneOreItems.getCrimoniteIngot());
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE_CHESTPLATE)
                 .pattern("C C")
                 .pattern("CFC")
                 .pattern("CCC")
-                .input('C', GemstyneOreItems.CRIMONITE_INGOT)
-                .input('F', GemstyneOreItems.FIRE_OPAL)
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.FIRE_OPAL),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.FIRE_OPAL))
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.CRIMONITE_INGOT),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE_INGOT))
+                .input('C', GemstyneOreItems.getCrimoniteIngot())
+                .input('F', GemstyneOreItems.getFireOpal())
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.getFireOpal()),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.getFireOpal()))
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.getCrimoniteIngot()),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.getCrimoniteIngot()))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneArmorItems.RENDFIRE_CHESTPLATE)));
 
         offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE_LEGGINGS,
-                GemstyneOreItems.CRIMONITE_INGOT);
+                GemstyneOreItems.getCrimoniteIngot());
         offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE_BOOTS,
-                GemstyneOreItems.CRIMONITE_INGOT);
+                GemstyneOreItems.getCrimoniteIngot());
 
         // =====
         // <===== Aldus Armour =====>
         // =====
         offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ALDUS_HELMET,
-                GemstyneOreItems.ALDUS_INGOT);
+                GemstyneOreItems.getAldusIngot());
         offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ALDUS_CHESTPLATE,
-                GemstyneOreItems.ALDUS_INGOT);
+                GemstyneOreItems.getAldusIngot());
         offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ALDUS_LEGGINGS,
-                GemstyneOreItems.ALDUS_INGOT);
+                GemstyneOreItems.getAldusIngot());
         offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ALDUS_BOOTS,
-                GemstyneOreItems.ALDUS_INGOT);
+                GemstyneOreItems.getAldusIngot());
     }
 
 

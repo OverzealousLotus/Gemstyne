@@ -16,28 +16,31 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Raw Ores =====>
         // ======
-        translationBuilder.add(GemstyneOreItems.RAW_MOCHITE, "Raw Mochite");
-        translationBuilder.add(GemstyneOreItems.RAW_URANIUM, "Raw Uranium");
-        translationBuilder.add(GemstyneOreItems.RAW_CRIMONITE, "Raw Crimonite");
-        translationBuilder.add(GemstyneOreItems.RAW_ALDUS, "Raw Aldus");
-        translationBuilder.add(GemstyneOreItems.IKARITE, "Ikarite");
-        translationBuilder.add(GemstyneOreItems.GARNET, "Garnet");
-        translationBuilder.add(GemstyneOreItems.MORKITE, "Morkite");
+        translationBuilder.add(GemstyneOreItems.getRawMochite(), "Raw Mochite");
+        translationBuilder.add(GemstyneOreItems.getRawTin(), "Raw Tin");
+        translationBuilder.add(GemstyneOreItems.getRawUranium(), "Raw Uranium");
+        translationBuilder.add(GemstyneOreItems.getRawCrimonite(), "Raw Crimonite");
+        translationBuilder.add(GemstyneOreItems.getRawAldus(), "Raw Aldus");
+        translationBuilder.add(GemstyneOreItems.getIkarite(), "Ikarite");
+        translationBuilder.add(GemstyneOreItems.getGarnet(), "Garnet");
+        translationBuilder.add(GemstyneOreItems.getMorkite(), "Morkite");
 
         // ======
         // <===== Refined Ores =====>
         // ======
-        translationBuilder.add(GemstyneOreItems.MOCHITE, "Mochite");
+        translationBuilder.add(GemstyneOreItems.getMochite(), "Mochite");
 
-        translationBuilder.add(GemstyneOreItems.URANIUM_CHUNK, "Uranium Chunk");
-        translationBuilder.add(GemstyneOreItems.URANIUM_INGOT, "Uranium Ingot");
+        translationBuilder.add(GemstyneOreItems.getTinIngot(), "Tin Ingot");
 
-        translationBuilder.add(GemstyneOreItems.CRIMONITE_CHUNK, "Crimonite Chunk");
-        translationBuilder.add(GemstyneOreItems.CRIMONITE_INGOT, "Crimonite Ingot");
+        translationBuilder.add(GemstyneOreItems.getUraniumChunk(), "Uranium Chunk");
+        translationBuilder.add(GemstyneOreItems.getUraniumIngot(), "Uranium Ingot");
 
-        translationBuilder.add(GemstyneOreItems.ALDUS_INGOT, "Aldus Ingot");
+        translationBuilder.add(GemstyneOreItems.getCrimoniteChunk(), "Crimonite Chunk");
+        translationBuilder.add(GemstyneOreItems.getCrimoniteIngot(), "Crimonite Ingot");
 
-        translationBuilder.add(GemstyneOreItems.FIRE_OPAL, "Fire Opal");
+        translationBuilder.add(GemstyneOreItems.getAldusIngot(), "Aldus Ingot");
+
+        translationBuilder.add(GemstyneOreItems.getFireOpal(), "Fire Opal");
 
         // ======
         // <===== Ores =====>
@@ -45,6 +48,10 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreBlocks.MOCHITE_ORE, "Mochite Ore");
         translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, "Deepslate Mochite Ore");
         translationBuilder.add(GemstyneOreBlocks.RAW_MOCHITE_BLOCK, "Raw Mochite Block");
+
+        translationBuilder.add(GemstyneOreBlocks.TIN_ORE, "Tin Ore");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_TIN_ORE, "Deepslate Tin Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_TIN_BLOCK, "Raw Tin Block");
 
         translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, "Deepslate Uranium Ore");
         translationBuilder.add(GemstyneOreBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");

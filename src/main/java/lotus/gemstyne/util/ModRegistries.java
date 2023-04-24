@@ -16,7 +16,7 @@ public final class ModRegistries {
         Gemstyne.LOGGER.info("Registering fuel for... " + Gemstyne.MOD_ID);
 
         FuelRegistry registry = FuelRegistry.INSTANCE;
-        registry.add(GemstyneOreItems.MORKITE, 2000);
+        registry.add(GemstyneOreItems.getMorkite(), 2000);
         registry.add(GemstyneOreBlocks.MORKITE_BLOCK, 20000);
         registry.add(ModItems.LIQUID_MORKITE_BUCKET, 24000);
     }

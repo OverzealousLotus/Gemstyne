@@ -40,34 +40,34 @@ public class ModItems {
         // ======
         // <===== Raw Ores =====>
         // ======
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.RAW_MOCHITE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getRawMochite());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.RAW_URANIUM);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getRawUranium());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.IKARITE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getIkarite());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.GARNET);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getGarnet());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.MORKITE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getMorkite());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.RAW_CRIMONITE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getRawCrimonite());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.RAW_ALDUS);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getRawAldus());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.FIRE_OPAL);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getFireOpal());
 
         // =====
         // <===== Refined Ores =====>
         // =====
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.MOCHITE);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getMochite());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.URANIUM_CHUNK);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.URANIUM_INGOT);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getUraniumChunk());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getUraniumIngot());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.CRIMONITE_CHUNK);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.CRIMONITE_INGOT);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getCrimoniteChunk());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getCrimoniteIngot());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.ALDUS_INGOT);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneOreItems.getAldusIngot());
 
         // =====
         // <===== Armours =====>

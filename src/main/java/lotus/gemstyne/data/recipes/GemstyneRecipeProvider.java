@@ -27,59 +27,59 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         // <===== Smelting/Blasting =====>
         // =====
 
-        offerSmelting(exporter, List.of(GemstyneOreItems.RAW_MOCHITE), RecipeCategory.MISC,
-                GemstyneOreItems.MOCHITE, 0.5f, 200, "gemstyne");
-        offerBlasting(exporter, List.of(GemstyneOreItems.RAW_MOCHITE), RecipeCategory.MISC,
-                GemstyneOreItems.MOCHITE, 0.5f, 100, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneOreItems.getRawMochite()), RecipeCategory.MISC,
+                GemstyneOreItems.getMochite(), 0.5f, 200, "gemstyne");
+        offerBlasting(exporter, List.of(GemstyneOreItems.getRawMochite()), RecipeCategory.MISC,
+                GemstyneOreItems.getMochite(), 0.5f, 100, "gemstyne");
 
-        offerSmelting(exporter, List.of(GemstyneOreItems.RAW_URANIUM), RecipeCategory.MISC,
-                GemstyneOreItems.URANIUM_CHUNK, 1.0f, 300, "gemstyne");
-        offerBlasting(exporter, List.of(GemstyneOreItems.RAW_URANIUM), RecipeCategory.MISC,
-                GemstyneOreItems.URANIUM_CHUNK, 1.0f, 150, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneOreItems.getRawUranium()), RecipeCategory.MISC,
+                GemstyneOreItems.getUraniumChunk(), 1.0f, 300, "gemstyne");
+        offerBlasting(exporter, List.of(GemstyneOreItems.getRawUranium()), RecipeCategory.MISC,
+                GemstyneOreItems.getUraniumChunk(), 1.0f, 150, "gemstyne");
 
-        offerSmelting(exporter, List.of(GemstyneOreItems.RAW_CRIMONITE), RecipeCategory.MISC,
-                GemstyneOreItems.CRIMONITE_CHUNK, 1.0f, 350, "gemstyne");
-        offerBlasting(exporter, List.of(GemstyneOreItems.RAW_CRIMONITE), RecipeCategory.MISC,
-                GemstyneOreItems.CRIMONITE_CHUNK, 1.0f, 175, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneOreItems.getRawCrimonite()), RecipeCategory.MISC,
+                GemstyneOreItems.getCrimoniteChunk(), 1.0f, 350, "gemstyne");
+        offerBlasting(exporter, List.of(GemstyneOreItems.getRawCrimonite()), RecipeCategory.MISC,
+                GemstyneOreItems.getCrimoniteChunk(), 1.0f, 175, "gemstyne");
 
-        offerSmelting(exporter, List.of(GemstyneOreItems.RAW_ALDUS), RecipeCategory.MISC,
-                GemstyneOreItems.ALDUS_INGOT, 1.0f, 200, "gemstyne");
-        offerBlasting(exporter, List.of(GemstyneOreItems.RAW_ALDUS), RecipeCategory.MISC,
-                GemstyneOreItems.ALDUS_INGOT, 1.0f, 100, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneOreItems.getRawAldus()), RecipeCategory.MISC,
+                GemstyneOreItems.getAldusIngot(), 1.0f, 200, "gemstyne");
+        offerBlasting(exporter, List.of(GemstyneOreItems.getRawAldus()), RecipeCategory.MISC,
+                GemstyneOreItems.getAldusIngot(), 1.0f, 100, "gemstyne");
 
         // =====
         // <===== Reversible =====>
         // =====
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.MOCHITE, RecipeCategory.DECORATIONS, GemstyneDecorBlocks.MOCHITE_BLOCK);
+                GemstyneOreItems.getMochite(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.MOCHITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.RAW_MOCHITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
+                GemstyneOreItems.getRawMochite(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneDecorBlocks.URANIUM_BLOCK, RecipeCategory.DECORATIONS, GemstyneOreItems.URANIUM_INGOT);
+                GemstyneDecorBlocks.URANIUM_BLOCK, RecipeCategory.DECORATIONS, GemstyneOreItems.getUraniumIngot());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
-                GemstyneOreItems.RAW_URANIUM, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+                GemstyneOreItems.getRawUranium(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_URANIUM_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.FIRE_OPAL, RecipeCategory.DECORATIONS, GemstyneDecorBlocks.FIRE_OPAL_BLOCK);
+                GemstyneOreItems.getFireOpal(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.FIRE_OPAL_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.CRIMONITE_INGOT, RecipeCategory.DECORATIONS, GemstyneDecorBlocks.CRIMONITE_BLOCK);
+                GemstyneOreItems.getCrimoniteIngot(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.CRIMONITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.RAW_CRIMONITE, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
+                GemstyneOreItems.getRawCrimonite(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.ALDUS_INGOT, RecipeCategory.DECORATIONS, GemstyneDecorBlocks.ALDUS_BLOCK);
+                GemstyneOreItems.getAldusIngot(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.ALDUS_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.RAW_ALDUS, RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_ALDUS_BLOCK);
+                GemstyneOreItems.getRawAldus(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_ALDUS_BLOCK);
 
         // =====
         // <===== Ingots =====>
         // =====
         offerBasicIngotRecipe(exporter, RecipeCategory.MISC,
-                GemstyneOreItems.URANIUM_CHUNK, GemstyneOreItems.URANIUM_INGOT, GemstyneOreItems.URANIUM_CHUNK);
+                GemstyneOreItems.getUraniumChunk(), GemstyneOreItems.getUraniumIngot(), GemstyneOreItems.getUraniumChunk());
         offerBasicIngotRecipe(exporter, RecipeCategory.MISC,
-                GemstyneOreItems.CRIMONITE_CHUNK, GemstyneOreItems.CRIMONITE_INGOT, GemstyneOreItems.CRIMONITE_CHUNK);
+                GemstyneOreItems.getCrimoniteChunk(), GemstyneOreItems.getCrimoniteIngot(), GemstyneOreItems.getCrimoniteChunk());
 
         // =====
         // <===== Shapeless =====>
@@ -104,12 +104,12 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .pattern(" O ")
                 .pattern("OIO")
                 .pattern("IO ")
-                .input('O', GemstyneOreItems.IKARITE)
+                .input('O', GemstyneOreItems.getIkarite())
                 .input('I', ModItems.IMBUED_ROD)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.IMBUED_ROD),
                         FabricRecipeProvider.conditionsFromItem(ModItems.IMBUED_ROD))
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.IKARITE),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.IKARITE))
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.getIkarite()),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.getIkarite()))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.IMBUED_FEATHER)));
 
 
