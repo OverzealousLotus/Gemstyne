@@ -15,29 +15,29 @@ abstract class GemstyneEquipmentENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Armor =====>
         // ======
-        translationBuilder.add(GemstyneArmorItems.ALDUS_HELMET, "Aldus Helmet");
-        translationBuilder.add(GemstyneArmorItems.ALDUS_CHESTPLATE, "Aldus Chestplate");
-        translationBuilder.add(GemstyneArmorItems.ALDUS_LEGGINGS, "Aldus Leggings");
-        translationBuilder.add(GemstyneArmorItems.ALDUS_BOOTS, "Aldus Boots");
+        translationBuilder.add(GemstyneArmorItems.getAldusHelmet(), "Aldus Helmet");
+        translationBuilder.add(GemstyneArmorItems.getAldusChestplate(), "Aldus Chestplate");
+        translationBuilder.add(GemstyneArmorItems.getAldusLeggings(), "Aldus Leggings");
+        translationBuilder.add(GemstyneArmorItems.getAldusBoots(), "Aldus Boots");
 
-        translationBuilder.add(GemstyneArmorItems.RENDFIRE_HELMET, "Rendfire Helmet");
-        translationBuilder.add(GemstyneArmorItems.RENDFIRE_CHESTPLATE, "Rendfire Chestplate");
-        translationBuilder.add(GemstyneArmorItems.RENDFIRE_LEGGINGS, "Rendfire Leggings");
-        translationBuilder.add(GemstyneArmorItems.RENDFIRE_BOOTS, "Rendfire Boots");
+        translationBuilder.add(GemstyneArmorItems.getRendfireHelmet(), "Rendfire Helmet");
+        translationBuilder.add(GemstyneArmorItems.getRendfireChestplate(), "Rendfire Chestplate");
+        translationBuilder.add(GemstyneArmorItems.getRendfireLeggings(), "Rendfire Leggings");
+        translationBuilder.add(GemstyneArmorItems.getRendfireBoots(), "Rendfire Boots");
 
         // ======
         // <===== Tools =====>
         // ======
-        translationBuilder.add(GemstyneToolItems.ALDUS_PICKAXE, "Aldus Pickaxe");
-        translationBuilder.add(GemstyneToolItems.ALDUS_AXE, "Aldus Axe");
-        translationBuilder.add(GemstyneToolItems.ALDUS_HOE, "Aldus Hoe");
-        translationBuilder.add(GemstyneToolItems.ALDUS_SWORD, "Aldus Sword");
-        translationBuilder.add(GemstyneToolItems.ALDUS_SHOVEL, "Aldus Shovel");
+        translationBuilder.add(GemstyneToolItems.getAldusAxe(), "Aldus Axe");
+        translationBuilder.add(GemstyneToolItems.getAldusHoe(), "Aldus Hoe");
+        translationBuilder.add(GemstyneToolItems.getAldusPickaxe(), "Aldus Pickaxe");
+        translationBuilder.add(GemstyneToolItems.getAldusShovel(), "Aldus Shovel");
+        translationBuilder.add(GemstyneToolItems.getAldusSword(), "Aldus Sword");
 
-        translationBuilder.add(GemstyneToolItems.RENDFIRE_PICKAXE, "Rendfire Pickaxe");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE_AXE, "Rendfire Axe");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE_HOE, "Rendfire Hoe");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE_SWORD, "Rendfire Sword");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE_SHOVEL, "Rendfire Shovel");
+        translationBuilder.add(GemstyneToolItems.getRendfireAxe(), "Rendfire Axe");
+        translationBuilder.add(GemstyneToolItems.getRendfireHoe(), "Rendfire Hoe");
+        translationBuilder.add(GemstyneToolItems.getRendfirePickaxe(), "Rendfire Pickaxe");
+        translationBuilder.add(GemstyneToolItems.getRendfireShovel(), "Rendfire Shovel");
+        translationBuilder.add(GemstyneToolItems.getRendfireSword(), "Rendfire Sword");
     }
 }

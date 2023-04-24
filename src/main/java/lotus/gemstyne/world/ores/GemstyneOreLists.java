@@ -31,28 +31,28 @@ public class GemstyneOreLists {
     // =====
 
     protected static final ImmutableList<OreFeatureConfig.Target> overworldMochiteOres =
-            ImmutableList.of(OreFeatureConfig.createTarget(stoneReplaceables, GemstyneOreBlocks.MOCHITE_ORE.getDefaultState()),
-                    OreFeatureConfig.createTarget(deepslateReplaceables, GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(stoneReplaceables, GemstyneOreBlocks.getMochiteOre().getDefaultState()),
+                    OreFeatureConfig.createTarget(deepslateReplaceables, GemstyneOreBlocks.getDeepslateMochiteOre().getDefaultState()));
 
     protected static final ImmutableList<OreFeatureConfig.Target> overworldUraniumOres =
-            ImmutableList.of(OreFeatureConfig.createTarget(deepslateReplaceables, GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(deepslateReplaceables, GemstyneOreBlocks.getDeepslateUraniumOre().getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> overworldMorkiteOres =
-            ImmutableList.of(OreFeatureConfig.createTarget(deepslateReplaceables, GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(deepslateReplaceables, GemstyneOreBlocks.getDeepslateMorkiteOre().getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> overworldFireOpalOres =
-            ImmutableList.of(OreFeatureConfig.createTarget(compressedGraniteReplaceables, GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(compressedGraniteReplaceables, GemstyneOreBlocks.getCompressedGraniteFireOpalOre().getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> netherCrimoniteOres =
-            ImmutableList.of(OreFeatureConfig.createTarget(netherReplaceables, GemstyneOreBlocks.NETHER_CRIMONITE_ORE.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(netherReplaceables, GemstyneOreBlocks.getNetherCrimoniteOre().getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> netherAldusOres =
-            ImmutableList.of(OreFeatureConfig.createTarget(netherReplaceables, GemstyneOreBlocks.NETHER_ALDUS_ORE.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(netherReplaceables, GemstyneOreBlocks.getNetherAldusOre().getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> compressedCoalOres =
             ImmutableList.of(OreFeatureConfig.createTarget(
                     compressedGraniteReplaceables,
-                    GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE.getDefaultState()));
+                    GemstyneOreBlocks.getCompressedGraniteCoalOre().getDefaultState()));
 
     protected static final ImmutableList<OreFeatureConfig.Target> rawMochiteBlobs =
-            ImmutableList.of(OreFeatureConfig.createTarget(mochiteReplaceables, GemstyneOreBlocks.RAW_MOCHITE_BLOCK.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(mochiteReplaceables, GemstyneOreBlocks.getRawMochiteBlock().getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> rawMorkiteBlobs =
-            ImmutableList.of(OreFeatureConfig.createTarget(morkiteReplaceables, GemstyneOreBlocks.MORKITE_BLOCK.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(morkiteReplaceables, GemstyneOreBlocks.getMorkiteBlock().getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> rawUraniumBlobs =
-            ImmutableList.of(OreFeatureConfig.createTarget(uraniumReplaceables, GemstyneOreBlocks.RAW_URANIUM_BLOCK.getDefaultState()));
+            ImmutableList.of(OreFeatureConfig.createTarget(uraniumReplaceables, GemstyneOreBlocks.getRawUraniumBlock().getDefaultState()));
 }

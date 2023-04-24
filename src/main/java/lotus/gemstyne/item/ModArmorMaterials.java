@@ -23,7 +23,8 @@ public enum ModArmorMaterials implements StringIdentifiable, ArmorMaterial {
             5,
             7,
             3
-    }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> Ingredient.ofItems(GemstyneOreItems.getAldusIngot()));
+    }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> Ingredient.ofItems(GemstyneOreItems.getAldusIngot()
+    ));
 
 
 

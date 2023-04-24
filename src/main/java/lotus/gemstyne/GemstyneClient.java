@@ -12,15 +12,15 @@ import net.minecraft.util.Identifier;
 public class GemstyneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LARGE_IKARITE_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.MEDIUM_IKARITE_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.SMALL_IKARITE_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getIkariteCluster(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getLargeIkariteBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getMediumIkariteBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getSmallIkariteBud(), RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LARGE_GARNET_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.MEDIUM_GARNET_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.SMALL_GARNET_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getGarnetCluster(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getLargeGarnetBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getMediumGarnetBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getSmallGarnetBud(), RenderLayer.getCutout());
 
         FluidRenderHandlerRegistry.INSTANCE.register(GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE,
                 new SimpleFluidRenderHandler(

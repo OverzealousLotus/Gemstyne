@@ -33,70 +33,71 @@ public class GemstyneLootTableGenerator extends FabricBlockLootTableProvider {
         // ======
         // <===== Ore Drops =====>
         // ======
-        addDrop(GemstyneOreBlocks.MOCHITE_ORE, oreDrops(GemstyneOreBlocks.MOCHITE_ORE, GemstyneOreItems.getRawMochite()));
-        addDrop(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, oreDrops(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, GemstyneOreItems.getRawMochite()));
+        addDrop(GemstyneOreBlocks.getMochiteOre(), oreDrops(GemstyneOreBlocks.getMochiteOre(), GemstyneOreItems.getRawMochite()));
+        addDrop(GemstyneOreBlocks.getDeepslateMochiteOre(), oreDrops(GemstyneOreBlocks.getDeepslateMochiteOre(), GemstyneOreItems.getRawMochite()));
 
-        addDrop(GemstyneOreBlocks.TIN_ORE, oreDrops(GemstyneOreBlocks.TIN_ORE, GemstyneOreItems.getRawTin()));
-        addDrop(GemstyneOreBlocks.DEEPSLATE_TIN_ORE,
-                oreDrops(GemstyneOreBlocks.DEEPSLATE_TIN_ORE, GemstyneOreItems.getRawTin()));
+        addDrop(GemstyneOreBlocks.getTinOre(), oreDrops(GemstyneOreBlocks.getTinOre(), GemstyneOreItems.getRawTin()));
+        addDrop(GemstyneOreBlocks.getDeepslateTinOre(),
+                oreDrops(GemstyneOreBlocks.getDeepslateTinOre(), GemstyneOreItems.getRawTin()));
 
-        addDrop(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE,
-                oreDrops(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, GemstyneOreItems.getRawUranium()));
-        addDrop(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE,
-                oreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.getMorkite()));
-        addDrop(GemstyneOreBlocks.NETHER_CRIMONITE_ORE,
-                oreDrops(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, GemstyneOreItems.getRawCrimonite()));
-        addDrop(GemstyneOreBlocks.NETHER_ALDUS_ORE,
-                oreDrops(GemstyneOreBlocks.NETHER_ALDUS_ORE, GemstyneOreItems.getRawAldus()));
-        addDrop(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE,
-                oreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, GemstyneOreItems.getFireOpal()));
+        addDrop(GemstyneOreBlocks.getDeepslateUraniumOre(),
+                oreDrops(GemstyneOreBlocks.getDeepslateUraniumOre(), GemstyneOreItems.getRawUranium()));
+        addDrop(GemstyneOreBlocks.getDeepslateMorkiteOre(),
+                oreDrops(GemstyneOreBlocks.getDeepslateMorkiteOre(), GemstyneOreItems.getMorkite()));
+        addDrop(GemstyneOreBlocks.getNetherCrimoniteOre(),
+                oreDrops(GemstyneOreBlocks.getNetherCrimoniteOre(), GemstyneOreItems.getRawCrimonite()));
+        addDrop(GemstyneOreBlocks.getNetherAldusOre(),
+                oreDrops(GemstyneOreBlocks.getNetherAldusOre(), GemstyneOreItems.getRawAldus()));
+        addDrop(GemstyneOreBlocks.getCompressedGraniteFireOpalOre(),
+                oreDrops(GemstyneOreBlocks.getCompressedGraniteFireOpalOre(), GemstyneOreItems.getFireOpal()));
 
         // ======
         // <===== Ore Extension Drops =====>
         // ======
-        addDrop(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE, gemstyneRichOreDrops(
-                GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE, Items.COAL, 2.0f, 5.0f));
+        addDrop(GemstyneOreBlocks.getCompressedGraniteCoalOre(), gemstyneRichOreDrops(
+                GemstyneOreBlocks.getCompressedGraniteCoalOre(), Items.COAL, 2.0f, 5.0f));
 
         // ======
         // <===== Block Drops =====>
         // ======
-        addDrop(GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
-        addDrop(GemstyneDecorBlocks.MOCHITE_BLOCK);
+        addDrop(GemstyneOreBlocks.getRawMochiteBlock());
+        addDrop(GemstyneDecorBlocks.getMochiteBlock());
 
-        addDrop(GemstyneOreBlocks.RAW_TIN_BLOCK);
-        addDrop(GemstyneDecorBlocks.TIN_BLOCK);
+        addDrop(GemstyneOreBlocks.getRawTinBlock());
+        addDrop(GemstyneDecorBlocks.getTinBlock());
 
-        addDrop(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
-        addDrop(GemstyneDecorBlocks.URANIUM_BLOCK);
+        addDrop(GemstyneOreBlocks.getRawUraniumBlock());
+        addDrop(GemstyneDecorBlocks.getUraniumBlock());
 
-        addDrop(GemstyneOreBlocks.IKARITE_BLOCK);
-        addDrop(GemstyneOreBlocks.GARNET_BLOCK);
+        addDrop(GemstyneOreBlocks.getIkariteBlock());
+        addDrop(GemstyneOreBlocks.getGarnetBlock());
 
-        addDrop(GemstyneOreBlocks.MORKITE_BLOCK);
+        addDrop(GemstyneOreBlocks.getMorkiteBlock());
 
-        addDrop(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
-        addDrop(GemstyneDecorBlocks.CRIMONITE_BLOCK);
+        addDrop(GemstyneOreBlocks.getRawCrimoniteBlock());
+        addDrop(GemstyneDecorBlocks.getCrimoniteBlock());
 
-        addDrop(GemstyneOreBlocks.RAW_ALDUS_BLOCK);
-        addDrop(GemstyneDecorBlocks.ALDUS_BLOCK);
+        addDrop(GemstyneOreBlocks.getRawAldusBlock());
+        addDrop(GemstyneDecorBlocks.getAldusBlock());
 
-        addDrop(GemstyneMineralBlocks.COMPRESSED_GRANITE);
-        addDrop(GemstyneMineralBlocks.COMPRESSED_DIORITE);
-        addDrop(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
+        addDrop(GemstyneMineralBlocks.getCompressedGranite());
+        addDrop(GemstyneMineralBlocks.getCompressedDiorite());
+        addDrop(GemstyneMineralBlocks.getCompressedAndesite());
 
-        addDrop(GemstyneMineralBlocks.COMPACT_DIRT);
+        addDrop(GemstyneMineralBlocks.getCompactDirt());
 
         // ======
         // <===== Geode Drops =====>
         // ======
-        addDrop(GemstyneOreBlocks.IKARITE_CLUSTER,
-                oreDrops(GemstyneOreBlocks.IKARITE_CLUSTER, GemstyneOreItems.getIkarite()));
+        addDrop(GemstyneOreBlocks.getIkariteCluster(),
+                oreDrops(GemstyneOreBlocks.getIkariteCluster(), GemstyneOreItems.getIkarite()));
 
-        addDrop(GemstyneOreBlocks.GARNET_CLUSTER,
-                oreDrops(GemstyneOreBlocks.GARNET_CLUSTER, GemstyneOreItems.getGarnet()));
+        addDrop(GemstyneOreBlocks.getGarnetCluster(),
+                oreDrops(GemstyneOreBlocks.getGarnetCluster(), GemstyneOreItems.getGarnet()));
 
 
-        addDrop(GemstyneMineralBlocks.HALITE);
+        addDrop(GemstyneMineralBlocks.getHALITE());
+        addDrop(GemstyneMineralBlocks.getPUMICE());
     }
 
 

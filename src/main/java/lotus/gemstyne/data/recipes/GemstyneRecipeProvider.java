@@ -51,27 +51,27 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         // <===== Reversible =====>
         // =====
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.getMochite(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.MOCHITE_BLOCK);
+                GemstyneOreItems.getMochite(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.getMochiteBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.getRawMochite(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
+                GemstyneOreItems.getRawMochite(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.getRawMochiteBlock());
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneDecorBlocks.URANIUM_BLOCK, RecipeCategory.DECORATIONS, GemstyneOreItems.getUraniumIngot());
+                GemstyneDecorBlocks.getUraniumBlock(), RecipeCategory.DECORATIONS, GemstyneOreItems.getUraniumIngot());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
-                GemstyneOreItems.getRawUranium(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+                GemstyneOreItems.getRawUranium(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.getRawUraniumBlock());
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.getFireOpal(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.FIRE_OPAL_BLOCK);
+                GemstyneOreItems.getFireOpal(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.getFireOpalBlock());
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.getCrimoniteIngot(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.CRIMONITE_BLOCK);
+                GemstyneOreItems.getCrimoniteIngot(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.getCrimoniteBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.getRawCrimonite(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
+                GemstyneOreItems.getRawCrimonite(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.getRawCrimoniteBlock());
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.getAldusIngot(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.ALDUS_BLOCK);
+                GemstyneOreItems.getAldusIngot(), RecipeCategory.DECORATIONS, GemstyneDecorBlocks.getAldusBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.getRawAldus(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.RAW_ALDUS_BLOCK);
+                GemstyneOreItems.getRawAldus(), RecipeCategory.DECORATIONS, GemstyneOreBlocks.getRawAldusBlock());
 
         // =====
         // <===== Ingots =====>

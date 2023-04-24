@@ -17,7 +17,7 @@ public final class ModRegistries {
 
         FuelRegistry registry = FuelRegistry.INSTANCE;
         registry.add(GemstyneOreItems.getMorkite(), 2000);
-        registry.add(GemstyneOreBlocks.MORKITE_BLOCK, 20000);
+        registry.add(GemstyneOreBlocks.getMorkiteBlock(), 20000);
         registry.add(ModItems.LIQUID_MORKITE_BUCKET, 24000);
     }
 }

@@ -27,11 +27,12 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         // ======
         // <===== Decorations =====>
         // ======
-        translationBuilder.add(GemstyneDecorBlocks.URANIUM_BLOCK, "Uranium Block");
-        translationBuilder.add(GemstyneDecorBlocks.MOCHITE_BLOCK, "Mochite Block");
-        translationBuilder.add(GemstyneDecorBlocks.CRIMONITE_BLOCK, "Crimonite Block");
-        translationBuilder.add(GemstyneDecorBlocks.ALDUS_BLOCK, "Aldus Block");
-        translationBuilder.add(GemstyneDecorBlocks.FIRE_OPAL_BLOCK, "Fire Opal Block");
+        translationBuilder.add(GemstyneDecorBlocks.getUraniumBlock(), "Uranium Block");
+        translationBuilder.add(GemstyneDecorBlocks.getMochiteBlock(), "Mochite Block");
+        translationBuilder.add(GemstyneDecorBlocks.getTinBlock(), "Tin Block");
+        translationBuilder.add(GemstyneDecorBlocks.getCrimoniteBlock(), "Crimonite Block");
+        translationBuilder.add(GemstyneDecorBlocks.getAldusBlock(), "Aldus Block");
+        translationBuilder.add(GemstyneDecorBlocks.getFireOpalBlock(), "Fire Opal Block");
 
 
         translationBuilder.add(GemstyneEffects.IRRADIATE, "Irradiate");

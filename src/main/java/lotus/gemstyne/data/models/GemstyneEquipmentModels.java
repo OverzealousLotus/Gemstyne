@@ -13,29 +13,29 @@ public class GemstyneEquipmentModels {
         // ======
         // <===== Armor =====>
         // ======
-        itemModelGenerator.register(GemstyneArmorItems.RENDFIRE_HELMET, Models.GENERATED);
-        itemModelGenerator.register(GemstyneArmorItems.RENDFIRE_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(GemstyneArmorItems.RENDFIRE_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(GemstyneArmorItems.RENDFIRE_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.getRendfireHelmet(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.getRendfireChestplate(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.getRendfireLeggings(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.getRendfireBoots(), Models.GENERATED);
 
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ALDUS_HELMET);
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ALDUS_CHESTPLATE);
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ALDUS_LEGGINGS);
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ALDUS_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusHelmet());
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusChestplate());
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusLeggings());
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusBoots());
 
         // ======
         // <===== Tools =====>
         // ======
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE_AXE, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE_HOE, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getRendfireAxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getRendfireHoe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getRendfirePickaxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getRendfireShovel(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getRendfireSword(), Models.HANDHELD);
 
-        itemModelGenerator.register(GemstyneToolItems.ALDUS_AXE, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS_HOE, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getAldusAxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getAldusHoe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getAldusPickaxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getAldusShovel(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.getAldusSword(), Models.HANDHELD);
     }
 }

@@ -72,30 +72,30 @@ public class ModItems {
         // =====
         // <===== Armours =====>
         // =====
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_HELMET);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_CHESTPLATE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_LEGGINGS);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.RENDFIRE_BOOTS);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getAldusHelmet());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getAldusChestplate());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getAldusLeggings());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getAldusBoots());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_HELMET);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_CHESTPLATE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_LEGGINGS);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.ALDUS_BOOTS);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getRendfireHelmet());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getRendfireChestplate());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getRendfireLeggings());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneArmorItems.getRendfireBoots());
 
         // =====
         // <===== Tools =====>
         // =====
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_PICKAXE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_AXE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_SWORD);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_HOE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.RENDFIRE_SHOVEL);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getAldusAxe());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getAldusHoe());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getAldusPickaxe());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getAldusShovel());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getAldusSword());
 
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_PICKAXE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_AXE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_SWORD);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_HOE);
-        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.ALDUS_SHOVEL);
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getRendfireAxe());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getRendfireHoe());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getRendfirePickaxe());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getRendfireShovel());
+        addToItemGroup(ModItemGroup.GEMSTYNE, GemstyneToolItems.getRendfireSword());
 
         // =====
         // <===== Paraphernalia =====>

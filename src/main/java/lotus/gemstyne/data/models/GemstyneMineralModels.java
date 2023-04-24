@@ -10,12 +10,13 @@ public final class GemstyneMineralModels {
         // =====
         // <===== Quadrilateral Minerals =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.HALITE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getHALITE());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getPUMICE());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPACT_DIRT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompactDirt());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPRESSED_GRANITE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.COMPRESSED_DIORITE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompressedGranite());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompressedAndesite());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompressedDiorite());
     }
 }
