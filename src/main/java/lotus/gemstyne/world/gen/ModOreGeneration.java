@@ -15,40 +15,47 @@ public class ModOreGeneration {
         // <===== Ores =====>
         // =====
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.MOCHITE_ORE_UPPER_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getMochiteOreUpperPlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.MOCHITE_ORE_LOWER_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getMochiteOreLowerPlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.MOCHITE_ORE_RAW_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getMochiteOreRawPlacedKey());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.URANIUM_ORE_SMALL_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getTinOreSmallPlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.URANIUM_ORE_LARGE_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getTinOreLargePlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.URANIUM_ORE_RAW_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getTinOreRawPlacedKey());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.MORKITE_ORE_BURIED_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getUraniumOreSmallPlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.MORKITE_ORE_EXPOSED_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getUraniumOreLargePlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.MORKITE_ORE_RAW_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getUraniumOreRawPlacedKey());
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getMorkiteOreBuriedPlacedKey());
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getMorkiteOreExposedPlacedKey());
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getMorkiteOreRawPlacedKey());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.CRIMONITE_ORE_UPPER_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getCrimoniteOreUpperPlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.CRIMONITE_ORE_LOWER_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getCrimoniteOreLowerPlacedKey());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.ALDUS_ORE_UPPER_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getAldusOreUpperPlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.ALDUS_ORE_LOWER_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getAldusOreLowerPlacedKey());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.COMPRESSED_COAL_ORE_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getCompressedCoalOrePlacedKey());
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.FIRE_OPAL_ORE_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getFireOpalOrePlacedKey());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstynePlacedFeatures.LIQUID_MORKITE_PLACED_KEY);

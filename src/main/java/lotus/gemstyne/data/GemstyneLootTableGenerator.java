@@ -33,12 +33,17 @@ public class GemstyneLootTableGenerator extends FabricBlockLootTableProvider {
         // ======
         // <===== Ore Drops =====>
         // ======
-        addDrop(GemstyneOreBlocks.getMochiteOre(), oreDrops(GemstyneOreBlocks.getMochiteOre(), GemstyneOreItems.getRawMochite()));
-        addDrop(GemstyneOreBlocks.getDeepslateMochiteOre(), oreDrops(GemstyneOreBlocks.getDeepslateMochiteOre(), GemstyneOreItems.getRawMochite()));
+        addDrop(GemstyneOreBlocks.getMochiteOre(),
+                oreDrops(GemstyneOreBlocks.getMochiteOre(), GemstyneOreItems.getRawMochite()));
+        addDrop(GemstyneOreBlocks.getDeepslateMochiteOre(),
+                oreDrops(GemstyneOreBlocks.getDeepslateMochiteOre(), GemstyneOreItems.getRawMochite()));
 
-        addDrop(GemstyneOreBlocks.getTinOre(), oreDrops(GemstyneOreBlocks.getTinOre(), GemstyneOreItems.getRawTin()));
+        addDrop(GemstyneOreBlocks.getTinOre(),
+                gemstyneRichOreDrops(
+                        GemstyneOreBlocks.getTinOre(), GemstyneOreItems.getRawTin(), 1.0f, 3.0f));
         addDrop(GemstyneOreBlocks.getDeepslateTinOre(),
-                oreDrops(GemstyneOreBlocks.getDeepslateTinOre(), GemstyneOreItems.getRawTin()));
+                gemstyneRichOreDrops(
+                        GemstyneOreBlocks.getDeepslateTinOre(), GemstyneOreItems.getRawTin(), 1.0f, 3.0f));
 
         addDrop(GemstyneOreBlocks.getDeepslateUraniumOre(),
                 oreDrops(GemstyneOreBlocks.getDeepslateUraniumOre(), GemstyneOreItems.getRawUranium()));

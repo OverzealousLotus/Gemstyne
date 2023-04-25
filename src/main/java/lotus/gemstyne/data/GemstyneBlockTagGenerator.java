@@ -3,7 +3,7 @@ package lotus.gemstyne.data;
 import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
-import lotus.gemstyne.util.ModBlockTags;
+import lotus.gemstyne.util.GemstyneBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -20,7 +20,7 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
         // ======
         // <===== Tool-Type Requirements =====>
         // ======
-        getOrCreateTagBuilder(ModBlockTags.NEEDS_PICKAXE)
+        getOrCreateTagBuilder(GemstyneBlockTags.getNeedsPickaxe())
                 .setReplace(false)
                 .add(GemstyneOreBlocks.getMochiteOre())
                 .add(GemstyneOreBlocks.getDeepslateMochiteOre())
@@ -73,14 +73,14 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.getCompressedGraniteFireOpalOre())
                 .add(GemstyneDecorBlocks.getFireOpalBlock());
 
-        getOrCreateTagBuilder(ModBlockTags.NEEDS_SHOVEL)
+        getOrCreateTagBuilder(GemstyneBlockTags.getNeedsShovel())
                 .setReplace(false)
                 .add(GemstyneMineralBlocks.getCompactDirt());
 
         // ======
         // <===== Tool-Level Requirements =====>
         // ======
-        getOrCreateTagBuilder(ModBlockTags.NEEDS_STONE_TOOL)
+        getOrCreateTagBuilder(GemstyneBlockTags.getNeedsStoneTool())
                 .setReplace(false)
                 .add(GemstyneOreBlocks.getMochiteOre())
 
@@ -89,7 +89,7 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.getRawTinBlock())
                 .add(GemstyneDecorBlocks.getTinBlock());
 
-        getOrCreateTagBuilder(ModBlockTags.NEEDS_IRON_TOOL)
+        getOrCreateTagBuilder(GemstyneBlockTags.getNeedsIronTool())
                 .setReplace(false)
                 .add(GemstyneOreBlocks.getDeepslateMochiteOre())
                 .add(GemstyneOreBlocks.getRawMochiteBlock())
@@ -98,7 +98,7 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.getRawAldusBlock())
                 .add(GemstyneDecorBlocks.getAldusBlock());
 
-        getOrCreateTagBuilder(ModBlockTags.NEEDS_DIAMOND_TOOL)
+        getOrCreateTagBuilder(GemstyneBlockTags.getNeedsDiamondTool())
                 .setReplace(false)
                 .add(GemstyneDecorBlocks.getMochiteBlock())
 
@@ -122,30 +122,35 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.getCompressedGraniteFireOpalOre())
                 .add(GemstyneDecorBlocks.getFireOpalBlock());
 
-        getOrCreateTagBuilder(ModBlockTags.NEEDS_TOOL_LEVEL_4)
+        getOrCreateTagBuilder(GemstyneBlockTags.getNeedsToolLevel4())
                 .setReplace(false)
                 .add(GemstyneDecorBlocks.getUraniumBlock());
 
         // ======
         // <===== Replaceables =====>
         // ======
-        getOrCreateTagBuilder(ModBlockTags.COMPRESSED_ANDESITE_ORE_REPLACEABLES)
+        getOrCreateTagBuilder(GemstyneBlockTags.getCompressedAndesiteOreReplaceables())
                 .setReplace(false)
                 .add(GemstyneMineralBlocks.getCompressedAndesite());
-        getOrCreateTagBuilder(ModBlockTags.COMPRESSED_GRANITE_ORE_REPLACEABLES)
+        getOrCreateTagBuilder(GemstyneBlockTags.getCompressedGraniteOreReplaceables())
                 .setReplace(false)
                 .add(GemstyneMineralBlocks.getCompressedGranite());
 
-        getOrCreateTagBuilder(ModBlockTags.MOCHITE_ORE_REPLACEABLES)
+        getOrCreateTagBuilder(GemstyneBlockTags.getMochiteOreReplaceables())
                 .setReplace(false)
                 .add(GemstyneOreBlocks.getMochiteOre())
                 .add(GemstyneOreBlocks.getDeepslateMochiteOre());
 
-        getOrCreateTagBuilder(ModBlockTags.MORKITE_ORE_REPLACEABLES)
+        getOrCreateTagBuilder(GemstyneBlockTags.getTinOreReplaceables())
+                .setReplace(false)
+                .add(GemstyneOreBlocks.getTinOre())
+                .add(GemstyneOreBlocks.getDeepslateTinOre());
+
+        getOrCreateTagBuilder(GemstyneBlockTags.getMorkiteOreReplaceables())
                 .setReplace(false)
                 .add(GemstyneOreBlocks.getDeepslateMorkiteOre());
 
-        getOrCreateTagBuilder(ModBlockTags.URANIUM_ORE_REPLACEABLES)
+        getOrCreateTagBuilder(GemstyneBlockTags.getUraniumOreReplaceables())
                 .setReplace(false)
                 .add(GemstyneOreBlocks.getDeepslateUraniumOre());
     }
