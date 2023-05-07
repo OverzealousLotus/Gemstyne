@@ -2,25 +2,26 @@ package lotus.gemstyne.item;
 
 import com.google.common.base.Suppliers;
 // import net.fabricmc.yarn.constants.MiningLevels;
+import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModToolMaterials implements ToolMaterial {
+public enum GemstyneToolMaterials implements ToolMaterial {
     // When creating new tools, these values are default, but can be added to.
     // If creating a new tool, and not wanting to add more of either, put 0.
     RENDFIRE(5,
             2500,
             9.0f,
             4.5f,
-            20,()->Ingredient.ofItems(GemstyneOreItems.getFireOpal())),
+            20,()->Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.fireOpal())),
     ALDUS(MiningLevels.DIAMOND,
             800,
             7.0f,
             2.0f,
-            15, () -> Ingredient.ofItems(GemstyneOreItems.getAldusIngot()));
+            15, () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.aldusIngot()));
 
 
     private final int miningLevel;
@@ -30,7 +31,7 @@ public enum ModToolMaterials implements ToolMaterial {
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+    private GemstyneToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;

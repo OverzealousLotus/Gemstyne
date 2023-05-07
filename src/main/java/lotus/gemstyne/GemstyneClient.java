@@ -12,15 +12,15 @@ import net.minecraft.util.Identifier;
 public class GemstyneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getIkariteCluster(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getLargeIkariteBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getMediumIkariteBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getSmallIkariteBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.largeIkariteBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.mediumIkariteBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.smallIkariteBud(), RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getGarnetCluster(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getLargeGarnetBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getMediumGarnetBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.getSmallGarnetBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.largeGarnetBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.mediumGarnetBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GEODE_BLOCKS.smallGarnetBud(), RenderLayer.getCutout());
 
         FluidRenderHandlerRegistry.INSTANCE.register(GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE,
                 new SimpleFluidRenderHandler(

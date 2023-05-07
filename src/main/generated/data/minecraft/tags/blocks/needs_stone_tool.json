@@ -5,6 +5,9 @@
     "gemstyne:tin_ore",
     "gemstyne:deepslate_tin_ore",
     "gemstyne:raw_tin_block",
-    "gemstyne:tin_block"
+    "gemstyne:tin_block",
+    "gemstyne:compressed_andesite",
+    "gemstyne:compressed_granite",
+    "gemstyne:compressed_diorite"
   ]
 }

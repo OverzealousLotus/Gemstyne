@@ -18,13 +18,13 @@ public class AfflictiveBlock extends ExperienceDroppingBlock {
     }
     // <===== Used to cause damage when any player starts breaking anything Uranium related. =====>
     protected void afflictPlayer(PlayerEntity player, BlockState state) {
-        if (state.isOf(GemstyneOreBlocks.getDeepslateUraniumOre())) { // Check to see what block is broken.
+        if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre())) { // Check to see what block is broken.
             player.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 30, 1));
             // player.sendMessage(Text.literal("You have been slightly irradiated..."));
-        } else if (state.isOf(GemstyneOreBlocks.getRawUraniumBlock())) {
+        } else if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock())) {
             player.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 60, 1));
             // player.sendMessage(Text.literal("You have been moderately irradiated..."));
-        } else if (state.isOf(GemstyneDecorBlocks.getUraniumBlock())) {
+        } else if (state.isOf(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock())) {
             player.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 100, 1));
             // player.sendMessage(Text.literal("You have been heavily irradiated..."));
         }
@@ -33,11 +33,11 @@ public class AfflictiveBlock extends ExperienceDroppingBlock {
     // <===== If anything other than the player steps on a AfflictiveBlock, then same logic. =====>
     protected void afflictEntity(LivingEntity entity, BlockState state) {
 
-        if (state.isOf(GemstyneOreBlocks.getDeepslateUraniumOre())) { // Check to see what block is broken.
+        if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre())) { // Check to see what block is broken.
             entity.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 30, 1));
-        } else if (state.isOf(GemstyneOreBlocks.getRawUraniumBlock())) {
+        } else if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock())) {
             entity.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 60, 1));
-        } else if (state.isOf(GemstyneDecorBlocks.getUraniumBlock())) {
+        } else if (state.isOf(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock())) {
             entity.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 100, 1));
         }
     }

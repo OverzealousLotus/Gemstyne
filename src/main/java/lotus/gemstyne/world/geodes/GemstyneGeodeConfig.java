@@ -27,15 +27,15 @@ public final class GemstyneGeodeConfig {
         // =====
         GemstyneConfiguredFeatures.register(context, IKARITE_KEY, Feature.GEODE,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR), // Centre
-                        BlockStateProvider.of(GemstyneOreBlocks.getIkariteBlock()), // Most-Inner filling.
-                        BlockStateProvider.of(GemstyneOreBlocks.getBuddingIkarite()), // Budding Base
+                        BlockStateProvider.of(GemstyneOreBlocks.GEODE_BLOCKS.ikariteBlock()), // Most-Inner filling.
+                        BlockStateProvider.of(GemstyneOreBlocks.GEODE_BLOCKS.buddingIkarite()), // Budding Base
                         BlockStateProvider.of(Blocks.BASALT), // Inner Layer
                         BlockStateProvider.of(Blocks.OBSIDIAN), // External Layer
                         ImmutableList.of( // List of Buds
-                                GemstyneOreBlocks.getIkariteCluster().getDefaultState(),
-                                GemstyneOreBlocks.getLargeIkariteBud().getDefaultState(),
-                                GemstyneOreBlocks.getMediumIkariteBud().getDefaultState(),
-                                GemstyneOreBlocks.getSmallIkariteBud().getDefaultState()),
+                                GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster().getDefaultState(),
+                                GemstyneOreBlocks.GEODE_BLOCKS.largeIkariteBud().getDefaultState(),
+                                GemstyneOreBlocks.GEODE_BLOCKS.mediumIkariteBud().getDefaultState(),
+                                GemstyneOreBlocks.GEODE_BLOCKS.smallIkariteBud().getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.5D, 1.2D, 2.5D, 3.5D),
                         new GeodeCrackConfig(0.10D, 0.5D, 1),
@@ -47,15 +47,15 @@ public final class GemstyneGeodeConfig {
 
         GemstyneConfiguredFeatures.register(context, GARNET_KEY, Feature.GEODE,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                        BlockStateProvider.of(GemstyneOreBlocks.getGarnetBlock()),
-                        BlockStateProvider.of(GemstyneOreBlocks.getBuddingGarnet()),
+                        BlockStateProvider.of(GemstyneOreBlocks.GEODE_BLOCKS.garnetBlock()),
+                        BlockStateProvider.of(GemstyneOreBlocks.GEODE_BLOCKS.buddingGarnet()),
                         BlockStateProvider.of(Blocks.BASALT),
                         BlockStateProvider.of(Blocks.OBSIDIAN),
                         ImmutableList.of(
-                                GemstyneOreBlocks.getGarnetCluster().getDefaultState(),
-                                GemstyneOreBlocks.getLargeGarnetBud().getDefaultState(),
-                                GemstyneOreBlocks.getMediumGarnetBud().getDefaultState(),
-                                GemstyneOreBlocks.getSmallGarnetBud().getDefaultState()),
+                                GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster().getDefaultState(),
+                                GemstyneOreBlocks.GEODE_BLOCKS.largeGarnetBud().getDefaultState(),
+                                GemstyneOreBlocks.GEODE_BLOCKS.mediumGarnetBud().getDefaultState(),
+                                GemstyneOreBlocks.GEODE_BLOCKS.smallGarnetBud().getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.5D, 1.2D, 2.0D, 3.0D),
                         new GeodeCrackConfig(0.10D, 0.5D, 1),

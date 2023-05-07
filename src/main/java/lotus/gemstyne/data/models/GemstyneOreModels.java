@@ -1,7 +1,7 @@
 package lotus.gemstyne.data.models;
 
 import lotus.gemstyne.block.GemstyneOreBlocks;
-import lotus.gemstyne.item.GemstyneOreItems;
+import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
@@ -21,35 +21,51 @@ public final class GemstyneOreModels {
         // =====
         // <===== Overworld =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getCompressedGraniteFireOpalOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteFireOpalOre());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getMochiteOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getDeepslateMochiteOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getRawMochiteBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.mochiteOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.deepslateMochiteOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.rawMochiteBlock());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getTinOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getDeepslateTinOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getRawTinBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.tinOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.deepslateTinOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.rawTinBlock());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getDeepslateUraniumOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getRawUraniumBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getDeepslateMorkiteOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getMorkiteBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.deepslateMorkiteOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.morkiteBlock());
 
         // =====
         // <===== Nether =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getNetherCrimoniteOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getRawCrimoniteBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.netherCrimoniteOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.rawCrimoniteBlock());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getNetherAldusOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getRawAldusBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.netherAldusOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.rawAldusBlock());
 
         // =====
         // <===== Ore Extensions =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getCompressedGraniteCoalOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteCoalOre());
     }
 
 
@@ -57,30 +73,30 @@ public final class GemstyneOreModels {
         // =====
         // <===== Raw Ores =====>
         // =====
-        itemModelGenerator.register(GemstyneOreItems.getRawMochite(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getRawTin(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getRawUranium(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getIkarite(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getGarnet(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getRawCrimonite(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getRawAldus(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getMorkite(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.rawMochite(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.rawTin(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.rawUranium(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.ikarite(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.garnet(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.rawCrimonite(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.rawAldus(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.morkite(), Models.GENERATED);
 
         // =====
         // <===== Refined Ores =====>
         // =====
-        itemModelGenerator.register(GemstyneOreItems.getMochite(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.mochite(), Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.getTinIngot(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.tinIngot(), Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.getUraniumChunk(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getUraniumIngot(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.uraniumChunk(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.uraniumIngot(), Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.getCrimoniteChunk(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.getCrimoniteIngot(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.crimoniteChunk(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.crimoniteIngot(), Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.getAldusIngot(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.aldusIngot(), Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.getFireOpal(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.fireOpal(), Models.GENERATED);
     }
 }

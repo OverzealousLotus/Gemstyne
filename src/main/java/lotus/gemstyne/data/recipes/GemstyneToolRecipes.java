@@ -1,7 +1,7 @@
 package lotus.gemstyne.data.recipes;
 
-import lotus.gemstyne.item.GemstyneOreItems;
-import lotus.gemstyne.item.GemstyneToolItems;
+import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.item.equipment.GemstyneToolItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -22,30 +22,30 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
         // =====
         // <===== Aldus =====>
         // =====
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.getAldusAxe(),
-                GemstyneOreItems.getAldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.getAldusHoe(),
-                GemstyneOreItems.getAldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.getAldusPickaxe(),
-                GemstyneOreItems.getAldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.getAldusShovel(),
-                GemstyneOreItems.getAldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.getAldusSword(),
-                GemstyneOreItems.getAldusIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusAxe(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusHoe(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusPickaxe(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusShovel(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.TOOL_ITEMS.aldusSword(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
 
         // =====
         // <===== Rendfire =====>
         // =====
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.getCrimoniteIngot(),
-                GemstyneOreItems.getFireOpal(), GemstyneToolItems.getRendfireAxe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.getCrimoniteIngot(),
-                GemstyneOreItems.getFireOpal(), GemstyneToolItems.getRendfireHoe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.getCrimoniteIngot(),
-                GemstyneOreItems.getFireOpal(), GemstyneToolItems.getRendfirePickaxe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.getCrimoniteIngot(),
-                GemstyneOreItems.getFireOpal(), GemstyneToolItems.getRendfireShovel());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.getCrimoniteIngot(),
-                GemstyneOreItems.getFireOpal(), GemstyneToolItems.getRendfireSword());
+        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
+                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireAxe());
+        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
+                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireHoe());
+        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
+                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfirePickaxe());
+        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
+                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireShovel());
+        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
+                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireSword());
     }
 
 

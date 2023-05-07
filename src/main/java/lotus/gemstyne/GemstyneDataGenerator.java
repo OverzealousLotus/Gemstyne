@@ -16,7 +16,7 @@ public class GemstyneDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(GemstyneBlockTagGenerator::new);
-		pack.addProvider(GemstyneLootTableGenerator::new);
+		pack.addProvider(GemstyneLootProvider::new);
 		pack.addProvider(GemstyneRecipeProvider::new);
 		pack.addProvider(GemstyneModelProvider::new);
 		pack.addProvider(GemstyneWorldGenerator::new);

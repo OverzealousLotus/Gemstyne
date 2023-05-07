@@ -10,6 +10,10 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 public final class GemstyneMineralConfig {
     public static final RegistryKey<ConfiguredFeature<?, ?>> HALITE_KEY =
             GemstyneConfiguredFeatures.registerKey("halite");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PUMICE_KEY =
+            GemstyneConfiguredFeatures.registerKey("pumice");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> GABBRO_KEY =
+            GemstyneConfiguredFeatures.registerKey("gabbro");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> COMPACT_DIRT_KEY =
             GemstyneConfiguredFeatures.registerKey("compact_dirt");
@@ -27,7 +31,11 @@ public final class GemstyneMineralConfig {
         // <===== Minerals =====>
         // =====
         GemstyneConfiguredFeatures.register(context, HALITE_KEY, Feature.ORE,
-                new OreFeatureConfig(GemstyneMineralLists.haliteGeneration, 33));
+                new OreFeatureConfig(GemstyneMineralLists.haliteBlobs, 33));
+        GemstyneConfiguredFeatures.register(context, PUMICE_KEY, Feature.ORE,
+                new OreFeatureConfig(GemstyneMineralLists.pumiceBlobs, 33));
+        GemstyneConfiguredFeatures.register(context, GABBRO_KEY, Feature.ORE,
+                new OreFeatureConfig(GemstyneMineralLists.gabbroBlobs, 33));
 
         GemstyneConfiguredFeatures.register(context, COMPACT_DIRT_KEY, Feature.ORE,
                 new OreFeatureConfig(GemstyneMineralLists.compactDirt, 33));

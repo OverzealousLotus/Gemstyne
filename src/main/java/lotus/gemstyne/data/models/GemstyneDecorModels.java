@@ -7,11 +7,11 @@ public final class GemstyneDecorModels {
 
 
     public static void generateDecorBlockModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.getMochiteBlock());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.getTinBlock());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.getUraniumBlock());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.getCrimoniteBlock());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.getAldusBlock());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.getFireOpalBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.DECOR_BLOCKS.mochiteBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.DECOR_BLOCKS.tinBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.DECOR_BLOCKS.aldusBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock());
     }
 }

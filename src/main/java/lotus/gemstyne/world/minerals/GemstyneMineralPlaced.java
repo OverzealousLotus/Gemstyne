@@ -15,6 +15,16 @@ public final class GemstyneMineralPlaced {
     public static final RegistryKey<PlacedFeature> HALITE_PLACED_KEY =
             GemstynePlacedFeatures.registerKey("halite");
 
+    public static final RegistryKey<PlacedFeature> ORE_PUMICE_UPPER_PLACED_KEY =
+            GemstynePlacedFeatures.registerKey("ore_pumice_upper");
+    public static final RegistryKey<PlacedFeature> ORE_PUMICE_LOWER_PLACED_KEY =
+            GemstynePlacedFeatures.registerKey("ore_lower_upper");
+
+    public static final RegistryKey<PlacedFeature> ORE_GABBRO_UPPER_PLACED_KEY =
+            GemstynePlacedFeatures.registerKey("ore_gabbro_upper");
+    public static final RegistryKey<PlacedFeature> ORE_GABBRO_LOWER_PLACED_KEY =
+            GemstynePlacedFeatures.registerKey("ore_gabbro_lower");
+
     public static final RegistryKey<PlacedFeature> COMPACT_DIRT_PLACED_KEY =
             GemstynePlacedFeatures.registerKey("compact_dirt");
 
@@ -33,7 +43,25 @@ public final class GemstyneMineralPlaced {
         GemstynePlacedFeatures.register(context, HALITE_PLACED_KEY,
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.HALITE_KEY),
                 GemstyneOrePlacement.modifiersWithRarity(3,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(80))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(128))));
+
+        GemstynePlacedFeatures.register(context, ORE_PUMICE_UPPER_PLACED_KEY,
+                GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.PUMICE_KEY),
+                GemstyneOrePlacement.modifiersWithRarity(6,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(64), YOffset.fixed(128))));
+        GemstynePlacedFeatures.register(context, ORE_PUMICE_LOWER_PLACED_KEY,
+                GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.PUMICE_KEY),
+                GemstyneOrePlacement.modifiersWithCount(2,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(60))));
+
+        GemstynePlacedFeatures.register(context, ORE_GABBRO_UPPER_PLACED_KEY,
+                GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.GABBRO_KEY),
+                GemstyneOrePlacement.modifiersWithRarity(6,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(64), YOffset.fixed(128))));
+        GemstynePlacedFeatures.register(context, ORE_GABBRO_LOWER_PLACED_KEY,
+                GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.GABBRO_KEY),
+                GemstyneOrePlacement.modifiersWithCount(2,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(60))));
 
         GemstynePlacedFeatures.register(context, COMPACT_DIRT_PLACED_KEY,
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.COMPACT_DIRT_KEY),

@@ -4,9 +4,9 @@ import lotus.gemstyne.block.GemstyneBlocks;
 import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.event.UraniumBreakHandler;
 import lotus.gemstyne.fluid.GemstyneFluids;
-import lotus.gemstyne.item.ModItemGroup;
-import lotus.gemstyne.item.ModItems;
-import lotus.gemstyne.util.ModRegistries;
+import lotus.gemstyne.item.GemstyneItemGroup;
+import lotus.gemstyne.item.GemstyneItemHandler;
+import lotus.gemstyne.util.GemstyneRegistries;
 import lotus.gemstyne.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -29,12 +29,12 @@ public class Gemstyne implements ModInitializer {
 	public void onInitialize() {
 		// Step I | Dependencies
 		GemstyneFluids.register();
-		ModItemGroup.registerItemGroups();
+		GemstyneItemGroup.registerItemGroups();
 
 		// Step II | Essentials
-		ModItems.registerModItems();
+		GemstyneItemHandler.registerModItems();
 		GemstyneBlocks.registerModBlocks();
-        ModRegistries.registerModStuff();
+        GemstyneRegistries.registerModStuff();
 
 		// Step III | World
 		ModWorldGeneration.generateModWorldGen();

@@ -1,7 +1,7 @@
 package lotus.gemstyne.data.models;
 
-import lotus.gemstyne.item.GemstyneArmorItems;
-import lotus.gemstyne.item.GemstyneToolItems;
+import lotus.gemstyne.item.equipment.GemstyneArmorItems;
+import lotus.gemstyne.item.equipment.GemstyneToolItems;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
@@ -13,29 +13,29 @@ public class GemstyneEquipmentModels {
         // ======
         // <===== Armor =====>
         // ======
-        itemModelGenerator.register(GemstyneArmorItems.getRendfireHelmet(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneArmorItems.getRendfireChestplate(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneArmorItems.getRendfireLeggings(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneArmorItems.getRendfireBoots(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.ARMOR_ITEMS.rendfireLeggings(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneArmorItems.ARMOR_ITEMS.rendfireBoots(), Models.GENERATED);
 
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusHelmet());
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusChestplate());
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusLeggings());
-        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.getAldusBoots());
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ARMOR_ITEMS.aldusHelmet());
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ARMOR_ITEMS.aldusChestplate());
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings());
+        itemModelGenerator.registerArmor((ArmorItem) GemstyneArmorItems.ARMOR_ITEMS.aldusBoots());
 
         // ======
         // <===== Tools =====>
         // ======
-        itemModelGenerator.register(GemstyneToolItems.getRendfireAxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getRendfireHoe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getRendfirePickaxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getRendfireShovel(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getRendfireSword(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireAxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireHoe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfirePickaxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireShovel(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireSword(), Models.HANDHELD);
 
-        itemModelGenerator.register(GemstyneToolItems.getAldusAxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getAldusHoe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getAldusPickaxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getAldusShovel(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.getAldusSword(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusAxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusHoe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusPickaxe(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusShovel(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusSword(), Models.HANDHELD);
     }
 }

@@ -9,33 +9,33 @@ public final class GemstyneGeodeModels {
 
 
     public static void generateGeodeBlockModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getGarnetBlock());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getBuddingGarnet());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.GEODE_BLOCKS.garnetBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.GEODE_BLOCKS.buddingGarnet());
 
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getGarnetCluster());
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getLargeGarnetBud());
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getMediumGarnetBud());
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getSmallGarnetBud());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.largeGarnetBud());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.mediumGarnetBud());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.smallGarnetBud());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getIkariteBlock());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.getBuddingIkarite());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.GEODE_BLOCKS.ikariteBlock());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.GEODE_BLOCKS.buddingIkarite());
 
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getIkariteCluster());
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getLargeIkariteBud());
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getMediumIkariteBud());
-        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.getSmallIkariteBud());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.largeIkariteBud());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.mediumIkariteBud());
+        blockStateModelGenerator.registerAmethyst(GemstyneOreBlocks.GEODE_BLOCKS.smallIkariteBud());
     }
 
 
     public static void generateGeodeItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(GemstyneOreBlocks.getIkariteCluster().asItem(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreBlocks.getLargeIkariteBud().asItem(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreBlocks.getMediumIkariteBud().asItem(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreBlocks.getSmallIkariteBud().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.largeIkariteBud().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.mediumIkariteBud().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.smallIkariteBud().asItem(), Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreBlocks.getGarnetCluster().asItem(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreBlocks.getLargeGarnetBud().asItem(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreBlocks.getMediumGarnetBud().asItem(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreBlocks.getSmallGarnetBud().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.largeGarnetBud().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.mediumGarnetBud().asItem(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreBlocks.GEODE_BLOCKS.smallGarnetBud().asItem(), Models.GENERATED);
     }
 }

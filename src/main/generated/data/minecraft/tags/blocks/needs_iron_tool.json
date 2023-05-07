@@ -5,6 +5,7 @@
     "gemstyne:raw_mochite_block",
     "gemstyne:nether_aldus_ore",
     "gemstyne:raw_aldus_block",
-    "gemstyne:aldus_block"
+    "gemstyne:aldus_block",
+    "gemstyne:compact_dirt"
   ]
 }

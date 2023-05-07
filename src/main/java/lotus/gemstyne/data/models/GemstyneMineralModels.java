@@ -10,13 +10,21 @@ public final class GemstyneMineralModels {
         // =====
         // <===== Quadrilateral Minerals =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getHALITE());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getPUMICE());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneMineralBlocks.MINERAL_BLOCKS.halite());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneMineralBlocks.MINERAL_BLOCKS.pumice());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneMineralBlocks.MINERAL_BLOCKS.gabbro());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompactDirt());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneMineralBlocks.MINERAL_BLOCKS.compactDirt());
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompressedGranite());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompressedAndesite());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneMineralBlocks.getCompressedDiorite());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneMineralBlocks.MINERAL_BLOCKS.compressedGranite());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneMineralBlocks.MINERAL_BLOCKS.compressedAndesite());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(
+                GemstyneMineralBlocks.MINERAL_BLOCKS.compressedDiorite());
     }
 }
