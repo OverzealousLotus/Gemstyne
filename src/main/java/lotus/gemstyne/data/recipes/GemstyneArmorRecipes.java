@@ -21,6 +21,42 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
     protected static void generateArmorRecipes(Consumer<RecipeJsonProvider> exporter) {
         // =====
+        // <===== Aldus Armour =====>
+        // =====
+        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusHelmet(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusChestplate(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusBoots(),
+                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+
+        // =====
+        // <===== Bronzemail Armour =====>
+        // =====
+        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailHelmet(),
+                GemstyneOreItems.ORE_ITEMS.bronzeRing());
+        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailChestplate(),
+                GemstyneOreItems.ORE_ITEMS.bronzeRing());
+        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailLeggings(),
+                GemstyneOreItems.ORE_ITEMS.bronzeRing());
+        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailBoots(),
+                GemstyneOreItems.ORE_ITEMS.bronzeRing());
+
+        // =====
+        // <===== Bronzeplate Armour =====>
+        // =====
+        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+
+        // =====
         // <===== Rendfire Armour =====>
         // =====
         offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet(),
@@ -43,18 +79,6 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 GemstyneOreItems.ORE_ITEMS.crimoniteIngot());
         offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireBoots(),
                 GemstyneOreItems.ORE_ITEMS.crimoniteIngot());
-
-        // =====
-        // <===== Aldus Armour =====>
-        // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusHelmet(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusChestplate(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusBoots(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
     }
 
 

@@ -1,13 +1,13 @@
-// 1.19.4	2023-05-06T01:47:04.831187585	Gemstyne/Tags for minecraft:block
-1b1183e22270dba1848a4410577b5d84d0a33a9b data/minecraft/tags/blocks/tin_ore_replaceables.json
-4a751146adae00fe2a90af6eff686433543dfe00 data/minecraft/tags/blocks/needs_stone_tool.json
+// 1.20.1	2023-08-07T14:26:26.427147884	Gemstyne/Tags for minecraft:block
 6897b91683f2d0d6d02a185d6576c3b373d4a7d7 data/minecraft/tags/blocks/compressed_granite_ore_replaceables.json
-ae3136f10c38d6a741fa8e3d57d0d7b8e652a6cc data/minecraft/tags/blocks/mineable/pickaxe.json
-80e2eb8b98e15f6b3707cbea4b3229abcc4fddfa data/minecraft/tags/blocks/mochite_ore_replaceables.json
-aaca00533b24f3ddffae19d51bb71060ace596ba data/minecraft/tags/blocks/needs_iron_tool.json
-8bdfc6d4c8689d0f6db69254ccb35de9fd5364c7 data/minecraft/tags/blocks/needs_diamond_tool.json
-28de1af9d86acab170613efa7686730f080e90ad data/fabric/tags/blocks/needs_tool_level_4.json
 a3dc40ca20cdeb2c74391c44e4ec72acbe76ae09 data/minecraft/tags/blocks/mineable/shovel.json
 2be51b6565c0573894a521816a71a9780e0bd4cb data/minecraft/tags/blocks/compressed_andesite_ore_replaceables.json
-2b9ca1e37b8fb81e240640c076701f57efea4eed data/minecraft/tags/blocks/uranium_ore_replaceables.json
+28de1af9d86acab170613efa7686730f080e90ad data/fabric/tags/blocks/needs_tool_level_4.json
 e12b0b06e80a7c39fa13ec6bd7c436b38d3caced data/minecraft/tags/blocks/morkite_ore_replaceables.json
+aaca00533b24f3ddffae19d51bb71060ace596ba data/minecraft/tags/blocks/needs_iron_tool.json
+80e2eb8b98e15f6b3707cbea4b3229abcc4fddfa data/minecraft/tags/blocks/mochite_ore_replaceables.json
+4a751146adae00fe2a90af6eff686433543dfe00 data/minecraft/tags/blocks/needs_stone_tool.json
+1b1183e22270dba1848a4410577b5d84d0a33a9b data/minecraft/tags/blocks/tin_ore_replaceables.json
+2b9ca1e37b8fb81e240640c076701f57efea4eed data/minecraft/tags/blocks/uranium_ore_replaceables.json
+ae3136f10c38d6a741fa8e3d57d0d7b8e652a6cc data/minecraft/tags/blocks/mineable/pickaxe.json
+8bdfc6d4c8689d0f6db69254ccb35de9fd5364c7 data/minecraft/tags/blocks/needs_diamond_tool.json

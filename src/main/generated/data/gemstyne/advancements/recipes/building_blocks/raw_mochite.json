@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:raw_mochite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

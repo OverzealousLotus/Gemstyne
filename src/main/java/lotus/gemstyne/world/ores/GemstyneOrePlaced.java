@@ -110,11 +110,11 @@ public final class GemstyneOrePlaced {
 
         GemstynePlacedFeatures.register(context, GemstyneOrePlaced.getTinOreSmallPlacedKey(),
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneOreConfig.getOreTinSmallKey()),
-                GemstyneOrePlacement.modifiersWithCount(7,
+                GemstyneOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(112))));
         GemstynePlacedFeatures.register(context, GemstyneOrePlaced.getTinOreLargePlacedKey(),
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneOreConfig.getOreTinLargeKey()),
-                GemstyneOrePlacement.modifiersWithCount(7,
+                GemstyneOrePlacement.modifiersWithCount(3,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(112))));
         GemstynePlacedFeatures.register(context, GemstyneOrePlaced.getTinOreRawPlacedKey(),
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneOreConfig.getOreTinRawKey()),

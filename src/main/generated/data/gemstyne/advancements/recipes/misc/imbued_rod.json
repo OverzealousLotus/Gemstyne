@@ -43,5 +43,6 @@
     "recipes": [
       "minecraft:imbued_rod"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

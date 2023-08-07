@@ -13,6 +13,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public final class GemstyneItemHandler {
@@ -54,6 +55,10 @@ public final class GemstyneItemHandler {
 
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneOreItems.ORE_ITEMS.tinIngot());
 
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneOreItems.ORE_ITEMS.bronzeRing());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneOreItems.ORE_ITEMS.bronzeNugget());
+
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneOreItems.ORE_ITEMS.uraniumChunk());
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneOreItems.ORE_ITEMS.uraniumIngot());
 
@@ -76,6 +81,16 @@ public final class GemstyneItemHandler {
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings());
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.aldusBoots());
 
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailHelmet());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailChestplate());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailLeggings());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailBoots());
+
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots());
+
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet());
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate());
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneArmorItems.ARMOR_ITEMS.rendfireLeggings());
@@ -89,6 +104,12 @@ public final class GemstyneItemHandler {
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.aldusPickaxe());
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.aldusShovel());
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.aldusSword());
+
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.bronzeAxe());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.bronzeHoe());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.bronzePickaxe());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.bronzeShovel());
+        addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.bronzeSword());
 
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.rendfireAxe());
         addToItemGroup(GemstyneItemGroup.GEMSTYNE, GemstyneToolItems.TOOL_ITEMS.rendfireHoe());
@@ -109,12 +130,17 @@ public final class GemstyneItemHandler {
     // =====
     // <===== Assistive Methods =====>
     // =====
-    private static void addToItemGroup(ItemGroup group, Item item) {
+    private static void addToItemGroup(RegistryKey<ItemGroup> group, Item item) {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
     }
 
 
     public static Item registerItem(String name, Item item) {
+        return Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, name), item);
+    }
+
+
+    public static ArmorItem registerArmor(String name, ArmorItem item) {
         return Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, name), item);
     }
 

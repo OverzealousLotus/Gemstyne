@@ -9,6 +9,12 @@ public record GemstyneToolItemCarrier(
         Item aldusShovel,
         Item aldusSword,
 
+        Item bronzeAxe,
+        Item bronzeHoe,
+        Item bronzePickaxe,
+        Item bronzeShovel,
+        Item bronzeSword,
+
         Item rendfireAxe,
         Item rendfireHoe,
         Item rendfirePickaxe,

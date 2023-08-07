@@ -97,6 +97,10 @@ public final class GemstyneOreModels {
 
         itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.aldusIngot(), Models.GENERATED);
 
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.bronzeIngot(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.bronzeRing(), Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.bronzeNugget(), Models.GENERATED);
+
         itemModelGenerator.register(GemstyneOreItems.ORE_ITEMS.fireOpal(), Models.GENERATED);
     }
 }

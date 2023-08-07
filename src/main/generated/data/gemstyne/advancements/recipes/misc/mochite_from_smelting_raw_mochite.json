@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:mochite_from_smelting_raw_mochite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -34,6 +34,20 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
                 GemstyneOreItems.ORE_ITEMS.aldusIngot());
 
         // =====
+        // <===== Bronze =====>
+        // =====
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeAxe(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeHoe(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzePickaxe(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeShovel(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.TOOL_ITEMS.bronzeSword(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+
+        // =====
         // <===== Rendfire =====>
         // =====
         offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),

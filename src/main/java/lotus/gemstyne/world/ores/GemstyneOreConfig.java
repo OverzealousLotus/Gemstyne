@@ -79,9 +79,9 @@ public class GemstyneOreConfig {
                 new OreFeatureConfig(GemstyneOreLists.getRawMochiteBlobs(), 5, 0.05f));
 
         GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreTinSmallKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldTinOres(), 10, 0.0f)); // Vein size.
+                new OreFeatureConfig(GemstyneOreLists.getOverworldTinOres(), 7, 0.0f)); // Vein size.
         GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreTinLargeKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldTinOres(), 20, 0.0f));
+                new OreFeatureConfig(GemstyneOreLists.getOverworldTinOres(), 12, 0.0f));
         GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreTinRawKey(), Feature.ORE,
                 new OreFeatureConfig(GemstyneOreLists.getRawTinBlobs(), 5, 0.05f));
 

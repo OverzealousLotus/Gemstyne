@@ -9,21 +9,19 @@ import lotus.gemstyne.block.custom.CrimoniteBlock;
 import lotus.gemstyne.block.custom.CrimoniteOre;
 import lotus.gemstyne.item.GemstyneItemGroup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AmethystClusterBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static lotus.gemstyne.block.GemstyneBlocks.registerBlock;
 
 public final class GemstyneOreBlocks {
-    private static final FabricBlockSettings ikariteSettings = FabricBlockSettings.of(Material.AMETHYST)
+    private static final FabricBlockSettings ikariteSettings = FabricBlockSettings.create()
             .requiresTool().ticksRandomly().nonOpaque()
             .strength(1.5f, 1.0f).sounds(BlockSoundGroup.AMETHYST_CLUSTER)
             .luminance(state -> 5);
-    private static final FabricBlockSettings garnetSettings = FabricBlockSettings.of(Material.AMETHYST)
+    private static final FabricBlockSettings garnetSettings = FabricBlockSettings.create()
             .requiresTool().ticksRandomly().nonOpaque()
             .strength(1.5f, 1.0f).sounds(BlockSoundGroup.AMETHYST_CLUSTER)
             .luminance(state -> 5);
@@ -34,41 +32,41 @@ public final class GemstyneOreBlocks {
             // <===== Overworld Ores =====>
             // =====
             registerBlock("compressed_granite_fire_opal_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                            .strength(4.5f, 3.0f)
+                    new ExperienceDroppingBlock(FabricBlockSettings.create().mapColor(MapColor.BROWN).instrument(Instrument.BASEDRUM)
+                            .requiresTool().strength(4.5f, 3.0f)
                             .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(10, 15)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("mochite_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool()
                             .strength(3.0f, 3.0f)
                             .sounds(BlockSoundGroup.STONE), UniformIntProvider.create(2, 7)),
                     GemstyneItemGroup.GEMSTYNE),
             registerBlock("deepslate_mochite_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).requiresTool()
                             .strength(4.5f, 3.0f)
                             .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(2, 7)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("deepslate_morkite_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).requiresTool()
                             .strength(4.5f, 3.0f)
                             .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(3, 10)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("tin_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool()
                             .strength(3.0f, 3.0f)
                             .sounds(BlockSoundGroup.STONE), UniformIntProvider.create(2, 5)),
                     GemstyneItemGroup.GEMSTYNE),
             registerBlock("deepslate_tin_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).requiresTool()
                             .strength(4.5f, 3.0f)
                             .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(2, 5)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("deepslate_uranium_ore",
-                    new AfflictiveOre(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new AfflictiveOre(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).requiresTool()
                             .strength(6.0f, 5.0f)
                             .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(5, 15)),
                     GemstyneItemGroup.GEMSTYNE),
@@ -77,13 +75,13 @@ public final class GemstyneOreBlocks {
             // <===== Nether Ores =====>
             // =====
             registerBlock("nether_aldus_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool()
                             .strength(4.0f, 3.0f)
                             .sounds(BlockSoundGroup.NETHER_ORE), UniformIntProvider.create(2, 5)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("nether_crimonite_ore",
-                    new CrimoniteOre(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new CrimoniteOre(FabricBlockSettings.copyOf(Blocks.NETHERRACK).requiresTool()
                             .strength(5.0f, 3.0f)
                             .sounds(BlockSoundGroup.NETHER_ORE), UniformIntProvider.create(2, 5)),
                     GemstyneItemGroup.GEMSTYNE),
@@ -92,8 +90,8 @@ public final class GemstyneOreBlocks {
             // <===== Ore Extensions =====>
             // =====
             registerBlock("compressed_granite_coal_ore",
-                    new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
-                            .strength(4.5f, 3.0f)
+                    new ExperienceDroppingBlock(FabricBlockSettings.create().mapColor(MapColor.BROWN).instrument(Instrument.BASEDRUM)
+                            .requiresTool().strength(4.5f, 3.0f)
                             .sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(0, 2)),
                     GemstyneItemGroup.GEMSTYNE),
 
@@ -101,32 +99,32 @@ public final class GemstyneOreBlocks {
             // <===== Concentrated Ores =====>
             // =====
             registerBlock("raw_aldus_block",
-                    new Block(FabricBlockSettings.of(Material.METAL).requiresTool()
+                    new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).requiresTool()
                             .strength(6.0f, 6.0f).sounds(BlockSoundGroup.ANCIENT_DEBRIS)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("raw_crimonite_block",
-                    new CrimoniteBlock(FabricBlockSettings.of(Material.METAL).requiresTool()
+                    new CrimoniteBlock(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).requiresTool()
                             .strength(8.0f, 8.0f).sounds(BlockSoundGroup.LODESTONE)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("raw_mochite_block",
-                    new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
+                    new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).requiresTool()
                             .strength(4.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("morkite_block",
-                    new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
+                    new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).requiresTool()
                             .strength(5.0f, 3.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("raw_tin_block",
-                    new Block(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).requiresTool()
                             .strength(4.0f, 3.0f).sounds(BlockSoundGroup.DEEPSLATE)),
                     GemstyneItemGroup.GEMSTYNE),
 
             registerBlock("raw_uranium_block",
-                    new AfflictiveBlock(FabricBlockSettings.of(Material.STONE).requiresTool()
+                    new AfflictiveBlock(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).requiresTool()
                             .strength(7.0f, 6.0f).sounds(BlockSoundGroup.DEEPSLATE)),
                     GemstyneItemGroup.GEMSTYNE)
     );
@@ -137,12 +135,12 @@ public final class GemstyneOreBlocks {
             // <===== Crystalline Blocks =====>
             // =====
             registerBlock("ikarite_block",
-                    new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
+                    new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).requiresTool()
                             .strength(3.0f, 3.0f)
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)),
                     GemstyneItemGroup.GEMSTYNE),
             registerBlock("budding_ikarite",
-                    new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool().ticksRandomly()
+                    new Block(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST).requiresTool().ticksRandomly()
                             .strength(3.0f, 2.0f)
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)),
                     GemstyneItemGroup.GEMSTYNE),
@@ -165,11 +163,11 @@ public final class GemstyneOreBlocks {
 
 
             registerBlock("garnet_block",
-                    new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool()
+                    new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).requiresTool()
                             .strength(1.5f, 1.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
                     GemstyneItemGroup.GEMSTYNE),
             registerBlock("budding_garnet",
-                    new Block(FabricBlockSettings.of(Material.AMETHYST).requiresTool().ticksRandomly()
+                    new Block(FabricBlockSettings.copyOf(Blocks.BUDDING_AMETHYST).requiresTool().ticksRandomly()
                             .strength(1.5f, 1.0f).sounds(BlockSoundGroup.AMETHYST_BLOCK)),
                     GemstyneItemGroup.GEMSTYNE),
 
