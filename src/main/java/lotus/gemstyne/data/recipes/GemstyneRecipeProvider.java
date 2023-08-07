@@ -2,6 +2,7 @@ package lotus.gemstyne.data.recipes;
 
 import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.item.equipment.GemstyneArmorItems;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import lotus.gemstyne.item.equipment.GemstyneCraftingItems;
 import lotus.gemstyne.item.equipment.GemstyneGearItems;
@@ -9,6 +10,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -47,6 +49,15 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 GemstyneOreItems.ORE_ITEMS.aldusIngot(), 1.0f, 200, "gemstyne");
         offerBlasting(exporter, List.of(GemstyneOreItems.ORE_ITEMS.rawAldus()), RecipeCategory.MISC,
                 GemstyneOreItems.ORE_ITEMS.aldusIngot(), 1.0f, 100, "gemstyne");
+
+        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet()), RecipeCategory.MISC,
+                GemstyneOreItems.ORE_ITEMS.bronzeNugget(), 1.0f, 350, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate()), RecipeCategory.MISC,
+                GemstyneOreItems.ORE_ITEMS.bronzeNugget(), 1.0f, 350, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings()), RecipeCategory.MISC,
+                GemstyneOreItems.ORE_ITEMS.bronzeNugget(), 1.0f, 350, "gemstyne");
+        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots()), RecipeCategory.MISC,
+                GemstyneOreItems.ORE_ITEMS.bronzeNugget(), 1.0f, 350, "gemstyne");
 
         // =====
         // <===== Reversible =====>
@@ -90,6 +101,9 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 GemstyneOreItems.ORE_ITEMS.uraniumChunk(), GemstyneOreItems.ORE_ITEMS.uraniumIngot(), GemstyneOreItems.ORE_ITEMS.uraniumChunk());
         offerBasicIngotRecipe(exporter, RecipeCategory.MISC,
                 GemstyneOreItems.ORE_ITEMS.crimoniteChunk(), GemstyneOreItems.ORE_ITEMS.crimoniteIngot(), GemstyneOreItems.ORE_ITEMS.crimoniteChunk());
+
+        offerAlloyIngotRecipe(exporter, RecipeCategory.MISC, Items.COPPER_INGOT, GemstyneOreItems.ORE_ITEMS.tinIngot(),
+                GemstyneOreItems.ORE_ITEMS.bronzeIngot(), GemstyneOreItems.ORE_ITEMS.bronzeIngot());
 
         // =====
         // <===== Shapeless =====>
@@ -135,6 +149,19 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .input('C', input)
                 .criterion(FabricRecipeProvider.hasItem(input),
                         FabricRecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(name)));
+    }
+
+    private static void offerAlloyIngotRecipe(
+            Consumer<RecipeJsonProvider> exporter, RecipeCategory category, Item ingot_one, Item ingot_two, Item output, Item name) {
+        ShapedRecipeJsonBuilder.create(category, output)
+                .pattern("AB")
+                .input('A', ingot_one)
+                .input('B', ingot_two)
+                .criterion(FabricRecipeProvider.hasItem(ingot_one),
+                        FabricRecipeProvider.conditionsFromItem(ingot_one))
+                .criterion(FabricRecipeProvider.hasItem(ingot_two),
+                        FabricRecipeProvider.conditionsFromItem(ingot_two))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(name)));
     }
 }

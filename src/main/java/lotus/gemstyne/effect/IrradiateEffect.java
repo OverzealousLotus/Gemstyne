@@ -12,7 +12,7 @@ public class IrradiateEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if (!entity.world.isClient()) {
+        if (!entity.getWorld().isClient()) {
             if (entity instanceof PlayerEntity player) {
                 player.damage(entity.getDamageSources().magic(), 1.0f);
                 player.addExhaustion(0.005f * (float) (amplifier + 1));

@@ -16,6 +16,9 @@ public record GemstyneOreItemCarrier(
         // <===== Refined Ores =====>
         // ======
         Item aldusIngot,
+        Item bronzeIngot,
+        Item bronzeRing,
+        Item bronzeNugget,
         Item crimoniteChunk,
         Item crimoniteIngot,
         Item mochite,

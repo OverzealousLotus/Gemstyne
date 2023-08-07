@@ -20,6 +20,16 @@ abstract class GemstyneEquipmentENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings(), "Aldus Leggings");
         translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.aldusBoots(), "Aldus Boots");
 
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailHelmet(), "Bronzemail Helmet");
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailChestplate(), "Bronzemail Chestplate");
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailLeggings(), "Bronzemail Leggings");
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailBoots(), "Bronzemail Boots");
+
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet(), "Bronzeplate Helmet");
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate(), "Bronzeplate Chestplate");
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings(), "Bronzeplate Leggings");
+        translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots(), "Bronzeplate Boots");
+
         translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet(), "Rendfire Helmet");
         translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate(), "Rendfire Chestplate");
         translationBuilder.add(GemstyneArmorItems.ARMOR_ITEMS.rendfireLeggings(), "Rendfire Leggings");
@@ -33,6 +43,12 @@ abstract class GemstyneEquipmentENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.aldusPickaxe(), "Aldus Pickaxe");
         translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.aldusShovel(), "Aldus Shovel");
         translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.aldusSword(), "Aldus Sword");
+
+        translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.bronzeAxe(), "Bronze Axe");
+        translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.bronzeHoe(), "Bronze Hoe");
+        translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.bronzePickaxe(), "Bronze Pickaxe");
+        translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.bronzeShovel(), "Bronze Shovel");
+        translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.bronzeSword(), "Bronze Sword");
 
         translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.rendfireAxe(), "Rendfire Axe");
         translationBuilder.add(GemstyneToolItems.TOOL_ITEMS.rendfireHoe(), "Rendfire Hoe");

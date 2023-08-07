@@ -43,5 +43,6 @@
     "recipes": [
       "minecraft:aldus_hoe"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

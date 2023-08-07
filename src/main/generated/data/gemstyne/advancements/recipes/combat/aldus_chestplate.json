@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:aldus_chestplate"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

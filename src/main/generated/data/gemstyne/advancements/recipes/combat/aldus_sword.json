@@ -43,5 +43,6 @@
     "recipes": [
       "minecraft:aldus_sword"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

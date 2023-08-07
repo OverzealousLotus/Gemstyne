@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:crimonite_chunk"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

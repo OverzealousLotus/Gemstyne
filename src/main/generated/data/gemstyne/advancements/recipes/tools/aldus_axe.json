@@ -43,5 +43,6 @@
     "recipes": [
       "minecraft:aldus_axe"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

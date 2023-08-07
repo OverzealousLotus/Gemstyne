@@ -13,21 +13,34 @@ import net.minecraft.util.StringIdentifiable;
 import java.util.function.Supplier;
 
 public enum GemstyneArmorMaterials implements StringIdentifiable, ArmorMaterial {
-    RENDFIRE("rendfire", 30, new int[]{
-            4, // Boots
-            6, // Leggings
-            10, // Chestplate
-            4 // Helmet
-    }, 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.fireOpal())),
     ALDUS("aldus", 25, new int[]{
-            3,
+            3, // Boots
+            5, // Leggings
+            7, // Chestplate
+            3 // Helmet
+    }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f,
+            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.aldusIngot())),
+    RENDFIRE("rendfire", 30, new int[]{
+            4,
+            6,
+            10,
+            4
+    }, 1, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f,
+            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.fireOpal())),
+    BRONZEMAIL("bronzemail", 12, new int[] {
+            2,
+            4,
+            6,
+            2
+    }, 6, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0f, 0.0f,
+            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.bronzeRing())),
+    BRONZEPLATE("bronzeplate", 20, new int[]{
+            2,
             5,
             7,
             3
-    }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.aldusIngot()
-    ));
+    }, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f,
+            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.bronzeIngot()));
 
 
 

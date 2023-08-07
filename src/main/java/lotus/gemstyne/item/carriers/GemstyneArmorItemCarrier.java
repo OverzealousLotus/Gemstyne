@@ -1,16 +1,26 @@
 package lotus.gemstyne.item.carriers;
 
-import net.minecraft.item.Item;
+import net.minecraft.item.ArmorItem;
 
 public record GemstyneArmorItemCarrier(
-        Item aldusHelmet,
-        Item aldusChestplate,
-        Item aldusLeggings,
-        Item aldusBoots,
+        ArmorItem aldusHelmet,
+        ArmorItem aldusChestplate,
+        ArmorItem aldusLeggings,
+        ArmorItem aldusBoots,
 
-        Item rendfireHelmet,
-        Item rendfireChestplate,
-        Item rendfireLeggings,
-        Item rendfireBoots
+        ArmorItem bronzeMailHelmet,
+        ArmorItem bronzeMailChestplate,
+        ArmorItem bronzeMailLeggings,
+        ArmorItem bronzeMailBoots,
+
+        ArmorItem bronzePlateHelmet,
+        ArmorItem bronzePlateChestplate,
+        ArmorItem bronzePlateLeggings,
+        ArmorItem bronzePlateBoots,
+
+        ArmorItem rendfireHelmet,
+        ArmorItem rendfireChestplate,
+        ArmorItem rendfireLeggings,
+        ArmorItem rendfireBoots
 ) {
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:aldus_ingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

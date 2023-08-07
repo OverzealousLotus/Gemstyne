@@ -33,6 +33,9 @@ public final class GemstyneOreItems {
             // <===== Refined Ores =====>
             // ======
             GemstyneItemHandler.registerItem("aldus_ingot", new Item(new FabricItemSettings())),
+            GemstyneItemHandler.registerItem("bronze_ingot", new Item(new FabricItemSettings())),
+            GemstyneItemHandler.registerItem("bronze_ring", new Item(new FabricItemSettings())),
+            GemstyneItemHandler.registerItem("bronze_nugget", new Item(new FabricItemSettings())),
             GemstyneItemHandler.registerItem("crimonite_chunk", new Item(new FabricItemSettings())),
             GemstyneItemHandler.registerItem("crimonite_ingot", new Item(new FabricItemSettings())),
             GemstyneItemHandler.registerItem("mochite",

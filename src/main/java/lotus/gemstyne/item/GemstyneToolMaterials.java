@@ -3,6 +3,7 @@ package lotus.gemstyne.item;
 import com.google.common.base.Suppliers;
 // import net.fabricmc.yarn.constants.MiningLevels;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.util.GemstyneMiningLevels;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -12,16 +13,21 @@ import java.util.function.Supplier;
 public enum GemstyneToolMaterials implements ToolMaterial {
     // When creating new tools, these values are default, but can be added to.
     // If creating a new tool, and not wanting to add more of either, put 0.
-    RENDFIRE(5,
-            2500,
-            9.0f,
-            4.5f,
-            20,()->Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.fireOpal())),
     ALDUS(MiningLevels.DIAMOND,
             800,
             7.0f,
             2.0f,
-            15, () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.aldusIngot()));
+            15, () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.aldusIngot())),
+    BRONZE(MiningLevels.IRON,
+            400,
+            6.5f,
+            2.0f,
+            10, () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.bronzeIngot())),
+    RENDFIRE(GemstyneMiningLevels.RENDFIRE,
+                     2500,
+                     9.0f,
+                     4.5f,
+                     20,()->Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.fireOpal()));
 
 
     private final int miningLevel;
