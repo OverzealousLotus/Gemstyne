@@ -1,6 +1,6 @@
 package lotus.gemstyne.fluid;
 
-import lotus.gemstyne.item.GemstyneItemHandler;
+import lotus.gemstyne.item.equipment.GemstyneGearItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -85,7 +85,7 @@ public abstract class LiquidMorkite extends FlowableFluid {
 
     @Override
     public Item getBucketItem() {
-        return GemstyneItemHandler.LIQUID_MORKITE_BUCKET;
+        return GemstyneGearItems.getLiquidMorkiteBucket();
     }
 
 

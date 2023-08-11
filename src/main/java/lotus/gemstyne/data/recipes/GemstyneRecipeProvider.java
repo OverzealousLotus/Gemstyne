@@ -10,7 +10,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -124,7 +123,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.BLAZE_ROD))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneCraftingItems.getImbuedRod())));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GemstyneGearItems.IMBUED_FEATHER)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GemstyneGearItems.getImbuedFeather())
                 .pattern(" O ")
                 .pattern("OIO")
                 .pattern("IO ")
@@ -134,7 +133,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(GemstyneCraftingItems.getImbuedRod()))
                 .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.ORE_ITEMS.ikarite()),
                         FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.ORE_ITEMS.ikarite()))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneGearItems.IMBUED_FEATHER)));
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneGearItems.getImbuedFeather())));
 
 
         GemstyneArmorRecipes.generateArmorRecipes(exporter);

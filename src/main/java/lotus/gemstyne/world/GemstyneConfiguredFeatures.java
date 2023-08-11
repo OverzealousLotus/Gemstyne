@@ -43,13 +43,9 @@ public final class GemstyneConfiguredFeatures {
         // <========== Configuration Lists ==========>
         // ==========
         // =====
-
-
-
         ImmutableList<OreFeatureConfig.Target> liquidMorkiteReservoirs =
                 ImmutableList.of(OreFeatureConfig.createTarget(
                         deepslateReplaceables, GemstyneFluids.STILL_LIQUID_MORKITE.getDefaultState().getBlockState()));
-
 
 
         // =====

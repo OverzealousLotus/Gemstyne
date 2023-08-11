@@ -21,10 +21,10 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         // <===== Items =====>
         // ======
         translationBuilder.add(GemstyneCraftingItems.getImbuedRod(), "Imbued Rod");
-        translationBuilder.add(GemstyneGearItems.IMBUED_FEATHER, "Imbued Feather");
+        translationBuilder.add(GemstyneGearItems.getImbuedFeather(), "Imbued Feather");
 
-        translationBuilder.add(GemstyneItemGroup.GEMSTYNE, "Gemstyne");
-        translationBuilder.add(GemstyneItemHandler.LIQUID_MORKITE_BUCKET, "Liquid Morkite Bucket");
+        translationBuilder.add(GemstyneItemGroup.GEMSTYNE.toString(), "Gemstyne");
+        translationBuilder.add(GemstyneGearItems.getLiquidMorkiteBucket(), "Liquid Morkite Bucket");
 
         // ======
         // <===== Decorations =====>
