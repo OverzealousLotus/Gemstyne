@@ -33,72 +33,56 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Overworld Ore Loot =====>
         // ======
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteFireOpalOre(),
-                oreDrops(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteFireOpalOre(),
-                        GemstyneOreItems.ORE_ITEMS.fireOpal()));
+        gemstyneOreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, GemstyneOreItems.FIRE_OPAL);
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.mochiteOre(),
-                oreDrops(GemstyneOreBlocks.ORE_BLOCKS.mochiteOre(),
-                        GemstyneOreItems.ORE_ITEMS.rawMochite()));
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.deepslateMochiteOre(),
-                oreDrops(GemstyneOreBlocks.ORE_BLOCKS.deepslateMochiteOre(),
-                        GemstyneOreItems.ORE_ITEMS.rawMochite()));
+        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE_ORE, GemstyneOreItems.RAW_MOCHITE);
+        gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, GemstyneOreItems.RAW_MOCHITE);
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.deepslateMorkiteOre(),
-                oreDrops(GemstyneOreBlocks.ORE_BLOCKS.deepslateMorkiteOre(),
-                        GemstyneOreItems.ORE_ITEMS.morkite()));
+        gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.MORKITE);
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.tinOre(),
-                gemstyneRichOreDrops(GemstyneOreBlocks.ORE_BLOCKS.tinOre(),
-                        GemstyneOreItems.ORE_ITEMS.rawTin(), 1.0f, 3.0f));
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.deepslateTinOre(),
-                gemstyneRichOreDrops(GemstyneOreBlocks.ORE_BLOCKS.deepslateTinOre(),
-                        GemstyneOreItems.ORE_ITEMS.rawTin(), 1.0f, 3.0f));
+        gemstyneRichOreDrops(GemstyneOreBlocks.TIN_ORE,
+                GemstyneOreItems.RAW_TIN, 1.0f, 3.0f);
+        gemstyneRichOreDrops(GemstyneOreBlocks.DEEPSLATE_TIN_ORE,
+                GemstyneOreItems.RAW_TIN, 1.0f, 3.0f);
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre(),
-                oreDrops(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre(),
-                        GemstyneOreItems.ORE_ITEMS.rawUranium()));
+        gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, GemstyneOreItems.RAW_URANIUM);
         // ======
         // <===== Nether Ore Loot =====>
         // ======
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.netherAldusOre(),
-                oreDrops(GemstyneOreBlocks.ORE_BLOCKS.netherAldusOre(),
-                        GemstyneOreItems.ORE_ITEMS.rawAldus()));
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.netherCrimoniteOre(),
-                oreDrops(GemstyneOreBlocks.ORE_BLOCKS.netherCrimoniteOre(),
-                        GemstyneOreItems.ORE_ITEMS.rawCrimonite()));
+        gemstyneOreDrops(GemstyneOreBlocks.NETHER_ALDUS_ORE, GemstyneOreItems.RAW_ALDUS);
+
+        gemstyneOreDrops(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, GemstyneOreItems.RAW_CRIMONITE);
         // ======
         // <===== Ore Extension Loot =====>
         // ======
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteCoalOre(),
-                gemstyneRichOreDrops(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteCoalOre(),
-                        Items.COAL, 2.0f, 5.0f));
+        gemstyneRichOreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE,
+                Items.COAL, 2.0f, 5.0f);
 
         // ======
         // <===== Compact Ore Loot =====>
         // ======
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.rawAldusBlock());
+        addDrop(GemstyneOreBlocks.RAW_ALDUS_BLOCK);
         addDrop(GemstyneDecorBlocks.DECOR_BLOCKS.aldusBlock());
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.rawCrimoniteBlock());
+        addDrop(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
         addDrop(GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock());
 
         addDrop(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock());
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.rawMochiteBlock());
+        addDrop(GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
         addDrop(GemstyneDecorBlocks.DECOR_BLOCKS.mochiteBlock());
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.morkiteBlock());
+        addDrop(GemstyneOreBlocks.MORKITE_BLOCK);
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.rawTinBlock());
+        addDrop(GemstyneOreBlocks.RAW_TIN_BLOCK);
         addDrop(GemstyneDecorBlocks.DECOR_BLOCKS.tinBlock());
 
-        addDrop(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock());
+        addDrop(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
         addDrop(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock());
 
-        addDrop(GemstyneOreBlocks.GEODE_BLOCKS.ikariteBlock());
-        addDrop(GemstyneOreBlocks.GEODE_BLOCKS.garnetBlock());
+        addDrop(GemstyneOreBlocks.IKARITE_BLOCK);
+        addDrop(GemstyneOreBlocks.GARNET_BLOCK);
 
         // ======
         // <===== Mineral Loot =====>
@@ -116,24 +100,25 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Geode Drops =====>
         // ======
-        addDrop(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster(),
-                oreDrops(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster(),
-                        GemstyneOreItems.ORE_ITEMS.ikarite()));
-
-        addDrop(GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster(),
-                oreDrops(GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster(),
-                        GemstyneOreItems.ORE_ITEMS.garnet()));
+        gemstyneOreDrops(GemstyneOreBlocks.IKARITE_CLUSTER, GemstyneOreItems.IKARITE);
+        gemstyneOreDrops(GemstyneOreBlocks.GARNET_CLUSTER, GemstyneOreItems.GARNET);
     }
 
 
     // ======
     // <===== Assistive Methods =====>
     // ======
-    public LootTable.Builder gemstyneRichOreDrops(Block block, Item drop, float min, float max) {
-        return BlockLootTableGenerator.dropsWithSilkTouch(block,
-                this.applyExplosionDecay(block, ((LeafEntry.Builder<?>) ItemEntry.builder(drop).apply(
+    public void gemstyneRichOreDrops(Block ore, Item drop, float min, float max) {
+        LootTable.Builder table = BlockLootTableGenerator.dropsWithSilkTouch(ore,
+                this.applyExplosionDecay(ore, ((LeafEntry.Builder<?>) ItemEntry.builder(drop).apply(
                         SetCountLootFunction
                                 .builder(UniformLootNumberProvider.create(min, max))))
                         .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))));
+
+        addDrop(ore, table);
+    }
+
+    private void gemstyneOreDrops(Block ore, Item drop) {
+        addDrop(ore, oreDrops(ore, drop));
     }
 }

@@ -17,17 +17,17 @@ public enum GemstyneToolMaterials implements ToolMaterial {
             800,
             7.0f,
             2.0f,
-            15, () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.aldusIngot())),
+            15, () -> Ingredient.ofItems(GemstyneOreItems.ALDUS_INGOT)),
     BRONZE(MiningLevels.IRON,
             400,
             6.5f,
             2.0f,
-            10, () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.bronzeIngot())),
+            10, () -> Ingredient.ofItems(GemstyneOreItems.BRONZE_INGOT)),
     RENDFIRE(GemstyneMiningLevels.RENDFIRE,
                      2500,
                      9.0f,
                      4.5f,
-                     20,()->Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.fireOpal()));
+                     20,()->Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL));
 
 
     private final int miningLevel;

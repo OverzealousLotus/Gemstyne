@@ -3,6 +3,7 @@ package lotus.gemstyne.data;
 import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.data.translations.en_us.GemstyneEnglishLangProvider;
 import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.*;
 import lotus.gemstyne.item.equipment.GemstyneCraftingItems;
 import lotus.gemstyne.item.equipment.GemstyneGearItems;
@@ -24,7 +25,7 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneGearItems.getImbuedFeather(), "Imbued Feather");
 
         translationBuilder.add(GemstyneItemGroup.GEMSTYNE.toString(), "Gemstyne");
-        translationBuilder.add(GemstyneGearItems.getLiquidMorkiteBucket(), "Liquid Morkite Bucket");
+        translationBuilder.add(GemstyneFluids.LIQUID_MORKITE_BUCKET, "Liquid Morkite Bucket");
 
         // ======
         // <===== Decorations =====>

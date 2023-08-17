@@ -28,7 +28,7 @@ public class Gemstyne implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// Step I | Dependencies
-		GemstyneFluids.register();
+		GemstyneFluids.registerFluids();
 		GemstyneItemGroup.registerItemGroups();
 
 		// Step II | Essentials

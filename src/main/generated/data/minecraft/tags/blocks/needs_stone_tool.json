@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "gemstyne:mochite_ore",
+    "gemstyne:deepslate_mochite_ore",
+    "gemstyne:raw_mochite_block",
     "gemstyne:tin_ore",
     "gemstyne:deepslate_tin_ore",
     "gemstyne:raw_tin_block",

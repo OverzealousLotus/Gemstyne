@@ -22,43 +22,43 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
         // ======
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsPickaxe())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ORE_BLOCKS.mochiteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMochiteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawMochiteBlock())
+                .add(GemstyneOreBlocks.MOCHITE_ORE)
+                .add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE)
+                .add(GemstyneOreBlocks.RAW_MOCHITE_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.mochiteBlock())
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.tinOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateTinOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawTinBlock())
+                .add(GemstyneOreBlocks.TIN_ORE)
+                .add(GemstyneOreBlocks.DEEPSLATE_TIN_ORE)
+                .add(GemstyneOreBlocks.RAW_TIN_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.tinBlock())
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock())
+                .add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE)
+                .add(GemstyneOreBlocks.RAW_URANIUM_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock())
 
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.ikariteBlock())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.buddingIkarite())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.largeIkariteBud())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.mediumIkariteBud())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.smallIkariteBud())
+                .add(GemstyneOreBlocks.IKARITE_CLUSTER)
+                .add(GemstyneOreBlocks.LARGE_IKARITE_BUD)
+                .add(GemstyneOreBlocks.MEDIUM_IKARITE_BUD)
+                .add(GemstyneOreBlocks.SMALL_IKARITE_BUD)
+                .add(GemstyneOreBlocks.BUDDING_IKARITE)
+                .add(GemstyneOreBlocks.IKARITE_BLOCK)
 
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.garnetBlock())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.buddingGarnet())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.largeGarnetBud())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.mediumGarnetBud())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.smallGarnetBud())
+                .add(GemstyneOreBlocks.GARNET_CLUSTER)
+                .add(GemstyneOreBlocks.LARGE_GARNET_BUD)
+                .add(GemstyneOreBlocks.MEDIUM_GARNET_BUD)
+                .add(GemstyneOreBlocks.SMALL_GARNET_BUD)
+                .add(GemstyneOreBlocks.BUDDING_GARNET)
+                .add(GemstyneOreBlocks.GARNET_BLOCK)
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMorkiteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.morkiteBlock())
+                .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE)
+                .add(GemstyneOreBlocks.MORKITE_BLOCK)
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.netherCrimoniteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawCrimoniteBlock())
+                .add(GemstyneOreBlocks.NETHER_CRIMONITE_ORE)
+                .add(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock())
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.netherAldusOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawAldusBlock())
+                .add(GemstyneOreBlocks.NETHER_ALDUS_ORE)
+                .add(GemstyneOreBlocks.RAW_ALDUS_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.aldusBlock())
 
                 .add(GemstyneMineralBlocks.MINERAL_BLOCKS.halite())
@@ -69,9 +69,9 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneMineralBlocks.MINERAL_BLOCKS.compressedDiorite())
                 .add(GemstyneMineralBlocks.MINERAL_BLOCKS.compressedGranite())
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteCoalOre())
+                .add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE)
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteFireOpalOre())
+                .add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock());
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsShovel())
@@ -83,11 +83,13 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
         // ======
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsStoneTool())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ORE_BLOCKS.mochiteOre())
+                .add(GemstyneOreBlocks.MOCHITE_ORE)
+                .add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE)
+                .add(GemstyneOreBlocks.RAW_MOCHITE_BLOCK)
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.tinOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateTinOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawTinBlock())
+                .add(GemstyneOreBlocks.TIN_ORE)
+                .add(GemstyneOreBlocks.DEEPSLATE_TIN_ORE)
+                .add(GemstyneOreBlocks.RAW_TIN_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.tinBlock())
 
                 .add(GemstyneMineralBlocks.MINERAL_BLOCKS.compressedAndesite())
@@ -96,11 +98,8 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsIronTool())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMochiteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawMochiteBlock())
-
-                .add(GemstyneOreBlocks.ORE_BLOCKS.netherAldusOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawAldusBlock())
+                .add(GemstyneOreBlocks.NETHER_ALDUS_ORE)
+                .add(GemstyneOreBlocks.RAW_ALDUS_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.aldusBlock())
 
                 .add(GemstyneMineralBlocks.MINERAL_BLOCKS.compactDirt());
@@ -109,24 +108,24 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .setReplace(false)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.mochiteBlock())
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock())
+                .add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE)
+                .add(GemstyneOreBlocks.RAW_URANIUM_BLOCK)
 
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.ikariteBlock())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.buddingIkarite())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.largeIkariteBud())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.mediumIkariteBud())
-                .add(GemstyneOreBlocks.GEODE_BLOCKS.smallIkariteBud())
+                .add(GemstyneOreBlocks.IKARITE_CLUSTER)
+                .add(GemstyneOreBlocks.LARGE_IKARITE_BUD)
+                .add(GemstyneOreBlocks.MEDIUM_IKARITE_BUD)
+                .add(GemstyneOreBlocks.SMALL_IKARITE_BUD)
+                .add(GemstyneOreBlocks.BUDDING_IKARITE)
+                .add(GemstyneOreBlocks.IKARITE_BLOCK)
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMorkiteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.morkiteBlock())
+                .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE)
+                .add(GemstyneOreBlocks.MORKITE_BLOCK)
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.netherCrimoniteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.rawCrimoniteBlock())
+                .add(GemstyneOreBlocks.NETHER_CRIMONITE_ORE)
+                .add(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock())
 
-                .add(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteFireOpalOre())
+                .add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock());
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsToolLevel4())
@@ -145,21 +144,21 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
 
         getOrCreateTagBuilder(GemstyneBlockTags.getMochiteOreReplaceables())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ORE_BLOCKS.mochiteOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMochiteOre());
+                .add(GemstyneOreBlocks.MOCHITE_ORE)
+                .add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getTinOreReplaceables())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ORE_BLOCKS.tinOre())
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateTinOre());
+                .add(GemstyneOreBlocks.TIN_ORE)
+                .add(GemstyneOreBlocks.DEEPSLATE_TIN_ORE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getMorkiteOreReplaceables())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMorkiteOre());
+                .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getUraniumOreReplaceables())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre());
+                .add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE);
     }
 
 }

@@ -6,11 +6,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 
 public final class GemstyneMineralItems {
-    private static final Item SALT = GemstyneItemHandler.registerItem("salt",
+    public static final Item SALT = GemstyneItemHandler.registerItem("salt",
             new Item(new FabricItemSettings()));
-
-
-    public static Item getSalt() { return SALT; }
 
 
     public static void registerMineralItems() {

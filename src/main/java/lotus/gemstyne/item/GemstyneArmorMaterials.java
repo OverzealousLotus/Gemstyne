@@ -19,28 +19,28 @@ public enum GemstyneArmorMaterials implements StringIdentifiable, ArmorMaterial 
             7, // Chestplate
             3 // Helmet
     }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.aldusIngot())),
+            () -> Ingredient.ofItems(GemstyneOreItems.ALDUS_INGOT)),
     RENDFIRE("rendfire", 30, new int[]{
             4,
             6,
             10,
             4
     }, 1, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.fireOpal())),
+            () -> Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL)),
     BRONZEMAIL("bronzemail", 12, new int[] {
             2,
             4,
             6,
             2
     }, 6, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.bronzeRing())),
+            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE_RING)),
     BRONZEPLATE("bronzeplate", 20, new int[]{
             2,
             5,
             7,
             3
     }, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ORE_ITEMS.bronzeIngot()));
+            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE_INGOT));
 
 
 

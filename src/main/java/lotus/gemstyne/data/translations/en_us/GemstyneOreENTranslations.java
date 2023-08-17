@@ -16,85 +16,85 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Raw Ores =====>
         // ======
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.rawMochite(), "Raw Mochite");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.rawTin(), "Raw Tin");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.rawUranium(), "Raw Uranium");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.rawCrimonite(), "Raw Crimonite");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.rawAldus(), "Raw Aldus");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.ikarite(), "Ikarite");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.garnet(), "Garnet");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.morkite(), "Morkite");
+        translationBuilder.add(GemstyneOreItems.RAW_MOCHITE, "Raw Mochite");
+        translationBuilder.add(GemstyneOreItems.RAW_TIN, "Raw Tin");
+        translationBuilder.add(GemstyneOreItems.RAW_URANIUM, "Raw Uranium");
+        translationBuilder.add(GemstyneOreItems.RAW_CRIMONITE, "Raw Crimonite");
+        translationBuilder.add(GemstyneOreItems.RAW_ALDUS, "Raw Aldus");
+        translationBuilder.add(GemstyneOreItems.IKARITE, "Ikarite");
+        translationBuilder.add(GemstyneOreItems.GARNET, "Garnet");
+        translationBuilder.add(GemstyneOreItems.MORKITE, "Morkite");
 
         // ======
         // <===== Refined Ores =====>
         // ======
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.mochite(), "Mochite");
+        translationBuilder.add(GemstyneOreItems.MOCHITE, "Mochite");
 
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.tinIngot(), "Tin Ingot");
+        translationBuilder.add(GemstyneOreItems.TIN_INGOT, "Tin Ingot");
 
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.bronzeIngot(), "Bronze Ingot");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.bronzeRing(), "Bronze Ring");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.bronzeNugget(), "Bronze Nugget");
+        translationBuilder.add(GemstyneOreItems.BRONZE_INGOT, "Bronze Ingot");
+        translationBuilder.add(GemstyneOreItems.BRONZE_RING, "Bronze Ring");
+        translationBuilder.add(GemstyneOreItems.BRONZE_NUGGET, "Bronze Nugget");
 
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.uraniumChunk(), "Uranium Chunk");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.uraniumIngot(), "Uranium Ingot");
+        translationBuilder.add(GemstyneOreItems.URANIUM_CHUNK, "Uranium Chunk");
+        translationBuilder.add(GemstyneOreItems.URANIUM_INGOT, "Uranium Ingot");
 
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.crimoniteChunk(), "Crimonite Chunk");
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.crimoniteIngot(), "Crimonite Ingot");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE_CHUNK, "Crimonite Chunk");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE_INGOT, "Crimonite Ingot");
 
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.aldusIngot(), "Aldus Ingot");
+        translationBuilder.add(GemstyneOreItems.ALDUS_INGOT, "Aldus Ingot");
 
-        translationBuilder.add(GemstyneOreItems.ORE_ITEMS.fireOpal(), "Fire Opal");
+        translationBuilder.add(GemstyneOreItems.FIRE_OPAL, "Fire Opal");
 
         // ======
         // <===== Ores =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.mochiteOre(), "Mochite Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMochiteOre(), "Deepslate Mochite Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.rawMochiteBlock(), "Raw Mochite Block");
+        translationBuilder.add(GemstyneOreBlocks.MOCHITE_ORE, "Mochite Ore");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, "Deepslate Mochite Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_MOCHITE_BLOCK, "Raw Mochite Block");
 
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.tinOre(), "Tin Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.deepslateTinOre(), "Deepslate Tin Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.rawTinBlock(), "Raw Tin Block");
+        translationBuilder.add(GemstyneOreBlocks.TIN_ORE, "Tin Ore");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_TIN_ORE, "Deepslate Tin Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_TIN_BLOCK, "Raw Tin Block");
 
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre(), "Deepslate Uranium Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock(), "Raw Uranium Block");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, "Deepslate Uranium Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");
 
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.deepslateMorkiteOre(), "Deepslate Morkite Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.morkiteBlock(), "Morkite Block");
+        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
+        translationBuilder.add(GemstyneOreBlocks.MORKITE_BLOCK, "Morkite Block");
 
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.netherCrimoniteOre(), "Nether Crimonite Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.rawCrimoniteBlock(), "Raw Crimonite Block");
+        translationBuilder.add(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, "Nether Crimonite Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK, "Raw Crimonite Block");
 
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.netherAldusOre(), "Nether Aldus Ore");
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.rawAldusBlock(), "Raw Aldus Block");
+        translationBuilder.add(GemstyneOreBlocks.NETHER_ALDUS_ORE, "Nether Aldus Ore");
+        translationBuilder.add(GemstyneOreBlocks.RAW_ALDUS_BLOCK, "Raw Aldus Block");
 
         translationBuilder.add(
-                GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteFireOpalOre(),
+                GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE,
                 "Compressed Granite Fire Opal Ore");
 
         // ======
         // <===== Ore Extensions =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.ORE_BLOCKS.compressedGraniteCoalOre(),
+        translationBuilder.add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE,
                 "Compressed Granite Coal Ore");
 
         // ======
         // <===== Geodes =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.ikariteBlock(), "Ikarite Block");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.buddingIkarite(), "Budding Ikarite");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.ikariteCluster(), "Ikarite Cluster");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.largeIkariteBud(), "Large Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.mediumIkariteBud(), "Medium Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.smallIkariteBud(), "Small Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.GARNET_CLUSTER, "Garnet Cluster");
+        translationBuilder.add(GemstyneOreBlocks.LARGE_GARNET_BUD, "Large Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.MEDIUM_GARNET_BUD, "Medium Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.SMALL_GARNET_BUD, "Small Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.GARNET_BLOCK, "Garnet Block");
+        translationBuilder.add(GemstyneOreBlocks.BUDDING_GARNET, "Budding Garnet");
 
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.garnetBlock(), "Garnet Block");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.buddingGarnet(), "Budding Garnet");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.garnetCluster(), "Garnet Cluster");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.largeGarnetBud(), "Large Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.mediumGarnetBud(), "Medium Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.GEODE_BLOCKS.smallGarnetBud(), "Small Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE_CLUSTER, "Ikarite Cluster");
+        translationBuilder.add(GemstyneOreBlocks.LARGE_IKARITE_BUD, "Large Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.MEDIUM_IKARITE_BUD, "Medium Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.SMALL_IKARITE_BUD, "Small Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE_BLOCK, "Ikarite Block");
+        translationBuilder.add(GemstyneOreBlocks.BUDDING_IKARITE, "Budding Ikarite");
 
         // ======
         // <===== Minerals =====>

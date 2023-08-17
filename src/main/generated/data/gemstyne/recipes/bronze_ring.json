@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
     "N": {
       "item": "gemstyne:bronze_nugget"
     }
   },
   "pattern": [
-    "NNN",
-    "NNN",
-    "NNN"
+    " N ",
+    "N N",
+    " N "
   ],
   "result": {
-    "item": "gemstyne:bronze_ingot"
+    "item": "gemstyne:bronze_ring"
   },
   "show_notification": true
 }
