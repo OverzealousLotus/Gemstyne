@@ -40,6 +40,7 @@
     "gemstyne:compressed_granite",
     "gemstyne:compressed_granite_coal_ore",
     "gemstyne:compressed_granite_fire_opal_ore",
-    "gemstyne:fire_opal_block"
+    "gemstyne:fire_opal_block",
+    "gemstyne:nefarium_ore"
   ]
 }

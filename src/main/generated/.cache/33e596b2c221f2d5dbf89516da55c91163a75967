@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-17T14:05:42.003036168	Gemstyne/Recipes
+// 1.20.1	2023-08-18T17:44:27.509151003	Gemstyne/Recipes
 341ef4d17e28e1dc02ba9dae087d5ee1b135008d data/gemstyne/advancements/recipes/combat/rendfire_boots.json
 4bbf1e98aa4e4e76325997f038cf872fcd597c51 data/gemstyne/advancements/recipes/tools/aldus_shovel.json
 cceeaa753c8260537de9f47b7d1ca44e1ecb77e1 data/gemstyne/advancements/recipes/tools/bronze_shovel.json
@@ -27,8 +27,8 @@ c2c5dd6c80fb7bfe9f3dc0755d53679f3c05c2bc data/gemstyne/recipes/aldus_block.json
 f927b8082e94df42ae122cb9bab1a28a86a9fcee data/gemstyne/recipes/uranium_chunk_from_blasting_raw_uranium.json
 dff4fd8ae6aaef866e159f504cd6ced5d8e8d302 data/gemstyne/advancements/recipes/combat/bronze_ring.json
 3e5cbd17ffcd56481fb1b1c7ac2b4652e6dca0c3 data/gemstyne/recipes/bronze_ring.json
-78ebee800e5ac2955cddd9e75835fd79b1983701 data/gemstyne/recipes/crimonite_ingot.json
 736d2c9d9a2274c793d182dc1b4f5688464a3cb6 data/gemstyne/recipes/raw_crimonite.json
+78ebee800e5ac2955cddd9e75835fd79b1983701 data/gemstyne/recipes/crimonite_ingot.json
 2ede4c07e31095ebd9dae681d70c57315848459b data/gemstyne/recipes/uranium_block.json
 76861cf5f43b9884bdb2893f47d3716dee48a18c data/gemstyne/recipes/uranium_chunk_from_smelting_raw_uranium.json
 0b96380135e26c9d63aa82a1eed2002fb4b35dd3 data/gemstyne/advancements/recipes/combat/rendfire_chestplate.json
@@ -134,6 +134,6 @@ fbf91948e156b913dc15932e398a26e80b8555c5 data/gemstyne/advancements/recipes/misc
 893d25d63942d25abdc7cf1d664fe088789e2cc2 data/gemstyne/recipes/crimonite_block.json
 72187e61380a24ff889cf1abda03f3b220034f0b data/gemstyne/recipes/rendfire_axe.json
 f46b8a9150ab0bae451e87dbb6c7c389dafa7fab data/gemstyne/recipes/bronzemail_chestplate.json
-c6b680a1f38b4a527a2002b0ffbd40ccc96866cb data/gemstyne/recipes/raw_uranium.json
 a044e5d85ba0afb9c81635a1d1eaa4cb39ad88d0 data/gemstyne/advancements/recipes/decorations/raw_uranium_block.json
+c6b680a1f38b4a527a2002b0ffbd40ccc96866cb data/gemstyne/recipes/raw_uranium.json
 b26411e4c1d1380b03b2ce794fbb7cf545186dbc data/gemstyne/advancements/recipes/tools/bronze_pickaxe.json

@@ -102,6 +102,8 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         gemstyneOreDrops(GemstyneOreBlocks.IKARITE_CLUSTER, GemstyneOreItems.IKARITE);
         gemstyneOreDrops(GemstyneOreBlocks.GARNET_CLUSTER, GemstyneOreItems.GARNET);
+
+        gemstyneOreDrops(GemstyneOreBlocks.NEFARIUM_ORE, Items.DIAMOND);
     }
 
 

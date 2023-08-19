@@ -27,6 +27,7 @@
   "block.gemstyne.mochite_block": "Mochite Block",
   "block.gemstyne.mochite_ore": "Mochite Ore",
   "block.gemstyne.morkite_block": "Morkite Block",
+  "block.gemstyne.nefarium_ore": "Nefarium Ore",
   "block.gemstyne.nether_aldus_ore": "Nether Aldus Ore",
   "block.gemstyne.nether_crimonite_ore": "Nether Crimonite Ore",
   "block.gemstyne.pumice": "Pumice",
@@ -94,5 +95,5 @@
   "item.gemstyne.tin_ingot": "Tin Ingot",
   "item.gemstyne.uranium_chunk": "Uranium Chunk",
   "item.gemstyne.uranium_ingot": "Uranium Ingot",
-  "net.minecraft.item.ItemGroup@3454f039": "Gemstyne"
+  "net.minecraft.item.ItemGroup@63b3463e": "Gemstyne"
 }

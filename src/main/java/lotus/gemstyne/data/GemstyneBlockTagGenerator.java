@@ -72,7 +72,8 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE)
 
                 .add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
-                .add(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock());
+                .add(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock())
+                .add(GemstyneOreBlocks.NEFARIUM_ORE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsShovel())
                 .setReplace(false)
@@ -126,7 +127,9 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock())
 
                 .add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
-                .add(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock());
+                .add(GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock())
+
+                .add(GemstyneOreBlocks.NEFARIUM_ORE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsToolLevel4())
                 .setReplace(false)

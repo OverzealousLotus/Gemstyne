@@ -66,6 +66,8 @@ public final class GemstyneOreModels {
         // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(
                 GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.NEFARIUM_ORE);
     }
 
 

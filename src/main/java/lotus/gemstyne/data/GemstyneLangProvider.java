@@ -1,6 +1,7 @@
 package lotus.gemstyne.data;
 
 import lotus.gemstyne.block.GemstyneDecorBlocks;
+import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.data.translations.en_us.GemstyneEnglishLangProvider;
 import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.fluid.GemstyneFluids;
@@ -39,5 +40,6 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
 
 
         translationBuilder.add(GemstyneEffects.IRRADIATE, "Irradiate");
+        translationBuilder.add(GemstyneOreBlocks.NEFARIUM_ORE, "Nefarium Ore");
     }
 }

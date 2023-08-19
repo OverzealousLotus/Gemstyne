@@ -27,6 +27,9 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Overworld Ores =====>
     // =====
+    public static final Block NEFARIUM_ORE = GemstyneBlocks.registerBlock("nefarium_ore",
+            new DeepOre(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE), 5));
+
     public static final Block COMPRESSED_GRANITE_FIRE_OPAL_ORE = GemstyneBlocks.registerBlock(
             "compressed_granite_fire_opal_ore",
                 new ExperienceDroppingBlock(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN)
