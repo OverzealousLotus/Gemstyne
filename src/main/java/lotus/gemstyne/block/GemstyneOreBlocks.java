@@ -3,9 +3,12 @@ package lotus.gemstyne.block;
 import com.google.common.collect.ImmutableList;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.*;
+import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.util.GemstyneBlockTypes;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
@@ -28,7 +31,7 @@ public final class GemstyneOreBlocks {
     // <===== Overworld Ores =====>
     // =====
     public static final Block NEFARIUM_ORE = GemstyneBlocks.registerBlock("nefarium_ore",
-            new DeepOre(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE), 5));
+            new RichOre(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE), 5));
 
     public static final Block COMPRESSED_GRANITE_FIRE_OPAL_ORE = GemstyneBlocks.registerBlock(
             "compressed_granite_fire_opal_ore",
@@ -61,7 +64,8 @@ public final class GemstyneOreBlocks {
 
     public static final Block DEEPSLATE_URANIUM_ORE = GemstyneBlocks.registerBlock("deepslate_uranium_ore",
             new AfflictiveOre(FabricBlockSettings.copyOf(Blocks.DEEPSLATE)
-                    .strength(6.0f, 5.0f), UniformIntProvider.create(5, 15))
+                    .strength(6.0f, 5.0f), GemstyneEffects.IRRADIATE,
+                    30, 60, 100, GemstyneBlockTypes.ORE, UniformIntProvider.create(5, 15))
     );
 
     // =====
@@ -74,9 +78,9 @@ public final class GemstyneOreBlocks {
     );
 
     public static final Block NETHER_CRIMONITE_ORE = GemstyneBlocks.registerBlock("nether_crimonite_ore",
-            new CrimoniteOre(FabricBlockSettings.copyOf(Blocks.NETHERRACK)
-                    .strength(5.0f, 3.0f).sounds(BlockSoundGroup.NETHER_ORE),
-                    UniformIntProvider.create(2, 5))
+            new AfflictiveOre(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE)
+                    .strength(5.0f, 3.0f), StatusEffects.WITHER,
+                    60, 100, 120, GemstyneBlockTypes.ORE, UniformIntProvider.create(2, 5))
     );
 
     // =====
@@ -96,8 +100,8 @@ public final class GemstyneOreBlocks {
     );
 
     public static final Block RAW_CRIMONITE_BLOCK = GemstyneBlocks.registerBlock("raw_crimonite_block",
-            new CrimoniteBlock(FabricBlockSettings.copyOf(Blocks.LODESTONE)
-                    .strength(8.0f, 8.0f))
+            new AfflictiveBlock(FabricBlockSettings.copyOf(Blocks.LODESTONE).strength(8.0f, 8.0f),
+                    StatusEffects.WITHER, 60, 100, 120, GemstyneBlockTypes.RAW)
     );
 
     public static final Block RAW_MOCHITE_BLOCK = GemstyneBlocks.registerBlock("raw_mochite_block",
@@ -117,7 +121,8 @@ public final class GemstyneOreBlocks {
 
     public static final Block RAW_URANIUM_BLOCK = GemstyneBlocks.registerBlock("raw_uranium_block",
             new AfflictiveBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)
-                    .strength(7.0f, 6.0f))
+                    .strength(7.0f, 6.0f), GemstyneEffects.IRRADIATE,
+                    30, 60, 100, GemstyneBlockTypes.RAW)
     );
 
     // =====

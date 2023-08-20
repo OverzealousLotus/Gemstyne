@@ -1,6 +1,7 @@
 package lotus.gemstyne;
 
 import lotus.gemstyne.block.GemstyneBlocks;
+import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.event.UraniumBreakHandler;
 import lotus.gemstyne.fluid.GemstyneFluids;
@@ -28,17 +29,18 @@ public class Gemstyne implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// Step I | Dependencies
+		GemstyneEffects.RegisterEffects();
 		GemstyneFluids.registerFluids();
 		GemstyneItemGroup.registerItemGroups();
 
 		// Step II | Essentials
 		GemstyneItemHandler.registerModItems();
 		GemstyneBlocks.registerModBlocks();
+		GemstyneBlockEntities.registerBlockEntities();
         GemstyneRegistries.registerModStuff();
 
 		// Step III | World
 		ModWorldGeneration.generateModWorldGen();
-		GemstyneEffects.RegisterEffects();
 
 		// Step IV | Event Handlers
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());
