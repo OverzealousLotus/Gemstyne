@@ -16,6 +16,7 @@ public class GemstyneEffects {
     }
 
     public static void RegisterEffects() {
+        Gemstyne.LOGGER.info("Registering Status Effects...");
         IRRADIATE = registerStatusEffect("irradiate");
     }
 }

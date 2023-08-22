@@ -9,7 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public final class GemstyneBlocks {
+public final class GemstyneBlockHandler {
     // =====
     // <===== Assistive Methods =====>
     // =====
@@ -22,7 +22,7 @@ public final class GemstyneBlocks {
                 new BlockItem(block, new FabricItemSettings()));
     }
 
-    public static void registerModBlocks() {
+    public static void registerGemstyneBlocks() {
         Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");
         GemstyneOreBlocks.registerOreBlocks();
         GemstyneMineralBlocks.registerMineralBlocks();

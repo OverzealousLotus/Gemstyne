@@ -13,7 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public final class GemstyneItemHandler {
-    /** Registered mod items. Block items are registered differently. Check block/GemstyneBlocks
+    /** Registered mod items. Block items are registered differently. Check block/GemstyneBlockHandler
     * to configure things, check data */
 
     // =====
@@ -23,18 +23,14 @@ public final class GemstyneItemHandler {
         return Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, name), item);
     }
 
-    public static ArmorItem registerArmor(String name, ArmorItem item) {
-        return Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, name), item);
-    }
-
-    public static void registerModItems() {
-        Gemstyne.LOGGER.info("Registering items for " + Gemstyne.MOD_ID + "!");
+    public static void registerGemstyneItems() {
+        Gemstyne.LOGGER.info("Registering Items for " + Gemstyne.MOD_ID + "!");
         GemstyneGearItems.registerGearItems();
         GemstyneOreItems.registerOreItems();
         GemstyneMineralItems.registerMineralItems();
         GemstyneCraftingItems.registerCraftingItems();
         GemstyneArmorItems.registerArmorItems();
         GemstyneToolItems.registerToolItems();
-        Gemstyne.LOGGER.info("Registration of " + Gemstyne.MOD_ID + " complete!");
+        Gemstyne.LOGGER.info("Successfully registered Items for " + Gemstyne.MOD_ID + "!");
     }
 }

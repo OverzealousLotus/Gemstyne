@@ -1,74 +1,31 @@
 package lotus.gemstyne.item.equipment;
 
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.item.GemstyneItemHandler;
 import lotus.gemstyne.item.GemstyneToolMaterials;
-import lotus.gemstyne.item.carriers.GemstyneToolItemCarrier;
+import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.*;
 
 /**
  * Gemstyne's tool-item holder. A record is used to auto-generate getters.
  */
 public final class GemstyneToolItems {
-    public static final GemstyneToolItemCarrier TOOL_ITEMS = new GemstyneToolItemCarrier(
-            // =====
-            // <===== Aldus =====>
-            // =====
-            GemstyneItemHandler.registerItem("aldus_axe",
-                    new AxeItem(GemstyneToolMaterials.ALDUS, 6, -3.0f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("aldus_hoe",
-                    new HoeItem(GemstyneToolMaterials.ALDUS, -2, -0.5f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("aldus_pickaxe",
-                    new PickaxeItem(GemstyneToolMaterials.ALDUS, 1, -2.7f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("aldus_shovel",
-                    new ShovelItem(GemstyneToolMaterials.ALDUS, 1.5f, -3.0f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("aldus_sword",
-                    new SwordItem(GemstyneToolMaterials.ALDUS, 4, -2.4f,
-                            new FabricItemSettings())),
+    // =====
+    // <=====| Damage & Speed |=====>
+    // =====
+    private static final float[] ALDUS_DAMAGE = {6.0f, -2.0f, 1.0f, 1.5f, 4.0f};
+    private static final float[] BRONZE_DAMAGE = {6.0f, -2.0f, 1, 1.5f, 3.0f};
+    private static final float[] RENDFIRE_DAMAGE = {5.0f, -4.0f, 1.0f, 1.5f, 4.0f};
 
-            // =====
-            // <===== Bronze =====>
-            // =====
-            GemstyneItemHandler.registerItem("bronze_axe",
-                    new AxeItem(GemstyneToolMaterials.BRONZE, 6, -3.1f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("bronze_hoe",
-                    new HoeItem(GemstyneToolMaterials.BRONZE, -2, -0.5f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("bronze_pickaxe",
-                    new PickaxeItem(GemstyneToolMaterials.BRONZE, 1, -2.7f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("bronze_shovel",
-                    new ShovelItem(GemstyneToolMaterials.BRONZE, 1.5f, -2.8f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("bronze_sword",
-                    new SwordItem(GemstyneToolMaterials.BRONZE, 3, -2.4f,
-                            new FabricItemSettings())),
+    private static final float[] ALDUS_SPEED = {-3.0f, -0.5f, -2.7f, -3.0f, -2.4f};
+    private static final float[] BRONZE_SPEED = {-3.1f, -0.5f, -2.7f, -2.8f, -2.4f};
+    private static final float[] RENDFIRE_SPEED = {-3.0f, 0.0f, -2.8f, -3.0f, -2.4f};
 
-            // =====
-            // <===== Rendfire =====>
-            // =====
-            GemstyneItemHandler.registerItem("rendfire_axe",
-                    new AxeItem(GemstyneToolMaterials.RENDFIRE, 5, -3.0f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("rendfire_hoe",
-                    new HoeItem(GemstyneToolMaterials.RENDFIRE, -4, 0.0f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("rendfire_pickaxe",
-                    new PickaxeItem(GemstyneToolMaterials.RENDFIRE, 1, -2.8f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("rendfire_shovel",
-                    new ShovelItem(GemstyneToolMaterials.RENDFIRE, 1.5f, -3.0f,
-                            new FabricItemSettings())),
-            GemstyneItemHandler.registerItem("rendfire_sword",
-                    new SwordItem(GemstyneToolMaterials.RENDFIRE, 4, -2.4f,
-                            new FabricItemSettings()))
-    );
+    public static final GemstyneToolSet ALDUS = new GemstyneToolSet(new FabricItemSettings(),
+            ALDUS_DAMAGE, ALDUS_SPEED, "aldus", GemstyneToolMaterials.ALDUS, GemstyneOreItems.ALDUS_INGOT);
+    public static final GemstyneToolSet BRONZE = new GemstyneToolSet(new FabricItemSettings(),
+            BRONZE_DAMAGE, BRONZE_SPEED, "bronze", GemstyneToolMaterials.BRONZE, GemstyneOreItems.BRONZE_INGOT);
+    public static final GemstyneToolSet RENDFIRE = new GemstyneToolSet(new FabricItemSettings(),
+            RENDFIRE_DAMAGE, RENDFIRE_SPEED, "rendfire", GemstyneToolMaterials.RENDFIRE, GemstyneOreItems.FIRE_OPAL);
 
 
     public static void registerToolItems() { Gemstyne.LOGGER.info("Registering Tool Items..."); }

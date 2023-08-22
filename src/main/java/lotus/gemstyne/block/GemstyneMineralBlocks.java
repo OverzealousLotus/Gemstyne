@@ -8,7 +8,7 @@ import net.minecraft.block.MapColor;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.sound.BlockSoundGroup;
 
-import static lotus.gemstyne.block.GemstyneBlocks.registerBlock;
+import static lotus.gemstyne.block.GemstyneBlockHandler.registerBlock;
 
 public final class GemstyneMineralBlocks {
     private static final FabricBlockSettings COMPRESSED_FEATURES = FabricBlockSettings.create()

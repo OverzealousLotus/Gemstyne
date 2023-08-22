@@ -40,13 +40,13 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.RAW_ALDUS),
                 GemstyneOreItems.ALDUS_INGOT, 200, 100, 1.0f);
 
-        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet()), RecipeCategory.MISC,
+        offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.HELMET), RecipeCategory.MISC,
                 GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
-        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate()), RecipeCategory.MISC,
+        offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.CHESTPLATE), RecipeCategory.MISC,
                 GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
-        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings()), RecipeCategory.MISC,
+        offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.LEGGINGS), RecipeCategory.MISC,
                 GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
-        offerSmelting(exporter, List.of(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots()), RecipeCategory.MISC,
+        offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.BOOTS), RecipeCategory.MISC,
                 GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
 
         // =====

@@ -22,44 +22,44 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
         // =====
         // <===== Aldus =====>
         // =====
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusAxe(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.ALDUS.AXE,
                 GemstyneOreItems.ALDUS_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusHoe(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.ALDUS.HOE,
                 GemstyneOreItems.ALDUS_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusPickaxe(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.ALDUS.PICKAXE,
                 GemstyneOreItems.ALDUS_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusShovel(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.ALDUS.SHOVEL,
                 GemstyneOreItems.ALDUS_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.TOOL_ITEMS.aldusSword(),
+        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.ALDUS.SWORD,
                 GemstyneOreItems.ALDUS_INGOT);
 
         // =====
         // <===== Bronze =====>
         // =====
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeAxe(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.BRONZE.AXE,
                 GemstyneOreItems.BRONZE_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeHoe(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.BRONZE.HOE,
                 GemstyneOreItems.BRONZE_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzePickaxe(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.BRONZE.PICKAXE,
                 GemstyneOreItems.BRONZE_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeShovel(),
+        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.BRONZE.SHOVEL,
                 GemstyneOreItems.BRONZE_INGOT);
-        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.TOOL_ITEMS.bronzeSword(),
+        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.BRONZE.SWORD,
                 GemstyneOreItems.BRONZE_INGOT);
 
         // =====
         // <===== Rendfire =====>
         // =====
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.CRIMONITE_INGOT,
-                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.TOOL_ITEMS.rendfireAxe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.CRIMONITE_INGOT,
-                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.TOOL_ITEMS.rendfireHoe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.CRIMONITE_INGOT,
-                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.TOOL_ITEMS.rendfirePickaxe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.CRIMONITE_INGOT,
-                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.TOOL_ITEMS.rendfireShovel());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.CRIMONITE_INGOT,
-                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.TOOL_ITEMS.rendfireSword());
+        offerCoreToolRecipe(exporter, GemstyneOreItems.CRIMONITE_INGOT,
+                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.RENDFIRE.AXE);
+        offerCoreToolRecipe(exporter, GemstyneOreItems.CRIMONITE_INGOT,
+                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.RENDFIRE.HOE);
+        offerCoreToolRecipe(exporter, GemstyneOreItems.CRIMONITE_INGOT,
+                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.RENDFIRE.PICKAXE);
+        offerCoreToolRecipe(exporter, GemstyneOreItems.CRIMONITE_INGOT,
+                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.RENDFIRE.SHOVEL);
+        offerCoreToolRecipe(exporter, GemstyneOreItems.CRIMONITE_INGOT,
+                GemstyneOreItems.FIRE_OPAL, GemstyneToolItems.RENDFIRE.SWORD);
     }
 
 
@@ -109,7 +109,9 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
 
     private static void offerCoreToolRecipe(
             Consumer<RecipeJsonProvider> exporter,
-            RecipeCategory category, Item input, Item core, Item output) {
+            Item input,
+            Item core,
+            Item output) {
         String pattern_1;
         String pattern_2;
         String pattern_3;
@@ -136,7 +138,7 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
             pattern_3 = "S ";
         }
 
-        ShapedRecipeJsonBuilder.create(category, output)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .pattern(pattern_1)
                 .pattern(pattern_2)
                 .pattern(pattern_3)

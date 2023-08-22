@@ -1,6 +1,7 @@
 package lotus.gemstyne.data.recipes;
 
 import lotus.gemstyne.item.equipment.GemstyneArmorItems;
+import lotus.gemstyne.item.equipment.GemstyneArmorSet;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -23,46 +24,25 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
         // =====
         // <===== Aldus Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusHelmet(),
-                GemstyneOreItems.ALDUS_INGOT);
-        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusChestplate(),
-                GemstyneOreItems.ALDUS_INGOT);
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings(),
-                GemstyneOreItems.ALDUS_INGOT);
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusBoots(),
-                GemstyneOreItems.ALDUS_INGOT);
+        offerArmorSetRecipes(exporter, GemstyneArmorItems.ALDUS);
 
         // =====
         // <===== Bronzemail Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailHelmet(),
-                GemstyneOreItems.BRONZE_RING);
-        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailChestplate(),
-                GemstyneOreItems.BRONZE_RING);
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailLeggings(),
-                GemstyneOreItems.BRONZE_RING);
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailBoots(),
-                GemstyneOreItems.BRONZE_RING);
+        offerArmorSetRecipes(exporter, GemstyneArmorItems.BRONZEMAIL);
 
         // =====
         // <===== Bronzeplate Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet(),
-                GemstyneOreItems.BRONZE_INGOT);
-        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate(),
-                GemstyneOreItems.BRONZE_INGOT);
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings(),
-                GemstyneOreItems.BRONZE_INGOT);
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots(),
-                GemstyneOreItems.BRONZE_INGOT);
+        offerArmorSetRecipes(exporter, GemstyneArmorItems.BRONZEPLATE);
 
         // =====
         // <===== Rendfire Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet(),
+        offerBasicHelmetRecipe(exporter, GemstyneArmorItems.RENDFIRE.HELMET,
                 GemstyneOreItems.CRIMONITE_INGOT);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate())
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE.CHESTPLATE)
                 .pattern("C C")
                 .pattern("CFC")
                 .pattern("CCC")
@@ -73,11 +53,11 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.CRIMONITE_INGOT),
                         FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider
-                        .getRecipeName(GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate())));
+                        .getRecipeName(GemstyneArmorItems.RENDFIRE.CHESTPLATE)));
 
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireLeggings(),
+        offerBasicLeggingsRecipe(exporter, GemstyneArmorItems.RENDFIRE.LEGGINGS,
                 GemstyneOreItems.CRIMONITE_INGOT);
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireBoots(),
+        offerBasicBootsRecipe(exporter, GemstyneArmorItems.RENDFIRE.BOOTS,
                 GemstyneOreItems.CRIMONITE_INGOT);
     }
 
@@ -85,11 +65,29 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
     // =====
     // <===== Assistive Methods =====>
     // =====
+
+    /**
+     * <code>offerArmorSetRecipes</code> is a method to generate a full set of basic
+     * armor recipes.
+     * @param exporter RecipeJsonProvider
+     * @param armorSet Target ArmorSet for recipe generation.
+     */
+    private static void offerArmorSetRecipes(
+            Consumer<RecipeJsonProvider> exporter,
+            GemstyneArmorSet armorSet
+    ) {
+        offerBasicHelmetRecipe(exporter, armorSet.HELMET, armorSet.SOURCE);
+        offerBasicChestplateRecipe(exporter, armorSet.CHESTPLATE, armorSet.SOURCE);
+        offerBasicLeggingsRecipe(exporter, armorSet.LEGGINGS, armorSet.SOURCE);
+        offerBasicBootsRecipe(exporter, armorSet.BOOTS, armorSet.SOURCE);
+    }
+
     private static void offerBasicHelmetRecipe(
             Consumer<RecipeJsonProvider> exporter,
-             RecipeCategory category, Item output,
-             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+            Item output,
+            Item input
+    ) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("III")
                 .pattern("I I")
                 .input('I', input)
@@ -101,9 +99,9 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
     private static void offerBasicChestplateRecipe(
             Consumer<RecipeJsonProvider> exporter,
-            RecipeCategory category, Item output,
+            Item output,
             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("I I")
                 .pattern("III")
                 .pattern("III")
@@ -116,9 +114,9 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
     private static void offerBasicLeggingsRecipe(
             Consumer<RecipeJsonProvider> exporter,
-             RecipeCategory category, Item output,
-             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+            Item output,
+            Item input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("III")
                 .pattern("I I")
                 .pattern("I I")
@@ -131,9 +129,9 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
     private static void offerBasicBootsRecipe(
             Consumer<RecipeJsonProvider> exporter,
-             RecipeCategory category, Item output,
-             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+            Item output,
+            Item input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("I I")
                 .pattern("I I")
                 .input('I', input)

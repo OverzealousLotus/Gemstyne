@@ -129,45 +129,45 @@ public class GemstyneItemGroup {
                         // =====
                         // <=====| Armors |=====>
                         // =====
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.aldusHelmet());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.aldusChestplate());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.aldusBoots());
+                        entries.add(GemstyneArmorItems.ALDUS.HELMET);
+                        entries.add(GemstyneArmorItems.ALDUS.CHESTPLATE);
+                        entries.add(GemstyneArmorItems.ALDUS.LEGGINGS);
+                        entries.add(GemstyneArmorItems.ALDUS.BOOTS);
 
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailHelmet());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailChestplate());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailLeggings());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailBoots());
+                        entries.add(GemstyneArmorItems.BRONZEMAIL.HELMET);
+                        entries.add(GemstyneArmorItems.BRONZEMAIL.CHESTPLATE);
+                        entries.add(GemstyneArmorItems.BRONZEMAIL.LEGGINGS);
+                        entries.add(GemstyneArmorItems.BRONZEMAIL.BOOTS);
 
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots());
+                        entries.add(GemstyneArmorItems.BRONZEPLATE.HELMET);
+                        entries.add(GemstyneArmorItems.BRONZEPLATE.CHESTPLATE);
+                        entries.add(GemstyneArmorItems.BRONZEPLATE.LEGGINGS);
+                        entries.add(GemstyneArmorItems.BRONZEPLATE.BOOTS);
 
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.rendfireLeggings());
-                        entries.add(GemstyneArmorItems.ARMOR_ITEMS.rendfireBoots());
+                        entries.add(GemstyneArmorItems.RENDFIRE.HELMET);
+                        entries.add(GemstyneArmorItems.RENDFIRE.CHESTPLATE);
+                        entries.add(GemstyneArmorItems.RENDFIRE.LEGGINGS);
+                        entries.add(GemstyneArmorItems.RENDFIRE.BOOTS);
                         // =====
                         // <=====| Tools |=====>
                         // =====
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.aldusAxe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.aldusHoe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.aldusPickaxe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.aldusShovel());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.aldusSword());
+                        entries.add(GemstyneToolItems.ALDUS.AXE);
+                        entries.add(GemstyneToolItems.ALDUS.HOE);
+                        entries.add(GemstyneToolItems.ALDUS.PICKAXE);
+                        entries.add(GemstyneToolItems.ALDUS.SHOVEL);
+                        entries.add(GemstyneToolItems.ALDUS.SWORD);
 
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.bronzeAxe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.bronzeHoe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.bronzePickaxe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.bronzeShovel());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.bronzeSword());
+                        entries.add(GemstyneToolItems.BRONZE.AXE);
+                        entries.add(GemstyneToolItems.BRONZE.HOE);
+                        entries.add(GemstyneToolItems.BRONZE.PICKAXE);
+                        entries.add(GemstyneToolItems.BRONZE.SHOVEL);
+                        entries.add(GemstyneToolItems.BRONZE.SWORD);
 
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.rendfireAxe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.rendfireHoe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.rendfirePickaxe());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.rendfireShovel());
-                        entries.add(GemstyneToolItems.TOOL_ITEMS.rendfireSword());
+                        entries.add(GemstyneToolItems.RENDFIRE.AXE);
+                        entries.add(GemstyneToolItems.RENDFIRE.HOE);
+                        entries.add(GemstyneToolItems.RENDFIRE.PICKAXE);
+                        entries.add(GemstyneToolItems.RENDFIRE.SHOVEL);
+                        entries.add(GemstyneToolItems.RENDFIRE.SWORD);
 
                         // =====
                         // <=====| Gear |=====>
@@ -179,7 +179,7 @@ public class GemstyneItemGroup {
                         entries.add(GemstyneCraftingItems.getImbuedRod());
                     }).build());
     public static void registerItemGroups() {
-
+        Gemstyne.LOGGER.info("Registering Item Group(s)...");
     }
 
 

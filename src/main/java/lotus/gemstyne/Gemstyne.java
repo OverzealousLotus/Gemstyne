@@ -1,11 +1,8 @@
 package lotus.gemstyne;
 
-import lotus.gemstyne.block.GemstyneBlocks;
+import lotus.gemstyne.block.GemstyneBlockHandler;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
-import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.event.UraniumBreakHandler;
-import lotus.gemstyne.fluid.GemstyneFluids;
-import lotus.gemstyne.item.GemstyneItemGroup;
 import lotus.gemstyne.item.GemstyneItemHandler;
 import lotus.gemstyne.util.GemstyneRegistries;
 import lotus.gemstyne.world.gen.ModWorldGeneration;
@@ -16,28 +13,30 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Gemstyne implements ModInitializer {
-	// My ModID
+	// Gemstyne Mod Id.
 	public static final String MOD_ID = "gemstyne";
 
 	// A simple way to log messages or events.
 	public static final Logger LOGGER = LoggerFactory.getLogger("gemstyne");
 
-	/** Make sure to dataGen each time new items, or ores are added, or if-
-	 * -existing items/ores are modified in the files to see change.
+	/** Make sure to dataGen each time new items, or ores are added, or if
+	 * existing items/ores are modified in the files to see change.
 	 * Everything must be done sequentially.
 	 * If we try to generate ore that does not exist then mod dies. */
 	@Override
 	public void onInitialize() {
 		// Step I | Dependencies
-		GemstyneEffects.RegisterEffects();
-		GemstyneFluids.registerFluids();
-		GemstyneItemGroup.registerItemGroups();
+		Gemstyne.LOGGER.info("[[ Registering Dependencies for " + Gemstyne.MOD_ID + "! ]]");
+		Overwatch.registerDependencies();
+		Gemstyne.LOGGER.info("[[ Successfully registered Dependencies! ]]");
 
 		// Step II | Essentials
-		GemstyneItemHandler.registerModItems();
-		GemstyneBlocks.registerModBlocks();
+		Gemstyne.LOGGER.info("[[ Registering Essentials for " + Gemstyne.MOD_ID + "! ]]");
+		GemstyneItemHandler.registerGemstyneItems();
+		GemstyneBlockHandler.registerGemstyneBlocks();
 		GemstyneBlockEntities.registerBlockEntities();
-        GemstyneRegistries.registerModStuff();
+        GemstyneRegistries.registerGemstyneMisc();
+		Gemstyne.LOGGER.info("[[ Successfully registered Essentials! ]]");
 
 		// Step III | World
 		ModWorldGeneration.generateModWorldGen();

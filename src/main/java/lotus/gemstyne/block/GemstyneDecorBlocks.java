@@ -12,7 +12,7 @@ import net.minecraft.block.enums.Instrument;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.sound.BlockSoundGroup;
 
-import static lotus.gemstyne.block.GemstyneBlocks.registerBlock;
+import static lotus.gemstyne.block.GemstyneBlockHandler.registerBlock;
 
 public final class GemstyneDecorBlocks {
     public static final GemstyneDecorBlockCarrier DECOR_BLOCKS = new GemstyneDecorBlockCarrier(

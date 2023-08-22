@@ -4,7 +4,6 @@ import lotus.gemstyne.item.equipment.GemstyneArmorItems;
 import lotus.gemstyne.item.equipment.GemstyneToolItems;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
-import net.minecraft.item.ArmorItem;
 
 public class GemstyneEquipmentModels {
 
@@ -13,47 +12,47 @@ public class GemstyneEquipmentModels {
         // ======
         // <===== Armor =====>
         // ======
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.aldusHelmet());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.aldusChestplate());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.aldusBoots());
+        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.HELMET);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.CHESTPLATE);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.LEGGINGS);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.BOOTS);
 
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailHelmet());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailChestplate());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailLeggings());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzeMailBoots());
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.HELMET);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.CHESTPLATE);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.LEGGINGS);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.BOOTS);
 
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots());
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.HELMET);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.CHESTPLATE);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.LEGGINGS);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.BOOTS);
 
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.rendfireLeggings());
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ARMOR_ITEMS.rendfireBoots());
+        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.HELMET);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.CHESTPLATE);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.LEGGINGS);
+        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.BOOTS);
 
 
 
         // ======
         // <===== Tools =====>
         // ======
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireAxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireHoe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfirePickaxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireShovel(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.rendfireSword(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.AXE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.HOE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.SWORD, Models.HANDHELD);
 
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.bronzeAxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.bronzeHoe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.bronzePickaxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.bronzeShovel(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.bronzeSword(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.BRONZE.AXE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.BRONZE.HOE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.BRONZE.PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.BRONZE.SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.BRONZE.SWORD, Models.HANDHELD);
 
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusAxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusHoe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusPickaxe(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusShovel(), Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.TOOL_ITEMS.aldusSword(), Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.ALDUS.AXE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.ALDUS.HOE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.ALDUS.PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.ALDUS.SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(GemstyneToolItems.ALDUS.SWORD, Models.HANDHELD);
     }
 }
