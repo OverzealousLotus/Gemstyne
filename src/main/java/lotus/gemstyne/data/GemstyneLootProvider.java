@@ -41,18 +41,18 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.MORKITE);
 
         gemstyneRichOreDrops(GemstyneOreBlocks.TIN_ORE,
-                GemstyneOreItems.RAW_TIN, 1.0f, 3.0f);
+                GemstyneOreItems.TIN.RAW, 1.0f, 3.0f);
         gemstyneRichOreDrops(GemstyneOreBlocks.DEEPSLATE_TIN_ORE,
-                GemstyneOreItems.RAW_TIN, 1.0f, 3.0f);
+                GemstyneOreItems.TIN.RAW, 1.0f, 3.0f);
 
-        gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, GemstyneOreItems.RAW_URANIUM);
+        gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, GemstyneOreItems.URANIUM.RAW);
         // ======
         // <===== Nether Ore Loot =====>
         // ======
 
-        gemstyneOreDrops(GemstyneOreBlocks.NETHER_ALDUS_ORE, GemstyneOreItems.RAW_ALDUS);
+        gemstyneOreDrops(GemstyneOreBlocks.NETHER_ALDUS_ORE, GemstyneOreItems.ALDUS.RAW);
 
-        gemstyneOreDrops(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, GemstyneOreItems.RAW_CRIMONITE);
+        gemstyneOreDrops(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, GemstyneOreItems.CRIMONITE.RAW);
         // ======
         // <===== Ore Extension Loot =====>
         // ======

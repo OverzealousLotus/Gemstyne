@@ -2,7 +2,7 @@ package lotus.gemstyne.data.recipes;
 
 import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
-import lotus.gemstyne.item.equipment.GemstyneArmorItems;
+import lotus.gemstyne.armor.GemstyneArmorItems;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import lotus.gemstyne.item.equipment.GemstyneCraftingItems;
 import lotus.gemstyne.item.equipment.GemstyneGearItems;
@@ -33,21 +33,21 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
 
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.RAW_MOCHITE),
                 GemstyneOreItems.MOCHITE, 200, 100, 0.5f);
-        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.RAW_URANIUM),
-                GemstyneOreItems.URANIUM_CHUNK, 300, 150, 1.0f);
-        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.RAW_CRIMONITE),
-                GemstyneOreItems.CRIMONITE_CHUNK, 350, 175, 1.0f);
-        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.RAW_ALDUS),
-                GemstyneOreItems.ALDUS_INGOT, 200, 100, 1.0f);
+        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.URANIUM.RAW),
+                GemstyneOreItems.URANIUM.CHUNK, 300, 150, 1.0f);
+        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.CRIMONITE.RAW),
+                GemstyneOreItems.CRIMONITE.CHUNK, 350, 175, 1.0f);
+        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.ALDUS.RAW),
+                GemstyneOreItems.ALDUS.INGOT, 200, 100, 1.0f);
 
         offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.HELMET), RecipeCategory.MISC,
-                GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
+                GemstyneOreItems.BRONZE.NUGGET, 1.0f, 350, "gemstyne");
         offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.CHESTPLATE), RecipeCategory.MISC,
-                GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
+                GemstyneOreItems.BRONZE.NUGGET, 1.0f, 350, "gemstyne");
         offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.LEGGINGS), RecipeCategory.MISC,
-                GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
+                GemstyneOreItems.BRONZE.NUGGET, 1.0f, 350, "gemstyne");
         offerSmelting(exporter, List.of(GemstyneArmorItems.BRONZEPLATE.BOOTS), RecipeCategory.MISC,
-                GemstyneOreItems.BRONZE_NUGGET, 1.0f, 350, "gemstyne");
+                GemstyneOreItems.BRONZE.NUGGET, 1.0f, 350, "gemstyne");
 
         // =====
         // <===== Reversible =====>
@@ -61,9 +61,9 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock(), RecipeCategory.DECORATIONS,
-                GemstyneOreItems.URANIUM_INGOT);
+                GemstyneOreItems.URANIUM.INGOT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
-                GemstyneOreItems.RAW_URANIUM, RecipeCategory.DECORATIONS,
+                GemstyneOreItems.URANIUM.RAW, RecipeCategory.DECORATIONS,
                 GemstyneOreBlocks.RAW_URANIUM_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
@@ -71,33 +71,33 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 GemstyneDecorBlocks.DECOR_BLOCKS.fireOpalBlock());
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.CRIMONITE_INGOT, RecipeCategory.DECORATIONS,
+                GemstyneOreItems.CRIMONITE.INGOT, RecipeCategory.DECORATIONS,
                 GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.RAW_CRIMONITE, RecipeCategory.DECORATIONS,
+                GemstyneOreItems.CRIMONITE.RAW, RecipeCategory.DECORATIONS,
                 GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.ALDUS_INGOT, RecipeCategory.DECORATIONS,
+                GemstyneOreItems.ALDUS.INGOT, RecipeCategory.DECORATIONS,
                 GemstyneDecorBlocks.DECOR_BLOCKS.aldusBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.RAW_ALDUS, RecipeCategory.DECORATIONS,
+                GemstyneOreItems.ALDUS.RAW, RecipeCategory.DECORATIONS,
                 GemstyneOreBlocks.RAW_ALDUS_BLOCK);
 
         // =====
         // <===== Ingots =====>
         // =====
         offerReversibleNuggetRecipe(exporter,
-                GemstyneOreItems.BRONZE_INGOT, GemstyneOreItems.BRONZE_NUGGET,
+                GemstyneOreItems.BRONZE.INGOT, GemstyneOreItems.BRONZE.NUGGET,
                 "bronze_ingot_to_nugget", "bronze_nugget_to_ingot");
 
-        offerBasicIngotRecipe(exporter, GemstyneOreItems.URANIUM_CHUNK,
-                GemstyneOreItems.URANIUM_INGOT, "uranium_chunk_to_ingot");
-        offerBasicIngotRecipe(exporter, GemstyneOreItems.CRIMONITE_CHUNK,
-                GemstyneOreItems.CRIMONITE_INGOT, "crimonite_chunk_to_ingot");
+        offerBasicIngotRecipe(exporter, GemstyneOreItems.URANIUM.CHUNK,
+                GemstyneOreItems.URANIUM.INGOT, "uranium_chunk_to_ingot");
+        offerBasicIngotRecipe(exporter, GemstyneOreItems.CRIMONITE.CHUNK,
+                GemstyneOreItems.CRIMONITE.INGOT, "crimonite_chunk_to_ingot");
 
-        offerAlloyIngotRecipe(exporter, Items.COPPER_INGOT, GemstyneOreItems.TIN_INGOT,
-                GemstyneOreItems.BRONZE_INGOT, "bronze_ingot");
+        offerAlloyIngotRecipe(exporter, Items.COPPER_INGOT, GemstyneOreItems.TIN.INGOT,
+                GemstyneOreItems.BRONZE.INGOT, "bronze_ingot");
 
         // =====
         // <===== Shapeless =====>
@@ -106,14 +106,14 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         // =====
         // <===== Shaped =====>
         // =====
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneOreItems.BRONZE_RING)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneOreItems.BRONZE.CHAIN)
                 .pattern(" N ")
                 .pattern("N N")
                 .pattern(" N ")
-                .input('N', GemstyneOreItems.BRONZE_NUGGET)
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.BRONZE_NUGGET),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.BRONZE_NUGGET))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneOreItems.BRONZE_RING)));
+                .input('N', GemstyneOreItems.BRONZE.NUGGET)
+                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.BRONZE.NUGGET),
+                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.BRONZE.NUGGET))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneOreItems.BRONZE.CHAIN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GemstyneCraftingItems.getImbuedRod())
                 .pattern(" Q ")

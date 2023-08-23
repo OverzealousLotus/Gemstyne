@@ -1,7 +1,6 @@
-package lotus.gemstyne.item.equipment;
+package lotus.gemstyne.tool;
 
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.item.GemstyneToolMaterials;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
@@ -21,9 +20,9 @@ public final class GemstyneToolItems {
     private static final float[] RENDFIRE_SPEED = {-3.0f, 0.0f, -2.8f, -3.0f, -2.4f};
 
     public static final GemstyneToolSet ALDUS = new GemstyneToolSet(new FabricItemSettings(),
-            ALDUS_DAMAGE, ALDUS_SPEED, "aldus", GemstyneToolMaterials.ALDUS, GemstyneOreItems.ALDUS_INGOT);
+            ALDUS_DAMAGE, ALDUS_SPEED, "aldus", GemstyneToolMaterials.ALDUS, GemstyneOreItems.ALDUS.INGOT);
     public static final GemstyneToolSet BRONZE = new GemstyneToolSet(new FabricItemSettings(),
-            BRONZE_DAMAGE, BRONZE_SPEED, "bronze", GemstyneToolMaterials.BRONZE, GemstyneOreItems.BRONZE_INGOT);
+            BRONZE_DAMAGE, BRONZE_SPEED, "bronze", GemstyneToolMaterials.BRONZE, GemstyneOreItems.BRONZE.INGOT);
     public static final GemstyneToolSet RENDFIRE = new GemstyneToolSet(new FabricItemSettings(),
             RENDFIRE_DAMAGE, RENDFIRE_SPEED, "rendfire", GemstyneToolMaterials.RENDFIRE, GemstyneOreItems.FIRE_OPAL);
 

@@ -1,7 +1,7 @@
 package lotus.gemstyne.data.models;
 
-import lotus.gemstyne.item.equipment.GemstyneArmorItems;
-import lotus.gemstyne.item.equipment.GemstyneToolItems;
+import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.tool.GemstyneToolItems;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 

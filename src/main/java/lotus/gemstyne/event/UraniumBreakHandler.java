@@ -14,16 +14,6 @@ public class UraniumBreakHandler implements AttackBlockCallback {
 
     public void irradiatePlayer(PlayerEntity player, BlockState state) {
         // Handle irradiation logic.
-        /*if (state.isOf(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE)) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 30, 1));
-            // player.sendMessage(Text.literal("You have been slightly irradiated..."));
-        } else if (state.isOf(GemstyneOreBlocks.RAW_URANIUM_BLOCK)) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 60, 1));
-            // player.sendMessage(Text.literal("You have been moderately irradiated..."));
-        } else if (state.isOf(GemstyneOreBlocks.URANIUM_BLOCK)) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 1));
-            // player.sendMessage(Text.literal("You have been heavily irradiated..."));
-        }*/
     }
 
 

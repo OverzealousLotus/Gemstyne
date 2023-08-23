@@ -1,4 +1,4 @@
-package lotus.gemstyne.item;
+package lotus.gemstyne.armor;
 
 import com.google.common.base.Suppliers;
 
@@ -19,7 +19,7 @@ public enum GemstyneArmorMaterials implements StringIdentifiable, ArmorMaterial 
             7, // Chestplate
             3 // Helmet
     }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ALDUS_INGOT)),
+            () -> Ingredient.ofItems(GemstyneOreItems.ALDUS.INGOT)),
     RENDFIRE("rendfire", 30, new int[]{
             4,
             6,
@@ -33,14 +33,14 @@ public enum GemstyneArmorMaterials implements StringIdentifiable, ArmorMaterial 
             6,
             2
     }, 6, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE_RING)),
+            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE.CHAIN)),
     BRONZEPLATE("bronzeplate", 20, new int[]{
             2,
             5,
             7,
             3
     }, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE_INGOT));
+            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE.INGOT));
 
 
 
@@ -54,7 +54,7 @@ public enum GemstyneArmorMaterials implements StringIdentifiable, ArmorMaterial 
     private final float knockbackResistance;
     private final Supplier<Ingredient> repairIngredientSupplier;
 
-    private GemstyneArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
+    GemstyneArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;

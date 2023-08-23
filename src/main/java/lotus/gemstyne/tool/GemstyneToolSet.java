@@ -1,4 +1,4 @@
-package lotus.gemstyne.item.equipment;
+package lotus.gemstyne.tool;
 
 import lotus.gemstyne.Gemstyne;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

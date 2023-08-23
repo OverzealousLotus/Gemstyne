@@ -1,7 +1,7 @@
 package lotus.gemstyne.data.translations.en_us;
 
-import lotus.gemstyne.item.equipment.GemstyneArmorItems;
-import lotus.gemstyne.item.equipment.GemstyneToolItems;
+import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.tool.GemstyneToolItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 

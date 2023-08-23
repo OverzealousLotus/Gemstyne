@@ -76,12 +76,12 @@ public final class GemstyneOreModels {
         // <===== Raw Ores =====>
         // =====
         itemModelGenerator.register(GemstyneOreItems.RAW_MOCHITE, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.RAW_TIN, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.RAW_URANIUM, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.TIN.RAW, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.URANIUM.RAW, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.IKARITE, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.GARNET, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.RAW_CRIMONITE, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.RAW_ALDUS, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.CRIMONITE.RAW, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ALDUS.RAW, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.MORKITE, Models.GENERATED);
 
         // =====
@@ -89,19 +89,19 @@ public final class GemstyneOreModels {
         // =====
         itemModelGenerator.register(GemstyneOreItems.MOCHITE, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.TIN_INGOT, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.TIN.INGOT, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.URANIUM_CHUNK, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.URANIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.URANIUM.CHUNK, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.URANIUM.INGOT, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.CRIMONITE_CHUNK, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.CRIMONITE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.CRIMONITE.CHUNK, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.CRIMONITE.INGOT, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.ALDUS_INGOT, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.ALDUS.INGOT, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.BRONZE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.BRONZE_RING, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.BRONZE_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.BRONZE.INGOT, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.BRONZE.CHAIN, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.BRONZE.NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(GemstyneOreItems.FIRE_OPAL, Models.GENERATED);
     }

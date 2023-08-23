@@ -17,10 +17,10 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // <===== Raw Ores =====>
         // ======
         translationBuilder.add(GemstyneOreItems.RAW_MOCHITE, "Raw Mochite");
-        translationBuilder.add(GemstyneOreItems.RAW_TIN, "Raw Tin");
-        translationBuilder.add(GemstyneOreItems.RAW_URANIUM, "Raw Uranium");
-        translationBuilder.add(GemstyneOreItems.RAW_CRIMONITE, "Raw Crimonite");
-        translationBuilder.add(GemstyneOreItems.RAW_ALDUS, "Raw Aldus");
+        translationBuilder.add(GemstyneOreItems.TIN.RAW, "Raw Tin");
+        translationBuilder.add(GemstyneOreItems.URANIUM.RAW, "Raw Uranium");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE.RAW, "Raw Crimonite");
+        translationBuilder.add(GemstyneOreItems.ALDUS.RAW, "Raw Aldus");
         translationBuilder.add(GemstyneOreItems.IKARITE, "Ikarite");
         translationBuilder.add(GemstyneOreItems.GARNET, "Garnet");
         translationBuilder.add(GemstyneOreItems.MORKITE, "Morkite");
@@ -30,19 +30,19 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         translationBuilder.add(GemstyneOreItems.MOCHITE, "Mochite");
 
-        translationBuilder.add(GemstyneOreItems.TIN_INGOT, "Tin Ingot");
+        translationBuilder.add(GemstyneOreItems.TIN.INGOT, "Tin Ingot");
 
-        translationBuilder.add(GemstyneOreItems.BRONZE_INGOT, "Bronze Ingot");
-        translationBuilder.add(GemstyneOreItems.BRONZE_RING, "Bronze Ring");
-        translationBuilder.add(GemstyneOreItems.BRONZE_NUGGET, "Bronze Nugget");
+        translationBuilder.add(GemstyneOreItems.BRONZE.INGOT, "Bronze Ingot");
+        translationBuilder.add(GemstyneOreItems.BRONZE.CHAIN, "Bronze Ring");
+        translationBuilder.add(GemstyneOreItems.BRONZE.NUGGET, "Bronze Nugget");
 
-        translationBuilder.add(GemstyneOreItems.URANIUM_CHUNK, "Uranium Chunk");
-        translationBuilder.add(GemstyneOreItems.URANIUM_INGOT, "Uranium Ingot");
+        translationBuilder.add(GemstyneOreItems.URANIUM.CHUNK, "Uranium Chunk");
+        translationBuilder.add(GemstyneOreItems.URANIUM.INGOT, "Uranium Ingot");
 
-        translationBuilder.add(GemstyneOreItems.CRIMONITE_CHUNK, "Crimonite Chunk");
-        translationBuilder.add(GemstyneOreItems.CRIMONITE_INGOT, "Crimonite Ingot");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE.CHUNK, "Crimonite Chunk");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE.INGOT, "Crimonite Ingot");
 
-        translationBuilder.add(GemstyneOreItems.ALDUS_INGOT, "Aldus Ingot");
+        translationBuilder.add(GemstyneOreItems.ALDUS.INGOT, "Aldus Ingot");
 
         translationBuilder.add(GemstyneOreItems.FIRE_OPAL, "Fire Opal");
 

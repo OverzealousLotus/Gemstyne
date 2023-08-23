@@ -6,8 +6,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 
 public class GemstyneCraftingItems {
-    private static final Item IMBUED_ROD = GemstyneItemHandler.registerItem("imbued_rod",
-            new Item(new FabricItemSettings()));
+    private static final Item IMBUED_ROD = GemstyneItemHandler.assignAndRegisterItem(
+            new Item(new FabricItemSettings()),"imbued_rod");
 
 
     public static Item getImbuedRod() { return IMBUED_ROD; }

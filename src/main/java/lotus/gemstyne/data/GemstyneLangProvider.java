@@ -5,9 +5,9 @@ import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.data.translations.en_us.GemstyneEnglishLangProvider;
 import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.fluid.GemstyneFluids;
-import lotus.gemstyne.item.*;
 import lotus.gemstyne.item.equipment.GemstyneCraftingItems;
 import lotus.gemstyne.item.equipment.GemstyneGearItems;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -25,7 +25,7 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneCraftingItems.getImbuedRod(), "Imbued Rod");
         translationBuilder.add(GemstyneGearItems.getImbuedFeather(), "Imbued Feather");
 
-        translationBuilder.add(GemstyneItemGroup.GEMSTYNE.toString(), "Gemstyne");
+        translationBuilder.add(GemstyneCreativeGroup.GEMSTYNE.toString(), "Gemstyne");
         translationBuilder.add(GemstyneFluids.LIQUID_MORKITE_BUCKET, "Liquid Morkite Bucket");
 
         // ======

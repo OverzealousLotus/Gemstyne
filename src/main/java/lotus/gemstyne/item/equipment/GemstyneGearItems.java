@@ -7,8 +7,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 
 public class GemstyneGearItems {
-    private static final Item IMBUED_FEATHER = GemstyneItemHandler.registerItem("imbued_feather",
-            new ImbuedFeatherItem(new FabricItemSettings().maxCount(1).maxDamage(20)));
+    private static final Item IMBUED_FEATHER = GemstyneItemHandler.assignAndRegisterItem(
+            new ImbuedFeatherItem(new FabricItemSettings().maxCount(1).maxDamage(20)),
+            "imbued_feather");
 
     public static Item getImbuedFeather() {
         return IMBUED_FEATHER;

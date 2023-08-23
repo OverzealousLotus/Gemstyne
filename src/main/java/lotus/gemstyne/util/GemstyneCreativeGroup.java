@@ -1,14 +1,14 @@
-package lotus.gemstyne.item;
+package lotus.gemstyne.util;
 
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.fluid.GemstyneFluids;
-import lotus.gemstyne.item.equipment.GemstyneArmorItems;
+import lotus.gemstyne.armor.GemstyneArmorItems;
 import lotus.gemstyne.item.equipment.GemstyneCraftingItems;
 import lotus.gemstyne.item.equipment.GemstyneGearItems;
-import lotus.gemstyne.item.equipment.GemstyneToolItems;
+import lotus.gemstyne.tool.GemstyneToolItems;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -18,7 +18,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class GemstyneItemGroup {
+public class GemstyneCreativeGroup {
     public static final ItemGroup GEMSTYNE = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Gemstyne.MOD_ID, "gemstyne"),
             FabricItemGroup.builder().displayName(Text.translatable("Gemstyne"))
@@ -26,6 +26,10 @@ public class GemstyneItemGroup {
                         // =====
                         // <=====| Overworld Ores |=====>
                         // =====
+                        entries.add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE);
+
+                        entries.add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
+
                         entries.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
                         entries.add(GemstyneOreBlocks.MORKITE_BLOCK);
 
@@ -95,25 +99,25 @@ public class GemstyneItemGroup {
                         entries.add(GemstyneOreItems.MOCHITE);
 
                         entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.tinBlock());
-                        entries.add(GemstyneOreItems.RAW_TIN);
-                        entries.add(GemstyneOreItems.TIN_INGOT);
+                        entries.add(GemstyneOreItems.TIN.RAW);
+                        entries.add(GemstyneOreItems.TIN.INGOT);
 
                         entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock());
-                        entries.add(GemstyneOreItems.RAW_URANIUM);
-                        entries.add(GemstyneOreItems.URANIUM_CHUNK);
-                        entries.add(GemstyneOreItems.URANIUM_INGOT);
+                        entries.add(GemstyneOreItems.URANIUM.RAW);
+                        entries.add(GemstyneOreItems.URANIUM.CHUNK);
+                        entries.add(GemstyneOreItems.URANIUM.INGOT);
 
                         // =====
                         // <=====| Nether Harvested Ore |=====>
                         // =====
                         entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.aldusBlock());
-                        entries.add(GemstyneOreItems.RAW_ALDUS);
-                        entries.add(GemstyneOreItems.ALDUS_INGOT);
+                        entries.add(GemstyneOreItems.ALDUS.RAW);
+                        entries.add(GemstyneOreItems.ALDUS.INGOT);
 
                         entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock());
-                        entries.add(GemstyneOreItems.RAW_CRIMONITE);
-                        entries.add(GemstyneOreItems.CRIMONITE_CHUNK);
-                        entries.add(GemstyneOreItems.CRIMONITE_INGOT);
+                        entries.add(GemstyneOreItems.CRIMONITE.RAW);
+                        entries.add(GemstyneOreItems.CRIMONITE.CHUNK);
+                        entries.add(GemstyneOreItems.CRIMONITE.INGOT);
 
                         // =====
                         // <=====| End Harvested Ore |=====>
@@ -122,9 +126,9 @@ public class GemstyneItemGroup {
                         // =====
                         // <=====| Alloys |=====>
                         // =====
-                        entries.add(GemstyneOreItems.BRONZE_INGOT);
-                        entries.add(GemstyneOreItems.BRONZE_NUGGET);
-                        entries.add(GemstyneOreItems.BRONZE_RING);
+                        entries.add(GemstyneOreItems.BRONZE.INGOT);
+                        entries.add(GemstyneOreItems.BRONZE.NUGGET);
+                        entries.add(GemstyneOreItems.BRONZE.CHAIN);
 
                         // =====
                         // <=====| Armors |=====>
@@ -178,8 +182,8 @@ public class GemstyneItemGroup {
 
                         entries.add(GemstyneCraftingItems.getImbuedRod());
                     }).build());
-    public static void registerItemGroups() {
-        Gemstyne.LOGGER.info("Registering Item Group(s)...");
+    public static void registerGroups() {
+        Gemstyne.LOGGER.info("Registering Gemstyne Group(s)...");
     }
 
 

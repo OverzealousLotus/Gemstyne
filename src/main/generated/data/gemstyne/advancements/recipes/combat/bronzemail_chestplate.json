@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bronze_ring": {
+    "has_bronze_chain": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstyne:bronze_ring"
+              "gemstyne:bronze_chain"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_bronze_ring",
+      "has_bronze_chain",
       "has_the_recipe"
     ]
   ],
