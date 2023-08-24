@@ -11,8 +11,8 @@ import net.minecraft.util.math.intprovider.IntProvider;
 public class AfflictiveOre extends AfflictiveBlock {
     private final IntProvider experiencedDropped;
 
-    public AfflictiveOre(Settings settings, StatusEffect effect, int base_duration, int raw_duration, int pure_duration, GemstyneBlockTypes type, IntProvider experience) {
-        super(settings, effect, base_duration, raw_duration, pure_duration, type);
+    public AfflictiveOre(Settings settings, StatusEffect effect, int duration, GemstyneBlockTypes type, IntProvider experience) {
+        super(settings, effect, duration, type);
         this.experiencedDropped = experience;
     }
 

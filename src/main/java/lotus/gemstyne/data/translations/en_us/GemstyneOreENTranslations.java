@@ -49,25 +49,25 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Ores =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.MOCHITE_ORE, "Mochite Ore");
-        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE, "Deepslate Mochite Ore");
-        translationBuilder.add(GemstyneOreBlocks.RAW_MOCHITE_BLOCK, "Raw Mochite Block");
+        translationBuilder.add(GemstyneOreBlocks.MOCHITE.stoneOre, "Mochite Ore");
+        translationBuilder.add(GemstyneOreBlocks.MOCHITE.deepslateOre, "Deepslate Mochite Ore");
+        translationBuilder.add(GemstyneOreBlocks.MOCHITE.rawBlock, "Raw Mochite Block");
 
-        translationBuilder.add(GemstyneOreBlocks.TIN_ORE, "Tin Ore");
-        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_TIN_ORE, "Deepslate Tin Ore");
-        translationBuilder.add(GemstyneOreBlocks.RAW_TIN_BLOCK, "Raw Tin Block");
+        translationBuilder.add(GemstyneOreBlocks.TIN.stoneOre, "Tin Ore");
+        translationBuilder.add(GemstyneOreBlocks.TIN.deepslateOre, "Deepslate Tin Ore");
+        translationBuilder.add(GemstyneOreBlocks.TIN.rawBlock, "Raw Tin Block");
 
-        translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE, "Deepslate Uranium Ore");
-        translationBuilder.add(GemstyneOreBlocks.RAW_URANIUM_BLOCK, "Raw Uranium Block");
+        translationBuilder.add(GemstyneOreBlocks.URANIUM.deepslateOre, "Deepslate Uranium Ore");
+        translationBuilder.add(GemstyneOreBlocks.URANIUM.rawBlock, "Raw Uranium Block");
 
         translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
         translationBuilder.add(GemstyneOreBlocks.MORKITE_BLOCK, "Morkite Block");
 
-        translationBuilder.add(GemstyneOreBlocks.NETHER_CRIMONITE_ORE, "Nether Crimonite Ore");
-        translationBuilder.add(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK, "Raw Crimonite Block");
+        translationBuilder.add(GemstyneOreBlocks.CRIMONITE.netherOre, "Nether Crimonite Ore");
+        translationBuilder.add(GemstyneOreBlocks.CRIMONITE.rawBlock, "Raw Crimonite Block");
 
-        translationBuilder.add(GemstyneOreBlocks.NETHER_ALDUS_ORE, "Nether Aldus Ore");
-        translationBuilder.add(GemstyneOreBlocks.RAW_ALDUS_BLOCK, "Raw Aldus Block");
+        translationBuilder.add(GemstyneOreBlocks.ALDUS.netherOre, "Nether Aldus Ore");
+        translationBuilder.add(GemstyneOreBlocks.ALDUS.rawBlock, "Raw Aldus Block");
 
         translationBuilder.add(
                 GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE,

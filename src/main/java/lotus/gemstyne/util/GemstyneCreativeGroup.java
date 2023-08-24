@@ -1,7 +1,6 @@
 package lotus.gemstyne.util;
 
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.GemstyneDecorBlocks;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.fluid.GemstyneFluids;
@@ -33,25 +32,25 @@ public class GemstyneCreativeGroup {
                         entries.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
                         entries.add(GemstyneOreBlocks.MORKITE_BLOCK);
 
-                        entries.add(GemstyneOreBlocks.MOCHITE_ORE);
-                        entries.add(GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE);
-                        entries.add(GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
+                        entries.add(GemstyneOreBlocks.MOCHITE.stoneOre);
+                        entries.add(GemstyneOreBlocks.MOCHITE.deepslateOre);
+                        entries.add(GemstyneOreBlocks.MOCHITE.rawBlock);
 
-                        entries.add(GemstyneOreBlocks.TIN_ORE);
-                        entries.add(GemstyneOreBlocks.DEEPSLATE_TIN_ORE);
-                        entries.add(GemstyneOreBlocks.RAW_TIN_BLOCK);
+                        entries.add(GemstyneOreBlocks.TIN.stoneOre);
+                        entries.add(GemstyneOreBlocks.TIN.deepslateOre);
+                        entries.add(GemstyneOreBlocks.TIN.rawBlock);
 
-                        entries.add(GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE);
-                        entries.add(GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+                        entries.add(GemstyneOreBlocks.URANIUM.deepslateOre);
+                        entries.add(GemstyneOreBlocks.URANIUM.rawBlock);
 
                         // =====
                         // <=====| Nether Ores |=====>
                         // =====
-                        entries.add(GemstyneOreBlocks.NETHER_ALDUS_ORE);
-                        entries.add(GemstyneOreBlocks.RAW_ALDUS_BLOCK);
+                        entries.add(GemstyneOreBlocks.ALDUS.netherOre);
+                        entries.add(GemstyneOreBlocks.ALDUS.rawBlock);
 
-                        entries.add(GemstyneOreBlocks.NETHER_CRIMONITE_ORE);
-                        entries.add(GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
+                        entries.add(GemstyneOreBlocks.CRIMONITE.netherOre);
+                        entries.add(GemstyneOreBlocks.CRIMONITE.rawBlock);
                         // =====
                         // <=====| End Ores |=====>
                         // =====
@@ -94,15 +93,15 @@ public class GemstyneCreativeGroup {
 
                         entries.add(GemstyneOreItems.MORKITE);
 
-                        entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.mochiteBlock());
+                        entries.add(GemstyneOreBlocks.MOCHITE.pureBlock);
                         entries.add(GemstyneOreItems.RAW_MOCHITE);
                         entries.add(GemstyneOreItems.MOCHITE);
 
-                        entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.tinBlock());
+                        entries.add(GemstyneOreBlocks.TIN.pureBlock);
                         entries.add(GemstyneOreItems.TIN.RAW);
                         entries.add(GemstyneOreItems.TIN.INGOT);
 
-                        entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock());
+                        entries.add(GemstyneOreBlocks.URANIUM.pureBlock);
                         entries.add(GemstyneOreItems.URANIUM.RAW);
                         entries.add(GemstyneOreItems.URANIUM.CHUNK);
                         entries.add(GemstyneOreItems.URANIUM.INGOT);
@@ -110,11 +109,11 @@ public class GemstyneCreativeGroup {
                         // =====
                         // <=====| Nether Harvested Ore |=====>
                         // =====
-                        entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.aldusBlock());
+                        entries.add(GemstyneOreBlocks.ALDUS.pureBlock);
                         entries.add(GemstyneOreItems.ALDUS.RAW);
                         entries.add(GemstyneOreItems.ALDUS.INGOT);
 
-                        entries.add(GemstyneDecorBlocks.DECOR_BLOCKS.crimoniteBlock());
+                        entries.add(GemstyneOreBlocks.CRIMONITE.pureBlock);
                         entries.add(GemstyneOreItems.CRIMONITE.RAW);
                         entries.add(GemstyneOreItems.CRIMONITE.CHUNK);
                         entries.add(GemstyneOreItems.CRIMONITE.INGOT);

@@ -8,8 +8,6 @@ import net.minecraft.block.MapColor;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.sound.BlockSoundGroup;
 
-import static lotus.gemstyne.block.GemstyneBlockHandler.registerBlock;
-
 public final class GemstyneMineralBlocks {
     private static final FabricBlockSettings COMPRESSED_FEATURES = FabricBlockSettings.create()
             .requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.DEEPSLATE)
@@ -19,24 +17,24 @@ public final class GemstyneMineralBlocks {
             // =====
             // <===== Mineral Blocks =====>
             // =====
-            registerBlock("compressed_andesite",
+            GemstyneBlockHandler.assignAndRegisterBlock("compressed_andesite",
                     new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.STONE_GRAY))),
-            registerBlock("compressed_diorite",
+            GemstyneBlockHandler.assignAndRegisterBlock("compressed_diorite",
                     new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.LIGHT_GRAY))),
-            registerBlock("compressed_granite",
+            GemstyneBlockHandler.assignAndRegisterBlock("compressed_granite",
                     new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN))),
 
-            registerBlock("compact_dirt",
+            GemstyneBlockHandler.assignAndRegisterBlock("compact_dirt",
                     new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN)
                             .strength(1.5f, 3.0f).sounds(BlockSoundGroup.ROOTED_DIRT))),
 
-            registerBlock("gabbro",
+            GemstyneBlockHandler.assignAndRegisterBlock("gabbro",
                     new Block(FabricBlockSettings.create().mapColor(MapColor.STONE_GRAY).instrument(Instrument.BASS)
                             .requiresTool().strength(1.5f, 3.0f).sounds(BlockSoundGroup.TUFF))),
-            registerBlock("halite",
+            GemstyneBlockHandler.assignAndRegisterBlock("halite",
                     new Block(FabricBlockSettings.create().mapColor(MapColor.PINK).instrument(Instrument.BELL)
                             .requiresTool().strength(0.75f, 1.5f).sounds(BlockSoundGroup.CALCITE))),
-            registerBlock("pumice",
+            GemstyneBlockHandler.assignAndRegisterBlock("pumice",
                     new Block(FabricBlockSettings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.BASS)
                             .requiresTool().strength(1.0f, 1.0f).sounds(BlockSoundGroup.BASALT)))
     );

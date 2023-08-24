@@ -25,23 +25,23 @@ public final class GemstyneOreModels {
                 GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.MOCHITE_ORE);
+                GemstyneOreBlocks.MOCHITE.stoneOre);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.DEEPSLATE_MOCHITE_ORE);
+                GemstyneOreBlocks.MOCHITE.deepslateOre);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.RAW_MOCHITE_BLOCK);
+                GemstyneOreBlocks.MOCHITE.rawBlock);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.TIN_ORE);
+                GemstyneOreBlocks.TIN.stoneOre);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.DEEPSLATE_TIN_ORE);
+                GemstyneOreBlocks.TIN.deepslateOre);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.RAW_TIN_BLOCK);
+                GemstyneOreBlocks.TIN.rawBlock);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.DEEPSLATE_URANIUM_ORE);
+                GemstyneOreBlocks.URANIUM.deepslateOre);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.RAW_URANIUM_BLOCK);
+                GemstyneOreBlocks.URANIUM.rawBlock);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
                 GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
@@ -52,14 +52,14 @@ public final class GemstyneOreModels {
         // <===== Nether =====>
         // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.NETHER_CRIMONITE_ORE);
+                GemstyneOreBlocks.CRIMONITE.netherOre);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.RAW_CRIMONITE_BLOCK);
+                GemstyneOreBlocks.CRIMONITE.rawBlock);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.NETHER_ALDUS_ORE);
+                GemstyneOreBlocks.ALDUS.netherOre);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.RAW_ALDUS_BLOCK);
+                GemstyneOreBlocks.ALDUS.rawBlock);
 
         // =====
         // <===== Ore Extensions =====>
