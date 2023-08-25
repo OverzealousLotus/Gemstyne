@@ -1,5 +1,7 @@
 package lotus.gemstyne.util;
 
+import io.wispforest.owo.itemgroup.Icon;
+import io.wispforest.owo.itemgroup.OwoItemGroup;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.GemstyneMineralBlocks;
 import lotus.gemstyne.block.GemstyneOreBlocks;
@@ -103,7 +105,7 @@ public class GemstyneCreativeGroup {
 
                         entries.add(GemstyneOreBlocks.URANIUM.pureBlock);
                         entries.add(GemstyneOreItems.URANIUM.RAW);
-                        entries.add(GemstyneOreItems.URANIUM.CHUNK);
+                        entries.add(GemstyneOreItems.URANIUM.LUMP);
                         entries.add(GemstyneOreItems.URANIUM.INGOT);
 
                         // =====
@@ -115,7 +117,7 @@ public class GemstyneCreativeGroup {
 
                         entries.add(GemstyneOreBlocks.CRIMONITE.pureBlock);
                         entries.add(GemstyneOreItems.CRIMONITE.RAW);
-                        entries.add(GemstyneOreItems.CRIMONITE.CHUNK);
+                        entries.add(GemstyneOreItems.CRIMONITE.LUMP);
                         entries.add(GemstyneOreItems.CRIMONITE.INGOT);
 
                         // =====
@@ -181,8 +183,14 @@ public class GemstyneCreativeGroup {
 
                         entries.add(GemstyneCraftingItems.getImbuedRod());
                     }).build());
+
+    public static final OwoItemGroup GEMSTYNE_GROUP = OwoItemGroup.builder(GemstyneRegistry.id("main"),
+            () -> Icon.of(GemstyneOreItems.FIRE_OPAL)).build();
+
     public static void registerGroups() {
         Gemstyne.LOGGER.info("Registering Gemstyne Group(s)...");
+        GEMSTYNE_GROUP.initialize();
+        Gemstyne.LOGGER.info("Successfully registered Gemstyne Group(s)!");
     }
 
 

@@ -6,7 +6,11 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,15 +23,17 @@ import java.util.Optional;
  */
 public class RichOre extends BlockWithEntity implements BlockEntityProvider {
     private final int breakStates;
+    private final UniformIntProvider experience;
 
     /**
      *
      * @param settings {@link net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings}
      * @param breakStates The amount of times this can be mined before being destroyed.
      */
-    public RichOre(Settings settings, int breakStates) {
+    public RichOre(Settings settings, int breakStates, UniformIntProvider experience) {
         super(settings);
         this.breakStates = breakStates;
+        this.experience = experience;
     }
 
     /**
@@ -51,13 +57,13 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
      */
     @Override
     public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
-        if (!world.isClient()) {
-            final RichOreBlockEntity entity = getDeepOreEntity(world, pos);
+        if (world.isClient()) return; // If event fired on Client, return early.
 
-            if (entity.isNew()) {
-                entity.setCurrentStates(breakStates - 1);
-                entity.setNewness(false);
-            }
+        final RichOreBlockEntity entity = getDeepOreEntity(world, pos);
+
+        if (entity.isNew()) {
+            entity.setCurrentStates(breakStates - 1);
+            entity.setNewness(false);
         }
     }
 
@@ -70,17 +76,47 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
      */
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        if (!world.isClient()) {  // Check to see if this event fired on the Client.
-            final RichOreBlockEntity entity = getDeepOreEntity(world, pos);
+        if (world.isClient()) return; // If event fired on Client, return early.`   `
 
-            if (entity.getCurrentStates() <= 0) {  // Check to see if currentStates is less than or equal to 0.
-                world.setBlockState(pos, newState);  // If so, destroy block.
-            } else {
-                entity.setCurrentStates(entity.getCurrentStates() - 1);  // Otherwise, decrease and reset.
-                dropStacks(state, world, pos);
-                world.setBlockState(pos, state);
-            }
+        final RichOreBlockEntity entity = getDeepOreEntity(world, pos);
+
+        if (entity.getCurrentStates() <= 0) {  // Check to see if currentStates is less than or equal to 0.
+            world.setBlockState(pos, newState);  // If so, destroy block.
+        } else {
+            entity.setCurrentStates(entity.getCurrentStates() - 1);  // Otherwise, decrease and reset.
+            dropStacks(state, world, pos);
+            world.setBlockState(pos, state);
         }
+    }
+
+    /**
+     * Used to drop experience when broken.
+     * @param state Current {@link BlockState}
+     * @param world {@link World} where stacks drop.
+     * @param pos Current {@link BlockPos}
+     * @param tool Tool used to cause the drop.
+     * @param dropExperience Whether experience should be dropped.
+     */
+    @Override
+    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
+        dropExperienceWhenMined(world, pos, tool, this.experience);
+        super.onStacksDropped(state, world, pos, tool, dropExperience);
+    }
+
+    /**
+     * Used to check if Player is in creative. If so, states are set to zero.
+     * No Client check is provided, as this would break particle generation when the block
+     * is broken. Particles are generated mostly on the Client's side.
+     * @param world {@link World} where the break occurs.
+     * @param pos Current {@link BlockPos}
+     * @param state Current {@link BlockState}
+     * @param player {@link PlayerEntity} who broke the block.
+     */
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        if (player.isCreative()) getDeepOreEntity(world, pos).setCurrentStates(0);
+
+        super.onBreak(world, pos, state, player);
     }
 
     /* Block Entity Stuff! */

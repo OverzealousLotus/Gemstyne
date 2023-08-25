@@ -1,10 +1,11 @@
 package lotus.gemstyne.item.spelunking;
 
+import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.item.GemstyneFlexibleItemSet;
-import lotus.gemstyne.item.GemstyneIntricateItemSet;
 import lotus.gemstyne.item.GemstyneItemHandler;
 import lotus.gemstyne.item.GemstyneItemSet;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -24,22 +25,22 @@ public final class GemstyneOreItems {
     // =====
     // <=====| Ore Sets |=====>
     // =====
-    public static final GemstyneItemSet ALDUS = new GemstyneItemSet(new FabricItemSettings(), "aldus");
-    public static final GemstyneFlexibleItemSet BRONZE = new GemstyneFlexibleItemSet(
-            new FabricItemSettings(), "bronze");
-    public static final GemstyneIntricateItemSet CRIMONITE = new GemstyneIntricateItemSet(
-            new FabricItemSettings(), "crimonite");
-    public static final GemstyneItemSet TIN = new GemstyneItemSet(new FabricItemSettings(), "tin");
-    public static final GemstyneIntricateItemSet URANIUM = new GemstyneIntricateItemSet(
-            new FabricItemSettings(), "uranium");
+    public static final GemstyneItemSet ALDUS = new GemstyneItemSet("aldus").createDefaultItemSet();
+    public static final GemstyneItemSet BRONZE = new GemstyneItemSet("bronze")
+            .createDefaultItemSet().createChain();
+    public static final GemstyneItemSet CRIMONITE = new GemstyneItemSet("crimonite")
+            .createDefaultItemSet().createLump();
+    public static final GemstyneItemSet TIN = new GemstyneItemSet("tin").createDefaultItemSet();
+    public static final GemstyneItemSet URANIUM = new GemstyneItemSet("uranium")
+            .createDefaultItemSet().createLump();
 
     // =====
     // <=====| Singleton Ores |=====>
     // =====
     public static final Item RAW_MOCHITE = GemstyneItemHandler.assignAndRegisterItem(
             new Item(new FabricItemSettings()), "raw_mochite");
-    public static final Item MOCHITE = GemstyneItemHandler.assignAndRegisterItem(
-            new Item(new FabricItemSettings().food(MOCHITE_FOOD)), "mochite");
+    public static final Item MOCHITE = GemstyneRegistry.designate("mochite",
+            new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE_GROUP).food(MOCHITE_FOOD));
 
     // ======
     // <===== Crystals =====>

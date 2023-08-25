@@ -9,6 +9,7 @@ public abstract class GemstyneEnglishLangProvider extends FabricLanguageProvider
     }
 
     public static void coupleAndGenerateEnglishLang(TranslationBuilder translationBuilder) {
+        translationBuilder.add("itemGroup.gemstyne.main", "Gemstyne OwoGroup");
         GemstyneOreENTranslations.generateEnglishOreTranslations(translationBuilder);
         GemstyneEquipmentENTranslations.generateEnglishEquipmentTranslations(translationBuilder);
     }

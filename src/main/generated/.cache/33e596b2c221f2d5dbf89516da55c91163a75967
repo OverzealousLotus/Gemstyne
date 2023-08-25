@@ -1,10 +1,10 @@
-// 1.20.1	2023-08-24T02:14:45.613520712	Gemstyne/Recipes
+// 1.20.1	2023-08-25T02:18:57.884742309	Gemstyne/Recipes
 341ef4d17e28e1dc02ba9dae087d5ee1b135008d data/gemstyne/advancements/recipes/combat/rendfire_boots.json
 4bbf1e98aa4e4e76325997f038cf872fcd597c51 data/gemstyne/advancements/recipes/tools/aldus_shovel.json
 cceeaa753c8260537de9f47b7d1ca44e1ecb77e1 data/gemstyne/advancements/recipes/tools/bronze_shovel.json
 8a67d923f60b482127904355dfb9ea36d739ce73 data/gemstyne/recipes/fire_opal.json
-3cd9b536ecd7be7a5cf673c87eb2d45aa40ea468 data/gemstyne/recipes/bronze_chain.json
 92268a252b4abe346ee655d494d531defec07fb4 data/gemstyne/advancements/recipes/combat/bronzemail_leggings.json
+3cd9b536ecd7be7a5cf673c87eb2d45aa40ea468 data/gemstyne/recipes/bronze_chain.json
 7792899f9171f169b0c5f4240d4aae32018c0675 data/gemstyne/advancements/recipes/building_blocks/uranium_block.json
 54cb15d994a5dd2f406c94e8c41c5afc7dbfe353 data/gemstyne/advancements/recipes/combat/aldus_sword.json
 4b2877d5bbdc1b059e89826df7dd5561eab3036d data/gemstyne/advancements/recipes/building_blocks/raw_crimonite.json

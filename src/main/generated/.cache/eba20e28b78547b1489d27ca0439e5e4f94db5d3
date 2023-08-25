@@ -1,13 +1,13 @@
-// 1.20.1	2023-08-24T02:14:45.604652201	Gemstyne/Tags for minecraft:block
+// 1.20.1	2023-08-25T02:18:57.877030028	Gemstyne/Tags for minecraft:block
 6897b91683f2d0d6d02a185d6576c3b373d4a7d7 data/minecraft/tags/blocks/compressed_granite_ore_replaceables.json
-a3dc40ca20cdeb2c74391c44e4ec72acbe76ae09 data/minecraft/tags/blocks/mineable/shovel.json
 2be51b6565c0573894a521816a71a9780e0bd4cb data/minecraft/tags/blocks/compressed_andesite_ore_replaceables.json
-28de1af9d86acab170613efa7686730f080e90ad data/fabric/tags/blocks/needs_tool_level_4.json
+a3dc40ca20cdeb2c74391c44e4ec72acbe76ae09 data/minecraft/tags/blocks/mineable/shovel.json
 e12b0b06e80a7c39fa13ec6bd7c436b38d3caced data/minecraft/tags/blocks/morkite_ore_replaceables.json
+28de1af9d86acab170613efa7686730f080e90ad data/fabric/tags/blocks/needs_tool_level_4.json
 9a7fd8d53fb57acc016f7c4a2d3dcd31151fcf63 data/minecraft/tags/blocks/needs_iron_tool.json
 80e2eb8b98e15f6b3707cbea4b3229abcc4fddfa data/minecraft/tags/blocks/mochite_ore_replaceables.json
 1d3836ed151de29612504647144794ad67decea4 data/minecraft/tags/blocks/needs_stone_tool.json
 1b1183e22270dba1848a4410577b5d84d0a33a9b data/minecraft/tags/blocks/tin_ore_replaceables.json
 2b9ca1e37b8fb81e240640c076701f57efea4eed data/minecraft/tags/blocks/uranium_ore_replaceables.json
-4a8fbb7f34cbcaf914854a81e80eed2a33893e55 data/minecraft/tags/blocks/mineable/pickaxe.json
 39a8e94eba49f7a5358fd1cf0c969d74f62d7a61 data/minecraft/tags/blocks/needs_diamond_tool.json
+4a8fbb7f34cbcaf914854a81e80eed2a33893e55 data/minecraft/tags/blocks/mineable/pickaxe.json

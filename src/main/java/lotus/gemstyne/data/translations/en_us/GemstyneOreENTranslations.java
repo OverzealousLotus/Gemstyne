@@ -36,10 +36,10 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreItems.BRONZE.CHAIN, "Bronze Ring");
         translationBuilder.add(GemstyneOreItems.BRONZE.NUGGET, "Bronze Nugget");
 
-        translationBuilder.add(GemstyneOreItems.URANIUM.CHUNK, "Uranium Chunk");
+        translationBuilder.add(GemstyneOreItems.URANIUM.LUMP, "Uranium Chunk");
         translationBuilder.add(GemstyneOreItems.URANIUM.INGOT, "Uranium Ingot");
 
-        translationBuilder.add(GemstyneOreItems.CRIMONITE.CHUNK, "Crimonite Chunk");
+        translationBuilder.add(GemstyneOreItems.CRIMONITE.LUMP, "Crimonite Chunk");
         translationBuilder.add(GemstyneOreItems.CRIMONITE.INGOT, "Crimonite Ingot");
 
         translationBuilder.add(GemstyneOreItems.ALDUS.INGOT, "Aldus Ingot");

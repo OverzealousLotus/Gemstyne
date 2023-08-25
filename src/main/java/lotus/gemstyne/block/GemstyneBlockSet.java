@@ -3,6 +3,7 @@ package lotus.gemstyne.block;
 import lotus.gemstyne.util.GemstyneBlockTypes;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.sound.BlockSoundGroup;
@@ -19,13 +20,12 @@ public class GemstyneBlockSet {
     private BlockSoundGroup currentSounds = BlockSoundGroup.STONE;
     private float currentHardness = 3.0f;
     private float currentResistance = 3.0f;
-    private UniformIntProvider experience;
-    private FabricBlockSettings currentSettings;
+    private UniformIntProvider experience = UniformIntProvider.create(2, 5);
+    private FabricBlockSettings currentSettings = FabricBlockSettings.copyOf(Blocks.STONE);
     private final String SET_NAME;
 
-    public GemstyneBlockSet(FabricBlockSettings settings, String setName) {
+    public GemstyneBlockSet(String setName) {
         this.SET_NAME = setName;
-        this.currentSettings = settings;
     }
 
     /**
@@ -63,7 +63,7 @@ public class GemstyneBlockSet {
     }
 
     /**
-     * Sets {@link GemstyneBlockSet}'s experience. If unset, will return {@link NullPointerException}
+     * Sets experience of {@link GemstyneBlockSet}.
      * @param experience Experience dropped by all ores in set.
      * @return Returns an instance of itself.
      */
@@ -72,6 +72,11 @@ public class GemstyneBlockSet {
         return this;
     }
 
+    /**
+     * Sets {@link StatusEffect} of {@link GemstyneBlockSet}
+     * @param effect {@link StatusEffect}
+     * @return Instance of self.
+     */
     public GemstyneBlockSet setEffect(StatusEffect effect) {
         this.effect = effect;
         return this;
@@ -155,8 +160,10 @@ public class GemstyneBlockSet {
 
     public GemstyneBlockSet createDefaultBlockSet(float strength) {
         this.modifyStrength(strength).createOre()
-                .modifyStrength(strength + 1.5f).createOreType(GemstyneBlockTypes.DEEPSLATE_ORE)
+                .modifyStrength(strength + 1.5f)
+                .createOreType(GemstyneBlockTypes.DEEPSLATE_ORE)
                 .createRawBlock()
+                .modifyStrength(strength + 2.5f)
                 .createPureBlock();
         return this;
     }
@@ -165,6 +172,7 @@ public class GemstyneBlockSet {
         this.modifyStrength(strength).createOreType(GemstyneBlockTypes.NETHER_ORE)
                 .modifyStrength(strength + 1.5f)
                 .createRawBlock()
+                .modifyStrength(strength + 2.5f)
                 .createPureBlock();
         return this;
     }

@@ -30,19 +30,23 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Overworld Ores =====>
     // =====
-    public static final GemstyneBlockSet MOCHITE = new GemstyneBlockSet(FabricBlockSettings.create(), "mochite")
+    public static final GemstyneBlockSet MOCHITE = new GemstyneBlockSet("mochite")
             .setExperience(UniformIntProvider.create(2, 7))
             .createDefaultBlockSet(3.0f);
 
-    public static final Block NEFARIUM_ORE = GemstyneBlockHandler.assignAndRegisterBlock("nefarium_ore",
+    /*public static final Block NEFARIUM_ORE = GemstyneBlockHandler.assignAndRegisterBlock("nefarium_ore",
             new VolatileOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(5, 10))
+    );*/
+
+    public static final Block NEFARIUM_ORE = GemstyneBlockHandler.assignAndRegisterBlock("nefarium_ore",
+            new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), 5, UniformIntProvider.create(2, 5))
     );
 
-    public static final GemstyneBlockSet TIN = new GemstyneBlockSet(FabricBlockSettings.create(), "tin")
+    public static final GemstyneBlockSet TIN = new GemstyneBlockSet("tin")
             .setExperience(UniformIntProvider.create(2, 5))
             .createDefaultBlockSet(3.0f);
 
-    public static final GemstyneBlockSet URANIUM = new GemstyneBlockSet(FabricBlockSettings.copyOf(Blocks.DEEPSLATE), "uranium")
+    public static final GemstyneBlockSet URANIUM = new GemstyneBlockSet("uranium")
             .setExperience(UniformIntProvider.create(5, 15)).setEffect(GemstyneEffects.IRRADIATE)
             .modifyStrength(6.0f, 5.0f)
             .createOreType(GemstyneBlockTypes.DEEPSLATE_ORE, 30)
@@ -63,11 +67,11 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Nether Ores =====>
     // =====
-    public static final GemstyneBlockSet ALDUS = new GemstyneBlockSet(FabricBlockSettings.copyOf(Blocks.NETHERRACK), "aldus")
+    public static final GemstyneBlockSet ALDUS = new GemstyneBlockSet("aldus")
             .setExperience(UniformIntProvider.create(2, 5))
             .createDefaultNetherBlockSet(4.0f);
 
-    public static final GemstyneBlockSet CRIMONITE = new GemstyneBlockSet(FabricBlockSettings.copyOf(Blocks.NETHERRACK), "crimonite")
+    public static final GemstyneBlockSet CRIMONITE = new GemstyneBlockSet("crimonite")
             .setExperience(UniformIntProvider.create(2, 5)).setEffect(StatusEffects.WITHER)
             .modifyStrength(5.0f, 3.0f)
             .createOreType(GemstyneBlockTypes.NETHER_ORE, 60)

@@ -95,5 +95,6 @@
   "item.gemstyne.tin_ingot": "Tin Ingot",
   "item.gemstyne.uranium_chunk": "Uranium Chunk",
   "item.gemstyne.uranium_ingot": "Uranium Ingot",
-  "net.minecraft.item.ItemGroup@583064ea": "Gemstyne"
+  "itemGroup.gemstyne.main": "Gemstyne OwoGroup",
+  "net.minecraft.item.ItemGroup@3bc14409": "Gemstyne"
 }

@@ -91,10 +91,10 @@ public final class GemstyneOreModels {
 
         itemModelGenerator.register(GemstyneOreItems.TIN.INGOT, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.URANIUM.CHUNK, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.URANIUM.LUMP, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.URANIUM.INGOT, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.CRIMONITE.CHUNK, Models.GENERATED);
+        itemModelGenerator.register(GemstyneOreItems.CRIMONITE.LUMP, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.CRIMONITE.INGOT, Models.GENERATED);
 
         itemModelGenerator.register(GemstyneOreItems.ALDUS.INGOT, Models.GENERATED);

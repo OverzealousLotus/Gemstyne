@@ -1,11 +1,13 @@
 package lotus.gemstyne.block.custom;
 
+import io.wispforest.owo.particles.ClientParticles;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.intprovider.IntProvider;
@@ -18,7 +20,22 @@ public class VolatileOre extends ExperienceDroppingBlock {
     }
 
     @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        int chance = world.getDimension().ultrawarm() ? 18 : 5;
+
+        if (random.nextInt(100) <= chance) {
+            ClientParticles.setParticleCount(10);
+            ClientParticles.spawnCenteredOnBlock(ParticleTypes.SMOKE, world, pos, 3.5D);
+
+        }
+
+        super.randomDisplayTick(state, world, pos, random);
+    }
+
+    @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        if (world.isClient()) return; // Checks whether this is client-side. If so, return early.
+
         int chance = world.getDimension().ultrawarm() ? 35 : 7; // Generate base chance based on current dimension.
         Random random = Random.create(); // Create Random Number generator.
         ItemStack tool = player.getMainHandStack(); // Bring Player's current main hand item into scope.
@@ -33,10 +50,8 @@ public class VolatileOre extends ExperienceDroppingBlock {
 
         // Determine if block should explode.
         if (random.nextInt(100) <= chance && !player.isCreative()) {
-            if (!world.isClient()) {
-                world.removeBlock(pos, false);
-                goCritical(world, pos);
-            }
+            world.removeBlock(pos, false);
+            goCritical(world, pos);
         }
 
         super.onBreak(world, pos, state, player);

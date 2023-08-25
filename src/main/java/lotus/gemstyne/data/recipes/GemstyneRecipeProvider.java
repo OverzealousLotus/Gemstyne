@@ -33,9 +33,9 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.RAW_MOCHITE),
                 GemstyneOreItems.MOCHITE, 200, 100, 0.5f);
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.URANIUM.RAW),
-                GemstyneOreItems.URANIUM.CHUNK, 300, 150, 1.0f);
+                GemstyneOreItems.URANIUM.LUMP, 300, 150, 1.0f);
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.CRIMONITE.RAW),
-                GemstyneOreItems.CRIMONITE.CHUNK, 350, 175, 1.0f);
+                GemstyneOreItems.CRIMONITE.LUMP, 350, 175, 1.0f);
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.ALDUS.RAW),
                 GemstyneOreItems.ALDUS.INGOT, 200, 100, 1.0f);
 
@@ -90,9 +90,9 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 GemstyneOreItems.BRONZE.INGOT, GemstyneOreItems.BRONZE.NUGGET,
                 "bronze_ingot_to_nugget", "bronze_nugget_to_ingot");
 
-        offerBasicIngotRecipe(exporter, GemstyneOreItems.URANIUM.CHUNK,
+        offerBasicIngotRecipe(exporter, GemstyneOreItems.URANIUM.LUMP,
                 GemstyneOreItems.URANIUM.INGOT, "uranium_chunk_to_ingot");
-        offerBasicIngotRecipe(exporter, GemstyneOreItems.CRIMONITE.CHUNK,
+        offerBasicIngotRecipe(exporter, GemstyneOreItems.CRIMONITE.LUMP,
                 GemstyneOreItems.CRIMONITE.INGOT, "crimonite_chunk_to_ingot");
 
         offerAlloyIngotRecipe(exporter, Items.COPPER_INGOT, GemstyneOreItems.TIN.INGOT,
