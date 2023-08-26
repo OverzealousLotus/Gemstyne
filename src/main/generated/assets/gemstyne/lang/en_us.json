@@ -12,6 +12,7 @@
   "block.gemstyne.deepslate_mochite_ore": "Deepslate Mochite Ore",
   "block.gemstyne.deepslate_morkite_ore": "Deepslate Morkite Ore",
   "block.gemstyne.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.gemstyne.deepslate_torrium_ore": "Deepslate Torrium Ore",
   "block.gemstyne.deepslate_uranium_ore": "Deepslate Uranium Ore",
   "block.gemstyne.fire_opal_block": "Fire Opal Block",
   "block.gemstyne.gabbro": "Gabbro",
@@ -95,6 +96,5 @@
   "item.gemstyne.tin_ingot": "Tin Ingot",
   "item.gemstyne.uranium_chunk": "Uranium Chunk",
   "item.gemstyne.uranium_ingot": "Uranium Ingot",
-  "itemGroup.gemstyne.main": "Gemstyne OwoGroup",
-  "net.minecraft.item.ItemGroup@3bc14409": "Gemstyne"
+  "itemGroup.gemstyne.main": "Gemstyne OwoGroup"
 }

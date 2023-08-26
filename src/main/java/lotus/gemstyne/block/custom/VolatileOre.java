@@ -25,8 +25,7 @@ public class VolatileOre extends ExperienceDroppingBlock {
 
         if (random.nextInt(100) <= chance) {
             ClientParticles.setParticleCount(10);
-            ClientParticles.spawnCenteredOnBlock(ParticleTypes.SMOKE, world, pos, 3.5D);
-
+            ClientParticles.spawnCenteredOnBlock(ParticleTypes.SMOKE, world, pos, 2.0D);
         }
 
         super.randomDisplayTick(state, world, pos, random);
@@ -34,24 +33,24 @@ public class VolatileOre extends ExperienceDroppingBlock {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (world.isClient()) return; // Checks whether this is client-side. If so, return early.
+        if (!world.isClient()) { // Checks whether this is client-side.
+            int chance = world.getDimension().ultrawarm() ? 35 : 7; // Generate base chance based on current dimension.
+            Random random = Random.create(); // Create Random Number generator.
+            ItemStack tool = player.getMainHandStack(); // Bring Player's current main hand item into scope.
 
-        int chance = world.getDimension().ultrawarm() ? 35 : 7; // Generate base chance based on current dimension.
-        Random random = Random.create(); // Create Random Number generator.
-        ItemStack tool = player.getMainHandStack(); // Bring Player's current main hand item into scope.
+            // Check whether their tool has Silk Touch. If so, decrease explosion chance.
+            if (tool.hasEnchantments()) {
+                chance -= (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) * 12);
+            }
 
-        // Check whether their tool has Silk Touch. If so, decrease explosion chance.
-        if (tool.hasEnchantments()) {
-            chance -= (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) * 12);
-        }
+            // Limit explosion chance to 80%
+            chance = MathHelper.clamp(chance, 0, 80);
 
-        // Limit explosion chance to 80%
-        chance = MathHelper.clamp(chance, 0, 80);
-
-        // Determine if block should explode.
-        if (random.nextInt(100) <= chance && !player.isCreative()) {
-            world.removeBlock(pos, false);
-            goCritical(world, pos);
+            // Determine if block should explode.
+            if (random.nextInt(100) <= chance && !player.isCreative()) {
+                world.removeBlock(pos, false);
+                goCritical(world, pos);
+            }
         }
 
         super.onBreak(world, pos, state, player);

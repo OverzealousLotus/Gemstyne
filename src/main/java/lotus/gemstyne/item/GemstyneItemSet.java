@@ -1,5 +1,8 @@
 package lotus.gemstyne.item;
 
+import io.wispforest.owo.itemgroup.OwoItemSettings;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
@@ -15,7 +18,7 @@ public final class GemstyneItemSet {
     public Item INGOT;
     public Item CHAIN;
 
-    private FabricItemSettings currentSettings = new FabricItemSettings();
+    private FabricItemSettings currentSettings = new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE_GROUP);
     private final String SET_NAME;
 
     /**
@@ -35,42 +38,42 @@ public final class GemstyneItemSet {
 
     public GemstyneItemSet createRaw() {
         this.RAW = GemstyneItemHandler.assignItem(this.currentSettings);
-        GemstyneItemHandler.registerItem(this.RAW, "raw_" + this.SET_NAME);
+        GemstyneRegistry.registerItem("raw_" + this.SET_NAME, this.RAW);
 
         return this;
     }
 
     public GemstyneItemSet createNugget() {
         this.NUGGET = GemstyneItemHandler.assignItem(this.currentSettings);
-        GemstyneItemHandler.registerItem(this.NUGGET, this.SET_NAME + "_nugget");
+        GemstyneRegistry.registerItem(this.SET_NAME + "_nugget", this.NUGGET);
 
         return this;
     }
 
     public GemstyneItemSet createLump() {
         this.LUMP = GemstyneItemHandler.assignItem(this.currentSettings);
-        GemstyneItemHandler.registerItem(this.LUMP, this.SET_NAME + "_chunk");
+        GemstyneRegistry.registerItem(this.SET_NAME + "_chunk", this.LUMP);
 
         return this;
     }
 
     public GemstyneItemSet createIngot() {
         this.INGOT = GemstyneItemHandler.assignItem(this.currentSettings);
-        GemstyneItemHandler.registerItem(this.INGOT, this.SET_NAME + "_ingot");
+        GemstyneRegistry.registerItem(this.SET_NAME + "_ingot", this.INGOT);
 
         return this;
     }
 
     public GemstyneItemSet createChain() {
         this.CHAIN = GemstyneItemHandler.assignItem(this.currentSettings);
-        GemstyneItemHandler.registerItem(this.CHAIN, this.SET_NAME + "_chain");
+        GemstyneRegistry.registerItem(this.SET_NAME + "_chain", this.CHAIN);
 
         return this;
     }
 
-    public GemstyneItemSet createDefaultItemSet() {
-        return this.createRaw()
-                .createNugget()
+    public GemstyneItemSet createDefaultItemSet(boolean isAlloy) {
+        if (!isAlloy) this.createRaw();
+        return this.createNugget()
                 .createIngot();
     }
 }

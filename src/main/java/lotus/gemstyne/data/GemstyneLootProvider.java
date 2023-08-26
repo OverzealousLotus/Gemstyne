@@ -34,24 +34,24 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         gemstyneOreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, GemstyneOreItems.FIRE_OPAL);
 
-        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.stoneOre, GemstyneOreItems.RAW_MOCHITE);
-        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.deepslateOre, GemstyneOreItems.RAW_MOCHITE);
+        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.stoneOre(), GemstyneOreItems.RAW_MOCHITE);
+        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.deepslateOre(), GemstyneOreItems.RAW_MOCHITE);
 
         gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.MORKITE);
 
-        gemstyneRichOreDrops(GemstyneOreBlocks.TIN.stoneOre,
+        gemstyneRichOreDrops(GemstyneOreBlocks.TIN.stoneOre(),
                 GemstyneOreItems.TIN.RAW, 1.0f, 3.0f);
-        gemstyneRichOreDrops(GemstyneOreBlocks.TIN.deepslateOre,
+        gemstyneRichOreDrops(GemstyneOreBlocks.TIN.deepslateOre(),
                 GemstyneOreItems.TIN.RAW, 1.0f, 3.0f);
 
-        gemstyneOreDrops(GemstyneOreBlocks.URANIUM.deepslateOre, GemstyneOreItems.URANIUM.RAW);
+        gemstyneOreDrops(GemstyneOreBlocks.URANIUM.deepslateOre(), GemstyneOreItems.URANIUM.RAW);
         // ======
         // <===== Nether Ore Loot =====>
         // ======
 
-        gemstyneOreDrops(GemstyneOreBlocks.ALDUS.netherOre, GemstyneOreItems.ALDUS.RAW);
+        gemstyneOreDrops(GemstyneOreBlocks.ALDUS.netherOre(), GemstyneOreItems.ALDUS.RAW);
 
-        gemstyneOreDrops(GemstyneOreBlocks.CRIMONITE.netherOre, GemstyneOreItems.CRIMONITE.RAW);
+        gemstyneOreDrops(GemstyneOreBlocks.CRIMONITE.netherOre(), GemstyneOreItems.CRIMONITE.RAW);
         // ======
         // <===== Ore Extension Loot =====>
         // ======
@@ -86,15 +86,15 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Mineral Loot =====>
         // ======
-        addDrop(GemstyneMineralBlocks.MINERAL_BLOCKS.compressedGranite());
-        addDrop(GemstyneMineralBlocks.MINERAL_BLOCKS.compressedDiorite());
-        addDrop(GemstyneMineralBlocks.MINERAL_BLOCKS.compressedAndesite());
+        addDrop(GemstyneMineralBlocks.COMPRESSED_GRANITE);
+        addDrop(GemstyneMineralBlocks.COMPRESSED_DIORITE);
+        addDrop(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
 
-        addDrop(GemstyneMineralBlocks.MINERAL_BLOCKS.compactDirt());
+        addDrop(GemstyneMineralBlocks.COMPACT_DIRT);
 
-        addDrop(GemstyneMineralBlocks.MINERAL_BLOCKS.halite());
-        addDrop(GemstyneMineralBlocks.MINERAL_BLOCKS.pumice());
-        addDrop(GemstyneMineralBlocks.MINERAL_BLOCKS.gabbro());
+        addDrop(GemstyneMineralBlocks.HALITE);
+        addDrop(GemstyneMineralBlocks.PUMICE);
+        addDrop(GemstyneMineralBlocks.GABBRO);
 
         // ======
         // <===== Geode Drops =====>

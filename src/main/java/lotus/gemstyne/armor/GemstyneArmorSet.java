@@ -1,13 +1,11 @@
 package lotus.gemstyne.armor;
 
-import lotus.gemstyne.Gemstyne;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import io.wispforest.owo.itemgroup.OwoItemSettings;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
 /**
  * {@link GemstyneArmorSet} is a class to simplify the registration process of Armor Sets.
@@ -29,7 +27,7 @@ public final class GemstyneArmorSet {
      * @param setName Name of Armor set.
      * @param material Material of set.
      */
-    public GemstyneArmorSet(FabricItemSettings settings, String setName, ArmorMaterial material, Item source) {
+    public GemstyneArmorSet(OwoItemSettings settings, String setName, ArmorMaterial material, Item source) {
         this.HELMET = assignArmor(settings, material, ArmorItem.Type.HELMET);
         this.CHESTPLATE = assignArmor(settings, material, ArmorItem.Type.CHESTPLATE);
         this.LEGGINGS = assignArmor(settings, material, ArmorItem.Type.LEGGINGS);
@@ -45,8 +43,8 @@ public final class GemstyneArmorSet {
      * @param type Type of armor piece being created.
      * @return Returns an Armor item with all of the above as its parameters.
      */
-    private static ArmorItem assignArmor(FabricItemSettings settings, ArmorMaterial material, ArmorItem.Type type) {
-        return new ArmorItem(material, type, settings);
+    private static ArmorItem assignArmor(OwoItemSettings settings, ArmorMaterial material, ArmorItem.Type type) {
+        return new ArmorItem(material, type, settings.group(GemstyneCreativeGroup.GEMSTYNE_GROUP));
     }
 
     /**
@@ -55,9 +53,9 @@ public final class GemstyneArmorSet {
      * @param setName The name of the Armor Set.
      */
     public void registerArmorSet(String setName) {
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_helmet"), this.HELMET);
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_chestplate"), this.CHESTPLATE);
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_leggings"), this.LEGGINGS);
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_boots"), this.BOOTS);
+        GemstyneRegistry.registerItem(setName + "_helmet", this.HELMET);
+        GemstyneRegistry.registerItem(setName + "_chestplate", this.CHESTPLATE);
+        GemstyneRegistry.registerItem(setName + "_leggings", this.LEGGINGS);
+        GemstyneRegistry.registerItem(setName + "_boots", this.BOOTS);
     }
 }

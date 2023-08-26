@@ -1,13 +1,13 @@
 package lotus.gemstyne.item.spelunking;
 
+import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.item.GemstyneItemHandler;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.Item;
 
 public final class GemstyneMineralItems {
-    public static final Item SALT = GemstyneItemHandler.assignAndRegisterItem(
-            new Item(new FabricItemSettings()), "salt");
+    public static final Item SALT = GemstyneRegistry.designateItem("salt",
+            new OwoItemSettings());
 
 
     public static void registerMineralItems() {

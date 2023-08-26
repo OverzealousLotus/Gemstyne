@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "gemstyne:deepslate_torrium_ore",
     "gemstyne:mochite_ore",
     "gemstyne:deepslate_mochite_ore",
     "gemstyne:raw_mochite_block",

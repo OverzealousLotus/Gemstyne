@@ -9,7 +9,7 @@
     "gemstyne:raw_tin_block",
     "gemstyne:tin_block",
     "gemstyne:compressed_andesite",
-    "gemstyne:compressed_granite",
-    "gemstyne:compressed_diorite"
+    "gemstyne:compressed_diorite",
+    "gemstyne:compressed_granite"
   ]
 }

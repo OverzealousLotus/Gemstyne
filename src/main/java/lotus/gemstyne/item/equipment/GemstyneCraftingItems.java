@@ -1,13 +1,13 @@
 package lotus.gemstyne.item.equipment;
 
+import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.item.GemstyneItemHandler;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.Item;
 
 public class GemstyneCraftingItems {
-    private static final Item IMBUED_ROD = GemstyneItemHandler.assignAndRegisterItem(
-            new Item(new FabricItemSettings()),"imbued_rod");
+    private static final Item IMBUED_ROD = GemstyneRegistry.designateItem("imbued_rod",
+            new OwoItemSettings());
 
 
     public static Item getImbuedRod() { return IMBUED_ROD; }

@@ -1,15 +1,17 @@
 package lotus.gemstyne.item.equipment;
 
+import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.item.GemstyneItemHandler;
 import lotus.gemstyne.item.custom.ImbuedFeatherItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.Item;
 
 public class GemstyneGearItems {
-    private static final Item IMBUED_FEATHER = GemstyneItemHandler.assignAndRegisterItem(
-            new ImbuedFeatherItem(new FabricItemSettings().maxCount(1).maxDamage(20)),
-            "imbued_feather");
+    private static final Item IMBUED_FEATHER = GemstyneRegistry.designateItem("imbued_feather",
+            new ImbuedFeatherItem(new OwoItemSettings().maxCount(1).maxDamage(20)
+                    .group(GemstyneCreativeGroup.GEMSTYNE_GROUP))
+    );
 
     public static Item getImbuedFeather() {
         return IMBUED_FEATHER;

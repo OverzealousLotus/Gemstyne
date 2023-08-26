@@ -36,6 +36,8 @@ public class Gemstyne implements ModInitializer {
 		Gemstyne.LOGGER.info("[[ Successfully registered World Configuration!");
 
 		// Step IV | Event Handlers
+		Gemstyne.LOGGER.info("[[ Registering Event Handlers for " + Gemstyne.MOD_ID + "! ]]");
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());
+		Gemstyne.LOGGER.info("[[ Successfully registered Event Handlers!");
 	}
 }

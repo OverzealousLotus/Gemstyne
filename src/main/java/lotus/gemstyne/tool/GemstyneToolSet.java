@@ -1,11 +1,9 @@
 package lotus.gemstyne.tool;
 
-import lotus.gemstyne.Gemstyne;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import io.wispforest.owo.itemgroup.OwoItemSettings;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.*;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
 public class GemstyneToolSet {
     public final AxeItem AXE;
@@ -25,12 +23,13 @@ public class GemstyneToolSet {
      * @param material Material of set.
      */
     public GemstyneToolSet(
-            FabricItemSettings settings,
+            OwoItemSettings settings,
             float[] attackDamage,
             float[] attackSpeed,
             String setName,
             ToolMaterial material,
             Item source) {
+        settings.group(GemstyneCreativeGroup.GEMSTYNE_GROUP);
         this.AXE = new AxeItem(material, attackDamage[0], attackSpeed[0], settings);
         this.HOE = new HoeItem(material, (int) attackDamage[1], attackSpeed[1], settings);
         this.PICKAXE = new PickaxeItem(material, (int) attackDamage[2], attackSpeed[2], settings);
@@ -46,10 +45,10 @@ public class GemstyneToolSet {
      * @param setName The name of the Tool Set.
      */
     public void registerToolSet(String setName) {
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_axe"), this.AXE);
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_hoe"), this.HOE);
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_pickaxe"), this.PICKAXE);
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_shovel"), this.SHOVEL);
-        Registry.register(Registries.ITEM, new Identifier(Gemstyne.MOD_ID, setName + "_sword"), this.SWORD);
+        GemstyneRegistry.registerItem(setName + "_axe", this.AXE);
+        GemstyneRegistry.registerItem(setName + "_hoe", this.HOE);
+        GemstyneRegistry.registerItem(setName + "_pickaxe", this.PICKAXE);
+        GemstyneRegistry.registerItem(setName + "_shovel", this.SHOVEL);
+        GemstyneRegistry.registerItem(setName + "_sword", this.SWORD);
     }
 }

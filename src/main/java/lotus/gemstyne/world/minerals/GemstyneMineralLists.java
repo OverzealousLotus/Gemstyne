@@ -17,28 +17,28 @@ public class GemstyneMineralLists {
     // =====
     protected static final ImmutableList<OreFeatureConfig.Target> haliteBlobs =
             ImmutableList.of(OreFeatureConfig.createTarget(
-                    stoneReplaceables, GemstyneMineralBlocks.MINERAL_BLOCKS.halite().getDefaultState()));
+                    stoneReplaceables, GemstyneMineralBlocks.HALITE.getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> pumiceBlobs =
             ImmutableList.of(OreFeatureConfig.createTarget(
-                    stoneReplaceables, GemstyneMineralBlocks.MINERAL_BLOCKS.pumice().getDefaultState()));
+                    stoneReplaceables, GemstyneMineralBlocks.PUMICE.getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> gabbroBlobs =
             ImmutableList.of(
                     OreFeatureConfig.createTarget(stoneReplaceables,
-                            GemstyneMineralBlocks.MINERAL_BLOCKS.gabbro().getDefaultState()),
+                            GemstyneMineralBlocks.GABBRO.getDefaultState()),
                     OreFeatureConfig.createTarget(deepslateReplaceables,
-                            GemstyneMineralBlocks.MINERAL_BLOCKS.gabbro().getDefaultState()));
+                            GemstyneMineralBlocks.GABBRO.getDefaultState()));
 
     protected static final ImmutableList<OreFeatureConfig.Target> compactDirt =
             ImmutableList.of(OreFeatureConfig.createTarget(
-                    deepslateReplaceables, GemstyneMineralBlocks.MINERAL_BLOCKS.compactDirt().getDefaultState()));
+                    deepslateReplaceables, GemstyneMineralBlocks.COMPACT_DIRT.getDefaultState()));
 
     protected static final ImmutableList<OreFeatureConfig.Target> compressedGranite =
             ImmutableList.of(OreFeatureConfig.createTarget(
-                    deepslateReplaceables, GemstyneMineralBlocks.MINERAL_BLOCKS.compressedGranite().getDefaultState()));
+                    deepslateReplaceables, GemstyneMineralBlocks.COMPRESSED_GRANITE.getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> compressedDiorite =
             ImmutableList.of(OreFeatureConfig.createTarget(
-                    deepslateReplaceables, GemstyneMineralBlocks.MINERAL_BLOCKS.compressedDiorite().getDefaultState()));
+                    deepslateReplaceables, GemstyneMineralBlocks.COMPRESSED_DIORITE.getDefaultState()));
     protected static final ImmutableList<OreFeatureConfig.Target> compressedAndesite =
             ImmutableList.of(OreFeatureConfig.createTarget(
-                    deepslateReplaceables, GemstyneMineralBlocks.MINERAL_BLOCKS.compressedAndesite().getDefaultState()));
+                    deepslateReplaceables, GemstyneMineralBlocks.COMPRESSED_ANDESITE.getDefaultState()));
 }

@@ -1,8 +1,8 @@
 package lotus.gemstyne.tool;
 
+import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
 /**
  * Gemstyne's tool-item holder. A record is used to auto-generate getters.
@@ -19,11 +19,11 @@ public final class GemstyneToolItems {
     private static final float[] BRONZE_SPEED = {-3.1f, -0.5f, -2.7f, -2.8f, -2.4f};
     private static final float[] RENDFIRE_SPEED = {-3.0f, 0.0f, -2.8f, -3.0f, -2.4f};
 
-    public static final GemstyneToolSet ALDUS = new GemstyneToolSet(new FabricItemSettings(),
+    public static final GemstyneToolSet ALDUS = new GemstyneToolSet(new OwoItemSettings(),
             ALDUS_DAMAGE, ALDUS_SPEED, "aldus", GemstyneToolMaterials.ALDUS, GemstyneOreItems.ALDUS.INGOT);
-    public static final GemstyneToolSet BRONZE = new GemstyneToolSet(new FabricItemSettings(),
+    public static final GemstyneToolSet BRONZE = new GemstyneToolSet(new OwoItemSettings(),
             BRONZE_DAMAGE, BRONZE_SPEED, "bronze", GemstyneToolMaterials.BRONZE, GemstyneOreItems.BRONZE.INGOT);
-    public static final GemstyneToolSet RENDFIRE = new GemstyneToolSet(new FabricItemSettings(),
+    public static final GemstyneToolSet RENDFIRE = new GemstyneToolSet(new OwoItemSettings(),
             RENDFIRE_DAMAGE, RENDFIRE_SPEED, "rendfire", GemstyneToolMaterials.RENDFIRE, GemstyneOreItems.FIRE_OPAL);
 
 

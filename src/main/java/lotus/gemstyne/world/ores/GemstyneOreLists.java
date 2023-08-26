@@ -37,9 +37,9 @@ public class GemstyneOreLists {
 
     private static final ImmutableList<OreFeatureConfig.Target> overworldMochiteOres = ImmutableList.of(
             OreFeatureConfig.createTarget(getStoneReplaceables(),
-                    GemstyneOreBlocks.MOCHITE.stoneOre.getDefaultState()),
+                    GemstyneOreBlocks.MOCHITE.stoneOre().getDefaultState()),
             OreFeatureConfig.createTarget(getDeepslateReplaceables(),
-                    GemstyneOreBlocks.MOCHITE.deepslateOre.getDefaultState()));
+                    GemstyneOreBlocks.MOCHITE.deepslateOre().getDefaultState()));
 
     private static final ImmutableList<OreFeatureConfig.Target> overworldMorkiteOres = ImmutableList.of(
             OreFeatureConfig.createTarget(getDeepslateReplaceables(),
@@ -47,24 +47,24 @@ public class GemstyneOreLists {
 
     private static final ImmutableList<OreFeatureConfig.Target> overworldTinOres = ImmutableList.of(
             OreFeatureConfig.createTarget(getStoneReplaceables(),
-                    GemstyneOreBlocks.TIN.stoneOre.getDefaultState()),
+                    GemstyneOreBlocks.TIN.stoneOre().getDefaultState()),
             OreFeatureConfig.createTarget(getDeepslateReplaceables(),
-                    GemstyneOreBlocks.TIN.deepslateOre.getDefaultState()));
+                    GemstyneOreBlocks.TIN.deepslateOre().getDefaultState()));
 
     private static final ImmutableList<OreFeatureConfig.Target> overworldUraniumOres = ImmutableList.of(
             OreFeatureConfig.createTarget(getDeepslateReplaceables(),
-                    GemstyneOreBlocks.URANIUM.deepslateOre.getDefaultState()));
+                    GemstyneOreBlocks.URANIUM.deepslateOre().getDefaultState()));
 
     // =====
     // <===== Nether Ore Replaceables =====>
     // =====
     private static final ImmutableList<OreFeatureConfig.Target> netherAldusOres = ImmutableList.of(
             OreFeatureConfig.createTarget(getNetherReplaceables(),
-                    GemstyneOreBlocks.ALDUS.netherOre.getDefaultState()));
+                    GemstyneOreBlocks.ALDUS.netherOre().getDefaultState()));
 
     private static final ImmutableList<OreFeatureConfig.Target> netherCrimoniteOres = ImmutableList.of(
             OreFeatureConfig.createTarget(getNetherReplaceables(),
-                    GemstyneOreBlocks.CRIMONITE.netherOre.getDefaultState()));
+                    GemstyneOreBlocks.CRIMONITE.netherOre().getDefaultState()));
 
     // =====
     // <===== Ore Extension Replaceables =====>

@@ -1,6 +1,9 @@
 package lotus.gemstyne.block;
 
+import lotus.gemstyne.block.custom.AfflictiveBlock;
+import lotus.gemstyne.block.custom.AfflictiveOre;
 import lotus.gemstyne.util.GemstyneBlockTypes;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -9,10 +12,11 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class GemstyneBlockSet {
-    public ExperienceDroppingBlock stoneOre;
-    public ExperienceDroppingBlock deepslateOre;
-    public ExperienceDroppingBlock netherOre;
+    public Map<String, ExperienceDroppingBlock> oreVariants = new LinkedHashMap<>();
     public Block rawBlock;
     public Block pureBlock;
 
@@ -82,99 +86,98 @@ public class GemstyneBlockSet {
         return this;
     }
 
+    /**
+     * Creates a Stone variant for {@link GemstyneBlockSet}
+     * @return Returns instance of self.
+     */
     public GemstyneBlockSet createOre() {
-        this.stoneOre = GemstyneBlockHandler.assignOreBlock(this.currentSettings, this.experience);
-        GemstyneBlockHandler.registerBlock(this.SET_NAME + "_ore", this.stoneOre);
+        this.oreVariants.put("stone", new ExperienceDroppingBlock(this.currentSettings));
+        GemstyneRegistry.registerBlock(this.SET_NAME + "_ore", this.oreVariants.get("stone"));
         return this;
     }
 
-    public GemstyneBlockSet createOreType(GemstyneBlockTypes type) {
-        switch(type) {
-            case DEEPSLATE_ORE -> {
-                this.currentSettings.sounds(BlockSoundGroup.DEEPSLATE).strength(this.currentHardness);
-                this.deepslateOre = GemstyneBlockHandler.assignOreBlock(this.currentSettings, this.experience);
-                GemstyneBlockHandler.registerBlock("deepslate_" + this.SET_NAME + "_ore", this.deepslateOre);
-            }
-            case NETHER_ORE -> {
-                this.currentSettings.sounds(BlockSoundGroup.NETHER_ORE).strength(this.currentHardness);
-                this.netherOre = GemstyneBlockHandler.assignOreBlock(this.currentSettings, this.experience);
-                GemstyneBlockHandler.registerBlock("nether_" + this.SET_NAME + "_ore", this.netherOre);
-            }
-        }
-
+    /**
+     * Creates an unknown ore variant for {@link GemstyneBlockSet}
+     * @param type Variant
+     * @param sounds {@link BlockSoundGroup}
+     * @return Returns instance of self.
+     */
+    public GemstyneBlockSet createOreType(String type, BlockSoundGroup sounds) {
+        this.currentSettings.sounds(sounds).strength(this.currentHardness);
+        this.oreVariants.put(type, new ExperienceDroppingBlock(this.currentSettings, this.experience));
+        GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
         return this;
     }
 
-    public GemstyneBlockSet createOreType(GemstyneBlockTypes type, int duration) {
-        switch(type) {
-            case STONE_ORE -> {
-                this.stoneOre = GemstyneBlockHandler.assignOreBlock(this.currentSettings, this.effect,
-                        duration, GemstyneBlockTypes.ORE, this.experience);
-                GemstyneBlockHandler.registerBlock(this.SET_NAME + "_ore", this.stoneOre);
-            }
-            case DEEPSLATE_ORE -> {
-                this.currentSettings.sounds(BlockSoundGroup.DEEPSLATE).strength(this.currentHardness);
-                this.deepslateOre = GemstyneBlockHandler.assignOreBlock(this.currentSettings, this.effect,
-                        duration, type, this.experience);
-                GemstyneBlockHandler.registerBlock("deepslate_" + this.SET_NAME + "_ore", this.deepslateOre);
-            }
-            case NETHER_ORE -> {
-                this.currentSettings.sounds(BlockSoundGroup.NETHER_ORE).strength(this.currentHardness);
-                this.netherOre = GemstyneBlockHandler.assignOreBlock(this.currentSettings, this.effect,
-                        duration, type, this.experience);
-                GemstyneBlockHandler.registerBlock("nether_" + this.SET_NAME + "_ore", this.netherOre);
-            }
-        }
-
+    /**
+     * Variation of original method, but instead creates an {@link AfflictiveOre}
+     * @param type Variant
+     * @param duration Duration of {@link StatusEffect}
+     * @param sounds {@link BlockSoundGroup}
+     * @return Returns instance of self.
+     */
+    public GemstyneBlockSet createOreType(String type, int duration, BlockSoundGroup sounds) {
+        this.currentSettings.sounds(sounds).strength(this.currentHardness);
+        this.oreVariants.put(type, new AfflictiveOre(this.currentSettings, this.effect,
+                duration, GemstyneBlockTypes.ORE, this.experience));
+        GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
         return this;
+    }
+
+    public Block stoneOre() {
+        return this.oreVariants.get("stone");
+    }
+
+    public Block deepslateOre() {
+        return this.oreVariants.get("deepslate");
+    }
+
+    public Block netherOre() {
+        return this.oreVariants.get("nether");
     }
 
     public GemstyneBlockSet createRawBlock() {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.rawBlock = GemstyneBlockHandler.assignBlock(this.currentSettings);
-        GemstyneBlockHandler.registerBlock("raw_" + this.SET_NAME + "_block", this.rawBlock);
+        this.rawBlock = new Block(this.currentSettings);
+        GemstyneRegistry.registerBlock("raw_" + this.SET_NAME + "_block", this.rawBlock);
         return this;
     }
 
     public GemstyneBlockSet createRawBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.rawBlock = GemstyneBlockHandler.assignBlock(this.currentSettings, this.effect,
-                duration, GemstyneBlockTypes.RAW);
-        GemstyneBlockHandler.registerBlock("raw_" + this.SET_NAME + "_block", this.rawBlock);
+        this.rawBlock = new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.RAW);
+        GemstyneRegistry.registerBlock("raw_" + this.SET_NAME + "_block", this.rawBlock);
         return this;
     }
 
     public GemstyneBlockSet createPureBlock() {
-        this.pureBlock = GemstyneBlockHandler.assignBlock(this.currentSettings.sounds(this.currentSounds));
-        GemstyneBlockHandler.registerBlock(this.SET_NAME + "_block", this.pureBlock);
+        this.pureBlock = new Block(this.currentSettings.sounds(this.currentSounds));
+        GemstyneRegistry.registerBlock(this.SET_NAME + "_block", this.pureBlock);
         return this;
     }
 
     public GemstyneBlockSet createPureBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds);
-        this.pureBlock = GemstyneBlockHandler.assignBlock(this.currentSettings, this.effect,
-                duration, GemstyneBlockTypes.PURE);
-        GemstyneBlockHandler.registerBlock(this.SET_NAME + "_block", this.pureBlock);
+        this.pureBlock = new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.PURE);
+        GemstyneRegistry.registerBlock(this.SET_NAME + "_block", this.pureBlock);
         return this;
     }
 
     public GemstyneBlockSet createDefaultBlockSet(float strength) {
         this.modifyStrength(strength).createOre()
                 .modifyStrength(strength + 1.5f)
-                .createOreType(GemstyneBlockTypes.DEEPSLATE_ORE)
+                .createOreType("deepslate", BlockSoundGroup.DEEPSLATE)
                 .createRawBlock()
                 .modifyStrength(strength + 2.5f)
                 .createPureBlock();
         return this;
     }
-
     public GemstyneBlockSet createDefaultNetherBlockSet(float strength) {
-        this.modifyStrength(strength).createOreType(GemstyneBlockTypes.NETHER_ORE)
+        return this.modifyStrength(strength).createOreType("nether", BlockSoundGroup.NETHER_ORE)
                 .modifyStrength(strength + 1.5f)
                 .createRawBlock()
                 .modifyStrength(strength + 2.5f)
                 .createPureBlock();
-        return this;
     }
 
     public GemstyneBlockSet create() {
