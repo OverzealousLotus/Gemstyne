@@ -1,11 +1,13 @@
 package lotus.gemstyne.armor;
 
+import com.google.common.collect.ImmutableList;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 
 /**
  * {@link GemstyneArmorSet} is a class to simplify the registration process of Armor Sets.
@@ -17,6 +19,7 @@ public final class GemstyneArmorSet {
     public final ArmorItem LEGGINGS;
     public final ArmorItem BOOTS;
     public final Item SOURCE;
+    private final ImmutableList<ItemConvertible> ARMOR_SET;
 
 
     /**
@@ -33,6 +36,7 @@ public final class GemstyneArmorSet {
         this.LEGGINGS = assignArmor(settings, material, ArmorItem.Type.LEGGINGS);
         this.BOOTS = assignArmor(settings, material, ArmorItem.Type.BOOTS);
         this.SOURCE = source;
+        this.ARMOR_SET = ImmutableList.of(this.HELMET, this.CHESTPLATE, this.LEGGINGS, this.BOOTS);
         this.registerArmorSet(setName);
     }
 
@@ -44,7 +48,11 @@ public final class GemstyneArmorSet {
      * @return Returns an Armor item with all of the above as its parameters.
      */
     private static ArmorItem assignArmor(OwoItemSettings settings, ArmorMaterial material, ArmorItem.Type type) {
-        return new ArmorItem(material, type, settings.group(GemstyneCreativeGroup.GEMSTYNE_GROUP));
+        return new ArmorItem(material, type, settings.group(GemstyneCreativeGroup.GEMSTYNE));
+    }
+
+    public ImmutableList<ItemConvertible> getArmorSet() {
+        return this.ARMOR_SET;
     }
 
     /**

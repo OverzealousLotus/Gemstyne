@@ -2,10 +2,10 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 350,
-  "experience": 1.0,
+  "experience": 2.0,
   "group": "gemstyne",
   "ingredient": {
-    "item": "gemstyne:bronzeplate_boots"
+    "item": "gemstyne:rendfire_boots"
   },
-  "result": "gemstyne:bronze_nugget"
+  "result": "gemstyne:crimonite_ingot"
 }

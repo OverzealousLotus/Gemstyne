@@ -20,9 +20,9 @@ public final class GemstyneToolItems {
     private static final float[] RENDFIRE_SPEED = {-3.0f, 0.0f, -2.8f, -3.0f, -2.4f};
 
     public static final GemstyneToolSet ALDUS = new GemstyneToolSet(new OwoItemSettings(),
-            ALDUS_DAMAGE, ALDUS_SPEED, "aldus", GemstyneToolMaterials.ALDUS, GemstyneOreItems.ALDUS.INGOT);
+            ALDUS_DAMAGE, ALDUS_SPEED, "aldus", GemstyneToolMaterials.ALDUS, GemstyneOreItems.ALDUS.ingot());
     public static final GemstyneToolSet BRONZE = new GemstyneToolSet(new OwoItemSettings(),
-            BRONZE_DAMAGE, BRONZE_SPEED, "bronze", GemstyneToolMaterials.BRONZE, GemstyneOreItems.BRONZE.INGOT);
+            BRONZE_DAMAGE, BRONZE_SPEED, "bronze", GemstyneToolMaterials.BRONZE, GemstyneOreItems.BRONZE.ingot());
     public static final GemstyneToolSet RENDFIRE = new GemstyneToolSet(new OwoItemSettings(),
             RENDFIRE_DAMAGE, RENDFIRE_SPEED, "rendfire", GemstyneToolMaterials.RENDFIRE, GemstyneOreItems.FIRE_OPAL);
 

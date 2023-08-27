@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    },
+    {
+      "item": "gemstyne:uranium_nugget"
+    }
+  ],
+  "result": {
+    "item": "gemstyne:uranium_ingot"
+  }
+}

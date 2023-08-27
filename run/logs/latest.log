@@ -1,6 +1,6 @@
-[02:24:14] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.14.22
-[02:24:14] [ForkJoinPool-1-worker-1/WARN] (FabricLoader/Metadata) Mod gemstyne uses the version 0.0.5b0 which isn't compatible with Loader's extended semantic version format (Could not parse version number component '5b0'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
-[02:24:14] [main/INFO] (FabricLoader) Loading 52 mods:
+[23:18:55] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.14.22
+[23:18:55] [ForkJoinPool-1-worker-1/WARN] (FabricLoader/Metadata) Mod gemstyne uses the version 0.0.5b0 which isn't compatible with Loader's extended semantic version format (Could not parse version number component '5b0'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
+[23:18:56] [main/INFO] (FabricLoader) Loading 52 mods:
 	- fabric-api 0.86.1+1.20.1
 	- fabric-api-base 0.4.30+7abfd51577
 	- fabric-api-lookup-api-v1 1.6.35+4d8536c977
@@ -53,22 +53,22 @@
 	- sodium-extra 0.4.20+mc1.20-build.103
 	   |-- caffeineconfig 1.1.0+1.17
 	   \-- crowdin-translate 1.4+1.19.3
-[02:24:21] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/karsonparker/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/8d31fb97c3e0cd7c8dad3441851c523bcfae6d8e/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[02:24:21] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[02:24:21] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[02:24:21] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[02:24:21] [main/INFO] (Sodium Extra Config) Loaded configuration file for Sodium Extra: 28 options available, 0 override(s) found
-[02:24:21] [main/INFO] (Sodium) Loaded configuration file for Sodium: 33 options available, 0 override(s) found
-[02:24:22] [main/WARN] (FabricLoader/Mixin) Error loading class: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage (java.lang.ClassNotFoundException: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage)
-[02:24:22] [main/WARN] (FabricLoader/Mixin) Error loading class: org/jetbrains/annotations/ApiStatus$Internal (java.lang.ClassNotFoundException: org/jetbrains/annotations/ApiStatus$Internal)
-[02:24:31] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 277 milliseconds
-[02:24:34] [Render thread/INFO] (Sodium) Launching a new process to probe the system configuration!
-[02:24:35] [Render thread/INFO] (Sodium) OpenGL Vendor: AMD
-[02:24:35] [Render thread/INFO] (Sodium) OpenGL Renderer: AMD Radeon Vega 10 Graphics (raven, LLVM 15.0.7, DRM 3.52, 6.4.11-100.fc37.x86_64)
-[02:24:35] [Render thread/INFO] (Sodium) OpenGL Version: 4.6 (Core Profile) Mesa 23.0.3
-[02:24:35] [Render thread/WARN] (FabricLoader/Mixin) Error loading class: org/quiltmc/loader/impl/game/minecraft/Hooks (java.lang.ClassNotFoundException: org/quiltmc/loader/impl/game/minecraft/Hooks)
-[02:24:35] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[02:24:36] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+[23:19:03] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/karsonparker/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/8d31fb97c3e0cd7c8dad3441851c523bcfae6d8e/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[23:19:03] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[23:19:03] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[23:19:03] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[23:19:03] [main/INFO] (Sodium) Loaded configuration file for Sodium: 33 options available, 0 override(s) found
+[23:19:03] [main/INFO] (Sodium Extra Config) Loaded configuration file for Sodium Extra: 28 options available, 0 override(s) found
+[23:19:04] [main/WARN] (FabricLoader/Mixin) Error loading class: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage (java.lang.ClassNotFoundException: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage)
+[23:19:05] [main/WARN] (FabricLoader/Mixin) Error loading class: org/jetbrains/annotations/ApiStatus$Internal (java.lang.ClassNotFoundException: org/jetbrains/annotations/ApiStatus$Internal)
+[23:19:13] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 376 milliseconds
+[23:19:16] [Render thread/INFO] (Sodium) Launching a new process to probe the system configuration!
+[23:19:17] [Render thread/INFO] (Sodium) OpenGL Vendor: AMD
+[23:19:17] [Render thread/INFO] (Sodium) OpenGL Renderer: AMD Radeon Vega 10 Graphics (raven, LLVM 15.0.7, DRM 3.52, 6.4.11-100.fc37.x86_64)
+[23:19:17] [Render thread/INFO] (Sodium) OpenGL Version: 4.6 (Core Profile) Mesa 23.0.3
+[23:19:17] [Render thread/WARN] (FabricLoader/Mixin) Error loading class: org/quiltmc/loader/impl/game/minecraft/Hooks (java.lang.ClassNotFoundException: org/quiltmc/loader/impl/game/minecraft/Hooks)
+[23:19:17] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[23:19:18] [Render thread/ERROR] (Minecraft) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
@@ -86,39 +86,39 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
 	... 9 more
-[02:24:36] [Render thread/INFO] (Minecraft) Setting user: Player527
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Registering Dependencies for gemstyne! ]]
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Status Effects...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Fluid for gemstyne
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Gemstyne Group(s)...
-[02:24:36] [Render thread/INFO] (gemstyne) Successfully registered Gemstyne Group(s)!
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Successfully registered Dependencies! ]]
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Registering Essentials for gemstyne! ]]
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Items for gemstyne!
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Gear Items...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Ore Items...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Mineral Items...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Crafting Items...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Armor Items...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Tool Items...
-[02:24:36] [Render thread/INFO] (gemstyne) Successfully registered Items for gemstyne!
-[02:24:36] [Render thread/INFO] (gemstyne) Registering blocks for gemstyne!
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Ores...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Minerals...
-[02:24:36] [Render thread/INFO] (gemstyne) Successfully registered blocks for gemstyne!
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Block Entities...
-[02:24:36] [Render thread/INFO] (gemstyne) Registering Fuel Items for gemstyne...
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Successfully registered Essentials! ]]
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Registering World Configuration for gemstyne! ]]
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Successfully registered World Configuration!
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Registering Event Handlers for gemstyne! ]]
-[02:24:36] [Render thread/INFO] (gemstyne) [[ Successfully registered Event Handlers!
-[02:24:36] [Render thread/INFO] (owo) who invited dafuqs
-[02:24:37] [Render thread/INFO] (Indigo) [Indigo] Different rendering plugin detected; not applying Indigo.
-[02:24:37] [Render thread/WARN] (FabricLoader/Mixin) Static binding violation: PRIVATE @Overwrite method renderBakedItemModel in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
-[02:24:37] [Render thread/INFO] (owo) Services frozen by 'net.minecraft.client.MinecraftClient'
-[02:24:37] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
-[02:24:39] [Render thread/ERROR] (Minecraft) Error while loading the narrator
+[23:19:18] [Render thread/INFO] (Minecraft) Setting user: Player365
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Registering Dependencies for gemstyne! ]]
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Status Effects...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Fluid for gemstyne
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Gemstyne Group(s)...
+[23:19:19] [Render thread/INFO] (gemstyne) Successfully registered Gemstyne Group(s)!
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Successfully registered Dependencies! ]]
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Registering Essentials for gemstyne! ]]
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Items for gemstyne!
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Gear Items...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Ore Items...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Mineral Items...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Crafting Items...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Armor Items...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Tool Items...
+[23:19:19] [Render thread/INFO] (gemstyne) Successfully registered Items for gemstyne!
+[23:19:19] [Render thread/INFO] (gemstyne) Registering blocks for gemstyne!
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Ores...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Minerals...
+[23:19:19] [Render thread/INFO] (gemstyne) Successfully registered blocks for gemstyne!
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Block Entities...
+[23:19:19] [Render thread/INFO] (gemstyne) Registering Fuel Items for gemstyne...
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Successfully registered Essentials! ]]
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Registering World Configuration for gemstyne! ]]
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Successfully registered World Configuration!
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Registering Event Handlers for gemstyne! ]]
+[23:19:19] [Render thread/INFO] (gemstyne) [[ Successfully registered Event Handlers!
+[23:19:19] [Render thread/INFO] (owo) who invited dafuqs
+[23:19:19] [Render thread/INFO] (Indigo) [Indigo] Different rendering plugin detected; not applying Indigo.
+[23:19:19] [Render thread/WARN] (FabricLoader/Mixin) Static binding violation: PRIVATE @Overwrite method renderBakedItemModel in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
+[23:19:19] [Render thread/INFO] (owo) Services frozen by 'net.minecraft.client.MinecraftClient'
+[23:19:20] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
+[23:19:22] [Render thread/ERROR] (Minecraft) Error while loading the narrator
 com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
 	at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar:?]
 	at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
@@ -184,95 +184,109 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/kars
 		at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.14.22.jar:?]
 		at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.14.22.jar:?]
 		at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
-[02:24:39] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-renderer-indigo, fabric-resource-conditions-api-v1, fabric-loot-api-v2, fabric-resource-loader-v0, fabric-blockrenderlayer-v1, fabric-dimensions-v1, fabric-rendering-v1, caffeineconfig, fabric-screen-handler-api-v1, fabric-transfer-api-v1, gemstyne, fabric-key-binding-api-v1, fabric-api, fabric-model-loading-api-v1, sodium-extra, fabric-networking-api-v1, fabric-content-registries-v0, fabric-client-tags-api-v1, fabric-screen-api-v1, fabric-block-api-v1, fabric-rendering-data-attachment-v1, fabric-biome-api-v1, owo, fabric-game-rule-api-v1, fabric-message-api-v1, reeses-sodium-options, fabric-api-base, fabric-command-api-v2, fabric-particles-v1, fabric-crash-report-info-v1, fabric-item-group-api-v1, fabric-transitive-access-wideners-v1, fabric-sound-api-v1, fabric-entity-events-v1, fabric-gametest-api-v1, sodium, fabric-convention-tags-v1, fabric-api-lookup-api-v1, fabric-registry-sync-v0, fabric-item-api-v1, fabric-mining-level-api-v1, fabric-events-interaction-v0, fabric-renderer-api-v1, fabric-lifecycle-events-v1, fabricloader, fabric-object-builder-api-v1, fabric-recipe-api-v1, fabric-data-generation-api-v1, fabric-rendering-fluids-v1)
-[02:24:40] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
-[02:24:40] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=12'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=13'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=14'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=15'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=2'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=1'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=0'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=9'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=8'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=7'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=6'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=5'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=4'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=3'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=10'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=11'
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Unable to load model: 'gemstyne:crimonite_nugget#inventory' referenced from: gemstyne:crimonite_nugget#inventory: java.io.FileNotFoundException: gemstyne:models/item/crimonite_nugget.json
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Unable to load model: 'gemstyne:aldus_nugget#inventory' referenced from: gemstyne:aldus_nugget#inventory: java.io.FileNotFoundException: gemstyne:models/item/aldus_nugget.json
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Unable to load model: 'gemstyne:salt#inventory' referenced from: gemstyne:salt#inventory: java.io.FileNotFoundException: gemstyne:models/item/salt.json
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Unable to load model: 'gemstyne:uranium_nugget#inventory' referenced from: gemstyne:uranium_nugget#inventory: java.io.FileNotFoundException: gemstyne:models/item/uranium_nugget.json
-[02:24:41] [Worker-Main-7/WARN] (Minecraft) Unable to load model: 'gemstyne:tin_nugget#inventory' referenced from: gemstyne:tin_nugget#inventory: java.io.FileNotFoundException: gemstyne:models/item/tin_nugget.json
-[02:24:43] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[02:24:43] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[02:24:43] [Render thread/INFO] (Minecraft) OpenAL initialized on device Family 17h/19h HD Audio Controller Analog Stereo
-[02:24:43] [Render thread/INFO] (Minecraft) Sound engine started
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
-[02:24:43] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
-[02:24:44] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[02:24:44] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[02:24:44] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[02:24:44] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[02:24:56] [Render thread/INFO] (FabricRegistrySync) [fabric-registry-sync] Loaded registry data [file 1/4]
-[02:24:57] [Render thread/INFO] (Minecraft) Loaded 7 recipes
-[02:24:57] [Render thread/INFO] (Minecraft) Loaded 1340 advancements
-[02:24:58] [Render thread/INFO] (BiomeModificationImpl) Applied 1398 biome modifications to 58 of 64 new biomes in 59.42 ms
-[02:24:58] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
-[02:24:58] [Server thread/INFO] (Minecraft) Generating keypair
-[02:25:01] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:06] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[02:25:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 2%
-[02:25:07] [Render thread/INFO] (Minecraft) Preparing spawn area: 30%
-[02:25:08] [Render thread/INFO] (Minecraft) Preparing spawn area: 74%
-[02:25:09] [Render thread/INFO] (Minecraft) Time elapsed: 7908 ms
-[02:25:09] [Server thread/INFO] (Minecraft) Changing view distance to 6, from 10
-[02:25:09] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
-[02:25:10] [Server thread/INFO] (Minecraft) Player527[local:E:3ffcde19] logged in with entity id 201 at (54.63257797249119, 63.0, -33.954444084661446)
-[02:25:10] [Server thread/INFO] (Minecraft) Player527 joined the game
-[02:25:10] [Server thread/INFO] (Minecraft) Player527 has made the advancement [Ice Bucket Challenge]
-[02:25:10] [Render thread/INFO] (ChunkBuilder) Started 2 worker threads
-[02:25:11] [Render thread/INFO] (Minecraft) [System] [CHAT] Player527 has made the advancement [Ice Bucket Challenge]
-[02:25:11] [Render thread/INFO] (Minecraft) Loaded 14 advancements
-[02:25:12] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2039ms or 40 ticks behind
-[02:25:17] [Render thread/WARN] (Minecraft) Received passengers for unknown entity
-[02:25:47] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[02:25:48] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:overworld
-[02:25:48] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_nether
-[02:25:48] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_end
-[02:25:48] [Server thread/INFO] (Minecraft) Player527 lost connection: Disconnected
-[02:25:48] [Server thread/INFO] (Minecraft) Player527 left the game
-[02:25:48] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
-[02:25:48] [Server thread/INFO] (Minecraft) Stopping server
-[02:25:48] [Server thread/INFO] (Minecraft) Saving players
-[02:25:48] [Server thread/INFO] (Minecraft) Saving worlds
-[02:25:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:overworld
-[02:25:52] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_nether
-[02:25:53] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_end
-[02:25:53] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (Particles in Minecraft hurt me): All chunks are saved
-[02:25:53] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[02:25:53] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[02:25:53] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
-[02:25:54] [Render thread/INFO] (ChunkBuilder) Stopping worker threads
-[02:25:55] [Render thread/INFO] (Minecraft) Stopping!
+[23:19:22] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-client-tags-api-v1, fabric-crash-report-info-v1, sodium, fabric-content-registries-v0, fabric-rendering-data-attachment-v1, fabric-data-generation-api-v1, fabric-block-api-v1, fabric-gametest-api-v1, fabric-renderer-indigo, fabric-message-api-v1, fabric-key-binding-api-v1, fabric-command-api-v2, fabric-screen-api-v1, fabric-networking-api-v1, fabric-transitive-access-wideners-v1, fabric-api-lookup-api-v1, fabric-item-group-api-v1, fabric-dimensions-v1, fabric-blockrenderlayer-v1, fabricloader, fabric-resource-loader-v0, fabric-model-loading-api-v1, fabric-game-rule-api-v1, fabric-api, fabric-lifecycle-events-v1, fabric-sound-api-v1, fabric-resource-conditions-api-v1, fabric-loot-api-v2, fabric-registry-sync-v0, fabric-mining-level-api-v1, fabric-transfer-api-v1, fabric-convention-tags-v1, reeses-sodium-options, gemstyne, fabric-biome-api-v1, fabric-object-builder-api-v1, fabric-recipe-api-v1, caffeineconfig, fabric-item-api-v1, fabric-api-base, owo, fabric-rendering-v1, fabric-screen-handler-api-v1, sodium-extra, fabric-entity-events-v1, fabric-particles-v1, fabric-rendering-fluids-v1, fabric-renderer-api-v1, fabric-events-interaction-v0)
+[23:19:22] [Worker-Main-5/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
+[23:19:22] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=12'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=13'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=14'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=15'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=2'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=1'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=0'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=9'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=8'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=7'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=6'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=5'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=4'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=3'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=10'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=11'
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Unable to load model: 'gemstyne:salt#inventory' referenced from: gemstyne:salt#inventory: java.io.FileNotFoundException: gemstyne:models/item/salt.json
+[23:19:24] [Worker-Main-4/WARN] (Minecraft) Unable to load model: 'gemstyne:tin_nugget#inventory' referenced from: gemstyne:tin_nugget#inventory: java.io.FileNotFoundException: gemstyne:models/item/tin_nugget.json
+[23:19:26] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[23:19:26] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[23:19:26] [Render thread/INFO] (Minecraft) OpenAL initialized on device Family 17h/19h HD Audio Controller Analog Stereo
+[23:19:26] [Render thread/INFO] (Minecraft) Sound engine started
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
+[23:19:26] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
+[23:19:27] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[23:19:27] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[23:19:27] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[23:19:27] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[23:19:51] [Render thread/INFO] (FabricRegistrySync) [fabric-registry-sync] Loaded registry data [file 1/4]
+[23:19:52] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[23:19:52] [Render thread/INFO] (Minecraft) Loaded 1374 advancements
+[23:19:53] [Render thread/INFO] (BiomeModificationImpl) Applied 1398 biome modifications to 58 of 64 new biomes in 95.79 ms
+[23:19:53] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
+[23:19:53] [Server thread/INFO] (Minecraft) Generating keypair
+[23:19:56] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[23:20:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 7%
+[23:20:02] [Render thread/INFO] (Minecraft) Preparing spawn area: 42%
+[23:20:02] [Render thread/INFO] (Minecraft) Preparing spawn area: 84%
+[23:20:04] [Render thread/INFO] (Minecraft) Time elapsed: 7726 ms
+[23:20:04] [Server thread/INFO] (Minecraft) Changing view distance to 6, from 10
+[23:20:04] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
+[23:20:05] [Server thread/INFO] (Minecraft) Player365[local:E:c0064293] logged in with entity id 148 at (762.3414062649896, 63.0, -171.09946447493877)
+[23:20:05] [Server thread/INFO] (Minecraft) Player365 joined the game
+[23:20:05] [Render thread/INFO] (ChunkBuilder) Started 2 worker threads
+[23:20:05] [Render thread/INFO] (Minecraft) Loaded 53 advancements
+[23:20:07] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2212ms or 44 ticks behind
+[23:20:51] [Server thread/INFO] (Minecraft) [Player365: Removed 453 item(s) from player Player365]
+[23:20:51] [Render thread/INFO] (Minecraft) [System] [CHAT] Removed 453 item(s) from player Player365
+[23:22:55] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[23:22:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:overworld
+[23:22:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_nether
+[23:22:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_end
+[23:23:36] [Render thread/INFO] (Minecraft) [System] [CHAT] Saved screenshot as 2023-08-26_23.23.36.png
+[23:24:18] [Server thread/INFO] (Minecraft) [Player365: Set own game mode to Survival Mode]
+[23:24:18] [Render thread/INFO] (Minecraft) [System] [CHAT] Set own game mode to Survival Mode
+[23:24:25] [Server thread/INFO] (Minecraft) [Player365: Gave 1 [Netherite Pickaxe] to Player365]
+[23:24:25] [Render thread/INFO] (Minecraft) [System] [CHAT] Gave 1 [Netherite Pickaxe] to Player365
+[23:24:45] [Server thread/INFO] (Minecraft) Player365 has made the advancement [Diamonds!]
+[23:24:45] [Render thread/INFO] (Minecraft) [System] [CHAT] Player365 has made the advancement [Diamonds!]
+[23:24:45] [Render thread/INFO] (Minecraft) Loaded 69 advancements
+[23:24:48] [Server thread/WARN] (Minecraft) Block entity gemstyne:deep_ore_block @ BlockPos{x=756, y=63, z=-175} state Block{minecraft:air} invalid for ticking:
+[23:25:11] [Render thread/INFO] (Minecraft) Loaded 72 advancements
+[23:25:16] [Render thread/INFO] (Minecraft) Loaded 73 advancements
+[23:25:37] [Render thread/INFO] (Minecraft) Loaded 76 advancements
+[23:25:43] [Render thread/INFO] (Minecraft) Loaded 79 advancements
+[23:25:47] [Render thread/INFO] (Minecraft) Loaded 81 advancements
+[23:25:57] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[23:25:57] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:overworld
+[23:25:57] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_nether
+[23:25:57] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_end
+[23:25:58] [Server thread/INFO] (Minecraft) Player365 lost connection: Disconnected
+[23:25:58] [Server thread/INFO] (Minecraft) Player365 left the game
+[23:25:58] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[23:25:58] [Server thread/INFO] (Minecraft) Stopping server
+[23:25:58] [Server thread/INFO] (Minecraft) Saving players
+[23:25:58] [Server thread/INFO] (Minecraft) Saving worlds
+[23:26:00] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:overworld
+[23:26:02] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_nether
+[23:26:02] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Particles in Minecraft hurt me]'/minecraft:the_end
+[23:26:02] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (Particles in Minecraft hurt me): All chunks are saved
+[23:26:02] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[23:26:02] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[23:26:02] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[23:26:02] [Render thread/INFO] (ChunkBuilder) Stopping worker threads
+[23:26:04] [Render thread/INFO] (Minecraft) Stopping!

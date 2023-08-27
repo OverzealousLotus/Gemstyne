@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rendfire_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gemstyne:rendfire_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:crimonite_ingot_from_smelting_rendfire_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_rendfire_helmet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crimonite_ingot_from_smelting_rendfire_helmet"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -31,6 +31,7 @@
   "block.gemstyne.nefarium_ore": "Nefarium Ore",
   "block.gemstyne.nether_aldus_ore": "Nether Aldus Ore",
   "block.gemstyne.nether_crimonite_ore": "Nether Crimonite Ore",
+  "block.gemstyne.nether_torrium_ore": "Nether Torrium Ore",
   "block.gemstyne.pumice": "Pumice",
   "block.gemstyne.raw_aldus_block": "Raw Aldus Block",
   "block.gemstyne.raw_crimonite_block": "Raw Crimonite Block",
@@ -41,6 +42,7 @@
   "block.gemstyne.small_ikarite_bud": "Small Ikarite Bud",
   "block.gemstyne.tin_block": "Tin Block",
   "block.gemstyne.tin_ore": "Tin Ore",
+  "block.gemstyne.torrium_ore": "Torrium Ore",
   "block.gemstyne.uranium_block": "Uranium Block",
   "effect.gemstyne.irradiate": "Irradiate",
   "item.gemstyne.aldus_axe": "Aldus Axe",
@@ -50,6 +52,7 @@
   "item.gemstyne.aldus_hoe": "Aldus Hoe",
   "item.gemstyne.aldus_ingot": "Aldus Ingot",
   "item.gemstyne.aldus_leggings": "Aldus Leggings",
+  "item.gemstyne.aldus_nugget": "Aldus Nugget",
   "item.gemstyne.aldus_pickaxe": "Aldus Pickaxe",
   "item.gemstyne.aldus_shovel": "Aldus Shovel",
   "item.gemstyne.aldus_sword": "Aldus Sword",
@@ -71,6 +74,7 @@
   "item.gemstyne.bronzeplate_leggings": "Bronzeplate Leggings",
   "item.gemstyne.crimonite_chunk": "Crimonite Chunk",
   "item.gemstyne.crimonite_ingot": "Crimonite Ingot",
+  "item.gemstyne.crimonite_nugget": "Crimonite Nugget",
   "item.gemstyne.fire_opal": "Fire Opal",
   "item.gemstyne.garnet": "Garnet",
   "item.gemstyne.ikarite": "Ikarite",
@@ -96,5 +100,6 @@
   "item.gemstyne.tin_ingot": "Tin Ingot",
   "item.gemstyne.uranium_chunk": "Uranium Chunk",
   "item.gemstyne.uranium_ingot": "Uranium Ingot",
-  "itemGroup.gemstyne.main": "Gemstyne OwoGroup"
+  "item.gemstyne.uranium_nugget": "Uranium Nugget",
+  "itemGroup.gemstyne.main": "Gemstyne"
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gemstyne:block/nether_torrium_ore"
+  }
+}

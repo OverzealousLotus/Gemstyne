@@ -34,24 +34,24 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         gemstyneOreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, GemstyneOreItems.FIRE_OPAL);
 
-        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.stoneOre(), GemstyneOreItems.RAW_MOCHITE);
-        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.deepslateOre(), GemstyneOreItems.RAW_MOCHITE);
+        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.stoneOre(), GemstyneOreItems.MOCHITE.raw());
+        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.deepslateOre(), GemstyneOreItems.MOCHITE.raw());
 
         gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.MORKITE);
 
         gemstyneRichOreDrops(GemstyneOreBlocks.TIN.stoneOre(),
-                GemstyneOreItems.TIN.RAW, 1.0f, 3.0f);
+                GemstyneOreItems.TIN.raw(), 1.0f, 3.0f);
         gemstyneRichOreDrops(GemstyneOreBlocks.TIN.deepslateOre(),
-                GemstyneOreItems.TIN.RAW, 1.0f, 3.0f);
+                GemstyneOreItems.TIN.raw(), 1.0f, 3.0f);
 
-        gemstyneOreDrops(GemstyneOreBlocks.URANIUM.deepslateOre(), GemstyneOreItems.URANIUM.RAW);
+        gemstyneOreDrops(GemstyneOreBlocks.URANIUM.deepslateOre(), GemstyneOreItems.URANIUM.raw());
         // ======
         // <===== Nether Ore Loot =====>
         // ======
 
-        gemstyneOreDrops(GemstyneOreBlocks.ALDUS.netherOre(), GemstyneOreItems.ALDUS.RAW);
+        gemstyneOreDrops(GemstyneOreBlocks.ALDUS.netherOre(), GemstyneOreItems.ALDUS.raw());
 
-        gemstyneOreDrops(GemstyneOreBlocks.CRIMONITE.netherOre(), GemstyneOreItems.CRIMONITE.RAW);
+        gemstyneOreDrops(GemstyneOreBlocks.CRIMONITE.netherOre(), GemstyneOreItems.CRIMONITE.raw());
         // ======
         // <===== Ore Extension Loot =====>
         // ======

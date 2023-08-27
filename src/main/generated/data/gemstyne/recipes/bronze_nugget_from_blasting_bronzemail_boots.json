@@ -1,11 +1,11 @@
 {
-  "type": "minecraft:smelting",
+  "type": "minecraft:blasting",
   "category": "misc",
-  "cookingtime": 350,
+  "cookingtime": 100,
   "experience": 1.0,
   "group": "gemstyne",
   "ingredient": {
-    "item": "gemstyne:bronzeplate_chestplate"
+    "item": "gemstyne:bronzemail_boots"
   },
   "result": "gemstyne:bronze_nugget"
 }

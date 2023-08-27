@@ -1,11 +1,11 @@
 {
   "type": "minecraft:smelting",
   "category": "misc",
-  "cookingtime": 350,
+  "cookingtime": 200,
   "experience": 1.0,
   "group": "gemstyne",
   "ingredient": {
-    "item": "gemstyne:bronzeplate_leggings"
+    "item": "gemstyne:aldus_leggings"
   },
-  "result": "gemstyne:bronze_nugget"
+  "result": "gemstyne:aldus_ingot"
 }

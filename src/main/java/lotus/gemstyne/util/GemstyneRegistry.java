@@ -33,7 +33,7 @@ public class GemstyneRegistry {
 
     public static void registerBlock(String path, Block block) {
         Registry.register(Registries.BLOCK, id(path), block);
-        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE_GROUP)));
+        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE)));
     }
 
     /**
@@ -43,7 +43,7 @@ public class GemstyneRegistry {
      * @return Returns a new {@link Item}
      */
     public static Item designateItem(String path, OwoItemSettings settings) {
-        return Registry.register(Registries.ITEM, id(path), new Item(settings.group(GemstyneCreativeGroup.GEMSTYNE_GROUP)));
+        return Registry.register(Registries.ITEM, id(path), new Item(settings.group(GemstyneCreativeGroup.GEMSTYNE)));
     }
 
     public static Item designateItem(String path, Item item) {
@@ -51,7 +51,7 @@ public class GemstyneRegistry {
     }
 
     public static Block designateBlock(String path, Block block) {
-        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE_GROUP)));
+        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE)));
         return Registry.register(Registries.BLOCK, id(path), block);
     }
 }

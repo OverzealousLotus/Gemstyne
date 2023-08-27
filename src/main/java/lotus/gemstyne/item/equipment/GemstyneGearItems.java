@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 public class GemstyneGearItems {
     private static final Item IMBUED_FEATHER = GemstyneRegistry.designateItem("imbued_feather",
             new ImbuedFeatherItem(new OwoItemSettings().maxCount(1).maxDamage(20)
-                    .group(GemstyneCreativeGroup.GEMSTYNE_GROUP))
+                    .group(GemstyneCreativeGroup.GEMSTYNE))
     );
 
     public static Item getImbuedFeather() {

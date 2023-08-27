@@ -38,12 +38,16 @@ public final class GemstyneOreBlocks {
             new VolatileOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(5, 10))
     );*/
 
-    public static final Block DEEPSLATE_TORRIUM = GemstyneRegistry.designateBlock("deepslate_torrium_ore",
-            new TorriumOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(2, 5)));
-
     public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
             new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), 5, UniformIntProvider.create(2, 5))
     );
+
+    public static final GemstyneBlockSet TORRIUM = new GemstyneBlockSet("torrium")
+            .createOre(new TorriumOre(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).luminance(5), UniformIntProvider.create(5, 10)))
+            .createOreType("deepslate", new TorriumOre(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).luminance(5),
+                    UniformIntProvider.create(5, 10)), BlockSoundGroup.DEEPSLATE)
+            .createOreType("nether", new TorriumOre(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).luminance(5),
+                    UniformIntProvider.create(5, 10)), BlockSoundGroup.NETHER_ORE);
 
     public static final GemstyneBlockSet TIN = new GemstyneBlockSet("tin")
             .setExperience(UniformIntProvider.create(2, 5))

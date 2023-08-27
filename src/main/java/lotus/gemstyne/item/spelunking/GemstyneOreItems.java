@@ -3,7 +3,6 @@ package lotus.gemstyne.item.spelunking;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.item.GemstyneItemSet;
-import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -25,20 +24,20 @@ public final class GemstyneOreItems {
     // =====
     public static final GemstyneItemSet ALDUS = new GemstyneItemSet("aldus").createDefaultItemSet(false);
     public static final GemstyneItemSet BRONZE = new GemstyneItemSet("bronze")
-            .createDefaultItemSet(true).createChain();
+            .createDefaultItemSet(true).createItemVariant("chain");
     public static final GemstyneItemSet CRIMONITE = new GemstyneItemSet("crimonite")
-            .createDefaultItemSet(false).createLump();
+            .createDefaultItemSet(false).createItemVariant("chunk");
     public static final GemstyneItemSet TIN = new GemstyneItemSet("tin").createDefaultItemSet(false);
     public static final GemstyneItemSet URANIUM = new GemstyneItemSet("uranium")
-            .createDefaultItemSet(false).createLump();
+            .createDefaultItemSet(false).createItemVariant("chunk");
 
     // =====
     // <=====| Singleton Ores |=====>
     // =====
-    public static final Item RAW_MOCHITE = GemstyneRegistry.designateItem("raw_mochite",
-            new OwoItemSettings());
-    public static final Item MOCHITE = GemstyneRegistry.designateItem("mochite",
-            new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE_GROUP).food(MOCHITE_FOOD));
+    public static final GemstyneItemSet MOCHITE = new GemstyneItemSet("mochite")
+            .createRaw()
+            .addFood(MOCHITE_FOOD)
+            .createCrystal();
 
     // ======
     // <===== Crystals =====>

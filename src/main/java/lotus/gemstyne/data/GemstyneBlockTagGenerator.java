@@ -21,7 +21,10 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
         // ======
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsPickaxe())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.DEEPSLATE_TORRIUM)
+                .add(GemstyneOreBlocks.TORRIUM.stoneOre())
+                .add(GemstyneOreBlocks.TORRIUM.deepslateOre())
+                .add(GemstyneOreBlocks.TORRIUM.netherOre())
+
                 .add(GemstyneOreBlocks.MOCHITE.stoneOre())
                 .add(GemstyneOreBlocks.MOCHITE.deepslateOre())
                 .add(GemstyneOreBlocks.MOCHITE.rawBlock)

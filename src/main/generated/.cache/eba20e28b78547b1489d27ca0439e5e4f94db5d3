@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-25T18:37:38.350670025	Gemstyne/Tags for minecraft:block
+// 1.20.1	2023-08-26T23:18:09.631267846	Gemstyne/Tags for minecraft:block
 6897b91683f2d0d6d02a185d6576c3b373d4a7d7 data/minecraft/tags/blocks/compressed_granite_ore_replaceables.json
 a3dc40ca20cdeb2c74391c44e4ec72acbe76ae09 data/minecraft/tags/blocks/mineable/shovel.json
 2be51b6565c0573894a521816a71a9780e0bd4cb data/minecraft/tags/blocks/compressed_andesite_ore_replaceables.json
@@ -10,4 +10,4 @@ e12b0b06e80a7c39fa13ec6bd7c436b38d3caced data/minecraft/tags/blocks/morkite_ore_
 1b1183e22270dba1848a4410577b5d84d0a33a9b data/minecraft/tags/blocks/tin_ore_replaceables.json
 2b9ca1e37b8fb81e240640c076701f57efea4eed data/minecraft/tags/blocks/uranium_ore_replaceables.json
 39a8e94eba49f7a5358fd1cf0c969d74f62d7a61 data/minecraft/tags/blocks/needs_diamond_tool.json
-da4a441c583a0d2a17246b9bee12db840d6cba46 data/minecraft/tags/blocks/mineable/pickaxe.json
+4dcb0959cd2e9cbab4236c6a46514b89a88c5f28 data/minecraft/tags/blocks/mineable/pickaxe.json

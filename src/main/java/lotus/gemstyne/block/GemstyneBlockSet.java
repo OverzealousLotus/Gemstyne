@@ -1,5 +1,6 @@
 package lotus.gemstyne.block;
 
+import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.AfflictiveBlock;
 import lotus.gemstyne.block.custom.AfflictiveOre;
 import lotus.gemstyne.util.GemstyneBlockTypes;
@@ -14,6 +15,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class GemstyneBlockSet {
     public Map<String, ExperienceDroppingBlock> oreVariants = new LinkedHashMap<>();
@@ -97,6 +99,17 @@ public class GemstyneBlockSet {
     }
 
     /**
+     * Variant of original method to create generic block
+     * @param block Any which implements {@link ExperienceDroppingBlock}
+     * @return Returns instance of self.
+     */
+    public GemstyneBlockSet createOre(ExperienceDroppingBlock block) {
+        this.oreVariants.put("stone", block);
+        GemstyneRegistry.registerBlock(this.SET_NAME + "_ore", this.oreVariants.get("stone"));
+        return this;
+    }
+
+    /**
      * Creates an unknown ore variant for {@link GemstyneBlockSet}
      * @param type Variant
      * @param sounds {@link BlockSoundGroup}
@@ -124,16 +137,49 @@ public class GemstyneBlockSet {
         return this;
     }
 
+    /**
+     * Variation of original method, but instead creates a generic ore with no special parameters.
+     * @param type Variant
+     * @param block Any which extends {@link ExperienceDroppingBlock}
+     * @param sounds {@link BlockSoundGroup}
+     * @return Returns instance of self.
+     */
+    public GemstyneBlockSet createOreType(String type, ExperienceDroppingBlock block, BlockSoundGroup sounds) {
+        this.currentSettings.sounds(sounds).strength(this.currentHardness);
+        this.oreVariants.put(type, block);
+        GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
+        return this;
+    }
+
+    /**
+     * Safely fetches an {@link Block} from {@link GemstyneBlockSet}. If the Block is not present, then
+     * an error message with hints is printed, then a {@link NullPointerException} is thrown.
+     * @param blockName Name of target {@link Block}
+     * @return Returns {@link Block} safely, or throws a {@link NullPointerException} instead of returning null.
+     */
+    private Block safelyFetch(String blockName) {
+        Optional<Block> block = Optional.ofNullable(this.oreVariants.get(blockName));
+        if(block.isPresent()) {
+            return this.oreVariants.get(blockName);
+        } else {
+            Gemstyne.LOGGER.error("[[ ERROR: " + blockName + " for set " + this.SET_NAME + " is null!" +
+                    " Maybe the Block is improperly initialized?" +
+                    " OR the BlockSet was called in an incompatible Method!" +
+                    " OTHERWISE the wrong getter was called!");
+        }
+        throw new NullPointerException();
+    }
+
     public Block stoneOre() {
-        return this.oreVariants.get("stone");
+        return safelyFetch("stone");
     }
 
     public Block deepslateOre() {
-        return this.oreVariants.get("deepslate");
+        return safelyFetch("deepslate");
     }
 
     public Block netherOre() {
-        return this.oreVariants.get("nether");
+        return safelyFetch("nether");
     }
 
     public GemstyneBlockSet createRawBlock() {

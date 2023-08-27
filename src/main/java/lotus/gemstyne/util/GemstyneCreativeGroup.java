@@ -7,12 +7,12 @@ import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 
 public class GemstyneCreativeGroup {
 
-    public static final OwoItemGroup GEMSTYNE_GROUP = OwoItemGroup.builder(GemstyneRegistry.id("main"),
-            () -> Icon.of(GemstyneOreItems.MOCHITE)).build();
+    public static final OwoItemGroup GEMSTYNE = OwoItemGroup.builder(GemstyneRegistry.id("main"),
+            () -> Icon.of(GemstyneOreItems.MOCHITE.crystal())).build();
 
     public static void registerGroups() {
         Gemstyne.LOGGER.info("Registering Gemstyne Group(s)...");
-        GEMSTYNE_GROUP.initialize();
+        GEMSTYNE.initialize();
         Gemstyne.LOGGER.info("Successfully registered Gemstyne Group(s)!");
     }
 

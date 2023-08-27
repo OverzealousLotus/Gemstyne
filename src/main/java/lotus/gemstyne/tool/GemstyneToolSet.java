@@ -29,7 +29,7 @@ public class GemstyneToolSet {
             String setName,
             ToolMaterial material,
             Item source) {
-        settings.group(GemstyneCreativeGroup.GEMSTYNE_GROUP);
+        settings.group(GemstyneCreativeGroup.GEMSTYNE);
         this.AXE = new AxeItem(material, attackDamage[0], attackSpeed[0], settings);
         this.HOE = new HoeItem(material, (int) attackDamage[1], attackSpeed[1], settings);
         this.PICKAXE = new PickaxeItem(material, (int) attackDamage[2], attackSpeed[2], settings);
