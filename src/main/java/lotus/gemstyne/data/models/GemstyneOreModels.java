@@ -21,9 +21,11 @@ public final class GemstyneOreModels {
         // =====
         // <===== Overworld =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.TORRIUM.stoneOre());
+        /*blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.TORRIUM.stoneOre());
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.TORRIUM.deepslateOre());
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.TORRIUM.netherOre());
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.TORRIUM.netherOre());*/
+
+        GemstyneOreBlocks.TORRIUM.generateModels(blockStateModelGenerator);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
                 GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);

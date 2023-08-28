@@ -12,15 +12,20 @@ import net.minecraft.util.Identifier;
 public class GemstyneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LARGE_IKARITE_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.MEDIUM_IKARITE_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.SMALL_IKARITE_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.clusterBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.largeBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.mediumBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.smallBud(), RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET_CLUSTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LARGE_GARNET_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.MEDIUM_GARNET_BUD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.SMALL_GARNET_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.clusterBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.largeBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.mediumBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.smallBud(), RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.clusterBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.largeBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.mediumBud(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.smallBud(), RenderLayer.getCutout());
 
         FluidRenderHandlerRegistry.INSTANCE.register(GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE,
                 new SimpleFluidRenderHandler(

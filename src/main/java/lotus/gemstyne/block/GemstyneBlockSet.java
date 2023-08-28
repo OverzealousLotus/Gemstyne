@@ -9,16 +9,16 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class GemstyneBlockSet {
-    public Map<String, ExperienceDroppingBlock> oreVariants = new LinkedHashMap<>();
+    private Map<String, ExperienceDroppingBlock> oreVariants = new LinkedHashMap<>();
+    private Set<Block> blockSet = new HashSet<>();
     public Block rawBlock;
     public Block pureBlock;
 
@@ -94,7 +94,8 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOre() {
         this.oreVariants.put("stone", new ExperienceDroppingBlock(this.currentSettings));
-        GemstyneRegistry.registerBlock(this.SET_NAME + "_ore", this.oreVariants.get("stone"));
+        this.blockSet.add(safelyFetch("stone"));
+        GemstyneRegistry.registerBlock(this.SET_NAME + "_ore", this.safelyFetch("stone"));
         return this;
     }
 
@@ -105,6 +106,7 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOre(ExperienceDroppingBlock block) {
         this.oreVariants.put("stone", block);
+        this.blockSet.add(safelyFetch("stone"));
         GemstyneRegistry.registerBlock(this.SET_NAME + "_ore", this.oreVariants.get("stone"));
         return this;
     }
@@ -118,6 +120,7 @@ public class GemstyneBlockSet {
     public GemstyneBlockSet createOreType(String type, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
         this.oreVariants.put(type, new ExperienceDroppingBlock(this.currentSettings, this.experience));
+        this.blockSet.add(safelyFetch(type));
         GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
         return this;
     }
@@ -133,6 +136,7 @@ public class GemstyneBlockSet {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
         this.oreVariants.put(type, new AfflictiveOre(this.currentSettings, this.effect,
                 duration, GemstyneBlockTypes.ORE, this.experience));
+        this.blockSet.add(safelyFetch(type));
         GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
         return this;
     }
@@ -147,39 +151,9 @@ public class GemstyneBlockSet {
     public GemstyneBlockSet createOreType(String type, ExperienceDroppingBlock block, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
         this.oreVariants.put(type, block);
+        this.blockSet.add(safelyFetch(type));
         GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
         return this;
-    }
-
-    /**
-     * Safely fetches an {@link Block} from {@link GemstyneBlockSet}. If the Block is not present, then
-     * an error message with hints is printed, then a {@link NullPointerException} is thrown.
-     * @param blockName Name of target {@link Block}
-     * @return Returns {@link Block} safely, or throws a {@link NullPointerException} instead of returning null.
-     */
-    private Block safelyFetch(String blockName) {
-        Optional<Block> block = Optional.ofNullable(this.oreVariants.get(blockName));
-        if(block.isPresent()) {
-            return this.oreVariants.get(blockName);
-        } else {
-            Gemstyne.LOGGER.error("[[ ERROR: " + blockName + " for set " + this.SET_NAME + " is null!" +
-                    " Maybe the Block is improperly initialized?" +
-                    " OR the BlockSet was called in an incompatible Method!" +
-                    " OTHERWISE the wrong getter was called!");
-        }
-        throw new NullPointerException();
-    }
-
-    public Block stoneOre() {
-        return safelyFetch("stone");
-    }
-
-    public Block deepslateOre() {
-        return safelyFetch("deepslate");
-    }
-
-    public Block netherOre() {
-        return safelyFetch("nether");
     }
 
     public GemstyneBlockSet createRawBlock() {
@@ -226,7 +200,40 @@ public class GemstyneBlockSet {
                 .createPureBlock();
     }
 
+    public void generateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        this.blockSet.forEach(blockStateModelGenerator::registerCubeAllModelTexturePool);
+    }
+
     public GemstyneBlockSet create() {
         return this;
+    }
+
+    /**
+     * Safely fetches an {@link Block} from {@link GemstyneBlockSet}. If the Block is not present, then
+     * an error message with hints is printed, then a {@link NullPointerException} is thrown.
+     * @param blockName Name of target {@link Block}
+     * @return Returns {@link Block} safely, or throws a {@link NullPointerException} instead of returning null.
+     */
+    private Block safelyFetch(String blockName) {
+        Optional<Block> block = Optional.ofNullable(this.oreVariants.get(blockName));
+        if(block.isPresent()) {
+            return this.oreVariants.get(blockName);
+        } else {
+            Gemstyne.LOGGER.error("[[ ERROR: " + blockName + " for set " + this.SET_NAME + " is null!" +
+                    " Maybe the Block is improperly initialized?" +
+                    " OR the BlockSet was called in an incompatible Method!" +
+                    " OTHERWISE the wrong getter was called!");
+        }
+        throw new NullPointerException();
+    }
+
+    public Block stoneOre() {
+        return safelyFetch("stone");
+    }
+    public Block deepslateOre() {
+        return safelyFetch("deepslate");
+    }
+    public Block netherOre() {
+        return safelyFetch("nether");
     }
 }

@@ -89,19 +89,25 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Geodes =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.GARNET_CLUSTER, "Garnet Cluster");
-        translationBuilder.add(GemstyneOreBlocks.LARGE_GARNET_BUD, "Large Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.MEDIUM_GARNET_BUD, "Medium Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.SMALL_GARNET_BUD, "Small Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.GARNET_BLOCK, "Garnet Block");
-        translationBuilder.add(GemstyneOreBlocks.BUDDING_GARNET, "Budding Garnet");
+        translationBuilder.add(GemstyneOreBlocks.GARNET.clusterBud(), "Garnet Cluster");
+        translationBuilder.add(GemstyneOreBlocks.GARNET.largeBud(), "Large Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.GARNET.mediumBud(), "Medium Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.GARNET.smallBud(), "Small Garnet Bud");
+        translationBuilder.add(GemstyneOreBlocks.GARNET.pureBlock(), "Garnet Block");
+        translationBuilder.add(GemstyneOreBlocks.GARNET.buddingBlock(), "Budding Garnet");
 
-        translationBuilder.add(GemstyneOreBlocks.IKARITE_CLUSTER, "Ikarite Cluster");
-        translationBuilder.add(GemstyneOreBlocks.LARGE_IKARITE_BUD, "Large Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.MEDIUM_IKARITE_BUD, "Medium Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.SMALL_IKARITE_BUD, "Small Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.IKARITE_BLOCK, "Ikarite Block");
-        translationBuilder.add(GemstyneOreBlocks.BUDDING_IKARITE, "Budding Ikarite");
+        translationBuilder.add(GemstyneOreBlocks.LAPIS.clusterBud(), "Lapis Cluster");
+        translationBuilder.add(GemstyneOreBlocks.LAPIS.largeBud(), "Large Lapis Bud");
+        translationBuilder.add(GemstyneOreBlocks.LAPIS.mediumBud(), "Medium Lapis Bud");
+        translationBuilder.add(GemstyneOreBlocks.LAPIS.smallBud(), "Small Lapis Bud");
+        translationBuilder.add(GemstyneOreBlocks.LAPIS.buddingBlock(), "Budding Lapis");
+
+        translationBuilder.add(GemstyneOreBlocks.IKARITE.clusterBud(), "Ikarite Cluster");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE.largeBud(), "Large Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE.mediumBud(), "Medium Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE.smallBud(), "Small Ikarite Bud");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE.pureBlock(), "Ikarite Block");
+        translationBuilder.add(GemstyneOreBlocks.IKARITE.buddingBlock(), "Budding Ikarite");
 
         // ======
         // <===== Minerals =====>

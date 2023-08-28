@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-26T23:18:09.637276534	Gemstyne/Block Loot Tables
+// 1.20.1	2023-08-28T03:46:19.283419286	Gemstyne/Block Loot Tables
 e358a1e5f94f65184f8398914d38b776243fc772 data/gemstyne/loot_tables/blocks/deepslate_tin_ore.json
 658efb0fcd41f3472cf8058f720f623db4048e84 data/gemstyne/loot_tables/blocks/crimonite_block.json
 e652704108fa14d6cbe8532bfeaf1e9431dc919a data/gemstyne/loot_tables/blocks/aldus_block.json
@@ -12,6 +12,7 @@ e7784def9f7de4b89a88a81c42e6ab17cd05ff44 data/gemstyne/loot_tables/blocks/raw_mo
 00aa43a6010298e3f5388c04a087f57dd7b928f0 data/gemstyne/loot_tables/blocks/morkite_block.json
 4b0b2da7c06a0296685e214698cbefd3d36e973d data/gemstyne/loot_tables/blocks/nether_aldus_ore.json
 bc9964d83096bbc3c0456d7eb5f222a7e3b918f8 data/gemstyne/loot_tables/blocks/compressed_granite_coal_ore.json
+8c31d0653032aa3d144cddd9036ef6f39f8e9988 data/gemstyne/loot_tables/blocks/lapis_cluster.json
 c4564378671b15d7f4491dc9e63fc9a96878ef15 data/gemstyne/loot_tables/blocks/tin_block.json
 4a6c9409d27939941e338bf9e27c959a0de6bfe2 data/gemstyne/loot_tables/blocks/compressed_granite_fire_opal_ore.json
 ac4139e7a1b858762598e4dcf4ffcf2780f15abc data/gemstyne/loot_tables/blocks/deepslate_morkite_ore.json

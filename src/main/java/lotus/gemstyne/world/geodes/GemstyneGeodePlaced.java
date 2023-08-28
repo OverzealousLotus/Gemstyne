@@ -20,6 +20,8 @@ public final class GemstyneGeodePlaced {
             GemstynePlacedFeatures.registerKey("ikarite_geode");
     public static final RegistryKey<PlacedFeature> GARNET_PLACED_KEY =
             GemstynePlacedFeatures.registerKey("garnet_geode");
+    public static final RegistryKey<PlacedFeature> LAPIS_PLACED_KEY =
+            GemstynePlacedFeatures.registerKey("lapis_geode");
 
 
     public static void registerGeodePlacedFeatures(Registerable<PlacedFeature> context) {
@@ -38,6 +40,13 @@ public final class GemstyneGeodePlaced {
                 ImmutableList.of(RarityFilterPlacementModifier.of(45),
                         SquarePlacementModifier.of(),
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(60)),
+                        BiomePlacementModifier.of()));
+
+        GemstynePlacedFeatures.register(context, LAPIS_PLACED_KEY,
+                GemstynePlacedFeatures.fetchConfig(context, GemstyneGeodeConfig.LAPIS_KEY),
+                ImmutableList.of(RarityFilterPlacementModifier.of(45),
+                        SquarePlacementModifier.of(),
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(50)),
                         BiomePlacementModifier.of()));
     }
 }

@@ -80,8 +80,8 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         addDrop(GemstyneOreBlocks.URANIUM.rawBlock);
         addDrop(GemstyneOreBlocks.URANIUM.pureBlock);
 
-        addDrop(GemstyneOreBlocks.IKARITE_BLOCK);
-        addDrop(GemstyneOreBlocks.GARNET_BLOCK);
+        addDrop(GemstyneOreBlocks.IKARITE.pureBlock());
+        addDrop(GemstyneOreBlocks.GARNET.pureBlock());
 
         // ======
         // <===== Mineral Loot =====>
@@ -99,8 +99,10 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Geode Drops =====>
         // ======
-        gemstyneOreDrops(GemstyneOreBlocks.IKARITE_CLUSTER, GemstyneOreItems.IKARITE);
-        gemstyneOreDrops(GemstyneOreBlocks.GARNET_CLUSTER, GemstyneOreItems.GARNET);
+        gemstyneOreDrops(GemstyneOreBlocks.IKARITE.clusterBud(), GemstyneOreItems.IKARITE);
+        gemstyneOreDrops(GemstyneOreBlocks.GARNET.clusterBud(), GemstyneOreItems.GARNET);
+        gemstyneRichOreDrops(GemstyneOreBlocks.LAPIS.clusterBud(),
+                Items.LAPIS_LAZULI, 1, 3);
 
         gemstyneOreDrops(GemstyneOreBlocks.NEFARIUM_ORE, Items.DIAMOND);
     }
