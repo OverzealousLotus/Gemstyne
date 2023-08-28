@@ -60,19 +60,18 @@ public final class GemstyneGeodeSet {
 
     public GemstyneGeodeSet createBudding() {
         this.geodeVariants.put("budding", new BuddingCrystallineBlock(this.currentSettings, ImmutableList.of(
-                this.geodeVariants.get("small"),
-                this.geodeVariants.get("medium"),
-                this.geodeVariants.get("large"),
-                this.geodeVariants.get("cluster")
+                safelyFetch("small"),
+                safelyFetch("medium"),
+                safelyFetch("large"),
+                safelyFetch("cluster")
         )));
         GemstyneRegistry.registerBlock("budding_" + this.SET_NAME, safelyFetch("budding"));
         return this;
     }
 
-    public GemstyneGeodeSet createBlock() {
+    public void createBlock() {
         this.geodeVariants.put("block", new AmethystBlock(this.currentSettings));
         GemstyneRegistry.registerBlock(this.SET_NAME + "_block", safelyFetch("block"));
-        return this;
     }
 
     /**
@@ -93,7 +92,7 @@ public final class GemstyneGeodeSet {
      * @param itemModelGenerator {@link ItemModelGenerator}
      */
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        this.budSet().forEach((item) -> { itemModelGenerator.register(item.asItem(), Models.GENERATED); });
+        this.budSet().forEach(item -> itemModelGenerator.register(item.asItem(), Models.GENERATED));
     }
 
     public GemstyneGeodeSet createDefaultGeodeSet(boolean isVanilla) {
@@ -109,6 +108,10 @@ public final class GemstyneGeodeSet {
                 .createBudding().create();
     }
 
+    /**
+     * Finalization of a {@link GemstyneGeodeSet}. Creates an {@link ImmutableSet} of buds.
+     * @return Returns an instance of self.
+     */
     public GemstyneGeodeSet create() {
         this.budSet = ImmutableSet.of(
                 this.geodeVariants.get("small"),

@@ -61,24 +61,24 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Compact Ore Loot =====>
         // ======
-        addDrop(GemstyneOreBlocks.ALDUS.rawBlock);
-        addDrop(GemstyneOreBlocks.ALDUS.pureBlock);
+        addDrop(GemstyneOreBlocks.ALDUS.rawBlock());
+        addDrop(GemstyneOreBlocks.ALDUS.pureBlock());
 
-        addDrop(GemstyneOreBlocks.CRIMONITE.rawBlock);
-        addDrop(GemstyneOreBlocks.CRIMONITE.pureBlock);
+        addDrop(GemstyneOreBlocks.CRIMONITE.rawBlock());
+        addDrop(GemstyneOreBlocks.CRIMONITE.pureBlock());
 
         addDrop(GemstyneOreBlocks.FIRE_OPAL_BLOCK);
 
-        addDrop(GemstyneOreBlocks.MOCHITE.rawBlock);
-        addDrop(GemstyneOreBlocks.MOCHITE.pureBlock);
+        addDrop(GemstyneOreBlocks.MOCHITE.rawBlock());
+        addDrop(GemstyneOreBlocks.MOCHITE.pureBlock());
 
         addDrop(GemstyneOreBlocks.MORKITE_BLOCK);
 
-        addDrop(GemstyneOreBlocks.TIN.rawBlock);
-        addDrop(GemstyneOreBlocks.TIN.pureBlock);
+        addDrop(GemstyneOreBlocks.TIN.rawBlock());
+        addDrop(GemstyneOreBlocks.TIN.pureBlock());
 
-        addDrop(GemstyneOreBlocks.URANIUM.rawBlock);
-        addDrop(GemstyneOreBlocks.URANIUM.pureBlock);
+        addDrop(GemstyneOreBlocks.URANIUM.rawBlock());
+        addDrop(GemstyneOreBlocks.URANIUM.pureBlock());
 
         addDrop(GemstyneOreBlocks.IKARITE.pureBlock());
         addDrop(GemstyneOreBlocks.GARNET.pureBlock());

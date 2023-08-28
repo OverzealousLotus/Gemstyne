@@ -78,16 +78,16 @@ public class GemstyneOreLists {
     // =====
     private static final ImmutableList<OreFeatureConfig.Target> rawMochiteBlobs = ImmutableList.of(
             OreFeatureConfig.createTarget(getMochiteReplaceables(),
-                    GemstyneOreBlocks.MOCHITE.rawBlock.getDefaultState()));
+                    GemstyneOreBlocks.MOCHITE.rawBlock().getDefaultState()));
     private static final ImmutableList<OreFeatureConfig.Target> rawMorkiteBlobs = ImmutableList.of(
             OreFeatureConfig.createTarget(getMorkiteReplaceables(),
                     GemstyneOreBlocks.MORKITE_BLOCK.getDefaultState()));
     private static final ImmutableList<OreFeatureConfig.Target> rawUraniumBlobs = ImmutableList.of(
             OreFeatureConfig.createTarget(getUraniumReplaceables(),
-                    GemstyneOreBlocks.URANIUM.rawBlock.getDefaultState()));
+                    GemstyneOreBlocks.URANIUM.rawBlock().getDefaultState()));
     private static final ImmutableList<OreFeatureConfig.Target> rawTinBlobs = ImmutableList.of(
             OreFeatureConfig.createTarget(getTinReplaceables(),
-                    GemstyneOreBlocks.TIN.rawBlock.getDefaultState()));
+                    GemstyneOreBlocks.TIN.rawBlock().getDefaultState()));
 
 
     // =====

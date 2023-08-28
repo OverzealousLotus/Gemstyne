@@ -65,17 +65,17 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 GemstyneOreItems.MOCHITE.crystal(), RecipeCategory.DECORATIONS,
-                GemstyneOreBlocks.MOCHITE.pureBlock);
+                GemstyneOreBlocks.MOCHITE.pureBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
                 GemstyneOreItems.MOCHITE.raw(), RecipeCategory.DECORATIONS,
-                GemstyneOreBlocks.MOCHITE.rawBlock);
+                GemstyneOreBlocks.MOCHITE.rawBlock());
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 GemstyneOreItems.URANIUM.ingot(), RecipeCategory.DECORATIONS,
-                GemstyneOreBlocks.URANIUM.pureBlock);
+                GemstyneOreBlocks.URANIUM.pureBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
                 GemstyneOreItems.URANIUM.raw(), RecipeCategory.DECORATIONS,
-                GemstyneOreBlocks.URANIUM.rawBlock);
+                GemstyneOreBlocks.URANIUM.rawBlock());
         // =====
         // <===== Ingots =====>
         // =====
@@ -150,10 +150,10 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
     ) {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
                 itemSet.ingot(), RecipeCategory.DECORATIONS,
-                blockSet.pureBlock);
+                blockSet.pureBlock());
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
                 itemSet.raw(), RecipeCategory.DECORATIONS,
-                blockSet.rawBlock);
+                blockSet.rawBlock());
     }
     private static void offerCompleteSmelting(
             Consumer<RecipeJsonProvider> exporter,

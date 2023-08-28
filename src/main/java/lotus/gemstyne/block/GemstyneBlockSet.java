@@ -12,15 +12,17 @@ import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Pair;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
 public class GemstyneBlockSet {
-    private Map<String, ExperienceDroppingBlock> oreVariants = new LinkedHashMap<>();
-    private Set<Block> blockSet = new HashSet<>();
-    public Block rawBlock;
-    public Block pureBlock;
+    @NotNull private final Map<String, Block> blockVariants = new LinkedHashMap<>();
+    @NotNull private final Set<Pair<String, Block>> blockSet = new HashSet<>();
+    // public Block rawBlock;
+    // public Block pureBlock;
 
     private StatusEffect effect;
     private BlockSoundGroup currentSounds = BlockSoundGroup.STONE;
@@ -52,7 +54,7 @@ public class GemstyneBlockSet {
      * @param hardness Hardness of BlockSet
      * @return Returns current instance of {@link GemstyneBlockSet}
      */
-    public GemstyneBlockSet modifyStrength(float hardness) {
+    protected GemstyneBlockSet modifyStrength(float hardness) {
         this.currentHardness = hardness;
         this.currentSettings = this.currentSettings.strength(this.currentHardness);
         return this;
@@ -63,7 +65,7 @@ public class GemstyneBlockSet {
      * @param sounds {@link BlockSoundGroup} to be assigned.
      * @return Returns an instance of itself.
      */
-    public GemstyneBlockSet modifySounds(BlockSoundGroup sounds) {
+    protected GemstyneBlockSet modifySounds(BlockSoundGroup sounds) {
         this.currentSounds = sounds;
         return this;
     }
@@ -73,7 +75,7 @@ public class GemstyneBlockSet {
      * @param experience Experience dropped by all ores in set.
      * @return Returns an instance of itself.
      */
-    public GemstyneBlockSet setExperience(UniformIntProvider experience) {
+    protected GemstyneBlockSet setExperience(UniformIntProvider experience) {
         this.experience = experience;
         return this;
     }
@@ -93,9 +95,8 @@ public class GemstyneBlockSet {
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre() {
-        this.oreVariants.put("stone", new ExperienceDroppingBlock(this.currentSettings));
-        this.blockSet.add(safelyFetch("stone"));
-        GemstyneRegistry.registerBlock(this.SET_NAME + "_ore", this.safelyFetch("stone"));
+        this.blockVariants.put("stone", new ExperienceDroppingBlock(this.currentSettings));
+        this.blockSet.add(new Pair<>(this.SET_NAME + "_ore", safelyFetch("stone")));
         return this;
     }
 
@@ -105,9 +106,8 @@ public class GemstyneBlockSet {
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre(ExperienceDroppingBlock block) {
-        this.oreVariants.put("stone", block);
-        this.blockSet.add(safelyFetch("stone"));
-        GemstyneRegistry.registerBlock(this.SET_NAME + "_ore", this.oreVariants.get("stone"));
+        this.blockVariants.put("stone", block);
+        this.blockSet.add(new Pair<>(this.SET_NAME + "_ore", this.safelyFetch("stone")));
         return this;
     }
 
@@ -119,9 +119,8 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.oreVariants.put(type, new ExperienceDroppingBlock(this.currentSettings, this.experience));
-        this.blockSet.add(safelyFetch(type));
-        GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
+        this.blockVariants.put(type, new ExperienceDroppingBlock(this.currentSettings, this.experience));
+        this.blockSet.add(new Pair<>(type + "_" + this.SET_NAME + "_ore", safelyFetch(type)));
         return this;
     }
 
@@ -134,10 +133,9 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, int duration, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.oreVariants.put(type, new AfflictiveOre(this.currentSettings, this.effect,
+        this.blockVariants.put(type, new AfflictiveOre(this.currentSettings, this.effect,
                 duration, GemstyneBlockTypes.ORE, this.experience));
-        this.blockSet.add(safelyFetch(type));
-        GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
+        this.blockSet.add(new Pair<>(type + "_" + this.SET_NAME + "_ore", safelyFetch(type)));
         return this;
     }
 
@@ -150,36 +148,35 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, ExperienceDroppingBlock block, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.oreVariants.put(type, block);
-        this.blockSet.add(safelyFetch(type));
-        GemstyneRegistry.registerBlock(type + "_" + this.SET_NAME + "_ore", this.oreVariants.get(type));
+        this.blockVariants.put(type, block);
+        this.blockSet.add(new Pair<>(type + "_" + this.SET_NAME + "_ore", safelyFetch(type)));
         return this;
     }
 
     public GemstyneBlockSet createRawBlock() {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.rawBlock = new Block(this.currentSettings);
-        GemstyneRegistry.registerBlock("raw_" + this.SET_NAME + "_block", this.rawBlock);
+        this.blockVariants.put("raw", new Block(this.currentSettings));
+        this.blockSet.add(new Pair<>("raw_" + this.SET_NAME + "_block", this.safelyFetch("raw")));
         return this;
     }
 
     public GemstyneBlockSet createRawBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.rawBlock = new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.RAW);
-        GemstyneRegistry.registerBlock("raw_" + this.SET_NAME + "_block", this.rawBlock);
+        this.blockVariants.put("raw", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.RAW));
+        this.blockSet.add(new Pair<>("raw_" + this.SET_NAME + "_block", this.safelyFetch("raw")));
         return this;
     }
 
     public GemstyneBlockSet createPureBlock() {
-        this.pureBlock = new Block(this.currentSettings.sounds(this.currentSounds));
-        GemstyneRegistry.registerBlock(this.SET_NAME + "_block", this.pureBlock);
+        this.blockVariants.put("pure", new Block(this.currentSettings.sounds(this.currentSounds)));
+        this.blockSet.add(new Pair<>(this.SET_NAME + "_block", this.safelyFetch("pure")));
         return this;
     }
 
     public GemstyneBlockSet createPureBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds);
-        this.pureBlock = new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.PURE);
-        GemstyneRegistry.registerBlock(this.SET_NAME + "_block", this.pureBlock);
+        this.blockVariants.put("pure", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.PURE));
+        this.blockSet.add(new Pair<>(this.SET_NAME + "_block", this.safelyFetch("pure")));
         return this;
     }
 
@@ -189,7 +186,8 @@ public class GemstyneBlockSet {
                 .createOreType("deepslate", BlockSoundGroup.DEEPSLATE)
                 .createRawBlock()
                 .modifyStrength(strength + 2.5f)
-                .createPureBlock();
+                .createPureBlock()
+                .create();
         return this;
     }
     public GemstyneBlockSet createDefaultNetherBlockSet(float strength) {
@@ -197,14 +195,22 @@ public class GemstyneBlockSet {
                 .modifyStrength(strength + 1.5f)
                 .createRawBlock()
                 .modifyStrength(strength + 2.5f)
-                .createPureBlock();
+                .createPureBlock()
+                .create();
     }
 
     public void generateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        this.blockSet.forEach(blockStateModelGenerator::registerCubeAllModelTexturePool);
+        this.blockSet.forEach(blockIdPair -> blockStateModelGenerator.registerCubeAllModelTexturePool(blockIdPair.getRight()));
     }
 
+    /**
+     * Used to finalize creation of {@link GemstyneBlockSet}. Responsible for registering blocks
+     * into Minecraft, using a {@link HashSet} storing a {@link Pair} containing a String on the left:
+     * The ID of the block; On the right: The block itself.
+     * @return Returns an instance of self.
+     */
     public GemstyneBlockSet create() {
+        this.blockSet.forEach(blockIdPair -> GemstyneRegistry.registerBlock(blockIdPair.getLeft(), blockIdPair.getRight()));
         return this;
     }
 
@@ -215,9 +221,9 @@ public class GemstyneBlockSet {
      * @return Returns {@link Block} safely, or throws a {@link NullPointerException} instead of returning null.
      */
     private Block safelyFetch(String blockName) {
-        Optional<Block> block = Optional.ofNullable(this.oreVariants.get(blockName));
+        Optional<Block> block = Optional.ofNullable(this.blockVariants.get(blockName));
         if(block.isPresent()) {
-            return this.oreVariants.get(blockName);
+            return this.blockVariants.get(blockName);
         } else {
             Gemstyne.LOGGER.error("[[ ERROR: " + blockName + " for set " + this.SET_NAME + " is null!" +
                     " Maybe the Block is improperly initialized?" +
@@ -227,13 +233,9 @@ public class GemstyneBlockSet {
         throw new NullPointerException();
     }
 
-    public Block stoneOre() {
-        return safelyFetch("stone");
-    }
-    public Block deepslateOre() {
-        return safelyFetch("deepslate");
-    }
-    public Block netherOre() {
-        return safelyFetch("nether");
-    }
+    public Block stoneOre() { return safelyFetch("stone"); }
+    public Block deepslateOre() { return safelyFetch("deepslate"); }
+    public Block netherOre() { return safelyFetch("nether"); }
+    public Block rawBlock() { return safelyFetch("raw"); }
+    public Block pureBlock() { return safelyFetch("pure"); }
 }

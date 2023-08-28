@@ -28,11 +28,11 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         // ======
         // <===== Decorations =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.URANIUM.pureBlock, "Uranium Block");
-        translationBuilder.add(GemstyneOreBlocks.MOCHITE.pureBlock, "Mochite Block");
-        translationBuilder.add(GemstyneOreBlocks.TIN.pureBlock, "Tin Block");
-        translationBuilder.add(GemstyneOreBlocks.CRIMONITE.pureBlock, "Crimonite Block");
-        translationBuilder.add(GemstyneOreBlocks.ALDUS.pureBlock, "Aldus Block");
+        translationBuilder.add(GemstyneOreBlocks.URANIUM.pureBlock(), "Uranium Block");
+        translationBuilder.add(GemstyneOreBlocks.MOCHITE.pureBlock(), "Mochite Block");
+        translationBuilder.add(GemstyneOreBlocks.TIN.pureBlock(), "Tin Block");
+        translationBuilder.add(GemstyneOreBlocks.CRIMONITE.pureBlock(), "Crimonite Block");
+        translationBuilder.add(GemstyneOreBlocks.ALDUS.pureBlock(), "Aldus Block");
         translationBuilder.add(GemstyneOreBlocks.FIRE_OPAL_BLOCK, "Fire Opal Block");
 
 

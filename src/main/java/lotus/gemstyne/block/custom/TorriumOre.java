@@ -12,8 +12,8 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class TorriumOre extends VolatileOre {
-    public TorriumOre(Settings settings, UniformIntProvider uniformIntProvider) {
-        super(settings, uniformIntProvider);
+    public TorriumOre(Settings settings, UniformIntProvider experience) {
+        super(settings, experience);
     }
 
     @Override

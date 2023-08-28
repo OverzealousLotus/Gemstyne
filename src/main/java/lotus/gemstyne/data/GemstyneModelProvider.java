@@ -20,7 +20,6 @@ public final class GemstyneModelProvider extends FabricModelProvider {
         GemstyneOreModels.generateOreBlockModels(blockStateModelGenerator);
         GemstyneMineralModels.generateMineralBlockModels(blockStateModelGenerator);
         GemstyneGeodeModels.generateGeodeBlockModels(blockStateModelGenerator);
-        GemstyneDecorModels.generateDecorBlockModels(blockStateModelGenerator);
 
     }
 

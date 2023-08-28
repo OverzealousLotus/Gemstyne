@@ -27,17 +27,17 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
 
                 .add(GemstyneOreBlocks.MOCHITE.stoneOre())
                 .add(GemstyneOreBlocks.MOCHITE.deepslateOre())
-                .add(GemstyneOreBlocks.MOCHITE.rawBlock)
-                .add(GemstyneOreBlocks.MOCHITE.pureBlock)
+                .add(GemstyneOreBlocks.MOCHITE.rawBlock())
+                .add(GemstyneOreBlocks.MOCHITE.pureBlock())
 
                 .add(GemstyneOreBlocks.TIN.stoneOre())
                 .add(GemstyneOreBlocks.TIN.deepslateOre())
-                .add(GemstyneOreBlocks.TIN.rawBlock)
-                .add(GemstyneOreBlocks.TIN.pureBlock)
+                .add(GemstyneOreBlocks.TIN.rawBlock())
+                .add(GemstyneOreBlocks.TIN.pureBlock())
 
                 .add(GemstyneOreBlocks.URANIUM.deepslateOre())
-                .add(GemstyneOreBlocks.URANIUM.rawBlock)
-                .add(GemstyneOreBlocks.URANIUM.pureBlock)
+                .add(GemstyneOreBlocks.URANIUM.rawBlock())
+                .add(GemstyneOreBlocks.URANIUM.pureBlock())
 
                 .add(GemstyneOreBlocks.IKARITE.clusterBud())
                 .add(GemstyneOreBlocks.IKARITE.largeBud())
@@ -63,12 +63,12 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.MORKITE_BLOCK)
 
                 .add(GemstyneOreBlocks.CRIMONITE.netherOre())
-                .add(GemstyneOreBlocks.CRIMONITE.rawBlock)
-                .add(GemstyneOreBlocks.CRIMONITE.pureBlock)
+                .add(GemstyneOreBlocks.CRIMONITE.rawBlock())
+                .add(GemstyneOreBlocks.CRIMONITE.pureBlock())
 
                 .add(GemstyneOreBlocks.ALDUS.netherOre())
-                .add(GemstyneOreBlocks.ALDUS.rawBlock)
-                .add(GemstyneOreBlocks.ALDUS.pureBlock)
+                .add(GemstyneOreBlocks.ALDUS.rawBlock())
+                .add(GemstyneOreBlocks.ALDUS.pureBlock())
 
                 .add(GemstyneMineralBlocks.HALITE)
                 .add(GemstyneMineralBlocks.PUMICE)
@@ -95,12 +95,12 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .setReplace(false)
                 .add(GemstyneOreBlocks.MOCHITE.stoneOre())
                 .add(GemstyneOreBlocks.MOCHITE.deepslateOre())
-                .add(GemstyneOreBlocks.MOCHITE.rawBlock)
+                .add(GemstyneOreBlocks.MOCHITE.rawBlock())
 
                 .add(GemstyneOreBlocks.TIN.stoneOre())
                 .add(GemstyneOreBlocks.TIN.deepslateOre())
-                .add(GemstyneOreBlocks.TIN.rawBlock)
-                .add(GemstyneOreBlocks.TIN.pureBlock)
+                .add(GemstyneOreBlocks.TIN.rawBlock())
+                .add(GemstyneOreBlocks.TIN.pureBlock())
 
                 .add(GemstyneMineralBlocks.COMPRESSED_ANDESITE)
                 .add(GemstyneMineralBlocks.COMPRESSED_DIORITE)
@@ -109,17 +109,17 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsIronTool())
                 .setReplace(false)
                 .add(GemstyneOreBlocks.ALDUS.netherOre())
-                .add(GemstyneOreBlocks.ALDUS.rawBlock)
-                .add(GemstyneOreBlocks.ALDUS.pureBlock)
+                .add(GemstyneOreBlocks.ALDUS.rawBlock())
+                .add(GemstyneOreBlocks.ALDUS.pureBlock())
 
                 .add(GemstyneMineralBlocks.COMPACT_DIRT);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsDiamondTool())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.MOCHITE.pureBlock)
+                .add(GemstyneOreBlocks.MOCHITE.pureBlock())
 
                 .add(GemstyneOreBlocks.URANIUM.deepslateOre())
-                .add(GemstyneOreBlocks.URANIUM.rawBlock)
+                .add(GemstyneOreBlocks.URANIUM.rawBlock())
 
                 .add(GemstyneOreBlocks.IKARITE.clusterBud())
                 .add(GemstyneOreBlocks.IKARITE.largeBud())
@@ -132,8 +132,8 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
                 .add(GemstyneOreBlocks.MORKITE_BLOCK)
 
                 .add(GemstyneOreBlocks.CRIMONITE.netherOre())
-                .add(GemstyneOreBlocks.CRIMONITE.rawBlock)
-                .add(GemstyneOreBlocks.CRIMONITE.pureBlock)
+                .add(GemstyneOreBlocks.CRIMONITE.rawBlock())
+                .add(GemstyneOreBlocks.CRIMONITE.pureBlock())
 
                 .add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
                 .add(GemstyneOreBlocks.FIRE_OPAL_BLOCK)
@@ -142,7 +142,7 @@ public class GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvide
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsToolLevel4())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.URANIUM.pureBlock);
+                .add(GemstyneOreBlocks.URANIUM.pureBlock());
 
         // ======
         // <===== Replaceables =====>

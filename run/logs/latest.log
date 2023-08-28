@@ -1,6 +1,6 @@
-[03:46:27] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.14.22
-[03:46:27] [ForkJoinPool-1-worker-1/WARN] (FabricLoader/Metadata) Mod gemstyne uses the version 0.0.5b0 which isn't compatible with Loader's extended semantic version format (Could not parse version number component '5b0'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
-[03:46:27] [main/INFO] (FabricLoader) Loading 52 mods:
+[17:36:54] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.14.22
+[17:36:54] [ForkJoinPool-1-worker-1/WARN] (FabricLoader/Metadata) Mod gemstyne uses the version 0.0.5b0 which isn't compatible with Loader's extended semantic version format (Could not parse version number component '5b0'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
+[17:36:54] [main/INFO] (FabricLoader) Loading 52 mods:
 	- fabric-api 0.86.1+1.20.1
 	- fabric-api-base 0.4.30+7abfd51577
 	- fabric-api-lookup-api-v1 1.6.35+4d8536c977
@@ -53,22 +53,22 @@
 	- sodium-extra 0.4.20+mc1.20-build.103
 	   |-- caffeineconfig 1.1.0+1.17
 	   \-- crowdin-translate 1.4+1.19.3
-[03:46:34] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/karsonparker/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/8d31fb97c3e0cd7c8dad3441851c523bcfae6d8e/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[03:46:34] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[03:46:34] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[03:46:34] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[03:46:35] [main/INFO] (Sodium) Loaded configuration file for Sodium: 33 options available, 0 override(s) found
-[03:46:35] [main/INFO] (Sodium Extra Config) Loaded configuration file for Sodium Extra: 28 options available, 0 override(s) found
-[03:46:36] [main/WARN] (FabricLoader/Mixin) Error loading class: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage (java.lang.ClassNotFoundException: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage)
-[03:46:37] [main/WARN] (FabricLoader/Mixin) Error loading class: org/jetbrains/annotations/ApiStatus$Internal (java.lang.ClassNotFoundException: org/jetbrains/annotations/ApiStatus$Internal)
-[03:46:46] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 332 milliseconds
-[03:46:50] [Render thread/INFO] (Sodium) Launching a new process to probe the system configuration!
-[03:46:51] [Render thread/INFO] (Sodium) OpenGL Vendor: AMD
-[03:46:51] [Render thread/INFO] (Sodium) OpenGL Renderer: AMD Radeon Vega 10 Graphics (raven, LLVM 15.0.7, DRM 3.52, 6.4.11-100.fc37.x86_64)
-[03:46:51] [Render thread/INFO] (Sodium) OpenGL Version: 4.6 (Core Profile) Mesa 23.0.3
-[03:46:51] [Render thread/WARN] (FabricLoader/Mixin) Error loading class: org/quiltmc/loader/impl/game/minecraft/Hooks (java.lang.ClassNotFoundException: org/quiltmc/loader/impl/game/minecraft/Hooks)
-[03:46:52] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[03:46:52] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+[17:37:01] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/karsonparker/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/8d31fb97c3e0cd7c8dad3441851c523bcfae6d8e/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[17:37:01] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[17:37:02] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[17:37:02] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[17:37:02] [main/INFO] (Sodium) Loaded configuration file for Sodium: 33 options available, 0 override(s) found
+[17:37:02] [main/INFO] (Sodium Extra Config) Loaded configuration file for Sodium Extra: 28 options available, 0 override(s) found
+[17:37:02] [main/WARN] (FabricLoader/Mixin) Error loading class: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage (java.lang.ClassNotFoundException: fr/catcore/server/translations/api/resource/language/SystemDelegatedLanguage)
+[17:37:03] [main/WARN] (FabricLoader/Mixin) Error loading class: org/jetbrains/annotations/ApiStatus$Internal (java.lang.ClassNotFoundException: org/jetbrains/annotations/ApiStatus$Internal)
+[17:37:12] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 318 milliseconds
+[17:37:16] [Render thread/INFO] (Sodium) Launching a new process to probe the system configuration!
+[17:37:17] [Render thread/INFO] (Sodium) OpenGL Vendor: AMD
+[17:37:17] [Render thread/INFO] (Sodium) OpenGL Renderer: AMD Radeon Vega 10 Graphics (raven, LLVM 15.0.7, DRM 3.52, 6.4.11-100.fc37.x86_64)
+[17:37:17] [Render thread/INFO] (Sodium) OpenGL Version: 4.6 (Core Profile) Mesa 23.0.3
+[17:37:17] [Render thread/WARN] (FabricLoader/Mixin) Error loading class: org/quiltmc/loader/impl/game/minecraft/Hooks (java.lang.ClassNotFoundException: org/quiltmc/loader/impl/game/minecraft/Hooks)
+[17:37:17] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17:37:18] [Render thread/ERROR] (Minecraft) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
@@ -86,39 +86,39 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
 	... 9 more
-[03:46:52] [Render thread/INFO] (Minecraft) Setting user: Player427
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Registering Dependencies for gemstyne! ]]
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Status Effects...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Fluid for gemstyne
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Gemstyne Group(s)...
-[03:46:53] [Render thread/INFO] (gemstyne) Successfully registered Gemstyne Group(s)!
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Successfully registered Dependencies! ]]
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Registering Essentials for gemstyne! ]]
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Items for gemstyne!
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Gear Items...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Ore Items...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Mineral Items...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Crafting Items...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Armor Items...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Tool Items...
-[03:46:53] [Render thread/INFO] (gemstyne) Successfully registered Items for gemstyne!
-[03:46:53] [Render thread/INFO] (gemstyne) Registering blocks for gemstyne!
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Ores...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Minerals...
-[03:46:53] [Render thread/INFO] (gemstyne) Successfully registered blocks for gemstyne!
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Block Entities...
-[03:46:53] [Render thread/INFO] (gemstyne) Registering Fuel Items for gemstyne...
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Successfully registered Essentials! ]]
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Registering World Configuration for gemstyne! ]]
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Successfully registered World Configuration!
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Registering Event Handlers for gemstyne! ]]
-[03:46:53] [Render thread/INFO] (gemstyne) [[ Successfully registered Event Handlers!
-[03:46:53] [Render thread/INFO] (owo) assume less - mald more
-[03:46:53] [Render thread/WARN] (FabricLoader/Mixin) Static binding violation: PRIVATE @Overwrite method renderBakedItemModel in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
-[03:46:53] [Render thread/INFO] (Indigo) [Indigo] Different rendering plugin detected; not applying Indigo.
-[03:46:54] [Render thread/INFO] (owo) Services frozen by 'net.minecraft.client.MinecraftClient'
-[03:46:54] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
-[03:46:56] [Render thread/ERROR] (Minecraft) Error while loading the narrator
+[17:37:18] [Render thread/INFO] (Minecraft) Setting user: Player36
+[17:37:18] [Render thread/INFO] (owo) I think that's not the only reason Spectrum isn't compatible with Quilt
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Registering Dependencies for gemstyne! ]]
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Status Effects...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Fluid for gemstyne
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Gemstyne Group(s)...
+[17:37:18] [Render thread/INFO] (gemstyne) Successfully registered Gemstyne Group(s)!
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Successfully registered Dependencies! ]]
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Registering Essentials for gemstyne! ]]
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Items for gemstyne!
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Gear Items...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Ore Items...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Mineral Items...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Crafting Items...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Armor Items...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Tool Items...
+[17:37:18] [Render thread/INFO] (gemstyne) Successfully registered Items for gemstyne!
+[17:37:18] [Render thread/INFO] (gemstyne) Registering blocks for gemstyne!
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Ores...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Minerals...
+[17:37:18] [Render thread/INFO] (gemstyne) Successfully registered blocks for gemstyne!
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Block Entities...
+[17:37:18] [Render thread/INFO] (gemstyne) Registering Fuel Items for gemstyne...
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Successfully registered Essentials! ]]
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Registering World Configuration for gemstyne! ]]
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Successfully registered World Configuration!
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Registering Event Handlers for gemstyne! ]]
+[17:37:18] [Render thread/INFO] (gemstyne) [[ Successfully registered Event Handlers!
+[17:37:18] [Render thread/INFO] (Indigo) [Indigo] Different rendering plugin detected; not applying Indigo.
+[17:37:19] [Render thread/WARN] (FabricLoader/Mixin) Static binding violation: PRIVATE @Overwrite method renderBakedItemModel in sodium.mixins.json:features.item.MixinItemRenderer from mod sodium cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
+[17:37:19] [Render thread/INFO] (owo) Services frozen by 'net.minecraft.client.MinecraftClient'
+[17:37:19] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
+[17:37:21] [Render thread/ERROR] (Minecraft) Error while loading the narrator
 com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
 	at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar:?]
 	at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar:?]
@@ -184,99 +184,727 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/kars
 		at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.14.22.jar:?]
 		at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.14.22.jar:?]
 		at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
-[03:46:56] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-rendering-data-attachment-v1, sodium, fabric-renderer-api-v1, fabric-biome-api-v1, caffeineconfig, fabric-entity-events-v1, fabric-loot-api-v2, fabric-sound-api-v1, fabric-dimensions-v1, fabric-api, reeses-sodium-options, gemstyne, fabric-particles-v1, fabric-registry-sync-v0, fabric-command-api-v2, owo, fabric-convention-tags-v1, fabric-renderer-indigo, fabric-screen-handler-api-v1, fabric-resource-loader-v0, fabric-item-api-v1, fabric-api-base, fabric-resource-conditions-api-v1, fabric-events-interaction-v0, fabricloader, fabric-transitive-access-wideners-v1, fabric-api-lookup-api-v1, fabric-blockrenderlayer-v1, fabric-message-api-v1, fabric-screen-api-v1, fabric-game-rule-api-v1, fabric-content-registries-v0, fabric-object-builder-api-v1, fabric-rendering-fluids-v1, fabric-lifecycle-events-v1, fabric-item-group-api-v1, fabric-networking-api-v1, fabric-mining-level-api-v1, fabric-client-tags-api-v1, fabric-crash-report-info-v1, fabric-recipe-api-v1, fabric-transfer-api-v1, fabric-key-binding-api-v1, fabric-rendering-v1, fabric-data-generation-api-v1, sodium-extra, fabric-gametest-api-v1, fabric-block-api-v1, fabric-model-loading-api-v1)
-[03:46:56] [Worker-Main-2/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
-[03:46:57] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=12'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=13'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=14'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=15'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=2'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=1'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=0'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=9'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=8'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=7'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=6'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=5'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=4'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=3'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=10'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=11'
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Unable to load model: 'gemstyne:salt#inventory' referenced from: gemstyne:salt#inventory: java.io.FileNotFoundException: gemstyne:models/item/salt.json
-[03:46:59] [Worker-Main-4/WARN] (Minecraft) Unable to load model: 'gemstyne:tin_nugget#inventory' referenced from: gemstyne:tin_nugget#inventory: java.io.FileNotFoundException: gemstyne:models/item/tin_nugget.json
-[03:47:00] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[03:47:00] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[03:47:00] [Render thread/INFO] (Minecraft) OpenAL initialized on device Family 17h/19h HD Audio Controller Analog Stereo
-[03:47:00] [Render thread/INFO] (Minecraft) Sound engine started
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
-[03:47:01] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
-[03:47:01] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[03:47:02] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[03:47:02] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[03:47:02] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[03:47:24] [Render thread/INFO] (FabricRegistrySync) [fabric-registry-sync] Loaded registry data [file 1/4]
-[03:47:25] [Render thread/INFO] (Minecraft) Loaded 7 recipes
-[03:47:25] [Render thread/INFO] (Minecraft) Loaded 1374 advancements
-[03:47:26] [Render thread/INFO] (BiomeModificationImpl) Applied 1451 biome modifications to 58 of 64 new biomes in 54.50 ms
-[03:47:26] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
-[03:47:26] [Server thread/INFO] (Minecraft) Generating keypair
-[03:47:29] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[03:47:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[03:47:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 17%
-[03:47:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 54%
-[03:47:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 85%
-[03:47:39] [Render thread/INFO] (Minecraft) Time elapsed: 9235 ms
-[03:47:39] [Server thread/INFO] (Minecraft) Changing view distance to 6, from 10
-[03:47:39] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
-[03:47:40] [Server thread/INFO] (Minecraft) Player427[local:E:da7ff234] logged in with entity id 142 at (58.30997840803815, 27.994276465837174, -86.24005087816636)
-[03:47:40] [Server thread/INFO] (Minecraft) Player427 joined the game
-[03:47:40] [Render thread/INFO] (ChunkBuilder) Started 2 worker threads
-[03:47:41] [Render thread/INFO] (Minecraft) Loaded 2 advancements
-[03:47:56] [Render thread/WARN] (NativeBuffer) Reclaimed 48 bytes at address 139829122091216 that were leaked from an unknown location (logging is disabled)
-[03:47:56] [Render thread/WARN] (NativeBuffer) Reclaimed 9432 bytes at address 139829121812480 that were leaked from an unknown location (logging is disabled)
-[03:47:56] [Render thread/WARN] (NativeBuffer) Reclaimed 116560 bytes at address 139828582685696 that were leaked from an unknown location (logging is disabled)
-[03:47:56] [Render thread/WARN] (NativeBuffer) Reclaimed 31440 bytes at address 139828589663424 that were leaked from an unknown location (logging is disabled)
-[03:47:56] [Render thread/WARN] (NativeBuffer) Reclaimed 160 bytes at address 139829121746784 that were leaked from an unknown location (logging is disabled)
-[03:47:56] [Render thread/WARN] (NativeBuffer) Reclaimed 34968 bytes at address 139828582819008 that were leaked from an unknown location (logging is disabled)
-[03:47:59] [Server thread/INFO] (Minecraft) [Player427: Set own game mode to Creative Mode]
-[03:48:00] [Render thread/INFO] (Minecraft) [System] [CHAT] Set own game mode to Creative Mode
-[03:48:38] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[03:48:38] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[LITERAL FINAL TEST ITS COPYPASTA]'/minecraft:overworld
-[03:48:38] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[LITERAL FINAL TEST ITS COPYPASTA]'/minecraft:the_end
-[03:48:38] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[LITERAL FINAL TEST ITS COPYPASTA]'/minecraft:the_nether
-[03:48:39] [Server thread/INFO] (Minecraft) Player427 lost connection: Disconnected
-[03:48:39] [Server thread/INFO] (Minecraft) Player427 left the game
-[03:48:39] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
-[03:48:39] [Server thread/INFO] (Minecraft) Stopping server
-[03:48:39] [Server thread/INFO] (Minecraft) Saving players
-[03:48:39] [Server thread/INFO] (Minecraft) Saving worlds
-[03:48:41] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[LITERAL FINAL TEST ITS COPYPASTA]'/minecraft:overworld
-[03:48:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[LITERAL FINAL TEST ITS COPYPASTA]'/minecraft:the_end
-[03:48:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[LITERAL FINAL TEST ITS COPYPASTA]'/minecraft:the_nether
-[03:48:43] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (LITERAL FINAL TEST ITS COPYPASTA): All chunks are saved
-[03:48:43] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[03:48:43] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[03:48:43] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
-[03:48:43] [Render thread/INFO] (ChunkBuilder) Stopping worker threads
-[03:48:46] [Render thread/INFO] (Minecraft) Stopping!
+[17:37:21] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-content-registries-v0, fabric-events-interaction-v0, fabric-recipe-api-v1, owo, fabric-renderer-indigo, fabric-screen-api-v1, fabric-api-lookup-api-v1, fabric-particles-v1, fabric-loot-api-v2, fabric-transitive-access-wideners-v1, fabric-transfer-api-v1, fabric-biome-api-v1, sodium, reeses-sodium-options, fabric-screen-handler-api-v1, fabric-blockrenderlayer-v1, fabricloader, caffeineconfig, fabric-rendering-v1, fabric-api-base, fabric-mining-level-api-v1, fabric-rendering-fluids-v1, fabric-resource-loader-v0, fabric-client-tags-api-v1, fabric-item-api-v1, fabric-renderer-api-v1, fabric-rendering-data-attachment-v1, fabric-message-api-v1, fabric-item-group-api-v1, fabric-lifecycle-events-v1, fabric-api, fabric-command-api-v2, fabric-entity-events-v1, fabric-registry-sync-v0, gemstyne, fabric-convention-tags-v1, fabric-dimensions-v1, fabric-key-binding-api-v1, fabric-gametest-api-v1, fabric-block-api-v1, fabric-networking-api-v1, fabric-crash-report-info-v1, fabric-resource-conditions-api-v1, fabric-model-loading-api-v1, fabric-data-generation-api-v1, sodium-extra, fabric-object-builder-api-v1, fabric-sound-api-v1, fabric-game-rule-api-v1)
+[17:37:21] [Worker-Main-1/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
+[17:37:22] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=12'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=13'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=14'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=15'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=2'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=1'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=0'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=9'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=8'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=7'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=6'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=5'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=4'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=3'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=10'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Exception loading blockstate definition: 'gemstyne:blockstates/liquid_morkite_block.json' missing model for variant: 'gemstyne:liquid_morkite_block#level=11'
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Unable to load model: 'gemstyne:salt#inventory' referenced from: gemstyne:salt#inventory: java.io.FileNotFoundException: gemstyne:models/item/salt.json
+[17:37:23] [Worker-Main-7/WARN] (Minecraft) Unable to load model: 'gemstyne:tin_nugget#inventory' referenced from: gemstyne:tin_nugget#inventory: java.io.FileNotFoundException: gemstyne:models/item/tin_nugget.json
+[17:37:25] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[17:37:25] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[17:37:25] [Render thread/INFO] (Minecraft) OpenAL initialized on device Family 17h/19h HD Audio Controller Analog Stereo
+[17:37:25] [Render thread/INFO] (Minecraft) Sound engine started
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 1024x512x2 minecraft:textures/atlas/blocks.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/signs.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 1024x1024x2 minecraft:textures/atlas/armor_trims.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 128x64x2 minecraft:textures/atlas/decorated_pot.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
+[17:37:25] [Render thread/INFO] (Minecraft) Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17:37:26] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[17:37:26] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[17:37:26] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[17:37:26] [Render thread/INFO] (Minecraft) Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[17:37:56] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[17:37:56] [Render thread/INFO] (Minecraft) Loaded 1374 advancements
+[17:38:10] [Render thread/INFO] (BiomeModificationImpl) Applied 1451 biome modifications to 58 of 64 new biomes in 43.18 ms
+[17:38:10] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
+[17:38:10] [Server thread/INFO] (Minecraft) Generating keypair
+[17:38:17] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[17:38:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:20] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:20] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:21] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:21] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[17:38:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 1%
+[17:38:22] [Render thread/INFO] (Minecraft) Preparing spawn area: 1%
+[17:38:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 2%
+[17:38:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 3%
+[17:38:24] [Render thread/INFO] (Minecraft) Preparing spawn area: 3%
+[17:38:24] [Render thread/INFO] (Minecraft) Preparing spawn area: 4%
+[17:38:25] [Render thread/INFO] (Minecraft) Preparing spawn area: 5%
+[17:38:25] [Render thread/INFO] (Minecraft) Preparing spawn area: 5%
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-10, z=-53}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-9, z=-53}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-8, z=-53}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-11, z=-52}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-10, z=-52}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-10, z=-52}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-9, z=-52}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-9, z=-52}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-8, z=-52}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-7, z=-52}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-12, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-11, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-11, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-10, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-10, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-9, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-9, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-8, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-8, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-7, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-7, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-6, z=-51}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-12, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-11, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-11, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-10, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-10, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-9, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-9, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-8, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-8, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-7, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-7, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-6, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-5, z=-50}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-12, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-11, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-11, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-10, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-10, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-9, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-9, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-8, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-8, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-7, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-7, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-6, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=97, y=-6, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -4], pos: Mutable{x=96, y=-5, z=-49}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-11, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-11, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-10, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-10, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-9, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-9, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-8, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-8, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-7, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-7, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-6, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-6, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-5, z=-48}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-11, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-10, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-10, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-9, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-9, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-8, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-8, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-7, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-7, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-6, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-6, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-5, z=-47}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-10, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-10, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-9, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-9, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-8, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-8, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-7, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-7, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-6, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-6, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-5, z=-46}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-10, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-9, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-9, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-8, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-8, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-7, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-7, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-6, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-6, z=-45}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-9, z=-44}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-9, z=-44}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-8, z=-44}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-8, z=-44}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-7, z=-44}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-7, z=-44}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-6, z=-44}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-9, z=-43}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-8, z=-43}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-8, z=-43}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-7, z=-43}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=97, y=-7, z=-43}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-6, z=-43}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-8, z=-42}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:25] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -3], pos: Mutable{x=96, y=-7, z=-42}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-14, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-13, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-12, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-11, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-10, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-9, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-8, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-7, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-6, z=-23}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-15, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-14, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-13, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=97, y=-13, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-12, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=97, y=-12, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-11, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=97, y=-11, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-10, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=97, y=-10, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-9, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=97, y=-9, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-8, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=97, y=-8, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-7, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=97, y=-7, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-6, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-5, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-4, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Worker-Main-3/ERROR] (Minecraft) Detected setBlock in a far chunk [6, -2], pos: Mutable{x=96, y=-3, z=-22}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 6%
+[17:38:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 6%
+[17:38:27] [Render thread/INFO] (Minecraft) Preparing spawn area: 7%
+[17:38:27] [Render thread/INFO] (Minecraft) Preparing spawn area: 9%
+[17:38:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 10%
+[17:38:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 10%
+[17:38:29] [Render thread/INFO] (Minecraft) Preparing spawn area: 11%
+[17:38:29] [Render thread/INFO] (Minecraft) Preparing spawn area: 12%
+[17:38:30] [Render thread/INFO] (Minecraft) Preparing spawn area: 13%
+[17:38:30] [Render thread/INFO] (Minecraft) Preparing spawn area: 15%
+[17:38:31] [Render thread/INFO] (Minecraft) Preparing spawn area: 16%
+[17:38:31] [Render thread/INFO] (Minecraft) Preparing spawn area: 17%
+[17:38:32] [Render thread/INFO] (Minecraft) Preparing spawn area: 18%
+[17:38:32] [Render thread/INFO] (Minecraft) Preparing spawn area: 19%
+[17:38:33] [Worker-Main-5/ERROR] (Minecraft) Detected setBlock in a far chunk [3, 6], pos: Mutable{x=48, y=50, z=110}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:lapis_geode]
+[17:38:33] [Render thread/INFO] (Minecraft) Preparing spawn area: 20%
+[17:38:33] [Render thread/INFO] (Minecraft) Preparing spawn area: 21%
+[17:38:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 22%
+[17:38:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 24%
+[17:38:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 25%
+[17:38:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 26%
+[17:38:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 27%
+[17:38:36] [Render thread/INFO] (Minecraft) Preparing spawn area: 29%
+[17:38:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 31%
+[17:38:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 31%
+[17:38:38] [Render thread/INFO] (Minecraft) Preparing spawn area: 32%
+[17:38:38] [Render thread/INFO] (Minecraft) Preparing spawn area: 33%
+[17:38:39] [Render thread/INFO] (Minecraft) Preparing spawn area: 35%
+[17:38:39] [Render thread/INFO] (Minecraft) Preparing spawn area: 37%
+[17:38:40] [Render thread/INFO] (Minecraft) Preparing spawn area: 38%
+[17:38:40] [Render thread/INFO] (Minecraft) Preparing spawn area: 39%
+[17:38:41] [Render thread/INFO] (Minecraft) Preparing spawn area: 40%
+[17:38:41] [Render thread/INFO] (Minecraft) Preparing spawn area: 42%
+[17:38:42] [Render thread/INFO] (Minecraft) Preparing spawn area: 43%
+[17:38:42] [Render thread/INFO] (Minecraft) Preparing spawn area: 44%
+[17:38:43] [Render thread/INFO] (Minecraft) Preparing spawn area: 45%
+[17:38:43] [Render thread/INFO] (Minecraft) Preparing spawn area: 46%
+[17:38:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 48%
+[17:38:44] [Render thread/INFO] (Minecraft) Preparing spawn area: 49%
+[17:38:46] [Render thread/INFO] (Minecraft) Preparing spawn area: 50%
+[17:38:46] [Render thread/INFO] (Minecraft) Preparing spawn area: 50%
+[17:38:46] [Render thread/INFO] (Minecraft) Preparing spawn area: 50%
+[17:38:46] [Render thread/INFO] (Minecraft) Preparing spawn area: 50%
+[17:38:47] [Render thread/INFO] (Minecraft) Preparing spawn area: 51%
+[17:38:47] [Render thread/INFO] (Minecraft) Preparing spawn area: 53%
+[17:38:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 55%
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-18, z=74}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-17, z=74}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-16, z=74}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-15, z=74}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-14, z=74}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-19, z=75}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-18, z=75}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-17, z=75}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-16, z=75}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-15, z=75}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-14, z=75}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-13, z=75}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-19, z=76}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-18, z=76}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-17, z=76}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-16, z=76}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-15, z=76}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-14, z=76}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-13, z=76}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-20, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-19, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-18, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-17, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-16, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-15, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-14, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-13, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-12, z=77}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-20, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-19, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-18, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-17, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-16, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-15, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-14, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-13, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-12, z=78}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-20, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-19, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-18, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-17, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-16, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-15, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-14, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-13, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 4], pos: Mutable{x=-128, y=-12, z=79}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-20, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-19, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-18, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-17, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-16, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-15, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-14, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-13, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-12, z=80}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-19, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-18, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-17, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-16, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-15, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-14, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-13, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-12, z=81}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-19, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-18, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-17, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-16, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-15, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-14, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-13, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-12, z=82}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-18, z=83}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-17, z=83}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-16, z=83}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-15, z=83}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-14, z=83}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-13, z=83}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-12, z=83}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-17, z=84}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-16, z=84}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-15, z=84}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-14, z=84}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-13, z=84}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-16, z=85}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-15, z=85}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-14, z=85}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 5], pos: Mutable{x=-128, y=-13, z=85}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 6], pos: Mutable{x=-128, y=-21, z=101}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 6], pos: Mutable{x=-128, y=-22, z=102}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Worker-Main-2/ERROR] (Minecraft) Detected setBlock in a far chunk [-8, 6], pos: Mutable{x=-128, y=-21, z=102}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:48] [Render thread/INFO] (Minecraft) Preparing spawn area: 56%
+[17:38:49] [Render thread/INFO] (Minecraft) Preparing spawn area: 57%
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-155}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-155}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-155}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-155}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-155}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-154}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-153}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-152}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=10, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-151}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=10, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=10, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-150}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=9, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=10, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=10, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-149}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=9, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=9, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=10, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=10, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=20, z=-148}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=8, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=9, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=9, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=10, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=10, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=20, z=-147}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=8, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=9, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=9, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=10, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=10, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=20, z=-146}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=7, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=8, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=8, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=9, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=9, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=10, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=10, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=11, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=11, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=12, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=12, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=13, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=13, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=14, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=14, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=15, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=15, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=16, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=16, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=17, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=17, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=18, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=18, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=19, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=177, y=19, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -10], pos: Mutable{x=176, y=20, z=-145}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=7, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=8, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=8, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=9, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=9, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=10, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=10, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=11, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=11, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=12, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=12, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=13, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=13, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=14, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=14, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=15, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=15, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=16, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=16, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=17, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=17, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=18, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=18, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=19, z=-144}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=7, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=8, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=9, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=9, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=10, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=10, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=11, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=11, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=12, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=12, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=13, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=13, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=14, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=14, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=15, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=15, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=16, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=16, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=17, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=17, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=18, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=18, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=19, z=-143}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=8, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=9, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=10, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=11, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=11, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=12, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=12, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=13, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=13, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=14, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=14, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=15, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=15, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=16, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=16, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=17, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=177, y=17, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=18, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=19, z=-142}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=10, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=11, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=12, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=13, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=14, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=15, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=16, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=17, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=18, z=-141}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=13, z=-140}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=14, z=-140}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=15, z=-140}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Worker-Main-6/ERROR] (Minecraft) Detected setBlock in a far chunk [11, -9], pos: Mutable{x=176, y=16, z=-140}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / gemstyne:ikarite_geode]
+[17:38:49] [Render thread/INFO] (Minecraft) Preparing spawn area: 57%
+[17:38:50] [Render thread/INFO] (Minecraft) Preparing spawn area: 58%
+[17:38:50] [Render thread/INFO] (Minecraft) Preparing spawn area: 60%
+[17:38:51] [Render thread/INFO] (Minecraft) Preparing spawn area: 62%
+[17:38:51] [Render thread/INFO] (Minecraft) Preparing spawn area: 65%
+[17:38:52] [Render thread/INFO] (Minecraft) Preparing spawn area: 65%
+[17:38:52] [Render thread/INFO] (Minecraft) Preparing spawn area: 68%
+[17:38:53] [Render thread/INFO] (Minecraft) Preparing spawn area: 69%
+[17:38:53] [Render thread/INFO] (Minecraft) Preparing spawn area: 70%
+[17:38:54] [Render thread/INFO] (Minecraft) Preparing spawn area: 71%
+[17:38:54] [Render thread/INFO] (Minecraft) Preparing spawn area: 72%
+[17:38:55] [Render thread/INFO] (Minecraft) Preparing spawn area: 73%
+[17:38:55] [Render thread/INFO] (Minecraft) Preparing spawn area: 75%
+[17:38:58] [Render thread/INFO] (Minecraft) Preparing spawn area: 77%
+[17:38:58] [Render thread/INFO] (Minecraft) Preparing spawn area: 77%
+[17:38:58] [Render thread/INFO] (Minecraft) Preparing spawn area: 77%
+[17:38:58] [Render thread/INFO] (Minecraft) Preparing spawn area: 77%
+[17:38:58] [Render thread/INFO] (Minecraft) Preparing spawn area: 77%
+[17:38:58] [Render thread/INFO] (Minecraft) Preparing spawn area: 78%
+[17:38:59] [Render thread/INFO] (Minecraft) Preparing spawn area: 80%
+[17:38:59] [Render thread/INFO] (Minecraft) Preparing spawn area: 81%
+[17:39:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 83%
+[17:39:00] [Render thread/INFO] (Minecraft) Preparing spawn area: 83%
+[17:39:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 85%
+[17:39:01] [Render thread/INFO] (Minecraft) Preparing spawn area: 87%
+[17:39:02] [Render thread/INFO] (Minecraft) Preparing spawn area: 88%
+[17:39:02] [Render thread/INFO] (Minecraft) Preparing spawn area: 89%
+[17:39:03] [Render thread/INFO] (Minecraft) Preparing spawn area: 91%
+[17:39:03] [Render thread/INFO] (Minecraft) Preparing spawn area: 93%
+[17:39:04] [Render thread/INFO] (Minecraft) Preparing spawn area: 94%
+[17:39:04] [Render thread/INFO] (Minecraft) Preparing spawn area: 97%
+[17:39:05] [Render thread/INFO] (Minecraft) Preparing spawn area: 98%
+[17:39:05] [Render thread/INFO] (Minecraft) Time elapsed: 47806 ms
+[17:39:05] [Server thread/INFO] (Minecraft) Changing view distance to 6, from 10
+[17:39:05] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
+[17:39:07] [Server thread/INFO] (Minecraft) Player36[local:E:d1815746] logged in with entity id 281 at (3.5, 72.0, -6.5)
+[17:39:07] [Server thread/INFO] (Minecraft) Player36 joined the game
+[17:39:07] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2077ms or 41 ticks behind
+[17:39:07] [Render thread/INFO] (ChunkBuilder) Started 2 worker threads
+[17:39:08] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[17:39:16] [Server thread/INFO] (Minecraft) [Player36: Applied effect Night Vision to Player36]
+[17:39:16] [Render thread/INFO] (Minecraft) [System] [CHAT] Applied effect Night Vision to Player36
+[17:39:18] [Server thread/INFO] (Minecraft) [Player36: Set own game mode to Spectator Mode]
+[17:39:18] [Render thread/INFO] (Minecraft) [System] [CHAT] Set own game mode to Spectator Mode
+[17:39:21] [Render thread/WARN] (NativeBuffer) Reclaimed 24120 bytes at address 140560325710464 that were leaked from an unknown location (logging is disabled)
+[17:39:21] [Render thread/WARN] (NativeBuffer) Reclaimed 7488 bytes at address 140561142095872 that were leaked from an unknown location (logging is disabled)
+[17:39:21] [Render thread/WARN] (NativeBuffer) Reclaimed 24960 bytes at address 140560325958848 that were leaked from an unknown location (logging is disabled)
+[17:39:21] [Render thread/WARN] (NativeBuffer) Reclaimed 192 bytes at address 140561138400000 that were leaked from an unknown location (logging is disabled)
+[17:39:21] [Render thread/WARN] (NativeBuffer) Reclaimed 80400 bytes at address 140560326237504 that were leaked from an unknown location (logging is disabled)
+[17:39:21] [Render thread/WARN] (NativeBuffer) Reclaimed 640 bytes at address 140561138948736 that were leaked from an unknown location (logging is disabled)
+[17:39:27] [Render thread/WARN] (NativeBuffer) Reclaimed 2928 bytes at address 140561142287360 that were leaked from an unknown location (logging is disabled)
+[17:39:27] [Render thread/WARN] (NativeBuffer) Reclaimed 29120 bytes at address 140560326277696 that were leaked from an unknown location (logging is disabled)
+[17:39:27] [Render thread/WARN] (NativeBuffer) Reclaimed 9760 bytes at address 140561134850048 that were leaked from an unknown location (logging is disabled)
+[17:39:27] [Render thread/WARN] (NativeBuffer) Reclaimed 8736 bytes at address 140561134839808 that were leaked from an unknown location (logging is disabled)
+[17:40:04] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:40:04] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:overworld
+[17:40:04] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_end
+[17:40:04] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_nether
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 1200 bytes at address 140561142754304 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 2016 bytes at address 140561139570688 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 320 bytes at address 140561143590976 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 96 bytes at address 140561185554080 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 81440 bytes at address 140561135845824 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 6720 bytes at address 140561141153792 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 12072 bytes at address 140561140154368 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 40240 bytes at address 140561136123648 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 160 bytes at address 140561139474208 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 48 bytes at address 140561142317824 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 25752 bytes at address 140561142920576 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 360 bytes at address 140561185124352 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 85840 bytes at address 140560285302912 that were leaked from an unknown location (logging is disabled)
+[17:40:13] [Render thread/WARN] (NativeBuffer) Reclaimed 24432 bytes at address 140561135933568 that were leaked from an unknown location (logging is disabled)
+[17:40:32] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:40:32] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:overworld
+[17:40:32] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_end
+[17:40:32] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_nether
+[17:40:40] [Render thread/WARN] (NativeBuffer) Reclaimed 6792 bytes at address 140561144161280 that were leaked from an unknown location (logging is disabled)
+[17:40:40] [Render thread/WARN] (NativeBuffer) Reclaimed 22640 bytes at address 140561143663488 that were leaked from an unknown location (logging is disabled)
+[17:40:40] [Render thread/WARN] (NativeBuffer) Reclaimed 144 bytes at address 140561185581056 that were leaked from an unknown location (logging is disabled)
+[17:40:40] [Render thread/WARN] (NativeBuffer) Reclaimed 23664 bytes at address 140561143007360 that were leaked from an unknown location (logging is disabled)
+[17:40:40] [Render thread/WARN] (NativeBuffer) Reclaimed 78880 bytes at address 140561145904192 that were leaked from an unknown location (logging is disabled)
+[17:40:40] [Render thread/WARN] (NativeBuffer) Reclaimed 480 bytes at address 140561185099264 that were leaked from an unknown location (logging is disabled)
+[17:41:09] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[17:41:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:overworld
+[17:41:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_end
+[17:41:09] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_nether
+[17:41:10] [Server thread/INFO] (Minecraft) Player36 lost connection: Disconnected
+[17:41:10] [Server thread/INFO] (Minecraft) Player36 left the game
+[17:41:10] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[17:41:10] [Server thread/INFO] (Minecraft) Stopping server
+[17:41:10] [Server thread/INFO] (Minecraft) Saving players
+[17:41:10] [Server thread/INFO] (Minecraft) Saving worlds
+[17:41:13] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:overworld
+[17:41:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_end
+[17:41:15] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Final Geode test ( Notr eally)]'/minecraft:the_nether
+[17:41:15] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (Final Geode test ( Notr eally)): All chunks are saved
+[17:41:15] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:41:15] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17:41:15] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[17:41:16] [Render thread/INFO] (ChunkBuilder) Stopping worker threads
+[17:41:17] [Render thread/INFO] (Minecraft) Stopping!
