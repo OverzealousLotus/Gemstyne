@@ -100,7 +100,6 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
         dropExperienceWhenMined(world, pos, tool, this.experience);
-        super.onStacksDropped(state, world, pos, tool, dropExperience);
     }
 
     /**

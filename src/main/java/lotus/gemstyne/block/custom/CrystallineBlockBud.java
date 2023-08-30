@@ -59,8 +59,8 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
             case DOWN: {
                 return this.downShape;
             }
+            default: return this.upShape;
         }
-        return this.upShape;
     }
 
     @Override
@@ -78,7 +78,7 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
         if (direction == state.get(FACING).getOpposite() && !state.canPlaceAt(world, pos)) {
             return Blocks.AIR.getDefaultState();
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return state;
     }
 
     @Override
@@ -104,7 +104,7 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
         if (state.get(WATERLOGGED).booleanValue()) {
             return Fluids.WATER.getStill(false);
         }
-        return super.getFluidState(state);
+        return Fluids.EMPTY.getDefaultState();
     }
 
     @Override
