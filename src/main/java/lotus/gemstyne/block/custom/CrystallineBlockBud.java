@@ -31,7 +31,7 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
 
     public CrystallineBlockBud(int height, int xzOffset, AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(WATERLOGGED, false)).with(FACING, Direction.UP));
+        this.setDefaultState((this.getDefaultState().with(WATERLOGGED, false)).with(FACING, Direction.UP));
         this.upShape = Block.createCuboidShape(xzOffset, 0.0, xzOffset, 16 - xzOffset, height, 16 - xzOffset);
         this.downShape = Block.createCuboidShape(xzOffset, 16 - height, xzOffset, 16 - xzOffset, 16.0, 16 - xzOffset);
         this.northShape = Block.createCuboidShape(xzOffset, xzOffset, 16 - height, 16 - xzOffset, 16 - xzOffset, 16.0);
@@ -86,12 +86,12 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         World worldAccess = ctx.getWorld();
         BlockPos blockPos = ctx.getBlockPos();
-        return (BlockState)((BlockState)this.getDefaultState().with(WATERLOGGED, worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER)).with(FACING, ctx.getSide());
+        return (this.getDefaultState().with(WATERLOGGED, worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER)).with(FACING, ctx.getSide());
     }
 
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(FACING, rotation.rotate(state.get(FACING)));
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
     @Override
