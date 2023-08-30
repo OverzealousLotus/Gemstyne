@@ -9,6 +9,9 @@ import net.minecraft.block.enums.Instrument;
 import net.minecraft.sound.BlockSoundGroup;
 
 public final class GemstyneMineralBlocks {
+    private GemstyneMineralBlocks() {
+    }
+
     private static final FabricBlockSettings COMPRESSED_FEATURES = FabricBlockSettings.create()
             .requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.DEEPSLATE)
             .instrument(Instrument.BASS);

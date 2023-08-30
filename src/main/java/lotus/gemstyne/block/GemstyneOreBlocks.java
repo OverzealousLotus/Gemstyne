@@ -12,6 +12,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public final class GemstyneOreBlocks {
+    private GemstyneOreBlocks() {
+    }
+
     // =====
     // <===== Features of Blocks =====>
     // =====
