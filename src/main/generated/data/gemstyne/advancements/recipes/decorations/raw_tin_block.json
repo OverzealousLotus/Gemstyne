@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_aldus_ingot": {
+    "has_raw_tin": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstyne:aldus_ingot"
+              "gemstyne:raw_tin"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:aldus_block"
+        "recipe": "minecraft:raw_tin_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_aldus_ingot",
+      "has_raw_tin",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:aldus_block"
+      "minecraft:raw_tin_block"
     ]
   },
   "sends_telemetry_event": false

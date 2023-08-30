@@ -108,6 +108,6 @@
   "item.gemstyne.uranium_nugget": "Uranium Nugget",
   "itemGroup.gemstyne.main": "Gemstyne",
   "tooltips.gemstyne.aldus": "Resilience",
-  "tooltips.gemstyne.imbued_feather": "Fly too high, your waxed wings will melt.",
+  "tooltips.gemstyne.imbued_feather": "Do not fly too low, nor too high.",
   "tooltips.gemstyne.ominous": "Heat Affinity"
 }

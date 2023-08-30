@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "gemstyne:aldus_ingot"
+      "item": "gemstyne:tin_ingot"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "gemstyne:aldus_block"
+    "item": "gemstyne:tin_block"
   },
   "show_notification": true
 }

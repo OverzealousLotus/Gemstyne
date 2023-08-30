@@ -58,6 +58,8 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         // =====
         offerBilateralCompactingRecipes(exporter, GemstyneOreBlocks.ALDUS, GemstyneOreItems.ALDUS);
         offerBilateralCompactingRecipes(exporter, GemstyneOreBlocks.CRIMONITE, GemstyneOreItems.CRIMONITE);
+        offerBilateralCompactingRecipes(exporter, GemstyneOreBlocks.TIN, GemstyneOreItems.TIN);
+        offerBilateralCompactingRecipes(exporter, GemstyneOreBlocks.URANIUM, GemstyneOreItems.URANIUM);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 GemstyneOreItems.FIRE_OPAL, RecipeCategory.DECORATIONS,
@@ -69,13 +71,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
                 GemstyneOreItems.MOCHITE.raw(), RecipeCategory.DECORATIONS,
                 GemstyneOreBlocks.MOCHITE.rawBlock());
-
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
-                GemstyneOreItems.URANIUM.ingot(), RecipeCategory.DECORATIONS,
-                GemstyneOreBlocks.URANIUM.pureBlock());
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
-                GemstyneOreItems.URANIUM.raw(), RecipeCategory.DECORATIONS,
-                GemstyneOreBlocks.URANIUM.rawBlock());
+        
         // =====
         // <===== Ingots =====>
         // =====
@@ -85,7 +81,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.URANIUM);
 
         offerBasicIngotRecipe(exporter, GemstyneOreItems.URANIUM.chunk(),
-                GemstyneOreItems.URANIUM.ingot(), "uranium_chunk_to_ingot");
+           GemstyneOreItems.URANIUM.ingot(), "uranium_chunk_to_ingot");
         offerBasicIngotRecipe(exporter, GemstyneOreItems.CRIMONITE.chunk(),
                 GemstyneOreItems.CRIMONITE.ingot(), "crimonite_chunk_to_ingot");
 

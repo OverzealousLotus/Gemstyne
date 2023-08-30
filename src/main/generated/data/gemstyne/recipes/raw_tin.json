@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "gemstyne:uranium_block"
+      "item": "gemstyne:raw_tin_block"
     }
   ],
   "result": {
     "count": 9,
-    "item": "gemstyne:uranium_ingot"
+    "item": "gemstyne:raw_tin"
   }
 }
