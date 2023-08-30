@@ -19,8 +19,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 
 public class GemstyneBlockSet {
-    @NotNull private final Map<String, Block> blockVariants = new LinkedHashMap<>();
-    @NotNull private final Set<Pair<String, Block>> blockSet = new HashSet<>();
+    @NotNull private final Map<String, Pair<String, Block>> blockVariants = new LinkedHashMap<>();
+    // @NotNull private final Set<Pair<String, Block>> blockSet = new HashSet<>();
 
     private StatusEffect effect;
     private BlockSoundGroup currentSounds = BlockSoundGroup.STONE;
@@ -93,8 +93,7 @@ public class GemstyneBlockSet {
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre() {
-        this.blockVariants.put("stone", new ExperienceDroppingBlock(this.currentSettings));
-        this.blockSet.add(new Pair<>(this.SET_NAME + "_ore", safelyFetch("stone")));
+        this.blockVariants.put("stone", new Pair<>(this.SET_NAME + "_ore", new ExperienceDroppingBlock(this.currentSettings)));
         return this;
     }
 
@@ -104,8 +103,7 @@ public class GemstyneBlockSet {
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre(ExperienceDroppingBlock block) {
-        this.blockVariants.put("stone", block);
-        this.blockSet.add(new Pair<>(this.SET_NAME + "_ore", this.safelyFetch("stone")));
+        this.blockVariants.put("stone", new Pair<>(this.SET_NAME + "_ore", block));
         return this;
     }
 
@@ -117,8 +115,7 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.blockVariants.put(type, new ExperienceDroppingBlock(this.currentSettings, this.experience));
-        this.blockSet.add(new Pair<>(type + "_" + this.SET_NAME + "_ore", safelyFetch(type)));
+        this.blockVariants.put(type, new Pair<>(type + "_" + this.SET_NAME + "_ore", new ExperienceDroppingBlock(this.currentSettings, this.experience)));
         return this;
     }
 
@@ -131,9 +128,8 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, int duration, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.blockVariants.put(type, new AfflictiveOre(this.currentSettings, this.effect,
-                duration, GemstyneBlockTypes.ORE, this.experience));
-        this.blockSet.add(new Pair<>(type + "_" + this.SET_NAME + "_ore", safelyFetch(type)));
+        this.blockVariants.put(type, new Pair<>(type + "_" + this.SET_NAME + "_ore",
+            new AfflictiveOre(this.currentSettings, this.effect, duration, GemstyneBlockTypes.ORE, this.experience)));
         return this;
     }
 
@@ -146,35 +142,30 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, ExperienceDroppingBlock block, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.blockVariants.put(type, block);
-        this.blockSet.add(new Pair<>(type + "_" + this.SET_NAME + "_ore", safelyFetch(type)));
+        this.blockVariants.put(type, new Pair<>(type + "_" + this.SET_NAME + "_ore", block));
         return this;
     }
 
     public GemstyneBlockSet createRawBlock() {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.blockVariants.put("raw", new Block(this.currentSettings));
-        this.blockSet.add(new Pair<>("raw_" + this.SET_NAME + "_block", this.safelyFetch("raw")));
+        this.blockVariants.put("raw", new Pair<>("raw_" + this.SET_NAME + "_block", new Block(this.currentSettings)));
         return this;
     }
 
     public GemstyneBlockSet createRawBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.blockVariants.put("raw", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.RAW));
-        this.blockSet.add(new Pair<>("raw_" + this.SET_NAME + "_block", this.safelyFetch("raw")));
+        this.blockVariants.put("raw", new Pair<>("raw_" + this.SET_NAME + "_block", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.RAW)));
         return this;
     }
 
     public GemstyneBlockSet createPureBlock() {
-        this.blockVariants.put("pure", new Block(this.currentSettings.sounds(this.currentSounds)));
-        this.blockSet.add(new Pair<>(this.SET_NAME + "_block", this.safelyFetch("pure")));
+        this.blockVariants.put("pure", new Pair<>(this.SET_NAME + "_block", new Block(this.currentSettings.sounds(this.currentSounds))));
         return this;
     }
 
     public GemstyneBlockSet createPureBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds);
-        this.blockVariants.put("pure", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.PURE));
-        this.blockSet.add(new Pair<>(this.SET_NAME + "_block", this.safelyFetch("pure")));
+        this.blockVariants.put("pure", new Pair<>(this.SET_NAME + "_block", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.PURE)));
         return this;
     }
 
@@ -198,7 +189,7 @@ public class GemstyneBlockSet {
     }
 
     public void generateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        this.blockSet.forEach(blockIdPair -> blockStateModelGenerator.registerCubeAllModelTexturePool(blockIdPair.getRight()));
+        this.blockVariants.values().forEach(blockIdPair -> blockStateModelGenerator.registerCubeAllModelTexturePool(blockIdPair.getRight()));
     }
 
     /**
@@ -208,7 +199,7 @@ public class GemstyneBlockSet {
      * @return Returns an instance of self.
      */
     public GemstyneBlockSet create() {
-        this.blockSet.forEach(blockIdPair -> GemstyneRegistry.registerBlock(blockIdPair.getLeft(), blockIdPair.getRight()));
+        this.blockVariants.values().forEach(blockIdPair -> GemstyneRegistry.registerBlock(blockIdPair.getLeft(), blockIdPair.getRight()));
         return this;
     }
 
@@ -219,9 +210,9 @@ public class GemstyneBlockSet {
      * @return Returns {@link Block} safely, or throws a {@link NullPointerException} instead of returning null.
      */
     private Block safelyFetch(String blockName) {
-        Optional<Block> block = Optional.ofNullable(this.blockVariants.get(blockName));
+        Optional<Block> block = Optional.ofNullable(this.blockVariants.get(blockName).getRight());
         if(block.isPresent()) {
-            return this.blockVariants.get(blockName);
+            return this.blockVariants.get(blockName).getRight();
         } else {
             Gemstyne.LOGGER.error("[[ ERROR: " + blockName + " for set " + this.SET_NAME + " is null!" +
                     " Maybe the Block is improperly initialized?" +
