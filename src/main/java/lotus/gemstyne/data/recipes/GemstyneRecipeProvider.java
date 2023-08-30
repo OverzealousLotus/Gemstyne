@@ -43,13 +43,13 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.CRIMONITE.raw()),
                 GemstyneOreItems.CRIMONITE.chunk(), 350, 175, 2.0f);
 
-        offerCompleteSmelting(exporter, GemstyneArmorItems.ALDUS.getArmorSet(),
+        offerCompleteSmelting(exporter, GemstyneArmorItems.ALDUS.getArmorList(),
                 GemstyneOreItems.ALDUS.ingot(), 200, 100, 1.0f);
-        offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEPLATE.getArmorSet(),
+        offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEPLATE.getArmorList(),
                 GemstyneOreItems.BRONZE.ingot(), 200, 100, 1.0f);
-        offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEMAIL.getArmorSet(),
+        offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEMAIL.getArmorList(),
                 GemstyneOreItems.BRONZE.nugget(), 200, 100, 1.0f);
-        offerCompleteSmelting(exporter, GemstyneArmorItems.RENDFIRE.getArmorSet(),
+        offerCompleteSmelting(exporter, GemstyneArmorItems.RENDFIRE.getArmorList(),
                 GemstyneOreItems.CRIMONITE.ingot(), 350, 175, 2.0f);
 
 

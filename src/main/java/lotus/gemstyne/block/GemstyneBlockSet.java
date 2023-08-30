@@ -21,8 +21,6 @@ import java.util.*;
 public class GemstyneBlockSet {
     @NotNull private final Map<String, Block> blockVariants = new LinkedHashMap<>();
     @NotNull private final Set<Pair<String, Block>> blockSet = new HashSet<>();
-    // public Block rawBlock;
-    // public Block pureBlock;
 
     private StatusEffect effect;
     private BlockSoundGroup currentSounds = BlockSoundGroup.STONE;

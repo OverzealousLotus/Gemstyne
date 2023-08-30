@@ -11,7 +11,7 @@ public class GemstyneArmorItems {
             "bronzemail", GemstyneArmorMaterials.BRONZEMAIL, GemstyneOreItems.BRONZE.chain());
     public static final GemstyneArmorSet BRONZEPLATE = new GemstyneArmorSet(new OwoItemSettings(),
             "bronzeplate", GemstyneArmorMaterials.BRONZEPLATE, GemstyneOreItems.BRONZE.ingot());
-    public static final GemstyneArmorSet RENDFIRE = new GemstyneArmorSet(new OwoItemSettings(),
+    public static final GemstyneArmorSet RENDFIRE = new GemstyneArmorSet(new OwoItemSettings().fireproof(),
             "rendfire", GemstyneArmorMaterials.RENDFIRE, GemstyneOreItems.FIRE_OPAL);
 
 

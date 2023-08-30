@@ -106,5 +106,8 @@
   "item.gemstyne.uranium_chunk": "Uranium Chunk",
   "item.gemstyne.uranium_ingot": "Uranium Ingot",
   "item.gemstyne.uranium_nugget": "Uranium Nugget",
-  "itemGroup.gemstyne.main": "Gemstyne"
+  "itemGroup.gemstyne.main": "Gemstyne",
+  "tooltips.gemstyne.aldus": "Resilience",
+  "tooltips.gemstyne.imbued_feather": "Fly too high, your waxed wings will melt.",
+  "tooltips.gemstyne.ominous": "Heat Affinity"
 }

@@ -1,6 +1,6 @@
 package lotus.gemstyne.armor;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
@@ -8,6 +8,9 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
+
+import java.util.List;
+import java.util.Set;
 
 /**
  * {@link GemstyneArmorSet} is a class to simplify the registration process of Armor Sets.
@@ -19,7 +22,7 @@ public final class GemstyneArmorSet {
     public final ArmorItem LEGGINGS;
     public final ArmorItem BOOTS;
     public final Item SOURCE;
-    private final ImmutableList<ItemConvertible> ARMOR_SET;
+    private final ImmutableSet<ArmorItem> ARMOR_SET;
 
 
     /**
@@ -36,7 +39,7 @@ public final class GemstyneArmorSet {
         this.LEGGINGS = assignArmor(settings, material, ArmorItem.Type.LEGGINGS);
         this.BOOTS = assignArmor(settings, material, ArmorItem.Type.BOOTS);
         this.SOURCE = source;
-        this.ARMOR_SET = ImmutableList.of(this.HELMET, this.CHESTPLATE, this.LEGGINGS, this.BOOTS);
+        this.ARMOR_SET = ImmutableSet.of(this.HELMET, this.CHESTPLATE, this.LEGGINGS, this.BOOTS);
         this.registerArmorSet(setName);
     }
 
@@ -51,10 +54,13 @@ public final class GemstyneArmorSet {
         return new ArmorItem(material, type, settings.group(GemstyneCreativeGroup.GEMSTYNE));
     }
 
-    public ImmutableList<ItemConvertible> getArmorSet() {
-        return this.ARMOR_SET;
+    public Set<ArmorItem> getArmorSet() {
+        return Set.copyOf(this.ARMOR_SET);
     }
 
+    public List<ItemConvertible> getArmorList() {
+        return List.copyOf(this.ARMOR_SET);
+    }
     /**
      * <code>registerArmorSet</code> is used to register the items at once when created.
      * It must be called at the end of the {@link GemstyneArmorSet} constructor.

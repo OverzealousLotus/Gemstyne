@@ -22,22 +22,23 @@ public final class GemstyneOreItems {
     // =====
     // <=====| Ore Sets |=====>
     // =====
-    public static final GemstyneItemSet ALDUS = new GemstyneItemSet("aldus").createDefaultItemSet(false);
+    public static final GemstyneItemSet ALDUS = new GemstyneItemSet("aldus").createDefaultItemSet(false).create();
     public static final GemstyneItemSet BRONZE = new GemstyneItemSet("bronze")
-            .createDefaultItemSet(true).createItemVariant("chain");
+            .createDefaultItemSet(true).createItemVariant("chain").create();
     public static final GemstyneItemSet CRIMONITE = new GemstyneItemSet("crimonite")
-            .createDefaultItemSet(false).createItemVariant("chunk");
-    public static final GemstyneItemSet TIN = new GemstyneItemSet("tin").createDefaultItemSet(false);
+            .createDefaultItemSet(false).createItemVariant("chunk").create();
+    public static final GemstyneItemSet TIN = new GemstyneItemSet("tin").createDefaultItemSet(false).create();
     public static final GemstyneItemSet URANIUM = new GemstyneItemSet("uranium")
-            .createDefaultItemSet(false).createItemVariant("chunk");
+            .createDefaultItemSet(false).createItemVariant("chunk").create();
 
     // =====
     // <=====| Singleton Ores |=====>
     // =====
     public static final GemstyneItemSet MOCHITE = new GemstyneItemSet("mochite")
-            .createRaw()
-            .addFood(MOCHITE_FOOD)
-            .createCrystal();
+        .createRaw()
+        .addFood(MOCHITE_FOOD)
+        .createCrystal()
+        .create();
 
     // ======
     // <===== Crystals =====>

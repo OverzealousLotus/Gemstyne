@@ -1,6 +1,7 @@
 package lotus.gemstyne;
 
 import lotus.gemstyne.event.UraniumBreakHandler;
+import lotus.gemstyne.util.GemstyneToolTips;
 import lotus.gemstyne.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -28,6 +29,7 @@ public class Gemstyne implements ModInitializer {
 		// Step II | Essentials
 		Gemstyne.LOGGER.info("[[ Registering Essentials for " + Gemstyne.MOD_ID + "! ]]");
 		Overwatch.registerEssentials();
+		GemstyneToolTips.registerToolTips();
 		Gemstyne.LOGGER.info("[[ Successfully registered Essentials! ]]");
 
 		// Step III | World

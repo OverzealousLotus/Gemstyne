@@ -3,7 +3,8 @@
 	"package": "lotus.gemstyne.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"GemstyneArmorItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

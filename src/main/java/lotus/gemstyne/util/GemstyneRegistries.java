@@ -6,7 +6,8 @@ import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 
-public final class GemstyneRegistries {
+public final class
+GemstyneRegistries {
     private static void registerFuels() {
         Gemstyne.LOGGER.info("Registering Fuel Items for " + Gemstyne.MOD_ID + "...");
 
