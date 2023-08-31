@@ -6,12 +6,12 @@ import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.*;
 
 public class GemstyneToolSet {
-    public final AxeItem AXE;
-    public final HoeItem HOE;
-    public final PickaxeItem PICKAXE;
-    public final ShovelItem SHOVEL;
-    public final SwordItem SWORD;
-    public final Item SOURCE;
+    public final AxeItem axe;
+    public final HoeItem hoe;
+    public final PickaxeItem pickaxe;
+    public final ShovelItem shovel;
+    public final SwordItem sword;
+    public final Item source;
 
 
     /**
@@ -30,12 +30,12 @@ public class GemstyneToolSet {
             ToolMaterial material,
             Item source) {
         settings.group(GemstyneCreativeGroup.GEMSTYNE);
-        this.AXE = new AxeItem(material, attackDamage[0], attackSpeed[0], settings);
-        this.HOE = new HoeItem(material, (int) attackDamage[1], attackSpeed[1], settings);
-        this.PICKAXE = new PickaxeItem(material, (int) attackDamage[2], attackSpeed[2], settings);
-        this.SHOVEL = new ShovelItem(material, attackDamage[3], attackSpeed[3], settings);
-        this.SWORD = new SwordItem(material, (int) attackDamage[4], attackSpeed[4], settings);
-        this.SOURCE = source;
+        this.axe = new AxeItem(material, attackDamage[0], attackSpeed[0], settings);
+        this.hoe = new HoeItem(material, (int) attackDamage[1], attackSpeed[1], settings);
+        this.pickaxe = new PickaxeItem(material, (int) attackDamage[2], attackSpeed[2], settings);
+        this.shovel = new ShovelItem(material, attackDamage[3], attackSpeed[3], settings);
+        this.sword = new SwordItem(material, (int) attackDamage[4], attackSpeed[4], settings);
+        this.source = source;
         this.registerToolSet(setName);
     }
 
@@ -45,10 +45,10 @@ public class GemstyneToolSet {
      * @param setName The name of the Tool Set.
      */
     public void registerToolSet(String setName) {
-        GemstyneRegistry.registerItem(setName + "_axe", this.AXE);
-        GemstyneRegistry.registerItem(setName + "_hoe", this.HOE);
-        GemstyneRegistry.registerItem(setName + "_pickaxe", this.PICKAXE);
-        GemstyneRegistry.registerItem(setName + "_shovel", this.SHOVEL);
-        GemstyneRegistry.registerItem(setName + "_sword", this.SWORD);
+        GemstyneRegistry.registerItem(setName + "_axe", this.axe);
+        GemstyneRegistry.registerItem(setName + "_hoe", this.hoe);
+        GemstyneRegistry.registerItem(setName + "_pickaxe", this.pickaxe);
+        GemstyneRegistry.registerItem(setName + "_shovel", this.shovel);
+        GemstyneRegistry.registerItem(setName + "_sword", this.sword);
     }
 }

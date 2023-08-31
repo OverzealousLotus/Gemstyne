@@ -8,6 +8,8 @@ import lotus.gemstyne.item.spelunking.GemstyneOreItems;
  * Gemstyne's tool-item holder. A record is used to auto-generate getters.
  */
 public final class GemstyneToolItems {
+    private GemstyneToolItems() {}
+    
     // =====
     // <=====| Damage & Speed |=====>
     // =====

@@ -8,7 +8,10 @@ import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
+@SuppressWarnings("java:S4738")
 public class GemstyneOreLists {
+    private GemstyneOreLists() {}
+
     // =====
     // <===== Block rules for generation =====>
     // =====

@@ -10,6 +10,8 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 
 public final class GemstyneOreItems {
+    private GemstyneOreItems() {}
+    
     // =====
     // <===== Nutrients =====>
     // =====

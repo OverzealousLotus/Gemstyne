@@ -18,6 +18,8 @@ import net.minecraft.util.Identifier;
  * </ul>
  */
 public class GemstyneRegistry {
+    private GemstyneRegistry() {}
+
     /**
      * Simple Method to create a new {@link Identifier}.
      * @param path Name of Identifier.

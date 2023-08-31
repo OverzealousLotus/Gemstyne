@@ -6,6 +6,8 @@ import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.Item;
 
 public final class GemstyneMineralItems {
+    private GemstyneMineralItems() {}
+    
     public static final Item SALT = GemstyneRegistry.designateItem("salt",
             new OwoItemSettings());
 

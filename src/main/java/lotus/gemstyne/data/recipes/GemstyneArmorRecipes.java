@@ -6,6 +6,7 @@ import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.*;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -15,7 +16,7 @@ import java.util.function.Consumer;
 
 abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
-    public GemstyneArmorRecipes(FabricDataOutput output) {
+    protected GemstyneArmorRecipes(FabricDataOutput output) {
         super(output);
     }
 
@@ -39,25 +40,25 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
         // =====
         // <===== Rendfire Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, GemstyneArmorItems.RENDFIRE.HELMET,
+        offerBasicHelmetRecipe(exporter, GemstyneArmorItems.RENDFIRE.helmet,
                 GemstyneOreItems.CRIMONITE.ingot());
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE.CHESTPLATE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE.chestplate)
                 .pattern("C C")
                 .pattern("CFC")
                 .pattern("CCC")
                 .input('C', GemstyneOreItems.CRIMONITE.ingot())
                 .input('F', GemstyneOreItems.FIRE_OPAL)
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.FIRE_OPAL),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.FIRE_OPAL))
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.CRIMONITE.ingot()),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE.ingot()))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider
-                        .getRecipeName(GemstyneArmorItems.RENDFIRE.CHESTPLATE)));
+                .criterion(RecipeProvider.hasItem(GemstyneOreItems.FIRE_OPAL),
+                        RecipeProvider.conditionsFromItem(GemstyneOreItems.FIRE_OPAL))
+                .criterion(RecipeProvider.hasItem(GemstyneOreItems.CRIMONITE.ingot()),
+                        RecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE.ingot()))
+                .offerTo(exporter, new Identifier(RecipeProvider
+                        .getRecipeName(GemstyneArmorItems.RENDFIRE.chestplate)));
 
-        offerBasicLeggingsRecipe(exporter, GemstyneArmorItems.RENDFIRE.LEGGINGS,
+        offerBasicLeggingsRecipe(exporter, GemstyneArmorItems.RENDFIRE.leggings,
                 GemstyneOreItems.CRIMONITE.ingot());
-        offerBasicBootsRecipe(exporter, GemstyneArmorItems.RENDFIRE.BOOTS,
+        offerBasicBootsRecipe(exporter, GemstyneArmorItems.RENDFIRE.boots,
                 GemstyneOreItems.CRIMONITE.ingot());
     }
 
@@ -76,10 +77,10 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
             Consumer<RecipeJsonProvider> exporter,
             GemstyneArmorSet armorSet
     ) {
-        offerBasicHelmetRecipe(exporter, armorSet.HELMET, armorSet.SOURCE);
-        offerBasicChestplateRecipe(exporter, armorSet.CHESTPLATE, armorSet.SOURCE);
-        offerBasicLeggingsRecipe(exporter, armorSet.LEGGINGS, armorSet.SOURCE);
-        offerBasicBootsRecipe(exporter, armorSet.BOOTS, armorSet.SOURCE);
+        offerBasicHelmetRecipe(exporter, armorSet.helmet, armorSet.source);
+        offerBasicChestplateRecipe(exporter, armorSet.chestplate, armorSet.source);
+        offerBasicLeggingsRecipe(exporter, armorSet.leggings, armorSet.source);
+        offerBasicBootsRecipe(exporter, armorSet.boots, armorSet.source);
     }
 
     private static void offerBasicHelmetRecipe(

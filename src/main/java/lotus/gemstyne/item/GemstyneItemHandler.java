@@ -13,6 +13,8 @@ import lotus.gemstyne.item.spelunking.GemstyneOreItems;
  * <code>GemstyneItemHandler</code> is used to wrap all of Gemstyne's items together.
  */
 public final class GemstyneItemHandler {
+    private GemstyneItemHandler() {}
+    
     public static void registerGemstyneItems() {
         Gemstyne.LOGGER.info("Registering Items for " + Gemstyne.MOD_ID + "!");
         GemstyneGearItems.registerGearItems();

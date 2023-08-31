@@ -18,13 +18,12 @@ public class UraniumBreakHandler implements AttackBlockCallback {
 
 
     @Override
-    public ActionResult interact
-            (PlayerEntity player,
-                                 World world,
-                                 Hand hand,
-                                 BlockPos pos,
-                                 Direction direction
-            ) {
+    public ActionResult interact(PlayerEntity player,
+            World world,
+            Hand hand,
+            BlockPos pos,
+            Direction direction
+        ) {
         BlockState state = world.getBlockState(pos);
 
         if (state.isToolRequired() && !player.isSpectator() && !player.isCreative() && !world.isClient()) {

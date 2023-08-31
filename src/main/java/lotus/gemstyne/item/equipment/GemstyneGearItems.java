@@ -8,6 +8,8 @@ import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.Item;
 
 public class GemstyneGearItems {
+    private GemstyneGearItems() {}
+    
     private static final Item IMBUED_FEATHER = GemstyneRegistry.designateItem("imbued_feather",
             new ImbuedFeatherItem(new OwoItemSettings().maxCount(1).maxDamage(20)
                     .group(GemstyneCreativeGroup.GEMSTYNE))

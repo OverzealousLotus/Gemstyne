@@ -8,6 +8,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class GemstyneOreConfig {
+    private GemstyneOreConfig() {}
+
     // =====
     // <===== Overworld Keys =====>
     // =====

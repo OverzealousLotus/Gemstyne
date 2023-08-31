@@ -6,6 +6,8 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 public final class GemstyneBlockTags {
+    private GemstyneBlockTags() {}
+
     // ======
     // <===== Replaceables =====>
     // ======

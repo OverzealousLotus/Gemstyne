@@ -9,6 +9,8 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 public final class GemstyneMineralPlaced {
+    private GemstyneMineralPlaced() {}
+
     // =====
     // <===== Minerals =====>
     // =====

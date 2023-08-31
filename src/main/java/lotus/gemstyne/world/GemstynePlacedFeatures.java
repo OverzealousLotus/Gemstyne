@@ -17,7 +17,7 @@ import java.util.List;
 
 public final class GemstynePlacedFeatures {
     // When creating a newly generated Ore, make sure to also:
-    // - Register the keys in GemstyneConfiguredFeatures and ModOreGeneration!
+    // - Register the keys in GemstyneConfiguredFeatures and GemstyneOreGeneration!
     // - Lastly, run Datagen to actually generate the keys being used!
 
     public static final RegistryKey<PlacedFeature> LIQUID_MORKITE_PLACED_KEY =

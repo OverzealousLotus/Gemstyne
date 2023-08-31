@@ -32,12 +32,12 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
     public CrystallineBlockBud(int height, int xzOffset, AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState((this.getDefaultState().with(WATERLOGGED, false)).with(FACING, Direction.UP));
-        this.upShape = Block.createCuboidShape(xzOffset, 0.0, xzOffset, 16 - xzOffset, height, 16 - xzOffset);
-        this.downShape = Block.createCuboidShape(xzOffset, 16 - height, xzOffset, 16 - xzOffset, 16.0, 16 - xzOffset);
-        this.northShape = Block.createCuboidShape(xzOffset, xzOffset, 16 - height, 16 - xzOffset, 16 - xzOffset, 16.0);
-        this.southShape = Block.createCuboidShape(xzOffset, xzOffset, 0.0, 16 - xzOffset, 16 - xzOffset, height);
-        this.eastShape = Block.createCuboidShape(0.0, xzOffset, xzOffset, height, 16 - xzOffset, 16 - xzOffset);
-        this.westShape = Block.createCuboidShape(16 - height, xzOffset, xzOffset, 16.0, 16 - xzOffset, 16 - xzOffset);
+        this.upShape = Block.createCuboidShape(xzOffset, 0.0, xzOffset, 16D - xzOffset, height, 16D - xzOffset);
+        this.downShape = Block.createCuboidShape(xzOffset, 16D - height, xzOffset, 16D - xzOffset, 16.0, 16D - xzOffset);
+        this.northShape = Block.createCuboidShape(xzOffset, xzOffset, 16D - height, 16D - xzOffset, 16D - xzOffset, 16.0);
+        this.southShape = Block.createCuboidShape(xzOffset, xzOffset, 0.0, 16D - xzOffset, 16D - xzOffset, height);
+        this.eastShape = Block.createCuboidShape(0.0, xzOffset, xzOffset, height, 16D - xzOffset, 16D - xzOffset);
+        this.westShape = Block.createCuboidShape(16D - height, xzOffset, xzOffset, 16.0, 16D - xzOffset, 16D - xzOffset);
     }
 
     @Override

@@ -17,12 +17,12 @@ import java.util.Set;
  * Usually, you would have to create pieces of armor separately, but this is done at once.
  */
 public final class GemstyneArmorSet {
-    public final ArmorItem HELMET;
-    public final ArmorItem CHESTPLATE;
-    public final ArmorItem LEGGINGS;
-    public final ArmorItem BOOTS;
-    public final Item SOURCE;
-    private final ImmutableSet<ArmorItem> ARMOR_SET;
+    public final ArmorItem helmet;
+    public final ArmorItem chestplate;
+    public final ArmorItem leggings;
+    public final ArmorItem boots;
+    public final Item source;
+    private final ImmutableSet<ArmorItem> armorSet;
 
 
     /**
@@ -34,12 +34,12 @@ public final class GemstyneArmorSet {
      * @param material Material of set.
      */
     public GemstyneArmorSet(OwoItemSettings settings, String setName, ArmorMaterial material, Item source) {
-        this.HELMET = assignArmor(settings, material, ArmorItem.Type.HELMET);
-        this.CHESTPLATE = assignArmor(settings, material, ArmorItem.Type.CHESTPLATE);
-        this.LEGGINGS = assignArmor(settings, material, ArmorItem.Type.LEGGINGS);
-        this.BOOTS = assignArmor(settings, material, ArmorItem.Type.BOOTS);
-        this.SOURCE = source;
-        this.ARMOR_SET = ImmutableSet.of(this.HELMET, this.CHESTPLATE, this.LEGGINGS, this.BOOTS);
+        this.helmet = assignArmor(settings, material, ArmorItem.Type.HELMET);
+        this.chestplate = assignArmor(settings, material, ArmorItem.Type.CHESTPLATE);
+        this.leggings = assignArmor(settings, material, ArmorItem.Type.LEGGINGS);
+        this.boots = assignArmor(settings, material, ArmorItem.Type.BOOTS);
+        this.source = source;
+        this.armorSet = ImmutableSet.of(this.helmet, this.chestplate, this.leggings, this.boots);
         this.registerArmorSet(setName);
     }
 
@@ -55,21 +55,22 @@ public final class GemstyneArmorSet {
     }
 
     public Set<ArmorItem> getArmorSet() {
-        return Set.copyOf(this.ARMOR_SET);
+        return Set.copyOf(this.armorSet);
     }
 
     public List<ItemConvertible> getArmorList() {
-        return List.copyOf(this.ARMOR_SET);
+        return List.copyOf(this.armorSet);
     }
+    
     /**
      * <code>registerArmorSet</code> is used to register the items at once when created.
      * It must be called at the end of the {@link GemstyneArmorSet} constructor.
      * @param setName The name of the Armor Set.
      */
     public void registerArmorSet(String setName) {
-        GemstyneRegistry.registerItem(setName + "_helmet", this.HELMET);
-        GemstyneRegistry.registerItem(setName + "_chestplate", this.CHESTPLATE);
-        GemstyneRegistry.registerItem(setName + "_leggings", this.LEGGINGS);
-        GemstyneRegistry.registerItem(setName + "_boots", this.BOOTS);
+        GemstyneRegistry.registerItem(setName + "_helmet", this.helmet);
+        GemstyneRegistry.registerItem(setName + "_chestplate", this.chestplate);
+        GemstyneRegistry.registerItem(setName + "_leggings", this.leggings);
+        GemstyneRegistry.registerItem(setName + "_boots", this.boots);
     }
 }

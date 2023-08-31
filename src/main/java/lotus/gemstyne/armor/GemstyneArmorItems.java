@@ -5,6 +5,8 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 
 public class GemstyneArmorItems {
+    private GemstyneArmorItems() {}
+    
     public static final GemstyneArmorSet ALDUS = new GemstyneArmorSet(new OwoItemSettings(),
             "aldus", GemstyneArmorMaterials.ALDUS, GemstyneOreItems.ALDUS.ingot());
     public static final GemstyneArmorSet BRONZEMAIL = new GemstyneArmorSet(new OwoItemSettings(),

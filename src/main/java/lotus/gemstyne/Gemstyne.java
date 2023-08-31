@@ -2,7 +2,7 @@ package lotus.gemstyne;
 
 import lotus.gemstyne.event.UraniumBreakHandler;
 import lotus.gemstyne.util.GemstyneToolTips;
-import lotus.gemstyne.world.gen.ModWorldGeneration;
+import lotus.gemstyne.world.gen.GemstyneWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
@@ -14,7 +14,7 @@ public class Gemstyne implements ModInitializer {
 	public static final String MOD_ID = "gemstyne";
 
 	// A simple way to log messages or events.
-	public static final Logger LOGGER = LoggerFactory.getLogger("gemstyne");
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	/** <p>Make sure to dataGen each time new items, ores, or blocks are modified/added.</p>
 	 * <p>Everything must be done sequentially.</p>
@@ -34,7 +34,7 @@ public class Gemstyne implements ModInitializer {
 
 		// Step III | World
 		Gemstyne.LOGGER.info("[[ Registering World Configuration for " + Gemstyne.MOD_ID + "! ]]");
-		ModWorldGeneration.generateModWorldGen();
+		GemstyneWorldGeneration.generateModWorldGen();
 		Gemstyne.LOGGER.info("[[ Successfully registered World Configuration!");
 
 		// Step IV | Event Handlers

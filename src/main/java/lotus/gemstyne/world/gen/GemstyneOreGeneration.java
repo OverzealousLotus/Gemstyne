@@ -10,7 +10,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
-public class ModOreGeneration {
+public class GemstyneOreGeneration {
+    private GemstyneOreGeneration() {}
+
     /**
      * Ores to Generate and Execute.
      * <strong>Notice:</strong> If any repeat keys are fed into this method, then the game will crash

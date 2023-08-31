@@ -14,20 +14,20 @@ public enum GemstyneToolMaterials implements ToolMaterial {
     // When creating new tool, these values are default, but can be added to.
     // If creating a new tool, and not wanting to add more of either, put 0.
     ALDUS(MiningLevels.DIAMOND,
-            800,
-            7.0f,
-            2.0f,
-            15, () -> Ingredient.ofItems(GemstyneOreItems.ALDUS.ingot())),
+        800,
+        7.0f,
+        2.0f,
+        15, () -> Ingredient.ofItems(GemstyneOreItems.ALDUS.ingot())),
     BRONZE(MiningLevels.IRON,
-            400,
-            6.5f,
-            2.0f,
-            10, () -> Ingredient.ofItems(GemstyneOreItems.BRONZE.ingot())),
+        400,
+        6.5f,
+        2.0f,
+        10, () -> Ingredient.ofItems(GemstyneOreItems.BRONZE.ingot())),
     RENDFIRE(GemstyneMiningLevels.RENDFIRE,
-                     2500,
-                     9.0f,
-                     4.5f,
-                     20,()->Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL));
+        2500,
+        9.0f,
+        4.5f,
+        20,()->Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL));
 
 
     private final int miningLevel;

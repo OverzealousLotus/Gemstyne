@@ -1,8 +1,10 @@
 package lotus.gemstyne.world.gen;
 
-public class ModWorldGeneration {
+public class GemstyneWorldGeneration {
+    private GemstyneWorldGeneration() {}
+
     public static void generateModWorldGen() {
         // Make sure to call generateOres() *before* generateTrees()
-        ModOreGeneration.generateOres();
+        GemstyneOreGeneration.generateOres();
     }
 }

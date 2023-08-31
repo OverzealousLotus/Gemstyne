@@ -14,6 +14,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class GemstyneFluids {
+    private GemstyneFluids() {}
+    
     public static final FlowableFluid STILL_LIQUID_MORKITE = Registry.register(Registries.FLUID,
             new Identifier(Gemstyne.MOD_ID, "liquid_morkite"), new LiquidMorkite.Still());
     public static final FlowableFluid FLOWING_LIQUID_MORKITE = Registry.register(Registries.FLUID,

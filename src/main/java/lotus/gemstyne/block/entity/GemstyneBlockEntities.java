@@ -9,6 +9,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class GemstyneBlockEntities {
+    private GemstyneBlockEntities() {}
+    
     public static BlockEntityType<RichOreBlockEntity> DEEP_ORE_BLOCK;
 
     public static void registerBlockEntities() {

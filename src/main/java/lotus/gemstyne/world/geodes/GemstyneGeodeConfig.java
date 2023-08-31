@@ -13,6 +13,8 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 public final class GemstyneGeodeConfig {
+    private GemstyneGeodeConfig() {}
+
     // =====
     // <===== Geode Keys =====>
     // =====

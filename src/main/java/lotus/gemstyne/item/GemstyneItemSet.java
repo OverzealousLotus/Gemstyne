@@ -12,7 +12,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Pair;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * <h2>GemstyneItemSet</h2>
@@ -23,14 +25,14 @@ public final class GemstyneItemSet {
     @NotNull public Map<String, Pair<String, Item>> itemVariants = new LinkedHashMap<>();
 
     private FabricItemSettings currentSettings = new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE);
-    private final String SET_NAME;
+    private final String setName;
 
     /**
      * Its constructor only requires the name of the set to get started.
      * @param setName Name of set
      */
     public GemstyneItemSet(String setName) {
-        this.SET_NAME = setName;
+        this.setName = setName;
     }
 
     public GemstyneItemSet addFood(FoodComponent nutrients) {
@@ -45,7 +47,7 @@ public final class GemstyneItemSet {
      * @return Returns instance of self.
      */
     public GemstyneItemSet createItemVariant(String type) {
-        this.itemVariants.put(type, new Pair<>(this.SET_NAME + "_" + type, new Item(this.currentSettings)));
+        this.itemVariants.put(type, new Pair<>(this.setName + "_" + type, new Item(this.currentSettings)));
 
         return this;
     }
@@ -65,7 +67,7 @@ public final class GemstyneItemSet {
      * @return Returns instance of self.
      */
     public GemstyneItemSet createCrystal() {
-        this.itemVariants.put(this.SET_NAME, new Pair<>(this.setName(), new Item(this.currentSettings)));
+        this.itemVariants.put(this.setName, new Pair<>(this.setName(), new Item(this.currentSettings)));
 
         return this;
     }
@@ -95,21 +97,21 @@ public final class GemstyneItemSet {
         Optional<Item> item = Optional.ofNullable(this.itemVariants.get(itemName).getRight());
         if(item.isPresent()) {
             return this.itemVariants.get(itemName).getRight();
-        } else {
-            Gemstyne.LOGGER.error("[[ ERROR: " + itemName + " for set " + this.SET_NAME + " is null!" +
-                " Maybe the Item is improperly initialized?" +
-                " OR the ItemSet was called in an incompatible Method!" +
-                " OTHERWISE the wrong getter was called!");
+        } else if(Gemstyne.LOGGER.isErrorEnabled()) {
+            Gemstyne.LOGGER.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", itemName, this.setName,
+                "Maybe the Item is improperly initialized?",
+                "OR the ItemSet was called in an incompatible Method!",
+                "OTHERWISE the wrong getter was called!"));
         }
         throw new NullPointerException();
     }
 
-    public String setName() { return this.SET_NAME; }
+    public String setName() { return this.setName; }
 
     public Item raw() { return safeFetch("raw"); }
     public Item chunk() { return safeFetch("chunk");}
     public Item nugget() { return safeFetch("nugget"); }
     public Item ingot() { return safeFetch("ingot"); }
     public Item chain() { return safeFetch("chain"); }
-    public Item crystal() { return safeFetch(this.SET_NAME); }
+    public Item crystal() { return safeFetch(this.setName); }
 }

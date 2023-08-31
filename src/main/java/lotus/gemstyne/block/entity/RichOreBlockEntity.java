@@ -66,5 +66,6 @@ public class RichOreBlockEntity extends BlockEntity {
     }
 
     public static void tick(World world, BlockPos blockPos, BlockState blockState, RichOreBlockEntity entity) {
+        // Currently, this method is here only for overriding purposes.
     }
 }

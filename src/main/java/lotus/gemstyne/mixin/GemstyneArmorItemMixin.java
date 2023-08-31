@@ -45,9 +45,9 @@ public abstract class GemstyneArmorItemMixin {
         UUID uuid = MODIFIERS.get(type);
 
         if(material == GemstyneArmorMaterials.ALDUS) {
-            gemstyne$armorMapBuilder(uuid, EntityAttributes.GENERIC_MAX_HEALTH, "Aldus Health Bonus", 1.0f, EntityAttributeModifier.Operation.ADDITION);
+            gemstyne$attributeBuilder(uuid, EntityAttributes.GENERIC_MAX_HEALTH, "Aldus Health Bonus", 1.0f, EntityAttributeModifier.Operation.ADDITION);
         } else if (material == GemstyneArmorMaterials.RENDFIRE) {
-            gemstyne$armorMapBuilder(uuid, AdditionalEntityAttributes.LAVA_SPEED, "Rendfire Lava Speed Bonus", 0.5f, EntityAttributeModifier.Operation.ADDITION);
+            gemstyne$attributeBuilder(uuid, AdditionalEntityAttributes.LAVA_SPEED, "Rendfire Lava Speed Bonus", 0.5f, EntityAttributeModifier.Operation.ADDITION);
         }
 
     }
@@ -61,7 +61,7 @@ public abstract class GemstyneArmorItemMixin {
      * @param operation Type of Attribute Modifier Operation. For example, addition.
      */
     @Unique
-    private void gemstyne$armorMapBuilder(UUID uuid, EntityAttribute attributes, String name, float value, EntityAttributeModifier.Operation operation) {
+    private void gemstyne$attributeBuilder(UUID uuid, EntityAttribute attributes, String name, float value, EntityAttributeModifier.Operation operation) {
         var map = HashMultimap.create(this.attributeModifiers);
         map.put(attributes, new EntityAttributeModifier(uuid, name, value, operation));
         this.attributeModifiers = map;

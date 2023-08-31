@@ -6,6 +6,8 @@ import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.Item;
 
 public class GemstyneCraftingItems {
+    private GemstyneCraftingItems() {}
+    
     private static final Item IMBUED_ROD = GemstyneRegistry.designateItem("imbued_rod",
             new OwoItemSettings());
 

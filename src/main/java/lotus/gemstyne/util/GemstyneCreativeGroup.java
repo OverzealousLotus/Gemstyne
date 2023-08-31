@@ -6,6 +6,7 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 
 public class GemstyneCreativeGroup {
+    private GemstyneCreativeGroup() {}
 
     public static final OwoItemGroup GEMSTYNE = OwoItemGroup.builder(GemstyneRegistry.id("main"),
             () -> Icon.of(GemstyneOreItems.MOCHITE.crystal())).build();
