@@ -14,7 +14,7 @@ import lotus.gemstyne.util.GemstyneRegistries;
  */
 public final class Overwatch {
     private Overwatch() {}
-    
+
     /**
      * <code>registerDependencies</code> registers required resources for Gemstyne to function.
      * Dependencies in this context, refer to anything that needs to be registered before anything else.
