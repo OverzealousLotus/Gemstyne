@@ -29,7 +29,11 @@ public class BuddingCrystallineBlock extends CrystallineBlock {
     }
 
 
+    /**
+     * @deprecated Minecraft loves using this annotation unnecessarily! :3
+     */
     @Override
+    @Deprecated
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (random.nextInt(5) != 0) {
             return;
@@ -47,8 +51,11 @@ public class BuddingCrystallineBlock extends CrystallineBlock {
         } else if (blockState.isOf(buds.get(2)) && blockState.get(CrystallineBlockBud.FACING) == direction) {
             block = buds.get(3);
         }
-        if (block != null) {
-            BlockState blockState2 = (BlockState)((BlockState)block.getDefaultState().with(CrystallineBlockBud.FACING, direction)).with(CrystallineBlockBud.WATERLOGGED, blockState.getFluidState().getFluid() == Fluids.WATER);
+        // {@code world.isChunkLoaded(pos.asLong())} checks if the current block is in a loaded chunk.
+        // If this check is not performed, `setBlock` will be called in an unloaded chunk. This makes Minecraft freak out in
+        // the logger.
+        if (block != null && world.isChunkLoaded(pos.asLong())) {
+            BlockState blockState2 = (block.getDefaultState().with(CrystallineBlockBud.FACING, direction)).with(CrystallineBlockBud.WATERLOGGED, blockState.getFluidState().getFluid() == Fluids.WATER);
             world.setBlockState(position, blockState2);
         }
     }
