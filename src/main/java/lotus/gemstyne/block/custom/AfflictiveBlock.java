@@ -14,13 +14,13 @@ import net.minecraft.world.World;
 public class AfflictiveBlock extends ExperienceDroppingBlock {
     // Instantiate parameters of Block.
     private final StatusEffect effect;
-    private final int DURATION;
+    private final int duration;
     private final GemstyneBlockTypes type;
 
     public AfflictiveBlock(Settings settings, StatusEffect effect, int duration, GemstyneBlockTypes type) {
         super(settings);
         this.effect = effect;
-        this.DURATION = duration;
+        this.duration = duration;
         this.type = type;
     }
 
@@ -36,9 +36,9 @@ public class AfflictiveBlock extends ExperienceDroppingBlock {
      */
     protected void afflictPlayer(PlayerEntity player) {
         switch(this.type) {
-            case PURE -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.DURATION  * 3, 1));
-            case RAW -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.DURATION * 2, 1));
-            default -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.DURATION, 1));
+            case PURE -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration  * 3, 1));
+            case RAW -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration * 2, 1));
+            default -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration, 1));
         }
     }
 
@@ -49,9 +49,9 @@ public class AfflictiveBlock extends ExperienceDroppingBlock {
      */
     protected void afflictEntity(LivingEntity entity) {
         switch(this.type) {
-            case PURE -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.DURATION * 3, 1));
-            case RAW -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.DURATION * 2, 1));
-            default -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.DURATION, 1));
+            case PURE -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.duration * 3, 1));
+            case RAW -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.duration * 2, 1));
+            default -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.duration, 1));
         }
     }
 
@@ -67,10 +67,8 @@ public class AfflictiveBlock extends ExperienceDroppingBlock {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         super.onSteppedOn(world, pos, state, entity);
-        if (!world.isClient()) {
-            if (entity instanceof LivingEntity livingEntity) {
-                if (!livingEntity.isSpectator()) {afflictEntity(livingEntity);}
-            }
+        if (!world.isClient() &&  (entity instanceof LivingEntity livingEntity &&  (!livingEntity.isSpectator()))) {
+            afflictEntity(livingEntity);
         }
     }
 }

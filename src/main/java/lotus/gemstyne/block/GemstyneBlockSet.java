@@ -16,11 +16,15 @@ import net.minecraft.util.Pair;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Optional;
 
 public class GemstyneBlockSet {
     @NotNull private final Map<String, Pair<String, Block>> blockVariants = new LinkedHashMap<>();
-    // @NotNull private final Set<Pair<String, Block>> blockSet = new HashSet<>();
+
+    private static final String STONE = "stone";
+    private static final String BLOCK = "_block";
 
     private StatusEffect effect;
     private BlockSoundGroup currentSounds = BlockSoundGroup.STONE;
@@ -28,14 +32,15 @@ public class GemstyneBlockSet {
     private float currentResistance = 3.0f;
     private UniformIntProvider experience = UniformIntProvider.create(2, 5);
     private FabricBlockSettings currentSettings = FabricBlockSettings.copyOf(Blocks.STONE);
-    private final String SET_NAME;
+    private final String setName;
 
     public GemstyneBlockSet(String setName) {
-        this.SET_NAME = setName;
+        this.setName = setName;
     }
 
     /**
-     * Method to modify strength of {@link GemstyneBlockSet}
+     * Method to modify strength of {@link GemstyneBlockSet}.
+
      * @param hardness Hardness of BlockSet
      * @param resistance Blast Resistance of BlockSet.
      * @return Returns current instance of {@link GemstyneBlockSet}
@@ -48,7 +53,7 @@ public class GemstyneBlockSet {
     }
 
     /**
-     * Simplified version of <code>modifyStrength</code>
+     * Simplified version of <code>modifyStrength</code>.
      * @param hardness Hardness of BlockSet
      * @return Returns current instance of {@link GemstyneBlockSet}
      */
@@ -89,21 +94,21 @@ public class GemstyneBlockSet {
     }
 
     /**
-     * Creates a Stone variant for {@link GemstyneBlockSet}
+     * Creates a Stone variant for {@link GemstyneBlockSet}.
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre() {
-        this.blockVariants.put("stone", new Pair<>(this.SET_NAME + "_ore", new ExperienceDroppingBlock(this.currentSettings)));
+        this.blockVariants.put(STONE, new Pair<>(this.setName + "_ore", new ExperienceDroppingBlock(this.currentSettings)));
         return this;
     }
 
     /**
-     * Variant of original method to create generic block
+     * Variant of original method to create generic block.
      * @param block Any which implements {@link ExperienceDroppingBlock}
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre(ExperienceDroppingBlock block) {
-        this.blockVariants.put("stone", new Pair<>(this.SET_NAME + "_ore", block));
+        this.blockVariants.put(STONE, new Pair<>(this.setName + "_ore", block));
         return this;
     }
 
@@ -115,7 +120,7 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.blockVariants.put(type, new Pair<>(type + "_" + this.SET_NAME + "_ore", new ExperienceDroppingBlock(this.currentSettings, this.experience)));
+        this.blockVariants.put(type, new Pair<>(type + "_" + this.setName + "_ore", new ExperienceDroppingBlock(this.currentSettings, this.experience)));
         return this;
     }
 
@@ -128,7 +133,7 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, int duration, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.blockVariants.put(type, new Pair<>(type + "_" + this.SET_NAME + "_ore",
+        this.blockVariants.put(type, new Pair<>(type + "_" + this.setName + "_ore",
             new AfflictiveOre(this.currentSettings, this.effect, duration, GemstyneBlockTypes.ORE, this.experience)));
         return this;
     }
@@ -142,30 +147,30 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet createOreType(String type, ExperienceDroppingBlock block, BlockSoundGroup sounds) {
         this.currentSettings.sounds(sounds).strength(this.currentHardness);
-        this.blockVariants.put(type, new Pair<>(type + "_" + this.SET_NAME + "_ore", block));
+        this.blockVariants.put(type, new Pair<>(type + "_" + this.setName + "_ore", block));
         return this;
     }
 
     public GemstyneBlockSet createRawBlock() {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.blockVariants.put("raw", new Pair<>("raw_" + this.SET_NAME + "_block", new Block(this.currentSettings)));
+        this.blockVariants.put("raw", new Pair<>("raw_" + this.setName + BLOCK, new Block(this.currentSettings)));
         return this;
     }
 
     public GemstyneBlockSet createRawBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-        this.blockVariants.put("raw", new Pair<>("raw_" + this.SET_NAME + "_block", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.RAW)));
+        this.blockVariants.put("raw", new Pair<>("raw_" + this.setName + BLOCK, new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.RAW)));
         return this;
     }
 
     public GemstyneBlockSet createPureBlock() {
-        this.blockVariants.put("pure", new Pair<>(this.SET_NAME + "_block", new Block(this.currentSettings.sounds(this.currentSounds))));
+        this.blockVariants.put("pure", new Pair<>(this.setName + BLOCK, new Block(this.currentSettings.sounds(this.currentSounds))));
         return this;
     }
 
     public GemstyneBlockSet createPureBlock(int duration) {
         this.currentSettings.sounds(this.currentSounds);
-        this.blockVariants.put("pure", new Pair<>(this.SET_NAME + "_block", new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.PURE)));
+        this.blockVariants.put("pure", new Pair<>(this.setName + BLOCK, new AfflictiveBlock(this.currentSettings, this.effect, duration, GemstyneBlockTypes.PURE)));
         return this;
     }
 
@@ -213,16 +218,17 @@ public class GemstyneBlockSet {
         Optional<Block> block = Optional.ofNullable(this.blockVariants.get(blockName).getRight());
         if(block.isPresent()) {
             return this.blockVariants.get(blockName).getRight();
-        } else {
-            Gemstyne.LOGGER.error("[[ ERROR: " + blockName + " for set " + this.SET_NAME + " is null!" +
-                    " Maybe the Block is improperly initialized?" +
-                    " OR the BlockSet was called in an incompatible Method!" +
-                    " OTHERWISE the wrong getter was called!");
+        } else if(Gemstyne.LOGGER.isErrorEnabled()) {
+            Gemstyne.LOGGER.error(
+                String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", blockName, this.setName,
+                    "Maybe the Block is improperly initialized?",
+                    "OR the BlockSet was called in an incompatible Method!",
+                    "OTHERWISE the wrong getter was called!"));
         }
         throw new NullPointerException();
     }
 
-    public Block stoneOre() { return safelyFetch("stone"); }
+    public Block stoneOre() { return safelyFetch(STONE); }
     public Block deepslateOre() { return safelyFetch("deepslate"); }
     public Block netherOre() { return safelyFetch("nether"); }
     public Block rawBlock() { return safelyFetch("raw"); }

@@ -16,7 +16,12 @@ public class AfflictiveOre extends AfflictiveBlock {
         this.experiencedDropped = experience;
     }
 
+    /** 
+     * @deprecated Minecraft unnecessarily marks methods as deprecated. If you ever encounter a warning against overriding,
+     * then know it actually means: "Override this method, don't call."
+     */
     @Override
+    @Deprecated
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
         super.onStacksDropped(state, world, pos, tool, dropExperience);
         if (dropExperience) {

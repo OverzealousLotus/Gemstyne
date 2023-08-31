@@ -18,17 +18,26 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 
+import org.jetbrains.annotations.NotNull;
+
 public final class GemstyneGeodeSet {
-    public Map<String, AmethystBlock> geodeVariants = new LinkedHashMap<>();
+    @NotNull private final Map<String, AmethystBlock> geodeVariants = new LinkedHashMap<>();
     private ImmutableSet<AmethystBlock> budSet;
 
-    private final String SET_NAME;
+    private static final String CLUSTER = "cluster";
+    private static final String LARGE = "large";
+    private static final String MEDIUM = "medium";
+    private static final String SMALL = "small";
+    private static final String BUDDING = "budding";
+    private static final String BLOCK = "block";
+
+    private final String setName;
     private final FabricBlockSettings currentSettings = FabricBlockSettings.create().requiresTool()
             .ticksRandomly().nonOpaque().strength(1.5f, 1.0f)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER).luminance(state -> 5);
 
     public GemstyneGeodeSet(String setName) {
-        this.SET_NAME = setName;
+        this.setName = setName;
     }
 
     public GemstyneGeodeSet modifyLuminance(int luminance) {
@@ -48,30 +57,30 @@ public final class GemstyneGeodeSet {
 
     public GemstyneGeodeSet createGeodeType(String size, int height, int offset) {
         this.geodeVariants.put(size, new CrystallineBlockBud(height, offset, this.currentSettings));
-        GemstyneRegistry.registerBlock(size + "_" + this.SET_NAME + "_bud", safelyFetch(size));
+        GemstyneRegistry.registerBlock(size + "_" + this.setName + "_bud", safelyFetch(size));
         return this;
     }
 
     public GemstyneGeodeSet createCluster(int height, int offset) {
-        this.geodeVariants.put("cluster", new CrystallineBlockBud(height, offset, this.currentSettings));
-        GemstyneRegistry.registerBlock(this.SET_NAME + "_cluster", safelyFetch("cluster"));
+        this.geodeVariants.put(CLUSTER, new CrystallineBlockBud(height, offset, this.currentSettings));
+        GemstyneRegistry.registerBlock(this.setName + "_cluster", safelyFetch(CLUSTER));
         return this;
     }
 
     public GemstyneGeodeSet createBudding() {
-        this.geodeVariants.put("budding", new BuddingCrystallineBlock(this.currentSettings, ImmutableList.of(
-                safelyFetch("small"),
-                safelyFetch("medium"),
-                safelyFetch("large"),
-                safelyFetch("cluster")
+        this.geodeVariants.put(BUDDING, new BuddingCrystallineBlock(this.currentSettings, ImmutableList.of(
+                safelyFetch(SMALL),
+                safelyFetch(MEDIUM),
+                safelyFetch(LARGE),
+                safelyFetch(CLUSTER)
         )));
-        GemstyneRegistry.registerBlock("budding_" + this.SET_NAME, safelyFetch("budding"));
+        GemstyneRegistry.registerBlock("budding_" + this.setName, safelyFetch(BUDDING));
         return this;
     }
 
     public void createBlock() {
-        this.geodeVariants.put("block", new AmethystBlock(this.currentSettings));
-        GemstyneRegistry.registerBlock(this.SET_NAME + "_block", safelyFetch("block"));
+        this.geodeVariants.put(BLOCK, new AmethystBlock(this.currentSettings));
+        GemstyneRegistry.registerBlock(this.setName + "_block", safelyFetch(BLOCK));
     }
 
     /**
@@ -82,8 +91,8 @@ public final class GemstyneGeodeSet {
      */
     public void generateBlockModels(BlockStateModelGenerator blockStateModelGenerator, boolean isVanilla) {
         this.budSet().forEach(blockStateModelGenerator::registerAmethyst);
-        if(!isVanilla) blockStateModelGenerator.registerCubeAllModelTexturePool(this.safelyFetch("block"));
-        blockStateModelGenerator.registerCubeAllModelTexturePool(this.safelyFetch("budding"));
+        if(!isVanilla) blockStateModelGenerator.registerCubeAllModelTexturePool(this.safelyFetch(BLOCK));
+        blockStateModelGenerator.registerCubeAllModelTexturePool(this.safelyFetch(BUDDING));
     }
 
     /**
@@ -99,11 +108,11 @@ public final class GemstyneGeodeSet {
         if(!isVanilla) this.createBlock();
         return this.createCluster(7, 3)
                 .modifySounds(BlockSoundGroup.LARGE_AMETHYST_BUD).modifyLuminance(4)
-                .createGeodeType("large", 5, 3)
+                .createGeodeType(LARGE, 5, 3)
                 .modifySounds(BlockSoundGroup.MEDIUM_AMETHYST_BUD).modifyLuminance(2)
-                .createGeodeType("medium", 4, 3)
+                .createGeodeType(MEDIUM, 4, 3)
                 .modifySounds(BlockSoundGroup.SMALL_AMETHYST_BUD).modifyLuminance(1)
-                .createGeodeType("small", 3, 4)
+                .createGeodeType(SMALL, 3, 4)
                 .modifySounds(BlockSoundGroup.AMETHYST_BLOCK).modifyStrength(3.0f)
                 .createBudding().create();
     }
@@ -114,10 +123,10 @@ public final class GemstyneGeodeSet {
      */
     public GemstyneGeodeSet create() {
         this.budSet = ImmutableSet.of(
-                this.geodeVariants.get("small"),
-                this.geodeVariants.get("medium"),
-                this.geodeVariants.get("large"),
-                this.geodeVariants.get("cluster")
+                this.geodeVariants.get(SMALL),
+                this.geodeVariants.get(MEDIUM),
+                this.geodeVariants.get(LARGE),
+                this.geodeVariants.get(CLUSTER)
         );
         return this;
     }
@@ -126,20 +135,20 @@ public final class GemstyneGeodeSet {
         Optional<Block> geode = Optional.ofNullable(this.geodeVariants.get(geodeName));
         if(geode.isPresent()) {
             return this.geodeVariants.get(geodeName);
-        } else {
-            Gemstyne.LOGGER.error("[[ ERROR: " + geodeName + " for set " + this.SET_NAME + " is null!" +
-                    " Maybe the Geode Block is improperly initialized?" +
-                    " OR the GeodeSet was called in an incompatible Method!" +
-                    " OTHERWISE the wrong getter was called!");
+        } else if(Gemstyne.LOGGER.isErrorEnabled()) {
+            Gemstyne.LOGGER.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", geodeName, this.setName,
+                    "Maybe the Geode Block is improperly initialized?",
+                    "OR the GeodeSet was called in an incompatible Method!",
+                    "OTHERWISE the wrong getter was called!"));
         }
         throw new NullPointerException();
     }
 
-    public Block clusterBud() { return safelyFetch("cluster"); }
-    public Block largeBud() { return safelyFetch("large"); }
-    public Block mediumBud() { return safelyFetch("medium"); }
-    public Block smallBud() { return safelyFetch("small"); }
-    public Block pureBlock() { return safelyFetch("block"); }
-    public Block buddingBlock() { return safelyFetch("budding"); }
+    public Block clusterBud() { return safelyFetch(CLUSTER); }
+    public Block largeBud() { return safelyFetch(LARGE); }
+    public Block mediumBud() { return safelyFetch(MEDIUM); }
+    public Block smallBud() { return safelyFetch(SMALL); }
+    public Block pureBlock() { return safelyFetch(BLOCK); }
+    public Block buddingBlock() { return safelyFetch(BUDDING); }
     public ImmutableSet<AmethystBlock> budSet() { return this.budSet; }
 }
