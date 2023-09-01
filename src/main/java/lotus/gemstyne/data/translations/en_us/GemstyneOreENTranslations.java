@@ -7,9 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
-    protected GemstyneOreENTranslations(FabricDataOutput dataOutput) {
-        super(dataOutput);
-    }
+    protected GemstyneOreENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
 
 
     protected static void generateEnglishOreTranslations(TranslationBuilder translationBuilder) {

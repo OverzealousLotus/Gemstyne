@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-31T00:17:46.112407649	Gemstyne/Model Definitions
+// 1.20.1	2023-09-01T14:29:10.345104148	Gemstyne/Model Definitions
 15ea6f901a4db0c4ce1e78e0fd24b84233c25beb assets/gemstyne/models/item/bronzemail_leggings_lapis_trim.json
 998d4cb034019df409f2eb39872b631b4589cf53 assets/gemstyne/models/item/compressed_granite_coal_ore.json
 6a540591af4ecf6cd793de2336766b1bf56cec64 assets/gemstyne/models/item/bronzeplate_boots_iron_trim.json
@@ -246,8 +246,8 @@ e78a214439304e03509fe8e91849b974cc519c5c assets/gemstyne/models/item/rendfire_ch
 de972820337fc9c4fd41a8b7206ad995bf05ad77 assets/gemstyne/models/item/bronze_sword.json
 e16b8eb64b4531a5eeb6342360676aec0b9688a6 assets/gemstyne/models/item/aldus_chestplate_lapis_trim.json
 ad2984412c171cf6be1b03585dcca4fa8721d518 assets/gemstyne/models/item/mochite_block.json
-1ee550cf280ddad6ae1f3d2a56625b1cda2c68e5 assets/gemstyne/blockstates/aldus_block.json
 ee02fcfd42595d604855ea59bdb046a22dfa7d8d assets/gemstyne/blockstates/large_ikarite_bud.json
+1ee550cf280ddad6ae1f3d2a56625b1cda2c68e5 assets/gemstyne/blockstates/aldus_block.json
 f6581c5609710a34e43909557dae86a875c17f3f assets/gemstyne/models/item/uranium_ingot.json
 27865687869f0dc5776034c93e7816012c7c3c92 assets/gemstyne/models/item/rendfire_shovel.json
 802cd5be2db1d062ebc6c5802c1020aca426ae50 assets/gemstyne/models/item/rendfire_chestplate_quartz_trim.json
@@ -341,8 +341,8 @@ b1a14136b48d99db11370ec030514fc1e3e22c32 assets/gemstyne/blockstates/medium_lapi
 7fc5f3d6e9bbdef40b3b94beb3610b7ca249fe18 assets/gemstyne/models/item/aldus_helmet_diamond_trim.json
 e4f042b8f4eb08b626c0f768bd0ee53a2f4680c4 assets/gemstyne/models/block/compressed_granite_coal_ore.json
 d5f0aeaae48fdf73016f6c05fae7f7231aecb4b6 assets/gemstyne/models/item/bronzemail_leggings_iron_trim.json
-da675f2f9d8e932375b10c6221e9167ac74b789e assets/gemstyne/models/item/aldus_helmet_amethyst_trim.json
 855daf4d3e9684cbfeadf9926b24008afec1ecd6 assets/gemstyne/models/item/aldus_helmet_copper_trim.json
+da675f2f9d8e932375b10c6221e9167ac74b789e assets/gemstyne/models/item/aldus_helmet_amethyst_trim.json
 9932b966cbfc84003f81e665d36fe4b1f0f9bdf7 assets/gemstyne/blockstates/garnet_cluster.json
 56b8d40427cb26a55bf3b76ee02ed595ac28ee09 assets/gemstyne/models/item/aldus_boots_quartz_trim.json
 d5ce951b688bf0a81d463f2a51ca202bf1257463 assets/gemstyne/models/item/rendfire_helmet_redstone_trim.json

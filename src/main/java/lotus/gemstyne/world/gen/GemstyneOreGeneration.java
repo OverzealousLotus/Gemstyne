@@ -1,5 +1,6 @@
 package lotus.gemstyne.world.gen;
 
+import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
 import lotus.gemstyne.world.geodes.GemstyneGeodePlaced;
 import lotus.gemstyne.world.minerals.GemstyneMineralPlaced;
@@ -22,9 +23,11 @@ public class GemstyneOreGeneration {
         // =====
         // <===== Overworld Ores =====>
         // =====
-        addOverworldOre(GemstyneOrePlaced.getMochiteOreLowerPlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getMochiteOreUpperPlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getMochiteOreRawPlacedKey());
+        if(Gemstyne.GEMSTYNE_CONFIG.mochiteSettings.mochiteEnabled()) {
+            addOverworldOre(GemstyneOrePlaced.getMochiteOreLowerPlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getMochiteOreUpperPlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getMochiteOreRawPlacedKey());
+        }
 
         addOverworldOre(GemstyneOrePlaced.getTinOreSmallPlacedKey());
         addOverworldOre(GemstyneOrePlaced.getTinOreLargePlacedKey());

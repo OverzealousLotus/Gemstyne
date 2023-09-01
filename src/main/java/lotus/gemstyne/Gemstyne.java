@@ -1,5 +1,7 @@
 package lotus.gemstyne;
 
+import lotus.gemstyne.config.GemstyneConfig;
+import lotus.gemstyne.config.GemstyneConfigModel;
 import lotus.gemstyne.event.UraniumBreakHandler;
 import lotus.gemstyne.util.GemstyneToolTips;
 import lotus.gemstyne.world.gen.GemstyneWorldGeneration;
@@ -15,6 +17,7 @@ public class Gemstyne implements ModInitializer {
 
 	// A simple way to log messages or events.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final GemstyneConfig GEMSTYNE_CONFIG = GemstyneConfig.createAndLoad();
 
 	/** <p>Make sure to dataGen each time new items, ores, or blocks are modified/added.</p>
 	 * <p>Everything must be done sequentially.</p>

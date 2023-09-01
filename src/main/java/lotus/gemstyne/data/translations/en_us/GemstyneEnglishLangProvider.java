@@ -16,5 +16,6 @@ public abstract class GemstyneEnglishLangProvider extends FabricLanguageProvider
         translationBuilder.add("tooltips.gemstyne.imbued_feather", "Do not fly too low, nor too high.");
         GemstyneOreENTranslations.generateEnglishOreTranslations(translationBuilder);
         GemstyneEquipmentENTranslations.generateEnglishEquipmentTranslations(translationBuilder);
+        GemstyneConfigENTranslations.generateEnglishConfigTranslations(translationBuilder);
     }
 }

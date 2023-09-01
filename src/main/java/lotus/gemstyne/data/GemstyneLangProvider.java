@@ -20,6 +20,7 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         // ======
         // <===== Items =====>
         // ======
+
         translationBuilder.add(GemstyneCraftingItems.getImbuedRod(), "Imbued Rod");
         translationBuilder.add(GemstyneGearItems.getImbuedFeather(), "Imbued Feather");
 
