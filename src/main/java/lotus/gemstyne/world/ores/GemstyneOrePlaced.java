@@ -1,5 +1,6 @@
 package lotus.gemstyne.world.ores;
 
+import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
 import lotus.gemstyne.world.GemstyneOrePlacement;
 import net.minecraft.registry.Registerable;

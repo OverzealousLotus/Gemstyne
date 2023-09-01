@@ -23,23 +23,29 @@ public class GemstyneOreGeneration {
         // =====
         // <===== Overworld Ores =====>
         // =====
-        if(Gemstyne.GEMSTYNE_CONFIG.mochiteSettings.mochiteEnabled()) {
+        if (Gemstyne.CONFIG.mochiteEnabled()) {
             addOverworldOre(GemstyneOrePlaced.getMochiteOreLowerPlacedKey());
             addOverworldOre(GemstyneOrePlaced.getMochiteOreUpperPlacedKey());
             addOverworldOre(GemstyneOrePlaced.getMochiteOreRawPlacedKey());
         }
 
-        addOverworldOre(GemstyneOrePlaced.getTinOreSmallPlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getTinOreLargePlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getTinOreRawPlacedKey());
+        if (Gemstyne.CONFIG.tinEnabled()) {
+            addOverworldOre(GemstyneOrePlaced.getTinOreSmallPlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getTinOreLargePlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getTinOreRawPlacedKey());
+        }
 
-        addOverworldOre(GemstyneOrePlaced.getUraniumOreSmallPlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getUraniumOreLargePlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getUraniumOreRawPlacedKey());
+        if(Gemstyne.CONFIG.uraniumEnabled()) {
+            addOverworldOre(GemstyneOrePlaced.getUraniumOreSmallPlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getUraniumOreLargePlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getUraniumOreRawPlacedKey());
+        }
 
-        addOverworldOre(GemstyneOrePlaced.getMorkiteOreBuriedPlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getMorkiteOreExposedPlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getMorkiteOreRawPlacedKey());
+        if(Gemstyne.CONFIG.morkiteEnabled()) {
+            addOverworldOre(GemstyneOrePlaced.getMorkiteOreBuriedPlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getMorkiteOreExposedPlacedKey());
+            addOverworldOre(GemstyneOrePlaced.getMorkiteOreRawPlacedKey());
+        }
 
         addOverworldOre(GemstyneOrePlaced.getCompressedCoalOrePlacedKey());
         addOverworldOre(GemstyneOrePlaced.getFireOpalOrePlacedKey());
@@ -62,18 +68,20 @@ public class GemstyneOreGeneration {
         // =====
         // <===== Minerals =====>
         // =====
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+        if(Gemstyne.CONFIG.mineralsEnabled()) {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstyneMineralPlaced.HALITE_PLACED_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstyneMineralPlaced.ORE_PUMICE_UPPER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstyneMineralPlaced.ORE_PUMICE_LOWER_PLACED_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstyneMineralPlaced.ORE_GABBRO_UPPER_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstyneMineralPlaced.ORE_GABBRO_LOWER_PLACED_KEY);
+        }
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstyneMineralPlaced.COMPACT_DIRT_PLACED_KEY);
