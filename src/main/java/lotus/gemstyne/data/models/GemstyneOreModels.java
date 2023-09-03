@@ -7,7 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 
 public final class GemstyneOreModels {
-
+    private GemstyneOreModels() {}
 
     public static void generateOreBlockModels(BlockStateModelGenerator blockStateModelGenerator) {
         // =====
@@ -28,6 +28,7 @@ public final class GemstyneOreModels {
                 GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
 
         GemstyneOreBlocks.MOCHITE.generateModels(blockStateModelGenerator);
+        GemstyneOreBlocks.MUTALIUM.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.TIN.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.URANIUM.generateModels(blockStateModelGenerator);
 

@@ -199,7 +199,7 @@ public class GemstyneBlockSet {
 
     /**
      * Used to finalize creation of {@link GemstyneBlockSet}. Responsible for registering blocks
-     * into Minecraft, using a {@link HashSet} storing a {@link Pair} containing a String on the left:
+     * into Minecraft, using a {@link Map} storing a {@link Pair} containing a String on the left:
      * The ID of the block; On the right: The block itself.
      * @return Returns an instance of self.
      */
@@ -231,6 +231,7 @@ public class GemstyneBlockSet {
     public Block stoneOre() { return safelyFetch(STONE); }
     public Block deepslateOre() { return safelyFetch("deepslate"); }
     public Block netherOre() { return safelyFetch("nether"); }
+    public Block endOre() { return safelyFetch("end"); }
     public Block rawBlock() { return safelyFetch("raw"); }
     public Block pureBlock() { return safelyFetch("pure"); }
 }

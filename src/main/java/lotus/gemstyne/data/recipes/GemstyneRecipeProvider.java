@@ -11,6 +11,7 @@ import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
@@ -79,6 +80,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.BRONZE);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.CRIMONITE);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.URANIUM);
+        offerReversibleNuggetRecipe(exporter, GemstyneOreItems.TIN);
 
         offerBasicIngotRecipe(exporter, GemstyneOreItems.URANIUM.chunk(),
            GemstyneOreItems.URANIUM.ingot(), "uranium_chunk_to_ingot");
@@ -100,9 +102,9 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .pattern("N N")
                 .pattern(" N ")
                 .input('N', GemstyneOreItems.BRONZE.nugget())
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.BRONZE.nugget()),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.BRONZE.nugget()))
-                .offerTo(exporter, GemstyneRegistry.id(FabricRecipeProvider.getRecipeName(GemstyneOreItems.BRONZE.chain())));
+                .criterion(RecipeProvider.hasItem(GemstyneOreItems.BRONZE.nugget()),
+                        RecipeProvider.conditionsFromItem(GemstyneOreItems.BRONZE.nugget()))
+                .offerTo(exporter, GemstyneRegistry.id(RecipeProvider.getRecipeName(GemstyneOreItems.BRONZE.chain())));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GemstyneCraftingItems.getImbuedRod())
                 .pattern(" Q ")
@@ -110,11 +112,11 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .pattern(" Q ")
                 .input('Q', Items.QUARTZ)
                 .input('B', Items.BLAZE_ROD)
-                .criterion(FabricRecipeProvider.hasItem(Items.QUARTZ),
-                        FabricRecipeProvider.conditionsFromItem(Items.QUARTZ))
-                .criterion(FabricRecipeProvider.hasItem(Items.BLAZE_ROD),
-                        FabricRecipeProvider.conditionsFromItem(Items.BLAZE_ROD))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneCraftingItems.getImbuedRod())));
+                .criterion(RecipeProvider.hasItem(Items.QUARTZ),
+                        RecipeProvider.conditionsFromItem(Items.QUARTZ))
+                .criterion(RecipeProvider.hasItem(Items.BLAZE_ROD),
+                        RecipeProvider.conditionsFromItem(Items.BLAZE_ROD))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(GemstyneCraftingItems.getImbuedRod())));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GemstyneGearItems.getImbuedFeather())
                 .pattern(" O ")
@@ -122,11 +124,11 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .pattern("IO ")
                 .input('O', GemstyneOreItems.IKARITE)
                 .input('I', GemstyneCraftingItems.getImbuedRod())
-                .criterion(FabricRecipeProvider.hasItem(GemstyneCraftingItems.getImbuedRod()),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneCraftingItems.getImbuedRod()))
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.IKARITE),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.IKARITE))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GemstyneGearItems.getImbuedFeather())));
+                .criterion(RecipeProvider.hasItem(GemstyneCraftingItems.getImbuedRod()),
+                        RecipeProvider.conditionsFromItem(GemstyneCraftingItems.getImbuedRod()))
+                .criterion(RecipeProvider.hasItem(GemstyneOreItems.IKARITE),
+                        RecipeProvider.conditionsFromItem(GemstyneOreItems.IKARITE))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(GemstyneGearItems.getImbuedFeather())));
 
         GemstyneArmorRecipes.generateArmorRecipes(exporter);
         GemstyneToolRecipes.generateToolRecipes(exporter);
@@ -169,21 +171,21 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .pattern("CC")
                 .pattern("CC")
                 .input('C', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
                 .offerTo(exporter, new Identifier(name));
     }
 
     private static void offerAlloyIngotRecipe(
-            Consumer<RecipeJsonProvider> exporter, Item ingot_one, Item ingot_two, Item output, String name) {
+            Consumer<RecipeJsonProvider> exporter, Item ingotOne, Item ingotTwo, Item output, String name) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .pattern("AB")
-                .input('A', ingot_one)
-                .input('B', ingot_two)
-                .criterion(FabricRecipeProvider.hasItem(ingot_one),
-                        FabricRecipeProvider.conditionsFromItem(ingot_one))
-                .criterion(FabricRecipeProvider.hasItem(ingot_two),
-                        FabricRecipeProvider.conditionsFromItem(ingot_two))
+                .input('A', ingotOne)
+                .input('B', ingotTwo)
+                .criterion(RecipeProvider.hasItem(ingotOne),
+                        RecipeProvider.conditionsFromItem(ingotOne))
+                .criterion(RecipeProvider.hasItem(ingotTwo),
+                        RecipeProvider.conditionsFromItem(ingotTwo))
                 .offerTo(exporter, new Identifier(name));
     }
 
@@ -194,13 +196,13 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
     private static void offerReversibleNuggetRecipe(Consumer<RecipeJsonProvider> exporter, GemstyneItemSet set) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, set.nugget(), 9)
                 .input(set.ingot())
-                .criterion(FabricRecipeProvider.hasItem(set.ingot()),
-                        FabricRecipeProvider.conditionsFromItem(set.ingot()))
+                .criterion(RecipeProvider.hasItem(set.ingot()),
+                        RecipeProvider.conditionsFromItem(set.ingot()))
                 .offerTo(exporter, new Identifier(set.setName() + "ingot_to_nugget"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, set.ingot())
                 .input(set.nugget(), 9)
-                .criterion(FabricRecipeProvider.hasItem(set.nugget()),
-                        FabricRecipeProvider.conditionsFromItem(set.nugget()))
+                .criterion(RecipeProvider.hasItem(set.nugget()),
+                        RecipeProvider.conditionsFromItem(set.nugget()))
                 .offerTo(exporter, new Identifier(set.setName() + "nugget_to_ingot"));
     }
 }

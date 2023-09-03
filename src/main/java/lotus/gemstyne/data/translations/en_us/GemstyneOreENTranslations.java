@@ -28,6 +28,7 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         translationBuilder.add(GemstyneOreItems.MOCHITE.crystal(), "Mochite");
 
+        translationBuilder.add(GemstyneOreItems.TIN.nugget(), "Tin Nugget");
         translationBuilder.add(GemstyneOreItems.TIN.ingot(), "Tin Ingot");
 
         translationBuilder.add(GemstyneOreItems.BRONZE.ingot(), "Bronze Ingot");
@@ -57,6 +58,11 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreBlocks.MOCHITE.stoneOre(), "Mochite Ore");
         translationBuilder.add(GemstyneOreBlocks.MOCHITE.deepslateOre(), "Deepslate Mochite Ore");
         translationBuilder.add(GemstyneOreBlocks.MOCHITE.rawBlock(), "Raw Mochite Block");
+
+        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.stoneOre(), "Mutalium Ore");
+        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.deepslateOre(), "Deepslate Mutalium Ore");
+        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.netherOre(), "Nether Mutalium Ore");
+        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.endOre(), "End Mutalium Ore");
 
         translationBuilder.add(GemstyneOreBlocks.TIN.stoneOre(), "Tin Ore");
         translationBuilder.add(GemstyneOreBlocks.TIN.deepslateOre(), "Deepslate Tin Ore");

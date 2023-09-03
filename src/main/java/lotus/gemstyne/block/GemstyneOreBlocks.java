@@ -32,6 +32,14 @@ public final class GemstyneOreBlocks {
         .setExperience(UniformIntProvider.create(2, 7))
         .createDefaultBlockSet(3.0f);
 
+    public static final GemstyneBlockSet MUTALIUM = new GemstyneBlockSet("mutalium")
+        .setExperience(UniformIntProvider.create(10, 20))
+        .createOre()
+        .createOreType("deepslate", BlockSoundGroup.DEEPSLATE)
+        .createOreType("nether", BlockSoundGroup.NETHER_ORE)
+        .createOreType("end", BlockSoundGroup.ANCIENT_DEBRIS)
+        .create();
+
     /*public static final Block NEFARIUM_ORE = GemstyneBlockHandler.assignAndRegisterBlock("nefarium_ore",
             new VolatileOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(5, 10))
     );*/
