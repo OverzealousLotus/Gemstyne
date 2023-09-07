@@ -52,7 +52,7 @@ public final class GemstyneGeodeConfig {
 
     public static void createGeodeConfig(
         Registerable<ConfiguredFeature<?, ?>> context, RegistryKey<ConfiguredFeature<?, ?>> key, Block centerLayer, Block innerLayer, Block buddingBlock,
-        Block middleLayer, Block outerLayer, ImmutableSet<AmethystBlock> buds, GeodeLayerThicknessConfig thicknessConfig,
+        Block middleLayer, Block outerLayer, ImmutableSet<Block> buds, GeodeLayerThicknessConfig thicknessConfig,
         GeodeCrackConfig crackConfig, double placementChance, Pair<Double, Boolean> buddingChance,
         UniformIntProvider outerLayerDistance, UniformIntProvider distributionPoints, UniformIntProvider pointOffset,
         int maxDistributionPoints, int minPointOffset, double noiseMultiplier, int maxGenOffset) {

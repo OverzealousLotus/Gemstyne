@@ -29,6 +29,8 @@ public final class GemstyneOreItems {
             .createDefaultItemSet(true).createItemVariant("chain").create();
     public static final GemstyneItemSet CRIMONITE = new GemstyneItemSet("crimonite")
             .createDefaultItemSet(false).createItemVariant("chunk").create();
+    public static final GemstyneItemSet MUTALIUM = new GemstyneItemSet("mutalium").createDefaultItemSet(false).create();
+    public static final GemstyneItemSet TORRIUM = new GemstyneItemSet("torrium").createDefaultItemSet(false).create();
     public static final GemstyneItemSet TIN = new GemstyneItemSet("tin").createDefaultItemSet(false).create();
     public static final GemstyneItemSet URANIUM = new GemstyneItemSet("uranium")
             .createDefaultItemSet(false).createItemVariant("chunk").create();

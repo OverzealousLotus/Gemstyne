@@ -37,6 +37,15 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.stoneOre(), GemstyneOreItems.MOCHITE.raw());
         gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.deepslateOre(), GemstyneOreItems.MOCHITE.raw());
 
+        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.stoneOre(), GemstyneOreItems.MUTALIUM.raw());
+        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.deepslateOre(), GemstyneOreItems.MUTALIUM.raw());
+        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.netherOre(), GemstyneOreItems.MUTALIUM.raw());
+        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.endOre(), GemstyneOreItems.MUTALIUM.raw());
+
+        gemstyneOreDrops(GemstyneOreBlocks.TORRIUM.stoneOre(), GemstyneOreItems.TORRIUM.raw());
+        gemstyneOreDrops(GemstyneOreBlocks.TORRIUM.deepslateOre(), GemstyneOreItems.TORRIUM.raw());
+        gemstyneOreDrops(GemstyneOreBlocks.TORRIUM.netherOre(), GemstyneOreItems.TORRIUM.raw());
+
         gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.MORKITE);
 
         gemstyneRichOreDrops(GemstyneOreBlocks.TIN.stoneOre(),

@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 
 public final class GemstyneGeodeSet {
     @NotNull private final Map<String, AmethystBlock> geodeVariants = new LinkedHashMap<>();
-    private ImmutableSet<AmethystBlock> budSet;
+    private ImmutableSet<Block> budSet;
 
     private static final String CLUSTER = "cluster";
     private static final String LARGE = "large";
@@ -150,5 +150,12 @@ public final class GemstyneGeodeSet {
     public Block smallBud() { return safelyFetch(SMALL); }
     public Block pureBlock() { return safelyFetch(BLOCK); }
     public Block buddingBlock() { return safelyFetch(BUDDING); }
-    public ImmutableSet<AmethystBlock> budSet() { return this.budSet; }
+    /**
+     * @return Returns an {@link ImmutableSet} of geode buds from {@link GemstyneGeodeSet}
+     */
+    public ImmutableSet<Block> budSet() { return this.budSet; }
+    /**
+     * @return Returns an {@link ImmutableSet} of all geode blocks from {@link GemstyneGeodeSet}
+     */
+    public ImmutableSet<Block> geodeSet() { return ImmutableSet.copyOf(this.geodeVariants.values()); }
 }

@@ -28,14 +28,9 @@ public class BuddingCrystallineBlock extends CrystallineBlock {
         this.buds = buds;
     }
 
-
-    /**
-     * @deprecated Minecraft loves using this annotation unnecessarily! :3
-     */
     @Override
-    @Deprecated
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(5) != 0) {
+        if (random.nextInt(GROW_CHANCE) != 0) {
             return;
         }
         Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];

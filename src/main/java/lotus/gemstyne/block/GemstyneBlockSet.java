@@ -4,6 +4,7 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.AfflictiveBlock;
 import lotus.gemstyne.block.custom.AfflictiveOre;
 import lotus.gemstyne.util.GemstyneBlockTypes;
+import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -16,14 +17,12 @@ import net.minecraft.util.Pair;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class GemstyneBlockSet {
     @NotNull private final Map<String, Pair<String, Block>> blockVariants = new LinkedHashMap<>();
+    private final Set<Block> blockSet = new LinkedHashSet<>();
 
-    private static final String STONE = "stone";
     private static final String BLOCK = "_block";
 
     private StatusEffect effect;
@@ -98,7 +97,7 @@ public class GemstyneBlockSet {
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre() {
-        this.blockVariants.put(STONE, new Pair<>(this.setName + "_ore", new ExperienceDroppingBlock(this.currentSettings)));
+        this.blockVariants.put(GemstyneConstants.STONE, new Pair<>(this.setName + "_ore", new ExperienceDroppingBlock(this.currentSettings, this.experience)));
         return this;
     }
 
@@ -108,7 +107,7 @@ public class GemstyneBlockSet {
      * @return Returns instance of self.
      */
     public GemstyneBlockSet createOre(ExperienceDroppingBlock block) {
-        this.blockVariants.put(STONE, new Pair<>(this.setName + "_ore", block));
+        this.blockVariants.put(GemstyneConstants.STONE, new Pair<>(this.setName + "_ore", block));
         return this;
     }
 
@@ -177,7 +176,7 @@ public class GemstyneBlockSet {
     public GemstyneBlockSet createDefaultBlockSet(float strength) {
         this.modifyStrength(strength).createOre()
                 .modifyStrength(strength + 1.5f)
-                .createOreType("deepslate", BlockSoundGroup.DEEPSLATE)
+                .createOreType(GemstyneConstants.DEEPSLATE, BlockSoundGroup.DEEPSLATE)
                 .createRawBlock()
                 .modifyStrength(strength + 2.5f)
                 .createPureBlock()
@@ -205,6 +204,7 @@ public class GemstyneBlockSet {
      */
     public GemstyneBlockSet create() {
         this.blockVariants.values().forEach(blockIdPair -> GemstyneRegistry.registerBlock(blockIdPair.getLeft(), blockIdPair.getRight()));
+        this.blockVariants.values().forEach(blockIdPair -> this.blockSet.add(blockIdPair.getRight()));
         return this;
     }
 
@@ -228,10 +228,13 @@ public class GemstyneBlockSet {
         throw new NullPointerException();
     }
 
-    public Block stoneOre() { return safelyFetch(STONE); }
-    public Block deepslateOre() { return safelyFetch("deepslate"); }
-    public Block netherOre() { return safelyFetch("nether"); }
+    public Block stoneOre() { return safelyFetch(GemstyneConstants.STONE); }
+    public Block deepslateOre() { return safelyFetch(GemstyneConstants.DEEPSLATE); }
+    public Block netherOre() { return safelyFetch(GemstyneConstants.NETHER); }
     public Block endOre() { return safelyFetch("end"); }
     public Block rawBlock() { return safelyFetch("raw"); }
     public Block pureBlock() { return safelyFetch("pure"); }
+    public Set<Block> getBlockSet() {
+        return blockSet;
+    }
 }

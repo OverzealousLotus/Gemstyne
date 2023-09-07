@@ -42,7 +42,6 @@ public class VolatileOre extends ExperienceDroppingBlock {
             if (tool.hasEnchantments()) {
                 chance -= (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) * 12);
             }
-
             // Limit explosion chance to 80%
             chance = MathHelper.clamp(chance, 0, 80);
 
@@ -69,9 +68,9 @@ public class VolatileOre extends ExperienceDroppingBlock {
      */
     private static void goCritical(World world, BlockPos pos) {
         if (world.getDimension().ultrawarm()) {
-            world.createExplosion(null, pos.getX(), pos.getY() + 0.6, pos.getZ(), 3.0f, World.ExplosionSourceType.BLOCK);
+            world.createExplosion(null, pos.getX(), pos.getY() + 0.6, pos.getZ(), 3.0f, World.ExplosionSourceType.TNT);
         } else {
-            world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 0.3f, World.ExplosionSourceType.BLOCK);
+            world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 0.3f, World.ExplosionSourceType.TNT);
         }
     }
 }

@@ -24,20 +24,11 @@
                   }
                 }
               ],
-              "name": "gemstyne:tin_ore"
+              "name": "gemstyne:torrium_ore"
             },
             {
               "type": "minecraft:item",
               "functions": [
-                {
-                  "add": false,
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "max": 3.0,
-                    "min": 1.0
-                  },
-                  "function": "minecraft:set_count"
-                },
                 {
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:ore_drops",
@@ -47,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "gemstyne:raw_tin"
+              "name": "gemstyne:raw_torrium"
             }
           ]
         }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bronze_nugget": {
+    "has_copper_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstyne:bronze_nugget"
+              "minecraft:copper_ingot"
             ]
           }
         ]
@@ -18,11 +18,24 @@
         "recipe": "minecraft:bronze_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tin_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gemstyne:tin_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_bronze_nugget",
+      "has_copper_ingot",
+      "has_tin_ingot",
       "has_the_recipe"
     ]
   ],

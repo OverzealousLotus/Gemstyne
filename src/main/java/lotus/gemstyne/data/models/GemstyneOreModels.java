@@ -59,7 +59,9 @@ public final class GemstyneOreModels {
         // =====
         // <===== Raw Ores =====>
         // =====
+        GemstyneOreItems.MUTALIUM.generateModels(itemModelGenerator);
         GemstyneOreItems.MOCHITE.generateModels(itemModelGenerator);
+        GemstyneOreItems.TORRIUM.generateModels(itemModelGenerator);
         GemstyneOreItems.TIN.generateModels(itemModelGenerator);
         GemstyneOreItems.URANIUM.generateModels(itemModelGenerator);
         GemstyneOreItems.CRIMONITE.generateModels(itemModelGenerator);

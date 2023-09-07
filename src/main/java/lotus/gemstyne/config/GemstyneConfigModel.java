@@ -6,7 +6,7 @@ import lotus.gemstyne.Gemstyne;
 @Modmenu(modId = Gemstyne.MOD_ID)
 @Config(name = Gemstyne.MOD_ID + "_config", wrapperName = "GemstyneConfig")
 public class GemstyneConfigModel {
-    @SectionHeader("oreConfiguration")
+    @SectionHeader("ore_configuration")
     @RestartRequired
     public boolean mochiteEnabled = true;
     @RestartRequired
@@ -17,4 +17,12 @@ public class GemstyneConfigModel {
     public boolean uraniumEnabled = true;
     @RestartRequired
     public boolean mineralsEnabled = true;
+
+    @SectionHeader("geode_configuration")
+    @RestartRequired
+    public boolean ikariteEnabled = true;
+    @RestartRequired
+    public boolean garnetEnabled = true;
+    @RestartRequired
+    public boolean lapisEnabled = true;
 }

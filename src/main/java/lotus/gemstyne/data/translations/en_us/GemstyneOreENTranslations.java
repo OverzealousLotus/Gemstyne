@@ -14,7 +14,9 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Raw Ores =====>
         // ======
+        translationBuilder.add(GemstyneOreItems.MUTALIUM.raw(), "Raw Mutalium");
         translationBuilder.add(GemstyneOreItems.MOCHITE.raw(), "Raw Mochite");
+        translationBuilder.add(GemstyneOreItems.TORRIUM.raw(), "Raw Torrium");
         translationBuilder.add(GemstyneOreItems.TIN.raw(), "Raw Tin");
         translationBuilder.add(GemstyneOreItems.URANIUM.raw(), "Raw Uranium");
         translationBuilder.add(GemstyneOreItems.CRIMONITE.raw(), "Raw Crimonite");
@@ -27,6 +29,12 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // <===== Refined Ores =====>
         // ======
         translationBuilder.add(GemstyneOreItems.MOCHITE.crystal(), "Mochite");
+
+        translationBuilder.add(GemstyneOreItems.MUTALIUM.ingot(), "Mutalium Ingot");
+        translationBuilder.add(GemstyneOreItems.MUTALIUM.nugget(), "Mutalium Nugget");
+
+        translationBuilder.add(GemstyneOreItems.TORRIUM.nugget(), "Torrium Nugget");
+        translationBuilder.add(GemstyneOreItems.TORRIUM.ingot(), "Torrium Ingot");
 
         translationBuilder.add(GemstyneOreItems.TIN.nugget(), "Tin Nugget");
         translationBuilder.add(GemstyneOreItems.TIN.ingot(), "Tin Ingot");
