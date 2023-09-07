@@ -1,5 +1,6 @@
 package lotus.gemstyne.block.custom;
 
+import com.google.common.collect.ImmutableList;
 import io.wispforest.owo.particles.ClientParticles;
 import lotus.gemstyne.util.GemstyneColorUtil;
 import net.fabricmc.api.EnvType;
@@ -15,10 +16,12 @@ import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-import java.util.List;
-import java.util.Set;
-
 public class MutaliumOre extends VolatileOre {
+    private static final ImmutableList<StatusEffect> effectList = ImmutableList.of(
+        StatusEffects.RESISTANCE, StatusEffects.REGENERATION, StatusEffects.SATURATION,
+        StatusEffects.MINING_FATIGUE, StatusEffects.POISON, StatusEffects.HUNGER
+    );
+
     public MutaliumOre(Settings settings, IntProvider experience) {
         super(settings, experience);
     }
@@ -34,18 +37,18 @@ public class MutaliumOre extends VolatileOre {
             ClientParticles.setParticleCount(random.nextBetweenExclusive(1, 5));
             ClientParticles.spawnCenteredOnBlock(new DustParticleEffect(GemstyneColorUtil.Colors.MUTALIUM_PALLETE.get(random.nextInt(3)), 0.8F), world, pos, 1.3D);
         }
+
+        super.randomDisplayTick(state, world, pos, random);
     }
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if(!world.isClient()) {
+        if(!world.isClient() && !player.isCreative()) {
             Random random = Random.create();
-            List<StatusEffect> effectList = List.of(StatusEffects.RESISTANCE, StatusEffects.MINING_FATIGUE, StatusEffects.JUMP_BOOST);
 
-            if(!player.isCreative()) {
-                player.addStatusEffect(new StatusEffectInstance(effectList.get(random.nextInt(3)), random.nextBetweenExclusive(30, 120)));
-            }
+            player.addStatusEffect(new StatusEffectInstance(effectList.get(random.nextInt(3)), random.nextBetweenExclusive(30, 120)));
         }
+
         super.onBreak(world, pos, state, player);
     }
 }
