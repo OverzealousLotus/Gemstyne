@@ -31,7 +31,7 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
 
     public CrystallineBlockBud(int height, int xzOffset, AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState((this.getDefaultState().with(WATERLOGGED, false)).with(FACING, Direction.UP));
+        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.UP));
         this.upShape = Block.createCuboidShape(xzOffset, 0.0, xzOffset, 16D - xzOffset, height, 16D - xzOffset);
         this.downShape = Block.createCuboidShape(xzOffset, 16D - height, xzOffset, 16D - xzOffset, 16.0, 16D - xzOffset);
         this.northShape = Block.createCuboidShape(xzOffset, xzOffset, 16D - height, 16D - xzOffset, 16D - xzOffset, 16.0);
@@ -44,22 +44,12 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction direction = state.get(FACING);
         switch (direction) {
-            case NORTH: {
-                return this.northShape;
-            }
-            case SOUTH: {
-                return this.southShape;
-            }
-            case EAST: {
-                return this.eastShape;
-            }
-            case WEST: {
-                return this.westShape;
-            }
-            case DOWN: {
-                return this.downShape;
-            }
-            default: return this.upShape;
+            case NORTH -> { return this.northShape; }
+            case SOUTH -> { return this.southShape; }
+            case EAST -> { return this.eastShape; }
+            case WEST -> { return this.westShape; }
+            case DOWN -> { return this.downShape; }
+            default -> { return this.upShape; }
         }
     }
 
@@ -72,13 +62,13 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (state.get(WATERLOGGED).booleanValue()) {
+        if (Boolean.TRUE.equals(state.get(WATERLOGGED))) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
         if (direction == state.get(FACING).getOpposite() && !state.canPlaceAt(world, pos)) {
             return Blocks.AIR.getDefaultState();
         }
-        return state;
+        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
     @Override
@@ -86,7 +76,7 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         World worldAccess = ctx.getWorld();
         BlockPos blockPos = ctx.getBlockPos();
-        return (this.getDefaultState().with(WATERLOGGED, worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER)).with(FACING, ctx.getSide());
+        return this.getDefaultState().with(WATERLOGGED, worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER).with(FACING, ctx.getSide());
     }
 
     @Override
@@ -101,10 +91,10 @@ public class CrystallineBlockBud extends CrystallineBlock implements Waterloggab
 
     @Override
     public FluidState getFluidState(BlockState state) {
-        if (state.get(WATERLOGGED).booleanValue()) {
+        if (Boolean.TRUE.equals(state.get(WATERLOGGED))) {
             return Fluids.WATER.getStill(false);
         }
-        return Fluids.EMPTY.getDefaultState();
+        return super.getFluidState(state);
     }
 
     @Override
