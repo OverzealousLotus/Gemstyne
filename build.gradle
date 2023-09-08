@@ -74,8 +74,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// owo-lib
-	modImplementation "io.wispforest:owo-lib:${project.owo_version}"
-	annotationProcessor "io.wispforest:owo-lib:${project.owo_version}"
+	modImplementation(annotationProcessor("io.wispforest:owo-lib:${project.owo_version}"))
+	include "io.wispforest:owo-sentinel:${project.owo_version}"
 
 	// Additional Entity Attributes
 	modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")

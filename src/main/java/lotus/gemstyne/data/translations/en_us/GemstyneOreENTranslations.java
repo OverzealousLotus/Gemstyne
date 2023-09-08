@@ -40,7 +40,7 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreItems.TIN.ingot(), "Tin Ingot");
 
         translationBuilder.add(GemstyneOreItems.BRONZE.ingot(), "Bronze Ingot");
-        translationBuilder.add(GemstyneOreItems.BRONZE.chain(), "Bronze Ring");
+        translationBuilder.add(GemstyneOreItems.BRONZE.chain(), "Bronze Chain");
         translationBuilder.add(GemstyneOreItems.BRONZE.nugget(), "Bronze Nugget");
 
         translationBuilder.add(GemstyneOreItems.URANIUM.nugget(), "Uranium Nugget");
