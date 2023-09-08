@@ -36,8 +36,8 @@ public class GemstyneOreGeneration {
             addOverworldOre(GemstyneOrePlaced.getTinOreRawPlacedKey());
         }
 
-        addOverworldOre(GemstyneWorldHandler.TORRIUM.getPlacedKey("small"));
-        addOverworldOre(GemstyneWorldHandler.TORRIUM.getPlacedKey("large"));
+        addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey("small"));
+        addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey("large"));
 
         if(Gemstyne.CONFIG.uraniumEnabled()) {
             addOverworldOre(GemstyneOrePlaced.getUraniumOreSmallPlacedKey());
