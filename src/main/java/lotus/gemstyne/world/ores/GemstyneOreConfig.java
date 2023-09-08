@@ -1,6 +1,7 @@
 package lotus.gemstyne.world.ores;
 
 import lotus.gemstyne.world.GemstyneConfiguredFeatures;
+import lotus.gemstyne.world.GemstyneWorldHandler;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -26,6 +27,11 @@ public class GemstyneOreConfig {
             GemstyneConfiguredFeatures.registerKey("ore_tin_large");
     private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_TIN_RAW_KEY =
             GemstyneConfiguredFeatures.registerKey("ore_tin_raw");
+
+    /*protected static final RegistryKey<ConfiguredFeature<?, ?>> ORE_TORRIUM_SMALL_KEY =
+        GemstyneConfiguredFeatures.registerKey("ore_torrium_small");
+    protected static final RegistryKey<ConfiguredFeature<?, ?>> ORE_TORRIUM_LARGE_KEY =
+        GemstyneConfiguredFeatures.registerKey("ore_torrium_large");*/
 
     private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_URANIUM_SMALL_KEY =
             GemstyneConfiguredFeatures.registerKey("ore_uranium_small");
@@ -87,6 +93,13 @@ public class GemstyneOreConfig {
         GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreTinRawKey(), Feature.ORE,
                 new OreFeatureConfig(GemstyneOreLists.getRawTinBlobs(), 5, 0.05f));
 
+        /*GemstyneConfiguredFeatures.register(context, ORE_TORRIUM_SMALL_KEY, Feature.ORE,
+            new OreFeatureConfig(GemstyneOreLists.overworldTorriumOres, 5, 0.2f)); // Vein size.
+        GemstyneConfiguredFeatures.register(context, ORE_TORRIUM_LARGE_KEY, Feature.ORE,
+            new OreFeatureConfig(GemstyneOreLists.overworldTorriumOres, 9, 0.5f));*/
+        GemstyneWorldHandler.TORRIUM.registerConfigFeatures(context, "small", 5, 0.2f);
+        GemstyneWorldHandler.TORRIUM.registerConfigFeatures(context, "large", 9, 0.5f);
+
         GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMorkiteExposedKey(), Feature.ORE,
                 new OreFeatureConfig(GemstyneOreLists.getOverworldMorkiteOres(), 7, 0.0f));
         GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMorkiteBuriedKey(), Feature.ORE,
@@ -121,7 +134,6 @@ public class GemstyneOreConfig {
         GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getCompressedCoalOreKey(), Feature.ORE,
                 new OreFeatureConfig(GemstyneOreLists.getCompressedCoalOres(), 10));
     }
-
 
     // =====
     // <===== Getters =====>

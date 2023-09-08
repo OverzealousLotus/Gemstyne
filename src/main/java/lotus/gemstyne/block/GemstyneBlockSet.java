@@ -234,6 +234,7 @@ public class GemstyneBlockSet {
     public Block endOre() { return safelyFetch("end"); }
     public Block rawBlock() { return safelyFetch("raw"); }
     public Block pureBlock() { return safelyFetch("pure"); }
+    public String getSetName() { return this.setName; }
     public Set<Block> getBlockSet() {
         return blockSet;
     }

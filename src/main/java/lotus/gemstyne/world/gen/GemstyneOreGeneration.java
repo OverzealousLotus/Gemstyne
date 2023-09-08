@@ -2,6 +2,7 @@ package lotus.gemstyne.world.gen;
 
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
+import lotus.gemstyne.world.GemstyneWorldHandler;
 import lotus.gemstyne.world.geodes.GemstyneGeodePlaced;
 import lotus.gemstyne.world.minerals.GemstyneMineralPlaced;
 import lotus.gemstyne.world.ores.GemstyneOrePlaced;
@@ -34,6 +35,9 @@ public class GemstyneOreGeneration {
             addOverworldOre(GemstyneOrePlaced.getTinOreLargePlacedKey());
             addOverworldOre(GemstyneOrePlaced.getTinOreRawPlacedKey());
         }
+
+        addOverworldOre(GemstyneWorldHandler.TORRIUM.getPlacedKey("small"));
+        addOverworldOre(GemstyneWorldHandler.TORRIUM.getPlacedKey("large"));
 
         if(Gemstyne.CONFIG.uraniumEnabled()) {
             addOverworldOre(GemstyneOrePlaced.getUraniumOreSmallPlacedKey());

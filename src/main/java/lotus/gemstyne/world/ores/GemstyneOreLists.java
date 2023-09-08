@@ -54,6 +54,13 @@ public class GemstyneOreLists {
             OreFeatureConfig.createTarget(getDeepslateReplaceables(),
                     GemstyneOreBlocks.TIN.deepslateOre().getDefaultState()));
 
+    protected static final ImmutableList<OreFeatureConfig.Target> overworldTorriumOres = ImmutableList.of(
+        OreFeatureConfig.createTarget(getStoneReplaceables(),
+            GemstyneOreBlocks.TORRIUM.stoneOre().getDefaultState()),
+        OreFeatureConfig.createTarget(getDeepslateReplaceables(),
+            GemstyneOreBlocks.TORRIUM.deepslateOre().getDefaultState())
+    );
+
     private static final ImmutableList<OreFeatureConfig.Target> overworldUraniumOres = ImmutableList.of(
             OreFeatureConfig.createTarget(getDeepslateReplaceables(),
                     GemstyneOreBlocks.URANIUM.deepslateOre().getDefaultState()));

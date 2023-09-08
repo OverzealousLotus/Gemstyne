@@ -1,8 +1,8 @@
 package lotus.gemstyne.world.ores;
 
-import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
 import lotus.gemstyne.world.GemstyneOrePlacement;
+import lotus.gemstyne.world.GemstyneWorldHandler;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.gen.YOffset;
@@ -10,6 +10,8 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 public final class GemstyneOrePlaced {
+    private GemstyneOrePlaced() {}
+
     // =====
     // <===== Overworld Placed Keys =====>
     // =====
@@ -36,6 +38,11 @@ public final class GemstyneOrePlaced {
             GemstynePlacedFeatures.registerKey("ore_tin_large");
     private static final RegistryKey<PlacedFeature> TIN_ORE_RAW_PLACED_KEY =
             GemstynePlacedFeatures.registerKey("ore_tin_raw");
+
+    /*public static final RegistryKey<PlacedFeature> TORRIUM_ORE_UPPER_PLACED_KEY =
+        GemstynePlacedFeatures.registerKey("ore_torrium_upper");
+    public static final RegistryKey<PlacedFeature> TORRIUM_ORE_LOWER_PLACED_KEY =
+        GemstynePlacedFeatures.registerKey("ore_torrium_lower");*/
 
     private static final RegistryKey<PlacedFeature> URANIUM_ORE_SMALL_PLACED_KEY =
             GemstynePlacedFeatures.registerKey("ore_uranium_small");
@@ -121,6 +128,12 @@ public final class GemstyneOrePlaced {
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneOreConfig.getOreTinRawKey()),
                 GemstyneOrePlacement.modifiersWithRarity(5,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(112))));
+
+
+        GemstyneWorldHandler.TORRIUM.registerPlacedFeatures(context, "small", 5,
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(100)));
+        GemstyneWorldHandler.TORRIUM.registerPlacedFeatures(context, "large", 3,
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
 
 
         GemstynePlacedFeatures.register(context, GemstyneOrePlaced.getUraniumOreSmallPlacedKey(),
