@@ -1,6 +1,5 @@
 package lotus.gemstyne.block;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.BuddingCrystallineBlock;
@@ -17,11 +16,13 @@ import net.minecraft.sound.BlockSoundGroup;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
+import net.minecraft.util.Pair;
 import org.jetbrains.annotations.NotNull;
 
 public final class GemstyneGeodeSet {
-    @NotNull private final Map<String, AmethystBlock> geodeVariants = new LinkedHashMap<>();
+    @NotNull private final Map<String, Pair<String, AmethystBlock>> geodeVariants = new LinkedHashMap<>();
     private ImmutableSet<Block> budSet;
 
     private static final String CLUSTER = "cluster";
@@ -56,31 +57,22 @@ public final class GemstyneGeodeSet {
     }
 
     public GemstyneGeodeSet createGeodeType(String size, int height, int offset) {
-        this.geodeVariants.put(size, new CrystallineBlockBud(height, offset, this.currentSettings));
-        GemstyneRegistry.registerBlock(size + "_" + this.setName + "_bud", safelyFetch(size));
+        this.geodeVariants.put(size, new Pair<>(size + "_" + this.setName + "_bud", new CrystallineBlockBud(height, offset, this.currentSettings)));
         return this;
     }
 
     public GemstyneGeodeSet createCluster(int height, int offset) {
-        this.geodeVariants.put(CLUSTER, new CrystallineBlockBud(height, offset, this.currentSettings));
-        GemstyneRegistry.registerBlock(this.setName + "_cluster", safelyFetch(CLUSTER));
+        this.geodeVariants.put(CLUSTER, new Pair<>(this.setName + "_cluster", new CrystallineBlockBud(height, offset, this.currentSettings)));
         return this;
     }
 
     public GemstyneGeodeSet createBudding() {
-        this.geodeVariants.put(BUDDING, new BuddingCrystallineBlock(this.currentSettings, ImmutableList.of(
-                safelyFetch(SMALL),
-                safelyFetch(MEDIUM),
-                safelyFetch(LARGE),
-                safelyFetch(CLUSTER)
-        )));
-        GemstyneRegistry.registerBlock("budding_" + this.setName, safelyFetch(BUDDING));
+        this.geodeVariants.put(BUDDING, new Pair<>("budding_"+ this.setName, new BuddingCrystallineBlock(this.currentSettings, this)));
         return this;
     }
 
     public void createBlock() {
-        this.geodeVariants.put(BLOCK, new AmethystBlock(this.currentSettings));
-        GemstyneRegistry.registerBlock(this.setName + "_block", safelyFetch(BLOCK));
+        this.geodeVariants.put(BLOCK, new Pair<>(this.setName + "_block", new AmethystBlock(this.currentSettings)));
     }
 
     /**
@@ -122,19 +114,20 @@ public final class GemstyneGeodeSet {
      * @return Returns an instance of self.
      */
     public GemstyneGeodeSet create() {
+        this.geodeVariants.values().forEach(geodePair -> GemstyneRegistry.registerBlock(geodePair.getLeft(), geodePair.getRight()));
         this.budSet = ImmutableSet.of(
-                this.geodeVariants.get(SMALL),
-                this.geodeVariants.get(MEDIUM),
-                this.geodeVariants.get(LARGE),
-                this.geodeVariants.get(CLUSTER)
+                safelyFetch(SMALL),
+                safelyFetch(MEDIUM),
+                safelyFetch(LARGE),
+                safelyFetch(CLUSTER)
         );
         return this;
     }
 
     private Block safelyFetch(String geodeName) {
-        Optional<Block> geode = Optional.ofNullable(this.geodeVariants.get(geodeName));
+        Optional<Block> geode = Optional.ofNullable(this.geodeVariants.get(geodeName).getRight());
         if(geode.isPresent()) {
-            return this.geodeVariants.get(geodeName);
+            return this.geodeVariants.get(geodeName).getRight();
         } else if(Gemstyne.LOGGER.isErrorEnabled()) {
             Gemstyne.LOGGER.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", geodeName, this.setName,
                     "Maybe the Geode Block is improperly initialized?",
@@ -157,5 +150,5 @@ public final class GemstyneGeodeSet {
     /**
      * @return Returns an {@link ImmutableSet} of all geode blocks from {@link GemstyneGeodeSet}
      */
-    public ImmutableSet<Block> geodeSet() { return ImmutableSet.copyOf(this.geodeVariants.values()); }
+    public ImmutableSet<Block> geodeSet() { return ImmutableSet.copyOf(this.geodeVariants.values().stream().map(Pair::getRight).collect(Collectors.toSet())); }
 }
