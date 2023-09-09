@@ -10,4 +10,9 @@ public abstract class GemstyneConstants {
     public static final String DEEPSLATE = "deepslate";
     public static final String NETHER = "nether";
     public static final String OVERWORLD = "overworld";
+    public static final String END = "end";
+    public static final String SMALL = "small";
+    public static final String LARGE = "large";
+    public static final String UPPER = "upper";
+    public static final String LOWER = "lower";
 }
