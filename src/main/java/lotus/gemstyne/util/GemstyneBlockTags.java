@@ -12,45 +12,47 @@ public final class GemstyneBlockTags {
     // <===== Replaceables =====>
     // ======
     private static final TagKey<Block> COMPRESSED_GRANITE_ORE_REPLACEABLES =
-            GemstyneBlockTags.of("compressed_granite_ore_replaceables");
+        GemstyneBlockTags.of("compressed_granite_ore_replaceables");
     private static final TagKey<Block> COMPRESSED_ANDESITE_ORE_REPLACEABLES =
-            GemstyneBlockTags.of("compressed_andesite_ore_replaceables");
+        GemstyneBlockTags.of("compressed_andesite_ore_replaceables");
+    public static final TagKey<Block> END_BASE_REPLACEABLES =
+        GemstyneBlockTags.of("end_base_replaceables");
 
     // ======
     // <===== Raw Ore Veins =====>
     // ======
     private static final TagKey<Block> MOCHITE_ORE_REPLACEABLES =
-            GemstyneBlockTags.of("mochite_ore_replaceables");
+        GemstyneBlockTags.of("mochite_ore_replaceables");
     private static final TagKey<Block> MORKITE_ORE_REPLACEABLES =
-            GemstyneBlockTags.of("morkite_ore_replaceables");
+        GemstyneBlockTags.of("morkite_ore_replaceables");
     private static final TagKey<Block> URANIUM_ORE_REPLACEABLES =
-            GemstyneBlockTags.of("uranium_ore_replaceables");
+        GemstyneBlockTags.of("uranium_ore_replaceables");
     private static final TagKey<Block> TIN_ORE_REPLACEABLES =
-            GemstyneBlockTags.of("tin_ore_replaceables");
+        GemstyneBlockTags.of("tin_ore_replaceables");
     // ======
     // <===== Tool-Type Requirements =====>
     // ======
     private static final TagKey<Block> NEEDS_AXE =
-            GemstyneBlockTags.of("mineable/axe");
+        GemstyneBlockTags.of("mineable/axe");
     private static final TagKey<Block> NEEDS_HOE =
-            GemstyneBlockTags.of("mineable/hoe");
+        GemstyneBlockTags.of("mineable/hoe");
     private static final TagKey<Block> NEEDS_PICKAXE =
-            GemstyneBlockTags.of("mineable/pickaxe");
+        GemstyneBlockTags.of("mineable/pickaxe");
     private static final TagKey<Block> NEEDS_SHOVEL =
-            GemstyneBlockTags.of("mineable/shovel");
+        GemstyneBlockTags.of("mineable/shovel");
 
     // ======
     // <===== Tool-Level Requirements =====>
     // ======
     private static final TagKey<Block> NEEDS_STONE_TOOL =
-            GemstyneBlockTags.of("needs_stone_tool");
+        GemstyneBlockTags.of("needs_stone_tool");
     private static final TagKey<Block> NEEDS_IRON_TOOL =
-            GemstyneBlockTags.of("needs_iron_tool");
+        GemstyneBlockTags.of("needs_iron_tool");
     private static final TagKey<Block> NEEDS_DIAMOND_TOOL =
-            GemstyneBlockTags.of("needs_diamond_tool");
+        GemstyneBlockTags.of("needs_diamond_tool");
 
     private static final TagKey<Block> NEEDS_TOOL_LEVEL_4 =
-            GemstyneBlockTags.of("fabric:needs_tool_level_4");
+        GemstyneBlockTags.of("fabric:needs_tool_level_4");
 
     private static TagKey<Block> of(String id) {
         return TagKey.of(RegistryKeys.BLOCK, new Identifier(id));

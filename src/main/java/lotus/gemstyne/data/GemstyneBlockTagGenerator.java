@@ -7,6 +7,7 @@ import lotus.gemstyne.util.GemstyneBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.Set;
@@ -124,10 +125,14 @@ GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
                 .setReplace(false)
                 .add(GemstyneMineralBlocks.COMPRESSED_GRANITE);
 
+        getOrCreateTagBuilder(GemstyneBlockTags.END_BASE_REPLACEABLES)
+            .setReplace(false)
+                .add(Blocks.END_STONE);
+
         getOrCreateTagBuilder(GemstyneBlockTags.getMochiteOreReplaceables())
-                .setReplace(false)
-                .add(GemstyneOreBlocks.MOCHITE.stoneOre())
-                .add(GemstyneOreBlocks.MOCHITE.deepslateOre());
+            .setReplace(false)
+            .add(GemstyneOreBlocks.MOCHITE.stoneOre())
+            .add(GemstyneOreBlocks.MOCHITE.deepslateOre());
 
         getOrCreateTagBuilder(GemstyneBlockTags.getTinOreReplaceables())
                 .setReplace(false)
