@@ -9,18 +9,26 @@ abstract class GemstyneConfigENTranslations extends FabricLanguageProvider {
 
 
     private static final String CONFIG_PATH = "text.config.gemstyne_config.option.";
+    private static final String ORE_CONFIGURATION = "oreConfiguration";
     private static final String TOOLTIP = ".tooltip";
 
     protected static void generateEnglishConfigTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add("text.config.gemstyne_config.title", "Gemstyne Configuration Options");
-        translationBuilder.add("text.config.gemstyne_config.section.ore_configuration", "Ore Configuration");
+        translationBuilder.add("text.config.gemstyne_config.category.oreConfiguration", "Ore Configuration");
+        translationBuilder.add("text.config.gemstyne_config.section.overworld", "The Overworld");
+        translationBuilder.add("text.config.gemstyne_config.section.nether", "The Nether");
+        translationBuilder.add("text.config.gemstyne_config.section.multi_dimensional", "Multi-Dimensional");
         translationBuilder.add("text.config.gemstyne_config.section.geode_configuration", "Geode Configuration");
 
-        addConfigTranslation(translationBuilder, "mochiteEnabled", "Mochite Generation", "Whether Mochite generates.");
-        addConfigTranslation(translationBuilder, "tinEnabled", "Tin Generation", "Whether Tin generates.");
-        addConfigTranslation(translationBuilder, "uraniumEnabled", "Uranium Generation", "Whether Uranium generates.");
-        addConfigTranslation(translationBuilder, "morkiteEnabled", "Morkite Generation", "Whether Morkite generates.");
-        addConfigTranslation(translationBuilder, "mineralsEnabled", "Mineral Generation", "Whether Gemstyne Minerals generate.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "aldusEnabled", "Aldus Generation", "Whether Aldus generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "crimoniteEnabled", "Crimonite Generation", "Whether Crimonite generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "mutaliumEnabled", "Mutalium Generation", "Whether Mutalium generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "mochiteEnabled", "Mochite Generation", "Whether Mochite generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "morkiteEnabled", "Morkite Generation", "Whether Morkite generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "tinEnabled", "Tin Generation", "Whether Tin generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "torriumEnabled", "Torrium Generation", "Whether Torrium generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "uraniumEnabled", "Uranium Generation", "Whether Uranium generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "mineralsEnabled", "Mineral Generation", "Whether Gemstyne Minerals generate.");
 
         addConfigTranslation(translationBuilder, "ikariteEnabled", "Ikarite Geode Generation", "Whether Ikarite Geodes generate.");
         addConfigTranslation(translationBuilder, "garnetEnabled", "Garnet Geode Generation", "Whether Garnet Geodes generate.");
