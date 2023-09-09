@@ -39,20 +39,20 @@
     "gemstyne:uranium_block",
     "gemstyne:large_ikarite_bud",
     "gemstyne:medium_ikarite_bud",
-    "gemstyne:small_ikarite_bud",
     "gemstyne:ikarite_block",
-    "gemstyne:budding_ikarite",
     "gemstyne:ikarite_cluster",
-    "gemstyne:budding_garnet",
-    "gemstyne:garnet_block",
+    "gemstyne:budding_ikarite",
+    "gemstyne:small_ikarite_bud",
     "gemstyne:medium_garnet_bud",
-    "gemstyne:garnet_cluster",
     "gemstyne:small_garnet_bud",
+    "gemstyne:garnet_block",
     "gemstyne:large_garnet_bud",
+    "gemstyne:budding_garnet",
+    "gemstyne:garnet_cluster",
     "gemstyne:small_lapis_bud",
     "gemstyne:large_lapis_bud",
-    "gemstyne:medium_lapis_bud",
     "gemstyne:budding_lapis",
-    "gemstyne:lapis_cluster"
+    "gemstyne:lapis_cluster",
+    "gemstyne:medium_lapis_bud"
   ]
 }

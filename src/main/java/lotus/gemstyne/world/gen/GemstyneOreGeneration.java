@@ -1,6 +1,7 @@
 package lotus.gemstyne.world.gen;
 
 import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
 import lotus.gemstyne.world.GemstyneWorldHandler;
 import lotus.gemstyne.world.geodes.GemstyneGeodePlaced;
@@ -22,30 +23,27 @@ public class GemstyneOreGeneration {
      */
     public static void generateOres() {
         // =====
-        // <===== Overworld Ores =====>
+        // <=====| The Overworld |=====>
         // =====
-        if (Gemstyne.CONFIG.mochiteEnabled()) {
-            addOverworldOre(GemstyneOrePlaced.getMochiteOreLowerPlacedKey());
-            addOverworldOre(GemstyneOrePlaced.getMochiteOreUpperPlacedKey());
+        if (Gemstyne.CONFIG.oreConfiguration.mochiteEnabled()) {
+            addOverworldOre(GemstyneWorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(GemstyneWorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.LARGE));
             addOverworldOre(GemstyneOrePlaced.getMochiteOreRawPlacedKey());
         }
 
-        if (Gemstyne.CONFIG.tinEnabled()) {
-            addOverworldOre(GemstyneOrePlaced.getTinOreSmallPlacedKey());
-            addOverworldOre(GemstyneOrePlaced.getTinOreLargePlacedKey());
+        if (Gemstyne.CONFIG.oreConfiguration.tinEnabled()) {
+            addOverworldOre(GemstyneWorldHandler.TIN.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(GemstyneWorldHandler.TIN.fetchPlacedKey(GemstyneConstants.LARGE));
             addOverworldOre(GemstyneOrePlaced.getTinOreRawPlacedKey());
         }
 
-        addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey("small"));
-        addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey("large"));
-
-        if(Gemstyne.CONFIG.uraniumEnabled()) {
-            addOverworldOre(GemstyneOrePlaced.getUraniumOreSmallPlacedKey());
-            addOverworldOre(GemstyneOrePlaced.getUraniumOreLargePlacedKey());
+        if(Gemstyne.CONFIG.oreConfiguration.uraniumEnabled()) {
+            addOverworldOre(GemstyneWorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(GemstyneWorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.LARGE));
             addOverworldOre(GemstyneOrePlaced.getUraniumOreRawPlacedKey());
         }
 
-        if(Gemstyne.CONFIG.morkiteEnabled()) {
+        if(Gemstyne.CONFIG.oreConfiguration.morkiteEnabled()) {
             addOverworldOre(GemstyneOrePlaced.getMorkiteOreBuriedPlacedKey());
             addOverworldOre(GemstyneOrePlaced.getMorkiteOreExposedPlacedKey());
             addOverworldOre(GemstyneOrePlaced.getMorkiteOreRawPlacedKey());
@@ -57,22 +55,43 @@ public class GemstyneOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstynePlacedFeatures.LIQUID_MORKITE_PLACED_KEY);
         // =====
-        // <===== Nether Ores =====>
+        // <=====| The Nether |=====>
         // =====
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getCrimoniteOreUpperPlacedKey());
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getCrimoniteOreLowerPlacedKey());
+        if(Gemstyne.CONFIG.oreConfiguration.aldusEnabled()) {
+            addNetherOre(GemstyneWorldHandler.ALDUS.fetchPlacedKey(GemstyneConstants.SMALL));
+            addNetherOre(GemstyneWorldHandler.ALDUS.fetchPlacedKey(GemstyneConstants.LARGE));
+        }
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getAldusOreUpperPlacedKey());
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, GemstyneOrePlaced.getAldusOreLowerPlacedKey());
+        if(Gemstyne.CONFIG.oreConfiguration.crimoniteEnabled()) {
+            addNetherOre(GemstyneWorldHandler.CRIMONITE.fetchPlacedKey(GemstyneConstants.SMALL));
+            addNetherOre(GemstyneWorldHandler.CRIMONITE.fetchPlacedKey(GemstyneConstants.LARGE));
+        }
+
+        // =====
+        // <=====| The End |=====>
+        // =====
+
+
+        // =====
+        // <=====| Multi-Dimensional  |=====>
+        // =====
+        if(Gemstyne.CONFIG.oreConfiguration.torriumEnabled()) {
+            addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.NETHER));
+        }
+
+        if(Gemstyne.CONFIG.oreConfiguration.mutaliumEnabled()) {
+            addOverworldOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.NETHER));
+            addEndOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.END));
+        }
 
         // =====
         // <===== Minerals =====>
         // =====
-        if(Gemstyne.CONFIG.mineralsEnabled()) {
+        if(Gemstyne.CONFIG.oreConfiguration.mineralsEnabled()) {
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstyneMineralPlaced.HALITE_PLACED_KEY);
 
@@ -116,5 +135,15 @@ public class GemstyneOreGeneration {
     private static void addOverworldOre(RegistryKey<PlacedFeature> ore) {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ore);
+    }
+
+    private static void addNetherOre(RegistryKey<PlacedFeature> ore) {
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
+            GenerationStep.Feature.UNDERGROUND_ORES, ore);
+    }
+
+    private static void addEndOre(RegistryKey<PlacedFeature> ore) {
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+            GenerationStep.Feature.UNDERGROUND_ORES, ore);
     }
 }

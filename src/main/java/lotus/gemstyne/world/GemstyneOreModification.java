@@ -3,6 +3,7 @@ package lotus.gemstyne.world;
 import com.google.common.collect.*;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.GemstyneBlockSet;
+import lotus.gemstyne.util.GemstyneBlockTags;
 import lotus.gemstyne.util.GemstyneConstants;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -23,9 +24,7 @@ public class GemstyneOreModification {
     private final GemstyneBlockSet oreSet;
     private final Multimap<String, OreFeatureConfig.Target> oreMap = LinkedHashMultimap.create();
 
-    private final String name;
-    public GemstyneOreModification(String name, GemstyneBlockSet oreSet) {
-        this.name = name;
+    public GemstyneOreModification(GemstyneBlockSet oreSet) {
         this.oreSet = oreSet;
     }
 
@@ -49,10 +48,19 @@ public class GemstyneOreModification {
 
     /**
      * Adds {@link BlockTags#BASE_STONE_NETHER} to ore Generation.
-     * @return
+     * @return Returns instance of self.
      */
     protected GemstyneOreModification addNetherOre() {
         this.oreMap.put(GemstyneConstants.NETHER, OreFeatureConfig.createTarget(netherReplaceables, oreSet.netherOre().getDefaultState()));
+        return this;
+    }
+
+    /**
+     * Adds {@link GemstyneBlockTags#END_BASE_REPLACEABLES} to ore Generation.
+     * @return Returns instance of self.
+     */
+    protected GemstyneOreModification addEndOre() {
+        this.oreMap.put(GemstyneConstants.END, OreFeatureConfig.createTarget(endReplaceables, oreSet.endOre().getDefaultState()));
         return this;
     }
 
@@ -72,27 +80,71 @@ public class GemstyneOreModification {
     }
 
     /**
+     * Creates a key {@link Pair} with very similar names.
+     * @param keyNames Name of keys to be created.
+     * @return Returns instance of self.
+     */
+    protected GemstyneOreModification createKeyPair(String keyNames) {
+        this.oreKeys.put(keyNames, new Pair<>(
+            GemstyneConfiguredFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + keyNames),
+            GemstynePlacedFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + keyNames))
+        );
+
+        return this;
+    }
+
+    /**
      * Registers {@link PlacedFeature}
      * @param context Context... Don't ask me.
-     * @param which Target Key for features. For example, small, or upper.
+     * @param keyName Name of key Pair. Configured Key name.
+     * @param useRarity Whether rarity should be used.
      * @param veinsPerChunk Amount of veins per chunk.
      * @param modifier Height Range and shape of ore spawns. See {@link HeightRangePlacementModifier}
      */
-    public void registerPlacedFeatures(Registerable<PlacedFeature> context, String which, int veinsPerChunk, HeightRangePlacementModifier modifier) {
-        GemstynePlacedFeatures.register(context, fetchPlacedKey(which), GemstynePlacedFeatures.fetchConfig(context,
-            fetchConfiguredKey(which)), GemstyneOrePlacement.modifiersWithCount(veinsPerChunk, modifier));
+    public void registerPlacedFeatures(Registerable<PlacedFeature> context, String keyName, boolean useRarity, int veinsPerChunk, HeightRangePlacementModifier modifier) {
+        if(useRarity) {
+            GemstynePlacedFeatures.register(context, fetchPlacedKey(keyName), GemstynePlacedFeatures.fetchConfig(context,
+                fetchConfiguredKey(keyName)), GemstyneOrePlacement.modifiersWithRarity(veinsPerChunk, modifier));
+        } else {
+            GemstynePlacedFeatures.register(context, fetchPlacedKey(keyName), GemstynePlacedFeatures.fetchConfig(context,
+                fetchConfiguredKey(keyName)), GemstyneOrePlacement.modifiersWithCount(veinsPerChunk, modifier));
+        }
     }
 
     /**
      * Registers {@link ConfiguredFeature}
      * @param context Context... Don't ask me.
-     * @param which Target key for features. For example, small, or large.
+     * @param keyName Target key for features. For example, small, or large.
      * @param veinsSize Size of ore veins.
      * @param discardOnAirChance Chance of veins being discarded when exposed to air.
      */
-    public void registerConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String which, int veinsSize, float discardOnAirChance) {
-        GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(which), Feature.ORE, new OreFeatureConfig(
+    public void overworldConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String keyName, int veinsSize, float discardOnAirChance) {
+        GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
             this.oreMap.get(GemstyneConstants.OVERWORLD).stream().toList(), veinsSize, discardOnAirChance));
+    }
+
+    /**
+     * Registers {@link ConfiguredFeature}
+     * @param context Context... Don't ask me.
+     * @param keyName Target key for features. For example, small, or large.
+     * @param veinsSize Size of ore veins.
+     * @param discardOnAirChance Chance of veins being discarded when exposed to air.
+     */
+    public void netherConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String keyName, int veinsSize, float discardOnAirChance) {
+        GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
+            this.oreMap.get(GemstyneConstants.NETHER).stream().toList(), veinsSize, discardOnAirChance));
+    }
+
+    /**
+     * Registers {@link ConfiguredFeature}
+     * @param context Context... Don't ask me.
+     * @param keyName Target key for features. For example, small, or large.
+     * @param veinsSize Size of ore veins.
+     * @param discardOnAirChance Chance of veins being discarded when exposed to air.
+     */
+    public void endConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String keyName, int veinsSize, float discardOnAirChance) {
+        GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
+            this.oreMap.get(GemstyneConstants.END).stream().toList(), veinsSize, discardOnAirChance));
     }
 
     /**
@@ -136,4 +188,5 @@ public class GemstyneOreModification {
     private static final RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
     private static final RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
     private static final RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+    private static final RuleTest endReplaceables = new TagMatchRuleTest(GemstyneBlockTags.END_BASE_REPLACEABLES);
 }

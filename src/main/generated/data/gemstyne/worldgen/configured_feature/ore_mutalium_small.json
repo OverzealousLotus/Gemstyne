@@ -1,12 +1,12 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "discard_chance_on_air_exposure": 0.05,
-    "size": 17,
+    "discard_chance_on_air_exposure": 0.2,
+    "size": 5,
     "targets": [
       {
         "state": {
-          "Name": "gemstyne:mochite_ore"
+          "Name": "gemstyne:mutalium_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "gemstyne:deepslate_mochite_ore"
+          "Name": "gemstyne:deepslate_mutalium_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
