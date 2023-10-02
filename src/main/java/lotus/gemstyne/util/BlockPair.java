@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 
 /**
  * Simple class to hold any block which extends {@link Block} and its ID.
- * @param <U> Any block which extends {@link Block}
  */
 public class BlockPair {
     private final String blockID;

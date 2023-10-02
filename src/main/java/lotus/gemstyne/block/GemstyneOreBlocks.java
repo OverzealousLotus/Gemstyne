@@ -1,6 +1,5 @@
 package lotus.gemstyne.block;
 
-import io.wispforest.owo.util.TagInjector;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.*;
 import lotus.gemstyne.effect.GemstyneEffects;
@@ -10,7 +9,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 

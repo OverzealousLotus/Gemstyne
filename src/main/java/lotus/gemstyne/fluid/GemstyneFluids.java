@@ -3,7 +3,6 @@ import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
