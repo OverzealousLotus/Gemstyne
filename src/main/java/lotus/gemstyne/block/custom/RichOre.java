@@ -37,7 +37,7 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
     }
 
     /**
-     * <code>getBlockEntity</code> Can return a null value.
+     * {@code getBlockEntity} Can return a null value.
      * To handle this, it has been wrapped in an {@link Optional}.
      * While a simple assertion expression would suffice, {@link Optional} provides
      * greater readability.

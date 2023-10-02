@@ -57,7 +57,7 @@ public class VolatileOre extends ExperienceDroppingBlock {
     }
 
     /**
-     * {@code explosionChance} provides an extensible way to determine the chances of an explosion by overriding
+     * {@link VolatileOre#explosionChance} provides an extensible way to determine the chances of an explosion by overriding
      * this method in any class which extends {@link VolatileOre}.
      * @param world {@link World}
      * @param player {@link PlayerEntity}
@@ -77,7 +77,7 @@ public class VolatileOre extends ExperienceDroppingBlock {
     }
 
     /**
-     * Method to determine logic of block explosion.
+     * Determines logic of block explosion.
      * <ul>
      *     <li>Entity represents the "TNT Block" this explosion occurs on. We don't need this here.</li>
      *     <li>X, Y, and Z represent the coordinates of the explosion.</li>

@@ -1,5 +1,6 @@
 package lotus.gemstyne.block;
 
+import io.wispforest.owo.util.TagInjector;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.*;
 import lotus.gemstyne.effect.GemstyneEffects;
@@ -9,6 +10,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
@@ -29,17 +31,18 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Overworld Ores =====>
     // =====
-    public static final GemstyneBlockSet MOCHITE = new GemstyneBlockSet("mochite")
+    public static final GemstyneBlockSet MOCHITE = GemstyneBlockSet.Builder.start("mochite")
         .setExperience(UniformIntProvider.create(2, 7))
+        .createOreType(GemstyneConstants.NETHER, BlockSoundGroup.NETHER_ORE)
         .createDefaultBlockSet(3.0f);
 
-    public static final GemstyneBlockSet MUTALIUM = new GemstyneBlockSet("mutalium")
+    public static final GemstyneBlockSet MUTALIUM = GemstyneBlockSet.Builder.start("mutalium")
         .setExperience(UniformIntProvider.create(10, 20))
         .createOre()
         .createOreType(GemstyneConstants.DEEPSLATE, BlockSoundGroup.DEEPSLATE)
         .createOreType(GemstyneConstants.NETHER, BlockSoundGroup.NETHER_ORE)
         .createOreType("end", BlockSoundGroup.ANCIENT_DEBRIS)
-        .create();
+        .end();
 
     /*public static final Block NEFARIUM_ORE = GemstyneBlockHandler.assignAndRegisterBlock("nefarium_ore",
             new VolatileOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(5, 10))
@@ -52,25 +55,28 @@ public final class GemstyneOreBlocks {
     public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
         new MutaliumOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(2, 5)));
 
-    public static final GemstyneBlockSet TORRIUM = new GemstyneBlockSet("torrium")
+    public static final Block BUBBLEGEM_ORE = GemstyneRegistry.designateBlock("bubblegem_ore",
+        Ore.Builder.start(UniformIntProvider.create(8, 20)).settings(Blocks.EMERALD_ORE).end());
+
+    public static final GemstyneBlockSet TORRIUM = GemstyneBlockSet.Builder.start("torrium")
         .createOre(new TorriumOre(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).luminance(5), UniformIntProvider.create(5, 10)))
         .createOreType(GemstyneConstants.DEEPSLATE, new TorriumOre(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).luminance(5),
             UniformIntProvider.create(5, 10)), BlockSoundGroup.DEEPSLATE)
         .createOreType(GemstyneConstants.NETHER, new TorriumOre(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).luminance(5),
             UniformIntProvider.create(5, 10)), BlockSoundGroup.NETHER_ORE)
-        .create();
+        .end();
 
-    public static final GemstyneBlockSet TIN = new GemstyneBlockSet("tin")
+    public static final GemstyneBlockSet TIN = GemstyneBlockSet.Builder.start("tin")
         .setExperience(UniformIntProvider.create(2, 5))
         .createDefaultBlockSet(3.0f);
 
-    public static final GemstyneBlockSet URANIUM = new GemstyneBlockSet("uranium")
+    public static final GemstyneBlockSet URANIUM = GemstyneBlockSet.Builder.start("uranium")
         .setExperience(UniformIntProvider.create(5, 15)).setEffect(GemstyneEffects.IRRADIATE)
-        .modifyStrength(6.0f, 5.0f)
+        .setStrength(6.0f, 5.0f)
         .createOreType("deepslate", 30, BlockSoundGroup.DEEPSLATE)
         .createRawBlock(30)
         .createPureBlock(30)
-        .create();
+        .end();
 
     public static final Block COMPRESSED_GRANITE_FIRE_OPAL_ORE = GemstyneRegistry.designateBlock(
         "compressed_granite_fire_opal_ore",
@@ -86,17 +92,17 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Nether Ores =====>
     // =====
-    public static final GemstyneBlockSet ALDUS = new GemstyneBlockSet("aldus")
+    public static final GemstyneBlockSet ALDUS = GemstyneBlockSet.Builder.start("aldus")
         .setExperience(UniformIntProvider.create(2, 5))
         .createDefaultNetherBlockSet(4.0f);
 
-    public static final GemstyneBlockSet CRIMONITE = new GemstyneBlockSet("crimonite")
+    public static final GemstyneBlockSet CRIMONITE = GemstyneBlockSet.Builder.start("crimonite")
         .setExperience(UniformIntProvider.create(2, 5)).setEffect(StatusEffects.WITHER)
-        .modifyStrength(5.0f, 3.0f)
+        .setStrength(5.0f, 3.0f)
         .createOreType(GemstyneConstants.NETHER, 60, BlockSoundGroup.NETHER_ORE)
         .createRawBlock(60)
         .createPureBlock(60)
-        .create();
+        .end();
 
     // =====
     // <===== Ore Extensions =====>

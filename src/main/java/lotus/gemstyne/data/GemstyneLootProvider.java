@@ -114,6 +114,7 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
                 Items.LAPIS_LAZULI, 1, 3);
 
         gemstyneOreDrops(GemstyneOreBlocks.NEFARIUM_ORE, Items.DIAMOND);
+        gemstyneOreDrops(GemstyneOreBlocks.BUBBLEGEM_ORE, GemstyneOreItems.BUBBLEGEM);
     }
 
 

@@ -6,6 +6,7 @@ import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.equipment.GemstyneCraftingItems;
 import lotus.gemstyne.item.equipment.GemstyneGearItems;
+import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -39,5 +40,7 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(GemstyneEffects.IRRADIATE, "Irradiate");
         translationBuilder.add(GemstyneOreBlocks.NEFARIUM_ORE, "Nefarium Ore");
+        translationBuilder.add(GemstyneOreBlocks.BUBBLEGEM_ORE, "Bubblegem Ore");
+        translationBuilder.add(GemstyneOreItems.BUBBLEGEM, "Bubblegem");
     }
 }

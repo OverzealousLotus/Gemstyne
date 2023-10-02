@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    },
+    {
+      "item": "gemstyne:torrium_nugget"
+    }
+  ],
+  "result": {
+    "item": "gemstyne:torrium_ingot"
+  }
+}

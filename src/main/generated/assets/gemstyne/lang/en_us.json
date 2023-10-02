@@ -1,5 +1,6 @@
 {
   "block.gemstyne.aldus_block": "Aldus Block",
+  "block.gemstyne.bubblegem_ore": "Bubblegem Ore",
   "block.gemstyne.budding_garnet": "Budding Garnet",
   "block.gemstyne.budding_ikarite": "Budding Ikarite",
   "block.gemstyne.budding_lapis": "Budding Lapis",
@@ -81,6 +82,7 @@
   "item.gemstyne.bronzeplate_chestplate": "Bronzeplate Chestplate",
   "item.gemstyne.bronzeplate_helmet": "Bronzeplate Helmet",
   "item.gemstyne.bronzeplate_leggings": "Bronzeplate Leggings",
+  "item.gemstyne.bubblegem": "Bubblegem",
   "item.gemstyne.crimonite_chunk": "Crimonite Chunk",
   "item.gemstyne.crimonite_ingot": "Crimonite Ingot",
   "item.gemstyne.crimonite_nugget": "Crimonite Nugget",

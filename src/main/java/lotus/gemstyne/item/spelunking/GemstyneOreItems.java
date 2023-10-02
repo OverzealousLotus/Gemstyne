@@ -42,7 +42,12 @@ public final class GemstyneOreItems {
         .createRaw()
         .addFood(MOCHITE_FOOD)
         .createCrystal()
+        .createItemVariant("nugget")
         .create();
+
+    public static final Item BUBBLEGEM = GemstyneRegistry.designateItem("bubblegem",
+        new OwoItemSettings().food(new FoodComponent.Builder().snack()
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80), 1.0f).build()));
 
     // ======
     // <===== Crystals =====>

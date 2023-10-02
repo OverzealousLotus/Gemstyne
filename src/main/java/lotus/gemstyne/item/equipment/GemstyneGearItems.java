@@ -11,8 +11,8 @@ public class GemstyneGearItems {
     private GemstyneGearItems() {}
     
     private static final Item IMBUED_FEATHER = GemstyneRegistry.designateItem("imbued_feather",
-            new ImbuedFeatherItem(new OwoItemSettings().maxCount(1).maxDamage(20)
-                    .group(GemstyneCreativeGroup.GEMSTYNE))
+        new ImbuedFeatherItem(new OwoItemSettings().maxCount(1).maxDamage(20)
+            .group(GemstyneCreativeGroup.GEMSTYNE))
     );
 
     public static Item getImbuedFeather() {

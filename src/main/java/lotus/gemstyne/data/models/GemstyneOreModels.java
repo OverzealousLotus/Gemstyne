@@ -52,6 +52,7 @@ public final class GemstyneOreModels {
                 GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.NEFARIUM_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.BUBBLEGEM_ORE);
     }
 
 
@@ -72,5 +73,7 @@ public final class GemstyneOreModels {
         itemModelGenerator.register(GemstyneOreItems.GARNET, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.MORKITE, Models.GENERATED);
         itemModelGenerator.register(GemstyneOreItems.FIRE_OPAL, Models.GENERATED);
+
+        itemModelGenerator.register(GemstyneOreItems.BUBBLEGEM, Models.GENERATED);
     }
 }
