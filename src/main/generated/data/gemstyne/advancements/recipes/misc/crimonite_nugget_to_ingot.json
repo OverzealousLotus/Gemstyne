@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bronze_ingot": {
+    "has_crimonite_nugget": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstyne:bronze_ingot"
+              "gemstyne:crimonite_nugget"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:bronzeingot_to_nugget"
+        "recipe": "minecraft:crimonite_nugget_to_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_bronze_ingot",
+      "has_crimonite_nugget",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:bronzeingot_to_nugget"
+      "minecraft:crimonite_nugget_to_ingot"
     ]
   },
   "sends_telemetry_event": false

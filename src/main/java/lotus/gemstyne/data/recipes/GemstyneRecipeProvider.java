@@ -36,22 +36,28 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         // =====
 
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.ALDUS.raw()),
-                GemstyneOreItems.ALDUS.ingot(), 200, 100, 1.0f);
+            GemstyneOreItems.ALDUS.ingot(), 200, 100, 1.0f);
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.MOCHITE.raw()),
-                GemstyneOreItems.MOCHITE.crystal(), 200, 100, 0.5f);
+            GemstyneOreItems.MOCHITE.crystal(), 200, 100, 0.5f);
+        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.MUTALIUM.raw()),
+            GemstyneOreItems.MUTALIUM.ingot(), 350, 175, 2.0f);
+        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.TIN.raw()),
+            GemstyneOreItems.TIN.ingot(), 200, 100, 1.0f);
+        offerCompleteSmelting(exporter, List.of(GemstyneOreItems.TORRIUM.raw()),
+            GemstyneOreItems.TORRIUM.ingot(), 300, 150, 1.25f);
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.URANIUM.raw()),
-                GemstyneOreItems.URANIUM.chunk(), 300, 150, 1.5f);
+            GemstyneOreItems.URANIUM.chunk(), 300, 150, 1.5f);
         offerCompleteSmelting(exporter, List.of(GemstyneOreItems.CRIMONITE.raw()),
-                GemstyneOreItems.CRIMONITE.chunk(), 350, 175, 2.0f);
+            GemstyneOreItems.CRIMONITE.chunk(), 350, 175, 2.0f);
 
         offerCompleteSmelting(exporter, GemstyneArmorItems.ALDUS.getArmorList(),
-                GemstyneOreItems.ALDUS.ingot(), 200, 100, 1.0f);
+            GemstyneOreItems.ALDUS.ingot(), 200, 100, 1.0f);
         offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEPLATE.getArmorList(),
-                GemstyneOreItems.BRONZE.ingot(), 200, 100, 1.0f);
+            GemstyneOreItems.BRONZE.ingot(), 200, 100, 1.0f);
         offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEMAIL.getArmorList(),
-                GemstyneOreItems.BRONZE.nugget(), 200, 100, 1.0f);
+            GemstyneOreItems.BRONZE.nugget(), 200, 100, 1.0f);
         offerCompleteSmelting(exporter, GemstyneArmorItems.RENDFIRE.getArmorList(),
-                GemstyneOreItems.CRIMONITE.ingot(), 350, 175, 2.0f);
+            GemstyneOreItems.CRIMONITE.ingot(), 350, 175, 2.0f);
 
 
         // =====
@@ -79,8 +85,12 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.ALDUS);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.BRONZE);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.CRIMONITE);
-        offerReversibleNuggetRecipe(exporter, GemstyneOreItems.URANIUM);
+        offerReversibleNuggetRecipe(exporter, GemstyneOreItems.MOCHITE.crystal(),
+            GemstyneOreItems.MOCHITE.nugget(), GemstyneOreItems.MOCHITE.setName());
+        offerReversibleNuggetRecipe(exporter, GemstyneOreItems.MUTALIUM);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.TIN);
+        offerReversibleNuggetRecipe(exporter, GemstyneOreItems.TORRIUM);
+        offerReversibleNuggetRecipe(exporter, GemstyneOreItems.URANIUM);
 
         offerBasicIngotRecipe(exporter, GemstyneOreItems.URANIUM.chunk(),
            GemstyneOreItems.URANIUM.ingot(), "uranium_chunk_to_ingot");
@@ -135,7 +145,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
     }
 
     /**
-     * Method internally calling <code>offerReversibleCompactingRecipes</code>, creating
+     * Internally calls {@link RecipeProvider#offerReversibleCompactingRecipes}, creating
      * both raw and pure reversible compacting recipes. Thus, inputted sets are required to contain
      * raw and pure variations of both their blocks, and items.
      * @param blockSet {@link GemstyneBlockSet}
@@ -153,6 +163,17 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 itemSet.raw(), RecipeCategory.DECORATIONS,
                 blockSet.rawBlock());
     }
+
+    /**
+     * Internally calls {@link RecipeProvider#offerBlasting} and {@link RecipeProvider#offerSmelting} to create both
+     * recipes in one function call.
+     * @param exporter
+     * @param inputs Target items for smelting/blasting.
+     * @param output Output of smelting/blasting.
+     * @param smeltingTime Time until smelting completes in Ticks.
+     * @param blastingTime Time until blasting completes in Ticks.
+     * @param experience Amount of experience gained for each successful smelt/blast.
+     */
     private static void offerCompleteSmelting(
             Consumer<RecipeJsonProvider> exporter,
             List<ItemConvertible> inputs,
@@ -198,11 +219,24 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .input(set.ingot())
                 .criterion(RecipeProvider.hasItem(set.ingot()),
                         RecipeProvider.conditionsFromItem(set.ingot()))
-                .offerTo(exporter, new Identifier(set.setName() + "ingot_to_nugget"));
+                .offerTo(exporter, new Identifier(set.setName() + "_" + "ingot_to_nugget"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, set.ingot())
                 .input(set.nugget(), 9)
                 .criterion(RecipeProvider.hasItem(set.nugget()),
                         RecipeProvider.conditionsFromItem(set.nugget()))
-                .offerTo(exporter, new Identifier(set.setName() + "nugget_to_ingot"));
+                .offerTo(exporter, new Identifier(set.setName() + "_" + "nugget_to_ingot"));
+    }
+
+    private static void offerReversibleNuggetRecipe(Consumer<RecipeJsonProvider> exporter, Item purity, Item nugget, String name) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, nugget, 9)
+            .input(purity)
+            .criterion(RecipeProvider.hasItem(purity),
+                RecipeProvider.conditionsFromItem(purity))
+            .offerTo(exporter, new Identifier(name + "_" + "purity_to_nugget"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, purity)
+            .input(nugget, 9)
+            .criterion(RecipeProvider.hasItem(nugget),
+                RecipeProvider.conditionsFromItem(nugget))
+            .offerTo(exporter, new Identifier(name + "_" + "nugget_to_ingot"));
     }
 }

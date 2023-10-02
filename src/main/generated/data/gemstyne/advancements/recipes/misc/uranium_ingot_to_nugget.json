@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:uraniumingot_to_nugget"
+        "recipe": "minecraft:uranium_ingot_to_nugget"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:uraniumingot_to_nugget"
+      "minecraft:uranium_ingot_to_nugget"
     ]
   },
   "sends_telemetry_event": false

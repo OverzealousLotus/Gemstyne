@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_aldus_ingot": {
+    "has_aldus_nugget": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstyne:aldus_ingot"
+              "gemstyne:aldus_nugget"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:aldusingot_to_nugget"
+        "recipe": "minecraft:aldus_nugget_to_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_aldus_ingot",
+      "has_aldus_nugget",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:aldusingot_to_nugget"
+      "minecraft:aldus_nugget_to_ingot"
     ]
   },
   "sends_telemetry_event": false

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_aldus_nugget": {
+    "has_crimonite_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstyne:aldus_nugget"
+              "gemstyne:crimonite_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:aldusnugget_to_ingot"
+        "recipe": "minecraft:crimonite_ingot_to_nugget"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_aldus_nugget",
+      "has_crimonite_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:aldusnugget_to_ingot"
+      "minecraft:crimonite_ingot_to_nugget"
     ]
   },
   "sends_telemetry_event": false
