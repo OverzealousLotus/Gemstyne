@@ -2,8 +2,12 @@ package lotus.gemstyne.util;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.GemstyneBlockSet;
+import lotus.gemstyne.block.util.GemstyneBlockSet;
+import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.GemstyneItemSet;
+import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -12,7 +16,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 /**
- * <ul>Gemstyne's Registry Handler. Not to be confused with {@link GemstyneRegistries}.
+ * <ul>Gemstyne's Registry Handler.
  *  <li>See {@link GemstyneCreativeGroup} for more information on how groups are handled.</li>
  *  <li>See {@link GemstyneBlockSet} & {@link GemstyneItemSet} to see how these are used to register items.</li>
  * </ul>
@@ -40,7 +44,7 @@ public class GemstyneRegistry {
      */
     public static void registerBlock(String path, Block block) {
         Registry.register(Registries.BLOCK, id(path), block);
-        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE)));
+        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE).tab(1)));
     }
 
     /**
@@ -72,5 +76,18 @@ public class GemstyneRegistry {
     public static Block designateBlock(String path, Block block) {
         Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE)));
         return Registry.register(Registries.BLOCK, id(path), block);
+    }
+
+    private static void registerFuels() {
+        Gemstyne.LOGGER.info("Registering Fuel Items for " + Gemstyne.MOD_ID + "...");
+
+        FuelRegistry registry = FuelRegistry.INSTANCE;
+        registry.add(GemstyneOreItems.MORKITE, 2000);
+        registry.add(GemstyneOreBlocks.MORKITE_BLOCK, 20000);
+        registry.add(GemstyneFluids.LIQUID_MORKITE_BUCKET, 24000);
+    }
+
+    public static void registerGemstyneMisc() {
+        registerFuels();
     }
 }
