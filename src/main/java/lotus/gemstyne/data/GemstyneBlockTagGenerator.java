@@ -1,7 +1,7 @@
 package lotus.gemstyne.data;
 
-import lotus.gemstyne.block.GemstyneBlockSet;
-import lotus.gemstyne.block.GemstyneMineralBlocks;
+import lotus.gemstyne.block.GemstyneBlockHandler;
+import lotus.gemstyne.block.util.GemstyneBlockSet;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.util.GemstyneBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -26,17 +26,15 @@ GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
         // ======
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsPickaxe())
                 .setReplace(false)
-
-                .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE)
                 .add(GemstyneOreBlocks.MORKITE_BLOCK)
 
-                .add(GemstyneMineralBlocks.HALITE)
-                .add(GemstyneMineralBlocks.PUMICE)
-                .add(GemstyneMineralBlocks.GABBRO)
+                .add(GemstyneBlockHandler.HALITE)
+                .add(GemstyneBlockHandler.PUMICE)
+                .add(GemstyneBlockHandler.GABBRO)
 
-                .add(GemstyneMineralBlocks.COMPRESSED_ANDESITE)
-                .add(GemstyneMineralBlocks.COMPRESSED_DIORITE)
-                .add(GemstyneMineralBlocks.COMPRESSED_GRANITE)
+                .add(GemstyneBlockHandler.COMPRESSED_ANDESITE)
+                .add(GemstyneBlockHandler.COMPRESSED_DIORITE)
+                .add(GemstyneBlockHandler.COMPRESSED_GRANITE)
 
                 .add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE)
 
@@ -44,53 +42,38 @@ GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
                 .add(GemstyneOreBlocks.FIRE_OPAL_BLOCK)
                 .add(GemstyneOreBlocks.NEFARIUM_ORE);
 
-        addPickAxeTagToBlock(GemstyneOreBlocks.ALDUS.getBlockSet());
-        addPickAxeTagToBlock(GemstyneOreBlocks.CRIMONITE.getBlockSet());
-        addPickAxeTagToBlock(GemstyneOreBlocks.MUTALIUM.getBlockSet());
-        addPickAxeTagToBlock(GemstyneOreBlocks.MOCHITE.getBlockSet());
-        addPickAxeTagToBlock(GemstyneOreBlocks.TORRIUM.getBlockSet());
-        addPickAxeTagToBlock(GemstyneOreBlocks.TIN.getBlockSet());
-        addPickAxeTagToBlock(GemstyneOreBlocks.URANIUM.getBlockSet());
+        // addPickAxeTagToBlock(GemstyneOreBlocks.ALDUS.getBlockSet());
+        // addPickAxeTagToBlock(GemstyneOreBlocks.CRIMONITE.getBlockSet());
+        // addPickAxeTagToBlock(GemstyneOreBlocks.MUTALIUM.getBlockSet());
+        // addPickAxeTagToBlock(GemstyneOreBlocks.MOCHITE.getBlockSet());
+        // addPickAxeTagToBlock(GemstyneOreBlocks.TORRIUM.getBlockSet());
+        // addPickAxeTagToBlock(GemstyneOreBlocks.TIN.getBlockSet());
+        // addPickAxeTagToBlock(GemstyneOreBlocks.URANIUM.getBlockSet());
         addPickAxeTagToBlock(GemstyneOreBlocks.IKARITE.geodeSet());
         addPickAxeTagToBlock(GemstyneOreBlocks.GARNET.geodeSet());
         addPickAxeTagToBlock(GemstyneOreBlocks.LAPIS.geodeSet());
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsShovel())
                 .setReplace(false)
-                .add(GemstyneMineralBlocks.COMPACT_DIRT);
+                .add(GemstyneBlockHandler.COMPACT_DIRT);
 
         // ======
         // <===== Tool-Level Requirements =====>
         // ======
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsStoneTool())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.MOCHITE.stoneOre())
-                .add(GemstyneOreBlocks.MOCHITE.deepslateOre())
-                .add(GemstyneOreBlocks.MOCHITE.rawBlock())
 
-                .add(GemstyneOreBlocks.TIN.stoneOre())
-                .add(GemstyneOreBlocks.TIN.deepslateOre())
-                .add(GemstyneOreBlocks.TIN.rawBlock())
-                .add(GemstyneOreBlocks.TIN.pureBlock())
-
-                .add(GemstyneMineralBlocks.COMPRESSED_ANDESITE)
-                .add(GemstyneMineralBlocks.COMPRESSED_DIORITE)
-                .add(GemstyneMineralBlocks.COMPRESSED_GRANITE);
+                .add(GemstyneBlockHandler.COMPRESSED_ANDESITE)
+                .add(GemstyneBlockHandler.COMPRESSED_DIORITE)
+                .add(GemstyneBlockHandler.COMPRESSED_GRANITE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsIronTool())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.ALDUS.netherOre())
-                .add(GemstyneOreBlocks.ALDUS.rawBlock())
-                .add(GemstyneOreBlocks.ALDUS.pureBlock())
 
-                .add(GemstyneMineralBlocks.COMPACT_DIRT);
+                .add(GemstyneBlockHandler.COMPACT_DIRT);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsDiamondTool())
                 .setReplace(false)
-                .add(GemstyneOreBlocks.MOCHITE.pureBlock())
-
-                .add(GemstyneOreBlocks.URANIUM.deepslateOre())
-                .add(GemstyneOreBlocks.URANIUM.rawBlock())
 
                 .add(GemstyneOreBlocks.IKARITE.clusterBud())
                 .add(GemstyneOreBlocks.IKARITE.largeBud())
@@ -99,12 +82,7 @@ GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
                 .add(GemstyneOreBlocks.IKARITE.buddingBlock())
                 .add(GemstyneOreBlocks.IKARITE.pureBlock())
 
-                .add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE)
                 .add(GemstyneOreBlocks.MORKITE_BLOCK)
-
-                .add(GemstyneOreBlocks.CRIMONITE.netherOre())
-                .add(GemstyneOreBlocks.CRIMONITE.rawBlock())
-                .add(GemstyneOreBlocks.CRIMONITE.pureBlock())
 
                 .add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
                 .add(GemstyneOreBlocks.FIRE_OPAL_BLOCK)
@@ -112,18 +90,17 @@ GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
                 .add(GemstyneOreBlocks.NEFARIUM_ORE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsToolLevel4())
-                .setReplace(false)
-                .add(GemstyneOreBlocks.URANIUM.pureBlock());
+                .setReplace(false);
 
         // ======
         // <===== Replaceables =====>
         // ======
         getOrCreateTagBuilder(GemstyneBlockTags.getCompressedAndesiteOreReplaceables())
                 .setReplace(false)
-                .add(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
+                .add(GemstyneBlockHandler.COMPRESSED_ANDESITE);
         getOrCreateTagBuilder(GemstyneBlockTags.getCompressedGraniteOreReplaceables())
                 .setReplace(false)
-                .add(GemstyneMineralBlocks.COMPRESSED_GRANITE);
+                .add(GemstyneBlockHandler.COMPRESSED_GRANITE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.END_BASE_REPLACEABLES)
             .setReplace(false)
