@@ -51,7 +51,7 @@ public final class GemstyneArmorSet {
      * @return Returns an Armor item with all of the above as its parameters.
      */
     private static ArmorItem assignArmor(OwoItemSettings settings, ArmorMaterial material, ArmorItem.Type type) {
-        return new ArmorItem(material, type, settings.group(GemstyneCreativeGroup.GEMSTYNE));
+        return new ArmorItem(material, type, settings.group(GemstyneCreativeGroup.GEMSTYNE).tab(4));
     }
 
     public Set<ArmorItem> getArmorSet() {
