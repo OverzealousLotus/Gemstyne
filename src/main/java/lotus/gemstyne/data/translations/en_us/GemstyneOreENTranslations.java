@@ -1,100 +1,57 @@
 package lotus.gemstyne.data.translations.en_us;
 
-import lotus.gemstyne.block.GemstyneMineralBlocks;
+import lotus.gemstyne.block.GemstyneBlockHandler;
 import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.block.util.GemstyneBlockSet;
+import lotus.gemstyne.item.GemstyneItemSet;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.util.GemstyneConstants;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import org.apache.commons.lang3.StringUtils;
 
 abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
     protected GemstyneOreENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
 
 
     protected static void generateEnglishOreTranslations(TranslationBuilder translationBuilder) {
-        // ======
-        // <===== Raw Ores =====>
-        // ======
-        translationBuilder.add(GemstyneOreItems.MUTALIUM.raw(), "Raw Mutalium");
-        translationBuilder.add(GemstyneOreItems.MOCHITE.raw(), "Raw Mochite");
-        translationBuilder.add(GemstyneOreItems.TORRIUM.raw(), "Raw Torrium");
-        translationBuilder.add(GemstyneOreItems.TIN.raw(), "Raw Tin");
-        translationBuilder.add(GemstyneOreItems.URANIUM.raw(), "Raw Uranium");
-        translationBuilder.add(GemstyneOreItems.CRIMONITE.raw(), "Raw Crimonite");
-        translationBuilder.add(GemstyneOreItems.ALDUS.raw(), "Raw Aldus");
+        // //////////
+        // ///// Items /////
+        // //////////
         translationBuilder.add(GemstyneOreItems.IKARITE, "Ikarite");
         translationBuilder.add(GemstyneOreItems.GARNET, "Garnet");
         translationBuilder.add(GemstyneOreItems.MORKITE, "Morkite");
 
-        // ======
-        // <===== Refined Ores =====>
-        // ======
-        translationBuilder.add(GemstyneOreItems.MOCHITE.crystal(), "Mochite");
-
-        translationBuilder.add(GemstyneOreItems.MUTALIUM.ingot(), "Mutalium Ingot");
-        translationBuilder.add(GemstyneOreItems.MUTALIUM.nugget(), "Mutalium Nugget");
-
-        translationBuilder.add(GemstyneOreItems.TORRIUM.nugget(), "Torrium Nugget");
-        translationBuilder.add(GemstyneOreItems.TORRIUM.ingot(), "Torrium Ingot");
-
-        translationBuilder.add(GemstyneOreItems.TIN.nugget(), "Tin Nugget");
-        translationBuilder.add(GemstyneOreItems.TIN.ingot(), "Tin Ingot");
-
-        translationBuilder.add(GemstyneOreItems.BRONZE.ingot(), "Bronze Ingot");
-        translationBuilder.add(GemstyneOreItems.BRONZE.chain(), "Bronze Chain");
-        translationBuilder.add(GemstyneOreItems.BRONZE.nugget(), "Bronze Nugget");
-
-        translationBuilder.add(GemstyneOreItems.URANIUM.nugget(), "Uranium Nugget");
-        translationBuilder.add(GemstyneOreItems.URANIUM.chunk(), "Uranium Chunk");
-        translationBuilder.add(GemstyneOreItems.URANIUM.ingot(), "Uranium Ingot");
-
-        translationBuilder.add(GemstyneOreItems.CRIMONITE.nugget(), "Crimonite Nugget");
-        translationBuilder.add(GemstyneOreItems.CRIMONITE.chunk(), "Crimonite Chunk");
-        translationBuilder.add(GemstyneOreItems.CRIMONITE.ingot(), "Crimonite Ingot");
-
-        translationBuilder.add(GemstyneOreItems.ALDUS.nugget(), "Aldus Nugget");
-        translationBuilder.add(GemstyneOreItems.ALDUS.ingot(), "Aldus Ingot");
+        addTranslationSet(translationBuilder, GemstyneOreItems.ALDUS);
+        addTranslationSet(translationBuilder, GemstyneOreItems.BRONZE);
+        addTranslationSet(translationBuilder, GemstyneOreItems.CRIMONITE);
+        addTranslationSet(translationBuilder, GemstyneOreItems.MOCHITE);
+        addTranslationSet(translationBuilder, GemstyneOreItems.MUTALIUM);
+        addTranslationSet(translationBuilder, GemstyneOreItems.TIN);
+        addTranslationSet(translationBuilder, GemstyneOreItems.TORRIUM);
+        addTranslationSet(translationBuilder, GemstyneOreItems.URANIUM);
 
         translationBuilder.add(GemstyneOreItems.FIRE_OPAL, "Fire Opal");
 
         // ======
-        // <===== Ores =====>
+        // <===== Blocks =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.TORRIUM.stoneOre(), "Torrium Ore");
-        translationBuilder.add(GemstyneOreBlocks.TORRIUM.deepslateOre(), "Deepslate Torrium Ore");
-        translationBuilder.add(GemstyneOreBlocks.TORRIUM.netherOre(), "Nether Torrium Ore");
-
-        translationBuilder.add(GemstyneOreBlocks.MOCHITE.stoneOre(), "Mochite Ore");
-        translationBuilder.add(GemstyneOreBlocks.MOCHITE.deepslateOre(), "Deepslate Mochite Ore");
-        translationBuilder.add(GemstyneOreBlocks.MOCHITE.rawBlock(), "Raw Mochite Block");
-
-        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.stoneOre(), "Mutalium Ore");
-        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.deepslateOre(), "Deepslate Mutalium Ore");
-        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.netherOre(), "Nether Mutalium Ore");
-        translationBuilder.add(GemstyneOreBlocks.MUTALIUM.endOre(), "End Mutalium Ore");
-
-        translationBuilder.add(GemstyneOreBlocks.TIN.stoneOre(), "Tin Ore");
-        translationBuilder.add(GemstyneOreBlocks.TIN.deepslateOre(), "Deepslate Tin Ore");
-        translationBuilder.add(GemstyneOreBlocks.TIN.rawBlock(), "Raw Tin Block");
-
-        translationBuilder.add(GemstyneOreBlocks.URANIUM.deepslateOre(), "Deepslate Uranium Ore");
-        translationBuilder.add(GemstyneOreBlocks.URANIUM.rawBlock(), "Raw Uranium Block");
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.ALDUS);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.BUBBLEGEM);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.CRIMONITE);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.MOCHITE);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.MUTALIUM);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.TIN);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.TORRIUM);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.URANIUM);
 
         translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
         translationBuilder.add(GemstyneOreBlocks.MORKITE_BLOCK, "Morkite Block");
-
-        translationBuilder.add(GemstyneOreBlocks.CRIMONITE.netherOre(), "Nether Crimonite Ore");
-        translationBuilder.add(GemstyneOreBlocks.CRIMONITE.rawBlock(), "Raw Crimonite Block");
-
-        translationBuilder.add(GemstyneOreBlocks.ALDUS.netherOre(), "Nether Aldus Ore");
-        translationBuilder.add(GemstyneOreBlocks.ALDUS.rawBlock(), "Raw Aldus Block");
 
         translationBuilder.add(
                 GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE,
                 "Compressed Granite Fire Opal Ore");
 
-        // ======
-        // <===== Ore Extensions =====>
-        // ======
         translationBuilder.add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE,
                 "Compressed Granite Coal Ore");
 
@@ -124,14 +81,45 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Minerals =====>
         // ======
-        translationBuilder.add(GemstyneMineralBlocks.HALITE, "Halite");
-        translationBuilder.add(GemstyneMineralBlocks.PUMICE, "Pumice");
-        translationBuilder.add(GemstyneMineralBlocks.GABBRO, "Gabbro");
+        translationBuilder.add(GemstyneBlockHandler.HALITE, "Halite");
+        translationBuilder.add(GemstyneBlockHandler.PUMICE, "Pumice");
+        translationBuilder.add(GemstyneBlockHandler.GABBRO, "Gabbro");
 
-        translationBuilder.add(GemstyneMineralBlocks.COMPACT_DIRT, "Compact Dirt");
+        translationBuilder.add(GemstyneBlockHandler.COMPACT_DIRT, "Compact Dirt");
 
-        translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_ANDESITE, "Compressed Andesite");
-        translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_DIORITE, "Compressed Diorite");
-        translationBuilder.add(GemstyneMineralBlocks.COMPRESSED_GRANITE, "Compressed Granite");
+        translationBuilder.add(GemstyneBlockHandler.COMPRESSED_ANDESITE, "Compressed Andesite");
+        translationBuilder.add(GemstyneBlockHandler.COMPRESSED_DIORITE, "Compressed Diorite");
+        translationBuilder.add(GemstyneBlockHandler.COMPRESSED_GRANITE, "Compressed Granite");
+    }
+
+    /**
+     * Automatically generates English translations.
+     * @param translationBuilder {@link net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder}
+     * @param blockSet {@link GemstyneBlockSet}
+     */
+    private static void addTranslationSet(TranslationBuilder translationBuilder, GemstyneBlockSet blockSet) {
+        blockSet.getBlockMap().forEach((blockType, blockPair) -> {
+            switch (blockType) {
+                case GemstyneConstants.STONE -> translationBuilder.add(blockPair.block(), StringUtils.capitalize(blockSet.getSetName()) + " Ore");
+                case "raw" -> translationBuilder.add(blockPair.block(), "Raw " + StringUtils.capitalize(blockSet.getSetName()) + " Block");
+                case "pure" -> translationBuilder.add(blockPair.block(), StringUtils.capitalize(blockSet.getSetName()) + " Block");
+                default -> translationBuilder.add(blockPair.block(), StringUtils.capitalize(blockType) + " " + StringUtils.capitalize(blockSet.getSetName()) + " Ore");
+            }
+        });
+    }
+
+    /**
+     * Automatically generates English translations.
+     * @param translationBuilder {@link net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder}
+     * @param itemSet {@link GemstyneItemSet}
+     */
+    private static void addTranslationSet(TranslationBuilder translationBuilder, GemstyneItemSet itemSet) {
+        itemSet.getItemMap().forEach((itemType, itemPair) -> {
+            if (itemType.equals("raw")) {
+                translationBuilder.add(itemPair.item(), "Raw " + StringUtils.capitalize(itemSet.getSetName()));
+            } else {
+                translationBuilder.add(itemPair.item(), StringUtils.capitalize(itemSet.getSetName()) + " " + StringUtils.capitalize(itemType));
+            }
+        });
     }
 }

@@ -38,22 +38,25 @@ abstract class GemstyneEquipmentENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Tools =====>
         // ======
-        translationBuilder.add(GemstyneToolItems.ALDUS.axe, "Aldus Axe");
-        translationBuilder.add(GemstyneToolItems.ALDUS.hoe, "Aldus Hoe");
-        translationBuilder.add(GemstyneToolItems.ALDUS.pickaxe, "Aldus Pickaxe");
-        translationBuilder.add(GemstyneToolItems.ALDUS.shovel, "Aldus Shovel");
-        translationBuilder.add(GemstyneToolItems.ALDUS.sword, "Aldus Sword");
+        translationBuilder.add(GemstyneToolItems.ALDUS.getAxe(), "Aldus Axe");
+        translationBuilder.add(GemstyneToolItems.ALDUS.getHoe(), "Aldus Hoe");
+        translationBuilder.add(GemstyneToolItems.ALDUS.getPickaxe(), "Aldus Pickaxe");
+        translationBuilder.add(GemstyneToolItems.ALDUS.getShovel(), "Aldus Shovel");
+        translationBuilder.add(GemstyneToolItems.ALDUS.getSword(), "Aldus Sword");
 
-        translationBuilder.add(GemstyneToolItems.BRONZE.axe, "Bronze Axe");
-        translationBuilder.add(GemstyneToolItems.BRONZE.hoe, "Bronze Hoe");
-        translationBuilder.add(GemstyneToolItems.BRONZE.pickaxe, "Bronze Pickaxe");
-        translationBuilder.add(GemstyneToolItems.BRONZE.shovel, "Bronze Shovel");
-        translationBuilder.add(GemstyneToolItems.BRONZE.sword, "Bronze Sword");
+        translationBuilder.add(GemstyneToolItems.BRONZE.getAxe(), "Bronze Axe");
+        translationBuilder.add(GemstyneToolItems.BRONZE.getHoe(), "Bronze Hoe");
+        translationBuilder.add(GemstyneToolItems.BRONZE.getPickaxe(), "Bronze Pickaxe");
+        translationBuilder.add(GemstyneToolItems.BRONZE.getShovel(), "Bronze Shovel");
+        translationBuilder.add(GemstyneToolItems.BRONZE.getSword(), "Bronze Sword");
 
-        translationBuilder.add(GemstyneToolItems.RENDFIRE.axe, "Rendfire Axe");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE.hoe, "Rendfire Hoe");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE.pickaxe, "Rendfire Pickaxe");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE.shovel, "Rendfire Shovel");
-        translationBuilder.add(GemstyneToolItems.RENDFIRE.sword, "Rendfire Sword");
+        translationBuilder.add(GemstyneToolItems.MUTALIUM.getAxe(), "Mutalium Axe");
+        translationBuilder.add(GemstyneToolItems.MUTALIUM.getSword(), "Mutalium Sword");
+
+        translationBuilder.add(GemstyneToolItems.RENDFIRE.getAxe(), "Rendfire Axe");
+        translationBuilder.add(GemstyneToolItems.RENDFIRE.getHoe(), "Rendfire Hoe");
+        translationBuilder.add(GemstyneToolItems.RENDFIRE.getPickaxe(), "Rendfire Pickaxe");
+        translationBuilder.add(GemstyneToolItems.RENDFIRE.getShovel(), "Rendfire Shovel");
+        translationBuilder.add(GemstyneToolItems.RENDFIRE.getSword(), "Rendfire Sword");
     }
 }
