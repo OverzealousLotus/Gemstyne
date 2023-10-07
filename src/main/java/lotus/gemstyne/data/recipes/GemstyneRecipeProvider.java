@@ -1,6 +1,6 @@
 package lotus.gemstyne.data.recipes;
 
-import lotus.gemstyne.block.GemstyneBlockSet;
+import lotus.gemstyne.block.util.GemstyneBlockSet;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.armor.GemstyneArmorItems;
 import lotus.gemstyne.item.GemstyneItemSet;
@@ -86,7 +86,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.BRONZE);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.CRIMONITE);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.MOCHITE.crystal(),
-            GemstyneOreItems.MOCHITE.nugget(), GemstyneOreItems.MOCHITE.setName());
+            GemstyneOreItems.MOCHITE.nugget(), GemstyneOreItems.MOCHITE.getSetName());
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.MUTALIUM);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.TIN);
         offerReversibleNuggetRecipe(exporter, GemstyneOreItems.TORRIUM);
@@ -219,12 +219,12 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .input(set.ingot())
                 .criterion(RecipeProvider.hasItem(set.ingot()),
                         RecipeProvider.conditionsFromItem(set.ingot()))
-                .offerTo(exporter, new Identifier(set.setName() + "_" + "ingot_to_nugget"));
+                .offerTo(exporter, new Identifier(set.getSetName() + "_" + "ingot_to_nugget"));
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, set.ingot())
                 .input(set.nugget(), 9)
                 .criterion(RecipeProvider.hasItem(set.nugget()),
                         RecipeProvider.conditionsFromItem(set.nugget()))
-                .offerTo(exporter, new Identifier(set.setName() + "_" + "nugget_to_ingot"));
+                .offerTo(exporter, new Identifier(set.getSetName() + "_" + "nugget_to_ingot"));
     }
 
     private static void offerReversibleNuggetRecipe(Consumer<RecipeJsonProvider> exporter, Item purity, Item nugget, String name) {

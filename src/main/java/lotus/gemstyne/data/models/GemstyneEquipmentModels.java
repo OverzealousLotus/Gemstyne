@@ -2,8 +2,10 @@ package lotus.gemstyne.data.models;
 
 import lotus.gemstyne.armor.GemstyneArmorItems;
 import lotus.gemstyne.tool.GemstyneToolItems;
+import lotus.gemstyne.tool.GemstyneToolSet;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 
 public class GemstyneEquipmentModels {
     private GemstyneEquipmentModels() {}
@@ -37,22 +39,9 @@ public class GemstyneEquipmentModels {
         // ======
         // <===== Tools =====>
         // ======
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.axe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.hoe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.pickaxe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.shovel, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.RENDFIRE.sword, Models.HANDHELD);
-
-        itemModelGenerator.register(GemstyneToolItems.BRONZE.axe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.BRONZE.hoe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.BRONZE.pickaxe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.BRONZE.shovel, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.BRONZE.sword, Models.HANDHELD);
-
-        itemModelGenerator.register(GemstyneToolItems.ALDUS.axe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS.hoe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS.pickaxe, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS.shovel, Models.HANDHELD);
-        itemModelGenerator.register(GemstyneToolItems.ALDUS.sword, Models.HANDHELD);
+        GemstyneToolItems.ALDUS.registerToolModels(itemModelGenerator);
+        GemstyneToolItems.BRONZE.registerToolModels(itemModelGenerator);
+        GemstyneToolItems.MUTALIUM.registerToolModels(itemModelGenerator);
+        GemstyneToolItems.RENDFIRE.registerToolModels(itemModelGenerator);
     }
 }

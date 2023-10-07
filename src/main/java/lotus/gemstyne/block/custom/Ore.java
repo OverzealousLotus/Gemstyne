@@ -11,6 +11,10 @@ public class Ore extends ExperienceDroppingBlock {
         super(settings, experience);
     }
 
+    /**
+     * Builder method for {@link Ore}. This class is subject to change, and primarily exists to prevent methods
+     * from being accessed once it is finished constructing an instance of {@link Ore}.
+     */
     public static class Builder {
         private Settings settings = FabricBlockSettings.copyOf(Blocks.IRON_ORE);
         private final IntProvider experience;
@@ -22,7 +26,6 @@ public class Ore extends ExperienceDroppingBlock {
         public static Builder start(IntProvider experience) {
             return new Builder(experience);
         }
-
         public Builder settings(AbstractBlock settings) {
             this.settings = FabricBlockSettings.copyOf(settings);
             return this;

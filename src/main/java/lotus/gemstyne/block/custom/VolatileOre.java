@@ -1,6 +1,8 @@
 package lotus.gemstyne.block.custom;
 
 import io.wispforest.owo.particles.ClientParticles;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -29,6 +31,7 @@ public class VolatileOre extends ExperienceDroppingBlock {
     }
 
     @Override
+    @Environment(EnvType.CLIENT)
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         int chance = world.getDimension().ultrawarm() ? 18 : 5;
 

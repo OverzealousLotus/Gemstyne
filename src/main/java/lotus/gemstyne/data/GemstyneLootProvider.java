@@ -1,6 +1,6 @@
 package lotus.gemstyne.data;
 
-import lotus.gemstyne.block.GemstyneMineralBlocks;
+import lotus.gemstyne.block.GemstyneBlockHandler;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -32,10 +32,14 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Overworld Ore Loot =====>
         // ======
+        gemstyneOreDrops(GemstyneOreBlocks.BUBBLEGEM.stoneOre(), GemstyneOreItems.BUBBLEGEM);
+        gemstyneOreDrops(GemstyneOreBlocks.BUBBLEGEM.deepslateOre(), GemstyneOreItems.BUBBLEGEM);
+
         gemstyneOreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, GemstyneOreItems.FIRE_OPAL);
 
         gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.stoneOre(), GemstyneOreItems.MOCHITE.raw());
         gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.deepslateOre(), GemstyneOreItems.MOCHITE.raw());
+        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.netherOre(), GemstyneOreItems.MOCHITE.nugget());
 
         gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.stoneOre(), GemstyneOreItems.MUTALIUM.raw());
         gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.deepslateOre(), GemstyneOreItems.MUTALIUM.raw());
@@ -57,10 +61,10 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Nether Ore Loot =====>
         // ======
-
         gemstyneOreDrops(GemstyneOreBlocks.ALDUS.netherOre(), GemstyneOreItems.ALDUS.raw());
 
         gemstyneOreDrops(GemstyneOreBlocks.CRIMONITE.netherOre(), GemstyneOreItems.CRIMONITE.raw());
+
         // ======
         // <===== Ore Extension Loot =====>
         // ======
@@ -72,6 +76,8 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         addDrop(GemstyneOreBlocks.ALDUS.rawBlock());
         addDrop(GemstyneOreBlocks.ALDUS.pureBlock());
+
+        addDrop(GemstyneOreBlocks.BUBBLEGEM.pureBlock());
 
         addDrop(GemstyneOreBlocks.CRIMONITE.rawBlock());
         addDrop(GemstyneOreBlocks.CRIMONITE.pureBlock());
@@ -95,15 +101,15 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Mineral Loot =====>
         // ======
-        addDrop(GemstyneMineralBlocks.COMPRESSED_GRANITE);
-        addDrop(GemstyneMineralBlocks.COMPRESSED_DIORITE);
-        addDrop(GemstyneMineralBlocks.COMPRESSED_ANDESITE);
+        addDrop(GemstyneBlockHandler.COMPRESSED_GRANITE);
+        addDrop(GemstyneBlockHandler.COMPRESSED_DIORITE);
+        addDrop(GemstyneBlockHandler.COMPRESSED_ANDESITE);
 
-        addDrop(GemstyneMineralBlocks.COMPACT_DIRT);
+        addDrop(GemstyneBlockHandler.COMPACT_DIRT);
 
-        addDrop(GemstyneMineralBlocks.HALITE);
-        addDrop(GemstyneMineralBlocks.PUMICE);
-        addDrop(GemstyneMineralBlocks.GABBRO);
+        addDrop(GemstyneBlockHandler.HALITE);
+        addDrop(GemstyneBlockHandler.PUMICE);
+        addDrop(GemstyneBlockHandler.GABBRO);
 
         // ======
         // <===== Geode Drops =====>
@@ -114,7 +120,6 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
                 Items.LAPIS_LAZULI, 1, 3);
 
         gemstyneOreDrops(GemstyneOreBlocks.NEFARIUM_ORE, Items.DIAMOND);
-        gemstyneOreDrops(GemstyneOreBlocks.BUBBLEGEM_ORE, GemstyneOreItems.BUBBLEGEM);
     }
 
 

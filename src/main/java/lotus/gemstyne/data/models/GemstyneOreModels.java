@@ -5,6 +5,7 @@ import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
 
 public final class GemstyneOreModels {
     private GemstyneOreModels() {}
@@ -21,14 +22,11 @@ public final class GemstyneOreModels {
         // =====
         // <===== Overworld =====>
         // =====
-
-        GemstyneOreBlocks.TORRIUM.generateModels(blockStateModelGenerator);
-
-        blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
-
+        GemstyneOreBlocks.BUBBLEGEM.generateModels(blockStateModelGenerator);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
         GemstyneOreBlocks.MOCHITE.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.MUTALIUM.generateModels(blockStateModelGenerator);
+        GemstyneOreBlocks.TORRIUM.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.TIN.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.URANIUM.generateModels(blockStateModelGenerator);
 
@@ -52,7 +50,6 @@ public final class GemstyneOreModels {
                 GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.NEFARIUM_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.BUBBLEGEM_ORE);
     }
 
 

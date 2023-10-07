@@ -27,6 +27,8 @@ public final class GemstyneToolItems {
             BRONZE_DAMAGE, BRONZE_SPEED, "bronze", GemstyneToolMaterials.BRONZE, GemstyneOreItems.BRONZE.ingot());
     public static final GemstyneToolSet RENDFIRE = new GemstyneToolSet(new OwoItemSettings(),
             RENDFIRE_DAMAGE, RENDFIRE_SPEED, "rendfire", GemstyneToolMaterials.RENDFIRE, GemstyneOreItems.FIRE_OPAL);
+    public static final GemstyneToolSet MUTALIUM = new GemstyneToolSet(new OwoItemSettings(),
+        ALDUS_DAMAGE, ALDUS_DAMAGE, "mutalium", GemstyneToolMaterials.ALDUS, GemstyneOreItems.MUTALIUM.ingot());
 
 
     public static void registerToolItems() { Gemstyne.LOGGER.info("Registering Tool Items..."); }

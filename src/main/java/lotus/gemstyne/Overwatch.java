@@ -6,7 +6,7 @@ import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.GemstyneItemHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
-import lotus.gemstyne.util.GemstyneRegistries;
+import lotus.gemstyne.util.GemstyneRegistry;
 
 /**
  * <h2>Overwatch</h2>
@@ -33,6 +33,6 @@ public final class Overwatch {
         GemstyneItemHandler.registerGemstyneItems();
         GemstyneBlockHandler.registerGemstyneBlocks();
         GemstyneBlockEntities.registerBlockEntities();
-        GemstyneRegistries.registerGemstyneMisc();
+        GemstyneRegistry.registerGemstyneMisc();
     }
 }

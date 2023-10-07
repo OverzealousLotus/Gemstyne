@@ -1,6 +1,6 @@
 package lotus.gemstyne.block.custom;
 
-import lotus.gemstyne.block.GemstyneGeodeSet;
+import lotus.gemstyne.block.util.GemstyneGeodeSet;
 import net.minecraft.block.*;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.server.world.ServerWorld;

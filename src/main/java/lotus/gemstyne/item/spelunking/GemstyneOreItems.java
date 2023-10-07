@@ -16,37 +16,33 @@ public final class GemstyneOreItems {
     // <===== Nutrients =====>
     // =====
     private static final FoodComponent MOCHITE_FOOD =
-            new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build();
+        new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build();
     private static final FoodComponent IKARITE_FOOD =
-            new FoodComponent.Builder().hunger(1).saturationModifier(1.0f).meat()
-                    .statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 80), 100).build();
+        new FoodComponent.Builder().hunger(1).saturationModifier(1.0f).meat()
+                .statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 80), 100).build();
 
     // =====
     // <=====| Ore Sets |=====>
     // =====
-    public static final GemstyneItemSet ALDUS = new GemstyneItemSet("aldus").createDefaultItemSet(false).create();
-    public static final GemstyneItemSet BRONZE = new GemstyneItemSet("bronze")
-            .createDefaultItemSet(true).createItemVariant("chain").create();
-    public static final GemstyneItemSet CRIMONITE = new GemstyneItemSet("crimonite")
-            .createDefaultItemSet(false).createItemVariant("chunk").create();
-    public static final GemstyneItemSet MUTALIUM = new GemstyneItemSet("mutalium").createDefaultItemSet(false).create();
-    public static final GemstyneItemSet TORRIUM = new GemstyneItemSet("torrium").createDefaultItemSet(false).create();
-    public static final GemstyneItemSet TIN = new GemstyneItemSet("tin").createDefaultItemSet(false).create();
-    public static final GemstyneItemSet URANIUM = new GemstyneItemSet("uranium")
-            .createDefaultItemSet(false).createItemVariant("chunk").create();
+    public static final GemstyneItemSet ALDUS = GemstyneItemSet.Builder.start("aldus").tab(2).createDefaultItemSet(false);
+    public static final GemstyneItemSet BRONZE = GemstyneItemSet.Builder.start("bronze")
+        .tab(2).createItemVariant("chain").createDefaultItemSet(true);
+    public static final GemstyneItemSet CRIMONITE = GemstyneItemSet.Builder.start("crimonite")
+        .tab(2).createItemVariant("chunk").createDefaultItemSet(false);
+    public static final GemstyneItemSet MUTALIUM = GemstyneItemSet.Builder.start("mutalium").tab(2).createDefaultItemSet(false);
+    public static final GemstyneItemSet TORRIUM = GemstyneItemSet.Builder.start("torrium").createDefaultItemSet(false);
+    public static final GemstyneItemSet TIN = GemstyneItemSet.Builder.start("tin").createDefaultItemSet(false);
+    public static final GemstyneItemSet URANIUM = GemstyneItemSet.Builder.start("uranium")
+        .createItemVariant("chunk").createDefaultItemSet(false);
 
     // =====
     // <=====| Singleton Ores |=====>
     // =====
-    public static final GemstyneItemSet MOCHITE = new GemstyneItemSet("mochite")
-        .createRaw()
-        .addFood(MOCHITE_FOOD)
-        .createCrystal()
-        .createItemVariant("nugget")
-        .create();
+    public static final GemstyneItemSet MOCHITE = GemstyneItemSet.Builder.start("mochite").tab(3).createRaw()
+        .addFood(MOCHITE_FOOD).createCrystal().createItemVariant("nugget").end();
 
     public static final Item BUBBLEGEM = GemstyneRegistry.designateItem("bubblegem",
-        new OwoItemSettings().food(new FoodComponent.Builder().snack()
+        new OwoItemSettings().tab(3).food(new FoodComponent.Builder().snack()
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80), 1.0f).build()));
 
     // ======

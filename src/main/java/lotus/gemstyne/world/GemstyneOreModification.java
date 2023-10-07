@@ -2,7 +2,7 @@ package lotus.gemstyne.world;
 
 import com.google.common.collect.*;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.GemstyneBlockSet;
+import lotus.gemstyne.block.util.GemstyneBlockSet;
 import lotus.gemstyne.util.GemstyneBlockTags;
 import lotus.gemstyne.util.GemstyneConstants;
 import net.minecraft.registry.Registerable;
