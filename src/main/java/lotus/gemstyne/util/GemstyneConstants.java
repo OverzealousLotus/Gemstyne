@@ -6,6 +6,7 @@ package lotus.gemstyne.util;
 public abstract class GemstyneConstants {
     private GemstyneConstants() {}
 
+    ///// Keywords
     public static final String STONE = "stone";
     public static final String DEEPSLATE = "deepslate";
     public static final String NETHER = "nether";
