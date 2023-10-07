@@ -1,6 +1,6 @@
 package lotus.gemstyne.data.models;
 
-import lotus.gemstyne.block.GemstyneMineralBlocks;
+import lotus.gemstyne.block.GemstyneBlockHandler;
 import net.minecraft.data.client.BlockStateModelGenerator;
 
 public final class GemstyneMineralModels {
@@ -11,20 +11,20 @@ public final class GemstyneMineralModels {
         // <===== Quadrilateral Minerals =====>
         // =====
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneMineralBlocks.HALITE);
+                GemstyneBlockHandler.HALITE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneMineralBlocks.PUMICE);
+                GemstyneBlockHandler.PUMICE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneMineralBlocks.GABBRO);
+                GemstyneBlockHandler.GABBRO);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneMineralBlocks.COMPACT_DIRT);
+                GemstyneBlockHandler.COMPACT_DIRT);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneMineralBlocks.COMPRESSED_GRANITE);
+                GemstyneBlockHandler.COMPRESSED_GRANITE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneMineralBlocks.COMPRESSED_DIORITE);
+                GemstyneBlockHandler.COMPRESSED_DIORITE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(
-                GemstyneMineralBlocks.COMPRESSED_ANDESITE);
+            GemstyneBlockHandler.COMPRESSED_ANDESITE);
     }
 }
