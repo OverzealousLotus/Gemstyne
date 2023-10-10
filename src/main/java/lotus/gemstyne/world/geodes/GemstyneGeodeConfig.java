@@ -31,19 +31,19 @@ public final class GemstyneGeodeConfig {
         // <===== Geodes =====>
         // =====
         createGeodeConfig(context, IKARITE_KEY, Blocks.AIR, GemstyneOreBlocks.IKARITE.pureBlock(),
-            GemstyneOreBlocks.IKARITE.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, GemstyneOreBlocks.IKARITE.budSet(),
+            GemstyneOreBlocks.IKARITE.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, GemstyneOreBlocks.IKARITE.getBudSet(),
             new GeodeLayerThicknessConfig(1.4D, 1.0D, 2.2D, 3.0D),
             new GeodeCrackConfig(0.05D, 0.5D, 1), 0.5D,
             new Pair<>(0.08D, true), UniformIntProvider.create(3, 8), UniformIntProvider.create(2, 6),
             UniformIntProvider.create(1, 2), -15, 18, 0.070D, 1);
         createGeodeConfig(context, LAPIS_KEY, Blocks.AIR, Blocks.LAPIS_BLOCK, GemstyneOreBlocks.LAPIS.buddingBlock(),
-            Blocks.DEEPSLATE_LAPIS_ORE, Blocks.COBBLED_DEEPSLATE, GemstyneOreBlocks.LAPIS.budSet(),
+            Blocks.DEEPSLATE_LAPIS_ORE, Blocks.COBBLED_DEEPSLATE, GemstyneOreBlocks.LAPIS.getBudSet(),
             new GeodeLayerThicknessConfig(1.5D, 1.2D, 2.5D, 3.5D),
             new GeodeCrackConfig(0.10D, 0.5D, 1), 0.5D,
             new Pair<>(0.1D, true), UniformIntProvider.create(3, 8), UniformIntProvider.create(2, 6),
             UniformIntProvider.create(1, 2), -18, 18, 0.075D, 1);
         createGeodeConfig(context, GARNET_KEY, Blocks.AIR, GemstyneOreBlocks.GARNET.pureBlock(),
-            GemstyneOreBlocks.GARNET.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, GemstyneOreBlocks.GARNET.budSet(),
+            GemstyneOreBlocks.GARNET.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, GemstyneOreBlocks.GARNET.getBudSet(),
             new GeodeLayerThicknessConfig(1.5D, 1.2D, 2.0D, 3.0D),
             new GeodeCrackConfig(0.10D, 0.5D, 1), 0.5D,
             new Pair<>(0.1D, true), UniformIntProvider.create(3, 7), UniformIntProvider.create(2, 5),

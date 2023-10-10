@@ -3,6 +3,7 @@ package lotus.gemstyne.data.translations.en_us;
 import lotus.gemstyne.block.GemstyneBlockHandler;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.block.util.GemstyneBlockSet;
+import lotus.gemstyne.block.util.GemstyneGeodeSet;
 import lotus.gemstyne.item.GemstyneItemSet;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import lotus.gemstyne.util.GemstyneConstants;
@@ -58,25 +59,9 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Geodes =====>
         // ======
-        translationBuilder.add(GemstyneOreBlocks.GARNET.clusterBud(), "Garnet Cluster");
-        translationBuilder.add(GemstyneOreBlocks.GARNET.largeBud(), "Large Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.GARNET.mediumBud(), "Medium Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.GARNET.smallBud(), "Small Garnet Bud");
-        translationBuilder.add(GemstyneOreBlocks.GARNET.pureBlock(), "Garnet Block");
-        translationBuilder.add(GemstyneOreBlocks.GARNET.buddingBlock(), "Budding Garnet");
-
-        translationBuilder.add(GemstyneOreBlocks.LAPIS.clusterBud(), "Lapis Cluster");
-        translationBuilder.add(GemstyneOreBlocks.LAPIS.largeBud(), "Large Lapis Bud");
-        translationBuilder.add(GemstyneOreBlocks.LAPIS.mediumBud(), "Medium Lapis Bud");
-        translationBuilder.add(GemstyneOreBlocks.LAPIS.smallBud(), "Small Lapis Bud");
-        translationBuilder.add(GemstyneOreBlocks.LAPIS.buddingBlock(), "Budding Lapis");
-
-        translationBuilder.add(GemstyneOreBlocks.IKARITE.clusterBud(), "Ikarite Cluster");
-        translationBuilder.add(GemstyneOreBlocks.IKARITE.largeBud(), "Large Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.IKARITE.mediumBud(), "Medium Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.IKARITE.smallBud(), "Small Ikarite Bud");
-        translationBuilder.add(GemstyneOreBlocks.IKARITE.pureBlock(), "Ikarite Block");
-        translationBuilder.add(GemstyneOreBlocks.IKARITE.buddingBlock(), "Budding Ikarite");
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.GARNET);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.LAPIS);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.IKARITE);
 
         // ======
         // <===== Minerals =====>
@@ -119,6 +104,22 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
                 translationBuilder.add(itemPair.item(), "Raw " + StringUtils.capitalize(itemSet.getSetName()));
             } else {
                 translationBuilder.add(itemPair.item(), StringUtils.capitalize(itemSet.getSetName()) + " " + StringUtils.capitalize(itemType));
+            }
+        });
+    }
+
+    /**
+     * Automatically generates English translations.
+     * @param translationBuilder {@link net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder}
+     * @param geodeSet {@link GemstyneGeodeSet}
+     */
+    private static void addTranslationSet(TranslationBuilder translationBuilder, GemstyneGeodeSet geodeSet) {
+        geodeSet.getGeodeMap().forEach((geodeType, geodePair) -> {
+            switch (geodeType) {
+                case GemstyneConstants.BLOCK -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeSet.getSetName()) + " " + StringUtils.capitalize(GemstyneConstants.BLOCK));
+                case "budding" -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeType) + " " + StringUtils.capitalize(geodeSet.getSetName()));
+                case "cluster" -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeSet.getSetName()) + " " + StringUtils.capitalize(geodeType));
+                default -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeType) + " " + StringUtils.capitalize(geodeSet.getSetName()) + " Bud");
             }
         });
     }

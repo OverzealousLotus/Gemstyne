@@ -5,7 +5,6 @@ import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
-import net.minecraft.util.Identifier;
 
 public final class GemstyneOreModels {
     private GemstyneOreModels() {}

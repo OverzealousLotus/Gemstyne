@@ -1,10 +1,10 @@
 package lotus.gemstyne.block.util;
 
 import com.google.common.collect.ImmutableSet;
-import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.BuddingCrystallineBlock;
 import lotus.gemstyne.block.custom.CrystallineBlockBud;
+import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstynePairs.CrystallinePair;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -31,7 +31,6 @@ public final class GemstyneGeodeSet {
     private static final String MEDIUM = "medium";
     private static final String SMALL = "small";
     private static final String BUDDING = "budding";
-    private static final String BLOCK = "block";
 
     private final String setName;
     private final FabricBlockSettings currentSettings = FabricBlockSettings.create().requiresTool()
@@ -73,7 +72,7 @@ public final class GemstyneGeodeSet {
     }
 
     public void createBlock() {
-        this.geodeVariants.put(BLOCK, new CrystallinePair(this.setName + "_block", new AmethystBlock(this.currentSettings)));
+        this.geodeVariants.put(GemstyneConstants.BLOCK, new CrystallinePair(this.setName + "_block", new AmethystBlock(this.currentSettings)));
     }
 
     /**
@@ -83,8 +82,8 @@ public final class GemstyneGeodeSet {
      * @param blockStateModelGenerator {@link BlockStateModelGenerator}
      */
     public void generateBlockModels(BlockStateModelGenerator blockStateModelGenerator, boolean isVanilla) {
-        this.budSet().forEach(blockStateModelGenerator::registerAmethyst);
-        if(!isVanilla) blockStateModelGenerator.registerCubeAllModelTexturePool(this.safelyFetch(BLOCK));
+        this.getBudSet().forEach(blockStateModelGenerator::registerAmethyst);
+        if(!isVanilla) blockStateModelGenerator.registerCubeAllModelTexturePool(this.safelyFetch(GemstyneConstants.BLOCK));
         blockStateModelGenerator.registerCubeAllModelTexturePool(this.safelyFetch(BUDDING));
     }
 
@@ -94,7 +93,7 @@ public final class GemstyneGeodeSet {
      * @param itemModelGenerator {@link ItemModelGenerator}
      */
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        this.budSet().forEach(item -> itemModelGenerator.register(item.asItem(), Models.GENERATED));
+        this.getBudSet().forEach(item -> itemModelGenerator.register(item.asItem(), Models.GENERATED));
     }
 
     public GemstyneGeodeSet createDefaultGeodeSet(boolean isVanilla) {
@@ -142,14 +141,16 @@ public final class GemstyneGeodeSet {
     public Block largeBud() { return safelyFetch(LARGE); }
     public Block mediumBud() { return safelyFetch(MEDIUM); }
     public Block smallBud() { return safelyFetch(SMALL); }
-    public Block pureBlock() { return safelyFetch(BLOCK); }
+    public Block pureBlock() { return safelyFetch(GemstyneConstants.BLOCK); }
     public Block buddingBlock() { return safelyFetch(BUDDING); }
+    public String getSetName() { return this.setName; }
     /**
      * @return Returns an {@link ImmutableSet} of geode buds from {@link GemstyneGeodeSet}
      */
-    public ImmutableSet<Block> budSet() { return this.budSet; }
+    public ImmutableSet<Block> getBudSet() { return this.budSet; }
     /**
      * @return Returns an {@link ImmutableSet} of all geode blocks from {@link GemstyneGeodeSet}
      */
     public ImmutableSet<Block> geodeSet() { return ImmutableSet.copyOf(this.geodeVariants.values().stream().map(CrystallinePair::block).collect(Collectors.toSet())); }
+    public Map<String, CrystallinePair> getGeodeMap() { return this.geodeVariants; }
 }
