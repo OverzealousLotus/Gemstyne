@@ -1,6 +1,7 @@
 package lotus.gemstyne;
 
 import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.client.GeodeCutouts;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -12,20 +13,8 @@ import net.minecraft.util.Identifier;
 public class GemstyneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.clusterBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.largeBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.mediumBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.IKARITE.smallBud(), RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.clusterBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.largeBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.mediumBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.GARNET.smallBud(), RenderLayer.getCutout());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.clusterBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.largeBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.mediumBud(), RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GemstyneOreBlocks.LAPIS.smallBud(), RenderLayer.getCutout());
+        GeodeCutouts.registerGeodeCutouts();
 
         FluidRenderHandlerRegistry.INSTANCE.register(GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE,
                 new SimpleFluidRenderHandler(
