@@ -8,13 +8,14 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
+import java.util.*;
 
 /**
  * RichOre is a type of {@link Block}, wrapped in a {@link BlockEntity} with a set amount of times
@@ -84,7 +85,8 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
             world.setBlockState(pos, newState);  // If so, destroy block.
         } else {
             entity.setCurrentStates(entity.getCurrentStates() - 1);  // Otherwise, decrease and reset.
-            dropStacks(state, world, pos);
+            dropStack(world, pos, Items.DIAMOND.getDefaultStack());
+            // dropStacks(state, world, pos);
             world.setBlockState(pos, state);
         }
     }

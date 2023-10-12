@@ -39,13 +39,11 @@ public final class GemstyneOreBlocks {
         .createPureBlock(GemstyneMiningLevels.NEEDS_IRON_TOOL)
         .end();
 
-    // Stone
     public static final GemstyneBlockSet MOCHITE = GemstyneBlockSet.Builder.start("mochite")
         .setExperience(UniformIntProvider.create(2, 7))
         .createOreType(GemstyneConstants.NETHER, BlockSoundGroup.NETHER_ORE, GemstyneMiningLevels.NEEDS_STONE_TOOL)
         .createDefaultBlockSet(3.0f, GemstyneMiningLevels.NEEDS_STONE_TOOL, GemstyneMiningLevels.NEEDS_STONE_TOOL);
 
-    // Diamond
     public static final GemstyneBlockSet MUTALIUM = GemstyneBlockSet.Builder.start("mutalium")
         .setExperience(UniformIntProvider.create(10, 20))
         .createOre(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
@@ -54,14 +52,13 @@ public final class GemstyneOreBlocks {
         .createOreType("end", BlockSoundGroup.ANCIENT_DEBRIS, GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
         .end();
 
-    /*public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
-        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), 5, UniformIntProvider.create(2, 5))
-    );*/
-
     public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
-        new MutaliumOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(2, 5)));
+        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), Gemstyne.CONFIG.mochiteRichness(), UniformIntProvider.create(2, 5))
+    );
 
-    // Iron
+    /*public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
+        new MutaliumOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(2, 5)));*/
+
     public static final GemstyneBlockSet TORRIUM = GemstyneBlockSet.Builder.start("torrium")
         .createOre(
             new TorriumOre(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).luminance(5), UniformIntProvider.create(5, 10)),
@@ -72,7 +69,6 @@ public final class GemstyneOreBlocks {
             UniformIntProvider.create(5, 10)), BlockSoundGroup.NETHER_ORE, GemstyneMiningLevels.NEEDS_IRON_TOOL)
         .end();
 
-    // Stone
     public static final GemstyneBlockSet TIN = GemstyneBlockSet.Builder.start("tin")
         .setExperience(UniformIntProvider.create(2, 5))
         .createDefaultBlockSet(3.0f, GemstyneMiningLevels.NEEDS_STONE_TOOL, GemstyneMiningLevels.NEEDS_STONE_TOOL);
@@ -91,7 +87,6 @@ public final class GemstyneOreBlocks {
                 .strength(4.5f, 3.0f), UniformIntProvider.create(10, 15))
     );
 
-    // Iron
     public static final Block DEEPSLATE_MORKITE_ORE = GemstyneRegistry.designateBlock("deepslate_morkite_ore",
         new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE)
                 .strength(4.5f, 3.0f), UniformIntProvider.create(3, 10))
@@ -100,7 +95,6 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Nether Ores =====>
     // =====
-    // Iron
     public static final GemstyneBlockSet ALDUS = GemstyneBlockSet.Builder.start("aldus")
         .setExperience(UniformIntProvider.create(2, 5))
         .createDefaultNetherBlockSet(4.0f, GemstyneMiningLevels.NEEDS_IRON_TOOL);

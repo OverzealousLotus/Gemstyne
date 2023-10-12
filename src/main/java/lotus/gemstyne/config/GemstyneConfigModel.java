@@ -18,6 +18,9 @@ public class GemstyneConfigModel {
     @RestartRequired
     public boolean lapisEnabled = true;
 
+    @RestartRequired
+    public int mochiteRichness = 5;
+
     public static class OreConfiguration {
         @SectionHeader("overworld")
         @RestartRequired
