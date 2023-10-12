@@ -1,6 +1,5 @@
 package lotus.gemstyne;
 
-import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.client.GeodeCutouts;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import net.fabricmc.api.ClientModInitializer;
@@ -13,7 +12,6 @@ import net.minecraft.util.Identifier;
 public class GemstyneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-
         GeodeCutouts.registerGeodeCutouts();
 
         FluidRenderHandlerRegistry.INSTANCE.register(GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE,
