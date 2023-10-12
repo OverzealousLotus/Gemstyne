@@ -43,7 +43,7 @@ public class GemstyneBlockSet {
     }
 
     public void generateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        this.blockVariants.values().forEach(blockIdPair -> blockStateModelGenerator.registerCubeAllModelTexturePool(blockIdPair.block()));
+        this.blockVariants.values().forEach(blockIdPair -> blockStateModelGenerator.registerSimpleCubeAll(blockIdPair.block()));
     }
 
     /**
