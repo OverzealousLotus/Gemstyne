@@ -36,8 +36,8 @@ public final class GemstyneGeodeConfig {
             new GeodeCrackConfig(0.05D, 0.5D, 1), 0.5D,
             new Pair<>(0.08D, true), UniformIntProvider.create(3, 8), UniformIntProvider.create(2, 6),
             UniformIntProvider.create(1, 2), -15, 18, 0.070D, 1);
-        createGeodeConfig(context, LAPIS_KEY, Blocks.AIR, Blocks.LAPIS_BLOCK, GemstyneOreBlocks.LAPIS.buddingBlock(),
-            Blocks.DEEPSLATE_LAPIS_ORE, Blocks.COBBLED_DEEPSLATE, GemstyneOreBlocks.LAPIS.getBudSet(),
+        createGeodeConfig(context, LAPIS_KEY, Blocks.AIR, Blocks.CALCITE, GemstyneOreBlocks.LAPIS.buddingBlock(),
+            Blocks.CALCITE, Blocks.COBBLED_DEEPSLATE, GemstyneOreBlocks.LAPIS.getBudSet(),
             new GeodeLayerThicknessConfig(1.5D, 1.2D, 2.5D, 3.5D),
             new GeodeCrackConfig(0.10D, 0.5D, 1), 0.5D,
             new Pair<>(0.1D, true), UniformIntProvider.create(3, 8), UniformIntProvider.create(2, 6),
