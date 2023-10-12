@@ -23,7 +23,9 @@ public class Gemstyne implements ModInitializer {
 	 * <p>If you try to generate Ore that does not exist, Minecraft will crash.</p> */
 	@Override
 	public void onInitialize() {
-		// Step I | Dependencies
+		Overwatch.modObserver();
+
+		// ///// Step I | Dependencies /////
 		Gemstyne.LOGGER.info("[[ Registering Dependencies for " + Gemstyne.MOD_ID + "! ]]");
 		Overwatch.registerDependencies();
 		Gemstyne.LOGGER.info("[[ Successfully registered Dependencies! ]]");
@@ -43,5 +45,7 @@ public class Gemstyne implements ModInitializer {
 		Gemstyne.LOGGER.info("[[ Registering Event Handlers for " + Gemstyne.MOD_ID + "! ]]");
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());
 		Gemstyne.LOGGER.info("[[ Successfully registered Event Handlers!");
+
+		Gemstyne.LOGGER.info("Gemstyne has successfully finished initialization!");
 	}
 }

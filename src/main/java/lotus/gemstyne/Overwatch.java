@@ -7,6 +7,7 @@ import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.GemstyneItemHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 
 /**
  * <h2>Overwatch</h2>
@@ -34,5 +35,11 @@ public final class Overwatch {
         GemstyneBlockHandler.registerGemstyneBlocks();
         GemstyneBlockEntities.registerBlockEntities();
         GemstyneRegistry.registerGemstyneMisc();
+    }
+
+    public static void modObserver() {
+        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
+            Gemstyne.LOGGER.info("Mythic Metals? Amazing project! Gemstyne takes much inspiration from it!");
+        }
     }
 }
