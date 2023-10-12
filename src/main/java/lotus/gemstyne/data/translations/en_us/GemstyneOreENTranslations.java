@@ -10,6 +10,7 @@ import lotus.gemstyne.util.GemstyneConstants;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
 
 abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
     protected GemstyneOreENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
@@ -34,9 +35,9 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
 
         translationBuilder.add(GemstyneOreItems.FIRE_OPAL, "Fire Opal");
 
-        // ======
-        // <===== Blocks =====>
-        // ======
+        // //////////
+        // ///// Blocks /////
+        // //////////
         addTranslationSet(translationBuilder, GemstyneOreBlocks.ALDUS);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.BUBBLEGEM);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.CRIMONITE);
@@ -49,23 +50,20 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, "Deepslate Morkite Ore");
         translationBuilder.add(GemstyneOreBlocks.MORKITE_BLOCK, "Morkite Block");
 
-        translationBuilder.add(
-                GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE,
-                "Compressed Granite Fire Opal Ore");
+        translationBuilder.add(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, "Compressed Granite Fire Opal Ore");
 
-        translationBuilder.add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE,
-                "Compressed Granite Coal Ore");
+        translationBuilder.add(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE, "Compressed Granite Coal Ore");
 
-        // ======
-        // <===== Geodes =====>
-        // ======
+        // //////////
+        // ///// Geodes /////
+        // //////////
         addTranslationSet(translationBuilder, GemstyneOreBlocks.GARNET);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.LAPIS);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.IKARITE);
 
-        // ======
-        // <===== Minerals =====>
-        // ======
+        // //////////
+        // ///// Minerals /////
+        // //////////
         translationBuilder.add(GemstyneBlockHandler.HALITE, "Halite");
         translationBuilder.add(GemstyneBlockHandler.PUMICE, "Pumice");
         translationBuilder.add(GemstyneBlockHandler.GABBRO, "Gabbro");
@@ -78,11 +76,11 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
     }
 
     /**
-     * Automatically generates English translations.
+     * Generates English translations for a {@link GemstyneBlockSet}
      * @param translationBuilder {@link net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder}
      * @param blockSet {@link GemstyneBlockSet}
      */
-    private static void addTranslationSet(TranslationBuilder translationBuilder, GemstyneBlockSet blockSet) {
+    private static void addTranslationSet(TranslationBuilder translationBuilder, @NotNull GemstyneBlockSet blockSet) {
         blockSet.getBlockMap().forEach((blockType, blockPair) -> {
             switch (blockType) {
                 case GemstyneConstants.STONE -> translationBuilder.add(blockPair.block(), StringUtils.capitalize(blockSet.getSetName()) + " Ore");
@@ -94,11 +92,11 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
     }
 
     /**
-     * Automatically generates English translations.
+     * Generates English translations for a {@link GemstyneItemSet}
      * @param translationBuilder {@link net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder}
      * @param itemSet {@link GemstyneItemSet}
      */
-    private static void addTranslationSet(TranslationBuilder translationBuilder, GemstyneItemSet itemSet) {
+    private static void addTranslationSet(TranslationBuilder translationBuilder, @NotNull GemstyneItemSet itemSet) {
         itemSet.getItemMap().forEach((itemType, itemPair) -> {
             if (itemType.equals("raw")) {
                 translationBuilder.add(itemPair.item(), "Raw " + StringUtils.capitalize(itemSet.getSetName()));
@@ -109,11 +107,11 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
     }
 
     /**
-     * Automatically generates English translations.
+     * Generates English translations for a {@link GemstyneGeodeSet}
      * @param translationBuilder {@link net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder}
      * @param geodeSet {@link GemstyneGeodeSet}
      */
-    private static void addTranslationSet(TranslationBuilder translationBuilder, GemstyneGeodeSet geodeSet) {
+    private static void addTranslationSet(TranslationBuilder translationBuilder, @NotNull GemstyneGeodeSet geodeSet) {
         geodeSet.getGeodeMap().forEach((geodeType, geodePair) -> {
             switch (geodeType) {
                 case GemstyneConstants.BLOCK -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeSet.getSetName()) + " " + StringUtils.capitalize(GemstyneConstants.BLOCK));
