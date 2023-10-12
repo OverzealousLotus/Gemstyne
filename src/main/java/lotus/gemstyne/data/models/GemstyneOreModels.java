@@ -34,6 +34,9 @@ public final class GemstyneOreModels {
         blockStateModelGenerator.registerCubeAllModelTexturePool(
                 GemstyneOreBlocks.MORKITE_BLOCK);
 
+        /*BlockStateModelGenerator.BlockTexturePool mochiteOrePool = blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.MOCHITE.stoneOre());
+        mochiteOrePool.same(GemstyneOreBlocks.RICH_MOCHITE_ORE)*/
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.FIRE_OPAL_BLOCK);
 
         // =====
