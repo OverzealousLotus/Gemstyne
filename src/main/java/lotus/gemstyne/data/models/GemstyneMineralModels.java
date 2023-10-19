@@ -4,7 +4,7 @@ import lotus.gemstyne.block.GemstyneBlockHandler;
 import net.minecraft.data.client.BlockStateModelGenerator;
 
 public final class GemstyneMineralModels {
-
+    private GemstyneMineralModels() {}
 
     public static void generateMineralBlockModels(BlockStateModelGenerator blockStateModelGenerator) {
         // =====
