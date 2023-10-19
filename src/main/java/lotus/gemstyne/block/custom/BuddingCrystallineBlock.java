@@ -8,40 +8,43 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 
-public class BuddingCrystallineBlock extends CrystallineBlock {
-    public static final int GROW_CHANCE = 5;
-    private static final Direction[] DIRECTIONS = Direction.values();
-    private final GemstyneGeodeSet budList;
+import java.util.Optional;
 
-    public BuddingCrystallineBlock(AbstractBlock.Settings settings, GemstyneGeodeSet budList) {
+public class BuddingCrystallineBlock extends CrystallineBlock {
+    private static final Direction[] DIRECTIONS = Direction.values();
+    private final GemstyneGeodeSet buds;
+
+    public BuddingCrystallineBlock(AbstractBlock.Settings settings, GemstyneGeodeSet buds) {
         super(settings);
-        this.budList = budList;
+        this.buds = buds;
     }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(GROW_CHANCE) != 0) {
+        if (random.nextInt(5) != 0) {
             return;
         }
-        Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];
-        BlockPos blockPos = pos.offset(direction);
-        BlockState blockState = world.getBlockState(blockPos);
-        Block block = null;
 
-        if (BuddingAmethystBlock.canGrowIn(blockState)) {
-            block = this.budList.smallBud();
-        } else if (blockState.isOf(this.budList.smallBud()) && blockState.get(CrystallineBlockBud.FACING) == direction) {
-            block = this.budList.mediumBud();
-        } else if (blockState.isOf(this.budList.mediumBud()) && blockState.get(CrystallineBlockBud.FACING) == direction) {
-            block = this.budList.largeBud();
-        } else if (blockState.isOf(this.budList.largeBud()) && blockState.get(CrystallineBlockBud.FACING) == direction) {
-            block = this.budList.clusterBud();
+        Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];
+        BlockPos oldBudPos = pos.offset(direction);
+        BlockState oldBud = world.getBlockState(oldBudPos);
+        Optional<Block> newBud = Optional.empty();
+
+        if (BuddingAmethystBlock.canGrowIn(oldBud)) {
+            newBud = Optional.of(this.buds.smallBud());
+        } else if (oldBud.isOf(this.buds.smallBud()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
+            newBud = Optional.of(this.buds.mediumBud());
+        } else if (oldBud.isOf(this.buds.mediumBud()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
+            newBud = Optional.of(this.buds.largeBud());
+        } else if (oldBud.isOf(this.buds.largeBud()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
+            newBud = Optional.of(this.buds.clusterBud());
         }
 
-        // I no longer understand why logger is being ATTACCED
-        if (block != null) {
-            BlockState blockState2 = block.getDefaultState().with(CrystallineBlockBud.FACING, direction).with(CrystallineBlockBud.WATERLOGGED, blockState.getFluidState().getFluid() == Fluids.WATER);
-            world.setBlockState(blockPos, blockState2);
+        if (newBud.isPresent()) {
+            BlockState newBudState = newBud.get().getDefaultState()
+                .with(CrystallineBlockBud.FACING, direction)
+                .with(CrystallineBlockBud.WATERLOGGED, oldBud.getFluidState().getFluid() == Fluids.WATER);
+            world.setBlockState(oldBudPos, newBudState);
         }
     }
 }

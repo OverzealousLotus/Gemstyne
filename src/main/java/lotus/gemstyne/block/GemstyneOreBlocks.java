@@ -133,12 +133,9 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Crystalline Blocks =====>
     // =====
-    public static final GemstyneGeodeSet IKARITE = new GemstyneGeodeSet("ikarite")
-        .createDefaultGeodeSet(false);
-    public static final GemstyneGeodeSet GARNET = new GemstyneGeodeSet("garnet")
-        .createDefaultGeodeSet(false);
-    public static final GemstyneGeodeSet LAPIS = new GemstyneGeodeSet("lapis")
-        .createDefaultGeodeSet(true);
+    public static final GemstyneGeodeSet IKARITE = GemstyneGeodeSet.Builder.start("ikarite").createDefaultSet(false);
+    public static final GemstyneGeodeSet GARNET = GemstyneGeodeSet.Builder.start("garnet").createDefaultSet(false);
+    public static final GemstyneGeodeSet LAPIS = GemstyneGeodeSet.Builder.start("lapis").createDefaultSet(true);
 
     public static void registerOreBlocks() {Gemstyne.LOGGER.info("Registering Ores...");}
 }

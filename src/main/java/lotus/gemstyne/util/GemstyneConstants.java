@@ -14,7 +14,10 @@ public abstract class GemstyneConstants {
     public static final String OVERWORLD = "overworld";
     public static final String END = "end";
     public static final String SMALL = "small";
+    public static final String MEDIUM = "medium";
     public static final String LARGE = "large";
+    public static final String CLUSTER = "cluster";
     public static final String UPPER = "upper";
     public static final String LOWER = "lower";
+    public static final String BUDDING = "budding";
 }
