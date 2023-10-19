@@ -30,14 +30,14 @@
           }
         },
         {
-          "Name": "gemstyne:medium_ikarite_bud",
+          "Name": "gemstyne:large_ikarite_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
           }
         },
         {
-          "Name": "gemstyne:large_ikarite_bud",
+          "Name": "gemstyne:medium_ikarite_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
