@@ -4,6 +4,8 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.sound.BlockSoundGroup;
@@ -44,6 +46,9 @@ public final class GemstyneBlockHandler {
         new Block(FabricBlockSettings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.BASS)
             .strength(1.0f, 1.0f).sounds(BlockSoundGroup.BASALT))
     );
+
+    public static final Block PYRITE = GemstyneRegistry.designateBlock("pyrite",
+        new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE)));
 
     public static void registerGemstyneBlocks() {
         Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");

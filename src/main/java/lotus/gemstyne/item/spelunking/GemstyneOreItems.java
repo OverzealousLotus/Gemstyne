@@ -30,6 +30,7 @@ public final class GemstyneOreItems {
     public static final GemstyneItemSet CRIMONITE = GemstyneItemSet.Builder.start("crimonite")
         .tab(2).createItemVariant("chunk").createDefaultItemSet(false);
     public static final GemstyneItemSet MUTALIUM = GemstyneItemSet.Builder.start("mutalium").tab(2).createDefaultItemSet(false);
+    public static final GemstyneItemSet Pyrite = GemstyneItemSet.Builder.start("pyrite").tab(2).createRaw().end();
     public static final GemstyneItemSet TORRIUM = GemstyneItemSet.Builder.start("torrium").createDefaultItemSet(false);
     public static final GemstyneItemSet TIN = GemstyneItemSet.Builder.start("tin").createDefaultItemSet(false);
     public static final GemstyneItemSet URANIUM = GemstyneItemSet.Builder.start("uranium")

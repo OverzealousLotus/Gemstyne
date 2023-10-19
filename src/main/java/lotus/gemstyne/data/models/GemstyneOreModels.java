@@ -1,5 +1,6 @@
 package lotus.gemstyne.data.models;
 
+import lotus.gemstyne.block.GemstyneBlockHandler;
 import lotus.gemstyne.block.GemstyneOreBlocks;
 import lotus.gemstyne.item.spelunking.GemstyneOreItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -36,6 +37,7 @@ public final class GemstyneOreModels {
 
         /*BlockStateModelGenerator.BlockTexturePool mochiteOrePool = blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.MOCHITE.stoneOre());
         mochiteOrePool.same(GemstyneOreBlocks.RICH_MOCHITE_ORE)*/
+        blockStateModelGenerator.registerSimpleCubeAll(GemstyneBlockHandler.PYRITE);
 
         blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.FIRE_OPAL_BLOCK);
 
@@ -61,6 +63,7 @@ public final class GemstyneOreModels {
         // =====
         GemstyneOreItems.MUTALIUM.generateModels(itemModelGenerator);
         GemstyneOreItems.MOCHITE.generateModels(itemModelGenerator);
+        GemstyneOreItems.Pyrite.generateModels(itemModelGenerator);
         GemstyneOreItems.TORRIUM.generateModels(itemModelGenerator);
         GemstyneOreItems.TIN.generateModels(itemModelGenerator);
         GemstyneOreItems.URANIUM.generateModels(itemModelGenerator);
