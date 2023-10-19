@@ -22,22 +22,22 @@ public final class GemstyneOreModels {
         // <===== Overworld =====>
         // =====
         GemstyneOreBlocks.BUBBLEGEM.generateModels(blockStateModelGenerator);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
         GemstyneOreBlocks.MOCHITE.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.MUTALIUM.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.TORRIUM.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.TIN.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.URANIUM.generateModels(blockStateModelGenerator);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(
+        blockStateModelGenerator.registerSimpleCubeAll(
                 GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(
+        blockStateModelGenerator.registerSimpleCubeAll(
                 GemstyneOreBlocks.MORKITE_BLOCK);
 
         /*BlockStateModelGenerator.BlockTexturePool mochiteOrePool = blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.MOCHITE.stoneOre());
         mochiteOrePool.same(GemstyneOreBlocks.RICH_MOCHITE_ORE)*/
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.FIRE_OPAL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.FIRE_OPAL_BLOCK);
 
         // =====
         // <===== Nether =====>
@@ -48,10 +48,10 @@ public final class GemstyneOreModels {
         // =====
         // <===== Ore Extensions =====>
         // =====
-        blockStateModelGenerator.registerCubeAllModelTexturePool(
+        blockStateModelGenerator.registerSimpleCubeAll(
                 GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.NEFARIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.NEFARIUM_ORE);
     }
 
 
