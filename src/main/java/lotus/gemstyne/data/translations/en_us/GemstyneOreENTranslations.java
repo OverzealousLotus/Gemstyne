@@ -101,10 +101,10 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
      */
     private static void addTranslationSet(TranslationBuilder translationBuilder, @NotNull GemstyneItemSet itemSet) {
         itemSet.getItemMap().forEach((itemType, itemPair) -> {
-            if (itemType.equals("raw")) {
-                translationBuilder.add(itemPair.item(), "Raw " + WordUtils.capitalizeFully(itemSet.getSetName()));
-            } else {
-                translationBuilder.add(itemPair.item(), WordUtils.capitalizeFully(itemSet.getSetName()) + " " + WordUtils.capitalizeFully(itemType));
+            switch (itemType) {
+                case "raw" -> translationBuilder.add(itemPair.item(), "Raw " + WordUtils.capitalizeFully(itemSet.getSetName()));
+                case "singleton" -> translationBuilder.add(itemPair.item(), WordUtils.capitalizeFully(itemSet.getSetName()));
+                default -> translationBuilder.add(itemPair.item(), WordUtils.capitalizeFully(itemSet.getSetName()) + " " + WordUtils.capitalizeFully(itemType));
             }
         });
     }

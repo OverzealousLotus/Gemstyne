@@ -62,7 +62,7 @@ public final class GemstyneItemSet {
     public @NotNull Item nugget() { return fetch("nugget"); }
     public @NotNull Item ingot() { return fetch("ingot"); }
     public @NotNull Item chain() { return fetch("chain"); }
-    public @NotNull Item crystal() { return fetch(this.setName); }
+    public @NotNull Item crystal() { return fetch("singleton"); }
     public @NotNull Map<String, ItemPair> getItemMap() { return this.itemVariants; }
 
     public static class Builder {
@@ -112,7 +112,7 @@ public final class GemstyneItemSet {
          * @return Returns instance of self.
          */
         public Builder createCrystal() {
-            this.itemVariants.put(this.setName, new ItemPair(this.setName, new Item(this.currentSettings)));
+            this.itemVariants.put("singleton", new ItemPair(this.setName, new Item(this.currentSettings)));
             return this;
         }
 
