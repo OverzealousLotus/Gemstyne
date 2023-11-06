@@ -76,11 +76,6 @@ public final class GemstyneItemSet {
 
         public static Builder start(String setName) { return new Builder(setName); }
 
-        public Builder tab(int tabNum) {
-            this.currentSettings.tab(tabNum);
-            return this;
-        }
-
         public Builder addFood(FoodComponent nutrients) {
             this.currentSettings = this.currentSettings.food(nutrients);
 
