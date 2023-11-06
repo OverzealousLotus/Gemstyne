@@ -74,7 +74,7 @@ public class GemstyneRegistry {
      * @return Returns a {@link Block}.
      */
     public static Block designateBlock(String path, Block block) {
-        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE)));
+        Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE).tab(1)));
         return Registry.register(Registries.BLOCK, id(path), block);
     }
 

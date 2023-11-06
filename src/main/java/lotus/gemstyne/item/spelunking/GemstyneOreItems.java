@@ -24,13 +24,13 @@ public final class GemstyneOreItems {
     // =====
     // <=====| Ore Sets |=====>
     // =====
-    public static final GemstyneItemSet ALDUS = GemstyneItemSet.Builder.start("aldus").tab(2).createDefaultItemSet(false);
+    public static final GemstyneItemSet ALDUS = GemstyneItemSet.Builder.start("aldus").createDefaultItemSet(false);
     public static final GemstyneItemSet BRONZE = GemstyneItemSet.Builder.start("bronze")
-        .tab(2).createItemVariant("chain").createDefaultItemSet(true);
+        .createItemVariant("chain").createDefaultItemSet(true);
     public static final GemstyneItemSet CRIMONITE = GemstyneItemSet.Builder.start("crimonite")
-        .tab(2).createItemVariant("chunk").createDefaultItemSet(false);
-    public static final GemstyneItemSet MUTALIUM = GemstyneItemSet.Builder.start("mutalium").tab(2).createDefaultItemSet(false);
-    public static final GemstyneItemSet Pyrite = GemstyneItemSet.Builder.start("pyrite").tab(2).createRaw().end();
+        .createItemVariant("chunk").createDefaultItemSet(false);
+    public static final GemstyneItemSet MUTALIUM = GemstyneItemSet.Builder.start("mutalium").createDefaultItemSet(false);
+    public static final GemstyneItemSet Pyrite = GemstyneItemSet.Builder.start("pyrite").createRaw().end();
     public static final GemstyneItemSet TORRIUM = GemstyneItemSet.Builder.start("torrium").createDefaultItemSet(false);
     public static final GemstyneItemSet TIN = GemstyneItemSet.Builder.start("tin").createDefaultItemSet(false);
     public static final GemstyneItemSet URANIUM = GemstyneItemSet.Builder.start("uranium")
@@ -39,11 +39,11 @@ public final class GemstyneOreItems {
     // =====
     // <=====| Singleton Ores |=====>
     // =====
-    public static final GemstyneItemSet MOCHITE = GemstyneItemSet.Builder.start("mochite").tab(3).createRaw()
+    public static final GemstyneItemSet MOCHITE = GemstyneItemSet.Builder.start("mochite").createRaw()
         .addFood(MOCHITE_FOOD).createCrystal().createItemVariant("nugget").end();
 
     public static final Item BUBBLEGEM = GemstyneRegistry.designateItem("bubblegem",
-        new OwoItemSettings().tab(3).food(new FoodComponent.Builder().snack()
+        new OwoItemSettings().food(new FoodComponent.Builder().snack()
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80), 1.0f).build()));
 
     // ======

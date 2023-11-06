@@ -34,15 +34,15 @@ public class GemstyneToolSet {
             String setName,
             ToolMaterial material,
             Item source) {
-        settings.group(GemstyneCreativeGroup.GEMSTYNE);
+        settings.group(GemstyneCreativeGroup.GEMSTYNE).tab(2);
         this.source = source;
         this.setName = setName;
         this.tools = ImmutableMap.of(
-            "axe", new GemstynePairs.ToolPair(setName + "_axe", new AxeItem(material, attackDamage[0], attackSpeed[0], settings.tab(4))),
-            "hoe", new GemstynePairs.ToolPair(setName + "_hoe", new HoeItem(material, (int) attackDamage[1], attackSpeed[1], settings.tab(4))),
-            "pickaxe", new GemstynePairs.ToolPair(setName + "_pickaxe", new PickaxeItem(material, (int) attackDamage[2], attackSpeed[2], settings.tab(4))),
-            "shovel", new GemstynePairs.ToolPair(setName + "_shovel", new ShovelItem(material, attackDamage[3], attackSpeed[3], settings.tab(4))),
-            "sword", new GemstynePairs.ToolPair(setName + "_sword", new SwordItem(material, (int) attackDamage[4], attackSpeed[4], settings.tab(4)))
+            "axe", new GemstynePairs.ToolPair(setName + "_axe", new AxeItem(material, attackDamage[0], attackSpeed[0], settings)),
+            "hoe", new GemstynePairs.ToolPair(setName + "_hoe", new HoeItem(material, (int) attackDamage[1], attackSpeed[1], settings)),
+            "pickaxe", new GemstynePairs.ToolPair(setName + "_pickaxe", new PickaxeItem(material, (int) attackDamage[2], attackSpeed[2], settings)),
+            "shovel", new GemstynePairs.ToolPair(setName + "_shovel", new ShovelItem(material, attackDamage[3], attackSpeed[3], settings)),
+            "sword", new GemstynePairs.ToolPair(setName + "_sword", new SwordItem(material, (int) attackDamage[4], attackSpeed[4], settings))
         );
         this.registerToolSet(setName);
     }
