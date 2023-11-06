@@ -33,7 +33,8 @@ public class GemstyneLangProvider extends FabricLanguageProvider {
         translationBuilder.add(GemstyneOreBlocks.FIRE_OPAL_BLOCK, "Fire Opal Block");
 
 
-        translationBuilder.add(GemstyneEffects.IRRADIATE, "Irradiate");
+        translationBuilder.add(GemstyneEffects.WEAK_RADIATION, "Minor Radiation");
+        translationBuilder.add(GemstyneEffects.STRONG_RADIATION, "Potent Radiation");
         translationBuilder.add(GemstyneOreBlocks.NEFARIUM_ORE, "Nefarium Ore");
         translationBuilder.add(GemstyneOreItems.BUBBLEGEM, "Bubblegem");
     }
