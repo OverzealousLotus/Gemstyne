@@ -100,7 +100,7 @@
   "item.gemstyne.imbued_feather": "Imbued Feather",
   "item.gemstyne.imbued_rod": "Imbued Rod",
   "item.gemstyne.liquid_morkite_bucket": "Liquid Morkite Bucket",
-  "item.gemstyne.mochite": "Mochite Mochite",
+  "item.gemstyne.mochite": "Mochite",
   "item.gemstyne.mochite_nugget": "Mochite Nugget",
   "item.gemstyne.morkite": "Morkite",
   "item.gemstyne.mutalium_axe": "Mutalium Axe",
@@ -131,6 +131,9 @@
   "item.gemstyne.uranium_ingot": "Uranium Ingot",
   "item.gemstyne.uranium_nugget": "Uranium Nugget",
   "itemGroup.gemstyne.main": "Gemstyne",
+  "itemGroup.gemstyne.main.tab.blocks": "Blocks",
+  "itemGroup.gemstyne.main.tab.equipment": "Equipment",
+  "itemGroup.gemstyne.main.tab.items": "Items",
   "text.config.gemstyne_config.category.oreConfiguration": "Ore Configuration",
   "text.config.gemstyne_config.option.garnetEnabled": "Garnet Geode Generation",
   "text.config.gemstyne_config.option.garnetEnabled.tooltip": "Whether Garnet Geodes generate.",
@@ -161,7 +164,7 @@
   "text.config.gemstyne_config.section.nether": "The Nether",
   "text.config.gemstyne_config.section.overworld": "The Overworld",
   "text.config.gemstyne_config.title": "Gemstyne Configuration Options",
+  "tooltip.gemstyne.imbued_feather": "Do not fly too low, nor too high.",
   "tooltips.gemstyne.aldus": "Resilience",
-  "tooltips.gemstyne.imbued_feather": "Do not fly too low, nor too high.",
   "tooltips.gemstyne.ominous": "Heat Affinity"
 }
