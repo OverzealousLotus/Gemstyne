@@ -90,7 +90,7 @@ public class VolatileOre extends ExperienceDroppingBlock {
      * @param world The {@link World} this explosion takes place in.
      * @param pos Current Block's {@link BlockPos}
      */
-    private static void goCritical(World world, BlockPos pos) {
+    protected void goCritical(World world, BlockPos pos) {
         if (world.getDimension().ultrawarm()) {
             world.createExplosion(null, pos.getX(), pos.getY() + 0.6, pos.getZ(), 3.2f, World.ExplosionSourceType.BLOCK);
         } else {
