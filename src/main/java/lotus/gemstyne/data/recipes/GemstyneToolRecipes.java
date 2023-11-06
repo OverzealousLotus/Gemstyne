@@ -20,15 +20,9 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
 
 
     protected static void generateToolRecipes(Consumer<RecipeJsonProvider> exporter) {
-        // =====
-        // <===== Aldus =====>
-        // =====
         GemstyneToolItems.ALDUS.getTools().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.ALDUS.source));
-
-        // =====
-        // <===== Bronze =====>
-        // =====
         GemstyneToolItems.BRONZE.getTools().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.BRONZE.source));
+        GemstyneToolItems.MUTALIUM.getTools().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.MUTALIUM.source));
 
         // =====
         // <===== Rendfire =====>
