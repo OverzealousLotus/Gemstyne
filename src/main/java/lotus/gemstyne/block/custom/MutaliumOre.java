@@ -19,7 +19,8 @@ import net.minecraft.world.World;
 public class MutaliumOre extends VolatileOre {
     private static final ImmutableList<StatusEffect> effectList = ImmutableList.of(
         StatusEffects.RESISTANCE, StatusEffects.REGENERATION, StatusEffects.SATURATION,
-        StatusEffects.MINING_FATIGUE, StatusEffects.POISON, StatusEffects.HUNGER
+        StatusEffects.MINING_FATIGUE, StatusEffects.POISON, StatusEffects.HUNGER,
+        StatusEffects.LEVITATION, StatusEffects.HASTE, StatusEffects.WEAKNESS
     );
 
     public MutaliumOre(Settings settings, IntProvider experience) {
@@ -46,9 +47,17 @@ public class MutaliumOre extends VolatileOre {
         if(!world.isClient() && !player.isCreative()) {
             Random random = Random.create();
 
-            player.addStatusEffect(new StatusEffectInstance(effectList.get(random.nextInt(3)), random.nextBetweenExclusive(30, 120)));
+            player.addStatusEffect(new StatusEffectInstance(effectList.get(random.nextInt(9)), random.nextBetweenExclusive(30, 120)));
         }
 
         super.onBreak(world, pos, state, player);
+    }
+
+    @Override
+    protected void goCritical(World world, BlockPos pos) {
+        Random random = Random.create();
+
+        world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), random.nextBetweenExclusive(1, 3), World.ExplosionSourceType.BLOCK);
+        super.goCritical(world, pos);
     }
 }
