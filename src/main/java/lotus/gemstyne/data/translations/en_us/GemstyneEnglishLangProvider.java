@@ -11,9 +11,12 @@ public abstract class GemstyneEnglishLangProvider extends FabricLanguageProvider
 
     public static void coupleAndGenerateEnglishLang(TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup.gemstyne.main", "Gemstyne");
+        translationBuilder.add("itemGroup.gemstyne.main.tab.items", "Items");
+        translationBuilder.add("itemGroup.gemstyne.main.tab.blocks", "Blocks");
+        translationBuilder.add("itemGroup.gemstyne.main.tab.equipment", "Equipment");
         translationBuilder.add(GemstyneToolTips.OMINOUS.getTooltipKey(), "Heat Affinity");
         translationBuilder.add(GemstyneToolTips.ALDUS.getTooltipKey(), "Resilience");
-        translationBuilder.add("tooltips.gemstyne.imbued_feather", "Do not fly too low, nor too high.");
+        translationBuilder.add("tooltip.gemstyne.imbued_feather", "Do not fly too low, nor too high.");
         GemstyneOreENTranslations.generateEnglishOreTranslations(translationBuilder);
         GemstyneEquipmentENTranslations.generateEnglishEquipmentTranslations(translationBuilder);
         GemstyneConfigENTranslations.generateEnglishConfigTranslations(translationBuilder);
