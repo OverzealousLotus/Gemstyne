@@ -47,6 +47,7 @@ repositories {
 }
 
 loom {
+	accessWidenerPath = file("src/main/resources/gemstyne.accessWidener")
     runs {
         // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
         datagen {
@@ -89,6 +90,9 @@ dependencies {
 
 	// Mixin Extras
 	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${project.me_version}")))
+
+	// Apache Commons Text
+	implementation("org.apache.commons:commons-text:${project.text_version}")
 }
 
 processResources {

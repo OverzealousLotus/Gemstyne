@@ -10,6 +10,7 @@ import lotus.gemstyne.util.GemstyneConstants;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.WordUtils;
 import org.jetbrains.annotations.NotNull;
 
 abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
@@ -41,6 +42,7 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
         addTranslationSet(translationBuilder, GemstyneOreBlocks.ALDUS);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.BUBBLEGEM);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.CRIMONITE);
+        addTranslationSet(translationBuilder, GemstyneOreBlocks.ENDER_PEARL);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.MOCHITE);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.MUTALIUM);
         addTranslationSet(translationBuilder, GemstyneOreBlocks.TIN);
@@ -81,12 +83,13 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
      * @param blockSet {@link GemstyneBlockSet}
      */
     private static void addTranslationSet(TranslationBuilder translationBuilder, @NotNull GemstyneBlockSet blockSet) {
+        String setName = StringUtils.replace(blockSet.getSetName(), "_", " ");
         blockSet.getBlockMap().forEach((blockType, blockPair) -> {
             switch (blockType) {
-                case GemstyneConstants.STONE -> translationBuilder.add(blockPair.block(), StringUtils.capitalize(blockSet.getSetName()) + " Ore");
-                case "raw" -> translationBuilder.add(blockPair.block(), "Raw " + StringUtils.capitalize(blockSet.getSetName()) + " Block");
-                case "pure" -> translationBuilder.add(blockPair.block(), StringUtils.capitalize(blockSet.getSetName()) + " Block");
-                default -> translationBuilder.add(blockPair.block(), StringUtils.capitalize(blockType) + " " + StringUtils.capitalize(blockSet.getSetName()) + " Ore");
+                case GemstyneConstants.STONE -> translationBuilder.add(blockPair.block(), WordUtils.capitalizeFully(setName) + " Ore");
+                case "raw" -> translationBuilder.add(blockPair.block(), "Raw " + WordUtils.capitalizeFully(setName) + " Block");
+                case "pure" -> translationBuilder.add(blockPair.block(), WordUtils.capitalizeFully(setName) + " Block");
+                default -> translationBuilder.add(blockPair.block(), WordUtils.capitalizeFully(blockType) + " " + WordUtils.capitalizeFully(setName) + " Ore");
             }
         });
     }
@@ -99,9 +102,9 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
     private static void addTranslationSet(TranslationBuilder translationBuilder, @NotNull GemstyneItemSet itemSet) {
         itemSet.getItemMap().forEach((itemType, itemPair) -> {
             if (itemType.equals("raw")) {
-                translationBuilder.add(itemPair.item(), "Raw " + StringUtils.capitalize(itemSet.getSetName()));
+                translationBuilder.add(itemPair.item(), "Raw " + WordUtils.capitalizeFully(itemSet.getSetName()));
             } else {
-                translationBuilder.add(itemPair.item(), StringUtils.capitalize(itemSet.getSetName()) + " " + StringUtils.capitalize(itemType));
+                translationBuilder.add(itemPair.item(), WordUtils.capitalizeFully(itemSet.getSetName()) + " " + WordUtils.capitalizeFully(itemType));
             }
         });
     }
@@ -114,10 +117,10 @@ abstract class GemstyneOreENTranslations extends FabricLanguageProvider {
     private static void addTranslationSet(TranslationBuilder translationBuilder, @NotNull GemstyneGeodeSet geodeSet) {
         geodeSet.getGeodeMap().forEach((geodeType, geodePair) -> {
             switch (geodeType) {
-                case GemstyneConstants.BLOCK -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeSet.getSetName()) + " " + StringUtils.capitalize(GemstyneConstants.BLOCK));
-                case "budding" -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeType) + " " + StringUtils.capitalize(geodeSet.getSetName()));
-                case "cluster" -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeSet.getSetName()) + " " + StringUtils.capitalize(geodeType));
-                default -> translationBuilder.add(geodePair.block(), StringUtils.capitalize(geodeType) + " " + StringUtils.capitalize(geodeSet.getSetName()) + " Bud");
+                case GemstyneConstants.BLOCK -> translationBuilder.add(geodePair.block(), WordUtils.capitalizeFully(geodeSet.getSetName()) + " " + WordUtils.capitalizeFully(GemstyneConstants.BLOCK));
+                case "budding" -> translationBuilder.add(geodePair.block(), WordUtils.capitalizeFully(geodeType) + " " + WordUtils.capitalizeFully(geodeSet.getSetName()));
+                case "cluster" -> translationBuilder.add(geodePair.block(), WordUtils.capitalizeFully(geodeSet.getSetName()) + " " + WordUtils.capitalizeFully(geodeType));
+                default -> translationBuilder.add(geodePair.block(), WordUtils.capitalizeFully(geodeType) + " " + WordUtils.capitalizeFully(geodeSet.getSetName()) + " Bud");
             }
         });
     }
