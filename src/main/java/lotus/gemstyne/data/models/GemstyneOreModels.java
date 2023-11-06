@@ -23,6 +23,7 @@ public final class GemstyneOreModels {
         // <===== Overworld =====>
         // =====
         GemstyneOreBlocks.BUBBLEGEM.generateModels(blockStateModelGenerator);
+        GemstyneOreBlocks.ENDER_PEARL.generateModels(blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
         GemstyneOreBlocks.MOCHITE.generateModels(blockStateModelGenerator);
         GemstyneOreBlocks.MUTALIUM.generateModels(blockStateModelGenerator);
