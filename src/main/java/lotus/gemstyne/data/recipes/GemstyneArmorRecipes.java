@@ -92,9 +92,9 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .pattern("III")
                 .pattern("I I")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
     }
 
 
@@ -107,9 +107,9 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .pattern("III")
                 .pattern("III")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
     }
 
 
@@ -122,9 +122,9 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .pattern("I I")
                 .pattern("I I")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
     }
 
 
@@ -136,8 +136,8 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .pattern("I I")
                 .pattern("I I")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
     }
 }
