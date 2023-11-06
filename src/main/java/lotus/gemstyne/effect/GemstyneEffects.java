@@ -10,11 +10,12 @@ import net.minecraft.util.Identifier;
 public final class GemstyneEffects {
     private GemstyneEffects() {}
     
-    public static final StatusEffect IRRADIATE = registerStatusEffect("irradiate");
+    public static final StatusEffect WEAK_RADIATION = registerStatusEffect("weak_radiation");
+    public static final StatusEffect STRONG_RADIATION = registerStatusEffect("strong_radiation");
 
     public static StatusEffect registerStatusEffect(String name) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(Gemstyne.MOD_ID, name),
-                new IrradiateEffect(StatusEffectCategory.HARMFUL, 4425031));
+                new WeakRadiation(StatusEffectCategory.HARMFUL, 4425031));
     }
 
     public static void registerEffects() {
