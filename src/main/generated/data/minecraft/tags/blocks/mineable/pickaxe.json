@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "gemstyne:morkite_block",
     "gemstyne:halite",
     "gemstyne:pumice",
     "gemstyne:gabbro",
@@ -11,23 +10,6 @@
     "gemstyne:compressed_granite_coal_ore",
     "gemstyne:compressed_granite_fire_opal_ore",
     "gemstyne:fire_opal_block",
-    "gemstyne:nefarium_ore",
-    "gemstyne:small_ikarite_bud",
-    "gemstyne:budding_ikarite",
-    "gemstyne:ikarite_block",
-    "gemstyne:large_ikarite_bud",
-    "gemstyne:medium_ikarite_bud",
-    "gemstyne:ikarite_cluster",
-    "gemstyne:medium_garnet_bud",
-    "gemstyne:budding_garnet",
-    "gemstyne:large_garnet_bud",
-    "gemstyne:garnet_block",
-    "gemstyne:small_garnet_bud",
-    "gemstyne:garnet_cluster",
-    "gemstyne:small_lapis_bud",
-    "gemstyne:lapis_cluster",
-    "gemstyne:budding_lapis",
-    "gemstyne:large_lapis_bud",
-    "gemstyne:medium_lapis_bud"
+    "gemstyne:nefarium_ore"
   ]
 }

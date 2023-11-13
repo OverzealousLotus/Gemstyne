@@ -9,27 +9,6 @@ public final class GemstyneBlockTags {
     private GemstyneBlockTags() {}
 
     // ======
-    // <===== Replaceables =====>
-    // ======
-    private static final TagKey<Block> COMPRESSED_GRANITE_ORE_REPLACEABLES =
-        GemstyneBlockTags.of("compressed_granite_ore_replaceables");
-    private static final TagKey<Block> COMPRESSED_ANDESITE_ORE_REPLACEABLES =
-        GemstyneBlockTags.of("compressed_andesite_ore_replaceables");
-    public static final TagKey<Block> END_BASE_REPLACEABLES =
-        GemstyneBlockTags.of("end_base_replaceables");
-
-    // ======
-    // <===== Raw Ore Veins =====>
-    // ======
-    private static final TagKey<Block> MOCHITE_ORE_REPLACEABLES =
-        GemstyneBlockTags.of("mochite_ore_replaceables");
-    private static final TagKey<Block> MORKITE_ORE_REPLACEABLES =
-        GemstyneBlockTags.of("morkite_ore_replaceables");
-    private static final TagKey<Block> URANIUM_ORE_REPLACEABLES =
-        GemstyneBlockTags.of("uranium_ore_replaceables");
-    private static final TagKey<Block> TIN_ORE_REPLACEABLES =
-        GemstyneBlockTags.of("tin_ore_replaceables");
-    // ======
     // <===== Tool-Type Requirements =====>
     // ======
     private static final TagKey<Block> NEEDS_AXE =
@@ -54,32 +33,8 @@ public final class GemstyneBlockTags {
     private static final TagKey<Block> NEEDS_TOOL_LEVEL_4 =
         GemstyneBlockTags.of("fabric:needs_tool_level_4");
 
-    private static TagKey<Block> of(String id) {
+    public static TagKey<Block> of(String id) {
         return TagKey.of(RegistryKeys.BLOCK, new Identifier(id));
-    }
-
-    public static TagKey<Block> getCompressedGraniteOreReplaceables() {
-        return COMPRESSED_GRANITE_ORE_REPLACEABLES;
-    }
-
-    public static TagKey<Block> getCompressedAndesiteOreReplaceables() {
-        return COMPRESSED_ANDESITE_ORE_REPLACEABLES;
-    }
-
-    public static TagKey<Block> getMochiteOreReplaceables() {
-        return MOCHITE_ORE_REPLACEABLES;
-    }
-
-    public static TagKey<Block> getMorkiteOreReplaceables() {
-        return MORKITE_ORE_REPLACEABLES;
-    }
-
-    public static TagKey<Block> getUraniumOreReplaceables() {
-        return URANIUM_ORE_REPLACEABLES;
-    }
-
-    public static TagKey<Block> getTinOreReplaceables() {
-        return TIN_ORE_REPLACEABLES;
     }
 
     public static TagKey<Block> getNeedsAxe() {

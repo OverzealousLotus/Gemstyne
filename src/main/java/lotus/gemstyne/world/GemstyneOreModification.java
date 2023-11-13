@@ -2,12 +2,16 @@ package lotus.gemstyne.world;
 
 import com.google.common.collect.*;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.util.GemstyneBlockSet;
+import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.util.GemstyneBlockTags;
 import lotus.gemstyne.util.GemstyneConstants;
+import lotus.gemstyne.util.GemstynePairs.GenKeyPair;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Pair;
@@ -20,11 +24,13 @@ import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import java.util.*;
 
 public class GemstyneOreModification {
-    private final Map<String, Pair<RegistryKey<ConfiguredFeature<?, ?>>, RegistryKey<PlacedFeature>>> oreKeys = new LinkedHashMap<>();
-    private final GemstyneBlockSet oreSet;
+    private final Map<String, GenKeyPair> oreKeys = new LinkedHashMap<>();
+    private final BlockSet oreSet;
     private final Multimap<String, OreFeatureConfig.Target> oreMap = LinkedHashMultimap.create();
+    private final Set<Block> ores = new LinkedHashSet<>();
+    private final List<OreFeatureConfig.Target> targets = new LinkedList<>();
 
-    public GemstyneOreModification(GemstyneBlockSet oreSet) {
+    public GemstyneOreModification(BlockSet oreSet) {
         this.oreSet = oreSet;
     }
 
@@ -34,6 +40,7 @@ public class GemstyneOreModification {
      */
     protected GemstyneOreModification addStoneOre() {
         this.oreMap.put(GemstyneConstants.OVERWORLD, OreFeatureConfig.createTarget(stoneReplaceables, oreSet.stoneOre().getDefaultState()));
+        this.ores.add(oreSet.stoneOre());
         return this;
     }
 
@@ -43,6 +50,7 @@ public class GemstyneOreModification {
      */
     protected GemstyneOreModification addDeepslateOre() {
         this.oreMap.put(GemstyneConstants.OVERWORLD, OreFeatureConfig.createTarget(deepslateReplaceables, oreSet.deepslateOre().getDefaultState()));
+        this.ores.add(oreSet.deepslateOre());
         return this;
     }
 
@@ -52,15 +60,22 @@ public class GemstyneOreModification {
      */
     protected GemstyneOreModification addNetherOre() {
         this.oreMap.put(GemstyneConstants.NETHER, OreFeatureConfig.createTarget(netherReplaceables, oreSet.netherOre().getDefaultState()));
+        this.ores.add(oreSet.netherOre());
         return this;
     }
 
     /**
-     * Adds {@link GemstyneBlockTags#END_BASE_REPLACEABLES} to ore Generation.
+     * Adds end stone to ore Generation.
      * @return Returns instance of self.
      */
     protected GemstyneOreModification addEndOre() {
         this.oreMap.put(GemstyneConstants.END, OreFeatureConfig.createTarget(endReplaceables, oreSet.endOre().getDefaultState()));
+        this.ores.add(oreSet.endOre());
+        return this;
+    }
+
+    protected GemstyneOreModification addRawOre() {
+        this.ores.forEach(ore -> this.targets.add(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ore), oreSet.rawBlock().getDefaultState())));
         return this;
     }
 
@@ -71,7 +86,7 @@ public class GemstyneOreModification {
      * @return Returns instance of self.
      */
     protected GemstyneOreModification createKeyPair(String configKeyName, String placedKeyName) {
-        this.oreKeys.put(configKeyName, new Pair<>(
+        this.oreKeys.put(configKeyName, new GenKeyPair(
             GemstyneConfiguredFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + configKeyName),
             GemstynePlacedFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + placedKeyName))
         );
@@ -85,7 +100,7 @@ public class GemstyneOreModification {
      * @return Returns instance of self.
      */
     protected GemstyneOreModification createKeyPair(String keyNames) {
-        this.oreKeys.put(keyNames, new Pair<>(
+        this.oreKeys.put(keyNames, new GenKeyPair(
             GemstyneConfiguredFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + keyNames),
             GemstynePlacedFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + keyNames))
         );
@@ -118,9 +133,14 @@ public class GemstyneOreModification {
      * @param veinsSize Size of ore veins.
      * @param discardOnAirChance Chance of veins being discarded when exposed to air.
      */
-    public void overworldConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String keyName, int veinsSize, float discardOnAirChance) {
-        GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
-            this.oreMap.get(GemstyneConstants.OVERWORLD).stream().toList(), veinsSize, discardOnAirChance));
+    public void overworldConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String keyName, int veinsSize, float discardOnAirChance, boolean isRaw) {
+        if (isRaw) {
+            GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
+                this.targets, veinsSize, discardOnAirChance));
+        } else {
+            GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
+                this.oreMap.get(GemstyneConstants.OVERWORLD).stream().toList(), veinsSize, discardOnAirChance));
+        }
     }
 
     /**
@@ -153,7 +173,7 @@ public class GemstyneOreModification {
      * @return Returns key.
      */
     public RegistryKey<ConfiguredFeature<?, ?>> fetchConfiguredKey(String keyName) {
-        Optional<RegistryKey<ConfiguredFeature<?, ?>>> key = Optional.ofNullable(this.oreKeys.get(keyName).getLeft());
+        Optional<RegistryKey<ConfiguredFeature<?, ?>>> key = Optional.ofNullable(this.oreKeys.get(keyName).configKey());
         if(key.isPresent()) {
             return key.get();
         } else {
@@ -172,7 +192,7 @@ public class GemstyneOreModification {
      * @return Returns Placed Key.
      */
     public  RegistryKey<PlacedFeature> fetchPlacedKey(String keyName) {
-        Optional<RegistryKey<PlacedFeature>> key = Optional.ofNullable(this.oreKeys.get(keyName).getRight());
+        Optional<RegistryKey<PlacedFeature>> key = Optional.ofNullable(this.oreKeys.get(keyName).placedKey());
         if(key.isPresent()) {
             return key.get();
         } else {
@@ -188,5 +208,5 @@ public class GemstyneOreModification {
     private static final RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
     private static final RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
     private static final RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
-    private static final RuleTest endReplaceables = new TagMatchRuleTest(GemstyneBlockTags.END_BASE_REPLACEABLES);
+    private static final RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 }

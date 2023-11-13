@@ -9,8 +9,8 @@
           "Name": "gemstyne:compressed_granite_coal_ore"
         },
         "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:compressed_granite_ore_replaceables"
+          "block": "gemstyne:compressed_granite",
+          "predicate_type": "minecraft:block_match"
         }
       }
     ]

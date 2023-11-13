@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "gemstyne:ikarite_cluster",
-    "gemstyne:large_ikarite_bud",
-    "gemstyne:medium_ikarite_bud",
-    "gemstyne:small_ikarite_bud",
-    "gemstyne:budding_ikarite",
-    "gemstyne:ikarite_block",
-    "gemstyne:morkite_block",
     "gemstyne:compressed_granite_fire_opal_ore",
     "gemstyne:fire_opal_block",
     "gemstyne:nefarium_ore"

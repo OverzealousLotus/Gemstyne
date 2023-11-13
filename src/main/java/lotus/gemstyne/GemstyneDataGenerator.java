@@ -2,7 +2,9 @@ package lotus.gemstyne;
 
 import lotus.gemstyne.data.*;
 import lotus.gemstyne.data.GemstyneBlockTagGenerator;
+import lotus.gemstyne.data.models.GemstyneModelProvider;
 import lotus.gemstyne.data.recipes.GemstyneRecipeProvider;
+import lotus.gemstyne.data.translations.GemstyneLangProvider;
 import lotus.gemstyne.world.GemstyneConfiguredFeatures;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "gemstyne:block/morkite_block"
+    "all": "gemstyne:block/raw_morkite_block"
   }
 }

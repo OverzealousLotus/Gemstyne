@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gemstyne:morkite_block"
+          "name": "gemstyne:raw_morkite_block"
         }
       ],
       "rolls": 1.0

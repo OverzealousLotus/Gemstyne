@@ -30,13 +30,6 @@
           }
         },
         {
-          "Name": "gemstyne:large_garnet_bud",
-          "Properties": {
-            "facing": "up",
-            "waterlogged": "false"
-          }
-        },
-        {
           "Name": "gemstyne:medium_garnet_bud",
           "Properties": {
             "facing": "up",
@@ -45,6 +38,13 @@
         },
         {
           "Name": "gemstyne:garnet_cluster",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "gemstyne:large_garnet_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"

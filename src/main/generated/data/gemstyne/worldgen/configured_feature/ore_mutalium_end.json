@@ -9,8 +9,8 @@
           "Name": "gemstyne:end_mutalium_ore"
         },
         "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:end_base_replaceables"
+          "block": "minecraft:end_stone",
+          "predicate_type": "minecraft:block_match"
         }
       }
     ]
