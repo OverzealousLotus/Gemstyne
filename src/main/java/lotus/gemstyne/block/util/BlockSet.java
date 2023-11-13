@@ -23,21 +23,21 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * {@link GemstyneBlockSet} contains a group of blocks in one container. {@link Builder} must be used
- * to create an instance of a {@link GemstyneBlockSet}.
+ * {@link BlockSet} contains a group of blocks in one container. {@link Builder} must be used
+ * to create an instance of a {@link BlockSet}.
  *
- * <p>All members are encapsulated. {@link GemstyneBlockSet#fetch} handles errors during
+ * <p>All members are encapsulated. {@link BlockSet#fetch} handles errors during
  * initialization, and provides possible clues where things went wrong. Each getter method uses this function internally.</p>
  *
  * @see Builder
- * @author OverzealousLotus
+ * @see <a href="https://github.com/Noaaan/MythicMetals">...</a>
  */
-public class GemstyneBlockSet {
+public final class BlockSet {
     @NotNull private final Map<String, GemstynePairs.BlockPair> blockVariants;
     private static final String BLOCK = "_block";
     @NotNull private final String setName;
 
-    private GemstyneBlockSet(@NotNull String setName, @NotNull Map<String, GemstynePairs.BlockPair> blockVariants) {
+    private BlockSet(@NotNull String setName, @NotNull Map<String, GemstynePairs.BlockPair> blockVariants) {
         this.setName = setName;
         this.blockVariants = blockVariants;
     }
@@ -47,13 +47,13 @@ public class GemstyneBlockSet {
     }
 
     /**
-     * Safely fetches an {@link Block} from {@link GemstyneBlockSet}. If the Block is not present, then
+     * Safely fetches an {@link Block} from {@link BlockSet}. If the Block is not present, then
      * an error message with hints is printed, then a {@link NullPointerException} is thrown.
      * @param blockName Name of target {@link Block}
      * @return Returns {@link Block} safely, or throws a {@link NullPointerException} instead of returning null.
      */
     @NotNull
-    protected Block fetch(String blockName) {
+    private Block fetch(String blockName) {
         Optional<Block> block = Optional.ofNullable(this.blockVariants.get(blockName).block());
         if(block.isPresent()) {
             return this.blockVariants.get(blockName).block();
@@ -80,8 +80,8 @@ public class GemstyneBlockSet {
     }
 
     /**
-     * This Builder is used to create a {@link GemstyneBlockSet}.
-     * @see GemstyneBlockSet
+     * This Builder is used to create a {@link BlockSet}.
+     * @see BlockSet
      * @see Builder#start
      * @see GemstyneRegistry
      */
@@ -100,26 +100,26 @@ public class GemstyneBlockSet {
         @NotNull private final String setName;
 
         /**
-         * Direct construction of {@link GemstyneBlockSet.Builder} is not allowed. Use {@link #start}.
+         * Direct construction of {@link BlockSet.Builder} is not allowed. Use {@link #start}.
          *
-         * @param setName Name of {@link GemstyneBlockSet}
+         * @param setName Name of {@link BlockSet}
          */
         private Builder(@NotNull String setName) { this.setName = setName; }
 
         /**
          * Constructor used to create an instance of {@link Builder}.
          *
-         * @param setName Name of {@link GemstyneBlockSet}
+         * @param setName Name of {@link BlockSet}
          * @return Returns a new instance of {@link Builder}.
          */
         public static Builder start(String setName) { return new Builder(setName); }
 
         /**
-         * Method to modify strength of {@link GemstyneBlockSet}.
+         * Method to modify strength of {@link BlockSet}.
          *
          * @param hardness   Hardness of BlockSet
          * @param resistance Blast Resistance of BlockSet.
-         * @return Returns current instance of {@link GemstyneBlockSet}
+         * @return Returns current instance of {@link BlockSet}
          */
         public Builder setStrength(float hardness, float resistance) {
             this.currentHardness = hardness;
@@ -132,7 +132,7 @@ public class GemstyneBlockSet {
          * Simplified version of {@link Builder#setStrength}
          *
          * @param hardness Hardness of BlockSet
-         * @return Returns current instance of {@link GemstyneBlockSet}
+         * @return Returns current instance of {@link BlockSet}
          */
         protected Builder setStrength(float hardness) {
             this.currentHardness = hardness;
@@ -141,7 +141,7 @@ public class GemstyneBlockSet {
         }
 
         /**
-         * Modifies sounds of {@link GemstyneBlockSet}
+         * Modifies sounds of {@link BlockSet}
          *
          * @param sounds {@link BlockSoundGroup} to be assigned.
          * @return Returns an instance of itself.
@@ -152,7 +152,7 @@ public class GemstyneBlockSet {
         }
 
         /**
-         * Sets experience of {@link GemstyneBlockSet}.
+         * Sets experience of {@link BlockSet}.
          *
          * @param experience Experience dropped by all ores in set.
          * @return Returns an instance of itself.
@@ -163,7 +163,7 @@ public class GemstyneBlockSet {
         }
 
         /**
-         * Sets {@link StatusEffect} of {@link GemstyneBlockSet}
+         * Sets {@link StatusEffect} of {@link BlockSet}
          *
          * @param effect {@link StatusEffect}
          * @return Instance of self.
@@ -179,7 +179,7 @@ public class GemstyneBlockSet {
         }
 
         /**
-         * Creates a Stone variant for {@link GemstyneBlockSet}.
+         * Creates a Stone variant for {@link BlockSet}.
          *
          * @return Returns instance of self.
          */
@@ -202,7 +202,7 @@ public class GemstyneBlockSet {
         }
 
         /**
-         * Creates an unknown ore variant for {@link GemstyneBlockSet}
+         * Creates an unknown ore variant for {@link BlockSet}
          *
          * @param type   Variant
          * @return Returns instance of self.
@@ -246,14 +246,14 @@ public class GemstyneBlockSet {
         public Builder createRawBlock() {
             this.blockSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
             this.blockVariants.put("raw", new GemstynePairs.BlockPair("raw_" + this.setName + BLOCK, new Block(this.blockSettings)));
-            appendTags("raw", this.miningLevel);
+            appendTags(GemstyneConstants.RAW, this.miningLevel);
             return this;
         }
 
         public Builder createRawBlock(int duration) {
             this.blockSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
             this.blockVariants.put("raw", new GemstynePairs.BlockPair("raw_" + this.setName + BLOCK, new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneBlockTypes.RAW)));
-            appendTags("raw", this.miningLevel);
+            appendTags(GemstyneConstants.RAW, this.miningLevel);
             return this;
         }
 
@@ -270,7 +270,7 @@ public class GemstyneBlockSet {
             return this;
         }
 
-        public GemstyneBlockSet createDefaultBlockSet(float strength) {
+        public BlockSet createDefaultBlockSet(float strength) {
             return this.setStrength(strength).createOre()
                 .setStrength(strength + 1.5f)
                 .createOreType(GemstyneConstants.DEEPSLATE)
@@ -280,7 +280,7 @@ public class GemstyneBlockSet {
                 .end();
         }
 
-        public GemstyneBlockSet createDefaultNetherBlockSet(float strength) {
+        public BlockSet createDefaultNetherBlockSet(float strength) {
             return this.setStrength(strength).createOreType("nether")
                 .setStrength(strength + 1.5f)
                 .createRawBlock()
@@ -303,16 +303,16 @@ public class GemstyneBlockSet {
         }
 
         /**
-         * Used to finalize creation of {@link GemstyneBlockSet}. Responsible for registering blocks
+         * Used to finalize creation of {@link BlockSet}. Responsible for registering blocks
          * into Minecraft, using a {@link Map} storing a {@link GemstynePairs.BlockPair} containing a String on the left:
          * The ID of the block; On the right: The block itself.
          *
-         * @return Returns an instance of {@link GemstyneBlockSet}.
+         * @return Returns an instance of {@link BlockSet}.
          */
-        public GemstyneBlockSet end() {
+        public BlockSet end() {
             this.blockVariants.values().forEach(blockIdPair -> GemstyneRegistry.registerBlock(blockIdPair.blockID(), blockIdPair.block()));
-            this.blockTags.forEach((block, level) -> TagInjector.inject(Registries.BLOCK, level, block));
-            return new GemstyneBlockSet(this.setName, this.blockVariants);
+            this.blockTags.forEach((block, tag) -> TagInjector.inject(Registries.BLOCK, tag, block));
+            return new BlockSet(this.setName, this.blockVariants);
         }
     }
 }

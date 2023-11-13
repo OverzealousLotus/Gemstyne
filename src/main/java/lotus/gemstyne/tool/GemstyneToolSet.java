@@ -81,7 +81,8 @@ public class GemstyneToolSet {
     public ToolItem getShovel() { return safelyFetch("shovel"); }
     public ToolItem getSword() { return safelyFetch("sword"); }
     @NotNull
-    public ImmutableMap<String, GemstynePairs.ToolPair> getTools() { return this.tools; }
+    public ImmutableMap<String, GemstynePairs.ToolPair> getToolMap() { return this.tools; }
+    public String getSetName() { return this.setName; }
 
     /**
      * <code>registerToolSet</code> is used to register the items at once when created.

@@ -1,5 +1,6 @@
 package lotus.gemstyne.armor;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
@@ -17,12 +18,14 @@ import java.util.Set;
  * Usually, you would have to create pieces of armor separately, but this is done at once.
  */
 public final class GemstyneArmorSet {
+    public final String setName;
     public final ArmorItem helmet;
     public final ArmorItem chestplate;
     public final ArmorItem leggings;
     public final ArmorItem boots;
     public final Item source;
     private final ImmutableSet<ArmorItem> armorSet;
+    private final ImmutableMap<String, ArmorItem> armorMap;
 
 
     /**
@@ -34,12 +37,19 @@ public final class GemstyneArmorSet {
      * @param material Material of set.
      */
     public GemstyneArmorSet(OwoItemSettings settings, String setName, ArmorMaterial material, Item source) {
+        this.setName = setName;
         this.helmet = assignArmor(settings, material, ArmorItem.Type.HELMET);
         this.chestplate = assignArmor(settings, material, ArmorItem.Type.CHESTPLATE);
         this.leggings = assignArmor(settings, material, ArmorItem.Type.LEGGINGS);
         this.boots = assignArmor(settings, material, ArmorItem.Type.BOOTS);
         this.source = source;
         this.armorSet = ImmutableSet.of(this.helmet, this.chestplate, this.leggings, this.boots);
+        this.armorMap = ImmutableMap.of(
+            "helmet", this.helmet,
+            "chestplate", this.chestplate,
+            "leggings", this.leggings,
+            "boots", this.boots
+        );
         this.registerArmorSet(setName);
     }
 
@@ -61,6 +71,8 @@ public final class GemstyneArmorSet {
     public List<ItemConvertible> getArmorList() {
         return List.copyOf(this.armorSet);
     }
+    public ImmutableMap<String, ArmorItem> getArmorMap() { return this.armorMap; }
+    public String getSetName() { return this.setName; }
     
     /**
      * <code>registerArmorSet</code> is used to register the items at once when created.

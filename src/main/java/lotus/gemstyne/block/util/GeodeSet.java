@@ -1,11 +1,14 @@
 package lotus.gemstyne.block.util;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Multimap;
+import io.wispforest.owo.util.TagInjector;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.BuddingCrystallineBlock;
 import lotus.gemstyne.block.custom.CrystallineBlockBud;
 import lotus.gemstyne.util.GemstyneConstants;
+import lotus.gemstyne.util.GemstyneMiningLevels;
 import lotus.gemstyne.util.GemstynePairs.CrystallinePair;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -14,27 +17,23 @@ import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
-public class GemstyneGeodeSet {
+public final class GeodeSet {
     private final Map<String, CrystallinePair> geodeVariants;
-    private final ImmutableSet<Block> budSet;
 
     private final String setName;
 
-    private GemstyneGeodeSet(String setName, FabricBlockSettings settings, Map<String, CrystallinePair> variants, ImmutableSet<Block> buds) {
+    private GeodeSet(String setName, Map<String, CrystallinePair> variants) {
         this.setName = setName;
         this.geodeVariants = variants;
-        this.budSet = buds;
-
-        this.geodeVariants.put(GemstyneConstants.BUDDING, new CrystallinePair("budding_" + this.setName,
-            new BuddingCrystallineBlock(settings, this)));
-        GemstyneRegistry.registerBlock(this.geodeVariants.get("budding").blockID(), fetch("budding"));
     }
 
     /**
@@ -66,16 +65,22 @@ public class GemstyneGeodeSet {
     public Block buddingBlock() { return fetch(GemstyneConstants.BUDDING); }
     public String getSetName() { return this.setName; }
     /**
-     * @return Returns an {@link ImmutableSet} of geode buds from {@link GemstyneGeodeSet}
+     * @return Returns an {@link ImmutableSet} of geode buds from {@link GeodeSet}
      */
-    public ImmutableSet<Block> getBudSet() { return this.budSet; }
+    public ImmutableSet<Block> getBudSet() {
+        return ImmutableSet.copyOf(this.geodeVariants.entrySet().stream().filter(map -> switch(map.getKey()) {
+            case GemstyneConstants.BLOCK, GemstyneConstants.BUDDING -> false;
+            default -> true;
+        }).map(entry -> entry.getValue().block()).collect(Collectors.toSet()));
+    }
+
     /**
-     * @return Returns an {@link ImmutableSet} of all geode blocks from {@link GemstyneGeodeSet}
+     * @return Returns an {@link ImmutableSet} of all geode blocks from {@link GeodeSet}
      */
     public ImmutableSet<Block> geodeSet() { return ImmutableSet.copyOf(this.geodeVariants.values().stream().map(CrystallinePair::block).collect(Collectors.toSet())); }
     public Map<String, CrystallinePair> getGeodeMap() { return this.geodeVariants; }
 
-    protected Block fetch(String geodeName) {
+    private Block fetch(String geodeName) {
         Optional<Block> geode = Optional.ofNullable(this.geodeVariants.get(geodeName).block());
         if(geode.isPresent()) {
             return this.geodeVariants.get(geodeName).block();
@@ -90,9 +95,10 @@ public class GemstyneGeodeSet {
 
     public static class Builder {
         @NotNull private final Map<String, CrystallinePair> variants = new LinkedHashMap<>();
-        private final List<Block> budList = new LinkedList<>();
+        private final Multimap<Block, Identifier> blockTags = ArrayListMultimap.create();
 
         private final String setName;
+        private Identifier miningLevel = GemstyneMiningLevels.NEEDS_STONE_TOOL;
         private final FabricBlockSettings currentSettings = FabricBlockSettings.create().requiresTool()
             .ticksRandomly().nonOpaque().strength(1.5f, 1.0f)
             .sounds(BlockSoundGroup.SMALL_AMETHYST_BUD).luminance(state -> 1);
@@ -101,6 +107,11 @@ public class GemstyneGeodeSet {
 
         public static Builder start(String setName) {
             return new Builder(setName);
+        }
+
+        public Builder level(Identifier miningLevel) {
+            this.miningLevel = miningLevel;
+            return this;
         }
 
         public Builder luminance(int luminance) {
@@ -120,21 +131,33 @@ public class GemstyneGeodeSet {
 
         public Builder newBud(String size, int height, int offset) {
             this.variants.put(size, new CrystallinePair(size + "_" + this.setName + "_bud", new CrystallineBlockBud(height, offset, this.currentSettings)));
-            this.budList.add(this.variants.get(size).block());
+            appendTags(size, this.miningLevel);
             return this;
         }
 
+        /**
+         * Creates a new Bud Cluster.
+         * @param height Height of the Bud Cluster.
+         * @param offset Base offset of the Cluster on a block.
+         * @return Returns new instance of self.
+         */
         public Builder newCluster(int height, int offset) {
             this.variants.put(GemstyneConstants.CLUSTER, new CrystallinePair(this.setName + "_cluster", new CrystallineBlockBud(height, offset, this.currentSettings)));
-            this.budList.add(this.variants.get(GemstyneConstants.CLUSTER).block());
+            appendTags(GemstyneConstants.CLUSTER, this.miningLevel);
             return this;
         }
 
         public void createBlock() {
             this.variants.put(GemstyneConstants.BLOCK, new CrystallinePair(this.setName + "_block", new AmethystBlock(this.currentSettings)));
+            appendTags(GemstyneConstants.BLOCK, this.miningLevel);
         }
 
-        public GemstyneGeodeSet createDefaultSet(boolean isVanilla) {
+        private void appendTags(String blockType, Identifier miningLevel) {
+            this.blockTags.put(this.variants.get(blockType).block(), miningLevel);
+            this.blockTags.put(this.variants.get(blockType).block(), GemstyneMiningLevels.NEEDS_PICKAXE);
+        }
+
+        public GeodeSet createDefaultSet(boolean isVanilla) {
             if(!isVanilla) this.createBlock();
             return this.newBud(GemstyneConstants.SMALL, 3, 4)
                 .sounds(BlockSoundGroup.LARGE_AMETHYST_BUD).luminance(4)
@@ -148,12 +171,17 @@ public class GemstyneGeodeSet {
         }
 
         /**
-         * Finalization of a {@link GemstyneGeodeSet}. Creates an {@link ImmutableSet} of buds.
+         * Finalization of a {@link GeodeSet}. Creates an {@link ImmutableSet} of buds.
          * @return Returns an instance of self.
          */
-        public GemstyneGeodeSet end() {
+        public GeodeSet end() {
+            this.variants.put(GemstyneConstants.BUDDING, new CrystallinePair("budding_" + this.setName,
+                new BuddingCrystallineBlock(this.currentSettings, this.variants)));
+            appendTags(GemstyneConstants.BUDDING, this.miningLevel);
+
             this.variants.values().forEach(geodePair -> GemstyneRegistry.registerBlock(geodePair.blockID(), geodePair.block()));
-            return new GemstyneGeodeSet(this.setName, this.currentSettings, this.variants, ImmutableSet.copyOf(this.budList));
+            this.blockTags.forEach((block, tag) -> TagInjector.inject(Registries.BLOCK, tag, block));
+            return new GeodeSet(this.setName, this.variants);
         }
     }
 }

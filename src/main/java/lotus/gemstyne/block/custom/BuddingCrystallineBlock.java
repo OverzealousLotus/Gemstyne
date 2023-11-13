@@ -1,6 +1,7 @@
 package lotus.gemstyne.block.custom;
 
-import lotus.gemstyne.block.util.GemstyneGeodeSet;
+import lotus.gemstyne.util.GemstyneConstants;
+import lotus.gemstyne.util.GemstynePairs;
 import net.minecraft.block.*;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.server.world.ServerWorld;
@@ -8,13 +9,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class BuddingCrystallineBlock extends CrystallineBlock {
     private static final Direction[] DIRECTIONS = Direction.values();
-    private final GemstyneGeodeSet buds;
+    private final Map<String, GemstynePairs.CrystallinePair> buds;
 
-    public BuddingCrystallineBlock(AbstractBlock.Settings settings, GemstyneGeodeSet buds) {
+    public BuddingCrystallineBlock(AbstractBlock.Settings settings, Map<String, GemstynePairs.CrystallinePair> buds) {
         super(settings);
         this.buds = buds;
     }
@@ -31,13 +33,13 @@ public class BuddingCrystallineBlock extends CrystallineBlock {
         Optional<Block> newBud = Optional.empty();
 
         if (BuddingAmethystBlock.canGrowIn(oldBud)) {
-            newBud = Optional.of(this.buds.smallBud());
-        } else if (oldBud.isOf(this.buds.smallBud()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
-            newBud = Optional.of(this.buds.mediumBud());
-        } else if (oldBud.isOf(this.buds.mediumBud()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
-            newBud = Optional.of(this.buds.largeBud());
-        } else if (oldBud.isOf(this.buds.largeBud()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
-            newBud = Optional.of(this.buds.clusterBud());
+            newBud = Optional.of(this.buds.get(GemstyneConstants.SMALL).block());
+        } else if (oldBud.isOf(this.buds.get(GemstyneConstants.SMALL).block()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
+            newBud = Optional.of(this.buds.get(GemstyneConstants.MEDIUM).block());
+        } else if (oldBud.isOf(this.buds.get(GemstyneConstants.MEDIUM).block()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
+            newBud = Optional.of(this.buds.get(GemstyneConstants.LARGE).block());
+        } else if (oldBud.isOf(this.buds.get(GemstyneConstants.LARGE).block()) && oldBud.get(CrystallineBlockBud.FACING) == direction) {
+            newBud = Optional.of(this.buds.get(GemstyneConstants.CLUSTER).block());
         }
 
         if (newBud.isPresent()) {
