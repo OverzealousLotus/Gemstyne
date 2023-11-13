@@ -1,10 +1,10 @@
 package lotus.gemstyne;
 
-import lotus.gemstyne.block.GemstyneBlockHandler;
+import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.fluid.GemstyneFluids;
-import lotus.gemstyne.item.GemstyneItemHandler;
+import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.loader.api.FabricLoader;
@@ -31,10 +31,10 @@ public final class Overwatch {
      * them, we wouldn't have a mod, would we?
      */
     public static void registerEssentials() {
-        GemstyneItemHandler.registerGemstyneItems();
-        GemstyneBlockHandler.registerGemstyneBlocks();
+        ItemHandler.registerGemstyneItems();
+        BlockHandler.registerGemstyneBlocks();
         GemstyneBlockEntities.registerBlockEntities();
-        GemstyneRegistry.registerGemstyneMisc();
+        GemstyneRegistry.registerMisc();
     }
 
     public static void modObserver() {

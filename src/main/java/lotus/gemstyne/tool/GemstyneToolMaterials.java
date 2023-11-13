@@ -2,7 +2,7 @@ package lotus.gemstyne.tool;
 
 import com.google.common.base.Suppliers;
 // import net.fabricmc.yarn.constants.MiningLevels;
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneMiningLevels;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
@@ -17,17 +17,17 @@ public enum GemstyneToolMaterials implements ToolMaterial {
         800,
         7.0f,
         2.0f,
-        15, () -> Ingredient.ofItems(GemstyneOreItems.ALDUS.ingot())),
+        15, () -> Ingredient.ofItems(ItemHandler.ALDUS.ingot())),
     BRONZE(MiningLevels.IRON,
         400,
         6.5f,
         2.0f,
-        10, () -> Ingredient.ofItems(GemstyneOreItems.BRONZE.ingot())),
+        10, () -> Ingredient.ofItems(ItemHandler.BRONZE.ingot())),
     RENDFIRE(GemstyneMiningLevels.RENDFIRE,
         2500,
         9.0f,
         4.5f,
-        20,()->Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL));
+        20,()->Ingredient.ofItems(ItemHandler.FIRE_OPAL));
 
 
     private final int miningLevel;

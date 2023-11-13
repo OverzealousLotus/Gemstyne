@@ -2,7 +2,7 @@ package lotus.gemstyne.armor;
 
 import com.google.common.base.Suppliers;
 
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.item.ItemHandler;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -19,28 +19,28 @@ public enum GemstyneArmorMaterials implements StringIdentifiable, ArmorMaterial 
             7, // Chestplate
             3 // Helmet
     }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.ALDUS.ingot())),
+            () -> Ingredient.ofItems(ItemHandler.ALDUS.ingot())),
     RENDFIRE("rendfire", 30, new int[]{
             4,
             6,
             10,
             4
     }, 1, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f,
-            () -> Ingredient.ofItems(GemstyneOreItems.FIRE_OPAL)),
+            () -> Ingredient.ofItems(ItemHandler.FIRE_OPAL)),
     BRONZEMAIL("bronzemail", 12, new int[] {
             2,
             4,
             6,
             2
     }, 6, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE.chain())),
+            () -> Ingredient.ofItems(ItemHandler.BRONZE.chain())),
     BRONZEPLATE("bronzeplate", 20, new int[]{
             2,
             5,
             7,
             3
     }, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(GemstyneOreItems.BRONZE.ingot()));
+            () -> Ingredient.ofItems(ItemHandler.BRONZE.ingot()));
 
 
 

@@ -1,8 +1,7 @@
 package lotus.gemstyne.data;
 
-import lotus.gemstyne.block.GemstyneBlockHandler;
-import lotus.gemstyne.block.GemstyneOreBlocks;
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.block.BlockHandler;
+import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -32,101 +31,99 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // ======
         // <===== Overworld Ore Loot =====>
         // ======
-        gemstyneOreDrops(GemstyneOreBlocks.BUBBLEGEM.stoneOre(), GemstyneOreItems.BUBBLEGEM);
-        gemstyneOreDrops(GemstyneOreBlocks.BUBBLEGEM.deepslateOre(), GemstyneOreItems.BUBBLEGEM);
+        gemstyneOreDrops(BlockHandler.BUBBLEGEM.stoneOre(), ItemHandler.BUBBLEGEM);
+        gemstyneOreDrops(BlockHandler.BUBBLEGEM.deepslateOre(), ItemHandler.BUBBLEGEM);
 
-        gemstyneOreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE, GemstyneOreItems.FIRE_OPAL);
+        gemstyneOreDrops(BlockHandler.COMPRESSED_GRANITE_FIRE_OPAL_ORE, ItemHandler.FIRE_OPAL);
 
-        gemstyneOreDrops(GemstyneOreBlocks.ENDER_PEARL.stoneOre(), Items.ENDER_PEARL);
-        gemstyneOreDrops(GemstyneOreBlocks.ENDER_PEARL.deepslateOre(), Items.ENDER_PEARL);
-        gemstyneOreDrops(GemstyneOreBlocks.ENDER_PEARL.netherOre(), Items.ENDER_PEARL);
-        gemstyneOreDrops(GemstyneOreBlocks.ENDER_PEARL.endOre(), Items.ENDER_PEARL);
+        gemstyneOreDrops(BlockHandler.ENDER_PEARL.stoneOre(), Items.ENDER_PEARL);
+        gemstyneOreDrops(BlockHandler.ENDER_PEARL.deepslateOre(), Items.ENDER_PEARL);
+        gemstyneOreDrops(BlockHandler.ENDER_PEARL.netherOre(), Items.ENDER_PEARL);
+        gemstyneOreDrops(BlockHandler.ENDER_PEARL.endOre(), Items.ENDER_PEARL);
 
-        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.stoneOre(), GemstyneOreItems.MOCHITE.raw());
-        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.deepslateOre(), GemstyneOreItems.MOCHITE.raw());
-        gemstyneOreDrops(GemstyneOreBlocks.MOCHITE.netherOre(), GemstyneOreItems.MOCHITE.nugget());
+        gemstyneOreDrops(BlockHandler.MOCHITE.stoneOre(), ItemHandler.MOCHITE.raw());
+        gemstyneOreDrops(BlockHandler.MOCHITE.deepslateOre(), ItemHandler.MOCHITE.raw());
+        gemstyneOreDrops(BlockHandler.MOCHITE.netherOre(), ItemHandler.MOCHITE.nugget());
 
-        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.stoneOre(), GemstyneOreItems.MUTALIUM.raw());
-        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.deepslateOre(), GemstyneOreItems.MUTALIUM.raw());
-        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.netherOre(), GemstyneOreItems.MUTALIUM.raw());
-        gemstyneOreDrops(GemstyneOreBlocks.MUTALIUM.endOre(), GemstyneOreItems.MUTALIUM.raw());
+        gemstyneOreDrops(BlockHandler.MUTALIUM.stoneOre(), ItemHandler.MUTALIUM.raw());
+        gemstyneOreDrops(BlockHandler.MUTALIUM.deepslateOre(), ItemHandler.MUTALIUM.raw());
+        gemstyneOreDrops(BlockHandler.MUTALIUM.netherOre(), ItemHandler.MUTALIUM.raw());
+        gemstyneOreDrops(BlockHandler.MUTALIUM.endOre(), ItemHandler.MUTALIUM.raw());
 
-        gemstyneOreDrops(GemstyneBlockHandler.PYRITE, GemstyneOreItems.Pyrite.raw());
+        gemstyneOreDrops(BlockHandler.PYRITE, ItemHandler.Pyrite.raw());
 
-        gemstyneOreDrops(GemstyneOreBlocks.TORRIUM.stoneOre(), GemstyneOreItems.TORRIUM.raw());
-        gemstyneOreDrops(GemstyneOreBlocks.TORRIUM.deepslateOre(), GemstyneOreItems.TORRIUM.raw());
-        gemstyneOreDrops(GemstyneOreBlocks.TORRIUM.netherOre(), GemstyneOreItems.TORRIUM.raw());
+        gemstyneOreDrops(BlockHandler.TORRIUM.stoneOre(), ItemHandler.TORRIUM.raw());
+        gemstyneOreDrops(BlockHandler.TORRIUM.deepslateOre(), ItemHandler.TORRIUM.raw());
+        gemstyneOreDrops(BlockHandler.TORRIUM.netherOre(), ItemHandler.TORRIUM.raw());
 
-        gemstyneOreDrops(GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE, GemstyneOreItems.MORKITE);
+        gemstyneOreDrops(BlockHandler.MORKITE.deepslateOre(), ItemHandler.MORKITE);
 
-        gemstyneRichOreDrops(GemstyneOreBlocks.TIN.stoneOre(),
-                GemstyneOreItems.TIN.raw(), 1.0f, 3.0f);
-        gemstyneRichOreDrops(GemstyneOreBlocks.TIN.deepslateOre(),
-                GemstyneOreItems.TIN.raw(), 1.0f, 3.0f);
+        gemstyneRichOreDrops(BlockHandler.TIN.stoneOre(), ItemHandler.TIN.raw(), 1.0f, 3.0f);
+        gemstyneRichOreDrops(BlockHandler.TIN.deepslateOre(), ItemHandler.TIN.raw(), 1.0f, 3.0f);
 
-        gemstyneOreDrops(GemstyneOreBlocks.URANIUM.deepslateOre(), GemstyneOreItems.URANIUM.raw());
+        gemstyneOreDrops(BlockHandler.URANIUM.deepslateOre(), ItemHandler.URANIUM.raw());
         // ======
         // <===== Nether Ore Loot =====>
         // ======
-        gemstyneOreDrops(GemstyneOreBlocks.ALDUS.netherOre(), GemstyneOreItems.ALDUS.raw());
+        gemstyneOreDrops(BlockHandler.ALDUS.netherOre(), ItemHandler.ALDUS.raw());
 
-        gemstyneOreDrops(GemstyneOreBlocks.CRIMONITE.netherOre(), GemstyneOreItems.CRIMONITE.raw());
+        gemstyneRichOreDrops(BlockHandler.BLAZITE.netherOre(), Items.BLAZE_POWDER, 1.0f, 3.0f);
+
+        gemstyneOreDrops(BlockHandler.CRIMONITE.netherOre(), ItemHandler.CRIMONITE.raw());
 
         // ======
         // <===== Ore Extension Loot =====>
         // ======
-        gemstyneRichOreDrops(GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE,
-                Items.COAL, 2.0f, 5.0f);
+        gemstyneRichOreDrops(BlockHandler.COMPRESSED_GRANITE_COAL_ORE, Items.COAL, 2.0f, 5.0f);
 
         // ======
         // <===== Compact Ore Loot =====>
         // ======
-        addDrop(GemstyneOreBlocks.ALDUS.rawBlock());
-        addDrop(GemstyneOreBlocks.ALDUS.pureBlock());
+        addDrop(BlockHandler.ALDUS.rawBlock());
+        addDrop(BlockHandler.ALDUS.pureBlock());
 
-        addDrop(GemstyneOreBlocks.BUBBLEGEM.pureBlock());
+        addDrop(BlockHandler.BUBBLEGEM.pureBlock());
 
-        addDrop(GemstyneOreBlocks.CRIMONITE.rawBlock());
-        addDrop(GemstyneOreBlocks.CRIMONITE.pureBlock());
+        addDrop(BlockHandler.CRIMONITE.rawBlock());
+        addDrop(BlockHandler.CRIMONITE.pureBlock());
 
-        addDrop(GemstyneOreBlocks.FIRE_OPAL_BLOCK);
+        addDrop(BlockHandler.FIRE_OPAL_BLOCK);
 
-        addDrop(GemstyneOreBlocks.MOCHITE.rawBlock());
-        addDrop(GemstyneOreBlocks.MOCHITE.pureBlock());
+        addDrop(BlockHandler.MOCHITE.rawBlock());
+        addDrop(BlockHandler.MOCHITE.pureBlock());
 
-        addDrop(GemstyneOreBlocks.MORKITE_BLOCK);
+        addDrop(BlockHandler.MORKITE.rawBlock());
 
-        addDrop(GemstyneOreBlocks.TIN.rawBlock());
-        addDrop(GemstyneOreBlocks.TIN.pureBlock());
+        addDrop(BlockHandler.TIN.rawBlock());
+        addDrop(BlockHandler.TIN.pureBlock());
 
-        addDrop(GemstyneOreBlocks.URANIUM.rawBlock());
-        addDrop(GemstyneOreBlocks.URANIUM.pureBlock());
+        addDrop(BlockHandler.URANIUM.rawBlock());
+        addDrop(BlockHandler.URANIUM.pureBlock());
 
-        addDrop(GemstyneOreBlocks.IKARITE.pureBlock());
-        addDrop(GemstyneOreBlocks.GARNET.pureBlock());
+        addDrop(BlockHandler.IKARITE.pureBlock());
+        addDrop(BlockHandler.GARNET.pureBlock());
 
         // ======
         // <===== Mineral Loot =====>
         // ======
-        addDrop(GemstyneBlockHandler.COMPRESSED_GRANITE);
-        addDrop(GemstyneBlockHandler.COMPRESSED_DIORITE);
-        addDrop(GemstyneBlockHandler.COMPRESSED_ANDESITE);
+        addDrop(BlockHandler.COMPRESSED_GRANITE);
+        addDrop(BlockHandler.COMPRESSED_DIORITE);
+        addDrop(BlockHandler.COMPRESSED_ANDESITE);
 
-        addDrop(GemstyneBlockHandler.COMPACT_DIRT);
+        addDrop(BlockHandler.COMPACT_DIRT);
 
-        addDrop(GemstyneBlockHandler.HALITE);
-        addDrop(GemstyneBlockHandler.PUMICE);
-        addDrop(GemstyneBlockHandler.GABBRO);
+        addDrop(BlockHandler.HALITE);
+        addDrop(BlockHandler.PUMICE);
+        addDrop(BlockHandler.GABBRO);
 
         // ======
         // <===== Geode Drops =====>
         // ======
-        gemstyneOreDrops(GemstyneOreBlocks.IKARITE.clusterBud(), GemstyneOreItems.IKARITE);
-        gemstyneOreDrops(GemstyneOreBlocks.GARNET.clusterBud(), GemstyneOreItems.GARNET);
-        gemstyneRichOreDrops(GemstyneOreBlocks.LAPIS.clusterBud(),
-                Items.LAPIS_LAZULI, 1, 3);
+        gemstyneOreDrops(BlockHandler.IKARITE.clusterBud(), ItemHandler.IKARITE);
+        gemstyneOreDrops(BlockHandler.GARNET.clusterBud(), ItemHandler.GARNET);
+        gemstyneRichOreDrops(BlockHandler.LAPIS.clusterBud(), Items.LAPIS_LAZULI, 1, 3);
 
-        gemstyneOreDrops(GemstyneOreBlocks.NEFARIUM_ORE, Items.DIAMOND);
+        gemstyneOreDrops(BlockHandler.NEFARIUM_ORE, Items.DIAMOND);
     }
 
 

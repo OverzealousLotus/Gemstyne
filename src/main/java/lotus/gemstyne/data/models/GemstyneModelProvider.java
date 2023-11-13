@@ -1,9 +1,8 @@
-package lotus.gemstyne.data;
+package lotus.gemstyne.data.models;
 
 import lotus.gemstyne.data.models.*;
 import lotus.gemstyne.fluid.GemstyneFluids;
-import lotus.gemstyne.item.equipment.GemstyneCraftingItems;
-import lotus.gemstyne.item.equipment.GemstyneGearItems;
+import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -29,8 +28,8 @@ public final class GemstyneModelProvider extends FabricModelProvider {
         GemstyneEquipmentModels.generateEquipmentItemModels(itemModelGenerator);
 
 
-        itemModelGenerator.register(GemstyneGearItems.getImbuedFeather(), Models.GENERATED);
-        itemModelGenerator.register(GemstyneCraftingItems.getImbuedRod(), Models.GENERATED);
+        itemModelGenerator.register(ItemHandler.IMBUED_FEATHER, Models.GENERATED);
+        itemModelGenerator.register(ItemHandler.IMBUED_ROD, Models.GENERATED);
 
         itemModelGenerator.register(GemstyneFluids.LIQUID_MORKITE_BUCKET, Models.GENERATED);
     }

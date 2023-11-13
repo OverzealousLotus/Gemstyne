@@ -4,9 +4,9 @@ import io.wispforest.owo.itemgroup.Icon;
 import io.wispforest.owo.itemgroup.OwoItemGroup;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.armor.GemstyneArmorItems;
-import lotus.gemstyne.block.GemstyneOreBlocks;
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.block.BlockHandler;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
+import lotus.gemstyne.item.ItemHandler;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 
@@ -20,9 +20,9 @@ public class GemstyneCreativeGroup {
     private GemstyneCreativeGroup() {}
 
     public static final OwoItemGroup GEMSTYNE = OwoItemGroup.builder(GemstyneRegistry.id("main"),
-        () -> Icon.of(GemstyneOreItems.MOCHITE.crystal())).initializer(group -> {
-            group.addTab(Icon.of(GemstyneOreItems.BUBBLEGEM), "items", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("item_tab")), true);
-            group.addTab(Icon.of(GemstyneOreBlocks.MOCHITE.pureBlock()), "blocks", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("block_tab")), false);
+        () -> Icon.of(ItemHandler.MOCHITE.crystal())).initializer(group -> {
+            group.addTab(Icon.of(ItemHandler.BUBBLEGEM), "items", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("item_tab")), true);
+            group.addTab(Icon.of(BlockHandler.MOCHITE.pureBlock()), "blocks", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("block_tab")), false);
             group.addTab(Icon.of(GemstyneArmorItems.RENDFIRE.chestplate), "equipment", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("equipment_tab")), false);
     }).build();
 

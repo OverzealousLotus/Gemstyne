@@ -1,7 +1,7 @@
 package lotus.gemstyne.block.entity;
 
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.block.BlockHandler;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
@@ -17,7 +17,7 @@ public class GemstyneBlockEntities {
         DEEP_ORE_BLOCK = Registry.register(Registries.BLOCK_ENTITY_TYPE,
                 new Identifier(Gemstyne.MOD_ID, "deep_ore_block"),
                 FabricBlockEntityTypeBuilder.create(RichOreBlockEntity::new,
-                        GemstyneOreBlocks.NEFARIUM_ORE).build(null));
+                        BlockHandler.NEFARIUM_ORE).build(null));
         Gemstyne.LOGGER.info("Registering Block Entities...");
     }
 }

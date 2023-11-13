@@ -4,8 +4,8 @@ import com.google.common.collect.Multimap;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
-abstract class GemstyneConfigENTranslations extends FabricLanguageProvider {
-    protected GemstyneConfigENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
+abstract class ConfigENTranslations extends FabricLanguageProvider {
+    protected ConfigENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
 
 
     private static final String CONFIG_PATH = "text.config.gemstyne_config.option.";
@@ -13,6 +13,11 @@ abstract class GemstyneConfigENTranslations extends FabricLanguageProvider {
     private static final String TOOLTIP = ".tooltip";
 
     protected static void generateEnglishConfigTranslations(TranslationBuilder translationBuilder) {
+        translationBuilder.add("itemGroup.gemstyne.main", "Gemstyne");
+        translationBuilder.add("itemGroup.gemstyne.main.tab.items", "Items");
+        translationBuilder.add("itemGroup.gemstyne.main.tab.blocks", "Blocks");
+        translationBuilder.add("itemGroup.gemstyne.main.tab.equipment", "Equipment");
+
         translationBuilder.add("text.config.gemstyne_config.title", "Gemstyne Configuration Options");
         translationBuilder.add("text.config.gemstyne_config.category.oreConfiguration", "Ore Configuration");
         translationBuilder.add("text.config.gemstyne_config.section.overworld", "The Overworld");
@@ -21,7 +26,10 @@ abstract class GemstyneConfigENTranslations extends FabricLanguageProvider {
         translationBuilder.add("text.config.gemstyne_config.section.geode_configuration", "Geode Configuration");
 
         addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "aldusEnabled", "Aldus Generation", "Whether Aldus generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "blaziteEnabled", "Blazite Generation", "Whether Blazite generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "bubblegemEnabled", "Bubblegem Generation", "Whether Bubblegem generates.");
         addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "crimoniteEnabled", "Crimonite Generation", "Whether Crimonite generates.");
+        addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "enderPearlEnabled", "Ender Pearl Generation", "Whether Ender Pearl generates.");
         addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "mutaliumEnabled", "Mutalium Generation", "Whether Mutalium generates.");
         addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "mochiteEnabled", "Mochite Generation", "Whether Mochite generates.");
         addConfigTranslation(translationBuilder, ORE_CONFIGURATION, "morkiteEnabled", "Morkite Generation", "Whether Morkite generates.");

@@ -1,8 +1,7 @@
 package lotus.gemstyne.data.models;
 
-import lotus.gemstyne.block.GemstyneBlockHandler;
-import lotus.gemstyne.block.GemstyneOreBlocks;
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.block.BlockHandler;
+import lotus.gemstyne.item.ItemHandler;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
@@ -22,39 +21,37 @@ public final class GemstyneOreModels {
         // =====
         // <===== Overworld =====>
         // =====
-        GemstyneOreBlocks.BUBBLEGEM.generateModels(blockStateModelGenerator);
-        GemstyneOreBlocks.ENDER_PEARL.generateModels(blockStateModelGenerator);
-        blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
-        GemstyneOreBlocks.MOCHITE.generateModels(blockStateModelGenerator);
-        GemstyneOreBlocks.MUTALIUM.generateModels(blockStateModelGenerator);
-        GemstyneOreBlocks.TORRIUM.generateModels(blockStateModelGenerator);
-        GemstyneOreBlocks.TIN.generateModels(blockStateModelGenerator);
-        GemstyneOreBlocks.URANIUM.generateModels(blockStateModelGenerator);
+        BlockHandler.BUBBLEGEM.generateModels(blockStateModelGenerator);
+        BlockHandler.ENDER_PEARL.generateModels(blockStateModelGenerator);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
+        BlockHandler.MOCHITE.generateModels(blockStateModelGenerator);
+        BlockHandler.MUTALIUM.generateModels(blockStateModelGenerator);
 
-        blockStateModelGenerator.registerSimpleCubeAll(
-                GemstyneOreBlocks.DEEPSLATE_MORKITE_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(
-                GemstyneOreBlocks.MORKITE_BLOCK);
+        BlockHandler.MORKITE.generateModels(blockStateModelGenerator);
+        BlockHandler.TORRIUM.generateModels(blockStateModelGenerator);
+        BlockHandler.TIN.generateModels(blockStateModelGenerator);
+        BlockHandler.URANIUM.generateModels(blockStateModelGenerator);
 
-        /*BlockStateModelGenerator.BlockTexturePool mochiteOrePool = blockStateModelGenerator.registerCubeAllModelTexturePool(GemstyneOreBlocks.MOCHITE.stoneOre());
-        mochiteOrePool.same(GemstyneOreBlocks.RICH_MOCHITE_ORE)*/
-        blockStateModelGenerator.registerSimpleCubeAll(GemstyneBlockHandler.PYRITE);
+        /*BlockStateModelGenerator.BlockTexturePool mochiteOrePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockHandler.MOCHITE.stoneOre());
+        mochiteOrePool.same(BlockHandler.RICH_MOCHITE_ORE)*/
+        blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.PYRITE);
 
-        blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.FIRE_OPAL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.FIRE_OPAL_BLOCK);
 
         // =====
         // <===== Nether =====>
         // =====
-        GemstyneOreBlocks.CRIMONITE.generateModels(blockStateModelGenerator);
-        GemstyneOreBlocks.ALDUS.generateModels(blockStateModelGenerator);
+        BlockHandler.ALDUS.generateModels(blockStateModelGenerator);
+        BlockHandler.BLAZITE.generateModels(blockStateModelGenerator);
+        BlockHandler.CRIMONITE.generateModels(blockStateModelGenerator);
 
         // =====
         // <===== Ore Extensions =====>
         // =====
         blockStateModelGenerator.registerSimpleCubeAll(
-                GemstyneOreBlocks.COMPRESSED_GRANITE_COAL_ORE);
+                BlockHandler.COMPRESSED_GRANITE_COAL_ORE);
 
-        blockStateModelGenerator.registerSimpleCubeAll(GemstyneOreBlocks.NEFARIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.NEFARIUM_ORE);
     }
 
 
@@ -62,21 +59,21 @@ public final class GemstyneOreModels {
         // =====
         // <===== Raw Ores =====>
         // =====
-        GemstyneOreItems.MUTALIUM.generateModels(itemModelGenerator);
-        GemstyneOreItems.MOCHITE.generateModels(itemModelGenerator);
-        GemstyneOreItems.Pyrite.generateModels(itemModelGenerator);
-        GemstyneOreItems.TORRIUM.generateModels(itemModelGenerator);
-        GemstyneOreItems.TIN.generateModels(itemModelGenerator);
-        GemstyneOreItems.URANIUM.generateModels(itemModelGenerator);
-        GemstyneOreItems.CRIMONITE.generateModels(itemModelGenerator);
-        GemstyneOreItems.ALDUS.generateModels(itemModelGenerator);
-        GemstyneOreItems.BRONZE.generateModels(itemModelGenerator);
+        ItemHandler.MUTALIUM.generateModels(itemModelGenerator);
+        ItemHandler.MOCHITE.generateModels(itemModelGenerator);
+        ItemHandler.Pyrite.generateModels(itemModelGenerator);
+        ItemHandler.TORRIUM.generateModels(itemModelGenerator);
+        ItemHandler.TIN.generateModels(itemModelGenerator);
+        ItemHandler.URANIUM.generateModels(itemModelGenerator);
+        ItemHandler.CRIMONITE.generateModels(itemModelGenerator);
+        ItemHandler.ALDUS.generateModels(itemModelGenerator);
+        ItemHandler.BRONZE.generateModels(itemModelGenerator);
 
-        itemModelGenerator.register(GemstyneOreItems.IKARITE, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.GARNET, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.MORKITE, Models.GENERATED);
-        itemModelGenerator.register(GemstyneOreItems.FIRE_OPAL, Models.GENERATED);
+        itemModelGenerator.register(ItemHandler.IKARITE, Models.GENERATED);
+        itemModelGenerator.register(ItemHandler.GARNET, Models.GENERATED);
+        itemModelGenerator.register(ItemHandler.MORKITE, Models.GENERATED);
+        itemModelGenerator.register(ItemHandler.FIRE_OPAL, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneOreItems.BUBBLEGEM, Models.GENERATED);
+        itemModelGenerator.register(ItemHandler.BUBBLEGEM, Models.GENERATED);
     }
 }

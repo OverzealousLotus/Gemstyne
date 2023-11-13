@@ -2,8 +2,8 @@ package lotus.gemstyne.block;
 
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.*;
-import lotus.gemstyne.block.util.GemstyneBlockSet;
-import lotus.gemstyne.block.util.GemstyneGeodeSet;
+import lotus.gemstyne.block.util.BlockSet;
+import lotus.gemstyne.block.util.GeodeSet;
 import lotus.gemstyne.effect.GemstyneEffects;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstyneMiningLevels;
@@ -15,8 +15,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-public final class GemstyneOreBlocks {
-    private GemstyneOreBlocks() {
+public final class BlockHandler {
+    private BlockHandler() {
     }
 
     // =====
@@ -27,12 +27,13 @@ public final class GemstyneOreBlocks {
     -sound like deepslate, or play Base Drum when used as an instrument.
      */
     private static final FabricBlockSettings COMPRESSED_FEATURES = FabricBlockSettings.create()
-        .requiresTool().sounds(BlockSoundGroup.DEEPSLATE).instrument(Instrument.BASEDRUM);
+        .requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.DEEPSLATE)
+        .instrument(Instrument.BASS);
 
     // =====
     // <===== Overworld Ores =====>
     // =====
-    public static final GemstyneBlockSet BUBBLEGEM = GemstyneBlockSet.Builder.start("bubblegem")
+    public static final BlockSet BUBBLEGEM = BlockSet.Builder.start("bubblegem")
         .setExperience(UniformIntProvider.create(8, 20)).setStrength(4.5f, 3.0f)
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL)
         .createOre()
@@ -40,19 +41,19 @@ public final class GemstyneOreBlocks {
         .createPureBlock()
         .end();
 
-    public static final GemstyneBlockSet ENDER_PEARL = GemstyneBlockSet.Builder.start("ender_pearl")
+    public static final BlockSet ENDER_PEARL = BlockSet.Builder.start("ender_pearl")
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).createOre()
         .createOreType(GemstyneConstants.DEEPSLATE)
         .createOreType(GemstyneConstants.NETHER)
         .createOreType(GemstyneConstants.END)
         .end();
 
-    public static final GemstyneBlockSet MOCHITE = GemstyneBlockSet.Builder.start("mochite")
+    public static final BlockSet MOCHITE = BlockSet.Builder.start("mochite")
         .setExperience(UniformIntProvider.create(2, 7))
         .createOreType(GemstyneConstants.NETHER)
         .createDefaultBlockSet(3.0f);
 
-    public static final GemstyneBlockSet MUTALIUM = GemstyneBlockSet.Builder.start("mutalium")
+    public static final BlockSet MUTALIUM = BlockSet.Builder.start("mutalium")
         .setExperience(UniformIntProvider.create(10, 20))
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
         .createOre(new MutaliumOre(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE),
@@ -72,7 +73,7 @@ public final class GemstyneOreBlocks {
     /*public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
         new MutaliumOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(2, 5)));*/
 
-    public static final GemstyneBlockSet TORRIUM = GemstyneBlockSet.Builder.start("torrium")
+    public static final BlockSet TORRIUM = BlockSet.Builder.start("torrium")
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL)
         .createOre(new TorriumOre(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).luminance(5),
             UniformIntProvider.create(5, 10)))
@@ -82,11 +83,11 @@ public final class GemstyneOreBlocks {
             UniformIntProvider.create(5, 10)))
         .end();
 
-    public static final GemstyneBlockSet TIN = GemstyneBlockSet.Builder.start("tin")
+    public static final BlockSet TIN = BlockSet.Builder.start("tin")
         .setExperience(UniformIntProvider.create(2, 5))
         .createDefaultBlockSet(3.0f);
 
-    public static final GemstyneBlockSet URANIUM = GemstyneBlockSet.Builder.start("uranium")
+    public static final BlockSet URANIUM = BlockSet.Builder.start("uranium")
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setExperience(UniformIntProvider.create(5, 15))
         .setEffect(GemstyneEffects.WEAK_RADIATION).setStrength(6.0f, 5.0f)
         .createOreType(GemstyneConstants.DEEPSLATE, 60)
@@ -100,20 +101,24 @@ public final class GemstyneOreBlocks {
                 .strength(4.5f, 3.0f), UniformIntProvider.create(10, 15))
     );
 
-    public static final Block DEEPSLATE_MORKITE_ORE = GemstyneRegistry.designateBlock("deepslate_morkite_ore",
-        new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE)
-                .strength(4.5f, 3.0f), UniformIntProvider.create(3, 10))
-    );
+    public static final BlockSet MORKITE = BlockSet.Builder.start("morkite")
+        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(UniformIntProvider.create(3, 10))
+        .setStrength(4.5f, 3.0f).createOreType(GemstyneConstants.DEEPSLATE).createRawBlock()
+        .end();
 
     // =====
     // <===== Nether Ores =====>
     // =====
-    public static final GemstyneBlockSet ALDUS = GemstyneBlockSet.Builder.start("aldus")
+    public static final BlockSet ALDUS = BlockSet.Builder.start("aldus")
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(UniformIntProvider.create(2, 5))
         .createDefaultNetherBlockSet(4.0f);
 
-    // Diamond
-    public static final GemstyneBlockSet CRIMONITE = GemstyneBlockSet.Builder.start("crimonite")
+    public static final BlockSet BLAZITE = BlockSet.Builder.start("blazite")
+        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(UniformIntProvider.create(2, 8))
+        .createOreType(GemstyneConstants.NETHER)
+        .end();
+
+    public static final BlockSet CRIMONITE = BlockSet.Builder.start("crimonite")
         .setExperience(UniformIntProvider.create(2, 5)).setEffect(StatusEffects.WITHER)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setStrength(5.0f, 3.0f)
         .createOreType(GemstyneConstants.NETHER, 60)
@@ -132,11 +137,6 @@ public final class GemstyneOreBlocks {
     // <===== Concentrated Ores =====>
     // =====
 
-    public static final Block MORKITE_BLOCK = GemstyneRegistry.designateBlock("morkite_block",
-        new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
-                .strength(5.0f, 3.0f))
-    );
-
     public static final Block FIRE_OPAL_BLOCK = GemstyneRegistry.designateBlock("fire_opal_block",
         new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.BELL)
             .requiresTool().strength(7.0f, 3.0f).sounds(BlockSoundGroup.METAL))
@@ -145,9 +145,43 @@ public final class GemstyneOreBlocks {
     // =====
     // <===== Crystalline Blocks =====>
     // =====
-    public static final GemstyneGeodeSet IKARITE = GemstyneGeodeSet.Builder.start("ikarite").createDefaultSet(false);
-    public static final GemstyneGeodeSet GARNET = GemstyneGeodeSet.Builder.start("garnet").createDefaultSet(false);
-    public static final GemstyneGeodeSet LAPIS = GemstyneGeodeSet.Builder.start("lapis").createDefaultSet(true);
+    public static final GeodeSet IKARITE = GeodeSet.Builder.start("ikarite")
+        .level(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).createDefaultSet(false);
+    public static final GeodeSet GARNET = GeodeSet.Builder.start("garnet").createDefaultSet(false);
+    public static final GeodeSet LAPIS = GeodeSet.Builder.start("lapis").createDefaultSet(true);
 
-    public static void registerOreBlocks() {Gemstyne.LOGGER.info("Registering Ores...");}
+    // Singletons
+    public static final Block COMPRESSED_ANDESITE = GemstyneRegistry.designateBlock("compressed_andesite",
+        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.STONE_GRAY))
+    );
+    public static final Block COMPRESSED_DIORITE = GemstyneRegistry.designateBlock("compressed_diorite",
+        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.LIGHT_GRAY))
+    );
+    public static final Block COMPRESSED_GRANITE = GemstyneRegistry.designateBlock("compressed_granite",
+        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN))
+    );
+    public static final Block COMPACT_DIRT = GemstyneRegistry.designateBlock("compact_dirt",
+        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN)
+            .strength(1.5f, 3.0f).sounds(BlockSoundGroup.ROOTED_DIRT))
+    );
+    public static final Block GABBRO = GemstyneRegistry.designateBlock("gabbro",
+        new Block(FabricBlockSettings.create().mapColor(MapColor.STONE_GRAY).instrument(Instrument.BASS)
+            .strength(1.5f, 3.0f).sounds(BlockSoundGroup.TUFF))
+    );
+    public static final Block HALITE = GemstyneRegistry.designateBlock("halite",
+        new Block(FabricBlockSettings.create().mapColor(MapColor.PINK).instrument(Instrument.BELL)
+            .strength(0.75f, 1.5f).sounds(BlockSoundGroup.CALCITE))
+    );
+    public static final Block PUMICE = GemstyneRegistry.designateBlock("pumice",
+        new Block(FabricBlockSettings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.BASS)
+            .strength(1.0f, 1.0f).sounds(BlockSoundGroup.BASALT))
+    );
+
+    public static final Block PYRITE = GemstyneRegistry.designateBlock("pyrite",
+        new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE)));
+
+    public static void registerGemstyneBlocks() {
+        Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");
+        Gemstyne.LOGGER.info("Successfully registered blocks for " + Gemstyne.MOD_ID + "!");
+    }
 }

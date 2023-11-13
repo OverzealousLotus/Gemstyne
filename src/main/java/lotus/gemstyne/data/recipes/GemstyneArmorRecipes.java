@@ -2,7 +2,7 @@ package lotus.gemstyne.data.recipes;
 
 import lotus.gemstyne.armor.GemstyneArmorItems;
 import lotus.gemstyne.armor.GemstyneArmorSet;
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -41,25 +41,25 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
         // <===== Rendfire Armour =====>
         // =====
         offerBasicHelmetRecipe(exporter, GemstyneArmorItems.RENDFIRE.helmet,
-                GemstyneOreItems.CRIMONITE.ingot());
+            ItemHandler.CRIMONITE.ingot());
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE.chestplate)
                 .pattern("C C")
                 .pattern("CFC")
                 .pattern("CCC")
-                .input('C', GemstyneOreItems.CRIMONITE.ingot())
-                .input('F', GemstyneOreItems.FIRE_OPAL)
-                .criterion(RecipeProvider.hasItem(GemstyneOreItems.FIRE_OPAL),
-                        RecipeProvider.conditionsFromItem(GemstyneOreItems.FIRE_OPAL))
-                .criterion(RecipeProvider.hasItem(GemstyneOreItems.CRIMONITE.ingot()),
-                        RecipeProvider.conditionsFromItem(GemstyneOreItems.CRIMONITE.ingot()))
+                .input('C', ItemHandler.CRIMONITE.ingot())
+                .input('F', ItemHandler.FIRE_OPAL)
+                .criterion(RecipeProvider.hasItem(ItemHandler.FIRE_OPAL),
+                        RecipeProvider.conditionsFromItem(ItemHandler.FIRE_OPAL))
+                .criterion(RecipeProvider.hasItem(ItemHandler.CRIMONITE.ingot()),
+                        RecipeProvider.conditionsFromItem(ItemHandler.CRIMONITE.ingot()))
                 .offerTo(exporter, new Identifier(RecipeProvider
                         .getRecipeName(GemstyneArmorItems.RENDFIRE.chestplate)));
 
         offerBasicLeggingsRecipe(exporter, GemstyneArmorItems.RENDFIRE.leggings,
-                GemstyneOreItems.CRIMONITE.ingot());
+                ItemHandler.CRIMONITE.ingot());
         offerBasicBootsRecipe(exporter, GemstyneArmorItems.RENDFIRE.boots,
-                GemstyneOreItems.CRIMONITE.ingot());
+                ItemHandler.CRIMONITE.ingot());
     }
 
 

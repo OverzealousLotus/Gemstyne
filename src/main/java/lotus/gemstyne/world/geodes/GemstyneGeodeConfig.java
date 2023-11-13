@@ -1,8 +1,7 @@
 package lotus.gemstyne.world.geodes;
 
 import com.google.common.collect.ImmutableSet;
-import lotus.gemstyne.block.GemstyneBlockHandler;
-import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.world.GemstyneConfiguredFeatures;
 import net.minecraft.block.*;
 import net.minecraft.registry.Registerable;
@@ -31,20 +30,20 @@ public final class GemstyneGeodeConfig {
         // =====
         // <===== Geodes =====>
         // =====
-        createGeodeConfig(context, IKARITE_KEY, Blocks.AIR, GemstyneOreBlocks.IKARITE.pureBlock(),
-            GemstyneOreBlocks.IKARITE.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, GemstyneOreBlocks.IKARITE.getBudSet(),
+        createGeodeConfig(context, IKARITE_KEY, Blocks.AIR, BlockHandler.IKARITE.pureBlock(),
+            BlockHandler.IKARITE.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, BlockHandler.IKARITE.getBudSet(),
             new GeodeLayerThicknessConfig(1.4D, 1.0D, 2.2D, 3.0D),
             new GeodeCrackConfig(0.05D, 0.5D, 1), 0.5D,
             new Pair<>(0.08D, true), UniformIntProvider.create(3, 8), UniformIntProvider.create(2, 6),
             UniformIntProvider.create(1, 2), -15, 18, 0.070D, 1);
-        createGeodeConfig(context, LAPIS_KEY, Blocks.AIR, GemstyneBlockHandler.PYRITE, GemstyneOreBlocks.LAPIS.buddingBlock(),
-            Blocks.CALCITE, Blocks.COBBLED_DEEPSLATE, GemstyneOreBlocks.LAPIS.getBudSet(),
+        createGeodeConfig(context, LAPIS_KEY, Blocks.AIR, BlockHandler.PYRITE, BlockHandler.LAPIS.buddingBlock(),
+            Blocks.CALCITE, Blocks.COBBLED_DEEPSLATE, BlockHandler.LAPIS.getBudSet(),
             new GeodeLayerThicknessConfig(1.5D, 1.2D, 2.5D, 3.5D),
             new GeodeCrackConfig(0.10D, 0.5D, 1), 0.5D,
             new Pair<>(0.1D, true), UniformIntProvider.create(3, 8), UniformIntProvider.create(2, 6),
             UniformIntProvider.create(1, 2), -18, 18, 0.075D, 1);
-        createGeodeConfig(context, GARNET_KEY, Blocks.AIR, GemstyneOreBlocks.GARNET.pureBlock(),
-            GemstyneOreBlocks.GARNET.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, GemstyneOreBlocks.GARNET.getBudSet(),
+        createGeodeConfig(context, GARNET_KEY, Blocks.AIR, BlockHandler.GARNET.pureBlock(),
+            BlockHandler.GARNET.buddingBlock(), Blocks.BASALT, Blocks.OBSIDIAN, BlockHandler.GARNET.getBudSet(),
             new GeodeLayerThicknessConfig(1.5D, 1.2D, 2.0D, 3.0D),
             new GeodeCrackConfig(0.10D, 0.5D, 1), 0.5D,
             new Pair<>(0.1D, true), UniformIntProvider.create(3, 7), UniformIntProvider.create(2, 5),
