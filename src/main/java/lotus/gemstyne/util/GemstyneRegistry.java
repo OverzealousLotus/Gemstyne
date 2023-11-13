@@ -2,11 +2,11 @@ package lotus.gemstyne.util;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.block.util.GemstyneBlockSet;
-import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.block.util.BlockSet;
+import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.GemstyneItemSet;
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 /**
  * <ul>Gemstyne's Registry Handler.
  *  <li>See {@link GemstyneCreativeGroup} for more information on how groups are handled.</li>
- *  <li>See {@link GemstyneBlockSet} & {@link GemstyneItemSet} to see how these are used to register items.</li>
+ *  <li>See {@link BlockSet} & {@link GemstyneItemSet} to see how these are used to register items.</li>
  * </ul>
  */
 public class GemstyneRegistry {
@@ -82,12 +82,12 @@ public class GemstyneRegistry {
         Gemstyne.LOGGER.info("Registering Fuel Items for " + Gemstyne.MOD_ID + "...");
 
         FuelRegistry registry = FuelRegistry.INSTANCE;
-        registry.add(GemstyneOreItems.MORKITE, 2000);
-        registry.add(GemstyneOreBlocks.MORKITE_BLOCK, 20000);
+        registry.add(ItemHandler.MORKITE, 2000);
+        registry.add(BlockHandler.MORKITE.rawBlock(), 20000);
         registry.add(GemstyneFluids.LIQUID_MORKITE_BUCKET, 24000);
     }
 
-    public static void registerGemstyneMisc() {
+    public static void registerMisc() {
         registerFuels();
     }
 }

@@ -24,6 +24,8 @@ public class GemstyneConfigModel {
     public static class OreConfiguration {
         @SectionHeader("overworld")
         @RestartRequired
+        public boolean bubblegemEnabled = true;
+        @RestartRequired
         public boolean mochiteEnabled = true;
         @RestartRequired
         public boolean morkiteEnabled = true;
@@ -37,10 +39,14 @@ public class GemstyneConfigModel {
         @RestartRequired
         public boolean aldusEnabled = true;
         @RestartRequired
+        public boolean blaziteEnabled = true;
+        @RestartRequired
         public boolean crimoniteEnabled = true;
 
 
         @SectionHeader("multi_dimensional")
+        @RestartRequired
+        public boolean enderPearlEnabled = true;
         @RestartRequired
         public boolean mutaliumEnabled = true;
         @RestartRequired

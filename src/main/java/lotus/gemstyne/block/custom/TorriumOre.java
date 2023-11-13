@@ -1,7 +1,7 @@
 package lotus.gemstyne.block.custom;
 
 import io.wispforest.owo.particles.ClientParticles;
-import lotus.gemstyne.util.GemstyneColorUtil;
+import lotus.gemstyne.util.GemstyneUtil;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
@@ -25,7 +25,7 @@ public class TorriumOre extends VolatileOre {
         // deviation = Deviation from spawn point.
         if (chance >= random.nextInt(100)) {
             ClientParticles.setParticleCount(3);
-            ClientParticles.spawnCenteredOnBlock(new DustParticleEffect(GemstyneColorUtil.Colors.TORRIUM, 0.8F), world, pos, 1.3D);
+            ClientParticles.spawnCenteredOnBlock(new DustParticleEffect(GemstyneUtil.Colors.TORRIUM, 0.8F), world, pos, 1.3D);
         }
     }
 }

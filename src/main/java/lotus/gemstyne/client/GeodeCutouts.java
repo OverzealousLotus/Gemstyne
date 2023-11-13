@@ -1,7 +1,7 @@
 package lotus.gemstyne.client;
 
 import com.google.common.collect.ImmutableSet;
-import lotus.gemstyne.block.GemstyneOreBlocks;
+import lotus.gemstyne.block.BlockHandler;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -13,9 +13,9 @@ public final class GeodeCutouts {
     private GeodeCutouts() {}
 
     public static void registerGeodeCutouts() {
-        addGeodeCutouts(GemstyneOreBlocks.IKARITE.getBudSet());
-        addGeodeCutouts(GemstyneOreBlocks.GARNET.getBudSet());
-        addGeodeCutouts(GemstyneOreBlocks.LAPIS.getBudSet());
+        addGeodeCutouts(BlockHandler.IKARITE.getBudSet());
+        addGeodeCutouts(BlockHandler.GARNET.getBudSet());
+        addGeodeCutouts(BlockHandler.LAPIS.getBudSet());
     }
 
     private static void addGeodeCutouts(ImmutableSet<Block> buds) {

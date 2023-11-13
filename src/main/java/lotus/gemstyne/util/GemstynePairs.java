@@ -4,6 +4,9 @@ import net.minecraft.block.AmethystBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolItem;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.PlacedFeature;
 
 public final class GemstynePairs {
     private GemstynePairs() {}
@@ -18,4 +21,5 @@ public final class GemstynePairs {
     public record ItemPair(String itemID, Item item) {}
     public record CrystallinePair(String blockID, AmethystBlock block) {}
     public record ToolPair(String toolID, ToolItem tool) {}
+    public record GenKeyPair(RegistryKey<ConfiguredFeature<?, ?>> configKey, RegistryKey<PlacedFeature> placedKey) {}
 }

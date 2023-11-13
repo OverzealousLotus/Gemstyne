@@ -2,7 +2,7 @@ package lotus.gemstyne.block.custom;
 
 import com.google.common.collect.ImmutableList;
 import io.wispforest.owo.particles.ClientParticles;
-import lotus.gemstyne.util.GemstyneColorUtil;
+import lotus.gemstyne.util.GemstyneUtil;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
@@ -36,7 +36,7 @@ public class MutaliumOre extends VolatileOre {
         // deviation = Deviation from spawn point.
         if (chance >= random.nextInt(100)) {
             ClientParticles.setParticleCount(random.nextBetweenExclusive(1, 5));
-            ClientParticles.spawnCenteredOnBlock(new DustParticleEffect(GemstyneColorUtil.Colors.MUTALIUM_PALLETE.get(random.nextInt(3)), 0.8F), world, pos, 1.3D);
+            ClientParticles.spawnCenteredOnBlock(new DustParticleEffect(GemstyneUtil.Colors.MUTALIUM_PALETTE.get(random.nextInt(3)), 0.8F), world, pos, 1.3D);
         }
 
         super.randomDisplayTick(state, world, pos, random);

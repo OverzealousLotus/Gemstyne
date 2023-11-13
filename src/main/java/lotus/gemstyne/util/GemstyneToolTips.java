@@ -11,7 +11,7 @@ public class GemstyneToolTips {
 
 
     public static void registerToolTips() {
-        OMINOUS.addArmorSet(GemstyneArmorItems.RENDFIRE.getArmorSet(), GemstyneColorUtil.Colors.RENDFIRE_STYLE);
-        ALDUS.addArmorSet(GemstyneArmorItems.ALDUS.getArmorSet(), GemstyneColorUtil.Colors.ALDUS_STYLE);
+        OMINOUS.addArmorSet(GemstyneArmorItems.RENDFIRE.getArmorSet(), GemstyneUtil.Colors.RENDFIRE_STYLE);
+        ALDUS.addArmorSet(GemstyneArmorItems.ALDUS.getArmorSet(), GemstyneUtil.Colors.ALDUS_STYLE);
     }
 }
