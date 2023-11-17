@@ -34,13 +34,17 @@ public abstract class GemstyneENProvider extends FabricLanguageProvider {
      * @param blockSet {@link BlockSet}
      */
     protected static void translateSet(TranslationBuilder translationBuilder, @NotNull BlockSet blockSet) {
-        String setName = StringUtils.replace(blockSet.getSetName(), "_", " ");
+        String setName = WordUtils.capitalizeFully(StringUtils.replace(blockSet.getSetName(), "_", " "));
         blockSet.getBlockMap().forEach((blockType, blockPair) -> {
             switch (blockType) {
-                case GemstyneConstants.STONE -> translationBuilder.add(blockPair.block(), WordUtils.capitalizeFully(setName) + " Ore");
-                case "raw" -> translationBuilder.add(blockPair.block(), "Raw " + WordUtils.capitalizeFully(setName) + " Block");
-                case "pure" -> translationBuilder.add(blockPair.block(), WordUtils.capitalizeFully(setName) + " Block");
-                default -> translationBuilder.add(blockPair.block(), WordUtils.capitalizeFully(blockType) + " " + WordUtils.capitalizeFully(setName) + " Ore");
+                case GemstyneConstants.STONE -> translationBuilder.add(blockPair.block(), setName + " Ore");
+                case GemstyneConstants.RICH_STONE -> translationBuilder.add(blockPair.block(), WordUtils.capitalizeFully(StringUtils.replace(blockType, "_stone", " ")) + setName + " Ore");
+                case GemstyneConstants.RAW -> translationBuilder.add(blockPair.block(), "Raw " + setName + " Block");
+                case "pure" -> translationBuilder.add(blockPair.block(), setName + " Block");
+                default -> {
+                    String type = WordUtils.capitalizeFully(StringUtils.replace(blockType, "_", " "));
+                    translationBuilder.add(blockPair.block(), type + " " + setName + " Ore");
+                }
             }
         });
     }
