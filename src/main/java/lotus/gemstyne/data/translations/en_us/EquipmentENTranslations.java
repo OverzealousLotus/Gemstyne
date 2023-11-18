@@ -26,9 +26,7 @@ abstract class EquipmentENTranslations extends FabricLanguageProvider {
         // ======
         GemstyneENProvider.translateSet(translationBuilder, GemstyneToolItems.ALDUS);
         GemstyneENProvider.translateSet(translationBuilder, GemstyneToolItems.BRONZE);
+        GemstyneENProvider.translateSet(translationBuilder, GemstyneToolItems.MUTALIUM);
         GemstyneENProvider.translateSet(translationBuilder, GemstyneToolItems.RENDFIRE);
-
-        translationBuilder.add(GemstyneToolItems.MUTALIUM.getAxe(), "Mutalium Axe");
-        translationBuilder.add(GemstyneToolItems.MUTALIUM.getSword(), "Mutalium Sword");
     }
 }
