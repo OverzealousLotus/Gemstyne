@@ -7,6 +7,7 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
@@ -25,16 +26,18 @@ import java.util.*;
 public class RichOre extends BlockWithEntity implements BlockEntityProvider {
     private final int breakStates;
     private final UniformIntProvider experience;
+    private final Item richDrop;
 
     /**
      *
      * @param settings {@link net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings}
      * @param breakStates The amount of times this can be mined before being destroyed.
      */
-    public RichOre(Settings settings, int breakStates, UniformIntProvider experience) {
+    public RichOre(Settings settings, int breakStates, UniformIntProvider experience, Item richDrop) {
         super(settings);
         this.breakStates = breakStates;
         this.experience = experience;
+        this.richDrop = richDrop;
     }
 
     /**
@@ -63,8 +66,8 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
         final RichOreBlockEntity entity = getDeepOreEntity(world, pos);
 
         if (entity.isNew()) {
-            entity.setCurrentStates(breakStates - 1);
-            entity.setNewness(false);
+            entity.setCurrentStates(breakStates - 1, world, pos, state);
+            entity.aged();
         }
     }
 
@@ -84,8 +87,8 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
         if (entity.getCurrentStates() <= 0) {  // Check to see if currentStates is less than or equal to 0.
             world.setBlockState(pos, newState);  // If so, destroy block.
         } else {
-            entity.setCurrentStates(entity.getCurrentStates() - 1);  // Otherwise, decrease and reset.
-            dropStack(world, pos, Items.DIAMOND.getDefaultStack());
+            entity.setCurrentStates(entity.getCurrentStates() - 1, world, pos, state);  // Otherwise, decrease and reset.
+            dropStack(world, pos, this.richDrop.getDefaultStack());
             // dropStacks(state, world, pos);
             world.setBlockState(pos, state);
         }
@@ -115,7 +118,7 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
      */
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (player.isCreative()) getDeepOreEntity(world, pos).setCurrentStates(0);
+        if (player.isCreative()) getDeepOreEntity(world, pos).setCurrentStates(0, world, pos, state);
 
         super.onBreak(world, pos, state, player);
     }
