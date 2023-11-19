@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 9,
+  "ingredient": {
+    "item": "gemstyne:compressed_diorite"
+  },
+  "result": "minecraft:diorite"
+}

@@ -81,8 +81,6 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         // =====
         // <===== Ingots =====>
         // =====
-        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, Blocks.GRANITE, BlockHandler.COMPRESSED_GRANITE, 9);
-        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, BlockHandler.COMPRESSED_GRANITE, Blocks.GRANITE);
         offerReversibleNuggetRecipe(exporter, ItemHandler.ALDUS);
         offerReversibleNuggetRecipe(exporter, ItemHandler.BRONZE);
         offerReversibleNuggetRecipe(exporter, ItemHandler.CRIMONITE);
@@ -100,6 +98,13 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
 
         offerAlloyIngotRecipe(exporter, Items.COPPER_INGOT, ItemHandler.TIN.ingot(),
                 ItemHandler.BRONZE.ingot(), "bronze_ingot");
+
+        /////
+        ////////// Stone cutter //////////
+        /////
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, Blocks.GRANITE, BlockHandler.COMPRESSED_GRANITE, 9);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, Blocks.ANDESITE, BlockHandler.COMPRESSED_ANDESITE, 9);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, Blocks.DIORITE, BlockHandler.COMPRESSED_DIORITE, 9);
 
         // =====
         // <===== Shapeless =====>

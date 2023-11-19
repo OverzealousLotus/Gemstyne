@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_granite": {
+    "has_compressed_diorite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:granite"
+              "gemstyne:compressed_diorite"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:compressed_granite_from_granite_stonecutting"
+        "recipe": "minecraft:diorite_from_compressed_diorite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_granite",
+      "has_compressed_diorite",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:compressed_granite_from_granite_stonecutting"
+      "minecraft:diorite_from_compressed_diorite_stonecutting"
     ]
   },
   "sends_telemetry_event": false
