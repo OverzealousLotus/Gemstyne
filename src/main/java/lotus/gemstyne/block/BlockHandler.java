@@ -5,6 +5,7 @@ import lotus.gemstyne.block.custom.*;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.block.util.GeodeSet;
 import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstyneMiningLevels;
 import lotus.gemstyne.util.GemstyneRegistry;
@@ -12,6 +13,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Items;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
@@ -50,7 +52,9 @@ public final class BlockHandler {
 
     public static final BlockSet MOCHITE = BlockSet.Builder.start("mochite")
         .setExperience(UniformIntProvider.create(2, 7))
+        .createOre(Gemstyne.CONFIG.mochiteRichness(), ItemHandler.MOCHITE.crystal())
         .createOreType(GemstyneConstants.NETHER)
+        .createOreType(GemstyneConstants.RICH_DEEPSLATE, Gemstyne.CONFIG.mochiteRichness(), ItemHandler.MOCHITE.crystal())
         .createDefaultBlockSet(3.0f);
 
     public static final BlockSet MUTALIUM = BlockSet.Builder.start("mutalium")
@@ -67,7 +71,7 @@ public final class BlockHandler {
         .end();
 
     public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
-        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), Gemstyne.CONFIG.mochiteRichness(), UniformIntProvider.create(2, 5))
+        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), Gemstyne.CONFIG.mochiteRichness(), UniformIntProvider.create(2, 5), Items.DIAMOND)
     );
 
     /*public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",

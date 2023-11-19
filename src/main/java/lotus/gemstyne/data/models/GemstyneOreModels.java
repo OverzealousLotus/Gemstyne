@@ -31,9 +31,6 @@ public final class GemstyneOreModels {
         BlockHandler.TORRIUM.generateModels(blockStateModelGenerator);
         BlockHandler.TIN.generateModels(blockStateModelGenerator);
         BlockHandler.URANIUM.generateModels(blockStateModelGenerator);
-
-        /*BlockStateModelGenerator.BlockTexturePool mochiteOrePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockHandler.MOCHITE.stoneOre());
-        mochiteOrePool.same(BlockHandler.RICH_MOCHITE_ORE)*/
         blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.PYRITE);
 
         blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.FIRE_OPAL_BLOCK);

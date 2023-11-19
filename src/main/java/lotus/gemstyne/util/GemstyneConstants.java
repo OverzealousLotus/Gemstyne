@@ -6,12 +6,16 @@ package lotus.gemstyne.util;
 public final class GemstyneConstants {
     private GemstyneConstants() {}
 
-    ///// Keywords
+    ///// Ore Keywords
+
+    ///// Geode Keywords
     public static final String BLOCK = "block";
     public static final String STONE = "stone";
     public static final String DEEPSLATE = "deepslate";
     public static final String RAW = "raw";
     public static final String NETHER = "nether";
+    public static final String RICH_STONE = "rich_stone";
+    public static final String RICH_DEEPSLATE = "rich_deepslate";
     public static final String OVERWORLD = "overworld";
     public static final String END = "end";
     public static final String SMALL = "small";
