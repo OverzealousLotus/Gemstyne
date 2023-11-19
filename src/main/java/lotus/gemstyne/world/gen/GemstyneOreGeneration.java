@@ -3,7 +3,7 @@ package lotus.gemstyne.world.gen;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
-import lotus.gemstyne.world.GemstyneWorldHandler;
+import lotus.gemstyne.world.WorldHandler;
 import lotus.gemstyne.world.geodes.GemstyneGeodePlaced;
 import lotus.gemstyne.world.minerals.GemstyneMineralPlaced;
 import lotus.gemstyne.world.ores.GemstyneOrePlaced;
@@ -26,32 +26,33 @@ public class GemstyneOreGeneration {
         // <=====| The Overworld |=====>
         // =====
         if (Gemstyne.CONFIG.oreConfiguration.bubblegemEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.BUBBLEGEM.fetchPlacedKey(GemstyneConstants.SMALL));
-            addOverworldOre(GemstyneWorldHandler.BUBBLEGEM.fetchPlacedKey(GemstyneConstants.LARGE));
+            addOverworldOre(WorldHandler.BUBBLEGEM.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(WorldHandler.BUBBLEGEM.fetchPlacedKey(GemstyneConstants.LARGE));
         }
 
         if (Gemstyne.CONFIG.oreConfiguration.mochiteEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.SMALL));
-            addOverworldOre(GemstyneWorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.LARGE));
-            addOverworldOre(GemstyneWorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.RAW));
+            addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.LARGE));
+            addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.RAW));
+            addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.RICH));
         }
 
         if (Gemstyne.CONFIG.oreConfiguration.tinEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.TIN.fetchPlacedKey(GemstyneConstants.SMALL));
-            addOverworldOre(GemstyneWorldHandler.TIN.fetchPlacedKey(GemstyneConstants.LARGE));
-            addOverworldOre(GemstyneWorldHandler.TIN.fetchPlacedKey(GemstyneConstants.RAW));
+            addOverworldOre(WorldHandler.TIN.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(WorldHandler.TIN.fetchPlacedKey(GemstyneConstants.LARGE));
+            addOverworldOre(WorldHandler.TIN.fetchPlacedKey(GemstyneConstants.RAW));
         }
 
         if(Gemstyne.CONFIG.oreConfiguration.uraniumEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.SMALL));
-            addOverworldOre(GemstyneWorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.LARGE));
-            addOverworldOre(GemstyneWorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.RAW));
+            addOverworldOre(WorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(WorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.LARGE));
+            addOverworldOre(WorldHandler.URANIUM.fetchPlacedKey(GemstyneConstants.RAW));
         }
 
         if(Gemstyne.CONFIG.oreConfiguration.morkiteEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.BURIED));
-            addOverworldOre(GemstyneWorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.EXPOSED));
-            addOverworldOre(GemstyneWorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.RAW));
+            addOverworldOre(WorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.BURIED));
+            addOverworldOre(WorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.EXPOSED));
+            addOverworldOre(WorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.RAW));
         }
 
         addOverworldOre(GemstyneOrePlaced.getCompressedCoalOrePlacedKey());
@@ -63,18 +64,18 @@ public class GemstyneOreGeneration {
         // <=====| The Nether |=====>
         // =====
         if(Gemstyne.CONFIG.oreConfiguration.aldusEnabled()) {
-            addNetherOre(GemstyneWorldHandler.ALDUS.fetchPlacedKey(GemstyneConstants.SMALL));
-            addNetherOre(GemstyneWorldHandler.ALDUS.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(WorldHandler.ALDUS.fetchPlacedKey(GemstyneConstants.SMALL));
+            addNetherOre(WorldHandler.ALDUS.fetchPlacedKey(GemstyneConstants.LARGE));
         }
 
         if(Gemstyne.CONFIG.oreConfiguration.blaziteEnabled()) {
-            addNetherOre(GemstyneWorldHandler.BLAZITE.fetchPlacedKey(GemstyneConstants.SMALL));
-            addNetherOre(GemstyneWorldHandler.BLAZITE.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(WorldHandler.BLAZITE.fetchPlacedKey(GemstyneConstants.SMALL));
+            addNetherOre(WorldHandler.BLAZITE.fetchPlacedKey(GemstyneConstants.LARGE));
         }
 
         if(Gemstyne.CONFIG.oreConfiguration.crimoniteEnabled()) {
-            addNetherOre(GemstyneWorldHandler.CRIMONITE.fetchPlacedKey(GemstyneConstants.SMALL));
-            addNetherOre(GemstyneWorldHandler.CRIMONITE.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(WorldHandler.CRIMONITE.fetchPlacedKey(GemstyneConstants.SMALL));
+            addNetherOre(WorldHandler.CRIMONITE.fetchPlacedKey(GemstyneConstants.LARGE));
         }
 
         // =====
@@ -86,23 +87,23 @@ public class GemstyneOreGeneration {
         // <=====| Multi-Dimensional  |=====>
         // =====
         if(Gemstyne.CONFIG.oreConfiguration.enderPearlEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.SMALL));
-            addOverworldOre(GemstyneWorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.LARGE));
-            addNetherOre(GemstyneWorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.NETHER));
-            addEndOre(GemstyneWorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.END));
+            addOverworldOre(WorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(WorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(WorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.NETHER));
+            addEndOre(WorldHandler.ENDER_PEARL.fetchPlacedKey(GemstyneConstants.END));
         }
 
         if(Gemstyne.CONFIG.oreConfiguration.torriumEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.SMALL));
-            addOverworldOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.LARGE));
-            addNetherOre(GemstyneWorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.NETHER));
+            addOverworldOre(WorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(WorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(WorldHandler.TORRIUM.fetchPlacedKey(GemstyneConstants.NETHER));
         }
 
         if(Gemstyne.CONFIG.oreConfiguration.mutaliumEnabled()) {
-            addOverworldOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.SMALL));
-            addOverworldOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.LARGE));
-            addNetherOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.NETHER));
-            addEndOre(GemstyneWorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.END));
+            addOverworldOre(WorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.SMALL));
+            addOverworldOre(WorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.LARGE));
+            addNetherOre(WorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.NETHER));
+            addEndOre(WorldHandler.MUTALIUM.fetchPlacedKey(GemstyneConstants.END));
         }
 
         // =====

@@ -27,6 +27,8 @@ abstract class ItemENTranslations extends FabricLanguageProvider {
 
         translationBuilder.add(ItemHandler.FIRE_OPAL, "Fire Opal");
 
+        translationBuilder.add(ItemHandler.Pyrite.raw(), "Raw Pyrite");
+
         translationBuilder.add(ItemHandler.IMBUED_ROD, "Imbued Rod");
         translationBuilder.add(ItemHandler.IMBUED_FEATHER, "Imbued Feather");
 

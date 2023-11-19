@@ -20,10 +20,16 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
 public class GemstyneOreModification {
+    private static final RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+    private static final RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+    private static final RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+    private static final RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
+
     private final Map<String, GenKeyPair> oreKeys = new LinkedHashMap<>();
     private final BlockSet oreSet;
     private final Multimap<String, OreFeatureConfig.Target> oreMap = LinkedHashMultimap.create();
@@ -44,6 +50,12 @@ public class GemstyneOreModification {
         return this;
     }
 
+    protected GemstyneOreModification addRichStoneOre() {
+        this.oreMap.put("rich_overworld", OreFeatureConfig.createTarget(stoneReplaceables, oreSet.richStoneOre().getDefaultState()));
+        this.ores.add(oreSet.richStoneOre());
+        return this;
+    }
+
     /**
      * Adds {@link BlockTags#DEEPSLATE_ORE_REPLACEABLES} to ore Generation.
      * @return Returns instance of self.
@@ -51,6 +63,12 @@ public class GemstyneOreModification {
     protected GemstyneOreModification addDeepslateOre() {
         this.oreMap.put(GemstyneConstants.OVERWORLD, OreFeatureConfig.createTarget(deepslateReplaceables, oreSet.deepslateOre().getDefaultState()));
         this.ores.add(oreSet.deepslateOre());
+        return this;
+    }
+
+    protected GemstyneOreModification addRichDeepslateOre() {
+        this.oreMap.put("rich_overworld", OreFeatureConfig.createTarget(deepslateReplaceables, oreSet.richDeepslateOre().getDefaultState()));
+        this.ores.add(oreSet.richDeepslateOre());
         return this;
     }
 
@@ -150,6 +168,23 @@ public class GemstyneOreModification {
      * @param veinsSize Size of ore veins.
      * @param discardOnAirChance Chance of veins being discarded when exposed to air.
      */
+    public void overworldConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String keyName, int veinsSize, float discardOnAirChance, boolean isRaw, String targets) {
+        if (isRaw) {
+            GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
+                this.targets, veinsSize, discardOnAirChance));
+        } else {
+            GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
+                this.oreMap.get(targets).stream().toList(), veinsSize, discardOnAirChance));
+        }
+    }
+
+    /**
+     * Registers {@link ConfiguredFeature}
+     * @param context Context... Don't ask me.
+     * @param keyName Target key for features. For example, small, or large.
+     * @param veinsSize Size of ore veins.
+     * @param discardOnAirChance Chance of veins being discarded when exposed to air.
+     */
     public void netherConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context, String keyName, int veinsSize, float discardOnAirChance) {
         GemstyneConfiguredFeatures.register(context, fetchConfiguredKey(keyName), Feature.ORE, new OreFeatureConfig(
             this.oreMap.get(GemstyneConstants.NETHER).stream().toList(), veinsSize, discardOnAirChance));
@@ -205,8 +240,20 @@ public class GemstyneOreModification {
         throw new NullPointerException();
     }
 
-    private static final RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
-    private static final RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-    private static final RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
-    private static final RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
+    protected static class OreFlags {
+        @Nullable public Boolean isRaw;
+        @Nullable public Boolean isRich;
+
+        private OreFlags() { }
+
+        public OreFlags empty() {
+            return this;
+        }
+
+        public OreFlags of(Boolean isRaw, Boolean isRich) {
+            this.isRaw = isRaw;
+            this.isRich = isRich;
+            return this;
+        }
+    }
 }

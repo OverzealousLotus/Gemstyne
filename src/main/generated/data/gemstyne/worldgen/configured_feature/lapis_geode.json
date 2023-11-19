@@ -23,14 +23,7 @@
       },
       "inner_placements": [
         {
-          "Name": "gemstyne:small_lapis_bud",
-          "Properties": {
-            "facing": "up",
-            "waterlogged": "false"
-          }
-        },
-        {
-          "Name": "gemstyne:medium_lapis_bud",
+          "Name": "gemstyne:large_lapis_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
@@ -44,7 +37,14 @@
           }
         },
         {
-          "Name": "gemstyne:large_lapis_bud",
+          "Name": "gemstyne:medium_lapis_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "gemstyne:small_lapis_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"

@@ -3,7 +3,7 @@ package lotus.gemstyne.world.ores;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.world.GemstynePlacedFeatures;
 import lotus.gemstyne.world.GemstyneOrePlacement;
-import lotus.gemstyne.world.GemstyneWorldHandler;
+import lotus.gemstyne.world.WorldHandler;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.gen.YOffset;
@@ -44,58 +44,60 @@ public final class GemstyneOrePlaced {
             GemstyneOrePlacement.modifiersWithCount(4,
                 HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
-        GemstyneWorldHandler.BUBBLEGEM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 7,
+        WorldHandler.BUBBLEGEM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 7,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(112)));
-        GemstyneWorldHandler.BUBBLEGEM.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
+        WorldHandler.BUBBLEGEM.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
 
-        GemstyneWorldHandler.MOCHITE.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 12,
+        WorldHandler.MOCHITE.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 12,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(112)));
-        GemstyneWorldHandler.MOCHITE.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
+        WorldHandler.MOCHITE.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
-        GemstyneWorldHandler.MOCHITE.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 90,
+        WorldHandler.MOCHITE.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 90,
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(112)));
+        WorldHandler.MOCHITE.registerPlacedFeatures(context, GemstyneConstants.RICH, true, 10,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(112)));
 
 
-        GemstyneWorldHandler.MORKITE.registerPlacedFeatures(context, GemstyneConstants.BURIED, false, 2,
+        WorldHandler.MORKITE.registerPlacedFeatures(context, GemstyneConstants.BURIED, false, 2,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
-        GemstyneWorldHandler.MORKITE.registerPlacedFeatures(context, GemstyneConstants.EXPOSED, false, 4,
+        WorldHandler.MORKITE.registerPlacedFeatures(context, GemstyneConstants.EXPOSED, false, 4,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
-        GemstyneWorldHandler.MORKITE.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 150,
+        WorldHandler.MORKITE.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 150,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
 
 
-        GemstyneWorldHandler.TIN.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 5,
+        WorldHandler.TIN.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 5,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(112)));
-        GemstyneWorldHandler.TIN.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 3,
+        WorldHandler.TIN.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 3,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(112)));
-        GemstyneWorldHandler.TIN.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 90,
+        WorldHandler.TIN.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 90,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(112)));
 
 
-        GemstyneWorldHandler.URANIUM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 4,
+        WorldHandler.URANIUM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 4,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
-        GemstyneWorldHandler.URANIUM.registerPlacedFeatures(context, GemstyneConstants.LARGE, true, 7,
+        WorldHandler.URANIUM.registerPlacedFeatures(context, GemstyneConstants.LARGE, true, 7,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
-        GemstyneWorldHandler.URANIUM.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 150,
+        WorldHandler.URANIUM.registerPlacedFeatures(context, GemstyneConstants.RAW, false, 150,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
 
         // =====
         // <=====| The Nether |=====>
         // =====
-        GemstyneWorldHandler.ALDUS.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 5,
+        WorldHandler.ALDUS.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 5,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(20), YOffset.fixed(50)));
-        GemstyneWorldHandler.ALDUS.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 7,
+        WorldHandler.ALDUS.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 7,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(8), YOffset.fixed(25)));
 
-        GemstyneWorldHandler.BLAZITE.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 3,
+        WorldHandler.BLAZITE.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 3,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(20), YOffset.fixed(50)));
-        GemstyneWorldHandler.BLAZITE.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
+        WorldHandler.BLAZITE.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(8), YOffset.fixed(25)));
 
-        GemstyneWorldHandler.CRIMONITE.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 4,
+        WorldHandler.CRIMONITE.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 4,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(50), YOffset.fixed(80)));
-        GemstyneWorldHandler.CRIMONITE.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
+        WorldHandler.CRIMONITE.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 5,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(75), YOffset.fixed(100)));
 
         // =====
@@ -106,29 +108,29 @@ public final class GemstyneOrePlaced {
         // =====
         // <=====| Multi-Dimensional |=====>
         // =====
-        GemstyneWorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 3,
+        WorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 3,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(75)));
-        GemstyneWorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 1,
+        WorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 1,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(15)));
-        GemstyneWorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.NETHER, false, 3,
+        WorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.NETHER, false, 3,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(10), YOffset.fixed(100)));
-        GemstyneWorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.END, false, 6,
+        WorldHandler.ENDER_PEARL.registerPlacedFeatures(context, GemstyneConstants.END, false, 6,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(100)));
 
-        GemstyneWorldHandler.TORRIUM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 3,
+        WorldHandler.TORRIUM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 3,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(100)));
-        GemstyneWorldHandler.TORRIUM.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 3,
+        WorldHandler.TORRIUM.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 3,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
-        GemstyneWorldHandler.TORRIUM.registerPlacedFeatures(context, GemstyneConstants.NETHER, false, 4,
+        WorldHandler.TORRIUM.registerPlacedFeatures(context, GemstyneConstants.NETHER, false, 4,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(10), YOffset.fixed(100)));
 
-        GemstyneWorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 2,
+        WorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.SMALL, false, 2,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(75)));
-        GemstyneWorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 1,
+        WorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.LARGE, false, 1,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(15)));
-        GemstyneWorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.NETHER, false, 4,
+        WorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.NETHER, false, 4,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(10), YOffset.fixed(100)));
-        GemstyneWorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.END, false, 6,
+        WorldHandler.MUTALIUM.registerPlacedFeatures(context, GemstyneConstants.END, false, 6,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(100)));
 
         // =====

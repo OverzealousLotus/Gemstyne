@@ -23,7 +23,7 @@
       },
       "inner_placements": [
         {
-          "Name": "gemstyne:ikarite_cluster",
+          "Name": "gemstyne:medium_ikarite_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
@@ -44,7 +44,7 @@
           }
         },
         {
-          "Name": "gemstyne:medium_ikarite_bud",
+          "Name": "gemstyne:ikarite_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"

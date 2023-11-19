@@ -6,8 +6,8 @@ import lotus.gemstyne.util.GemstyneConstants;
 /**
  * Contains keys for world generation using {@link GemstyneOreModification}
  */
-public final class GemstyneWorldHandler {
-    private GemstyneWorldHandler() {}
+public final class WorldHandler {
+    private WorldHandler() {}
 
     public static final GemstyneOreModification ALDUS = new GemstyneOreModification(BlockHandler.ALDUS).addNetherOre()
         .createKeyPair(GemstyneConstants.SMALL, GemstyneConstants.UPPER).createKeyPair(GemstyneConstants.LARGE, GemstyneConstants.LOWER);
@@ -27,7 +27,8 @@ public final class GemstyneWorldHandler {
         .createKeyPair(GemstyneConstants.LARGE).createKeyPair(GemstyneConstants.NETHER).createKeyPair(GemstyneConstants.END);
 
     public static final GemstyneOreModification MOCHITE = new GemstyneOreModification(BlockHandler.MOCHITE)
-        .addStoneOre().addDeepslateOre().addRawOre().createKeyPair(GemstyneConstants.SMALL, GemstyneConstants.UPPER)
+        .addStoneOre().addRichStoneOre().addDeepslateOre().addRichDeepslateOre().addRawOre()
+        .createKeyPair(GemstyneConstants.SMALL, GemstyneConstants.UPPER).createKeyPair(GemstyneConstants.RICH)
         .createKeyPair(GemstyneConstants.LARGE, GemstyneConstants.LOWER).createKeyPair(GemstyneConstants.RAW);
 
     public static final GemstyneOreModification MUTALIUM = new GemstyneOreModification(BlockHandler.MUTALIUM)

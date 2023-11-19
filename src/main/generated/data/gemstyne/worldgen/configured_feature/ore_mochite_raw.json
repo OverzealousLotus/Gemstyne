@@ -18,7 +18,25 @@
           "Name": "gemstyne:raw_mochite_block"
         },
         "target": {
+          "block": "gemstyne:rich_mochite_ore",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "gemstyne:raw_mochite_block"
+        },
+        "target": {
           "block": "gemstyne:deepslate_mochite_ore",
+          "predicate_type": "minecraft:block_match"
+        }
+      },
+      {
+        "state": {
+          "Name": "gemstyne:raw_mochite_block"
+        },
+        "target": {
+          "block": "gemstyne:rich_deepslate_mochite_ore",
           "predicate_type": "minecraft:block_match"
         }
       }

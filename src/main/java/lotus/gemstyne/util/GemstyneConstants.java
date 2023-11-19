@@ -13,6 +13,7 @@ public final class GemstyneConstants {
     public static final String STONE = "stone";
     public static final String DEEPSLATE = "deepslate";
     public static final String RAW = "raw";
+    public static final String RICH = "rich";
     public static final String NETHER = "nether";
     public static final String RICH_STONE = "rich_stone";
     public static final String RICH_DEEPSLATE = "rich_deepslate";
