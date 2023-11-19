@@ -3,7 +3,6 @@ package lotus.gemstyne.world;
 import com.google.common.collect.*;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
-import lotus.gemstyne.util.GemstyneBlockTags;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstynePairs.GenKeyPair;
 import net.minecraft.block.Block;
@@ -20,6 +19,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
@@ -127,21 +127,27 @@ public class GemstyneOreModification {
     }
 
     /**
-     * Registers {@link PlacedFeature}
+     * Registers a {@link PlacedFeature} using {@link GemstyneOrePlacement#modifiersWithCount}
      * @param context Context... Don't ask me.
      * @param keyName Name of key Pair. Configured Key name.
-     * @param useRarity Whether rarity should be used.
      * @param veinsPerChunk Amount of veins per chunk.
      * @param modifier Height Range and shape of ore spawns. See {@link HeightRangePlacementModifier}
      */
-    public void registerPlacedFeatures(Registerable<PlacedFeature> context, String keyName, boolean useRarity, int veinsPerChunk, HeightRangePlacementModifier modifier) {
-        if(useRarity) {
-            GemstynePlacedFeatures.register(context, fetchPlacedKey(keyName), GemstynePlacedFeatures.fetchConfig(context,
-                fetchConfiguredKey(keyName)), GemstyneOrePlacement.modifiersWithRarity(veinsPerChunk, modifier));
-        } else {
-            GemstynePlacedFeatures.register(context, fetchPlacedKey(keyName), GemstynePlacedFeatures.fetchConfig(context,
-                fetchConfiguredKey(keyName)), GemstyneOrePlacement.modifiersWithCount(veinsPerChunk, modifier));
-        }
+    public void placedFeatureCount(Registerable<PlacedFeature> context, String keyName, int veinsPerChunk, HeightRangePlacementModifier modifier) {
+        GemstynePlacedFeatures.register(context, fetchPlacedKey(keyName), GemstynePlacedFeatures.fetchConfig(context,
+            fetchConfiguredKey(keyName)), GemstyneOrePlacement.modifiersWithCount(veinsPerChunk, modifier));
+    }
+
+    /**
+     * Registers a {@link PlacedFeature} using {@link GemstyneOrePlacement#modifiersWithRarity}
+     * @param context Context... Don't ask me.
+     * @param keyName Name of key Pair. Configured Key name.
+     * @param rarity Rarity of the ores. Higher is rarer.
+     * @param modifier Height Range and shape of ore spawns. See {@link HeightRangePlacementModifier}
+     */
+    public void placedFeatureRarity(Registerable<PlacedFeature> context, String keyName, int rarity, HeightRangePlacementModifier modifier) {
+        GemstynePlacedFeatures.register(context, fetchPlacedKey(keyName), GemstynePlacedFeatures.fetchConfig(context,
+            fetchConfiguredKey(keyName)), GemstyneOrePlacement.modifiersWithRarity(rarity, modifier));
     }
 
     /**
