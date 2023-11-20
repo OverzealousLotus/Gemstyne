@@ -1,14 +1,10 @@
 package lotus.gemstyne.data;
 
 import lotus.gemstyne.block.BlockHandler;
-import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.util.GemstyneBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
-
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class
@@ -35,8 +31,6 @@ GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
                 .add(BlockHandler.COMPRESSED_GRANITE_COAL_ORE)
 
-                .add(BlockHandler.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
-                .add(BlockHandler.FIRE_OPAL_BLOCK)
                 .add(BlockHandler.NEFARIUM_ORE);
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsShovel())
@@ -60,9 +54,6 @@ GemstyneBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(GemstyneBlockTags.getNeedsDiamondTool())
                 .setReplace(false)
-
-                .add(BlockHandler.COMPRESSED_GRANITE_FIRE_OPAL_ORE)
-                .add(BlockHandler.FIRE_OPAL_BLOCK)
 
                 .add(BlockHandler.NEFARIUM_ORE);
 

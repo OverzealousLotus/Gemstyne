@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "gemstyne:compressed_granite_fire_opal_ore",
-    "gemstyne:fire_opal_block",
     "gemstyne:nefarium_ore"
   ]
 }

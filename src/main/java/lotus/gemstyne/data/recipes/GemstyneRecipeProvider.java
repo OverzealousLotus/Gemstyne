@@ -69,7 +69,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 ItemHandler.FIRE_OPAL, RecipeCategory.DECORATIONS,
-                BlockHandler.FIRE_OPAL_BLOCK);
+                BlockHandler.FIRE_OPAL.pureBlock());
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS,
                 ItemHandler.MOCHITE.crystal(), RecipeCategory.DECORATIONS,

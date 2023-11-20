@@ -23,7 +23,7 @@ public final class GemstyneOreModels {
         // =====
         BlockHandler.BUBBLEGEM.generateModels(blockStateModelGenerator);
         BlockHandler.ENDER_PEARL.generateModels(blockStateModelGenerator);
-        blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.COMPRESSED_GRANITE_FIRE_OPAL_ORE);
+        BlockHandler.FIRE_OPAL.generateModels(blockStateModelGenerator);
         BlockHandler.MOCHITE.generateModels(blockStateModelGenerator);
         BlockHandler.MUTALIUM.generateModels(blockStateModelGenerator);
 
@@ -32,8 +32,6 @@ public final class GemstyneOreModels {
         BlockHandler.TIN.generateModels(blockStateModelGenerator);
         BlockHandler.URANIUM.generateModels(blockStateModelGenerator);
         blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.PYRITE);
-
-        blockStateModelGenerator.registerSimpleCubeAll(BlockHandler.FIRE_OPAL_BLOCK);
 
         // =====
         // <===== Nether =====>

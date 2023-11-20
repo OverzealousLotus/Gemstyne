@@ -50,6 +50,10 @@ public final class BlockHandler {
         .createOreType(GemstyneConstants.END)
         .end();
 
+    public static final BlockSet FIRE_OPAL = BlockSet.Builder.start("fire_opal")
+        .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setExperience(UniformIntProvider.create(10, 15))
+        .setStrength(4.5f, 4.5f).createOre().createPureBlock().end();
+
     public static final BlockSet MOCHITE = BlockSet.Builder.start("mochite")
         .setExperience(UniformIntProvider.create(2, 7))
         .createOre(Gemstyne.CONFIG.mochiteRichness(), ItemHandler.MOCHITE.crystal())
@@ -99,12 +103,6 @@ public final class BlockHandler {
         .createRawBlock(60).createPureBlock(60)
         .end();
 
-    public static final Block COMPRESSED_GRANITE_FIRE_OPAL_ORE = GemstyneRegistry.designateBlock(
-        "compressed_granite_fire_opal_ore",
-        new ExperienceDroppingBlock(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN)
-                .strength(4.5f, 3.0f), UniformIntProvider.create(10, 15))
-    );
-
     public static final BlockSet MORKITE = BlockSet.Builder.start("morkite")
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(UniformIntProvider.create(3, 10))
         .setStrength(4.5f, 3.0f).createOreType(GemstyneConstants.DEEPSLATE).createRawBlock()
@@ -135,15 +133,6 @@ public final class BlockHandler {
     public static final Block COMPRESSED_GRANITE_COAL_ORE = GemstyneRegistry.designateBlock("compressed_granite_coal_ore",
         new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COAL_ORE).mapColor(MapColor.BROWN)
                 .strength(4.5f, 3.0f), UniformIntProvider.create(0, 2))
-    );
-
-    // =====
-    // <===== Concentrated Ores =====>
-    // =====
-
-    public static final Block FIRE_OPAL_BLOCK = GemstyneRegistry.designateBlock("fire_opal_block",
-        new Block(FabricBlockSettings.create().mapColor(MapColor.ORANGE).instrument(Instrument.BELL)
-            .requiresTool().strength(7.0f, 3.0f).sounds(BlockSoundGroup.METAL))
     );
 
     // =====

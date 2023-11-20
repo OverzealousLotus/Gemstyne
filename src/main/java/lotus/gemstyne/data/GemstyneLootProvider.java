@@ -34,7 +34,8 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         gemstyneOreDrops(BlockHandler.BUBBLEGEM.stoneOre(), ItemHandler.BUBBLEGEM);
         gemstyneOreDrops(BlockHandler.BUBBLEGEM.deepslateOre(), ItemHandler.BUBBLEGEM);
 
-        gemstyneOreDrops(BlockHandler.COMPRESSED_GRANITE_FIRE_OPAL_ORE, ItemHandler.FIRE_OPAL);
+        gemstyneOreDrops(BlockHandler.FIRE_OPAL.stoneOre(), ItemHandler.FIRE_OPAL);
+        gemstyneOreDrops(BlockHandler.FIRE_OPAL.pureBlock(), ItemHandler.FIRE_OPAL);
 
         gemstyneOreDrops(BlockHandler.ENDER_PEARL.stoneOre(), Items.ENDER_PEARL);
         gemstyneOreDrops(BlockHandler.ENDER_PEARL.deepslateOre(), Items.ENDER_PEARL);
@@ -86,8 +87,6 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
 
         addDrop(BlockHandler.CRIMONITE.rawBlock());
         addDrop(BlockHandler.CRIMONITE.pureBlock());
-
-        addDrop(BlockHandler.FIRE_OPAL_BLOCK);
 
         addDrop(BlockHandler.MOCHITE.rawBlock());
         addDrop(BlockHandler.MOCHITE.pureBlock());
