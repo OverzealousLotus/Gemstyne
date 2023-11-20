@@ -2,8 +2,8 @@
   "feature": "gemstyne:ore_bubblegem_small",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 7
+      "type": "minecraft:rarity_filter",
+      "chance": 7
     },
     {
       "type": "minecraft:in_square"

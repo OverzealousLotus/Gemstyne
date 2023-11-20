@@ -1,30 +1,14 @@
 package lotus.gemstyne.world.ores;
 
 import lotus.gemstyne.util.GemstyneConstants;
-import lotus.gemstyne.world.GemstynePlacedFeatures;
-import lotus.gemstyne.world.GemstyneOrePlacement;
 import lotus.gemstyne.world.WorldHandler;
 import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 public final class GemstyneOrePlaced {
-    private GemstyneOrePlaced() {
-    }
-
-    // =====
-    // <===== Overworld Placed Keys =====>
-    // =====
-    private static final RegistryKey<PlacedFeature> FIRE_OPAL_ORE_PLACED_KEY =
-        GemstynePlacedFeatures.registerKey("ore_fire_opal");
-
-    // =====
-    // <===== Extension Placed Keys =====>
-    // =====
-    private static final RegistryKey<PlacedFeature> COMPRESSED_COAL_ORE_PLACED_KEY =
-        GemstynePlacedFeatures.registerKey("ore_compressed_coal");
+    private GemstyneOrePlaced() { }
 
     /**
      * <h3>Function used to register all Ore Placement Features.</h3>
@@ -39,14 +23,10 @@ public final class GemstyneOrePlaced {
         // =====
         // <=====| The Overworld |=====>
         // =====
-        GemstynePlacedFeatures.register(context, GemstyneOrePlaced.getFireOpalOrePlacedKey(),
-            GemstynePlacedFeatures.fetchConfig(context, GemstyneOreConfig.getOreFireOpalKey()),
-            GemstyneOrePlacement.modifiersWithCount(4,
-                HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
 
-        WorldHandler.BUBBLEGEM.placedFeatureCount(context, GemstyneConstants.SMALL, 6,
+        WorldHandler.BUBBLEGEM.placedFeatureRarity(context, GemstyneConstants.SMALL, 7,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(112)));
-        WorldHandler.BUBBLEGEM.placedFeatureCount(context, GemstyneConstants.LARGE, 4,
+        WorldHandler.BUBBLEGEM.placedFeatureRarity(context, GemstyneConstants.LARGE, 9,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
 
         WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.SMALL, 12,
@@ -55,7 +35,7 @@ public final class GemstyneOrePlaced {
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
         WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.RAW, 90,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(112)));
-        WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.RICH, 10,
+        WorldHandler.MOCHITE.placedFeatureRarity(context, GemstyneConstants.RICH, 12,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(112)));
 
 
@@ -117,9 +97,9 @@ public final class GemstyneOrePlaced {
         WorldHandler.ENDER_PEARL.placedFeatureCount(context, GemstyneConstants.END, 6,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(100)));
 
-        WorldHandler.TORRIUM.placedFeatureCount(context, GemstyneConstants.SMALL, 3,
+        WorldHandler.TORRIUM.placedFeatureRarity(context, GemstyneConstants.SMALL, 5,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(100)));
-        WorldHandler.TORRIUM.placedFeatureCount(context, GemstyneConstants.LARGE, 3,
+        WorldHandler.TORRIUM.placedFeatureRarity(context, GemstyneConstants.LARGE, 7,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
         WorldHandler.TORRIUM.placedFeatureCount(context, GemstyneConstants.NETHER, 4,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(10), YOffset.fixed(100)));
@@ -132,21 +112,5 @@ public final class GemstyneOrePlaced {
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(10), YOffset.fixed(100)));
         WorldHandler.MUTALIUM.placedFeatureCount(context, GemstyneConstants.END, 6,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-60), YOffset.fixed(100)));
-
-        // =====
-        // <===== Extension Placement Settings =====>
-        // =====
-        GemstynePlacedFeatures.register(context, GemstyneOrePlaced.getCompressedCoalOrePlacedKey(),
-            GemstynePlacedFeatures.fetchConfig(context, GemstyneOreConfig.getCompressedCoalOreKey()),
-            GemstyneOrePlacement.modifiersWithCount(15,
-                HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
-    }
-
-    public static RegistryKey<PlacedFeature> getFireOpalOrePlacedKey() {
-        return FIRE_OPAL_ORE_PLACED_KEY;
-    }
-
-    public static RegistryKey<PlacedFeature> getCompressedCoalOrePlacedKey() {
-        return COMPRESSED_COAL_ORE_PLACED_KEY;
     }
 }

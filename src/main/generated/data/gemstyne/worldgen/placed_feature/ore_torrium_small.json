@@ -2,8 +2,8 @@
   "feature": "gemstyne:ore_torrium_small",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 3
+      "type": "minecraft:rarity_filter",
+      "chance": 5
     },
     {
       "type": "minecraft:in_square"

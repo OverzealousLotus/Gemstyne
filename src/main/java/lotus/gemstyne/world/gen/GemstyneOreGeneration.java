@@ -6,7 +6,6 @@ import lotus.gemstyne.world.GemstynePlacedFeatures;
 import lotus.gemstyne.world.WorldHandler;
 import lotus.gemstyne.world.geodes.GemstyneGeodePlaced;
 import lotus.gemstyne.world.minerals.GemstyneMineralPlaced;
-import lotus.gemstyne.world.ores.GemstyneOrePlaced;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.registry.RegistryKey;
@@ -33,7 +32,9 @@ public class GemstyneOreGeneration {
         if (Gemstyne.CONFIG.oreConfiguration.mochiteEnabled()) {
             addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.SMALL));
             addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.LARGE));
-            addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.RAW));
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.RAW_GENERATION, WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.RAW));
+            // addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.RAW));
             addOverworldOre(WorldHandler.MOCHITE.fetchPlacedKey(GemstyneConstants.RICH));
         }
 
@@ -54,9 +55,6 @@ public class GemstyneOreGeneration {
             addOverworldOre(WorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.EXPOSED));
             addOverworldOre(WorldHandler.MORKITE.fetchPlacedKey(GemstyneConstants.RAW));
         }
-
-        addOverworldOre(GemstyneOrePlaced.getCompressedCoalOrePlacedKey());
-        addOverworldOre(GemstyneOrePlaced.getFireOpalOrePlacedKey());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, GemstynePlacedFeatures.LIQUID_MORKITE_PLACED_KEY);
