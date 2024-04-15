@@ -8,25 +8,25 @@ import lotus.gemstyne.Gemstyne;
 @SuppressWarnings("unused")
 public class GemstyneConfigModel {
     @Nest
-    public OreConfiguration oreConfiguration = new OreConfiguration();
+    @Expanded
+    public OreConfig oreConfig = new OreConfig();
+    @Nest
+    @Expanded
+    public GeodeConfig geodeConfig = new GeodeConfig();
 
-    @SectionHeader("geode_configuration")
-    @RestartRequired
-    public boolean ikariteEnabled = true;
-    @RestartRequired
-    public boolean garnetEnabled = true;
-    @RestartRequired
-    public boolean lapisEnabled = true;
 
-    @RestartRequired
-    public int mochiteRichness = 5;
-
-    public static class OreConfiguration {
+    public static class OreConfig {
         @SectionHeader("overworld")
         @RestartRequired
-        public boolean bubblegemEnabled = true;
-        @RestartRequired
         public boolean mochiteEnabled = true;
+        @RestartRequired
+        public boolean richMochiteEnabled = true;
+        @RangeConstraint(min = 1, max = 50)
+        @RestartRequired
+        public int mochiteRichness = 5;
+
+        @RestartRequired
+        public boolean bubblegemEnabled = true;
         @RestartRequired
         public boolean morkiteEnabled = true;
         @RestartRequired
@@ -53,5 +53,14 @@ public class GemstyneConfigModel {
         public boolean torriumEnabled = true;
         @RestartRequired
         public boolean mineralsEnabled = true;
+    }
+
+    public static class GeodeConfig {
+        @RestartRequired
+        public boolean ikariteEnabled = true;
+        @RestartRequired
+        public boolean garnetEnabled = true;
+        @RestartRequired
+        public boolean lapisEnabled = true;
     }
 }

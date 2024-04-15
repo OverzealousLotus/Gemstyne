@@ -158,11 +158,12 @@ public final class BlockSet {
         /**
          * Sets experience of {@link BlockSet}.
          *
-         * @param experience Experience dropped by all ores in set.
+         * @param min Minimum amount of xp dropped.
+         * @param max Maximum amount of xp dropped.
          * @return Returns an instance of itself.
          */
-        public Builder setExperience(UniformIntProvider experience) {
-            this.experience = experience;
+        public Builder setExperience(int min, int max) {
+            this.experience = UniformIntProvider.create(min, max);
             return this;
         }
 

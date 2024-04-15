@@ -19,7 +19,6 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
