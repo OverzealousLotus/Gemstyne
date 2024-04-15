@@ -35,8 +35,16 @@ public final class BlockHandler {
     // =====
     // <===== Overworld Ores =====>
     // =====
+
+    public static final BlockSet AETHERIUM = BlockSet.Builder.start("aetherium")
+        .setExperience(12, 20).setStrength(5.0f, 5.0f)
+        .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
+        .createOreType(GemstyneConstants.DEEPSLATE
+        )
+        .end();
+
     public static final BlockSet BUBBLEGEM = BlockSet.Builder.start("bubblegem")
-        .setExperience(UniformIntProvider.create(8, 20)).setStrength(4.5f, 3.0f)
+        .setExperience(8, 20).setStrength(4.5f, 3.0f)
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL)
         .createOre()
         .createOreType(GemstyneConstants.DEEPSLATE)
@@ -51,18 +59,18 @@ public final class BlockHandler {
         .end();
 
     public static final BlockSet FIRE_OPAL = BlockSet.Builder.start("fire_opal")
-        .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setExperience(UniformIntProvider.create(10, 15))
+        .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setExperience(10, 15)
         .setStrength(4.5f, 4.5f).createOre().createPureBlock().end();
 
     public static final BlockSet MOCHITE = BlockSet.Builder.start("mochite")
-        .setExperience(UniformIntProvider.create(2, 7))
-        .createOre(Gemstyne.CONFIG.mochiteRichness(), ItemHandler.MOCHITE.crystal())
+        .setExperience(2, 7)
+        .createOre(Gemstyne.CONFIG.oreConfig.mochiteRichness(), ItemHandler.MOCHITE.crystal())
         .createOreType(GemstyneConstants.NETHER)
-        .createOreType(GemstyneConstants.RICH_DEEPSLATE, Gemstyne.CONFIG.mochiteRichness(), ItemHandler.MOCHITE.crystal())
+        .createOreType(GemstyneConstants.RICH_DEEPSLATE, Gemstyne.CONFIG.oreConfig.mochiteRichness(), ItemHandler.MOCHITE.crystal())
         .createDefaultBlockSet(3.0f);
 
     public static final BlockSet MUTALIUM = BlockSet.Builder.start("mutalium")
-        .setExperience(UniformIntProvider.create(10, 20))
+        .setExperience(10, 20)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
         .createOre(new MutaliumOre(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE),
             UniformIntProvider.create(8, 15)))
@@ -75,11 +83,8 @@ public final class BlockHandler {
         .end();
 
     public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
-        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), Gemstyne.CONFIG.mochiteRichness(), UniformIntProvider.create(2, 5), Items.DIAMOND)
+        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), Gemstyne.CONFIG.oreConfig.mochiteRichness(), UniformIntProvider.create(2, 5), Items.DIAMOND)
     );
-
-    /*public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
-        new MutaliumOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), UniformIntProvider.create(2, 5)));*/
 
     public static final BlockSet TORRIUM = BlockSet.Builder.start("torrium")
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL)
@@ -92,11 +97,11 @@ public final class BlockHandler {
         .end();
 
     public static final BlockSet TIN = BlockSet.Builder.start("tin")
-        .setExperience(UniformIntProvider.create(2, 5))
+        .setExperience(2, 5)
         .createDefaultBlockSet(3.0f);
 
     public static final BlockSet URANIUM = BlockSet.Builder.start("uranium")
-        .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setExperience(UniformIntProvider.create(5, 15))
+        .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setExperience(5, 15)
         .setEffect(GemstyneEffects.WEAK_RADIATION).setStrength(6.0f, 5.0f)
         .createOreType(GemstyneConstants.DEEPSLATE, 60)
         .setLevel(GemstyneMiningLevels.NEEDS_NETHERITE_TOOL)
@@ -104,7 +109,7 @@ public final class BlockHandler {
         .end();
 
     public static final BlockSet MORKITE = BlockSet.Builder.start("morkite")
-        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(UniformIntProvider.create(3, 10))
+        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(3, 10)
         .setStrength(4.5f, 3.0f).createOreType(GemstyneConstants.DEEPSLATE).createRawBlock()
         .end();
 
@@ -112,16 +117,16 @@ public final class BlockHandler {
     // <===== Nether Ores =====>
     // =====
     public static final BlockSet ALDUS = BlockSet.Builder.start("aldus")
-        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(UniformIntProvider.create(2, 5))
+        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(2, 5)
         .createDefaultNetherBlockSet(4.0f);
 
     public static final BlockSet BLAZITE = BlockSet.Builder.start("blazite")
-        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(UniformIntProvider.create(2, 8))
+        .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL).setExperience(2, 8)
         .createOreType(GemstyneConstants.NETHER)
         .end();
 
     public static final BlockSet CRIMONITE = BlockSet.Builder.start("crimonite")
-        .setExperience(UniformIntProvider.create(2, 5)).setEffect(StatusEffects.WITHER)
+        .setExperience(2, 5).setEffect(StatusEffects.WITHER)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setStrength(5.0f, 3.0f)
         .createOreType(GemstyneConstants.NETHER, 60)
         .createRawBlock(60).createPureBlock(60)

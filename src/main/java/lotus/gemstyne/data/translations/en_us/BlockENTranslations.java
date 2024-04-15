@@ -12,6 +12,7 @@ abstract class BlockENTranslations extends FabricLanguageProvider {
         // //////////
         // ///// Blocks /////
         // //////////
+        GemstyneENProvider.translateSet(translationBuilder, BlockHandler.AETHERIUM);
         GemstyneENProvider.translateSet(translationBuilder, BlockHandler.ALDUS);
         GemstyneENProvider.translateSet(translationBuilder, BlockHandler.BUBBLEGEM);
         GemstyneENProvider.translateSet(translationBuilder, BlockHandler.BLAZITE);
