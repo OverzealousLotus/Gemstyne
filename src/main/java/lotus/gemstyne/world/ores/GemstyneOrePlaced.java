@@ -29,9 +29,9 @@ public final class GemstyneOrePlaced {
         WorldHandler.BUBBLEGEM.placedFeatureRarity(context, GemstyneConstants.LARGE, 9,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
 
-        WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.SMALL, 12,
+        WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.SMALL, 8,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(112)));
-        WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.LARGE, 5,
+        WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.LARGE, 1,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20)));
         WorldHandler.MOCHITE.placedFeatureCount(context, GemstyneConstants.RAW, 90,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(112)));
@@ -41,7 +41,7 @@ public final class GemstyneOrePlaced {
 
         WorldHandler.MORKITE.placedFeatureCount(context, GemstyneConstants.BURIED, 2,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
-        WorldHandler.MORKITE.placedFeatureCount(context, GemstyneConstants.EXPOSED, 4,
+        WorldHandler.MORKITE.placedFeatureCount(context, GemstyneConstants.EXPOSED, 3,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
         WorldHandler.MORKITE.placedFeatureCount(context, GemstyneConstants.RAW, 150,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
