@@ -37,6 +37,7 @@ public final class ItemHandler {
     // <=====| Ore Sets |=====>
     // =====
     public static final GemstyneItemSet ALDUS = GemstyneItemSet.Builder.start("aldus").createDefaultItemSet(false);
+    public static final GemstyneItemSet AETHERIUM = GemstyneItemSet.Builder.start("aetherium").createRaw().createCrystal().end();
     public static final GemstyneItemSet BRONZE = GemstyneItemSet.Builder.start("bronze")
         .createItemVariant("chain").createDefaultItemSet(true);
     public static final GemstyneItemSet CRIMONITE = GemstyneItemSet.Builder.start("crimonite")

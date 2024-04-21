@@ -55,6 +55,7 @@ public final class GemstyneOreModels {
         // =====
         // <===== Raw Ores =====>
         // =====
+        ItemHandler.AETHERIUM.generateModels(itemModelGenerator);
         ItemHandler.MUTALIUM.generateModels(itemModelGenerator);
         ItemHandler.MOCHITE.generateModels(itemModelGenerator);
         ItemHandler.Pyrite.generateModels(itemModelGenerator);

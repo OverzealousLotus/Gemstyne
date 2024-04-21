@@ -17,6 +17,7 @@ abstract class ItemENTranslations extends FabricLanguageProvider {
         translationBuilder.add(ItemHandler.MORKITE, "Morkite");
 
         GemstyneENProvider.translateSet(translationBuilder, ItemHandler.ALDUS);
+        GemstyneENProvider.translateSet(translationBuilder, ItemHandler.AETHERIUM);
         GemstyneENProvider.translateSet(translationBuilder, ItemHandler.BRONZE);
         GemstyneENProvider.translateSet(translationBuilder, ItemHandler.CRIMONITE);
         GemstyneENProvider.translateSet(translationBuilder, ItemHandler.MOCHITE);
