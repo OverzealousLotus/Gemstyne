@@ -12,6 +12,7 @@ public final class GemstyneEffects {
     
     public static final StatusEffect WEAK_RADIATION = registerStatusEffect("weak_radiation");
     public static final StatusEffect STRONG_RADIATION = registerStatusEffect("strong_radiation");
+    public static final StatusEffect AETHERIUM_RADIATION = registerStatusEffect("aetherium_radiation");
 
     public static StatusEffect registerStatusEffect(String name) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(Gemstyne.MOD_ID, name),
