@@ -1,6 +1,6 @@
 package lotus.gemstyne.block.custom;
 
-import lotus.gemstyne.util.GemstyneBlockTypes;
+import lotus.gemstyne.util.GemstyneUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.ItemStack;
@@ -11,7 +11,7 @@ import net.minecraft.util.math.intprovider.IntProvider;
 public class AfflictiveOre extends AfflictiveBlock {
     private final IntProvider experiencedDropped;
 
-    public AfflictiveOre(Settings settings, StatusEffect effect, int duration, GemstyneBlockTypes type, IntProvider experience) {
+    public AfflictiveOre(Settings settings, StatusEffect effect, int duration, GemstyneUtil.BlockTypes type, IntProvider experience) {
         super(settings, effect, duration, type);
         this.experiencedDropped = experience;
     }

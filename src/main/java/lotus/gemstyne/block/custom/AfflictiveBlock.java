@@ -1,6 +1,6 @@
 package lotus.gemstyne.block.custom;
 
-import lotus.gemstyne.util.GemstyneBlockTypes;
+import lotus.gemstyne.util.GemstyneUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.entity.Entity;
@@ -15,9 +15,9 @@ public class AfflictiveBlock extends ExperienceDroppingBlock {
     // Instantiate parameters of Block.
     private final StatusEffect effect;
     private final int duration;
-    private final GemstyneBlockTypes type;
+    private final GemstyneUtil.BlockTypes type;
 
-    public AfflictiveBlock(Settings settings, StatusEffect effect, int duration, GemstyneBlockTypes type) {
+    public AfflictiveBlock(Settings settings, StatusEffect effect, int duration, GemstyneUtil.BlockTypes type) {
         super(settings);
         this.effect = effect;
         this.duration = duration;

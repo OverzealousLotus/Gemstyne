@@ -236,7 +236,7 @@ public final class BlockSet {
         public Builder createOreType(String type, int duration) {
             this.blockSettings.sounds(getSounds(type)).strength(this.currentHardness);
             this.variants.put(type, new GemstynePairs.BlockPair(type + "_" + this.setName + "_ore",
-                new AfflictiveOre(this.blockSettings, this.effect, duration, GemstyneBlockTypes.ORE, this.experience)));
+                new AfflictiveOre(this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.ORE, this.experience)));
             appendTags(type, this.miningLevel);
             return this;
         }
@@ -278,7 +278,8 @@ public final class BlockSet {
 
         public Builder createRawBlock(int duration) {
             this.blockSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
-            this.variants.put("raw", new GemstynePairs.BlockPair("raw_" + this.setName + BLOCK, new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneBlockTypes.RAW)));
+            this.variants.put("raw", new GemstynePairs.BlockPair("raw_" + this.setName + BLOCK,
+                new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.RAW)));
             appendTags(GemstyneConstants.RAW, this.miningLevel);
             return this;
         }
@@ -291,7 +292,8 @@ public final class BlockSet {
 
         public Builder createPureBlock(int duration) {
             this.blockSettings.sounds(this.currentSounds);
-            this.variants.put("pure", new GemstynePairs.BlockPair(this.setName + BLOCK, new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneBlockTypes.PURE)));
+            this.variants.put("pure", new GemstynePairs.BlockPair(this.setName + BLOCK,
+                new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.PURE)));
             appendTags("pure", this.miningLevel);
             return this;
         }

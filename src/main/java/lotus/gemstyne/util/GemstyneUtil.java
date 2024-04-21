@@ -7,6 +7,9 @@ import org.joml.Vector3f;
 
 import java.util.List;
 
+/**
+ * Contains various utilities, including {@link Colors}, and {@link BlockTypes}
+ */
 public final class GemstyneUtil {
     private GemstyneUtil() {}
 
@@ -24,5 +27,15 @@ public final class GemstyneUtil {
         public static final List<Vector3f> MUTALIUM_PALETTE = List.of(MUTALIUM_WHITE, MUTALIUM_PALE_RED, MUTALIUM_RED);
         public static final Style RENDFIRE_STYLE = Style.EMPTY.withColor(Formatting.DARK_RED);
         public static final Style ALDUS_STYLE = Style.EMPTY.withColor(Formatting.DARK_GRAY);
+    }
+
+    public enum BlockTypes {
+        ORE,  // This includes anything, which ends in "ore"
+        STONE_ORE,
+        DEEPSLATE_ORE,
+        NETHER_ORE,
+        END_ORE,
+        RAW,  // This includes raw blocks.
+        PURE  // This includes blocks such as diamond_block
     }
 }
