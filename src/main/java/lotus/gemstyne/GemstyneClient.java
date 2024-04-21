@@ -1,11 +1,14 @@
 package lotus.gemstyne;
 
 import lotus.gemstyne.client.GeodeCutouts;
+import lotus.gemstyne.entity.GemstyneEntities;
+import lotus.gemstyne.entity.client.AetherZombieRenderer;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
@@ -23,5 +26,8 @@ public class GemstyneClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
                 GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE);
+
+        EntityRendererRegistry.register(GemstyneEntities.AETHER_ZOMBIE, AetherZombieRenderer::new);
+        // EntityModelLayerRegistry.registerModelLayer(GemstyneModelLayers.AETHER_ZOMBIE);
     }
 }

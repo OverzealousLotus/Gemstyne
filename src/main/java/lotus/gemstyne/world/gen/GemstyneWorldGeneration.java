@@ -6,5 +6,6 @@ public class GemstyneWorldGeneration {
     public static void generateModWorldGen() {
         // Make sure to call generateOres() *before* generateTrees()
         GemstyneOreGeneration.generateOres();
+        GemstyneEntityGeneration.addSpawns();
     }
 }
