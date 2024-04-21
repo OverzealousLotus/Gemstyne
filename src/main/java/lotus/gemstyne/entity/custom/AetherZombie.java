@@ -1,6 +1,6 @@
 package lotus.gemstyne.entity.custom;
 
-import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.effect.EffectHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -35,7 +35,7 @@ public class AetherZombie extends ZombieEntity {
     public boolean tryAttack(Entity target) {
         float f = this.getWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
         if (this.getMainHandStack().isEmpty() && this.random.nextFloat() < f * 0.3f && target instanceof LivingEntity entity) {
-            entity.addStatusEffect(new StatusEffectInstance(GemstyneEffects.AETHERIUM_RADIATION, 200, 1));
+            entity.addStatusEffect(new StatusEffectInstance(EffectHandler.AETHERIUM_RADIATION, 200, 1));
         }
         return super.tryAttack(target);
     }

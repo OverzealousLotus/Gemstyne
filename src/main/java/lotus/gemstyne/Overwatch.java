@@ -2,7 +2,7 @@ package lotus.gemstyne;
 
 import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
-import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.effect.EffectHandler;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
@@ -21,7 +21,7 @@ public final class Overwatch {
      * Dependencies in this context, refer to anything that needs to be registered before anything else.
      */
     public static void registerDependencies() {
-        GemstyneEffects.registerEffects();
+        EffectHandler.registerEffects();
         GemstyneFluids.registerFluids();
         GemstyneCreativeGroup.registerGroups();
     }

@@ -4,7 +4,7 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.custom.*;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.block.util.GeodeSet;
-import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.effect.EffectHandler;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstyneMiningLevels;
@@ -102,7 +102,7 @@ public final class BlockHandler {
 
     public static final BlockSet URANIUM = BlockSet.Builder.start("uranium")
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL).setExperience(5, 15)
-        .setEffect(GemstyneEffects.WEAK_RADIATION).setStrength(6.0f, 5.0f)
+        .setEffect(EffectHandler.WEAK_RADIATION).setStrength(6.0f, 5.0f)
         .createOreType(GemstyneConstants.DEEPSLATE, 60)
         .setLevel(GemstyneMiningLevels.NEEDS_NETHERITE_TOOL)
         .createRawBlock(60).createPureBlock(60)
