@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_uranium_ingot",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_uranium_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:uranium_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

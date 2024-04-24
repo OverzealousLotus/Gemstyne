@@ -23,8 +23,8 @@ public class MutaliumOre extends VolatileOre {
         StatusEffects.LEVITATION, StatusEffects.HASTE, StatusEffects.WEAKNESS
     );
 
-    public MutaliumOre(Settings settings, IntProvider experience) {
-        super(settings, experience);
+    public MutaliumOre(IntProvider experience, Settings settings) {
+        super(experience, settings);
     }
 
     @Override
@@ -43,14 +43,14 @@ public class MutaliumOre extends VolatileOre {
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if(!world.isClient() && !player.isCreative()) {
             Random random = Random.create();
 
             player.addStatusEffect(new StatusEffectInstance(effectList.get(random.nextInt(9)), random.nextBetweenExclusive(30, 120)));
         }
 
-        super.onBreak(world, pos, state, player);
+        return super.onBreak(world, pos, state, player);
     }
 
     @Override

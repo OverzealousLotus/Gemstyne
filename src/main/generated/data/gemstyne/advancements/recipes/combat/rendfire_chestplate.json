@@ -34,15 +34,14 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_fire_opal",
-      "has_crimonite_ingot",
-      "has_the_recipe"
+      "has_crimonite_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:rendfire_chestplate"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

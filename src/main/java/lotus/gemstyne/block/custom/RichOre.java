@@ -1,5 +1,6 @@
 package lotus.gemstyne.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import lotus.gemstyne.block.entity.RichOreBlockEntity;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import net.minecraft.block.*;
@@ -9,7 +10,6 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -24,20 +24,24 @@ import java.util.*;
  * is the same. However, it removes the need to search for other veins, until they are broken.
  */
 public class RichOre extends BlockWithEntity implements BlockEntityProvider {
-    private final int breakStates;
-    private final UniformIntProvider experience;
-    private final Item richDrop;
+    private int breakStates;
+    private UniformIntProvider experience;
+    private Item richDrop;
 
+    public static final MapCodec<RichOre> CODEC = AbstractBlock.createCodec(RichOre::new);
     /**
      *
      * @param settings {@link net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings}
-     * @param breakStates The amount of times this can be mined before being destroyed.
      */
-    public RichOre(Settings settings, int breakStates, UniformIntProvider experience, Item richDrop) {
+    public RichOre(Settings settings) {
         super(settings);
-        this.breakStates = breakStates;
-        this.experience = experience;
-        this.richDrop = richDrop;
+    }
+
+    public final RichOre init(int states, UniformIntProvider xp, Item drop) {
+        this.breakStates = states;
+        this.experience = xp;
+        this.richDrop = drop;
+        return this;
     }
 
     /**
@@ -117,10 +121,15 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
      * @param player {@link PlayerEntity} who broke the block.
      */
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (player.isCreative()) getDeepOreEntity(world, pos).setCurrentStates(0, world, pos, state);
 
-        super.onBreak(world, pos, state, player);
+        return super.onBreak(world, pos, state, player);
+    }
+
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return CODEC;
     }
 
     /* Block Entity Stuff! */
@@ -138,6 +147,7 @@ public class RichOre extends BlockWithEntity implements BlockEntityProvider {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, GemstyneBlockEntities.DEEP_ORE_BLOCK, RichOreBlockEntity::tick);
+        return validateTicker(type, GemstyneBlockEntities.DEEP_ORE_BLOCK,
+            RichOreBlockEntity::tick);
     }
 }

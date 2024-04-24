@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_rendfire_chestplate",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_rendfire_chestplate"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:crimonite_ingot_from_smelting_rendfire_chestplate"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

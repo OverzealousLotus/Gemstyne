@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_raw_mochite",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_raw_mochite"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:mochite_from_smelting_raw_mochite"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -7,13 +7,13 @@ import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
 import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class TorriumOre extends VolatileOre {
-    public TorriumOre(Settings settings, UniformIntProvider experience) {
-        super(settings, experience);
+    public TorriumOre(IntProvider experience, Settings settings) {
+        super(experience, settings);
     }
 
     @Override

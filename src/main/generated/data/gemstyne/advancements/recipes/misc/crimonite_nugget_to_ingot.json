@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_crimonite_nugget",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_crimonite_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:crimonite_nugget_to_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

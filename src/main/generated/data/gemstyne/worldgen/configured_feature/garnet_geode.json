@@ -30,7 +30,7 @@
           }
         },
         {
-          "Name": "gemstyne:large_garnet_bud",
+          "Name": "gemstyne:small_garnet_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
@@ -44,7 +44,7 @@
           }
         },
         {
-          "Name": "gemstyne:small_garnet_bud",
+          "Name": "gemstyne:large_garnet_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"

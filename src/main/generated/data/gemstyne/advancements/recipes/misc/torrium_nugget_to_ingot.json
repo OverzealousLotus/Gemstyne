@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_torrium_nugget",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_torrium_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:torrium_nugget_to_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

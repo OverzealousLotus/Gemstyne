@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_aldus_helmet",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_aldus_helmet"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:aldus_ingot_from_smelting_aldus_helmet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

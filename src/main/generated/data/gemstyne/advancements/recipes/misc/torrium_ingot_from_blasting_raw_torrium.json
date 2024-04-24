@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_raw_torrium",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_raw_torrium"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:torrium_ingot_from_blasting_raw_torrium"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

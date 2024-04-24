@@ -34,15 +34,14 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_imbued_rod",
-      "has_ikarite",
-      "has_the_recipe"
+      "has_ikarite"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:imbued_feather"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_raw_aldus",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_raw_aldus"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:aldus_ingot_from_smelting_raw_aldus"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

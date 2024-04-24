@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_raw_uranium",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_raw_uranium"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:uranium_chunk_from_smelting_raw_uranium"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

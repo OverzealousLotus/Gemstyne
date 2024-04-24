@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_bronzemail_boots",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_bronzemail_boots"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:bronze_nugget_from_blasting_bronzemail_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

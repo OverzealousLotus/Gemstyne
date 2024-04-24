@@ -1,6 +1,8 @@
 package lotus.gemstyne.block.custom;
 
 import lotus.gemstyne.util.GemstyneUtil;
+import net.fabricmc.fabric.api.block.v1.FabricBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.entity.Entity;
@@ -11,7 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class AfflictiveBlock extends ExperienceDroppingBlock {
+public class AfflictiveBlock extends Block {
     // Instantiate parameters of Block.
     private final StatusEffect effect;
     private final int duration;
@@ -56,12 +58,12 @@ public class AfflictiveBlock extends ExperienceDroppingBlock {
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        super.onBreak(world, pos, state, player);
-
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!world.isClient() && !player.isSpectator() && !player.isCreative()) {
             afflictPlayer(player);
         }
+
+        return super.onBreak(world, pos, state, player);
     }
 
     @Override

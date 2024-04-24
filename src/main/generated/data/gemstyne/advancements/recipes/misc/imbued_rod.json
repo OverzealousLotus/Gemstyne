@@ -34,15 +34,14 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_quartz",
-      "has_blaze_rod",
-      "has_the_recipe"
+      "has_blaze_rod"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:imbued_rod"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

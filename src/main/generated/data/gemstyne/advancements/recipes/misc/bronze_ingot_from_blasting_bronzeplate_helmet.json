@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_bronzeplate_helmet",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_bronzeplate_helmet"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:bronze_ingot_from_blasting_bronzeplate_helmet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

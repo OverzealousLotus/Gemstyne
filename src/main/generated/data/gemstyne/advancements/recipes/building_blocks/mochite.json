@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_mochite_block",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_mochite_block"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:mochite"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

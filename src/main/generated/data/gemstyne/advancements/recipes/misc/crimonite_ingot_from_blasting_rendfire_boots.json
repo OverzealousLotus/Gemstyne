@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_rendfire_boots",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_rendfire_boots"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:crimonite_ingot_from_blasting_rendfire_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

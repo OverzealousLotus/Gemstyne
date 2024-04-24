@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_uranium_chunk",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_uranium_chunk"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:uranium_chunk_to_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

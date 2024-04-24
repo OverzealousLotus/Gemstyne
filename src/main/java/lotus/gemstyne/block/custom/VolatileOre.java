@@ -26,8 +26,8 @@ import java.util.Objects;
  * </ul>
  */
 public class VolatileOre extends ExperienceDroppingBlock {
-    public VolatileOre(Settings settings, IntProvider experience) {
-        super(settings, experience);
+    public VolatileOre(IntProvider experience, Settings settings) {
+        super(experience, settings);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class VolatileOre extends ExperienceDroppingBlock {
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         // Guard statement to prevent this from running client side, peaceful mode, or when Player is in Creative.
         if (!world.isClient() && !player.isCreative() && !Objects.equals(world.getDifficulty().getName(), "peaceful")) {
             Random random = Random.create(); // Create Random Number generator.
@@ -56,7 +56,7 @@ public class VolatileOre extends ExperienceDroppingBlock {
             }
         }
 
-        super.onBreak(world, pos, state, player);
+        return super.onBreak(world, pos, state, player);
     }
 
     /**

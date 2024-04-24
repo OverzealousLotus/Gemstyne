@@ -72,28 +72,28 @@ public final class BlockHandler {
     public static final BlockSet MUTALIUM = BlockSet.Builder.start("mutalium")
         .setExperience(10, 20)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
-        .createOre(new MutaliumOre(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE),
-            UniformIntProvider.create(8, 15)))
-        .createOreType(GemstyneConstants.DEEPSLATE, new MutaliumOre(FabricBlockSettings.copyOf(Blocks.DEEPSLATE),
-            UniformIntProvider.create(8, 15)))
-        .createOreType(GemstyneConstants.NETHER, new MutaliumOre(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE),
-            UniformIntProvider.create(8, 15)))
-        .createOreType(GemstyneConstants.END, new MutaliumOre(FabricBlockSettings.copyOf(Blocks.END_STONE),
-            UniformIntProvider.create(8, 15)))
+        .createOre(new MutaliumOre(UniformIntProvider.create(8, 15), FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)))
+        .createOreType(GemstyneConstants.DEEPSLATE, new MutaliumOre(UniformIntProvider.create(8, 15),
+            FabricBlockSettings.copyOf(Blocks.DEEPSLATE)))
+        .createOreType(GemstyneConstants.NETHER, new MutaliumOre(UniformIntProvider.create(8, 15),
+            FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE)))
+        .createOreType(GemstyneConstants.END, new MutaliumOre(UniformIntProvider.create(8, 15),
+            FabricBlockSettings.copyOf(Blocks.END_STONE)))
         .end();
 
     public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
-        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE), Gemstyne.CONFIG.oreConfig.mochiteRichness(), UniformIntProvider.create(2, 5), Items.DIAMOND)
+        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE)).init(Gemstyne.CONFIG.oreConfig.mochiteRichness(),
+            UniformIntProvider.create(2, 5), Items.DIAMOND)
     );
 
     public static final BlockSet TORRIUM = BlockSet.Builder.start("torrium")
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL)
-        .createOre(new TorriumOre(FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).luminance(5),
-            UniformIntProvider.create(5, 10)))
-        .createOreType(GemstyneConstants.DEEPSLATE, new TorriumOre(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).luminance(5),
-            UniformIntProvider.create(5, 10)))
-        .createOreType(GemstyneConstants.NETHER, new TorriumOre(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).luminance(5),
-            UniformIntProvider.create(5, 10)))
+        .createOre(new TorriumOre(UniformIntProvider.create(5, 10),
+            FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).luminance(5)))
+        .createOreType(GemstyneConstants.DEEPSLATE, new TorriumOre(UniformIntProvider.create(5, 10),
+            FabricBlockSettings.copyOf(Blocks.DEEPSLATE).luminance(5)))
+        .createOreType(GemstyneConstants.NETHER, new TorriumOre(UniformIntProvider.create(5, 10),
+            FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).luminance(5)))
         .end();
 
     public static final BlockSet TIN = BlockSet.Builder.start("tin")
@@ -136,8 +136,8 @@ public final class BlockHandler {
     // <===== Ore Extensions =====>
     // =====
     public static final Block COMPRESSED_GRANITE_COAL_ORE = GemstyneRegistry.designateBlock("compressed_granite_coal_ore",
-        new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COAL_ORE).mapColor(MapColor.BROWN)
-                .strength(4.5f, 3.0f), UniformIntProvider.create(0, 2))
+        new ExperienceDroppingBlock(UniformIntProvider.create(0, 2), FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COAL_ORE)
+            .mapColor(MapColor.BROWN).strength(4.5f, 3.0f))
     );
 
     // =====
@@ -176,7 +176,7 @@ public final class BlockHandler {
     );
 
     public static final Block PYRITE = GemstyneRegistry.designateBlock("pyrite",
-        new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE)));
+        new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE)));
 
     public static void registerGemstyneBlocks() {
         Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");

@@ -5,14 +5,12 @@ import lotus.gemstyne.armor.GemstyneArmorSet;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.*;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
-
-import java.util.function.Consumer;
 
 abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
@@ -21,7 +19,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
     }
 
 
-    protected static void generateArmorRecipes(Consumer<RecipeJsonProvider> exporter) {
+    protected static void generateArmorRecipes(RecipeExporter exporter) {
         // =====
         // <===== Aldus Armour =====>
         // =====
@@ -74,7 +72,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
      * @param armorSet Target ArmorSet for recipe generation.
      */
     private static void offerArmorSetRecipes(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             GemstyneArmorSet armorSet
     ) {
         offerBasicHelmetRecipe(exporter, armorSet.helmet, armorSet.source);
@@ -84,7 +82,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
     }
 
     private static void offerBasicHelmetRecipe(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             Item output,
             Item input
     ) {
@@ -99,7 +97,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
 
     private static void offerBasicChestplateRecipe(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             Item output,
             Item input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
@@ -114,7 +112,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
 
     private static void offerBasicLeggingsRecipe(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             Item output,
             Item input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
@@ -129,7 +127,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
 
     private static void offerBasicBootsRecipe(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             Item output,
             Item input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)

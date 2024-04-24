@@ -2,17 +2,18 @@ package lotus.gemstyne.block.custom;
 
 import lotus.gemstyne.util.GemstyneUtil;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
 
-public class AfflictiveOre extends AfflictiveBlock {
+public class AfflictiveOre extends ExperienceDroppingBlock {
     private final IntProvider experiencedDropped;
 
-    public AfflictiveOre(Settings settings, StatusEffect effect, int duration, GemstyneUtil.BlockTypes type, IntProvider experience) {
-        super(settings, effect, duration, type);
+    public AfflictiveOre(IntProvider experience, Settings settings, StatusEffect effect, int duration, GemstyneUtil.BlockTypes type) {
+        super(experience, settings);
         this.experiencedDropped = experience;
     }
 
@@ -21,7 +22,6 @@ public class AfflictiveOre extends AfflictiveBlock {
      * then know it actually means: "Override this method, don't call."
      */
     @Override
-    @Deprecated
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
         super.onStacksDropped(state, world, pos, tool, dropExperience);
         if (dropExperience) {

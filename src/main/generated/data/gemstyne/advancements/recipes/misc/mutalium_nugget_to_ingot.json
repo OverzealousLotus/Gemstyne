@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_mutalium_nugget",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_mutalium_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:mutalium_nugget_to_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

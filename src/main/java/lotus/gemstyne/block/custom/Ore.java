@@ -8,7 +8,7 @@ import net.minecraft.util.math.intprovider.IntProvider;
 
 public class Ore extends ExperienceDroppingBlock {
     public Ore(Settings settings, IntProvider experience) {
-        super(settings, experience);
+        super(experience, settings);
     }
 
     /**

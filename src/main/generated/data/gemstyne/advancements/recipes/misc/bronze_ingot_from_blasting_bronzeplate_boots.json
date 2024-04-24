@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_bronzeplate_boots",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_bronzeplate_boots"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:bronze_ingot_from_blasting_bronzeplate_boots"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_mochite",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_mochite"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:mochite_purity_to_nugget"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

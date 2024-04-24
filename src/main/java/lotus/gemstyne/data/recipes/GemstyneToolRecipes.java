@@ -4,22 +4,19 @@ import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.tool.GemstyneToolItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.*;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
-import java.util.function.Consumer;
-
 abstract class GemstyneToolRecipes extends FabricRecipeProvider {
     protected GemstyneToolRecipes(FabricDataOutput output) {
         super(output);
     }
 
-
-    protected static void generateToolRecipes(Consumer<RecipeJsonProvider> exporter) {
+    protected static void generateToolRecipes(RecipeExporter exporter) {
         GemstyneToolItems.ALDUS.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.ALDUS.source));
         GemstyneToolItems.BRONZE.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.BRONZE.source));
         GemstyneToolItems.MUTALIUM.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.MUTALIUM.source));
@@ -39,9 +36,8 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
             ItemHandler.FIRE_OPAL, GemstyneToolItems.RENDFIRE.getSword());
     }
 
-
     private static void offerBasicToolRecipe(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             Item output,
             Item input) {
         String patternOne;
@@ -99,7 +95,7 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
 
 
     private static void offerCoreToolRecipe(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             Item input,
             Item core,
             Item output) {

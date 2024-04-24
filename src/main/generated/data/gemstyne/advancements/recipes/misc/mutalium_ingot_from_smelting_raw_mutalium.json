@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_raw_mutalium",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_raw_mutalium"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:mutalium_ingot_from_smelting_raw_mutalium"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

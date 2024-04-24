@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_fire_opal_block",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_fire_opal_block"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:fire_opal"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

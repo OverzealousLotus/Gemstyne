@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_aldus_block",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_aldus_block"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:aldus_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

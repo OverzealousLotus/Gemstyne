@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_bronze_nugget",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_bronze_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:bronze_nugget_to_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

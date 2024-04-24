@@ -22,14 +22,13 @@
   },
   "requirements": [
     [
-      "has_raw_crimonite_block",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_raw_crimonite_block"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:raw_crimonite"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

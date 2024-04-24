@@ -9,7 +9,7 @@ import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -20,7 +20,6 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 public class GemstyneRecipeProvider extends FabricRecipeProvider {
 
@@ -29,7 +28,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
         // =====
         // <===== Smelting/Blasting =====>
         // =====
@@ -158,7 +157,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
      * @param itemSet {@link GemstyneItemSet}
      */
     private static void offerBilateralCompactingRecipes(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             BlockSet blockSet,
             GemstyneItemSet itemSet
     ) {
@@ -173,7 +172,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
     /**
      * Internally calls {@link RecipeProvider#offerBlasting} and {@link RecipeProvider#offerSmelting} to create both
      * recipes in one function call.
-     * @param exporter {@link RecipeJsonProvider}
+     * @param exporter {@link RecipeExporter}
      * @param inputs Target items for smelting/blasting.
      * @param output Output of smelting/blasting.
      * @param smeltingTime Time until smelting completes in Ticks.
@@ -181,7 +180,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
      * @param experience Amount of experience gained for each successful smelt/blast.
      */
     private static void offerCompleteSmelting(
-            Consumer<RecipeJsonProvider> exporter,
+            RecipeExporter exporter,
             List<ItemConvertible> inputs,
             Item output,
             int smeltingTime,
@@ -193,7 +192,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
     }
 
     private static void offerBasicIngotRecipe(
-            Consumer<RecipeJsonProvider> exporter, Item input, Item output, String name) {
+            RecipeExporter exporter, Item input, Item output, String name) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .pattern("CC")
                 .pattern("CC")
@@ -204,7 +203,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
     }
 
     private static void offerAlloyIngotRecipe(
-            Consumer<RecipeJsonProvider> exporter, Item ingotOne, Item ingotTwo, Item output, String name) {
+            RecipeExporter exporter, Item ingotOne, Item ingotTwo, Item output, String name) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .pattern("AB")
                 .input('A', ingotOne)
@@ -220,7 +219,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
      * Method providing an easy way to create an Ingot-To-Nugget reversible recipes.
      * @param set {@link GemstyneItemSet}
      */
-    private static void offerReversibleNuggetRecipe(Consumer<RecipeJsonProvider> exporter, GemstyneItemSet set) {
+    private static void offerReversibleNuggetRecipe(RecipeExporter exporter, GemstyneItemSet set) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, set.nugget(), 9)
                 .input(set.ingot())
                 .criterion(RecipeProvider.hasItem(set.ingot()),
@@ -233,7 +232,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(set.getSetName() + "_" + "nugget_to_ingot"));
     }
 
-    private static void offerReversibleNuggetRecipe(Consumer<RecipeJsonProvider> exporter, Item purity, Item nugget, String name) {
+    private static void offerReversibleNuggetRecipe(RecipeExporter exporter, Item purity, Item nugget, String name) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, nugget, 9)
             .input(purity)
             .criterion(RecipeProvider.hasItem(purity),
