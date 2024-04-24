@@ -1,6 +1,5 @@
 package lotus.gemstyne.data.models;
 
-import lotus.gemstyne.data.models.*;
 import lotus.gemstyne.fluid.GemstyneFluids;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;

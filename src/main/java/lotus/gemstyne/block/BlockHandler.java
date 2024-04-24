@@ -39,8 +39,7 @@ public final class BlockHandler {
     public static final BlockSet AETHERIUM = BlockSet.Builder.start("aetherium")
         .setExperience(12, 20).setStrength(5.0f, 5.0f)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
-        .createOreType(GemstyneConstants.DEEPSLATE
-        )
+        .createOreType(GemstyneConstants.DEEPSLATE)
         .end();
 
     public static final BlockSet BUBBLEGEM = BlockSet.Builder.start("bubblegem")
@@ -177,6 +176,9 @@ public final class BlockHandler {
 
     public static final Block PYRITE = GemstyneRegistry.designateBlock("pyrite",
         new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE)));
+
+    public static final Block THERMO_TNT_BLOCK = GemstyneRegistry.designateBlock("thermo_tnt",
+        new ThermoTntBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
 
     public static void registerGemstyneBlocks() {
         Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");

@@ -33,7 +33,7 @@ public final class Overwatch {
     public static void registerEssentials() {
         ItemHandler.registerGemstyneItems();
         BlockHandler.registerGemstyneBlocks();
-        GemstyneBlockEntities.registerBlockEntities();
+        GemstyneBlockEntities.registerGemstyneEntities();
         GemstyneRegistry.registerMisc();
     }
 

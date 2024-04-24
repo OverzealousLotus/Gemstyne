@@ -113,37 +113,48 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         // <===== Shaped =====>
         // =====
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ItemHandler.BRONZE.chain())
-                .pattern(" N ")
-                .pattern("N N")
-                .pattern(" N ")
-                .input('N', ItemHandler.BRONZE.nugget())
-                .criterion(RecipeProvider.hasItem(ItemHandler.BRONZE.nugget()),
-                        RecipeProvider.conditionsFromItem(ItemHandler.BRONZE.nugget()))
-                .offerTo(exporter, GemstyneRegistry.id(RecipeProvider.getRecipeName(ItemHandler.BRONZE.chain())));
+            .pattern(" N ")
+            .pattern("N N")
+            .pattern(" N ")
+            .input('N', ItemHandler.BRONZE.nugget())
+            .criterion(RecipeProvider.hasItem(ItemHandler.BRONZE.nugget()),
+                RecipeProvider.conditionsFromItem(ItemHandler.BRONZE.nugget()))
+            .offerTo(exporter, GemstyneRegistry.id(RecipeProvider.getRecipeName(ItemHandler.BRONZE.chain())));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemHandler.IMBUED_ROD)
-                .pattern(" Q ")
-                .pattern("QBQ")
-                .pattern(" Q ")
-                .input('Q', Items.QUARTZ)
-                .input('B', Items.BLAZE_ROD)
-                .criterion(RecipeProvider.hasItem(Items.QUARTZ),
-                        RecipeProvider.conditionsFromItem(Items.QUARTZ))
-                .criterion(RecipeProvider.hasItem(Items.BLAZE_ROD),
-                        RecipeProvider.conditionsFromItem(Items.BLAZE_ROD))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemHandler.IMBUED_ROD)));
+            .pattern(" Q ")
+            .pattern("QBQ")
+            .pattern(" Q ")
+            .input('Q', Items.QUARTZ)
+            .input('B', Items.BLAZE_ROD)
+            .criterion(RecipeProvider.hasItem(Items.QUARTZ),
+                RecipeProvider.conditionsFromItem(Items.QUARTZ))
+            .criterion(RecipeProvider.hasItem(Items.BLAZE_ROD),
+                RecipeProvider.conditionsFromItem(Items.BLAZE_ROD))
+            .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemHandler.IMBUED_ROD)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemHandler.IMBUED_FEATHER)
-                .pattern(" O ")
-                .pattern("OIO")
-                .pattern("IO ")
-                .input('O', ItemHandler.IKARITE)
-                .input('I', ItemHandler.IMBUED_ROD)
-                .criterion(RecipeProvider.hasItem(ItemHandler.IMBUED_ROD),
-                        RecipeProvider.conditionsFromItem(ItemHandler.IMBUED_ROD))
-                .criterion(RecipeProvider.hasItem(ItemHandler.IKARITE),
-                        RecipeProvider.conditionsFromItem(ItemHandler.IKARITE))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemHandler.IMBUED_FEATHER)));
+            .pattern(" O ").pattern("OIO").pattern("IO ")
+            .input('O', ItemHandler.IKARITE)
+            .input('I', ItemHandler.IMBUED_ROD)
+            .criterion(RecipeProvider.hasItem(ItemHandler.IMBUED_ROD),
+                RecipeProvider.conditionsFromItem(ItemHandler.IMBUED_ROD))
+            .criterion(RecipeProvider.hasItem(ItemHandler.IKARITE),
+                RecipeProvider.conditionsFromItem(ItemHandler.IKARITE))
+            .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemHandler.IMBUED_FEATHER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, BlockHandler.THERMO_TNT_BLOCK)
+            .pattern("TIT").pattern("IUI").pattern("TIT")
+            .input('T', ItemHandler.TORRIUM.ingot())
+            .input('I', Items.IRON_INGOT)
+            .input('U', ItemHandler.URANIUM.ingot())
+            .criterion(RecipeProvider.hasItem(ItemHandler.TORRIUM.ingot()),
+                RecipeProvider.conditionsFromItem(ItemHandler.TORRIUM.ingot()))
+            .criterion(RecipeProvider.hasItem(ItemHandler.URANIUM.ingot()),
+                RecipeProvider.conditionsFromItem(ItemHandler.URANIUM.ingot()))
+            .criterion(RecipeProvider.hasItem(Items.IRON_INGOT),
+                RecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+            .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(BlockHandler.THERMO_TNT_BLOCK)));
 
         GemstyneArmorRecipes.generateArmorRecipes(exporter);
         GemstyneToolRecipes.generateToolRecipes(exporter);

@@ -1,6 +1,8 @@
 package lotus.gemstyne;
 
+import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import lotus.gemstyne.client.GeodeCutouts;
+import lotus.gemstyne.client.rendering.ThermoTntEntityRenderer;
 import lotus.gemstyne.entity.GemstyneEntities;
 import lotus.gemstyne.entity.client.AetherZombieRenderer;
 import lotus.gemstyne.fluid.GemstyneFluids;
@@ -16,6 +18,8 @@ public class GemstyneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         GeodeCutouts.registerGeodeCutouts();
+        // Registers renderer to be used for rendering the TNT Entity.
+        EntityRendererRegistry.register(GemstyneBlockEntities.THERMO_TNT_ENTITY, ThermoTntEntityRenderer::new);
 
         FluidRenderHandlerRegistry.INSTANCE.register(GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE,
                 new SimpleFluidRenderHandler(

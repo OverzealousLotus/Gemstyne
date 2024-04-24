@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "gemstyne:block/thermo_tnt_top",
+    "bottom": "gemstyne:block/thermo_tnt_bottom",
+    "side": "gemstyne:block/thermo_tnt_side"
+  }
+}
