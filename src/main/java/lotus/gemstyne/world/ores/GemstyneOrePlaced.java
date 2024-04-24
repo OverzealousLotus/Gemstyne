@@ -24,6 +24,9 @@ public final class GemstyneOrePlaced {
         // <=====| The Overworld |=====>
         // =====
 
+        WorldHandler.AETHERIUM.placedFeatureRarity(context, GemstyneConstants.SMALL, 5,
+            HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
+
         WorldHandler.BUBBLEGEM.placedFeatureRarity(context, GemstyneConstants.SMALL, 7,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(112)));
         WorldHandler.BUBBLEGEM.placedFeatureRarity(context, GemstyneConstants.LARGE, 9,
@@ -55,9 +58,9 @@ public final class GemstyneOrePlaced {
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(112)));
 
 
-        WorldHandler.URANIUM.placedFeatureCount(context, GemstyneConstants.SMALL, 4,
+        WorldHandler.URANIUM.placedFeatureRarity(context, GemstyneConstants.SMALL, 4,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
-        WorldHandler.URANIUM.placedFeatureRarity(context, GemstyneConstants.LARGE, 7,
+        WorldHandler.URANIUM.placedFeatureRarity(context, GemstyneConstants.LARGE, 8,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));
         WorldHandler.URANIUM.placedFeatureCount(context, GemstyneConstants.RAW, 150,
             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0)));

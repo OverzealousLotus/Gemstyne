@@ -14,6 +14,8 @@ public class GemstyneOreConfig {
         // =====
         // <=====| The Overworld |=====>
         // =====
+        WorldHandler.AETHERIUM.overworldConfigFeatures(context, GemstyneConstants.SMALL, 3, 0.15f, false);
+
         WorldHandler.BUBBLEGEM.overworldConfigFeatures(context, GemstyneConstants.SMALL, 5, 0.05f, false);
         WorldHandler.BUBBLEGEM.overworldConfigFeatures(context, GemstyneConstants.LARGE, 10, 0.10f, false);
 

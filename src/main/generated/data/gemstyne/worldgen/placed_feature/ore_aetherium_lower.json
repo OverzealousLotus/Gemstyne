@@ -1,9 +1,9 @@
 {
-  "feature": "gemstyne:ore_uranium_small",
+  "feature": "gemstyne:ore_aetherium_small",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 4
+      "chance": 5
     },
     {
       "type": "minecraft:in_square"

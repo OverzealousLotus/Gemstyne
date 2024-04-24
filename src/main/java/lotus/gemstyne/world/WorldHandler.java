@@ -9,6 +9,9 @@ import lotus.gemstyne.util.GemstyneConstants;
 public final class WorldHandler {
     private WorldHandler() {}
 
+    public static final GemstyneOreModification AETHERIUM = new GemstyneOreModification(BlockHandler.AETHERIUM).addDeepslateOre()
+        .createKeyPair(GemstyneConstants.SMALL, GemstyneConstants.LOWER);
+
     public static final GemstyneOreModification ALDUS = new GemstyneOreModification(BlockHandler.ALDUS).addNetherOre()
         .createKeyPair(GemstyneConstants.SMALL, GemstyneConstants.UPPER).createKeyPair(GemstyneConstants.LARGE, GemstyneConstants.LOWER);
 
