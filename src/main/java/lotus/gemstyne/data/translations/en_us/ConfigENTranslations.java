@@ -26,7 +26,7 @@ abstract class ConfigENTranslations extends FabricLanguageProvider {
         translationBuilder.add("text.config.gemstyne_config.section.overworld", "The Overworld");
         translationBuilder.add("text.config.gemstyne_config.section.nether", "The Nether");
         translationBuilder.add("text.config.gemstyne_config.section.multi_dimensional", "Multi-Dimensional");
-        translationBuilder.add("text.config.gemstyne_config.section.geodeConfig", "Geode Configuration");
+        translationBuilder.add("text.config.gemstyne_config.category.geodeConfig", "Geode Configuration");
 
         configTranslation(translationBuilder, "aldus", new String[] {});
         configTranslation(translationBuilder, "blazite", new String[] {});
@@ -41,9 +41,9 @@ abstract class ConfigENTranslations extends FabricLanguageProvider {
         addConfigTranslation(translationBuilder, ORE_CONFIG, "uraniumEnabled", "Uranium Generation", "Whether Uranium generates.");
         addConfigTranslation(translationBuilder, ORE_CONFIG, "mineralsEnabled", "Mineral Generation", "Whether Gemstyne Minerals generate.");
 
-        addConfigTranslation(translationBuilder, "ikariteEnabled", "Ikarite Geode Generation", "Whether Ikarite Geodes generate.");
-        addConfigTranslation(translationBuilder, "garnetEnabled", "Garnet Geode Generation", "Whether Garnet Geodes generate.");
-        addConfigTranslation(translationBuilder, "lapisEnabled", "Lapis Geode Generation", "Whether Lapis Geodes generate.");
+        addConfigTranslation(translationBuilder, "geodeConfig.ikariteEnabled", "Ikarite Geode Generation", "Whether Ikarite Geodes generate.");
+        addConfigTranslation(translationBuilder, "geodeConfig.garnetEnabled", "Garnet Geode Generation", "Whether Garnet Geodes generate.");
+        addConfigTranslation(translationBuilder, "geodeConfig.lapisEnabled", "Lapis Geode Generation", "Whether Lapis Geodes generate.");
     }
 
     /**
