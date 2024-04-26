@@ -37,14 +37,14 @@
           }
         },
         {
-          "Name": "gemstyne:small_garnet_bud",
+          "Name": "gemstyne:garnet_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
           }
         },
         {
-          "Name": "gemstyne:garnet_cluster",
+          "Name": "gemstyne:small_garnet_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"

@@ -22,6 +22,7 @@ public class AfflictiveOre extends ExperienceDroppingBlock {
      * then know it actually means: "Override this method, don't call."
      */
     @Override
+    @Deprecated
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
         super.onStacksDropped(state, world, pos, tool, dropExperience);
         if (dropExperience) {

@@ -25,7 +25,7 @@ public abstract class GemstyneENProvider extends FabricLanguageProvider {
         BlockENTranslations.translateBlocks(translationBuilder);
         ItemENTranslations.translateItems(translationBuilder);
         EquipmentENTranslations.generateEnglishEquipmentTranslations(translationBuilder);
-        ConfigENTranslations.generateEnglishConfigTranslations(translationBuilder);
+        ConfigENTranslations.generateENConfigTranslations(translationBuilder);
     }
 
     /**

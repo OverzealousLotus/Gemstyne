@@ -23,20 +23,6 @@
       },
       "inner_placements": [
         {
-          "Name": "gemstyne:medium_ikarite_bud",
-          "Properties": {
-            "facing": "up",
-            "waterlogged": "false"
-          }
-        },
-        {
-          "Name": "gemstyne:small_ikarite_bud",
-          "Properties": {
-            "facing": "up",
-            "waterlogged": "false"
-          }
-        },
-        {
           "Name": "gemstyne:large_ikarite_bud",
           "Properties": {
             "facing": "up",
@@ -45,6 +31,20 @@
         },
         {
           "Name": "gemstyne:ikarite_cluster",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "gemstyne:medium_ikarite_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "gemstyne:small_ikarite_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
