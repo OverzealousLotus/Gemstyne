@@ -3,6 +3,9 @@ package lotus.gemstyne.armor;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.item.ItemHandler;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
+import lotus.gemstyne.util.GemstyneRegistry;
+import net.minecraft.util.Rarity;
 
 public class GemstyneArmorItems {
     private GemstyneArmorItems() {}
@@ -15,9 +18,12 @@ public class GemstyneArmorItems {
             "bronzeplate", GemstyneArmorMaterials.BRONZEPLATE, ItemHandler.BRONZE.ingot());
     public static final GemstyneArmorSet RENDFIRE = new GemstyneArmorSet(new OwoItemSettings().fireproof(),
             "rendfire", GemstyneArmorMaterials.RENDFIRE, ItemHandler.FIRE_OPAL);
+    public static final IkariteElytra IKARITE_ELYTRA = new IkariteElytra(new OwoItemSettings()
+        .rarity(Rarity.RARE).group(GemstyneCreativeGroup.GEMSTYNE).tab(2).maxDamage(832));
 
 
     public static void registerArmorItems() {
         Gemstyne.LOGGER.info("Registering Armor Items...");
+        GemstyneRegistry.registerItem("ikarite_elytra", IKARITE_ELYTRA);
     }
 }
