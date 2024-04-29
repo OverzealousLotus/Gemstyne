@@ -2,20 +2,18 @@ package lotus.gemstyne.data.recipes;
 
 import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.block.util.BlockSet;
-import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.item.GemstyneItemSet;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -48,13 +46,13 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
         offerCompleteSmelting(exporter, List.of(ItemHandler.CRIMONITE.raw()),
             ItemHandler.CRIMONITE.chunk(), 350, 175, 2.0f);
 
-        offerCompleteSmelting(exporter, GemstyneArmorItems.ALDUS.getArmorList(),
+        offerCompleteSmelting(exporter, ArmorHandler.ALDUS.getArmorList(),
             ItemHandler.ALDUS.ingot(), 200, 100, 1.0f);
-        offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEPLATE.getArmorList(),
+        offerCompleteSmelting(exporter, ArmorHandler.BRONZEPLATE.getArmorList(),
             ItemHandler.BRONZE.ingot(), 200, 100, 1.0f);
-        offerCompleteSmelting(exporter, GemstyneArmorItems.BRONZEMAIL.getArmorList(),
+        offerCompleteSmelting(exporter, ArmorHandler.BRONZEMAIL.getArmorList(),
             ItemHandler.BRONZE.nugget(), 200, 100, 1.0f);
-        offerCompleteSmelting(exporter, GemstyneArmorItems.RENDFIRE.getArmorList(),
+        offerCompleteSmelting(exporter, ArmorHandler.RENDFIRE.getArmorList(),
             ItemHandler.CRIMONITE.ingot(), 350, 175, 2.0f);
 
 
@@ -96,7 +94,7 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 ItemHandler.CRIMONITE.ingot(), "crimonite_chunk_to_ingot");
 
         offerAlloyIngotRecipe(exporter, Items.COPPER_INGOT, ItemHandler.TIN.ingot(),
-                ItemHandler.BRONZE.ingot(), "bronze_ingot");
+                ItemHandler.BRONZE.ingot());
 
         /////
         ////////// Stone cutter //////////
@@ -213,17 +211,21 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(name));
     }
 
-    private static void offerAlloyIngotRecipe(
-            RecipeExporter exporter, Item ingotOne, Item ingotTwo, Item output, String name) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
-                .pattern("AB")
-                .input('A', ingotOne)
-                .input('B', ingotTwo)
-                .criterion(RecipeProvider.hasItem(ingotOne),
-                        RecipeProvider.conditionsFromItem(ingotOne))
-                .criterion(RecipeProvider.hasItem(ingotTwo),
-                        RecipeProvider.conditionsFromItem(ingotTwo))
-                .offerTo(exporter, new Identifier(name));
+    /**
+     * Creates an Alloy Ingot available for crafting in a smithing table.
+     * @param exporter {@link RecipeExporter}
+     * @param ingotOne The first ingot to be infused.
+     * @param ingotTwo The second ingot to be infused.
+     * @param output The resulting alloy ingot from the infusion.
+     */
+    private static void offerAlloyIngotRecipe(RecipeExporter exporter, Item ingotOne, Item ingotTwo, Item output) {
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.EMPTY,
+            Ingredient.ofItems(ingotOne, ingotTwo), Ingredient.ofItems(ingotTwo, ingotOne), RecipeCategory.MISC, output)
+            .criterion(RecipeProvider.hasItem(ingotOne),
+                RecipeProvider.conditionsFromItem(ingotOne))
+            .criterion(RecipeProvider.hasItem(ingotTwo),
+                RecipeProvider.conditionsFromItem(ingotTwo))
+            .offerTo(exporter, RecipeProvider.getItemPath(output) + "_alloy");
     }
 
     /**
