@@ -1,6 +1,6 @@
 package lotus.gemstyne.data.recipes;
 
-import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.armor.GemstyneArmorSet;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -23,25 +23,25 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
         // =====
         // <===== Aldus Armour =====>
         // =====
-        offerArmorSetRecipes(exporter, GemstyneArmorItems.ALDUS);
+        offerArmorSetRecipes(exporter, ArmorHandler.ALDUS);
 
         // =====
         // <===== Bronzemail Armour =====>
         // =====
-        offerArmorSetRecipes(exporter, GemstyneArmorItems.BRONZEMAIL);
+        offerArmorSetRecipes(exporter, ArmorHandler.BRONZEMAIL);
 
         // =====
         // <===== Bronzeplate Armour =====>
         // =====
-        offerArmorSetRecipes(exporter, GemstyneArmorItems.BRONZEPLATE);
+        offerArmorSetRecipes(exporter, ArmorHandler.BRONZEPLATE);
 
         // =====
         // <===== Rendfire Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, GemstyneArmorItems.RENDFIRE.helmet,
+        offerBasicHelmetRecipe(exporter, ArmorHandler.RENDFIRE.helmet,
             ItemHandler.CRIMONITE.ingot());
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.RENDFIRE.chestplate)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ArmorHandler.RENDFIRE.chestplate)
                 .pattern("C C")
                 .pattern("CFC")
                 .pattern("CCC")
@@ -52,11 +52,11 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .criterion(RecipeProvider.hasItem(ItemHandler.CRIMONITE.ingot()),
                         RecipeProvider.conditionsFromItem(ItemHandler.CRIMONITE.ingot()))
                 .offerTo(exporter, new Identifier(RecipeProvider
-                        .getRecipeName(GemstyneArmorItems.RENDFIRE.chestplate)));
+                        .getRecipeName(ArmorHandler.RENDFIRE.chestplate)));
 
-        offerBasicLeggingsRecipe(exporter, GemstyneArmorItems.RENDFIRE.leggings,
+        offerBasicLeggingsRecipe(exporter, ArmorHandler.RENDFIRE.leggings,
                 ItemHandler.CRIMONITE.ingot());
-        offerBasicBootsRecipe(exporter, GemstyneArmorItems.RENDFIRE.boots,
+        offerBasicBootsRecipe(exporter, ArmorHandler.RENDFIRE.boots,
                 ItemHandler.CRIMONITE.ingot());
     }
 

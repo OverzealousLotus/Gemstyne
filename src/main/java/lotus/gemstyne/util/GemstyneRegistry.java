@@ -4,7 +4,7 @@ import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.block.BlockHandler;
-import lotus.gemstyne.fluid.GemstyneFluids;
+import lotus.gemstyne.fluid.FluidHandler;
 import lotus.gemstyne.item.GemstyneItemSet;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -84,7 +84,7 @@ public class GemstyneRegistry {
         FuelRegistry registry = FuelRegistry.INSTANCE;
         registry.add(ItemHandler.MORKITE, 2000);
         registry.add(BlockHandler.MORKITE.rawBlock(), 20000);
-        registry.add(GemstyneFluids.LIQUID_MORKITE_BUCKET, 24000);
+        registry.add(FluidHandler.LIQUID_MORKITE_BUCKET, 24000);
     }
 
     public static void registerMisc() {

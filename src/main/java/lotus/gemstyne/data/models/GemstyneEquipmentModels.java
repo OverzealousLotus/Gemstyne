@@ -1,11 +1,8 @@
 package lotus.gemstyne.data.models;
 
-import lotus.gemstyne.armor.GemstyneArmorItems;
-import lotus.gemstyne.tool.GemstyneToolItems;
-import lotus.gemstyne.tool.GemstyneToolSet;
+import lotus.gemstyne.armor.ArmorHandler;
+import lotus.gemstyne.tool.ToolHandler;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.item.ArmorItem;
 
 public class GemstyneEquipmentModels {
     private GemstyneEquipmentModels() {}
@@ -14,34 +11,19 @@ public class GemstyneEquipmentModels {
         // ======
         // <===== Armor =====>
         // ======
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.helmet);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.chestplate);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.leggings);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.ALDUS.boots);
-
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.helmet);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.chestplate);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.leggings);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEMAIL.boots);
-
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.helmet);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.chestplate);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.leggings);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.BRONZEPLATE.boots);
-
-        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.helmet);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.chestplate);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.leggings);
-        itemModelGenerator.registerArmor(GemstyneArmorItems.RENDFIRE.boots);
+        ArmorHandler.ALDUS.registerModels(itemModelGenerator);
+        ArmorHandler.BRONZEMAIL.registerModels(itemModelGenerator);
+        ArmorHandler.BRONZEPLATE.registerModels(itemModelGenerator);
+        ArmorHandler.RENDFIRE.registerModels(itemModelGenerator);
 
 
 
         // ======
         // <===== Tools =====>
         // ======
-        GemstyneToolItems.ALDUS.registerToolModels(itemModelGenerator);
-        GemstyneToolItems.BRONZE.registerToolModels(itemModelGenerator);
-        GemstyneToolItems.MUTALIUM.registerToolModels(itemModelGenerator);
-        GemstyneToolItems.RENDFIRE.registerToolModels(itemModelGenerator);
+        ToolHandler.ALDUS.registerToolModels(itemModelGenerator);
+        ToolHandler.BRONZE.registerToolModels(itemModelGenerator);
+        ToolHandler.MUTALIUM.registerToolModels(itemModelGenerator);
+        ToolHandler.RENDFIRE.registerToolModels(itemModelGenerator);
     }
 }

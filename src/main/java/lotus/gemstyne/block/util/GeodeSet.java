@@ -68,10 +68,11 @@ public final class GeodeSet {
      * @return Returns an {@link ImmutableSet} of geode buds from {@link GeodeSet}
      */
     public ImmutableSet<Block> getBudSet() {
-        return ImmutableSet.copyOf(this.geodeVariants.entrySet().stream().filter(map -> switch(map.getKey()) {
+        /*return ImmutableSet.copyOf(this.geodeVariants.entrySet().stream().filter(map -> switch(map.getKey()) {
             case GemstyneConstants.BLOCK, GemstyneConstants.BUDDING -> false;
             default -> true;
-        }).map(entry -> entry.getValue().block()).collect(Collectors.toSet()));
+        }).map(entry -> entry.getValue().block()).collect(Collectors.toSet()));*/
+        return ImmutableSet.of(smallBud(), mediumBud(), largeBud(), clusterBud());
     }
 
     /**

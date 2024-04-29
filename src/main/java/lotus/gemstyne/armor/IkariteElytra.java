@@ -28,7 +28,7 @@ public class IkariteElytra extends ElytraItem implements FabricElytraItem {
 
     public static boolean isWearing(LivingEntity entity) {
         var stack = entity.getEquippedStack(EquipmentSlot.CHEST);
-        return stack.isOf(GemstyneArmorItems.IKARITE_ELYTRA) && isUsable(stack);
+        return stack.isOf(ArmorHandler.IKARITE_ELYTRA) && isUsable(stack);
     }
 
     @Override

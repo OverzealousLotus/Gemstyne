@@ -2,9 +2,9 @@ package lotus.gemstyne.item;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.item.custom.ImbuedFeatherItem;
-import lotus.gemstyne.tool.GemstyneToolItems;
+import lotus.gemstyne.tool.ToolHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -77,8 +77,8 @@ public final class ItemHandler {
 
     public static void registerGemstyneItems() {
         Gemstyne.LOGGER.info("Registering Items for " + Gemstyne.MOD_ID + "!");
-        GemstyneArmorItems.registerArmorItems();
-        GemstyneToolItems.registerToolItems();
+        ArmorHandler.registerArmorItems();
+        ToolHandler.registerToolItems();
         Gemstyne.LOGGER.info("Successfully registered Items for " + Gemstyne.MOD_ID + "!");
     }
 }

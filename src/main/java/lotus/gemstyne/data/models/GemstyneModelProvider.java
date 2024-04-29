@@ -1,6 +1,6 @@
 package lotus.gemstyne.data.models;
 
-import lotus.gemstyne.fluid.GemstyneFluids;
+import lotus.gemstyne.fluid.FluidHandler;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -30,6 +30,6 @@ public final class GemstyneModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ItemHandler.IMBUED_FEATHER, Models.GENERATED);
         itemModelGenerator.register(ItemHandler.IMBUED_ROD, Models.GENERATED);
 
-        itemModelGenerator.register(GemstyneFluids.LIQUID_MORKITE_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(FluidHandler.LIQUID_MORKITE_BUCKET, Models.GENERATED);
     }
 }

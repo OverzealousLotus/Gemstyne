@@ -3,6 +3,7 @@ package lotus.gemstyne.mixin;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import de.dafuqs.additionalentityattributes.AdditionalEntityAttributes;
+import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.armor.GemstyneArmorMaterials;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -53,7 +54,7 @@ public abstract class GemstyneArmorItemMixin {
     }
 
     /**
-     * Unique method to handle applying bonuses to {@link lotus.gemstyne.armor.GemstyneArmorItems}
+     * Unique method to handle applying bonuses to {@link ArmorHandler}
      * @param uuid Unique Identifier
      * @param attributes The attribute itself. See {@link EntityAttributes}
      * @param name Name of attribute

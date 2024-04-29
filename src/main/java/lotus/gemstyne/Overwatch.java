@@ -3,7 +3,7 @@ package lotus.gemstyne;
 import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import lotus.gemstyne.effect.EffectHandler;
-import lotus.gemstyne.fluid.GemstyneFluids;
+import lotus.gemstyne.fluid.FluidHandler;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
@@ -22,7 +22,7 @@ public final class Overwatch {
      */
     public static void registerDependencies() {
         EffectHandler.registerEffects();
-        GemstyneFluids.registerFluids();
+        FluidHandler.registerFluids();
         GemstyneCreativeGroup.registerGroups();
     }
 

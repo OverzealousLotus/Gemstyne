@@ -1,6 +1,6 @@
 package lotus.gemstyne.util;
 
-import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.armor.ArmorHandler;
 
 public class GemstyneToolTips {
     private GemstyneToolTips() {}
@@ -11,7 +11,7 @@ public class GemstyneToolTips {
 
 
     public static void registerToolTips() {
-        OMINOUS.addArmorSet(GemstyneArmorItems.RENDFIRE.getArmorSet(), GemstyneUtil.Colors.RENDFIRE_STYLE);
-        ALDUS.addArmorSet(GemstyneArmorItems.ALDUS.getArmorSet(), GemstyneUtil.Colors.ALDUS_STYLE);
+        OMINOUS.addArmorSet(ArmorHandler.RENDFIRE.getArmorSet(), GemstyneUtil.Colors.RENDFIRE_STYLE);
+        ALDUS.addArmorSet(ArmorHandler.ALDUS.getArmorSet(), GemstyneUtil.Colors.ALDUS_STYLE);
     }
 }

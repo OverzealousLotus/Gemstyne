@@ -1,7 +1,7 @@
 package lotus.gemstyne.data.recipes;
 
 import lotus.gemstyne.item.ItemHandler;
-import lotus.gemstyne.tool.GemstyneToolItems;
+import lotus.gemstyne.tool.ToolHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
@@ -17,23 +17,23 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
     }
 
     protected static void generateToolRecipes(RecipeExporter exporter) {
-        GemstyneToolItems.ALDUS.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.ALDUS.source));
-        GemstyneToolItems.BRONZE.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.BRONZE.source));
-        GemstyneToolItems.MUTALIUM.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), GemstyneToolItems.MUTALIUM.source));
+        ToolHandler.ALDUS.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), ToolHandler.ALDUS.source));
+        ToolHandler.BRONZE.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), ToolHandler.BRONZE.source));
+        ToolHandler.MUTALIUM.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), ToolHandler.MUTALIUM.source));
 
         // =====
         // <===== Rendfire =====>
         // =====
         offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
-                ItemHandler.FIRE_OPAL, GemstyneToolItems.RENDFIRE.getAxe());
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getAxe());
         offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
-                ItemHandler.FIRE_OPAL, GemstyneToolItems.RENDFIRE.getHoe());
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getHoe());
         offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
-                ItemHandler.FIRE_OPAL, GemstyneToolItems.RENDFIRE.getPickaxe());
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getPickaxe());
         offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
-                ItemHandler.FIRE_OPAL, GemstyneToolItems.RENDFIRE.getShovel());
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getShovel());
         offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
-            ItemHandler.FIRE_OPAL, GemstyneToolItems.RENDFIRE.getSword());
+            ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getSword());
     }
 
     private static void offerBasicToolRecipe(

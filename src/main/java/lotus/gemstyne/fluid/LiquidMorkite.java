@@ -19,12 +19,12 @@ import net.minecraft.world.WorldView;
 public abstract class LiquidMorkite extends FlowableFluid {
     @Override
     public Fluid getFlowing() {
-        return GemstyneFluids.FLOWING_LIQUID_MORKITE;
+        return FluidHandler.FLOWING_LIQUID_MORKITE;
     }
 
     @Override
     public Fluid getStill() {
-        return GemstyneFluids.STILL_LIQUID_MORKITE;
+        return FluidHandler.STILL_LIQUID_MORKITE;
     }
 
     @Override
@@ -50,7 +50,7 @@ public abstract class LiquidMorkite extends FlowableFluid {
 
     @Override
     public Item getBucketItem() {
-        return GemstyneFluids.LIQUID_MORKITE_BUCKET;
+        return FluidHandler.LIQUID_MORKITE_BUCKET;
     }
 
     @Override
@@ -75,7 +75,7 @@ public abstract class LiquidMorkite extends FlowableFluid {
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return GemstyneFluids.LIQUID_MORKITE_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return FluidHandler.LIQUID_MORKITE_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override

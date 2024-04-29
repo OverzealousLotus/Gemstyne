@@ -1,7 +1,7 @@
 package lotus.gemstyne.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.armor.IkariteElytra;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.api.EnvType;
@@ -39,7 +39,7 @@ public abstract class ElytraFeatureRendererMixin {
         at = @At(value = "INVOKE", target = "Lnet/minecraft/client/util/math/MatrixStack;push()V"))
     private Identifier gemstyne$replaceElytraTexture(Identifier value, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, LivingEntity living) {
         var stack = living.getEquippedStack(EquipmentSlot.CHEST);
-        if (!stack.isOf(GemstyneArmorItems.IKARITE_ELYTRA)) {
+        if (!stack.isOf(ArmorHandler.IKARITE_ELYTRA)) {
             return value;
         }
         return GemstyneRegistry.id("textures/models/ikarite_elytra.png");

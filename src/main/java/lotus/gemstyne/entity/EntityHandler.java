@@ -10,8 +10,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class GemstyneEntities {
-    private GemstyneEntities() {}
+public class EntityHandler {
+    private EntityHandler() {}
 
     public static final EntityType<AetherZombie> AETHER_ZOMBIE = Registry.register(Registries.ENTITY_TYPE,
         new Identifier(Gemstyne.MOD_ID, "aether_zombie"),

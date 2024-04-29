@@ -3,9 +3,9 @@ package lotus.gemstyne;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import lotus.gemstyne.client.GeodeCutouts;
 import lotus.gemstyne.client.rendering.ThermoTntEntityRenderer;
-import lotus.gemstyne.entity.GemstyneEntities;
+import lotus.gemstyne.entity.EntityHandler;
 import lotus.gemstyne.entity.client.AetherZombieRenderer;
-import lotus.gemstyne.fluid.GemstyneFluids;
+import lotus.gemstyne.fluid.FluidHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
@@ -21,7 +21,7 @@ public class GemstyneClient implements ClientModInitializer {
         // Registers renderer to be used for rendering the TNT Entity.
         EntityRendererRegistry.register(GemstyneBlockEntities.THERMO_TNT_ENTITY, ThermoTntEntityRenderer::new);
 
-        FluidRenderHandlerRegistry.INSTANCE.register(GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE,
+        FluidRenderHandlerRegistry.INSTANCE.register(FluidHandler.STILL_LIQUID_MORKITE, FluidHandler.FLOWING_LIQUID_MORKITE,
                 new SimpleFluidRenderHandler(
                         new Identifier("minecraft:block/lava_still"),
                         new Identifier("minecraft:block/lava_flow"),
@@ -29,9 +29,9 @@ public class GemstyneClient implements ClientModInitializer {
                 ));
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
-                GemstyneFluids.STILL_LIQUID_MORKITE, GemstyneFluids.FLOWING_LIQUID_MORKITE);
+                FluidHandler.STILL_LIQUID_MORKITE, FluidHandler.FLOWING_LIQUID_MORKITE);
 
-        EntityRendererRegistry.register(GemstyneEntities.AETHER_ZOMBIE, AetherZombieRenderer::new);
+        EntityRendererRegistry.register(EntityHandler.AETHER_ZOMBIE, AetherZombieRenderer::new);
         // EntityModelLayerRegistry.registerModelLayer(GemstyneModelLayers.AETHER_ZOMBIE);
     }
 }

@@ -3,7 +3,7 @@ package lotus.gemstyne.util;
 import io.wispforest.owo.itemgroup.Icon;
 import io.wispforest.owo.itemgroup.OwoItemGroup;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.armor.GemstyneArmorItems;
+import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.block.BlockHandler;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.item.ItemHandler;
@@ -23,7 +23,7 @@ public class GemstyneCreativeGroup {
         () -> Icon.of(ItemHandler.MOCHITE.crystal())).initializer(group -> {
             group.addTab(Icon.of(ItemHandler.BUBBLEGEM), "items", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("item_tab")), true);
             group.addTab(Icon.of(BlockHandler.MOCHITE.pureBlock()), "blocks", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("block_tab")), false);
-            group.addTab(Icon.of(GemstyneArmorItems.RENDFIRE.chestplate), "equipment", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("equipment_tab")), false);
+            group.addTab(Icon.of(ArmorHandler.RENDFIRE.chestplate), "equipment", TagKey.of(RegistryKeys.ITEM, GemstyneRegistry.id("equipment_tab")), false);
     }).build();
 
     public static void registerGroups() {

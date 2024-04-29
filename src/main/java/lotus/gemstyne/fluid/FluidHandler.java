@@ -15,8 +15,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class GemstyneFluids {
-    private GemstyneFluids() {}
+public class FluidHandler {
+    private FluidHandler() {}
     
     public static final FlowableFluid STILL_LIQUID_MORKITE = Registry.register(Registries.FLUID,
         new Identifier(Gemstyne.MOD_ID, "liquid_morkite"), new LiquidMorkite.Still());
@@ -24,10 +24,10 @@ public class GemstyneFluids {
         new Identifier(Gemstyne.MOD_ID, "flowing_liquid_morkite"), new LiquidMorkite.Flowing());
 
     public static final Block LIQUID_MORKITE_BLOCK = Registry.register(Registries.BLOCK, new Identifier(Gemstyne.MOD_ID,
-        "liquid_morkite_block"), new FluidBlock(GemstyneFluids.STILL_LIQUID_MORKITE, FabricBlockSettings.copyOf(Blocks.WATER)
+        "liquid_morkite_block"), new FluidBlock(FluidHandler.STILL_LIQUID_MORKITE, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
     public static final Item LIQUID_MORKITE_BUCKET = GemstyneRegistry.designateItem("liquid_morkite_bucket",
-        new BucketItem(GemstyneFluids.STILL_LIQUID_MORKITE,
+        new BucketItem(FluidHandler.STILL_LIQUID_MORKITE,
             new OwoItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).group(GemstyneCreativeGroup.GEMSTYNE)));
 
     public static void registerFluids() {

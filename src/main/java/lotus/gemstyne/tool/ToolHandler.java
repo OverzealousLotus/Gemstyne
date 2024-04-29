@@ -7,8 +7,8 @@ import lotus.gemstyne.item.ItemHandler;
 /**
  * Gemstyne's tool-item holder. A record is used to auto-generate getters.
  */
-public final class GemstyneToolItems {
-    private GemstyneToolItems() {}
+public final class ToolHandler {
+    private ToolHandler() {}
     
     // =====
     // <=====| Damage & Speed |=====>

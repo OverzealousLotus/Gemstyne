@@ -1,6 +1,6 @@
 package lotus.gemstyne.data.translations.en_us;
 
-import lotus.gemstyne.fluid.GemstyneFluids;
+import lotus.gemstyne.fluid.FluidHandler;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -33,6 +33,6 @@ abstract class ItemENTranslations extends FabricLanguageProvider {
         translationBuilder.add(ItemHandler.IMBUED_ROD, "Imbued Rod");
         translationBuilder.add(ItemHandler.IMBUED_FEATHER, "Imbued Feather");
 
-        translationBuilder.add(GemstyneFluids.LIQUID_MORKITE_BUCKET, "Liquid Morkite Bucket");
+        translationBuilder.add(FluidHandler.LIQUID_MORKITE_BUCKET, "Liquid Morkite Bucket");
     }
 }

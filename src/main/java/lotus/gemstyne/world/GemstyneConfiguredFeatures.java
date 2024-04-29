@@ -2,7 +2,7 @@ package lotus.gemstyne.world;
 
 import com.google.common.collect.ImmutableList;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.fluid.GemstyneFluids;
+import lotus.gemstyne.fluid.FluidHandler;
 import lotus.gemstyne.world.geodes.GemstyneGeodeConfig;
 import lotus.gemstyne.world.minerals.GemstyneMineralConfig;
 import lotus.gemstyne.world.ores.GemstyneOreConfig;
@@ -45,7 +45,7 @@ public final class GemstyneConfiguredFeatures {
         // =====
         ImmutableList<OreFeatureConfig.Target> liquidMorkiteReservoirs =
                 ImmutableList.of(OreFeatureConfig.createTarget(
-                        deepslateReplaceables, GemstyneFluids.STILL_LIQUID_MORKITE.getDefaultState().getBlockState()));
+                        deepslateReplaceables, FluidHandler.STILL_LIQUID_MORKITE.getDefaultState().getBlockState()));
 
 
         // =====

@@ -5,6 +5,7 @@ import com.google.common.collect.ImmutableSet;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
+import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
@@ -18,7 +19,7 @@ import java.util.Set;
  * Usually, you would have to create pieces of armor separately, but this is done at once.
  */
 public final class GemstyneArmorSet {
-    public final String setName;
+    private final String setName;
     public final ArmorItem helmet;
     public final ArmorItem chestplate;
     public final ArmorItem leggings;
@@ -51,6 +52,14 @@ public final class GemstyneArmorSet {
             "boots", this.boots
         );
         this.registerArmorSet(setName);
+    }
+
+    /**
+     * Automatically registers models for all armor in the set.
+     * @param itemModelGenerator {@link lotus.gemstyne.data.models.GemstyneEquipmentModels}
+     */
+    public void registerModels(ItemModelGenerator itemModelGenerator) {
+        this.armorSet.forEach(itemModelGenerator::registerArmor);
     }
 
     /**
