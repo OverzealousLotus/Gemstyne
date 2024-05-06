@@ -3,6 +3,7 @@ package lotus.gemstyne;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import lotus.gemstyne.client.GeodeCutouts;
 import lotus.gemstyne.client.rendering.ThermoTntEntityRenderer;
+import lotus.gemstyne.client.rendering.UraniumArrowEntityRenderer;
 import lotus.gemstyne.entity.EntityHandler;
 import lotus.gemstyne.entity.client.AetherZombieRenderer;
 import lotus.gemstyne.fluid.FluidHandler;
@@ -32,6 +33,7 @@ public class GemstyneClient implements ClientModInitializer {
                 FluidHandler.STILL_LIQUID_MORKITE, FluidHandler.FLOWING_LIQUID_MORKITE);
 
         EntityRendererRegistry.register(EntityHandler.AETHER_ZOMBIE, AetherZombieRenderer::new);
+        EntityRendererRegistry.register(EntityHandler.URANIUM_ARROW, UraniumArrowEntityRenderer::new);
         // EntityModelLayerRegistry.registerModelLayer(GemstyneModelLayers.AETHER_ZOMBIE);
     }
 }

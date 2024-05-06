@@ -2,15 +2,17 @@ package lotus.gemstyne.item;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.item.custom.ImbuedFeatherItem;
-import lotus.gemstyne.tool.ToolHandler;
+import lotus.gemstyne.item.custom.UraniumArrow;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 
 /**
  * <h3>ItemHandler</h3>
@@ -19,6 +21,7 @@ import net.minecraft.item.Item;
 public final class ItemHandler {
     private ItemHandler() {}
 
+    public static final UraniumArrow URANIUM_ARROW = new UraniumArrow(new FabricItemSettings());
     // =====
     // <===== Item Features =====>
     // =====
@@ -75,10 +78,9 @@ public final class ItemHandler {
             .group(GemstyneCreativeGroup.GEMSTYNE))
     );
 
-    public static void registerGemstyneItems() {
+    public static void registerGeneralItems() {
         Gemstyne.LOGGER.info("Registering Items for " + Gemstyne.MOD_ID + "!");
-        ArmorHandler.registerArmorItems();
-        ToolHandler.registerToolItems();
+        Registry.register(Registries.ITEM, GemstyneRegistry.id("uranium_arrow"), URANIUM_ARROW);
         Gemstyne.LOGGER.info("Successfully registered Items for " + Gemstyne.MOD_ID + "!");
     }
 }
