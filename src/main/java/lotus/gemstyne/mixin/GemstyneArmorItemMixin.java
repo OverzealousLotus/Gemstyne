@@ -48,7 +48,9 @@ public abstract class GemstyneArmorItemMixin {
         if(material == GemstyneArmorMaterials.ALDUS) {
             gemstyne$attributeBuilder(uuid, EntityAttributes.GENERIC_MAX_HEALTH, "Aldus Health Bonus", 1.0f, EntityAttributeModifier.Operation.ADDITION);
         } else if (material == GemstyneArmorMaterials.RENDFIRE) {
-            gemstyne$attributeBuilder(uuid, AdditionalEntityAttributes.LAVA_SPEED, "Rendfire Lava Speed Bonus", 0.5f, EntityAttributeModifier.Operation.ADDITION);
+            gemstyne$attributeBuilder(uuid, AdditionalEntityAttributes.LAVA_SPEED, "Rendfire Lava Speed Bonus", 0.5f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+        } else if (material == GemstyneArmorMaterials.BRONZEMAIL) {
+            gemstyne$attributeBuilder(uuid, EntityAttributes.GENERIC_MOVEMENT_SPEED, "Lightweight Bonus", 0.03f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
         }
 
     }
