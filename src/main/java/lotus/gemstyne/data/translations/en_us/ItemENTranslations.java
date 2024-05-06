@@ -32,6 +32,7 @@ abstract class ItemENTranslations extends FabricLanguageProvider {
 
         translationBuilder.add(ItemHandler.IMBUED_ROD, "Imbued Rod");
         translationBuilder.add(ItemHandler.IMBUED_FEATHER, "Imbued Feather");
+        translationBuilder.add("tooltips.gemstyne.imbued_feather", "Do not fly too low, nor too high.");
 
         translationBuilder.add(FluidHandler.LIQUID_MORKITE_BUCKET, "Liquid Morkite Bucket");
     }

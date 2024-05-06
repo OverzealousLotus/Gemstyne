@@ -1,10 +1,12 @@
-package lotus.gemstyne.armor;
+package lotus.gemstyne.armor.custom;
 
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.entity.event.v1.FabricElytraItem;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -12,8 +14,12 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ElytraItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.UUID;
 
 public class IkariteElytra extends ElytraItem implements FabricElytraItem {
@@ -55,14 +61,18 @@ public class IkariteElytra extends ElytraItem implements FabricElytraItem {
             var armor = new EntityAttributeModifier(UUID.fromString("d680f1ed-ff18-4a87-941a-dade3b331f31"),"Armor", 5.0F, EntityAttributeModifier.Operation.ADDITION);
             var toughness = new EntityAttributeModifier(UUID.fromString("a15a58bd-547d-4e2a-8af5-8e70cefbb570"),"Toughness", 3.0F, EntityAttributeModifier.Operation.ADDITION);
             var speed = new EntityAttributeModifier(UUID.fromString("cac9c98e-3724-4d7a-8b1a-239ad2439cad"),"Speed bonus", 0.08F, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
-            // var rocketSpeedBonus = new EntityAttributeModifier(UUID.fromString("9713febd-8a31-4abb-9f33-2e3da530f96e"),"Rocket speed bonus", 0.20F, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
             builder.put(EntityAttributes.GENERIC_ARMOR, armor);
             builder.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, toughness);
             builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, speed);
-            // builder.put(AdditionalEntityAttributes.ELYTRA.ELYTRA_ROCKET_SPEED, rocketSpeedBonus);
             return builder.build();
         }
 
         return map;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("tooltips.gemstyne.ikarite_elytra"));
+        super.appendTooltip(stack, world, tooltip, context);
     }
 }

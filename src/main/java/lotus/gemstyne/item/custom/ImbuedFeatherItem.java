@@ -35,7 +35,7 @@ public class ImbuedFeatherItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 
-        tooltip.add(Text.translatable("tooltip.gemstyne.imbued_feather"));
+        tooltip.add(Text.translatable("tooltips.gemstyne.imbued_feather"));
         super.appendTooltip(stack, world, tooltip, context);
     }
 }
