@@ -24,6 +24,7 @@ public class GemstyneEquipmentModels {
         // ======
         // <===== Tools =====>
         // ======
+        itemModelGenerator.register(ToolHandler.ALDUS_PAXEL, Models.GENERATED);
         ToolHandler.ALDUS.registerToolModels(itemModelGenerator);
         ToolHandler.BRONZE.registerToolModels(itemModelGenerator);
         ToolHandler.MUTALIUM.registerToolModels(itemModelGenerator);

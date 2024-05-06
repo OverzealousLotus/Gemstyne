@@ -25,6 +25,7 @@ abstract class EquipmentENTranslations extends FabricLanguageProvider {
         // ======
         // <===== Tools =====>
         // ======
+        translationBuilder.add(ToolHandler.ALDUS_PAXEL, "Aldus Paxel");
         GemstyneENProvider.translateSet(translationBuilder, ToolHandler.ALDUS);
         GemstyneENProvider.translateSet(translationBuilder, ToolHandler.BRONZE);
         GemstyneENProvider.translateSet(translationBuilder, ToolHandler.MUTALIUM);

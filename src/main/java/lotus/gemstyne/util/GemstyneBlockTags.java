@@ -19,6 +19,8 @@ public final class GemstyneBlockTags {
         GemstyneBlockTags.of("mineable/pickaxe");
     private static final TagKey<Block> NEEDS_SHOVEL =
         GemstyneBlockTags.of("mineable/shovel");
+    private static final  TagKey<Block> NEEDS_PAXEL =
+        GemstyneBlockTags.of("gemstyne:mineable/paxel");
 
     // ======
     // <===== Tool-Level Requirements =====>
@@ -52,6 +54,8 @@ public final class GemstyneBlockTags {
     public static TagKey<Block> getNeedsShovel() {
         return NEEDS_SHOVEL;
     }
+
+    public static TagKey<Block> getNeedsPaxel() { return NEEDS_PAXEL; }
 
     public static TagKey<Block> getNeedsStoneTool() {
         return NEEDS_STONE_TOOL;

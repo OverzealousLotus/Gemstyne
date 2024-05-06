@@ -3,6 +3,11 @@ package lotus.gemstyne.tool;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.item.ItemHandler;
+import lotus.gemstyne.tool.custom.PaxelItem;
+import lotus.gemstyne.util.GemstyneCreativeGroup;
+import lotus.gemstyne.util.GemstyneRegistry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 
 /**
  * Gemstyne's tool-item holder. A record is used to auto-generate getters.
@@ -30,6 +35,12 @@ public final class ToolHandler {
     public static final GemstyneToolSet MUTALIUM = new GemstyneToolSet(new OwoItemSettings(),
         ALDUS_DAMAGE, ALDUS_DAMAGE, "mutalium", GemstyneToolMaterials.ALDUS, ItemHandler.MUTALIUM.ingot());
 
+    public static final PaxelItem ALDUS_PAXEL = new PaxelItem(6.0f, -2.0f, GemstyneToolMaterials.ALDUS, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE));
 
-    public static void registerToolItems() { Gemstyne.LOGGER.info("Registering Tool Items..."); }
+
+    public static void registerToolItems() {
+        Registry.register(Registries.ITEM, GemstyneRegistry.id("aldus_paxel"), ALDUS_PAXEL);
+        Gemstyne.LOGGER.info("Registering Tool Items...");
+
+    }
 }
