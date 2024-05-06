@@ -21,6 +21,7 @@ public final class GemstyneOreModels {
         // =====
         // <===== Overworld =====>
         // =====
+        BlockHandler.EXPERIENCE.generateModels(blockStateModelGenerator);
         BlockHandler.AETHERIUM.generateModels(blockStateModelGenerator);
         BlockHandler.BUBBLEGEM.generateModels(blockStateModelGenerator);
         BlockHandler.ENDER_PEARL.generateModels(blockStateModelGenerator);

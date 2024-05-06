@@ -36,6 +36,10 @@ public final class BlockHandler {
     // <===== Overworld Ores =====>
     // =====
 
+    public static final BlockSet EXPERIENCE = BlockSet.Builder.start("experience")
+        .setExperience(7, 14).setLevel(GemstyneMiningLevels.NEEDS_STONE_TOOL)
+        .createOre().end();
+
     public static final BlockSet AETHERIUM = BlockSet.Builder.start("aetherium")
         .setExperience(12, 20).setStrength(5.0f, 5.0f)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
