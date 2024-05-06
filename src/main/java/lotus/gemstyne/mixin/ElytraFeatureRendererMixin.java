@@ -2,7 +2,7 @@ package lotus.gemstyne.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import lotus.gemstyne.armor.ArmorHandler;
-import lotus.gemstyne.armor.IkariteElytra;
+import lotus.gemstyne.armor.custom.IkariteElytra;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

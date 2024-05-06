@@ -2,6 +2,7 @@ package lotus.gemstyne.armor;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.armor.custom.IkariteElytra;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;

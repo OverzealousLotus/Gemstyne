@@ -29,12 +29,12 @@ public class Gemstyne implements ModInitializer {
 		Overwatch.modObserver();
 
 		// ///// Step I | Dependencies /////
-		Gemstyne.LOGGER.info("[[ Registering Dependencies for " + Gemstyne.MOD_ID + "! ]]");
+		Gemstyne.LOGGER.info("[Gemstyne] Registering Dependencies for " + Gemstyne.MOD_ID + "!");
 		Overwatch.registerDependencies();
-		Gemstyne.LOGGER.info("[[ Successfully registered Dependencies! ]]");
+		Gemstyne.LOGGER.info("[Gemstyne] Successfully registered Dependencies!");
 
 		// Step II | Essentials
-		Gemstyne.LOGGER.info("[[ Registering Essentials for " + Gemstyne.MOD_ID + "! ]]");
+		Gemstyne.LOGGER.info("[Gemstyne] Registering Essentials for " + Gemstyne.MOD_ID + "!");
 		Overwatch.registerEssentials();
 		GemstyneToolTips.registerToolTips();
 		FabricDefaultAttributeRegistry.register(EntityHandler.AETHER_ZOMBIE, AetherZombie.createAetherZombieAttributes());

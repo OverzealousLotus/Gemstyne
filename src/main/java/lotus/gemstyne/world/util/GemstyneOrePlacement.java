@@ -1,4 +1,4 @@
-package lotus.gemstyne.world;
+package lotus.gemstyne.world.util;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.world.gen.placementmodifier.*;

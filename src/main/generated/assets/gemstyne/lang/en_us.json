@@ -50,6 +50,7 @@
   "block.gemstyne.nether_mutalium_ore": "Nether Mutalium Ore",
   "block.gemstyne.nether_torrium_ore": "Nether Torrium Ore",
   "block.gemstyne.pumice": "Pumice",
+  "block.gemstyne.pyrite": "Pyrite Block",
   "block.gemstyne.raw_aldus_block": "Raw Aldus Block",
   "block.gemstyne.raw_crimonite_block": "Raw Crimonite Block",
   "block.gemstyne.raw_mochite_block": "Raw Mochite Block",
@@ -66,6 +67,7 @@
   "block.gemstyne.tin_ore": "Tin Ore",
   "block.gemstyne.torrium_ore": "Torrium Ore",
   "block.gemstyne.uranium_block": "Uranium Block",
+  "death.attack.gemstyne.radiation": "%1$s sustained too many Grays.",
   "effect.gemstyne.aetherium_radiation": "Aetherium Radiation",
   "effect.gemstyne.strong_radiation": "Potent Radiation",
   "effect.gemstyne.weak_radiation": "Minor Radiation",
@@ -188,7 +190,8 @@
   "text.config.gemstyne_config.section.nether": "The Nether",
   "text.config.gemstyne_config.section.overworld": "The Overworld",
   "text.config.gemstyne_config.title": "Gemstyne Configuration Options",
-  "tooltip.gemstyne.imbued_feather": "Do not fly too low, nor too high.",
   "tooltips.gemstyne.aldus": "Resilience",
+  "tooltips.gemstyne.ikarite_elytra": "I have not envied the bird its freedom.",
+  "tooltips.gemstyne.imbued_feather": "Do not fly too low, nor too high.",
   "tooltips.gemstyne.ominous": "Heat Affinity"
 }

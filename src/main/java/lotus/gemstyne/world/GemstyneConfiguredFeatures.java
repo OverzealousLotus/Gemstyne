@@ -15,20 +15,11 @@ import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
 
+/** Configuration of Features for world generation. Keys must be registered first,
+ * then using the bootstrap method, create a list of target blocks to be replaced.
+ * Finally, we move to the actual configuration at the end, where settings may vary. */
 public final class GemstyneConfiguredFeatures {
-    /** Configuration of Features for world generation. Keys must be registered first,
-     * then using the bootstrap method, create a list of target blocks to be replaced.
-     * Finally, we move to the actual configuration at the end, where settings may vary. */
-
-
-
-    // =====
-    // ==========
-    // <========== Key Registration ==========>
-    // ==========
-    // =====
-
-
+    private GemstyneConfiguredFeatures() {}
 
     // =====
     // <===== Misc =====>

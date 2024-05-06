@@ -5,6 +5,7 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstynePairs.GenKeyPair;
+import lotus.gemstyne.world.util.GemstyneOrePlacement;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;

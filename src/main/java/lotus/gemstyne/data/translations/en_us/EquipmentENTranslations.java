@@ -16,6 +16,7 @@ abstract class EquipmentENTranslations extends FabricLanguageProvider {
         // <===== Armor =====>
         // ======
         translationBuilder.add(ArmorHandler.IKARITE_ELYTRA, "Ikarite Elytra");
+        translationBuilder.add("tooltips.gemstyne.ikarite_elytra", "I have not envied the bird its freedom.");
         GemstyneENProvider.translateSet(translationBuilder, ArmorHandler.ALDUS);
         GemstyneENProvider.translateSet(translationBuilder, ArmorHandler.BRONZEMAIL);
         GemstyneENProvider.translateSet(translationBuilder, ArmorHandler.BRONZEPLATE);

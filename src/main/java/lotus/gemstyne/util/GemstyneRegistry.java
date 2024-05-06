@@ -78,6 +78,15 @@ public class GemstyneRegistry {
         return Registry.register(Registries.BLOCK, id(path), block);
     }
 
+    /*
+     * Registers {@link DamageSource}
+     * @param name Name of the damage source.
+     * @return Returns the assigned damage source.
+     */
+    /*public static DamageSource registerDamage(String name) {
+        return GemstyneDamageSources.create(RegistryKey.of(RegistryKeys.DAMAGE_TYPE, id(name)));
+    }*/
+
     private static void registerFuels() {
         Gemstyne.LOGGER.info("Registering Fuel Items for " + Gemstyne.MOD_ID + "...");
 

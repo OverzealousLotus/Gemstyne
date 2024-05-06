@@ -4,6 +4,7 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.world.geodes.GemstyneGeodePlaced;
 import lotus.gemstyne.world.minerals.GemstyneMineralPlaced;
 import lotus.gemstyne.world.ores.GemstyneOrePlaced;
+import lotus.gemstyne.world.util.GemstyneOrePlacement;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -15,10 +16,11 @@ import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
+/** When creating a newly generated Ore, make sure to also:
+ * - Register the keys in GemstyneConfiguredFeatures and GemstyneOreGeneration!
+ * - Lastly, run Datagen to actually generate the keys being used! */
 public final class GemstynePlacedFeatures {
-    // When creating a newly generated Ore, make sure to also:
-    // - Register the keys in GemstyneConfiguredFeatures and GemstyneOreGeneration!
-    // - Lastly, run Datagen to actually generate the keys being used!
+    private GemstynePlacedFeatures() {}
 
     public static final RegistryKey<PlacedFeature> LIQUID_MORKITE_PLACED_KEY =
             registerKey("liquid_morkite_reservoirs");

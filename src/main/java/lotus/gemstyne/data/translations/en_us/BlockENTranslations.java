@@ -13,6 +13,7 @@ abstract class BlockENTranslations extends FabricLanguageProvider {
         // ///// Blocks /////
         // //////////
         translationBuilder.add(BlockHandler.THERMO_TNT_BLOCK, "Thermonuclear TNT");
+        translationBuilder.add(BlockHandler.PYRITE, "Pyrite Block");
         GemstyneENProvider.translateSet(translationBuilder, BlockHandler.AETHERIUM);
         GemstyneENProvider.translateSet(translationBuilder, BlockHandler.ALDUS);
         GemstyneENProvider.translateSet(translationBuilder, BlockHandler.BUBBLEGEM);
