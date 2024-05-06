@@ -1,5 +1,6 @@
 package lotus.gemstyne.effect;
 
+import lotus.gemstyne.damage.GemstyneDamageTypes;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.LivingEntity;
@@ -16,11 +17,11 @@ public class WeakRadiation extends StatusEffect {
     @Environment(EnvType.CLIENT)
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player) {
-            player.damage(entity.getDamageSources().magic(), 1.0f);
+            player.damage(entity.getWorld().getDamageSources().create(GemstyneDamageTypes.RADIATION), 1.0f);
             player.addExhaustion(0.005f * (amplifier + 1));
             player.setMovementSpeed(0.1f);
         } else {
-            entity.damage(entity.getDamageSources().magic(), 1.0f);
+            entity.damage(entity.getDamageSources().create(GemstyneDamageTypes.RADIATION), 1.0f);
         }
 
         super.applyUpdateEffect(entity, amplifier);

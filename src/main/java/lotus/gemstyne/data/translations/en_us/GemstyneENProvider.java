@@ -19,9 +19,9 @@ public abstract class GemstyneENProvider extends FabricLanguageProvider {
     }
 
     public static void buildEnglishLanguage(TranslationBuilder translationBuilder) {
+        translationBuilder.add("death.attack.gemstyne.radiation", "%1$s sustained too many Grays."); // "%1$s" is a placeholder for a player name.
         translationBuilder.add(GemstyneToolTips.OMINOUS.getTooltipKey(), "Heat Affinity");
         translationBuilder.add(GemstyneToolTips.ALDUS.getTooltipKey(), "Resilience");
-        translationBuilder.add("tooltip.gemstyne.imbued_feather", "Do not fly too low, nor too high.");
         BlockENTranslations.translateBlocks(translationBuilder);
         ItemENTranslations.translateItems(translationBuilder);
         EquipmentENTranslations.generateEnglishEquipmentTranslations(translationBuilder);

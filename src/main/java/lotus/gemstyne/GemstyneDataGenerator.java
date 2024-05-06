@@ -1,5 +1,6 @@
 package lotus.gemstyne;
 
+import lotus.gemstyne.damage.GemstyneDamageTypes;
 import lotus.gemstyne.data.*;
 import lotus.gemstyne.data.GemstyneBlockTagGenerator;
 import lotus.gemstyne.data.models.GemstyneModelProvider;
@@ -29,5 +30,6 @@ public class GemstyneDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, GemstyneConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, GemstynePlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.DAMAGE_TYPE, GemstyneDamageTypes::bootstrap);
 	}
 }
