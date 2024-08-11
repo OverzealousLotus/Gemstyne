@@ -4,9 +4,14 @@ import lotus.gemstyne.fluid.FluidHandler;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.RegistryWrapper;
+
+import java.util.concurrent.CompletableFuture;
 
 abstract class ItemENTranslations extends FabricLanguageProvider {
-    protected ItemENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
+    protected ItemENTranslations(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
+    }
 
     protected static void translateItems(TranslationBuilder translationBuilder) {
         // //////////

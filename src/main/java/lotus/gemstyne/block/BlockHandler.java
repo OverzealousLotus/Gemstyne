@@ -9,9 +9,8 @@ import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstyneMiningLevels;
 import lotus.gemstyne.util.GemstyneRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.Instrument;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Items;
 import net.minecraft.sound.BlockSoundGroup;
@@ -28,9 +27,9 @@ public final class BlockHandler {
     -their similar characteristics between each other. For example, most Compressed blocks should
     -sound like deepslate, or play Base Drum when used as an instrument.
      */
-    private static final FabricBlockSettings COMPRESSED_FEATURES = FabricBlockSettings.create()
+    private static final AbstractBlock.Settings COMPRESSED_FEATURES = AbstractBlock.Settings.create()
         .requiresTool().strength(3.0f, 6.0f).sounds(BlockSoundGroup.DEEPSLATE)
-        .instrument(Instrument.BASS);
+        .instrument(NoteBlockInstrument.BASS);
 
     // =====
     // <===== Overworld Ores =====>
@@ -75,28 +74,28 @@ public final class BlockHandler {
     public static final BlockSet MUTALIUM = BlockSet.Builder.start("mutalium")
         .setExperience(10, 20)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
-        .createOre(new MutaliumOre(UniformIntProvider.create(8, 15), FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)))
+        .createOre(new MutaliumOre(UniformIntProvider.create(8, 15), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)))
         .createOreType(GemstyneConstants.DEEPSLATE, new MutaliumOre(UniformIntProvider.create(8, 15),
-            FabricBlockSettings.copyOf(Blocks.DEEPSLATE)))
+            AbstractBlock.Settings.copy(Blocks.DEEPSLATE)))
         .createOreType(GemstyneConstants.NETHER, new MutaliumOre(UniformIntProvider.create(8, 15),
-            FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE)))
+            AbstractBlock.Settings.copy(Blocks.NETHER_GOLD_ORE)))
         .createOreType(GemstyneConstants.END, new MutaliumOre(UniformIntProvider.create(8, 15),
-            FabricBlockSettings.copyOf(Blocks.END_STONE)))
+            AbstractBlock.Settings.copy(Blocks.END_STONE)))
         .end();
 
     public static final Block NEFARIUM_ORE = GemstyneRegistry.designateBlock("nefarium_ore",
-        new RichOre(FabricBlockSettings.copyOf(Blocks.LODESTONE)).init(Gemstyne.CONFIG.oreConfig.mochiteRichness(),
+        new RichOre(AbstractBlock.Settings.copy(Blocks.LODESTONE)).init(Gemstyne.CONFIG.oreConfig.mochiteRichness(),
             UniformIntProvider.create(2, 5), Items.DIAMOND)
     );
 
     public static final BlockSet TORRIUM = BlockSet.Builder.start("torrium")
         .setLevel(GemstyneMiningLevels.NEEDS_IRON_TOOL)
         .createOre(new TorriumOre(UniformIntProvider.create(5, 10),
-            FabricBlockSettings.copyOf(Blocks.LAPIS_ORE).luminance(5)))
+            AbstractBlock.Settings.copy(Blocks.LAPIS_ORE).luminance(state -> 5)))
         .createOreType(GemstyneConstants.DEEPSLATE, new TorriumOre(UniformIntProvider.create(5, 10),
-            FabricBlockSettings.copyOf(Blocks.DEEPSLATE).luminance(5)))
+            AbstractBlock.Settings.copy(Blocks.DEEPSLATE).luminance(state -> 5)))
         .createOreType(GemstyneConstants.NETHER, new TorriumOre(UniformIntProvider.create(5, 10),
-            FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).luminance(5)))
+            AbstractBlock.Settings.copy(Blocks.NETHER_GOLD_ORE).luminance(state -> 5)))
         .end();
 
     public static final BlockSet TIN = BlockSet.Builder.start("tin")
@@ -139,7 +138,7 @@ public final class BlockHandler {
     // <===== Ore Extensions =====>
     // =====
     public static final Block COMPRESSED_GRANITE_COAL_ORE = GemstyneRegistry.designateBlock("compressed_granite_coal_ore",
-        new ExperienceDroppingBlock(UniformIntProvider.create(0, 2), FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COAL_ORE)
+        new ExperienceDroppingBlock(UniformIntProvider.create(0, 2), AbstractBlock.Settings.copy(Blocks.DEEPSLATE_COAL_ORE)
             .mapColor(MapColor.BROWN).strength(4.5f, 3.0f))
     );
 
@@ -153,36 +152,36 @@ public final class BlockHandler {
 
     // Singletons
     public static final Block COMPRESSED_ANDESITE = GemstyneRegistry.designateBlock("compressed_andesite",
-        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.STONE_GRAY))
+        new Block(COMPRESSED_FEATURES.mapColor(MapColor.STONE_GRAY))
     );
     public static final Block COMPRESSED_DIORITE = GemstyneRegistry.designateBlock("compressed_diorite",
-        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.LIGHT_GRAY))
+        new Block(COMPRESSED_FEATURES.mapColor(MapColor.LIGHT_GRAY))
     );
     public static final Block COMPRESSED_GRANITE = GemstyneRegistry.designateBlock("compressed_granite",
-        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN))
+        new Block(COMPRESSED_FEATURES.mapColor(MapColor.BROWN))
     );
     public static final Block COMPACT_DIRT = GemstyneRegistry.designateBlock("compact_dirt",
-        new Block(FabricBlockSettings.copyOf(COMPRESSED_FEATURES).mapColor(MapColor.BROWN)
+        new Block(COMPRESSED_FEATURES.mapColor(MapColor.BROWN)
             .strength(1.5f, 3.0f).sounds(BlockSoundGroup.ROOTED_DIRT))
     );
     public static final Block GABBRO = GemstyneRegistry.designateBlock("gabbro",
-        new Block(FabricBlockSettings.create().mapColor(MapColor.STONE_GRAY).instrument(Instrument.BASS)
+        new Block(AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASS)
             .strength(1.5f, 3.0f).sounds(BlockSoundGroup.TUFF))
     );
     public static final Block HALITE = GemstyneRegistry.designateBlock("halite",
-        new Block(FabricBlockSettings.create().mapColor(MapColor.PINK).instrument(Instrument.BELL)
+        new Block(AbstractBlock.Settings.create().mapColor(MapColor.PINK).instrument(NoteBlockInstrument.BELL)
             .strength(0.75f, 1.5f).sounds(BlockSoundGroup.CALCITE))
     );
     public static final Block PUMICE = GemstyneRegistry.designateBlock("pumice",
-        new Block(FabricBlockSettings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.BASS)
+        new Block(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).instrument(NoteBlockInstrument.BASS)
             .strength(1.0f, 1.0f).sounds(BlockSoundGroup.BASALT))
     );
 
     public static final Block PYRITE = GemstyneRegistry.designateBlock("pyrite",
-        new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.DEEPSLATE_LAPIS_ORE)));
+        new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.copy(Blocks.DEEPSLATE_LAPIS_ORE)));
 
     public static final Block THERMO_TNT_BLOCK = GemstyneRegistry.designateBlock("thermo_tnt",
-        new ThermoTntBlock(FabricBlockSettings.copyOf(Blocks.TNT)));
+        new ThermoTntBlock(AbstractBlock.Settings.copy(Blocks.TNT)));
 
     public static void registerGemstyneBlocks() {
         Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");

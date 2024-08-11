@@ -15,7 +15,7 @@ public class WeakRadiation extends StatusEffect {
 
     @Override
     @Environment(EnvType.CLIENT)
-    public void applyUpdateEffect(LivingEntity entity, int amplifier) {
+    public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player) {
             player.damage(entity.getWorld().getDamageSources().create(GemstyneDamageTypes.RADIATION), 1.0f);
             player.addExhaustion(0.005f * (amplifier + 1));
@@ -24,7 +24,7 @@ public class WeakRadiation extends StatusEffect {
             entity.damage(entity.getDamageSources().create(GemstyneDamageTypes.RADIATION), 1.0f);
         }
 
-        super.applyUpdateEffect(entity, amplifier);
+        return super.applyUpdateEffect(entity, amplifier);
     }
 
     @Override

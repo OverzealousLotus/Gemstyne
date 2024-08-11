@@ -36,9 +36,10 @@ public final class GemstyneBlockTags {
         GemstyneBlockTags.of("fabric:needs_tool_level_4");
 
     public static TagKey<Block> of(String id) {
-        return TagKey.of(RegistryKeys.BLOCK, new Identifier(id));
+        return TagKey.of(RegistryKeys.BLOCK, Identifier.of(id));
     }
 
+    public static final TagKey<Block> INCORRECT_FOR_RENDFIRE_TOOL = TagKey.of(RegistryKeys.BLOCK, GemstyneRegistry.id("incorrect_for_rendfire_tools"));
     public static TagKey<Block> getNeedsAxe() {
         return NEEDS_AXE;
     }

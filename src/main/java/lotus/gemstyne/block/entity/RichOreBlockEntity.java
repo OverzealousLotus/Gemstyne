@@ -3,6 +3,7 @@ package lotus.gemstyne.block.entity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -62,15 +63,15 @@ public class RichOreBlockEntity extends BlockEntity {
      * @param nbt {@link NbtCompound}
      */
     @Override
-    protected void writeNbt(NbtCompound nbt) {
-        super.writeNbt(nbt);
+    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+        super.writeNbt(nbt, registryLookup);
         nbt.putInt("rich_ore.currentStates", this.currentStates);
         nbt.putInt("rich_ore.isNew", this.isNew);
     }
 
     @Override
-    public void readNbt(NbtCompound nbt) {
-        super.readNbt(nbt);
+    public void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+        super.readNbt(nbt, registryLookup);
         this.currentStates = nbt.getInt("rich_ore.currentStates");
         this.isNew = nbt.getInt("rich_ore.isNew");
     }

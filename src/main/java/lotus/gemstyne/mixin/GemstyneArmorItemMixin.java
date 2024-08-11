@@ -1,23 +1,21 @@
 package lotus.gemstyne.mixin;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import de.dafuqs.additionalentityattributes.AdditionalEntityAttributes;
-import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.armor.GemstyneArmorMaterials;
+import lotus.gemstyne.util.GemstyneRegistry;
+import net.minecraft.component.type.AttributeModifierSlot;
+import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import java.util.EnumMap;
-import java.util.UUID;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 /**
  * Mixin to handle various tasks related to {@link ArmorItem}.
@@ -31,42 +29,30 @@ import java.util.UUID;
  */
 @Mixin(ArmorItem.class)
 public abstract class GemstyneArmorItemMixin {
+    private GemstyneArmorItemMixin() {}
 
-    @Shadow
-    @Final
-    private static EnumMap<ArmorItem.Type, UUID> MODIFIERS;
+    @Inject(method = "method_56689", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Identifier;ofVanilla(Ljava/lang/String;)Lnet/minecraft/util/Identifier;"), locals = LocalCapture.CAPTURE_FAILSOFT)
+    private static void constructor(RegistryEntry<?> registryEntry, ArmorItem.Type type, CallbackInfoReturnable<AttributeModifiersComponent> cir, int i, float f, AttributeModifiersComponent.Builder builder, AttributeModifierSlot attributeModifierSlot) {
+        var material = registryEntry.value();
+        AttributeModifierSlot slot = AttributeModifierSlot.forEquipmentSlot(type.getEquipmentSlot());
 
-    @Shadow
-    @Final
-    @Mutable
-    private Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
-
-    @Inject(method = "<init>", at = @At(value = "RETURN"))
-    private void constructor(ArmorMaterial material, ArmorItem.Type type, Item.Settings settings, CallbackInfo ci) {
-        UUID uuid = MODIFIERS.get(type);
-
-        if(material == GemstyneArmorMaterials.ALDUS) {
-            gemstyne$attributeBuilder(uuid, EntityAttributes.GENERIC_MAX_HEALTH, "Aldus Health Bonus", 1.0f, EntityAttributeModifier.Operation.ADDITION);
-        } else if (material == GemstyneArmorMaterials.RENDFIRE) {
-            gemstyne$attributeBuilder(uuid, AdditionalEntityAttributes.LAVA_SPEED, "Rendfire Lava Speed Bonus", 0.5f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
-        } else if (material == GemstyneArmorMaterials.BRONZEMAIL) {
-            gemstyne$attributeBuilder(uuid, EntityAttributes.GENERIC_MOVEMENT_SPEED, "Lightweight Bonus", 0.03f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+        if(material.equals(GemstyneArmorMaterials.ALDUS)) {
+            addBuilderAttribute(builder, GemstyneRegistry.id("aldus_health_bonus"), EntityAttributes.GENERIC_MAX_HEALTH, 1.0f,
+                EntityAttributeModifier.Operation.ADD_VALUE, slot);
+        } else if (material.equals(GemstyneArmorMaterials.RENDFIRE)) {
+            addBuilderAttribute(builder, GemstyneRegistry.id("rendfire_lava_speed_bonus"), AdditionalEntityAttributes.LAVA_SPEED, 0.5f,
+                EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, slot);
+            // gemstyne$attributeBuilder(uuid, AdditionalEntityAttributes.LAVA_SPEED, "Rendfire Lava Speed Bonus", 0.5f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+        } else if (material.equals(GemstyneArmorMaterials.BRONZEMAIL)) {
+            addBuilderAttribute(builder, GemstyneRegistry.id("lightweight_bonus"), EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.03f,
+                EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, slot);
+            // gemstyne$attributeBuilder(uuid, EntityAttributes.GENERIC_MOVEMENT_SPEED, "Lightweight Bonus", 0.03f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
         }
 
     }
 
-    /**
-     * Unique method to handle applying bonuses to {@link ArmorHandler}
-     * @param uuid Unique Identifier
-     * @param attributes The attribute itself. See {@link EntityAttributes}
-     * @param name Name of attribute
-     * @param value Value of modifier.
-     * @param operation Type of Attribute Modifier Operation. For example, addition.
-     */
     @Unique
-    private void gemstyne$attributeBuilder(UUID uuid, EntityAttribute attributes, String name, float value, EntityAttributeModifier.Operation operation) {
-        var map = HashMultimap.create(this.attributeModifiers);
-        map.put(attributes, new EntityAttributeModifier(uuid, name, value, operation));
-        this.attributeModifiers = map;
+    private static void addBuilderAttribute(AttributeModifiersComponent.Builder builder, Identifier identifier, RegistryEntry<EntityAttribute> attributeEntry, float value, EntityAttributeModifier.Operation operation, AttributeModifierSlot slot) {
+        builder.add(attributeEntry, new EntityAttributeModifier(identifier, value, operation), slot);
     }
 }

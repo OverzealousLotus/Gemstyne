@@ -14,7 +14,7 @@ public class StrongRadiation extends StatusEffect {
 
     @Override
     @Environment(EnvType.CLIENT)
-    public void applyUpdateEffect(LivingEntity entity, int amplifier) {
+    public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player) {
             player.damage(entity.getDamageSources().magic(), 1.0f);
             player.addExhaustion(0.010f * (amplifier + 1));
@@ -24,7 +24,7 @@ public class StrongRadiation extends StatusEffect {
             entity.damage(entity.getDamageSources().magic(), 1.0f);
         }
 
-        super.applyUpdateEffect(entity, amplifier);
+        return super.applyUpdateEffect(entity, amplifier);
     }
 
     @Override

@@ -4,12 +4,16 @@ import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.tool.ToolHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.RegistryWrapper;
+
+import java.util.concurrent.CompletableFuture;
 
 abstract class EquipmentENTranslations extends FabricLanguageProvider {
-    protected EquipmentENTranslations(FabricDataOutput dataOutput) {
-        super(dataOutput);
-    }
 
+
+    protected EquipmentENTranslations(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
+    }
 
     protected static void generateEnglishEquipmentTranslations(TranslationBuilder translationBuilder) {
         // ======

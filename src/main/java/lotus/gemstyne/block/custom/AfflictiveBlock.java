@@ -1,25 +1,24 @@
 package lotus.gemstyne.block.custom;
 
 import lotus.gemstyne.util.GemstyneUtil;
-import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class AfflictiveBlock extends Block {
     // Instantiate parameters of Block.
-    private final StatusEffect effect;
+    private final RegistryEntry.Reference<StatusEffect> effect;
     private final int duration;
     private final GemstyneUtil.BlockTypes type;
 
-    public AfflictiveBlock(Settings settings, StatusEffect effect, int duration, GemstyneUtil.BlockTypes type) {
+    public AfflictiveBlock(Settings settings, RegistryEntry.Reference<StatusEffect> effect, int duration, GemstyneUtil.BlockTypes type) {
         super(settings);
         this.effect = effect;
         this.duration = duration;

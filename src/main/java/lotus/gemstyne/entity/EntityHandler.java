@@ -13,11 +13,11 @@ public class EntityHandler {
 
     public static final EntityType<AetherZombie> AETHER_ZOMBIE = Registry.register(Registries.ENTITY_TYPE,
         GemstyneRegistry.id("aether_zombie"),
-        EntityType.Builder.create(AetherZombie::new, SpawnGroup.MONSTER).setDimensions(1f, 2f).build());
+        EntityType.Builder.create(AetherZombie::new, SpawnGroup.MONSTER).dimensions(1f, 2f).build());
 
     public static final EntityType<UraniumArrowEntity> URANIUM_ARROW = Registry.register(Registries.ENTITY_TYPE,
         GemstyneRegistry.id("uranium_arrow"),
-        EntityType.Builder.<UraniumArrowEntity>create(UraniumArrowEntity::new, SpawnGroup.MISC).setDimensions(0.5f, 0.5f).build());
+        EntityType.Builder.<UraniumArrowEntity>create(UraniumArrowEntity::new, SpawnGroup.MISC).dimensions(0.5f, 0.5f).build());
 
 
 }

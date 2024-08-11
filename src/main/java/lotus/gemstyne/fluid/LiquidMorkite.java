@@ -38,10 +38,10 @@ public abstract class LiquidMorkite extends FlowableFluid {
         Block.dropStacks(state, world, pos, blockEntity);
     }
 
-    @Override
+    /*@Override
     protected int getFlowSpeed(WorldView world) {
         return world.getDimension().ultrawarm() ? 4 : 2;
-    }
+    }*/
 
     @Override
     protected int getLevelDecreasePerBlock(WorldView world) {
@@ -96,6 +96,11 @@ public abstract class LiquidMorkite extends FlowableFluid {
         }
 
         @Override
+        protected int getMaxFlowDistance(WorldView world) {
+            return 4;
+        }
+
+        @Override
         public int getLevel(FluidState state) {
             return state.get(LEVEL);
         }
@@ -107,6 +112,11 @@ public abstract class LiquidMorkite extends FlowableFluid {
     }
 
     public static class Still extends LiquidMorkite {
+        @Override
+        protected int getMaxFlowDistance(WorldView world) {
+            return 4;
+        }
+
         @Override
         public int getLevel(FluidState state) {
             return 8;

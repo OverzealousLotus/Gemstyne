@@ -2,6 +2,7 @@ package lotus.gemstyne;
 
 import com.google.common.collect.ImmutableList;
 import lotus.gemstyne.armor.ArmorHandler;
+import lotus.gemstyne.armor.GemstyneArmorMaterials;
 import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.block.entity.GemstyneBlockEntities;
 import lotus.gemstyne.effect.EffectHandler;
@@ -46,6 +47,7 @@ public final class Overwatch {
      */
     public static void registerEssentials() {
         ItemHandler.registerGeneralItems();
+        GemstyneArmorMaterials.registerMats();
         ArmorHandler.registerArmorItems();
         ToolHandler.registerToolItems();
         BlockHandler.registerGemstyneBlocks();

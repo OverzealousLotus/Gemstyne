@@ -36,8 +36,8 @@ public class ThermoTntEntity extends Entity {
     }
 
     @Override
-    protected void initDataTracker() {
-        this.dataTracker.startTracking(FUSE, DEFAULT_FUSE);
+    protected void initDataTracker(DataTracker.Builder builder) {
+        builder.add(FUSE, DEFAULT_FUSE);
     }
 
     @Override
@@ -91,8 +91,8 @@ public class ThermoTntEntity extends Entity {
     }
 
     @Override
-    protected float getEyeHeight(EntityPose pose, EntityDimensions dimensions) {
-        return 0.15F;
+    public double getEyeY() {
+        return 0.15f;
     }
 
     public int getFuse() {

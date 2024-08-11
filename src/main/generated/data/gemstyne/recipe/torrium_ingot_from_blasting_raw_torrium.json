@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 1.25,
+  "group": "gemstyne",
+  "ingredient": {
+    "item": "gemstyne:raw_torrium"
+  },
+  "result": {
+    "id": "gemstyne:torrium_ingot"
+  }
+}

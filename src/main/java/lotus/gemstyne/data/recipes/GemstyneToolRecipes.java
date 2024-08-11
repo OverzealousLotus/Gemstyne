@@ -9,11 +9,15 @@ import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.*;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
+import java.util.concurrent.CompletableFuture;
+
 abstract class GemstyneToolRecipes extends FabricRecipeProvider {
-    protected GemstyneToolRecipes(FabricDataOutput output) {
-        super(output);
+
+    protected GemstyneToolRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
 
     protected static void generateToolRecipes(RecipeExporter exporter) {
@@ -44,26 +48,32 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
         String patternTwo;
         String patternThree;
 
-        if (output instanceof AxeItem) {
-            patternOne = "II";
-            patternTwo = "SI";
-            patternThree = "S ";
-        } else if (output instanceof HoeItem) {
-            patternOne = "II";
-            patternTwo = "S ";
-            patternThree = "S ";
-        } else if (output instanceof PickaxeItem) {
-            patternOne = "III";
-            patternTwo = " S ";
-            patternThree = " S ";
-        } else if (output instanceof ShovelItem) {
-            patternOne = "I";
-            patternTwo = "S";
-            patternThree = "S";
-        } else {
-            patternOne = "I";
-            patternTwo = "I";
-            patternThree = "S";
+        switch (output) {
+            case AxeItem ignored -> {
+                patternOne = "II";
+                patternTwo = "SI";
+                patternThree = "S ";
+            }
+            case HoeItem ignored -> {
+                patternOne = "II";
+                patternTwo = "S ";
+                patternThree = "S ";
+            }
+            case PickaxeItem ignored -> {
+                patternOne = "III";
+                patternTwo = " S ";
+                patternThree = " S ";
+            }
+            case ShovelItem ignored -> {
+                patternOne = "I";
+                patternTwo = "S";
+                patternThree = "S";
+            }
+            case null, default -> {
+                patternOne = "I";
+                patternTwo = "I";
+                patternThree = "S";
+            }
         }
 
         if(output instanceof SwordItem) {
@@ -77,7 +87,7 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
                     RecipeProvider.conditionsFromItem(input))
                 .criterion(RecipeProvider.hasItem(Items.STICK),
                     RecipeProvider.conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
         } else {
             ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .pattern(patternOne)
@@ -89,7 +99,7 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
                     RecipeProvider.conditionsFromItem(input))
                 .criterion(RecipeProvider.hasItem(Items.STICK),
                     RecipeProvider.conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
         }
     }
 
@@ -138,6 +148,6 @@ abstract class GemstyneToolRecipes extends FabricRecipeProvider {
                     RecipeProvider.conditionsFromItem(core))
                 .criterion(RecipeProvider.hasItem(Items.STICK),
                     RecipeProvider.conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 }

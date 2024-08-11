@@ -6,10 +6,9 @@ import lotus.gemstyne.item.custom.ImbuedFeatherItem;
 import lotus.gemstyne.item.custom.UraniumArrow;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -21,14 +20,14 @@ import net.minecraft.registry.Registry;
 public final class ItemHandler {
     private ItemHandler() {}
 
-    public static final UraniumArrow URANIUM_ARROW = new UraniumArrow(new FabricItemSettings());
+    public static final UraniumArrow URANIUM_ARROW = new UraniumArrow(new Item.Settings());
     // =====
     // <===== Item Features =====>
     // =====
     private static final FoodComponent MOCHITE_FOOD =
-        new FoodComponent.Builder().hunger(1).saturationModifier(0.7f).snack().build();
+        new FoodComponent.Builder().nutrition(1).saturationModifier(0.7f).snack().build();
     private static final FoodComponent IKARITE_FOOD =
-        new FoodComponent.Builder().hunger(1).saturationModifier(1.0f).meat()
+        new FoodComponent.Builder().nutrition(1).saturationModifier(1.0f)
             .statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 80), 100).build();
 
     /////
@@ -59,7 +58,7 @@ public final class ItemHandler {
         .addFood(MOCHITE_FOOD).createCrystal().createItemVariant("nugget").end();
 
     public static final Item BUBBLEGEM = GemstyneRegistry.designateItem("bubblegem",
-        new OwoItemSettings().food(new FoodComponent.Builder().snack()
+        (OwoItemSettings) new OwoItemSettings().food(new FoodComponent.Builder().snack()
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80), 1.0f).build()));
 
     // ======
@@ -67,7 +66,7 @@ public final class ItemHandler {
     // ======
     public static final Item FIRE_OPAL = GemstyneRegistry.designateItem("fire_opal", new OwoItemSettings());
     public static final Item GARNET = GemstyneRegistry.designateItem("garnet", new OwoItemSettings());
-    public static final Item IKARITE = GemstyneRegistry.designateItem("ikarite", new OwoItemSettings().food(IKARITE_FOOD));
+    public static final Item IKARITE = GemstyneRegistry.designateItem("ikarite", (OwoItemSettings) new OwoItemSettings().food(IKARITE_FOOD));
     public static final Item MORKITE = GemstyneRegistry.designateItem("morkite", new OwoItemSettings());
 
     /////

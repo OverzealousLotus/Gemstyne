@@ -5,7 +5,7 @@ import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
-import net.minecraft.data.server.loottable.BlockLootTableGenerator;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -15,10 +15,17 @@ import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
+
+import java.util.concurrent.CompletableFuture;
 
 public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
-    public GemstyneLootProvider(FabricDataOutput dataOutput) {
-        super(dataOutput);
+
+    RegistryWrapper.WrapperLookup registryLookup;
+    public GemstyneLootProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
+        this.registryLookup = registryLookup.join();
     }
 
     @Override
@@ -67,7 +74,6 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
         // <===== Nether Ore Loot =====>
         // ======
         gemstyneOreDrops(BlockHandler.ALDUS.netherOre(), ItemHandler.ALDUS.raw());
-
         gemstyneRichOreDrops(BlockHandler.BLAZITE.netherOre(), Items.BLAZE_POWDER, 1.0f, 3.0f);
 
         gemstyneOreDrops(BlockHandler.CRIMONITE.netherOre(), ItemHandler.CRIMONITE.raw());
@@ -130,11 +136,12 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
     // <===== Assistive Methods =====>
     // ======
     public void gemstyneRichOreDrops(Block ore, Item drop, float min, float max) {
-        LootTable.Builder table = BlockLootTableGenerator.dropsWithSilkTouch(ore,
+        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+        LootTable.Builder table = dropsWithSilkTouch(ore,
                 this.applyExplosionDecay(ore, ((LeafEntry.Builder<?>) ItemEntry.builder(drop).apply(
                         SetCountLootFunction
                                 .builder(UniformLootNumberProvider.create(min, max))))
-                        .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))));
+                        .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
 
         addDrop(ore, table);
     }

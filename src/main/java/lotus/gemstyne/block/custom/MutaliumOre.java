@@ -11,13 +11,14 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.DustParticleEffect;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class MutaliumOre extends VolatileOre {
-    private static final ImmutableList<StatusEffect> effectList = ImmutableList.of(
+    private static final ImmutableList<RegistryEntry<StatusEffect>> effectList = ImmutableList.of(
         StatusEffects.RESISTANCE, StatusEffects.REGENERATION, StatusEffects.SATURATION,
         StatusEffects.MINING_FATIGUE, StatusEffects.POISON, StatusEffects.HUNGER,
         StatusEffects.LEVITATION, StatusEffects.HASTE, StatusEffects.WEAKNESS

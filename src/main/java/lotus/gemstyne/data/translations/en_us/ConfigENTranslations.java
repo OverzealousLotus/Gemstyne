@@ -3,18 +3,22 @@ package lotus.gemstyne.data.translations.en_us;
 import lotus.gemstyne.Gemstyne;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.RegistryWrapper;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 abstract class ConfigENTranslations extends FabricLanguageProvider {
-    protected ConfigENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
-
 
     private static final String ORE_CONFIG_PATH = "text.config.gemstyne_config.option.oreConfig.";
     private static final String CONFIG_PATH = "text.config.gemstyne_config.option.";
     private static final String TOOLTIP = ".tooltip";
+
+    protected ConfigENTranslations(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
+    }
 
     protected static void generateENConfigTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup.gemstyne.main", "Gemstyne");

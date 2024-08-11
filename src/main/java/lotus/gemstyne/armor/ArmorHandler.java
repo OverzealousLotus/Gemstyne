@@ -11,14 +11,10 @@ import net.minecraft.util.Rarity;
 public class ArmorHandler {
     private ArmorHandler() {}
     
-    public static final GemstyneArmorSet ALDUS = new GemstyneArmorSet(new OwoItemSettings(),
-            "aldus", GemstyneArmorMaterials.ALDUS, ItemHandler.ALDUS.ingot());
-    public static final GemstyneArmorSet BRONZEMAIL = new GemstyneArmorSet(new OwoItemSettings(),
-            "bronzemail", GemstyneArmorMaterials.BRONZEMAIL, ItemHandler.BRONZE.chain());
-    public static final GemstyneArmorSet BRONZEPLATE = new GemstyneArmorSet(new OwoItemSettings(),
-            "bronzeplate", GemstyneArmorMaterials.BRONZEPLATE, ItemHandler.BRONZE.ingot());
-    public static final GemstyneArmorSet RENDFIRE = new GemstyneArmorSet(new OwoItemSettings().fireproof().rarity(Rarity.EPIC),
-            "rendfire", GemstyneArmorMaterials.RENDFIRE, ItemHandler.FIRE_OPAL);
+    public static final ArmorSet ALDUS = new ArmorSet("aldus", GemstyneArmorMaterials.ALDUS, ItemHandler.ALDUS.ingot());
+    public static final ArmorSet BRONZEMAIL = new ArmorSet("bronzemail", GemstyneArmorMaterials.BRONZEMAIL, ItemHandler.BRONZE.chain());
+    public static final ArmorSet BRONZEPLATE = new ArmorSet("bronzeplate", GemstyneArmorMaterials.BRONZEPLATE, ItemHandler.BRONZE.ingot());
+    public static final ArmorSet RENDFIRE = new ArmorSet("rendfire", GemstyneArmorMaterials.RENDFIRE, ItemHandler.FIRE_OPAL, settings -> settings.fireproof().rarity(Rarity.EPIC));
     public static final IkariteElytra IKARITE_ELYTRA = new IkariteElytra(new OwoItemSettings()
         .rarity(Rarity.RARE).group(GemstyneCreativeGroup.GEMSTYNE).tab(2).maxDamage(832));
 

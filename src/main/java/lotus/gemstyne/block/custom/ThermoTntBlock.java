@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.TntBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -16,7 +17,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -49,7 +49,7 @@ public class ThermoTntBlock extends TntBlock {
     @Override
     public void onDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
         if (!world.isClient) {
-            ThermoTntEntity thermoTnt = new ThermoTntEntity(world, (double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, explosion.getCausingEntity());
+            ThermoTntEntity thermoTnt = new ThermoTntEntity(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, explosion.getCausingEntity());
             int i = thermoTnt.getFuse();
             thermoTnt.setFuse((short)(world.random.nextInt(i / 4) + i / 8));
             world.spawnEntity(thermoTnt);
@@ -63,7 +63,7 @@ public class ThermoTntBlock extends TntBlock {
 
     private static void prime(World world, BlockPos pos, @Nullable LivingEntity igniter) {
         if (!world.isClient) {
-            ThermoTntEntity thermoTnt = new ThermoTntEntity(world, (double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, igniter);
+            ThermoTntEntity thermoTnt = new ThermoTntEntity(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, igniter);
             world.spawnEntity(thermoTnt);
             world.playSound(
                 null, thermoTnt.getX(), thermoTnt.getY(), thermoTnt.getZ(), SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.BLOCKS, 1.0F, 1.0F
@@ -73,17 +73,17 @@ public class ThermoTntBlock extends TntBlock {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack itemStack = player.getStackInHand(hand);
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        ItemStack itemStack = player.getStackInHand(player.preferredHand);
         if (!itemStack.isOf(Items.FLINT_AND_STEEL) && !itemStack.isOf(Items.FIRE_CHARGE)) {
-            return super.onUse(state, world, pos, player, hand, hit);
+            return super.onUse(state, world, pos, player, hit);
         } else {
             prime(world, pos, player);
             world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
             Item item = itemStack.getItem();
             if (!player.isCreative()) {
                 if (itemStack.isOf(Items.FLINT_AND_STEEL)) {
-                    itemStack.damage(1, player, playerx -> playerx.sendToolBreakStatus(hand));
+                    itemStack.damage(1, player, EquipmentSlot.MAINHAND);
                 } else {
                     itemStack.decrement(1);
                 }

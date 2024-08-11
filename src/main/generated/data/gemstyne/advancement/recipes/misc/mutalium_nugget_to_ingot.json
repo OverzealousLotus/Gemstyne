@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mutalium_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gemstyne:mutalium_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mutalium_nugget_to_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mutalium_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mutalium_nugget_to_ingot"
+    ]
+  }
+}

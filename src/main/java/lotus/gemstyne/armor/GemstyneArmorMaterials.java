@@ -1,112 +1,68 @@
 package lotus.gemstyne.armor;
 
-import com.google.common.base.Suppliers;
-
+import io.wispforest.owo.registration.reflect.AutoRegistryContainer;
 import lotus.gemstyne.item.ItemHandler;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.sound.SoundEvent;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.StringIdentifiable;
 
-import java.util.function.Supplier;
+import java.util.List;
+import java.util.Map;
 
-public enum GemstyneArmorMaterials implements StringIdentifiable, ArmorMaterial {
-    ALDUS("aldus", 25, new int[]{
-            3, // Boots
-            5, // Leggings
-            7, // Chestplate
-            3 // Helmet
-    }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.0f,
-            () -> Ingredient.ofItems(ItemHandler.ALDUS.ingot())),
-    RENDFIRE("rendfire", 30, new int[]{
-            4,
-            6,
-            10,
-            4
-    }, 1, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f,
-            () -> Ingredient.ofItems(ItemHandler.FIRE_OPAL)),
-    BRONZEMAIL("bronzemail", 12, new int[] {
-            2,
-            4,
-            6,
-            2
-    }, 6, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(ItemHandler.BRONZE.chain())),
-    BRONZEPLATE("bronzeplate", 20, new int[]{
-            2,
-            5,
-            7,
-            3
-    }, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f,
-            () -> Ingredient.ofItems(ItemHandler.BRONZE.ingot()));
+public class GemstyneArmorMaterials implements AutoRegistryContainer<ArmorMaterial> {
+    GemstyneArmorMaterials() {}
 
+    public static final ArmorMaterial ALDUS = new ArmorMaterial(Map.of(
+        ArmorItem.Type.HELMET, 3,
+        ArmorItem.Type.CHESTPLATE, 7,
+        ArmorItem.Type.LEGGINGS, 5,
+        ArmorItem.Type.BOOTS, 3),12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, () -> Ingredient.ofItems(ItemHandler.ALDUS.ingot()),
+        List.of(layer("aldus")), 0.0f, 0.0f);
 
+    public static final ArmorMaterial RENDFIRE = new ArmorMaterial(Map.of(
+        ArmorItem.Type.HELMET, 4,
+        ArmorItem.Type.CHESTPLATE, 10,
+        ArmorItem.Type.LEGGINGS, 6,
+        ArmorItem.Type.BOOTS, 4), 1,
+        SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ItemHandler.FIRE_OPAL),
+        List.of(layer("rendfire")), 3.0f, 0.2f);
+    public static final ArmorMaterial BRONZEMAIL = new ArmorMaterial(Map.of(
+        ArmorItem.Type.HELMET, 2,
+        ArmorItem.Type.CHESTPLATE, 6,
+        ArmorItem.Type.LEGGINGS, 4,
+        ArmorItem.Type.BOOTS, 2), 6,
+        SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, () -> Ingredient.ofItems(ItemHandler.BRONZE.chain()),
+        List.of(layer("bronzemail")), 0.0f, 0.0f);
+    public static final ArmorMaterial BRONZEPLATE = new ArmorMaterial(Map.of(
+        ArmorItem.Type.HELMET, 3,
+        ArmorItem.Type.CHESTPLATE, 7,
+        ArmorItem.Type.LEGGINGS, 5,
+        ArmorItem.Type.BOOTS, 2), 8,
+        SoundEvents.ITEM_ARMOR_EQUIP_IRON, () -> Ingredient.ofItems(ItemHandler.BRONZE.ingot()),
+        List.of(layer("aldus")), 0.0f, 0.0f);
 
-    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private final String name;
-    private final int durabilityMultiplier;
-    private final int[] protectionAmounts;
-    private final int enchantability;
-    private final SoundEvent equipSound;
-    private final float toughness;
-    private final float knockbackResistance;
-    private final Supplier<Ingredient> repairIngredientSupplier;
-
-    GemstyneArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
-        this.name = name;
-        this.durabilityMultiplier = durabilityMultiplier;
-        this.protectionAmounts = protectionAmounts;
-        this.enchantability = enchantability;
-        this.equipSound = equipSound;
-        this.toughness = toughness;
-        this.knockbackResistance = knockbackResistance;
-        this.repairIngredientSupplier = Suppliers.memoize(repairIngredientSupplier::get);
+    @Override
+    public Registry<ArmorMaterial> getRegistry() {
+        return Registries.ARMOR_MATERIAL;
     }
 
     @Override
-    public int getDurability(ArmorItem.Type type) {
-        return BASE_DURABILITY[type.getEquipmentSlot().getEntitySlotId()] * this.durabilityMultiplier;
+    public Class<ArmorMaterial> getTargetFieldType() {
+        return ArmorMaterial.class;
     }
 
-    @Override
-    public int getProtection(ArmorItem.Type type) {
-        return this.protectionAmounts[type.getEquipmentSlot().getEntitySlotId()];
+    private static ArmorMaterial.Layer layer(String name) {
+        return new ArmorMaterial.Layer(GemstyneRegistry.id(name));
     }
 
-    @Override
-    public int getEnchantability() {
-        return this.enchantability;
-    }
-
-    @Override
-    public SoundEvent getEquipSound() {
-        return this.equipSound;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return this.repairIngredientSupplier.get();
-    }
-
-    @Override
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public float getToughness() {
-        return this.toughness;
-    }
-
-    @Override
-    public float getKnockbackResistance() {
-        return this.knockbackResistance;
-    }
-
-    @Override
-    public String asString() {
-        return null;
+    public static void registerMats() {
+        Registry.register(Registries.ARMOR_MATERIAL, "aldus_mat", ALDUS);
+        Registry.register(Registries.ARMOR_MATERIAL, "bronzeplate_mat", BRONZEPLATE);
+        Registry.register(Registries.ARMOR_MATERIAL, "bronzemail_mat", BRONZEMAIL);
+        Registry.register(Registries.ARMOR_MATERIAL, "rendfire_mat", RENDFIRE);
     }
 }

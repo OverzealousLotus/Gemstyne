@@ -30,7 +30,7 @@ public class GemstyneRegistry {
      * @return Returns an {@link Identifier}
      */
     public static Identifier id(String path) {
-        return new Identifier(Gemstyne.MOD_ID, path);
+        return Identifier.of(Gemstyne.MOD_ID, path);
     }
 
     public static void registerItem(String path, Item item) {

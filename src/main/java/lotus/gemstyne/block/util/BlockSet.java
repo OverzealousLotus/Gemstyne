@@ -8,7 +8,7 @@ import lotus.gemstyne.block.custom.AfflictiveBlock;
 import lotus.gemstyne.block.custom.AfflictiveOre;
 import lotus.gemstyne.block.custom.RichOre;
 import lotus.gemstyne.util.*;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -16,6 +16,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -94,13 +95,13 @@ public final class BlockSet {
         private final Map<String, GemstynePairs.BlockPair> variants = new LinkedHashMap<>();
         private final Multimap<Block, Identifier> blockTags = ArrayListMultimap.create();
 
-        private StatusEffect effect;
+        private RegistryEntry<StatusEffect> effect;
         private BlockSoundGroup currentSounds = BlockSoundGroup.STONE;
         private float currentHardness = 3.0f;
         private float currentResistance = 3.0f;
         private UniformIntProvider experience = UniformIntProvider.create(2, 5);
         private Identifier miningLevel = GemstyneMiningLevels.NEEDS_STONE_TOOL;
-        private FabricBlockSettings blockSettings = FabricBlockSettings.copyOf(Blocks.STONE);
+        private AbstractBlock.Settings blockSettings = AbstractBlock.Settings.copy(Blocks.STONE);
         @NotNull private final String setName;
 
         /**
@@ -173,7 +174,7 @@ public final class BlockSet {
          * @param effect {@link StatusEffect}
          * @return Instance of self.
          */
-        public Builder setEffect(StatusEffect effect) {
+        public Builder setEffect(RegistryEntry<StatusEffect> effect) {
             this.effect = effect;
             return this;
         }
@@ -236,7 +237,7 @@ public final class BlockSet {
         public Builder createOreType(String type, int duration) {
             this.blockSettings.sounds(getSounds(type)).strength(this.currentHardness);
             this.variants.put(type, new GemstynePairs.BlockPair(type + "_" + this.setName + "_ore",
-                new AfflictiveOre(this.experience, this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.ORE)));
+                new AfflictiveOre(this.experience, this.blockSettings, this.effect.value(), duration, GemstyneUtil.BlockTypes.ORE)));
             appendTags(type, this.miningLevel);
             return this;
         }
@@ -279,7 +280,7 @@ public final class BlockSet {
         public Builder createRawBlock(int duration) {
             this.blockSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
             this.variants.put("raw", new GemstynePairs.BlockPair("raw_" + this.setName + BLOCK,
-                new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.RAW)));
+                new AfflictiveBlock(this.blockSettings, (RegistryEntry.Reference<StatusEffect>) this.effect, duration, GemstyneUtil.BlockTypes.RAW)));
             appendTags(GemstyneConstants.RAW, this.miningLevel);
             return this;
         }
@@ -293,7 +294,7 @@ public final class BlockSet {
         public Builder createPureBlock(int duration) {
             this.blockSettings.sounds(this.currentSounds);
             this.variants.put("pure", new GemstynePairs.BlockPair(this.setName + BLOCK,
-                new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.PURE)));
+                new AfflictiveBlock(this.blockSettings, (RegistryEntry.Reference<StatusEffect>) this.effect, duration, GemstyneUtil.BlockTypes.PURE)));
             appendTags("pure", this.miningLevel);
             return this;
         }

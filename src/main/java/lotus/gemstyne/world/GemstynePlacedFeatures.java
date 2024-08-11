@@ -1,6 +1,6 @@
 package lotus.gemstyne.world;
 
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.util.GemstyneRegistry;
 import lotus.gemstyne.world.geodes.GemstyneGeodePlaced;
 import lotus.gemstyne.world.minerals.GemstyneMineralPlaced;
 import lotus.gemstyne.world.ores.GemstyneOrePlaced;
@@ -9,7 +9,6 @@ import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
@@ -41,7 +40,7 @@ public final class GemstynePlacedFeatures {
 
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Gemstyne.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, GemstyneRegistry.id(name));
     }
 
 

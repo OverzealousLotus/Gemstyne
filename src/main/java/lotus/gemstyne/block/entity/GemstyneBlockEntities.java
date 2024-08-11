@@ -14,7 +14,7 @@ public class GemstyneBlockEntities {
     
     public static BlockEntityType<RichOreBlockEntity> DEEP_ORE_BLOCK;
     public static final EntityType<ThermoTntEntity> THERMO_TNT_ENTITY = EntityType.Builder.<ThermoTntEntity>create(
-        ThermoTntEntity::new, SpawnGroup.MISC).makeFireImmune().setDimensions(1, 1).build();
+        ThermoTntEntity::new, SpawnGroup.MISC).makeFireImmune().dimensions(1, 1).build();
 
     /// Registers all Block Entities for Gemstyne
     public static void registerBlockEntities() {

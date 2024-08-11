@@ -7,7 +7,7 @@ import lotus.gemstyne.util.GemstynePairs.ItemPair;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import org.jetbrains.annotations.NotNull;
 
@@ -69,7 +69,7 @@ public final class GemstyneItemSet {
         @NotNull
         private final Map<String, ItemPair> itemVariants = new LinkedHashMap<>();
 
-        private OwoItemSettings currentSettings = new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE);
+        private Item.Settings currentSettings = new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE);
         private final String setName;
 
         private Builder(@NotNull String setName) { this.setName = setName; }

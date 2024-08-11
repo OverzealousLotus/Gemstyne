@@ -192,8 +192,6 @@
   "text.config.gemstyne_config.section.nether": "The Nether",
   "text.config.gemstyne_config.section.overworld": "The Overworld",
   "text.config.gemstyne_config.title": "Gemstyne Configuration Options",
-  "tooltips.gemstyne.aldus": "Resilience",
   "tooltips.gemstyne.ikarite_elytra": "I have not envied the bird its freedom.",
-  "tooltips.gemstyne.imbued_feather": "Do not fly too low, nor too high.",
-  "tooltips.gemstyne.ominous": "Heat Affinity"
+  "tooltips.gemstyne.imbued_feather": "Do not fly too low, nor too high."
 }

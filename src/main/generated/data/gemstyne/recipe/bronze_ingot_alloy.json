@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": [
+    {
+      "item": "gemstyne:tin_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "base": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "gemstyne:tin_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "gemstyne:bronze_ingot"
+  },
+  "template": []
+}

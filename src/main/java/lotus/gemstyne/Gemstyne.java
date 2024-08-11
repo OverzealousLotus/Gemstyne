@@ -4,7 +4,6 @@ import lotus.gemstyne.config.GemstyneConfig;
 import lotus.gemstyne.entity.EntityHandler;
 import lotus.gemstyne.entity.custom.AetherZombie;
 import lotus.gemstyne.event.UraniumBreakHandler;
-import lotus.gemstyne.util.GemstyneToolTips;
 import lotus.gemstyne.world.gen.GemstyneWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -36,7 +35,6 @@ public class Gemstyne implements ModInitializer {
 		// Step II | Essentials
 		Gemstyne.LOGGER.info("[Gemstyne] Registering Essentials for " + Gemstyne.MOD_ID + "!");
 		Overwatch.registerEssentials();
-		GemstyneToolTips.registerToolTips();
 		FabricDefaultAttributeRegistry.register(EntityHandler.AETHER_ZOMBIE, AetherZombie.createAetherZombieAttributes());
 		Gemstyne.LOGGER.info("[[ Successfully registered Essentials! ]]");
 

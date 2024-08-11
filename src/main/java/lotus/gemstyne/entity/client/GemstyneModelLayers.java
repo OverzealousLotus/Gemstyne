@@ -8,5 +8,5 @@ public class GemstyneModelLayers {
     private GemstyneModelLayers() {}
 
     public static final EntityModelLayer AETHER_ZOMBIE =
-        new EntityModelLayer(new Identifier(Gemstyne.MOD_ID, "aether_zombie"), "main");
+        new EntityModelLayer(Identifier.of(Gemstyne.MOD_ID, "aether_zombie"), "main");
 }

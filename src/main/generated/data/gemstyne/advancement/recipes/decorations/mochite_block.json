@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mochite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gemstyne:mochite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mochite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mochite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mochite_block"
+    ]
+  }
+}

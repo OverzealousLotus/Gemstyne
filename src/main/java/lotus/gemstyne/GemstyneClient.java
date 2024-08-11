@@ -24,8 +24,8 @@ public class GemstyneClient implements ClientModInitializer {
 
         FluidRenderHandlerRegistry.INSTANCE.register(FluidHandler.STILL_LIQUID_MORKITE, FluidHandler.FLOWING_LIQUID_MORKITE,
                 new SimpleFluidRenderHandler(
-                        new Identifier("minecraft:block/lava_still"),
-                        new Identifier("minecraft:block/lava_flow"),
+                        Identifier.of("minecraft:block/lava_still"),
+                        Identifier.of("minecraft:block/lava_flow"),
                         0xA1002626
                 ));
 

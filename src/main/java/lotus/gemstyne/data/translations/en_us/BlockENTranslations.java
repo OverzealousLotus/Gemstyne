@@ -3,10 +3,14 @@ package lotus.gemstyne.data.translations.en_us;
 import lotus.gemstyne.block.BlockHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.RegistryWrapper;
+
+import java.util.concurrent.CompletableFuture;
 
 abstract class BlockENTranslations extends FabricLanguageProvider {
-    protected BlockENTranslations(FabricDataOutput dataOutput) { super(dataOutput); }
-
+    protected BlockENTranslations(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
+    }
 
     protected static void translateBlocks(TranslationBuilder translationBuilder) {
         // //////////

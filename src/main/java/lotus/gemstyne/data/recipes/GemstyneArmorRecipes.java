@@ -1,7 +1,7 @@
 package lotus.gemstyne.data.recipes;
 
 import lotus.gemstyne.armor.ArmorHandler;
-import lotus.gemstyne.armor.GemstyneArmorSet;
+import lotus.gemstyne.armor.ArmorSet;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -10,14 +10,16 @@ import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.*;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
+
+import java.util.concurrent.CompletableFuture;
 
 abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
-    protected GemstyneArmorRecipes(FabricDataOutput output) {
-        super(output);
+    protected GemstyneArmorRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
-
 
     protected static void generateArmorRecipes(RecipeExporter exporter) {
         // =====
@@ -51,7 +53,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                         RecipeProvider.conditionsFromItem(ItemHandler.FIRE_OPAL))
                 .criterion(RecipeProvider.hasItem(ItemHandler.CRIMONITE.ingot()),
                         RecipeProvider.conditionsFromItem(ItemHandler.CRIMONITE.ingot()))
-                .offerTo(exporter, new Identifier(RecipeProvider
+                .offerTo(exporter, Identifier.of(RecipeProvider
                         .getRecipeName(ArmorHandler.RENDFIRE.chestplate)));
 
         offerBasicLeggingsRecipe(exporter, ArmorHandler.RENDFIRE.leggings,
@@ -73,7 +75,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
      */
     private static void offerArmorSetRecipes(
             RecipeExporter exporter,
-            GemstyneArmorSet armorSet
+            ArmorSet armorSet
     ) {
         offerBasicHelmetRecipe(exporter, armorSet.helmet, armorSet.source);
         offerBasicChestplateRecipe(exporter, armorSet.chestplate, armorSet.source);
@@ -92,7 +94,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .input('I', input)
                 .criterion(RecipeProvider.hasItem(input),
                         RecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 
 
@@ -107,7 +109,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .input('I', input)
                 .criterion(RecipeProvider.hasItem(input),
                         RecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 
 
@@ -122,7 +124,7 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .input('I', input)
                 .criterion(RecipeProvider.hasItem(input),
                         RecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 
 
@@ -136,6 +138,6 @@ abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
                 .input('I', input)
                 .criterion(RecipeProvider.hasItem(input),
                         RecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 }

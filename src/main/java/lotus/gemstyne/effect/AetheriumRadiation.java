@@ -15,7 +15,7 @@ public class AetheriumRadiation extends StatusEffect {
 
     @Override
     @Environment(EnvType.CLIENT)
-    public void applyUpdateEffect(LivingEntity entity, int amplifier) {
+    public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player) {
             player.damage(entity.getDamageSources().magic(), 2.0f);
             player.addExhaustion(0.020f * (amplifier + 1));
@@ -25,7 +25,7 @@ public class AetheriumRadiation extends StatusEffect {
             entity.damage(entity.getDamageSources().magic(), 4.0f);
         }
 
-        super.applyUpdateEffect(entity, amplifier);
+        return super.applyUpdateEffect(entity, amplifier);
     }
 
     @Override
