@@ -237,7 +237,7 @@ public final class BlockSet {
         public Builder createOreType(String type, int duration) {
             this.blockSettings.sounds(getSounds(type)).strength(this.currentHardness);
             this.variants.put(type, new GemstynePairs.BlockPair(type + "_" + this.setName + "_ore",
-                new AfflictiveOre(this.experience, this.blockSettings, this.effect.value(), duration, GemstyneUtil.BlockTypes.ORE)));
+                new AfflictiveOre(this.experience, this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.ORE)));
             appendTags(type, this.miningLevel);
             return this;
         }
@@ -280,7 +280,7 @@ public final class BlockSet {
         public Builder createRawBlock(int duration) {
             this.blockSettings.sounds(this.currentSounds).strength(this.currentHardness, this.currentResistance);
             this.variants.put("raw", new GemstynePairs.BlockPair("raw_" + this.setName + BLOCK,
-                new AfflictiveBlock(this.blockSettings, (RegistryEntry.Reference<StatusEffect>) this.effect, duration, GemstyneUtil.BlockTypes.RAW)));
+                new AfflictiveBlock(this.blockSettings, this.effect, duration, GemstyneUtil.BlockTypes.RAW)));
             appendTags(GemstyneConstants.RAW, this.miningLevel);
             return this;
         }

@@ -14,11 +14,11 @@ import net.minecraft.world.World;
 
 public class AfflictiveBlock extends Block {
     // Instantiate parameters of Block.
-    private final RegistryEntry.Reference<StatusEffect> effect;
+    private final RegistryEntry<StatusEffect> effect;
     private final int duration;
     private final GemstyneUtil.BlockTypes type;
 
-    public AfflictiveBlock(Settings settings, RegistryEntry.Reference<StatusEffect> effect, int duration, GemstyneUtil.BlockTypes type) {
+    public AfflictiveBlock(Settings settings, RegistryEntry<StatusEffect> effect, int duration, GemstyneUtil.BlockTypes type) {
         super(settings);
         this.effect = effect;
         this.duration = duration;
