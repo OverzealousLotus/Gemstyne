@@ -5,7 +5,7 @@ import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.fluid.FluidHandler;
-import lotus.gemstyne.item.GemstyneItemSet;
+import lotus.gemstyne.item.ItemSet;
 import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 /**
  * <ul>Gemstyne's Registry Handler.
  *  <li>See {@link GemstyneCreativeGroup} for more information on how groups are handled.</li>
- *  <li>See {@link BlockSet} & {@link GemstyneItemSet} to see how these are used to register items.</li>
+ *  <li>See {@link BlockSet} & {@link ItemSet} to see how these are used to register items.</li>
  * </ul>
  */
 public class GemstyneRegistry {

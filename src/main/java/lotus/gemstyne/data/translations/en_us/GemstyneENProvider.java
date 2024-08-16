@@ -3,7 +3,7 @@ package lotus.gemstyne.data.translations.en_us;
 import lotus.gemstyne.armor.ArmorSet;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.block.util.GeodeSet;
-import lotus.gemstyne.item.GemstyneItemSet;
+import lotus.gemstyne.item.ItemSet;
 import lotus.gemstyne.tool.GemstyneToolSet;
 import lotus.gemstyne.util.GemstyneConstants;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -50,11 +50,11 @@ public abstract class GemstyneENProvider extends FabricLanguageProvider {
     }
 
     /**
-     * Generates English translations for a {@link GemstyneItemSet}
+     * Generates English translations for a {@link ItemSet}
      * @param translationBuilder {@link net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder}
-     * @param itemSet {@link GemstyneItemSet}
+     * @param itemSet {@link ItemSet}
      */
-    protected static void translateSet(TranslationBuilder translationBuilder, @NotNull GemstyneItemSet itemSet) {
+    protected static void translateSet(TranslationBuilder translationBuilder, @NotNull ItemSet itemSet) {
         itemSet.getItemMap().forEach((itemType, itemPair) -> {
             switch (itemType) {
                 case "raw" -> translationBuilder.add(itemPair.item(), "Raw " + WordUtils.capitalizeFully(itemSet.getSetName()));

@@ -1,11 +1,12 @@
-package lotus.gemstyne.world;
+package lotus.gemstyne.world.util;
 
 import com.google.common.collect.*;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstynePairs.GenKeyPair;
-import lotus.gemstyne.world.util.GemstyneOrePlacement;
+import lotus.gemstyne.world.GemstyneConfiguredFeatures;
+import lotus.gemstyne.world.GemstynePlacedFeatures;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
@@ -24,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
-public class GemstyneOreModification {
+public class OreModification {
     private static final RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
     private static final RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
     private static final RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
@@ -36,7 +37,7 @@ public class GemstyneOreModification {
     private final Set<Block> ores = new LinkedHashSet<>();
     private final List<OreFeatureConfig.Target> targets = new LinkedList<>();
 
-    public GemstyneOreModification(BlockSet oreSet) {
+    public OreModification(BlockSet oreSet) {
         this.oreSet = oreSet;
     }
 
@@ -44,13 +45,13 @@ public class GemstyneOreModification {
      * Adds {@link BlockTags#STONE_ORE_REPLACEABLES} to ore generation.
      * @return Returns instance of self.
      */
-    protected GemstyneOreModification addStoneOre() {
+    public OreModification addStoneOre() {
         this.oreMap.put(GemstyneConstants.OVERWORLD, OreFeatureConfig.createTarget(stoneReplaceables, oreSet.stoneOre().getDefaultState()));
         this.ores.add(oreSet.stoneOre());
         return this;
     }
 
-    protected GemstyneOreModification addRichStoneOre() {
+    public OreModification addRichStoneOre() {
         this.oreMap.put("rich_overworld", OreFeatureConfig.createTarget(stoneReplaceables, oreSet.richStoneOre().getDefaultState()));
         this.ores.add(oreSet.richStoneOre());
         return this;
@@ -60,13 +61,13 @@ public class GemstyneOreModification {
      * Adds {@link BlockTags#DEEPSLATE_ORE_REPLACEABLES} to ore Generation.
      * @return Returns instance of self.
      */
-    protected GemstyneOreModification addDeepslateOre() {
+    public OreModification addDeepslateOre() {
         this.oreMap.put(GemstyneConstants.OVERWORLD, OreFeatureConfig.createTarget(deepslateReplaceables, oreSet.deepslateOre().getDefaultState()));
         this.ores.add(oreSet.deepslateOre());
         return this;
     }
 
-    protected GemstyneOreModification addRichDeepslateOre() {
+    public OreModification addRichDeepslateOre() {
         this.oreMap.put("rich_overworld", OreFeatureConfig.createTarget(deepslateReplaceables, oreSet.richDeepslateOre().getDefaultState()));
         this.ores.add(oreSet.richDeepslateOre());
         return this;
@@ -76,7 +77,7 @@ public class GemstyneOreModification {
      * Adds {@link BlockTags#BASE_STONE_NETHER} to ore Generation.
      * @return Returns instance of self.
      */
-    protected GemstyneOreModification addNetherOre() {
+    public OreModification addNetherOre() {
         this.oreMap.put(GemstyneConstants.NETHER, OreFeatureConfig.createTarget(netherReplaceables, oreSet.netherOre().getDefaultState()));
         this.ores.add(oreSet.netherOre());
         return this;
@@ -86,13 +87,13 @@ public class GemstyneOreModification {
      * Adds end stone to ore Generation.
      * @return Returns instance of self.
      */
-    protected GemstyneOreModification addEndOre() {
+    public OreModification addEndOre() {
         this.oreMap.put(GemstyneConstants.END, OreFeatureConfig.createTarget(endReplaceables, oreSet.endOre().getDefaultState()));
         this.ores.add(oreSet.endOre());
         return this;
     }
 
-    protected GemstyneOreModification addRawOre() {
+    public OreModification addRawOre() {
         this.ores.forEach(ore -> this.targets.add(OreFeatureConfig.createTarget(new BlockMatchRuleTest(ore), oreSet.rawBlock().getDefaultState())));
         return this;
     }
@@ -103,7 +104,7 @@ public class GemstyneOreModification {
      * @param placedKeyName {@link PlacedFeature} key.
      * @return Returns instance of self.
      */
-    protected GemstyneOreModification createKeyPair(String configKeyName, String placedKeyName) {
+    public OreModification createKeyPair(String configKeyName, String placedKeyName) {
         this.oreKeys.put(configKeyName, new GenKeyPair(
             GemstyneConfiguredFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + configKeyName),
             GemstynePlacedFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + placedKeyName))
@@ -117,7 +118,7 @@ public class GemstyneOreModification {
      * @param keyNames Name of keys to be created.
      * @return Returns instance of self.
      */
-    protected GemstyneOreModification createKeyPair(String keyNames) {
+    public OreModification createKeyPair(String keyNames) {
         this.oreKeys.put(keyNames, new GenKeyPair(
             GemstyneConfiguredFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + keyNames),
             GemstynePlacedFeatures.registerKey("ore_" + oreSet.getSetName() + "_" + keyNames))

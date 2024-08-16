@@ -3,7 +3,7 @@ package lotus.gemstyne.data.recipes;
 import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.armor.ArmorHandler;
-import lotus.gemstyne.item.GemstyneItemSet;
+import lotus.gemstyne.item.ItemSet;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -165,12 +165,12 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
      * both raw and pure reversible compacting recipes. Thus, inputted sets are required to contain
      * raw and pure variations of both their blocks, and items.
      * @param blockSet {@link BlockSet}
-     * @param itemSet {@link GemstyneItemSet}
+     * @param itemSet {@link ItemSet}
      */
     private static void offerBilateralCompactingRecipes(
             RecipeExporter exporter,
             BlockSet blockSet,
-            GemstyneItemSet itemSet
+            ItemSet itemSet
     ) {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC,
                 itemSet.ingot(), RecipeCategory.DECORATIONS,
@@ -232,9 +232,9 @@ public class GemstyneRecipeProvider extends FabricRecipeProvider {
 
     /**
      * Method providing an easy way to create an Ingot-To-Nugget reversible recipes.
-     * @param set {@link GemstyneItemSet}
+     * @param set {@link ItemSet}
      */
-    private static void offerReversibleNuggetRecipe(RecipeExporter exporter, GemstyneItemSet set) {
+    private static void offerReversibleNuggetRecipe(RecipeExporter exporter, ItemSet set) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, set.nugget(), 9)
                 .input(set.ingot())
                 .criterion(RecipeProvider.hasItem(set.ingot()),

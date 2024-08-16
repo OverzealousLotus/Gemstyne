@@ -38,23 +38,23 @@ public final class ItemHandler {
     // =====
     // <=====| Ore Sets |=====>
     // =====
-    public static final GemstyneItemSet ALDUS = GemstyneItemSet.Builder.start("aldus").createDefaultItemSet(false);
-    public static final GemstyneItemSet AETHERIUM = GemstyneItemSet.Builder.start("aetherium").createRaw().createCrystal().end();
-    public static final GemstyneItemSet BRONZE = GemstyneItemSet.Builder.start("bronze")
+    public static final ItemSet ALDUS = ItemSet.Builder.start("aldus").createDefaultItemSet(false);
+    public static final ItemSet AETHERIUM = ItemSet.Builder.start("aetherium").createRaw().createCrystal().end();
+    public static final ItemSet BRONZE = ItemSet.Builder.start("bronze")
         .createItemVariant("chain").createDefaultItemSet(true);
-    public static final GemstyneItemSet CRIMONITE = GemstyneItemSet.Builder.start("crimonite")
+    public static final ItemSet CRIMONITE = ItemSet.Builder.start("crimonite")
         .createItemVariant("chunk").createDefaultItemSet(false);
-    public static final GemstyneItemSet MUTALIUM = GemstyneItemSet.Builder.start("mutalium").createDefaultItemSet(false);
-    public static final GemstyneItemSet Pyrite = GemstyneItemSet.Builder.start("pyrite").createRaw().end();
-    public static final GemstyneItemSet TORRIUM = GemstyneItemSet.Builder.start("torrium").createDefaultItemSet(false);
-    public static final GemstyneItemSet TIN = GemstyneItemSet.Builder.start("tin").createDefaultItemSet(false);
-    public static final GemstyneItemSet URANIUM = GemstyneItemSet.Builder.start("uranium")
+    public static final ItemSet MUTALIUM = ItemSet.Builder.start("mutalium").createDefaultItemSet(false);
+    public static final ItemSet Pyrite = ItemSet.Builder.start("pyrite").createRaw().end();
+    public static final ItemSet TORRIUM = ItemSet.Builder.start("torrium").createDefaultItemSet(false);
+    public static final ItemSet TIN = ItemSet.Builder.start("tin").createDefaultItemSet(false);
+    public static final ItemSet URANIUM = ItemSet.Builder.start("uranium")
         .createItemVariant("chunk").createDefaultItemSet(false);
 
     // =====
     // <=====| Singleton Ores |=====>
     // =====
-    public static final GemstyneItemSet MOCHITE = GemstyneItemSet.Builder.start("mochite").createRaw()
+    public static final ItemSet MOCHITE = ItemSet.Builder.start("mochite").createRaw()
         .addFood(MOCHITE_FOOD).createCrystal().createItemVariant("nugget").end();
 
     public static final Item BUBBLEGEM = GemstyneRegistry.designateItem("bubblegem",

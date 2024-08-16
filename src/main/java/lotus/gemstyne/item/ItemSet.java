@@ -19,7 +19,7 @@ import java.util.Optional;
  * <h2>GemstyneItemSet</h2>
  * A flexible way of creating a basic set of Items for Gemstyne.
  */
-public final class GemstyneItemSet {
+public final class ItemSet {
     @NotNull public Map<String, ItemPair> itemVariants;
     @NotNull private final String setName;
 
@@ -27,7 +27,7 @@ public final class GemstyneItemSet {
      * Its constructor only requires the name of the set to get started.
      * @param setName Name of set
      */
-    private GemstyneItemSet(@NotNull String setName, @NotNull Map<String, ItemPair> itemVariants) {
+    private ItemSet(@NotNull String setName, @NotNull Map<String, ItemPair> itemVariants) {
         this.setName = setName;
         this.itemVariants = itemVariants;
     }
@@ -37,7 +37,7 @@ public final class GemstyneItemSet {
     }
 
     /**
-     * Safely fetches an {@link Item} from {@link GemstyneItemSet}. If the Item is not present, then
+     * Safely fetches an {@link Item} from {@link ItemSet}. If the Item is not present, then
      * an error message with hints is printed, then a {@link NullPointerException} is thrown.
      * @param itemName Name of target {@link Item}
      * @return Returns {@link Item} safely, or throws a {@link NullPointerException} instead of returning null.
@@ -111,16 +111,16 @@ public final class GemstyneItemSet {
             return this;
         }
 
-        public GemstyneItemSet createDefaultItemSet(boolean isAlloy) {
+        public ItemSet createDefaultItemSet(boolean isAlloy) {
             if (!isAlloy) this.createRaw();
             return this.createItemVariant("nugget")
                 .createItemVariant("ingot")
                 .end();
         }
 
-        public GemstyneItemSet end() {
+        public ItemSet end() {
             this.itemVariants.values().forEach(itemIdPair -> GemstyneRegistry.registerItem(itemIdPair.itemID(), itemIdPair.item()));
-            return new GemstyneItemSet(this.setName, this.itemVariants);
+            return new ItemSet(this.setName, this.itemVariants);
         }
     }
 }
