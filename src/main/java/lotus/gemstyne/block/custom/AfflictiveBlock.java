@@ -1,64 +1,75 @@
 package lotus.gemstyne.block.custom;
 
-import lotus.gemstyne.block.GemstyneDecorBlocks;
-import lotus.gemstyne.block.GemstyneOreBlocks;
-import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.util.GemstyneUtil;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class AfflictiveBlock extends ExperienceDroppingBlock {
-    public AfflictiveBlock(Settings settings) {
+public class AfflictiveBlock extends Block {
+    // Instantiate parameters of Block.
+    private final RegistryEntry.Reference<StatusEffect> effect;
+    private final int duration;
+    private final GemstyneUtil.BlockTypes type;
+
+    public AfflictiveBlock(Settings settings, RegistryEntry.Reference<StatusEffect> effect, int duration, GemstyneUtil.BlockTypes type) {
         super(settings);
+        this.effect = effect;
+        this.duration = duration;
+        this.type = type;
     }
-    // <===== Used to cause damage when any player starts breaking anything Uranium related. =====>
-    protected void afflictPlayer(PlayerEntity player, BlockState state) {
-        if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre())) { // Check to see what block is broken.
-            player.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 30, 1));
-            // player.sendMessage(Text.literal("You have been slightly irradiated..."));
-        } else if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock())) {
-            player.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 60, 1));
-            // player.sendMessage(Text.literal("You have been moderately irradiated..."));
-        } else if (state.isOf(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock())) {
-            player.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 100, 1));
-            // player.sendMessage(Text.literal("You have been heavily irradiated..."));
+
+    /**
+     * <code>afflictPlayer</code> is used to handle adding a status effect to a player.
+     * <ul>There are only three possible cases:
+     *  <li>Pure Blocks</li>
+     *  <li>Raw Blocks</li>
+     *  <li>Any type of ores.</li>
+     * </ul>
+     * Duration is calculated using simple multiplication.
+     * @param player The Player Entity in the world.
+     */
+    protected void afflictPlayer(PlayerEntity player) {
+        switch(this.type) {
+            case PURE -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration  * 3, 1));
+            case RAW -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration * 2, 1));
+            default -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration, 1));
         }
     }
 
-    // <===== If anything other than the player steps on a AfflictiveBlock, then same logic. =====>
-    protected void afflictEntity(LivingEntity entity, BlockState state) {
-
-        if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.deepslateUraniumOre())) { // Check to see what block is broken.
-            entity.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 30, 1));
-        } else if (state.isOf(GemstyneOreBlocks.ORE_BLOCKS.rawUraniumBlock())) {
-            entity.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 60, 1));
-        } else if (state.isOf(GemstyneDecorBlocks.DECOR_BLOCKS.uraniumBlock())) {
-            entity.addStatusEffect(new StatusEffectInstance(GemstyneEffects.IRRADIATE, 100, 1));
+    /**
+     * <code>afflictEntity</code> is called when any Entity, including a Player steps on this block.
+     * Similar to <code>afflictPlayer</code>, there are only three possible cases.
+     * @param entity The Entity in the world.
+     */
+    protected void afflictEntity(LivingEntity entity) {
+        switch(this.type) {
+            case PURE -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.duration * 3, 1));
+            case RAW -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.duration * 2, 1));
+            default -> entity.addStatusEffect(new StatusEffectInstance(this.effect, this.duration, 1));
         }
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        super.onBreak(world, pos, state, player);
-
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!world.isClient() && !player.isSpectator() && !player.isCreative()) {
-            afflictPlayer(player, state);
+            afflictPlayer(player);
         }
+
+        return super.onBreak(world, pos, state, player);
     }
 
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         super.onSteppedOn(world, pos, state, entity);
-        if (!world.isClient()) {
-            if (entity instanceof LivingEntity livingEntity) {
-                if (!livingEntity.isSpectator()) {afflictEntity(livingEntity, state);}
-            }
+        if (!world.isClient() &&  (entity instanceof LivingEntity livingEntity &&  (!livingEntity.isSpectator()))) {
+            afflictEntity(livingEntity);
         }
-
     }
 }

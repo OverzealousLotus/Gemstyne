@@ -3,7 +3,11 @@
 	"package": "lotus.gemstyne.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"GemstyneArmorItemMixin"
+	],
+	"client": [
+		"ElytraFeatureRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

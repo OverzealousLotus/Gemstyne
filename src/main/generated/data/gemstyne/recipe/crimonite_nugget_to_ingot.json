@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    },
+    {
+      "item": "gemstyne:crimonite_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "gemstyne:crimonite_ingot"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 175,
+  "experience": 2.0,
+  "group": "gemstyne",
+  "ingredient": {
+    "item": "gemstyne:rendfire_chestplate"
+  },
+  "result": {
+    "id": "gemstyne:crimonite_ingot"
+  }
+}

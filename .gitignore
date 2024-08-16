@@ -1,6 +1,9 @@
 # Project exclude paths
-/.gradle/
-/gradle/
-/build/
+.vscode
+.gradle
+gradle
+build
 .idea
-/run/
+run
+bin
+src/main/generated/.cache

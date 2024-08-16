@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 1.25,
+  "group": "gemstyne",
+  "ingredient": {
+    "item": "gemstyne:raw_torrium"
+  },
+  "result": {
+    "id": "gemstyne:torrium_ingot"
+  }
+}

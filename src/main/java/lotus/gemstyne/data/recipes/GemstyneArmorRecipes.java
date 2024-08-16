@@ -1,144 +1,143 @@
 package lotus.gemstyne.data.recipes;
 
-import lotus.gemstyne.item.equipment.GemstyneArmorItems;
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
+import lotus.gemstyne.armor.ArmorHandler;
+import lotus.gemstyne.armor.ArmorSet;
+import lotus.gemstyne.item.ItemHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.*;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 abstract class GemstyneArmorRecipes extends FabricRecipeProvider {
 
-    public GemstyneArmorRecipes(FabricDataOutput output) {
-        super(output);
+    protected GemstyneArmorRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
 
-
-    protected static void generateArmorRecipes(Consumer<RecipeJsonProvider> exporter) {
+    protected static void generateArmorRecipes(RecipeExporter exporter) {
         // =====
         // <===== Aldus Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusHelmet(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusChestplate(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusLeggings(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.aldusBoots(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
+        offerArmorSetRecipes(exporter, ArmorHandler.ALDUS);
 
         // =====
         // <===== Bronzemail Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailHelmet(),
-                GemstyneOreItems.ORE_ITEMS.bronzeRing());
-        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailChestplate(),
-                GemstyneOreItems.ORE_ITEMS.bronzeRing());
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailLeggings(),
-                GemstyneOreItems.ORE_ITEMS.bronzeRing());
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzeMailBoots(),
-                GemstyneOreItems.ORE_ITEMS.bronzeRing());
+        offerArmorSetRecipes(exporter, ArmorHandler.BRONZEMAIL);
 
         // =====
         // <===== Bronzeplate Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateHelmet(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
-        offerBasicChestplateRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateChestplate(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateLeggings(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.bronzePlateBoots(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+        offerArmorSetRecipes(exporter, ArmorHandler.BRONZEPLATE);
 
         // =====
         // <===== Rendfire Armour =====>
         // =====
-        offerBasicHelmetRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireHelmet(),
-                GemstyneOreItems.ORE_ITEMS.crimoniteIngot());
+        offerBasicHelmetRecipe(exporter, ArmorHandler.RENDFIRE.helmet,
+            ItemHandler.CRIMONITE.ingot());
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate())
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ArmorHandler.RENDFIRE.chestplate)
                 .pattern("C C")
                 .pattern("CFC")
                 .pattern("CCC")
-                .input('C', GemstyneOreItems.ORE_ITEMS.crimoniteIngot())
-                .input('F', GemstyneOreItems.ORE_ITEMS.fireOpal())
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.ORE_ITEMS.fireOpal()),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.ORE_ITEMS.fireOpal()))
-                .criterion(FabricRecipeProvider.hasItem(GemstyneOreItems.ORE_ITEMS.crimoniteIngot()),
-                        FabricRecipeProvider.conditionsFromItem(GemstyneOreItems.ORE_ITEMS.crimoniteIngot()))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider
-                        .getRecipeName(GemstyneArmorItems.ARMOR_ITEMS.rendfireChestplate())));
+                .input('C', ItemHandler.CRIMONITE.ingot())
+                .input('F', ItemHandler.FIRE_OPAL)
+                .criterion(RecipeProvider.hasItem(ItemHandler.FIRE_OPAL),
+                        RecipeProvider.conditionsFromItem(ItemHandler.FIRE_OPAL))
+                .criterion(RecipeProvider.hasItem(ItemHandler.CRIMONITE.ingot()),
+                        RecipeProvider.conditionsFromItem(ItemHandler.CRIMONITE.ingot()))
+                .offerTo(exporter, Identifier.of(RecipeProvider
+                        .getRecipeName(ArmorHandler.RENDFIRE.chestplate)));
 
-        offerBasicLeggingsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireLeggings(),
-                GemstyneOreItems.ORE_ITEMS.crimoniteIngot());
-        offerBasicBootsRecipe(exporter, RecipeCategory.COMBAT, GemstyneArmorItems.ARMOR_ITEMS.rendfireBoots(),
-                GemstyneOreItems.ORE_ITEMS.crimoniteIngot());
+        offerBasicLeggingsRecipe(exporter, ArmorHandler.RENDFIRE.leggings,
+                ItemHandler.CRIMONITE.ingot());
+        offerBasicBootsRecipe(exporter, ArmorHandler.RENDFIRE.boots,
+                ItemHandler.CRIMONITE.ingot());
     }
 
 
     // =====
     // <===== Assistive Methods =====>
     // =====
+
+    /**
+     * <code>offerArmorSetRecipes</code> is a method to generate a full set of basic
+     * armor recipes.
+     * @param exporter RecipeJsonProvider
+     * @param armorSet Target ArmorSet for recipe generation.
+     */
+    private static void offerArmorSetRecipes(
+            RecipeExporter exporter,
+            ArmorSet armorSet
+    ) {
+        offerBasicHelmetRecipe(exporter, armorSet.helmet, armorSet.source);
+        offerBasicChestplateRecipe(exporter, armorSet.chestplate, armorSet.source);
+        offerBasicLeggingsRecipe(exporter, armorSet.leggings, armorSet.source);
+        offerBasicBootsRecipe(exporter, armorSet.boots, armorSet.source);
+    }
+
     private static void offerBasicHelmetRecipe(
-            Consumer<RecipeJsonProvider> exporter,
-             RecipeCategory category, Item output,
-             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+            RecipeExporter exporter,
+            Item output,
+            Item input
+    ) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("III")
                 .pattern("I I")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 
 
     private static void offerBasicChestplateRecipe(
-            Consumer<RecipeJsonProvider> exporter,
-            RecipeCategory category, Item output,
+            RecipeExporter exporter,
+            Item output,
             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("I I")
                 .pattern("III")
                 .pattern("III")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 
 
     private static void offerBasicLeggingsRecipe(
-            Consumer<RecipeJsonProvider> exporter,
-             RecipeCategory category, Item output,
-             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+            RecipeExporter exporter,
+            Item output,
+            Item input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("III")
                 .pattern("I I")
                 .pattern("I I")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 
 
     private static void offerBasicBootsRecipe(
-            Consumer<RecipeJsonProvider> exporter,
-             RecipeCategory category, Item output,
-             Item input) {
-        ShapedRecipeJsonBuilder.create(category, output)
+            RecipeExporter exporter,
+            Item output,
+            Item input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("I I")
                 .pattern("I I")
                 .input('I', input)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 }

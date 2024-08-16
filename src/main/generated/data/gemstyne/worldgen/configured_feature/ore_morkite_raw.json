@@ -1,16 +1,16 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "discard_chance_on_air_exposure": 0.05,
-    "size": 4,
+    "discard_chance_on_air_exposure": 0.0,
+    "size": 2,
     "targets": [
       {
         "state": {
-          "Name": "gemstyne:morkite_block"
+          "Name": "gemstyne:raw_morkite_block"
         },
         "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:morkite_ore_replaceables"
+          "block": "gemstyne:deepslate_morkite_ore",
+          "predicate_type": "minecraft:block_match"
         }
       }
     ]

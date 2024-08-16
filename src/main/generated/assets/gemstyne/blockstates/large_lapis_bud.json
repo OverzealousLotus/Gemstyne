@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "gemstyne:block/large_lapis_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "gemstyne:block/large_lapis_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gemstyne:block/large_lapis_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "gemstyne:block/large_lapis_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "gemstyne:block/large_lapis_bud"
+    },
+    "facing=west": {
+      "model": "gemstyne:block/large_lapis_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

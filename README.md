@@ -11,10 +11,15 @@ At the moment, Gemstyne is small, and works with common performance mods used by
 However, compatibility with other mods could cause problems, as I have not tested any for myself.
 
 ### Downloads
-#### Requirements: Fabric + Minecraft 1.19.4
+#### Requirements:
+- v0.0.1: Fabric + Minecraft 1.19.4
+- v0.0.2: Fabric + Minecraft 1.19.4
+- v0.0.4: Fabric + Minecraft 1.20.1
 #### Note: Updates will only include newer versions of Minecraft.
 - [Release v0.0.1](https://github.com/OverzealousLotus/Gemstyne/releases/tag/v0.0.1)
 - [Release v0.0.2](https://github.com/OverzealousLotus/Gemstyne/releases/tag/v0.0.2)
+- Release v0.0.3 does not exist.
+- [Release v0.0.4](https://github.com/OverzealousLotus/Gemstyne/releases/tag/v0.0.4)
 - 
 ### Special Thanks
 - [KaupenJoe](https://www.youtube.com/@ModdingByKaupenjoe)

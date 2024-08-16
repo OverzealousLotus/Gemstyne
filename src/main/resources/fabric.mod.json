@@ -8,8 +8,8 @@
 		"OverzealousLotus"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/OverzealousLotus/Gemstyne/discussions",
+		"sources": "https://github.com/OverzealousLotus/Gemstyne"
 	},
 	"license": "GPLv3",
 	"icon": "assets/gemstyne/icon.png",

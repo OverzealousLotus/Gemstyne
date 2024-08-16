@@ -15,9 +15,9 @@ public class GemstyneWorldGenerator extends FabricDynamicRegistryProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
-        // TODO!
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.DIMENSION_TYPE));
     }
 
     @Override

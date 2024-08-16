@@ -2,8 +2,8 @@
   "feature": "gemstyne:ore_tin_raw",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 5
+      "type": "minecraft:count",
+      "count": 90
     },
     {
       "type": "minecraft:in_square"

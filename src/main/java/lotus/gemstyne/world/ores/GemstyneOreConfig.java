@@ -1,188 +1,75 @@
 package lotus.gemstyne.world.ores;
 
-import lotus.gemstyne.world.GemstyneConfiguredFeatures;
+import lotus.gemstyne.util.GemstyneConstants;
+import lotus.gemstyne.world.WorldHandler;
 import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public class GemstyneOreConfig {
-    // =====
-    // <===== Overworld Keys =====>
-    // =====
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_MOCHITE_SMALL_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_mochite_small");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_MOCHITE_LARGE_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_mochite_large");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_MOCHITE_RAW_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_mochite_raw");
-
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_TIN_SMALL_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_tin_small");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_TIN_LARGE_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_tin_large");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_TIN_RAW_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_tin_raw");
-
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_URANIUM_SMALL_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_uranium_small");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_URANIUM_LARGE_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_uranium_large");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_URANIUM_RAW_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_uranium_raw");
-
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_MORKITE_EXPOSED_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_morkite_exposed");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_MORKITE_BURIED_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_morkite_buried");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_MORKITE_RAW_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_morkite_raw");
-
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_FIRE_OPAL_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_fire_opal");
-
-    // =====
-    // <===== Nether Keys =====>
-    // =====
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_CRIMONITE_SMALL_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_crimonite_small");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_CRIMONITE_LARGE_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_crimonite_large");
-
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_ALDUS_SMALL_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_aldus_small");
-    private static final RegistryKey<ConfiguredFeature<?, ?>> ORE_ALDUS_LARGE_KEY =
-            GemstyneConfiguredFeatures.registerKey("ore_aldus_large");
-
-    // =====
-    // <===== Extension Keys =====>
-    // =====
-    private static final RegistryKey<ConfiguredFeature<?, ?>> COMPRESSED_COAL_ORE_KEY =
-            GemstyneConfiguredFeatures.registerKey("compressed_coal_ore");
-
+    private GemstyneOreConfig() {}
 
     /** <h3>Function used to register all Ore Configuration Features.</h3>
      */
     public static void registerOreConfigFeatures(Registerable<ConfiguredFeature<?, ?>> context) {
         // =====
-        // <===== Overworld config features. =====>
+        // <=====| The Overworld |=====>
         // =====
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreFireOpalKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldFireOpalOres(), 3, 0.0f));
+        WorldHandler.AETHERIUM.overworldConfigFeatures(context, GemstyneConstants.SMALL, 3, 0.15f, false);
 
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMochiteSmallKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldMochiteOres(), 8, 0.0f)); // Vein size.
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMochiteLargeKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldMochiteOres(), 17, 0.0f));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMochiteRawKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getRawMochiteBlobs(), 5, 0.05f));
+        WorldHandler.BUBBLEGEM.overworldConfigFeatures(context, GemstyneConstants.SMALL, 5, 0.05f, false);
+        WorldHandler.BUBBLEGEM.overworldConfigFeatures(context, GemstyneConstants.LARGE, 10, 0.10f, false);
 
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreTinSmallKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldTinOres(), 7, 0.0f)); // Vein size.
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreTinLargeKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldTinOres(), 12, 0.0f));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreTinRawKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getRawTinBlobs(), 5, 0.05f));
+        WorldHandler.MOCHITE.overworldConfigFeatures(context, GemstyneConstants.SMALL, 8, 0.0f, false);
+        WorldHandler.MOCHITE.overworldConfigFeatures(context, GemstyneConstants.LARGE, 15, 0.05f, false);
+        WorldHandler.MOCHITE.overworldConfigFeatures(context, GemstyneConstants.RAW, 3, 0.00f, true);
+        WorldHandler.MOCHITE.overworldConfigFeatures(context, GemstyneConstants.RICH, 5, 0.05f, false, "rich_overworld");
 
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMorkiteExposedKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldMorkiteOres(), 7, 0.0f));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMorkiteBuriedKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldMorkiteOres(), 10, 0.7f));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreMorkiteRawKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getRawMorkiteBlobs(), 4, 0.05f));
+        WorldHandler.TIN.overworldConfigFeatures(context, GemstyneConstants.SMALL, 7, 0.0f, false);
+        WorldHandler.TIN.overworldConfigFeatures(context, GemstyneConstants.LARGE, 12, 0.0f, false);
+        WorldHandler.TIN.overworldConfigFeatures(context, GemstyneConstants.RAW, 3, 0.0f, true);
+
+        WorldHandler.MORKITE.overworldConfigFeatures(context, GemstyneConstants.BURIED, 8, 0.7f, false);
+        WorldHandler.MORKITE.overworldConfigFeatures(context, GemstyneConstants.EXPOSED, 5, 0.0f, false);
+        WorldHandler.MORKITE.overworldConfigFeatures(context, GemstyneConstants.RAW, 2, 0.0f, true);
 
 
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreUraniumSmallKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldUraniumOres(), 4, 0.5f));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreUraniumLargeKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getOverworldUraniumOres(), 10, 0.7f));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreUraniumRawKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getRawUraniumBlobs(), 2, 0.05f));
+        WorldHandler.URANIUM.overworldConfigFeatures(context, GemstyneConstants.SMALL, 4, 0.5f, false);
+        WorldHandler.URANIUM.overworldConfigFeatures(context, GemstyneConstants.LARGE, 10, 0.7f, false);
+        WorldHandler.URANIUM.overworldConfigFeatures(context, GemstyneConstants.RAW, 1, 0.0f, true);
 
         // =====
-        // <===== Nether config features. =====>
+        // <=====| The Nether |=====>
         // =====
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreCrimoniteSmallKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getNetherCrimoniteOres(), 3));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreCrimoniteLargeKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getNetherCrimoniteOres(), 7));
+        WorldHandler.ALDUS.netherConfigFeatures(context, GemstyneConstants.SMALL, 4, 0);
+        WorldHandler.ALDUS.netherConfigFeatures(context, GemstyneConstants.LARGE, 12, 0);
 
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreAldusSmallKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getNetherAldusOres(), 4));
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getOreAldusLargeKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getNetherAldusOres(), 12));
+        WorldHandler.BLAZITE.netherConfigFeatures(context, GemstyneConstants.SMALL, 5, 0);
+        WorldHandler.BLAZITE.netherConfigFeatures(context, GemstyneConstants.LARGE, 8, 0);
+
+        WorldHandler.CRIMONITE.netherConfigFeatures(context, GemstyneConstants.LARGE, 7, 0);
+        WorldHandler.CRIMONITE.netherConfigFeatures(context, GemstyneConstants.SMALL, 3, 0);
 
         // =====
-        // <===== Extension config features. =====>
+        // <=====| The End |=====>
         // =====
-        GemstyneConfiguredFeatures.register(context, GemstyneOreConfig.getCompressedCoalOreKey(), Feature.ORE,
-                new OreFeatureConfig(GemstyneOreLists.getCompressedCoalOres(), 10));
+
+        // =====
+        // <=====| Multi-Dimensional |=====>
+        // =====
+        WorldHandler.ENDER_PEARL.overworldConfigFeatures(context, GemstyneConstants.SMALL, 3, 0.2f, false);
+        WorldHandler.ENDER_PEARL.overworldConfigFeatures(context, GemstyneConstants.LARGE, 5, 0.5f, false);
+        WorldHandler.ENDER_PEARL.netherConfigFeatures(context, GemstyneConstants.NETHER, 7, 0.1f);
+        WorldHandler.ENDER_PEARL.endConfigFeatures(context, GemstyneConstants.END, 16, 0.05f);
+
+        WorldHandler.MUTALIUM.overworldConfigFeatures(context, GemstyneConstants.SMALL, 5, 0.2f, false);
+        WorldHandler.MUTALIUM.overworldConfigFeatures(context, GemstyneConstants.LARGE, 7, 0.5f, false);
+        WorldHandler.MUTALIUM.netherConfigFeatures(context, GemstyneConstants.NETHER, 8, 0.1f);
+        WorldHandler.MUTALIUM.endConfigFeatures(context, GemstyneConstants.END, 16, 0.05f);
+
+        WorldHandler.TORRIUM.overworldConfigFeatures(context, GemstyneConstants.SMALL, 5, 0.2f, false);
+        WorldHandler.TORRIUM.overworldConfigFeatures(context, GemstyneConstants.LARGE, 9, 0.5f, false);
+        WorldHandler.TORRIUM.netherConfigFeatures(context, GemstyneConstants.NETHER, 12, 0.0f);
+
     }
 
-
-    // =====
-    // <===== Getters =====>
-    // =====
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreMochiteSmallKey() {
-        return ORE_MOCHITE_SMALL_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreMochiteLargeKey() {
-        return ORE_MOCHITE_LARGE_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreMochiteRawKey() {
-        return ORE_MOCHITE_RAW_KEY;
-    }
-
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreUraniumSmallKey() {
-        return ORE_URANIUM_SMALL_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreUraniumLargeKey() {
-        return ORE_URANIUM_LARGE_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreUraniumRawKey() {
-        return ORE_URANIUM_RAW_KEY;
-    }
-
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreMorkiteExposedKey() {
-        return ORE_MORKITE_EXPOSED_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreMorkiteBuriedKey() {
-        return ORE_MORKITE_BURIED_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreMorkiteRawKey() {
-        return ORE_MORKITE_RAW_KEY;
-    }
-
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreFireOpalKey() {
-        return ORE_FIRE_OPAL_KEY;
-    }
-
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreCrimoniteSmallKey() {
-        return ORE_CRIMONITE_SMALL_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreCrimoniteLargeKey() {
-        return ORE_CRIMONITE_LARGE_KEY;
-    }
-
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreAldusSmallKey() {
-        return ORE_ALDUS_SMALL_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreAldusLargeKey() {
-        return ORE_ALDUS_LARGE_KEY;
-    }
-
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getCompressedCoalOreKey() {
-        return COMPRESSED_COAL_ORE_KEY;
-    }
-
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreTinSmallKey() {
-        return ORE_TIN_SMALL_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreTinLargeKey() {
-        return ORE_TIN_LARGE_KEY;
-    }
-    protected static RegistryKey<ConfiguredFeature<?, ?>> getOreTinRawKey() {
-        return ORE_TIN_RAW_KEY;
-    }
 }

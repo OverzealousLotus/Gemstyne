@@ -23,14 +23,7 @@
       },
       "inner_placements": [
         {
-          "Name": "gemstyne:ikarite_cluster",
-          "Properties": {
-            "facing": "up",
-            "waterlogged": "false"
-          }
-        },
-        {
-          "Name": "gemstyne:large_ikarite_bud",
+          "Name": "gemstyne:small_ikarite_bud",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
@@ -44,7 +37,14 @@
           }
         },
         {
-          "Name": "gemstyne:small_ikarite_bud",
+          "Name": "gemstyne:large_ikarite_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "gemstyne:ikarite_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
@@ -71,41 +71,35 @@
     "crack": {
       "base_crack_size": 0.5,
       "crack_point_offset": 1,
-      "generate_crack_chance": 0.1
+      "generate_crack_chance": 0.05
     },
     "distribution_points": {
       "type": "minecraft:uniform",
-      "value": {
-        "max_inclusive": 6,
-        "min_inclusive": 2
-      }
+      "max_inclusive": 6,
+      "min_inclusive": 2
     },
     "invalid_blocks_threshold": 1,
     "layers": {
-      "filling": 1.5,
-      "inner_layer": 1.2,
-      "middle_layer": 2.5,
-      "outer_layer": 3.5
+      "filling": 1.4,
+      "inner_layer": 1.0,
+      "middle_layer": 2.2,
+      "outer_layer": 3.0
     },
     "max_gen_offset": 18,
-    "min_gen_offset": -18,
-    "noise_multiplier": 0.075,
+    "min_gen_offset": -15,
+    "noise_multiplier": 0.07,
     "outer_wall_distance": {
       "type": "minecraft:uniform",
-      "value": {
-        "max_inclusive": 8,
-        "min_inclusive": 3
-      }
+      "max_inclusive": 8,
+      "min_inclusive": 3
     },
     "placements_require_layer0_alternate": true,
     "point_offset": {
       "type": "minecraft:uniform",
-      "value": {
-        "max_inclusive": 2,
-        "min_inclusive": 1
-      }
+      "max_inclusive": 2,
+      "min_inclusive": 1
     },
-    "use_alternate_layer0_chance": 0.1,
+    "use_alternate_layer0_chance": 0.08,
     "use_potential_placements_chance": 0.5
   }
 }

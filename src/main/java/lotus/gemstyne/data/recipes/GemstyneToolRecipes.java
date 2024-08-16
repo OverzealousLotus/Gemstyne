@@ -1,154 +1,153 @@
 package lotus.gemstyne.data.recipes;
 
-import lotus.gemstyne.item.spelunking.GemstyneOreItems;
-import lotus.gemstyne.item.equipment.GemstyneToolItems;
+import lotus.gemstyne.item.ItemHandler;
+import lotus.gemstyne.tool.ToolHandler;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.*;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 abstract class GemstyneToolRecipes extends FabricRecipeProvider {
-    public GemstyneToolRecipes(FabricDataOutput output) {
-        super(output);
+
+    protected GemstyneToolRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
 
-
-    protected static void generateToolRecipes(Consumer<RecipeJsonProvider> exporter) {
-        // =====
-        // <===== Aldus =====>
-        // =====
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusAxe(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusHoe(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusPickaxe(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.aldusShovel(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.TOOL_ITEMS.aldusSword(),
-                GemstyneOreItems.ORE_ITEMS.aldusIngot());
-
-        // =====
-        // <===== Bronze =====>
-        // =====
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeAxe(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeHoe(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzePickaxe(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneToolItems.TOOL_ITEMS.bronzeShovel(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
-        offerBasicToolRecipe(exporter, RecipeCategory.COMBAT, GemstyneToolItems.TOOL_ITEMS.bronzeSword(),
-                GemstyneOreItems.ORE_ITEMS.bronzeIngot());
+    protected static void generateToolRecipes(RecipeExporter exporter) {
+        ToolHandler.ALDUS.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), ToolHandler.ALDUS.source));
+        ToolHandler.BRONZE.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), ToolHandler.BRONZE.source));
+        ToolHandler.MUTALIUM.getToolMap().values().forEach(toolPair -> offerBasicToolRecipe(exporter, toolPair.tool(), ToolHandler.MUTALIUM.source));
 
         // =====
         // <===== Rendfire =====>
         // =====
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
-                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireAxe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
-                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireHoe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
-                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfirePickaxe());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
-                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireShovel());
-        offerCoreToolRecipe(exporter, RecipeCategory.TOOLS, GemstyneOreItems.ORE_ITEMS.crimoniteIngot(),
-                GemstyneOreItems.ORE_ITEMS.fireOpal(), GemstyneToolItems.TOOL_ITEMS.rendfireSword());
+        offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getAxe());
+        offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getHoe());
+        offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getPickaxe());
+        offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
+                ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getShovel());
+        offerCoreToolRecipe(exporter, ItemHandler.CRIMONITE.ingot(),
+            ItemHandler.FIRE_OPAL, ToolHandler.RENDFIRE.getSword());
     }
 
-
     private static void offerBasicToolRecipe(
-            Consumer<RecipeJsonProvider> exporter,
-            RecipeCategory category, Item output,
+            RecipeExporter exporter,
+            Item output,
             Item input) {
-        String pattern_1;
-        String pattern_2;
-        String pattern_3;
+        String patternOne;
+        String patternTwo;
+        String patternThree;
 
-        if (output instanceof AxeItem) {
-            pattern_1 = "II";
-            pattern_2 = "SI";
-            pattern_3 = "S ";
-        } else if (output instanceof HoeItem) {
-            pattern_1 = "II";
-            pattern_2 = "S ";
-            pattern_3 = "S ";
-        } else if (output instanceof PickaxeItem) {
-            pattern_1 = "III";
-            pattern_2 = " S ";
-            pattern_3 = " S ";
-        } else if (output instanceof ShovelItem) {
-            pattern_1 = "I";
-            pattern_2 = "S";
-            pattern_3 = "S";
-        } else {
-            pattern_1 = "I";
-            pattern_2 = "I";
-            pattern_3 = "S";
+        switch (output) {
+            case AxeItem ignored -> {
+                patternOne = "II";
+                patternTwo = "SI";
+                patternThree = "S ";
+            }
+            case HoeItem ignored -> {
+                patternOne = "II";
+                patternTwo = "S ";
+                patternThree = "S ";
+            }
+            case PickaxeItem ignored -> {
+                patternOne = "III";
+                patternTwo = " S ";
+                patternThree = " S ";
+            }
+            case ShovelItem ignored -> {
+                patternOne = "I";
+                patternTwo = "S";
+                patternThree = "S";
+            }
+            case null, default -> {
+                patternOne = "I";
+                patternTwo = "I";
+                patternThree = "S";
+            }
         }
 
-        ShapedRecipeJsonBuilder.create(category, output)
-                .pattern(pattern_1)
-                .pattern(pattern_2)
-                .pattern(pattern_3)
+        if(output instanceof SwordItem) {
+            ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
+                .pattern(patternOne)
+                .pattern(patternTwo)
+                .pattern(patternThree)
                 .input('I', input)
                 .input('S', Items.STICK)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
-                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                    RecipeProvider.conditionsFromItem(input))
+                .criterion(RecipeProvider.hasItem(Items.STICK),
+                    RecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
+        } else {
+            ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
+                .pattern(patternOne)
+                .pattern(patternTwo)
+                .pattern(patternThree)
+                .input('I', input)
+                .input('S', Items.STICK)
+                .criterion(RecipeProvider.hasItem(input),
+                    RecipeProvider.conditionsFromItem(input))
+                .criterion(RecipeProvider.hasItem(Items.STICK),
+                    RecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
+        }
     }
 
 
     private static void offerCoreToolRecipe(
-            Consumer<RecipeJsonProvider> exporter,
-            RecipeCategory category, Item input, Item core, Item output) {
-        String pattern_1;
-        String pattern_2;
-        String pattern_3;
+            RecipeExporter exporter,
+            Item input,
+            Item core,
+            Item output) {
+        String patternOne;
+        String patternTwo;
+        String patternThree;
 
         if (output instanceof AxeItem) {
-            pattern_1 = "OI";
-            pattern_2 = "SI";
-            pattern_3 = "S ";
+            patternOne = "OI";
+            patternTwo = "SI";
+            patternThree = "S ";
         } else if (output instanceof HoeItem) {
-            pattern_1 = "OI";
-            pattern_2 = "S ";
-            pattern_3 = "S ";
+            patternOne = "OI";
+            patternTwo = "S ";
+            patternThree = "S ";
         } else if (output instanceof PickaxeItem) {
-            pattern_1 = "IOI";
-            pattern_2 = " S ";
-            pattern_3 = " S ";
+            patternOne = "IOI";
+            patternTwo = " S ";
+            patternThree = " S ";
         } else if (output instanceof ShovelItem) {
-            pattern_1 = "IO";
-            pattern_2 = "S ";
-            pattern_3 = "S ";
+            patternOne = "IO";
+            patternTwo = "S ";
+            patternThree = "S ";
         } else {
-            pattern_1 = "I ";
-            pattern_2 = "IO";
-            pattern_3 = "S ";
+            patternOne = "I ";
+            patternTwo = "IO";
+            patternThree = "S ";
         }
 
-        ShapedRecipeJsonBuilder.create(category, output)
-                .pattern(pattern_1)
-                .pattern(pattern_2)
-                .pattern(pattern_3)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
+                .pattern(patternOne)
+                .pattern(patternTwo)
+                .pattern(patternThree)
                 .input('I', input)
                 .input('O', core)
                 .input('S', Items.STICK)
-                .criterion(FabricRecipeProvider.hasItem(input),
-                        FabricRecipeProvider.conditionsFromItem(input))
-                .criterion(FabricRecipeProvider.hasItem(core),
-                        FabricRecipeProvider.conditionsFromItem(core))
-                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
-                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .criterion(RecipeProvider.hasItem(input),
+                        RecipeProvider.conditionsFromItem(input))
+                .criterion(RecipeProvider.hasItem(core),
+                    RecipeProvider.conditionsFromItem(core))
+                .criterion(RecipeProvider.hasItem(Items.STICK),
+                    RecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(RecipeProvider.getRecipeName(output)));
     }
 }

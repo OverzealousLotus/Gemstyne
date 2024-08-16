@@ -1,15 +1,25 @@
 plugins {
-	id 'fabric-loom' version '1.3-SNAPSHOT'
+	id 'fabric-loom' version '1.7-SNAPSHOT'
 	id 'maven-publish'
 	
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+java {
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
+	// If you remove this line, sources will not be generated.
+	withSourcesJar()
 
-archivesBaseName = project.archives_base_name
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
 version = project.mod_version
 group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
@@ -17,9 +27,27 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
+	//  https://maven.wispforest.io/io/wispforest/owo-lib/
+	maven { url 'https://maven.wispforest.io' }
+
+	/*
+	<=====| Modrinth |=====>
+	Used by:
+		- Additional Entity Attributes
+	*/
+	maven { url = "https://api.modrinth.com/maven/" }
+
+	/*
+	<=====| Maven central |=====>
+	Used by:
+		- Mixin Extras
+	*/
+	mavenCentral()
 }
 
 loom {
+	accessWidenerPath = file("src/main/resources/gemstyne.accessWidener")
     runs {
         // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
         datagen {
@@ -45,18 +73,26 @@ sourceSets {
     }
 }
 dependencies {
-	// To change the versions see the gradle.properties file
+	// Requirements
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
+	// Fabric API.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
-	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
+	// owo-lib
+	modImplementation(annotationProcessor("io.wispforest:owo-lib:${project.owo_version}"))
+	include "io.wispforest:owo-sentinel:${project.owo_version}"
+
+	// Additional Entity Attributes
+	modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
+
+	// Mixin Extras
+	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${project.me_version}")))
+
+	// Apache Commons Text
+	implementation("org.apache.commons:commons-text:${project.text_version}")
 }
 
 processResources {
@@ -68,26 +104,19 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
-}
-
-java {
-	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-	// if it is present.
-	// If you remove this line, sources will not be generated.
-	withSourcesJar()
+	it.options.release.set(21)
 }
 
 jar {
 	from("LICENSE") {
-		rename { "${it}_${project.archivesBaseName}"}
+		rename { "${it}_${project.base.archivesName.get()}"}
 	}
 }
 
 // configure the maven publication
 publishing {
 	publications {
-		mavenJava(MavenPublication) {
+		create("mavenJava", MavenPublication) {
 			from components.java
 		}
 	}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rendfire_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gemstyne:rendfire_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:crimonite_ingot_from_blasting_rendfire_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rendfire_chestplate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crimonite_ingot_from_blasting_rendfire_chestplate"
+    ]
+  }
+}

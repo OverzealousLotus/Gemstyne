@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    },
+    {
+      "item": "gemstyne:mutalium_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "gemstyne:mutalium_ingot"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "gemstyne",
+  "ingredient": {
+    "item": "gemstyne:raw_mochite"
+  },
+  "result": {
+    "id": "gemstyne:mochite"
+  }
+}

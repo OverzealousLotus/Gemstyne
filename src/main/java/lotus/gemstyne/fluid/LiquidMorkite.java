@@ -1,6 +1,5 @@
 package lotus.gemstyne.fluid;
 
-import lotus.gemstyne.item.GemstyneItemHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,12 +17,20 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 public abstract class LiquidMorkite extends FlowableFluid {
+    @Override
+    public Fluid getFlowing() {
+        return FluidHandler.FLOWING_LIQUID_MORKITE;
+    }
+
+    @Override
+    public Fluid getStill() {
+        return FluidHandler.STILL_LIQUID_MORKITE;
+    }
 
     @Override
     protected boolean isInfinite(World world) {
         return false;
     }
-
 
     @Override
     protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {
@@ -31,40 +38,20 @@ public abstract class LiquidMorkite extends FlowableFluid {
         Block.dropStacks(state, world, pos, blockEntity);
     }
 
-
-    @Override
+    /*@Override
     protected int getFlowSpeed(WorldView world) {
         return world.getDimension().ultrawarm() ? 4 : 2;
-    }
+    }*/
 
     @Override
     protected int getLevelDecreasePerBlock(WorldView world) {
         return world.getDimension().ultrawarm() ? 1 : 2;
     }
 
-
     @Override
-    public boolean matchesType(Fluid fluid) {
-        return fluid == getStill() || fluid == getFlowing();
+    public Item getBucketItem() {
+        return FluidHandler.LIQUID_MORKITE_BUCKET;
     }
-
-    @Override
-    public int getLevel(FluidState state) {
-        return 10;
-    }
-
-
-    @Override
-    public int getTickRate(WorldView world) {
-        return world.getDimension().ultrawarm() ? 10 : 30;
-    }
-
-
-    @Override
-    protected float getBlastResistance() {
-        return 100f;
-    }
-
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
@@ -72,32 +59,33 @@ public abstract class LiquidMorkite extends FlowableFluid {
     }
 
     @Override
-    public Fluid getStill() {
-        return GemstyneFluids.STILL_LIQUID_MORKITE;
+    public int getTickRate(WorldView world) {
+        return world.getDimension().ultrawarm() ? 10 : 30;
     }
-
 
     @Override
-    public Fluid getFlowing() {
-        return GemstyneFluids.FLOWING_LIQUID_MORKITE;
+    protected float getBlastResistance() {
+        return 100f;
     }
-
 
     @Override
-    public Item getBucketItem() {
-        return GemstyneItemHandler.LIQUID_MORKITE_BUCKET;
+    public boolean matchesType(Fluid fluid) {
+        return fluid == getStill() || fluid == getFlowing();
     }
-
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return GemstyneFluids.LIQUID_MORKITE_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return FluidHandler.LIQUID_MORKITE_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
-
 
     @Override
     public boolean isStill(FluidState state) {
         return false;
+    }
+
+    @Override
+    public int getLevel(FluidState state) {
+        return 0;
     }
 
     public static class Flowing extends LiquidMorkite {
@@ -105,6 +93,11 @@ public abstract class LiquidMorkite extends FlowableFluid {
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
             super.appendProperties(builder);
             builder.add(LEVEL);
+        }
+
+        @Override
+        protected int getMaxFlowDistance(WorldView world) {
+            return 4;
         }
 
         @Override
@@ -120,8 +113,13 @@ public abstract class LiquidMorkite extends FlowableFluid {
 
     public static class Still extends LiquidMorkite {
         @Override
+        protected int getMaxFlowDistance(WorldView world) {
+            return 4;
+        }
+
+        @Override
         public int getLevel(FluidState state) {
-            return 10;
+            return 8;
         }
 
         @Override

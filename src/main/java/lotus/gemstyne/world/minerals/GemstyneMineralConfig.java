@@ -8,6 +8,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
 public final class GemstyneMineralConfig {
+    private GemstyneMineralConfig() {}
+
     public static final RegistryKey<ConfiguredFeature<?, ?>> HALITE_KEY =
             GemstyneConfiguredFeatures.registerKey("halite");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PUMICE_KEY =

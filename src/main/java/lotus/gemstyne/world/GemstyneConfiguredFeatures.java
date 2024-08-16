@@ -1,8 +1,8 @@
 package lotus.gemstyne.world;
 
 import com.google.common.collect.ImmutableList;
-import lotus.gemstyne.Gemstyne;
-import lotus.gemstyne.fluid.GemstyneFluids;
+import lotus.gemstyne.fluid.FluidHandler;
+import lotus.gemstyne.util.GemstyneRegistry;
 import lotus.gemstyne.world.geodes.GemstyneGeodeConfig;
 import lotus.gemstyne.world.minerals.GemstyneMineralConfig;
 import lotus.gemstyne.world.ores.GemstyneOreConfig;
@@ -12,23 +12,13 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
 
+/** Configuration of Features for world generation. Keys must be registered first,
+ * then using the bootstrap method, create a list of target blocks to be replaced.
+ * Finally, we move to the actual configuration at the end, where settings may vary. */
 public final class GemstyneConfiguredFeatures {
-    /** Configuration of Features for world generation. Keys must be registered first,
-     * then using the bootstrap method, create a list of target blocks to be replaced.
-     * Finally, we move to the actual configuration at the end, where settings may vary. */
-
-
-
-    // =====
-    // ==========
-    // <========== Key Registration ==========>
-    // ==========
-    // =====
-
-
+    private GemstyneConfiguredFeatures() {}
 
     // =====
     // <===== Misc =====>
@@ -43,13 +33,9 @@ public final class GemstyneConfiguredFeatures {
         // <========== Configuration Lists ==========>
         // ==========
         // =====
-
-
-
         ImmutableList<OreFeatureConfig.Target> liquidMorkiteReservoirs =
                 ImmutableList.of(OreFeatureConfig.createTarget(
-                        deepslateReplaceables, GemstyneFluids.STILL_LIQUID_MORKITE.getDefaultState().getBlockState()));
-
+                        deepslateReplaceables, FluidHandler.STILL_LIQUID_MORKITE.getDefaultState().getBlockState()));
 
 
         // =====
@@ -75,7 +61,7 @@ public final class GemstyneConfiguredFeatures {
     // ==========
     // =====
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(Gemstyne.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, GemstyneRegistry.id(name));
     }
 
     public static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,

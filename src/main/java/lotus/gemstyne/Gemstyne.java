@@ -1,46 +1,53 @@
 package lotus.gemstyne;
 
-import lotus.gemstyne.block.GemstyneBlocks;
-import lotus.gemstyne.effect.GemstyneEffects;
+import lotus.gemstyne.config.GemstyneConfig;
+import lotus.gemstyne.entity.EntityHandler;
+import lotus.gemstyne.entity.custom.AetherZombie;
 import lotus.gemstyne.event.UraniumBreakHandler;
-import lotus.gemstyne.fluid.GemstyneFluids;
-import lotus.gemstyne.item.GemstyneItemGroup;
-import lotus.gemstyne.item.GemstyneItemHandler;
-import lotus.gemstyne.util.GemstyneRegistries;
-import lotus.gemstyne.world.gen.ModWorldGeneration;
+import lotus.gemstyne.world.gen.GemstyneWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Gemstyne implements ModInitializer {
-	// My ModID
+	// Gemstyne Mod Id.
 	public static final String MOD_ID = "gemstyne";
 
 	// A simple way to log messages or events.
-	public static final Logger LOGGER = LoggerFactory.getLogger("gemstyne");
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final GemstyneConfig CONFIG = GemstyneConfig.createAndLoad();
 
-	/** Make sure to dataGen each time new items, or ores are added, or if-
-	 * -existing items/ores are modified in the files to see change.
-	 * Everything must be done sequentially.
-	 * If we try to generate ore that does not exist then mod dies. */
+	/** <p>Make sure to dataGen each time new items, ores, or blocks are modified/added.</p>
+	 * <p>Everything must be done sequentially.</p>
+	 * <p>If you try to generate Ore that does not exist, Minecraft will crash.</p> */
 	@Override
 	public void onInitialize() {
-		// Step I | Dependencies
-		GemstyneFluids.register();
-		GemstyneItemGroup.registerItemGroups();
+		Overwatch.modObserver();
+
+		// ///// Step I | Dependencies /////
+		Gemstyne.LOGGER.info("[Gemstyne] Registering Dependencies for " + Gemstyne.MOD_ID + "!");
+		Overwatch.registerDependencies();
+		Gemstyne.LOGGER.info("[Gemstyne] Successfully registered Dependencies!");
 
 		// Step II | Essentials
-		GemstyneItemHandler.registerModItems();
-		GemstyneBlocks.registerModBlocks();
-        GemstyneRegistries.registerModStuff();
+		Gemstyne.LOGGER.info("[Gemstyne] Registering Essentials for " + Gemstyne.MOD_ID + "!");
+		Overwatch.registerEssentials();
+		FabricDefaultAttributeRegistry.register(EntityHandler.AETHER_ZOMBIE, AetherZombie.createAetherZombieAttributes());
+		Gemstyne.LOGGER.info("[[ Successfully registered Essentials! ]]");
 
 		// Step III | World
-		ModWorldGeneration.generateModWorldGen();
-		GemstyneEffects.RegisterEffects();
+		Gemstyne.LOGGER.info("[[ Registering World Configuration for " + Gemstyne.MOD_ID + "! ]]");
+		GemstyneWorldGeneration.generateModWorldGen();
+		Gemstyne.LOGGER.info("[[ Successfully registered World Configuration!");
 
 		// Step IV | Event Handlers
+		Gemstyne.LOGGER.info("[[ Registering Event Handlers for " + Gemstyne.MOD_ID + "! ]]");
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());
+		Gemstyne.LOGGER.info("[[ Successfully registered Event Handlers!");
+
+		Gemstyne.LOGGER.info("Gemstyne has successfully finished initialization!");
 	}
 }

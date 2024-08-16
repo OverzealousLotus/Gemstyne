@@ -1,7 +1,7 @@
 package lotus.gemstyne.world.minerals;
 
 import lotus.gemstyne.world.GemstynePlacedFeatures;
-import lotus.gemstyne.world.GemstyneOrePlacement;
+import lotus.gemstyne.world.util.GemstyneOrePlacement;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.gen.YOffset;
@@ -9,6 +9,8 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 public final class GemstyneMineralPlaced {
+    private GemstyneMineralPlaced() {}
+
     // =====
     // <===== Minerals =====>
     // =====
