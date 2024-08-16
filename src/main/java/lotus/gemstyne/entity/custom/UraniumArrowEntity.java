@@ -62,6 +62,7 @@ public class UraniumArrowEntity extends PersistentProjectileEntity {
         Entity entity = this.getEffectCause();
         target.addStatusEffect(new StatusEffectInstance(EffectHandler.WEAK_RADIATION, 400, 1));
         PotionContentsComponent potionContentsComponent = this.getPotionContents();
+      
         if (potionContentsComponent.potion().isPresent()) {
             for (var statusEffectInstance : potionContentsComponent.potion().get().value().getEffects()) {
                 target.addStatusEffect(

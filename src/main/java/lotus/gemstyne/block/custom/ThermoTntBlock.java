@@ -44,6 +44,7 @@ public class ThermoTntBlock extends TntBlock {
             prime(world, pos);
             world.removeBlock(pos, false);
         }
+
     }
 
     @Override
