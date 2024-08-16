@@ -20,8 +20,8 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class UraniumArrowEntity extends PersistentProjectileEntity {
-    private static final ItemStack DEFAULT_STACK = new ItemStack(ItemHandler.URANIUM_ARROW);
     private static final TrackedData<Integer> COLOR = DataTracker.registerData(UraniumArrowEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    public static final ItemStack URANIUM_ARROW_STACK = new ItemStack(ItemHandler.URANIUM_ARROW);
 
     public UraniumArrowEntity(EntityType<UraniumArrowEntity> type, World world) {
         super(type, world);
@@ -29,7 +29,7 @@ public class UraniumArrowEntity extends PersistentProjectileEntity {
     }
 
     public UraniumArrowEntity(LivingEntity shooter, World world, @Nullable ItemStack shotFrom) {
-        super(EntityHandler.URANIUM_ARROW, shooter, world, DEFAULT_STACK, shotFrom);
+        super(EntityHandler.URANIUM_ARROW, shooter, world, URANIUM_ARROW_STACK, shotFrom);
         this.initColor();
     }
 
@@ -52,44 +52,17 @@ public class UraniumArrowEntity extends PersistentProjectileEntity {
     }
 
     @Override
-    public void tick() {
-        super.tick();
-        if (this.getWorld().isClient) {
-            if (this.inGround) {
-                if (this.inGroundTime % 5 == 0) {
-                    this.spawnParticles(1);
-                }
-            } else {
-                this.spawnParticles(2);
-            }
-        } else if (this.inGround && this.inGroundTime != 0 && !this.getPotionContents().equals(PotionContentsComponent.DEFAULT) && this.inGroundTime >= 600) {
-            this.getWorld().sendEntityStatus(this, (byte) 0);
-            this.setStack(DEFAULT_STACK);
-        }
-    }
-
-    private void spawnParticles(int amount) {
-        int i = this.getColor();
-        if (i != -1 && amount > 0) {
-            for (int j = 0; j < amount; ++j) {
-                this.getWorld()
-                    .addParticle(
-                        EntityEffectParticleEffect.create(ParticleTypes.ENTITY_EFFECT, i), this.getParticleX(0.5), this.getRandomBodyY(), this.getParticleZ(0.5), 0.0, 0.0, 0.0
-                    );
-            }
-        }
-    }
-
-    public int getColor() {
-        return this.dataTracker.get(COLOR);
+    protected ItemStack getDefaultItemStack() {
+        return URANIUM_ARROW_STACK;
     }
 
     @Override
     protected void onHit(LivingEntity target) {
         super.onHit(target);
         Entity entity = this.getEffectCause();
-        PotionContentsComponent potionContentsComponent = this.getPotionContents();
         target.addStatusEffect(new StatusEffectInstance(EffectHandler.WEAK_RADIATION, 400, 1));
+        PotionContentsComponent potionContentsComponent = this.getPotionContents();
+      
         if (potionContentsComponent.potion().isPresent()) {
             for (var statusEffectInstance : potionContentsComponent.potion().get().value().getEffects()) {
                 target.addStatusEffect(
@@ -110,8 +83,42 @@ public class UraniumArrowEntity extends PersistentProjectileEntity {
         }
     }
 
+    public int getColor() {
+        return this.dataTracker.get(COLOR);
+    }
+
     @Override
-    protected ItemStack getDefaultItemStack() {
-        return DEFAULT_STACK;
+    protected void initDataTracker(DataTracker.Builder builder) {
+        super.initDataTracker(builder);
+        builder.add(COLOR, -1);
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (this.getWorld().isClient) {
+            if (this.inGround) {
+                if (this.inGroundTime % 5 == 0) {
+                    this.spawnParticles(1);
+                }
+            } else {
+                this.spawnParticles(2);
+            }
+        } else if (this.inGround && this.inGroundTime != 0 && !this.getPotionContents().equals(PotionContentsComponent.DEFAULT) && this.inGroundTime >= 600) {
+            this.getWorld().sendEntityStatus(this, (byte) 0);
+            this.setStack(URANIUM_ARROW_STACK);
+        }
+    }
+
+    private void spawnParticles(int amount) {
+        int i = this.getColor();
+        if (i != -1 && amount > 0) {
+            for (int j = 0; j < amount; ++j) {
+                this.getWorld()
+                    .addParticle(
+                        EntityEffectParticleEffect.create(ParticleTypes.ENTITY_EFFECT, i), this.getParticleX(0.5), this.getRandomBodyY(), this.getParticleZ(0.5), 0.0, 0.0, 0.0
+                    );
+            }
+        }
     }
 }

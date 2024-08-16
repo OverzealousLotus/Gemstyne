@@ -21,11 +21,8 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
-
-    RegistryWrapper.WrapperLookup registryLookup;
     public GemstyneLootProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, registryLookup);
-        this.registryLookup = registryLookup.join();
     }
 
     @Override
@@ -136,7 +133,7 @@ public final class GemstyneLootProvider extends FabricBlockLootTableProvider {
     // <===== Assistive Methods =====>
     // ======
     public void gemstyneRichOreDrops(Block ore, Item drop, float min, float max) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+        RegistryWrapper.Impl<Enchantment> impl = super.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
         LootTable.Builder table = dropsWithSilkTouch(ore,
                 this.applyExplosionDecay(ore, ((LeafEntry.Builder<?>) ItemEntry.builder(drop).apply(
                         SetCountLootFunction

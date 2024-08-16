@@ -16,7 +16,8 @@ import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
-import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -73,13 +74,13 @@ public class ThermoTntBlock extends TntBlock {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+    public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos position, PlayerEntity player, Hand hand, BlockHitResult result) {
         ItemStack itemStack = player.getStackInHand(player.preferredHand);
         if (!itemStack.isOf(Items.FLINT_AND_STEEL) && !itemStack.isOf(Items.FIRE_CHARGE)) {
-            return super.onUse(state, world, pos, player, hit);
+            return super.onUseWithItem(stack, state, world, position, player, hand, result);
         } else {
-            prime(world, pos, player);
-            world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
+            prime(world, position, player);
+            world.setBlockState(position, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
             Item item = itemStack.getItem();
             if (!player.isCreative()) {
                 if (itemStack.isOf(Items.FLINT_AND_STEEL)) {
@@ -90,7 +91,7 @@ public class ThermoTntBlock extends TntBlock {
             }
 
             player.incrementStat(Stats.USED.getOrCreateStat(item));
-            return ActionResult.success(world.isClient);
+            return ItemActionResult.success(world.isClient);
         }
     }
 
