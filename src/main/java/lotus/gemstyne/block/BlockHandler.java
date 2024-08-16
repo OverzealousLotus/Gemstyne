@@ -42,7 +42,7 @@ public final class BlockHandler {
     public static final BlockSet AETHERIUM = BlockSet.Builder.start("aetherium")
         .setExperience(12, 20).setStrength(5.0f, 5.0f)
         .setLevel(GemstyneMiningLevels.NEEDS_DIAMOND_TOOL)
-        .createOreType(GemstyneConstants.DEEPSLATE)
+        .setEffect(EffectHandler.AETHERIUM_RADIATION).createOreType(GemstyneConstants.DEEPSLATE, 60)
         .end();
 
     public static final BlockSet BUBBLEGEM = BlockSet.Builder.start("bubblegem")
