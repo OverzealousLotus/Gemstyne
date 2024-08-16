@@ -29,12 +29,7 @@ public class AfflictiveOre extends ExperienceDroppingBlock {
         this.type = type;
     }
 
-    /** 
-     * @deprecated Minecraft unnecessarily marks methods as deprecated. If you ever encounter a warning against overriding,
-     * then know it actually means: "Override this method, don't call."
-     */
     @Override
-    @Deprecated
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
         super.onStacksDropped(state, world, pos, tool, dropExperience);
         if (dropExperience) {
@@ -43,27 +38,9 @@ public class AfflictiveOre extends ExperienceDroppingBlock {
     }
 
     /**
-     * <code>afflictPlayer</code> is used to handle adding a status effect to a player.
-     * <ul>There are only three possible cases:
-     *  <li>Pure Blocks</li>
-     *  <li>Raw Blocks</li>
-     *  <li>Any type of ores.</li>
-     * </ul>
-     * Duration is calculated using simple multiplication.
-     * @param player The Player Entity in the world.
-     */
-    protected void afflictPlayer(PlayerEntity player) {
-        switch(this.type) {
-            case PURE -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration  * 3, 1));
-            case RAW -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration * 2, 1));
-            default -> player.addStatusEffect(new StatusEffectInstance(this.effect, this.duration, 1));
-        }
-    }
-
-    /**
-     * <code>afflictEntity</code> is called when any Entity, including a Player steps on this block.
-     * Similar to <code>afflictPlayer</code>, there are only three possible cases.
-     * @param entity The Entity in the world.
+     * Adds a {@link StatusEffect} to a given entity. The strength is dependent on the type of block
+     * interacted with.
+     * @param entity Target entity
      */
     protected void afflictEntity(LivingEntity entity) {
         switch(this.type) {
@@ -76,7 +53,7 @@ public class AfflictiveOre extends ExperienceDroppingBlock {
     @Override
     public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!world.isClient() && !player.isSpectator() && !player.isCreative()) {
-            afflictPlayer(player);
+            afflictEntity(player);
         }
 
         return super.onBreak(world, pos, state, player);
