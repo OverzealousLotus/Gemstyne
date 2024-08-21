@@ -3,11 +3,7 @@ package lotus.gemstyne.util;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
-import lotus.gemstyne.block.BlockHandler;
-import lotus.gemstyne.fluid.FluidHandler;
 import lotus.gemstyne.item.ItemSet;
-import lotus.gemstyne.item.ItemHandler;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -76,27 +72,5 @@ public class GemstyneRegistry {
     public static Block designateBlock(String path, Block block) {
         Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE).tab(1)));
         return Registry.register(Registries.BLOCK, id(path), block);
-    }
-
-    /*
-     * Registers {@link DamageSource}
-     * @param name Name of the damage source.
-     * @return Returns the assigned damage source.
-     */
-    /*public static DamageSource registerDamage(String name) {
-        return GemstyneDamageSources.create(RegistryKey.of(RegistryKeys.DAMAGE_TYPE, id(name)));
-    }*/
-
-    private static void registerFuels() {
-        Gemstyne.LOGGER.info("Registering Fuel Items for " + Gemstyne.MOD_ID + "...");
-
-        FuelRegistry registry = FuelRegistry.INSTANCE;
-        registry.add(ItemHandler.MORKITE, 2000);
-        registry.add(BlockHandler.MORKITE.rawBlock(), 20000);
-        registry.add(FluidHandler.LIQUID_MORKITE_BUCKET, 24000);
-    }
-
-    public static void registerMisc() {
-        registerFuels();
     }
 }

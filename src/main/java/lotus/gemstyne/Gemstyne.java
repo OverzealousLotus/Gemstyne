@@ -28,26 +28,22 @@ public class Gemstyne implements ModInitializer {
 		Overwatch.modObserver();
 
 		// ///// Step I | Dependencies /////
-		Gemstyne.LOGGER.info("[Gemstyne] Registering Dependencies for " + Gemstyne.MOD_ID + "!");
 		Overwatch.registerDependencies();
-		Gemstyne.LOGGER.info("[Gemstyne] Successfully registered Dependencies!");
 
 		// Step II | Essentials
-		Gemstyne.LOGGER.info("[Gemstyne] Registering Essentials for " + Gemstyne.MOD_ID + "!");
 		Overwatch.registerEssentials();
 		FabricDefaultAttributeRegistry.register(EntityHandler.AETHER_ZOMBIE, AetherZombie.createAetherZombieAttributes());
-		Gemstyne.LOGGER.info("[[ Successfully registered Essentials! ]]");
 
 		// Step III | World
-		Gemstyne.LOGGER.info("[[ Registering World Configuration for " + Gemstyne.MOD_ID + "! ]]");
+		Overwatch.info("~> Registering World Configuration...");
 		GemstyneWorldGeneration.generateModWorldGen();
-		Gemstyne.LOGGER.info("[[ Successfully registered World Configuration!");
+		Overwatch.info("~> Successfully registered World Configuration!");
 
 		// Step IV | Event Handlers
-		Gemstyne.LOGGER.info("[[ Registering Event Handlers for " + Gemstyne.MOD_ID + "! ]]");
+		Overwatch.info("~> Registering Event Handlers...");
 		AttackBlockCallback.EVENT.register(new UraniumBreakHandler());
-		Gemstyne.LOGGER.info("[[ Successfully registered Event Handlers!");
+		Overwatch.info("~> Successfully registered Event Handlers!");
 
-		Gemstyne.LOGGER.info("Gemstyne has successfully finished initialization!");
+		Overwatch.info("~> Initialization complete. <~");
 	}
 }

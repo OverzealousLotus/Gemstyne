@@ -1,6 +1,6 @@
 package lotus.gemstyne.fluid;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.block.AbstractBlock;
@@ -30,6 +30,7 @@ public class FluidHandler {
             new OwoItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).group(GemstyneCreativeGroup.GEMSTYNE)));
 
     public static void registerFluids() {
-        Gemstyne.LOGGER.info("Registering Fluid for " + Gemstyne.MOD_ID);
+        Overwatch.info("Registering Fluids...");
+        Overwatch.info("Successfully registered Fluids!");
     }
 }

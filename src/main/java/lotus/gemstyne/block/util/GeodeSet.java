@@ -4,14 +4,14 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimap;
 import io.wispforest.owo.util.TagInjector;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.block.custom.BuddingCrystallineBlock;
 import lotus.gemstyne.block.custom.CrystallineBlockBud;
 import lotus.gemstyne.util.GemstyneConstants;
 import lotus.gemstyne.util.GemstyneMiningLevels;
 import lotus.gemstyne.util.GemstynePairs.CrystallinePair;
 import lotus.gemstyne.util.GemstyneRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.AmethystBlock;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -85,8 +85,8 @@ public final class GeodeSet {
         Optional<Block> geode = Optional.ofNullable(this.geodeVariants.get(geodeName).block());
         if(geode.isPresent()) {
             return this.geodeVariants.get(geodeName).block();
-        } else if(Gemstyne.LOGGER.isErrorEnabled()) {
-            Gemstyne.LOGGER.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", geodeName, this.setName,
+        } else {
+            Overwatch.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", geodeName, this.setName,
                 "Maybe the Geode Block is improperly initialized?",
                 "OR the GeodeSet was called in an incompatible Method!",
                 "OTHERWISE the wrong getter was called!"));
@@ -100,7 +100,7 @@ public final class GeodeSet {
 
         private final String setName;
         private Identifier miningLevel = GemstyneMiningLevels.NEEDS_STONE_TOOL;
-        private final FabricBlockSettings currentSettings = FabricBlockSettings.create().requiresTool()
+        private final AbstractBlock.Settings currentSettings = AbstractBlock.Settings.create().requiresTool()
             .ticksRandomly().nonOpaque().strength(1.5f, 1.0f)
             .sounds(BlockSoundGroup.SMALL_AMETHYST_BUD).luminance(state -> 1);
 

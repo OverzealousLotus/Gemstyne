@@ -1,7 +1,7 @@
 package lotus.gemstyne.armor;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.armor.custom.IkariteElytra;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
@@ -20,7 +20,8 @@ public class ArmorHandler {
 
 
     public static void registerArmorItems() {
-        Gemstyne.LOGGER.info("Registering Armor Items...");
+        Overwatch.info("Registering Armor Items...");
         GemstyneRegistry.registerItem("ikarite_elytra", IKARITE_ELYTRA);
+        Overwatch.info("Successfully registered Armor Items!");
     }
 }

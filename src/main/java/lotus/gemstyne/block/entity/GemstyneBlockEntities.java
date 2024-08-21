@@ -1,6 +1,6 @@
 package lotus.gemstyne.block.entity;
 
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.block.BlockHandler;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.block.entity.BlockEntityType;
@@ -23,13 +23,13 @@ public class GemstyneBlockEntities {
                 BlockEntityType.Builder.create(RichOreBlockEntity::new,
                         BlockHandler.NEFARIUM_ORE).build(null));
 
-        Gemstyne.LOGGER.info("Registering Block Entities...");
+        Overwatch.info("Registering Block Entities...");
     }
 
     /// Registers all Entity Types for Gemstyne.
     public static void registerEntityTypes() {
         Registry.register(Registries.ENTITY_TYPE, GemstyneRegistry.id("thermo_tnt"), THERMO_TNT_ENTITY);
-        Gemstyne.LOGGER.info("Registering Entity Types...");
+        Overwatch.info("Registering Entity Types...");
     }
     public static void registerGemstyneEntities() {
         registerBlockEntities();

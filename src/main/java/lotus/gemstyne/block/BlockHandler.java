@@ -1,6 +1,7 @@
 package lotus.gemstyne.block;
 
 import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.block.custom.*;
 import lotus.gemstyne.block.util.BlockSet;
 import lotus.gemstyne.block.util.GeodeSet;
@@ -184,7 +185,7 @@ public final class BlockHandler {
         new ThermoTntBlock(AbstractBlock.Settings.copy(Blocks.TNT)));
 
     public static void registerGemstyneBlocks() {
-        Gemstyne.LOGGER.info("Registering blocks for " + Gemstyne.MOD_ID + "!");
-        Gemstyne.LOGGER.info("Successfully registered blocks for " + Gemstyne.MOD_ID + "!");
+        Overwatch.info("Registering Blocks...");
+        Overwatch.info("Successfully registered Blocks!");
     }
 }

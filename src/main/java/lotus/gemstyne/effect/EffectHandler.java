@@ -1,6 +1,6 @@
 package lotus.gemstyne.effect;
 
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.util.GemstyneRegistry;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -23,6 +23,7 @@ public final class EffectHandler {
     }
 
     public static void registerEffects() {
-        Gemstyne.LOGGER.info("Registering Status Effects...");
+        Overwatch.info("Registering Status Effects...");
+        Overwatch.info("Successfully registered Status Effects!");
     }
 }

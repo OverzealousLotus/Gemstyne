@@ -1,7 +1,7 @@
 package lotus.gemstyne.item;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
 import lotus.gemstyne.util.GemstynePairs.ItemPair;
 import lotus.gemstyne.util.GemstyneRegistry;
@@ -47,8 +47,8 @@ public final class ItemSet {
         Optional<Item> item = Optional.ofNullable(this.itemVariants.get(itemName).item());
         if(item.isPresent()) {
             return this.itemVariants.get(itemName).item();
-        } else if(Gemstyne.LOGGER.isErrorEnabled()) {
-            Gemstyne.LOGGER.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", itemName, this.setName,
+        } else {
+            Overwatch.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", itemName, this.setName,
                 "Maybe the Item is improperly initialized?",
                 "OR the ItemSet was called in an incompatible Method!",
                 "OTHERWISE the wrong getter was called!"));

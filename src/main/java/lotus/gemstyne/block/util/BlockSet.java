@@ -3,7 +3,7 @@ package lotus.gemstyne.block.util;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import io.wispforest.owo.util.TagInjector;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.block.custom.AfflictiveBlock;
 import lotus.gemstyne.block.custom.AfflictiveOre;
 import lotus.gemstyne.block.custom.RichOre;
@@ -60,12 +60,11 @@ public final class BlockSet {
         Optional<Block> block = Optional.ofNullable(this.blockVariants.get(blockName).block());
         if(block.isPresent()) {
             return this.blockVariants.get(blockName).block();
-        } else if(Gemstyne.LOGGER.isErrorEnabled()) {
-            Gemstyne.LOGGER.error(
-                String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", blockName, this.setName,
-                    "Maybe the Block is improperly initialized?",
-                    "OR the BlockSet was called in an incompatible Method!",
-                    "OTHERWISE the wrong getter was called!"));
+        } else {
+            Overwatch.error(String.format("[[ ERROR: %s for set %s is null! %s %n %s %n %s", blockName, this.setName,
+                "Maybe the Block is improperly initialized?",
+                "OR the BlockSet was called in an incompatible Method!",
+                "OTHERWISE the wrong getter was called!"));
         }
         throw new NullPointerException();
     }

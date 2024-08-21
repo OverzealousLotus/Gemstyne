@@ -1,7 +1,7 @@
 package lotus.gemstyne.tool;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.item.ItemHandler;
 import lotus.gemstyne.tool.custom.PaxelItem;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
@@ -42,9 +42,9 @@ public final class ToolHandler {
 
 
     public static void registerToolItems() {
+        Overwatch.info("Registering Tool Items...");
         Registry.register(Registries.ITEM, GemstyneRegistry.id("aldus_paxel"), ALDUS_PAXEL);
-        Gemstyne.LOGGER.info("Registering Tool Items...");
-
+        Overwatch.info("Successfully registered Tool Items!");
     }
 
     private static PaxelItem makePaxel(ToolMaterial material, int damage, float speed, OwoItemSettings settings) {

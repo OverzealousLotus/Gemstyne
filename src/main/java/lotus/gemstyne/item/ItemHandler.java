@@ -1,7 +1,7 @@
 package lotus.gemstyne.item;
 
 import io.wispforest.owo.itemgroup.OwoItemSettings;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.item.custom.ImbuedFeatherItem;
 import lotus.gemstyne.item.custom.UraniumArrow;
 import lotus.gemstyne.util.GemstyneCreativeGroup;
@@ -78,8 +78,8 @@ public final class ItemHandler {
     );
 
     public static void registerGeneralItems() {
-        Gemstyne.LOGGER.info("Registering Items for " + Gemstyne.MOD_ID + "!");
+        Overwatch.info("Registering Items...");
         Registry.register(Registries.ITEM, GemstyneRegistry.id("uranium_arrow"), URANIUM_ARROW);
-        Gemstyne.LOGGER.info("Successfully registered Items for " + Gemstyne.MOD_ID + "!");
+        Overwatch.info("Successfully registered Items!");
     }
 }

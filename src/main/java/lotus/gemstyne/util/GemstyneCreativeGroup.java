@@ -2,7 +2,7 @@ package lotus.gemstyne.util;
 
 import io.wispforest.owo.itemgroup.Icon;
 import io.wispforest.owo.itemgroup.OwoItemGroup;
-import lotus.gemstyne.Gemstyne;
+import lotus.gemstyne.Overwatch;
 import lotus.gemstyne.armor.ArmorHandler;
 import lotus.gemstyne.block.BlockHandler;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
@@ -27,9 +27,9 @@ public class GemstyneCreativeGroup {
     }).build();
 
     public static void registerGroups() {
-        Gemstyne.LOGGER.info("Registering Gemstyne Group(s)...");
+        Overwatch.info("Registering groups...");
         GEMSTYNE.initialize();
-        Gemstyne.LOGGER.info("Successfully registered Gemstyne Group(s)!");
+        Overwatch.info("Successfully registered groups!");
     }
 
 
