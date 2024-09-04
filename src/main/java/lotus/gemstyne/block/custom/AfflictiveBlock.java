@@ -50,7 +50,7 @@ public class AfflictiveBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         super.onSteppedOn(world, pos, state, entity);
-        if (!world.isClient() &&  (entity instanceof LivingEntity livingEntity &&  (!livingEntity.isSpectator()))) {
+        if (!world.isClient() &&  (entity instanceof LivingEntity livingEntity &&  (!livingEntity.isSpectator() && !livingEntity.isInCreativeMode()))) {
             afflictEntity(livingEntity);
         }
     }
