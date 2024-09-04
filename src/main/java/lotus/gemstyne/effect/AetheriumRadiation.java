@@ -24,7 +24,6 @@ public class AetheriumRadiation extends StatusEffect {
             player.damage(damage, 2.0f);
             player.addExhaustion(0.020f * (amplifier + 1));
             player.addExperience(-2);
-            player.setMovementSpeed(0.15f);
         } else if (!(entity instanceof AetherZombie)){
             entity.damage(damage, 4.0f);
         }

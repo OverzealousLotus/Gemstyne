@@ -23,7 +23,6 @@ public class StrongRadiation extends StatusEffect {
             player.damage(damage, 1.0f);
             player.addExhaustion(0.010f * (amplifier + 1));
             player.addExperience(-1);
-            player.setMovementSpeed(0.15f);
         } else {
             entity.damage(damage, 1.0f);
         }

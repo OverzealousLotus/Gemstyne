@@ -3,7 +3,6 @@ package lotus.gemstyne.util;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
-import lotus.gemstyne.damage.GemstyneDamageTypes;
 import lotus.gemstyne.item.ItemSet;
 import net.minecraft.block.Block;
 import net.minecraft.entity.damage.DamageSource;

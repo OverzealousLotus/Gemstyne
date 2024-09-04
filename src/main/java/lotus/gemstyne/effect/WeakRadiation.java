@@ -22,7 +22,6 @@ public class WeakRadiation extends StatusEffect {
         if (entity instanceof PlayerEntity player) {
             player.damage(damage, 1.0f);
             player.addExhaustion(0.005f * (amplifier + 1));
-            player.setMovementSpeed(0.1f);
         } else {
             entity.damage(damage, 1.0f);
         }
