@@ -1,8 +1,11 @@
 package lotus.gemstyne.effect;
 
+import lotus.gemstyne.damage.GemstyneDamageTypes;
+import lotus.gemstyne.util.GemstyneRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,13 +18,14 @@ public class StrongRadiation extends StatusEffect {
     @Override
     @Environment(EnvType.CLIENT)
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
+        DamageSource damage = GemstyneRegistry.getDamageSource(entity.getWorld(), GemstyneDamageTypes.RADIATION);
         if (entity instanceof PlayerEntity player) {
-            player.damage(entity.getDamageSources().magic(), 1.0f);
+            player.damage(damage, 1.0f);
             player.addExhaustion(0.010f * (amplifier + 1));
             player.addExperience(-1);
             player.setMovementSpeed(0.15f);
         } else {
-            entity.damage(entity.getDamageSources().magic(), 1.0f);
+            entity.damage(damage, 1.0f);
         }
 
         return super.applyUpdateEffect(entity, amplifier);

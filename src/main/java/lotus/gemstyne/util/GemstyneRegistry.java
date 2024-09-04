@@ -3,13 +3,19 @@ package lotus.gemstyne.util;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import lotus.gemstyne.Gemstyne;
 import lotus.gemstyne.block.util.BlockSet;
+import lotus.gemstyne.damage.GemstyneDamageTypes;
 import lotus.gemstyne.item.ItemSet;
 import net.minecraft.block.Block;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
 
 /**
  * <ul>Gemstyne's Registry Handler.
@@ -72,5 +78,14 @@ public class GemstyneRegistry {
     public static Block designateBlock(String path, Block block) {
         Registry.register(Registries.ITEM, id(path), new BlockItem(block, new OwoItemSettings().group(GemstyneCreativeGroup.GEMSTYNE).tab(1)));
         return Registry.register(Registries.BLOCK, id(path), block);
+    }
+
+    /**
+     * Fetches {@link DamageSource} for you.
+     */
+    public static DamageSource getDamageSource(World world, RegistryKey<DamageType> type) {
+        return new DamageSource(world.getRegistryManager()
+            .get(RegistryKeys.DAMAGE_TYPE)
+            .entryOf(type));
     }
 }

@@ -30,6 +30,5 @@ public class GemstyneDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, GemstyneConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, GemstynePlacedFeatures::bootstrap);
-		registryBuilder.addRegistry(RegistryKeys.DAMAGE_TYPE, GemstyneDamageTypes::bootstrap);
 	}
 }
