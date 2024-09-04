@@ -23,6 +23,7 @@ public class MutaliumOre extends VolatileOre {
         StatusEffects.MINING_FATIGUE, StatusEffects.POISON, StatusEffects.HUNGER,
         StatusEffects.LEVITATION, StatusEffects.HASTE, StatusEffects.WEAKNESS
     );
+    private static final Random random = Random.create();
 
     public MutaliumOre(IntProvider experience, Settings settings) {
         super(experience, settings);
@@ -45,9 +46,7 @@ public class MutaliumOre extends VolatileOre {
 
     @Override
     public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if(!world.isClient() && !player.isCreative()) {
-            Random random = Random.create();
-
+        if(!world.isClient() && !player.isSpectator() && !player.isCreative()) {
             player.addStatusEffect(new StatusEffectInstance(effectList.get(random.nextInt(9)), random.nextBetweenExclusive(30, 120)));
         }
 
@@ -56,8 +55,6 @@ public class MutaliumOre extends VolatileOre {
 
     @Override
     protected void goCritical(World world, BlockPos pos) {
-        Random random = Random.create();
-
         world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), random.nextBetweenExclusive(1, 3), World.ExplosionSourceType.BLOCK);
         super.goCritical(world, pos);
     }

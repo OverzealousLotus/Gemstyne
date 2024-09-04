@@ -1,12 +1,21 @@
 package lotus.gemstyne.block.custom;
 
 import io.wispforest.owo.particles.ClientParticles;
+import lotus.gemstyne.Overwatch;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.intprovider.IntProvider;
@@ -65,10 +74,16 @@ public class VolatileOre extends ExperienceDroppingBlock {
      */
     public static int explosionChance(World world, PlayerEntity player) {
         int chance = world.getDimension().ultrawarm() ? 35 : 7; // Generate base chance based on current dimension.
-        // ItemStack tool = player.getMainHandStack(); // Bring Player's current main hand item into scope.
+        ItemStack tool = player.getMainHandStack(); // Bring Player's current main hand item into scope.
+        DynamicRegistryManager manager = world.getRegistryManager(); // Fetches  the registry manager.
 
         // Check whether their tool has Silk Touch. If so, decrease explosion chance.
-        // if(tool.hasEnchantments()) chance -= (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) * 12);
+        if (EnchantmentHelper.hasAnyEnchantmentsIn(tool, EnchantmentTags.PREVENTS_BEE_SPAWNS_WHEN_MINING)) {
+            RegistryEntry<Enchantment> entry = RegistryEntry.of(manager.createRegistryLookup().getOrThrow(RegistryKeys.ENCHANTMENT)
+                .getOrThrow(Enchantments.SILK_TOUCH).value());
+            Overwatch.info("Detected Silk Touch.");
+            chance -= (EnchantmentHelper.getLevel(entry, tool) * 12);
+        }
 
         // Limit explosion chance to 80%
         chance = MathHelper.clamp(chance, 0, 80);
