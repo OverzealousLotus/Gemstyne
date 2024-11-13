@@ -68,19 +68,19 @@ public final class GemstyneMineralPlaced {
         GemstynePlacedFeatures.register(context, COMPACT_DIRT_PLACED_KEY,
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.COMPACT_DIRT_KEY),
                 GemstyneOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+                        HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(0))));
 
         GemstynePlacedFeatures.register(context, COMPRESSED_GRANITE_PLACED_KEY,
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.COMPRESSED_GRANITE_KEY),
                 GemstyneOrePlacement.modifiersWithRarity(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+                        HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(-64))));
         GemstynePlacedFeatures.register(context, COMPRESSED_DIORITE_PLACED_KEY,
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.COMPRESSED_DIORITE_KEY),
                 GemstyneOrePlacement.modifiersWithRarity(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+                        HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(-64))));
         GemstynePlacedFeatures.register(context, COMPRESSED_ANDESITE_PLACED_KEY,
                 GemstynePlacedFeatures.fetchConfig(context, GemstyneMineralConfig.COMPRESSED_ANDESITE_KEY),
                 GemstyneOrePlacement.modifiersWithRarity(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+                        HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(-64))));
     }
 }
