@@ -8,6 +8,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.chunk.ChunkStatus;
 
 import java.util.Map;
 import java.util.Optional;
@@ -42,7 +43,7 @@ public class BuddingCrystallineBlock extends CrystallineBlock {
             newBud = Optional.of(this.buds.get(GemstyneConstants.CLUSTER).block());
         }
 
-        if (newBud.isPresent()) {
+        if (newBud.isPresent() && world.getChunk(pos).getStatus().isLaterThan(ChunkStatus.EMPTY)) {
             BlockState newBudState = newBud.get().getDefaultState()
                 .with(CrystallineBlockBud.FACING, direction)
                 .with(CrystallineBlockBud.WATERLOGGED, oldBud.getFluidState().getFluid() == Fluids.WATER);
