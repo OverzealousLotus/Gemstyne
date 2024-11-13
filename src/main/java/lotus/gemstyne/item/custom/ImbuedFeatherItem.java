@@ -23,8 +23,8 @@ public class ImbuedFeatherItem extends Item {
     // Overriding the "use" function from the Item class.
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand); // Bring our item into scope.
         if (!world.isClient() && !user.isCreative()) {
+            ItemStack itemStack = user.getStackInHand(hand); // Bring our item into scope.
             itemStack.damage(2, user, EquipmentSlot.MAINHAND); // Decreases durability.
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 130));
             user.getItemCooldownManager().set(this, 100); // Set cooldown for item usage.
